@@ -8,7 +8,7 @@ Archivo compartido entre los tres agentes. Cada uno lo lee al empezar y lo actua
 - [x] Paso 2 — T0.1 Proyecto base
 - [x] Paso 3 — T0.2 Sistema de diseño
 - [x] Paso 4 — T0.3 Estructura de la app
-- [ ] Paso 5 — T0.4 PWA
+- [x] Paso 5 — T0.4 PWA
 - [ ] Paso 6 — T0.5 Supabase local
 - [ ] Paso 7 — T0.6 Pruebas
 - [ ] Paso 8 — T0.7 CI

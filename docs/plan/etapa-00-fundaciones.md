@@ -53,7 +53,7 @@
 - **Verificación:** `pnpm check` + prueba a 375 px.
 - **Fuera de alcance:** datos reales.
 
-### T0.4 — PWA instalable
+### [x] T0.4 — PWA instalable
 - **Depende de:** T0.3
 - **Objetivo:** que la app se instale en la pantalla de inicio y abra en modo standalone.
 - **Archivos:** `app/manifest.ts`, `public/icons/*`, `app/sw.ts`, `next.config.ts`, `app/offline/page.tsx`.
@@ -134,3 +134,6 @@
 - T0.2: Vitest se instaló ya en T0.2 (mínimo: `vitest.config.ts` y `pnpm test`) porque la tarea pide test de `day-part`. T0.6 completa jsdom/Playwright/pgTAP.
 - T0.2: el provider forzado (`force="noche"`) fija el tema en `<html>` al montarse; en carga inicial puede verse un destello hasta hidratar. Mitigación futura: pasar el tema desde el layout del modo cocinar.
 - T0.3: el selector de grupo es un botón deshabilitado con el texto "Casa" hasta T1.4. Mientras no haya auth, `BottomNav` usa el grupo `demo` si la ruta no trae `groupId` (constante `DEMO_GROUP_ID` en `components/shell/nav-items.ts`). Cada página vacía usa `EmptyState` (ícono en círculo `--hero`).
+- T0.4: se usó `@serwist/turbopack` (+ `serwist` y `esbuild`) en vez de `@serwist/next`: es la misma librería, pero `@serwist/next` solo funciona con webpack y Next 16 + Tailwind del scaffold corren con Turbopack. El SW se sirve desde `app/serwist/[path]/route.ts` (`/serwist/sw.js`) y está desactivado en `next dev`. `app/sw.ts` está excluido de `tsconfig` (usa tipos de webworker). **En T0.5 el middleware debe excluir `/serwist` del matcher.**
+- T0.4: la página offline es `/offline` (precacheada y fallback de navegación). El manifest es estático con los colores de `noche`. Íconos placeholder: `public/icons/icon.svg` y PNGs 192/512/maskable/apple-touch (generados con Chromium desde el SVG).
+- T0.4: verificado en producción local (`pnpm build && pnpm start`): SW activo, manifest correcto, fallback offline. Lighthouse y la instalación en el celular (Android/iOS) quedan para después de T0.8, con la URL real.

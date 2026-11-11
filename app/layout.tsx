@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { DM_Serif_Display, Inter } from "next/font/google";
+import { SerwistProvider } from "@serwist/turbopack/react";
 import { cookies } from "next/headers";
 import { Toaster } from "@/components/ui/sonner";
 import { DayPartProvider } from "@/components/theme/day-part-provider";
@@ -24,6 +25,11 @@ const dmSerif = DM_Serif_Display({
 export const metadata: Metadata = {
   title: { default: BRAND.name, template: `%s · ${BRAND.name}` },
   description: BRAND.tagline,
+  applicationName: BRAND.name,
+  appleWebApp: { capable: true, title: BRAND.name, statusBarStyle: "default" },
+  other: { "apple-mobile-web-app-capable": "yes" },
+  formatDetection: { telephone: false },
+  icons: { icon: "/icons/icon-192.png", apple: "/icons/apple-touch-icon.png" },
 };
 
 async function getTheme() {
@@ -53,7 +59,9 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="flex min-h-full flex-col font-sans">
         <DayPartProvider initialDayPart={dayPart} initialPreference={preference}>
-          {children}
+          <SerwistProvider swUrl="/serwist/sw.js" disable={process.env.NODE_ENV === "development"}>
+            {children}
+          </SerwistProvider>
           <Toaster />
         </DayPartProvider>
       </body>
