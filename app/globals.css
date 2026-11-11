@@ -1,1 +1,130 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+/* Los temas "tarde" y "noche" son oscuros: los componentes de shadcn usan `dark:` para eso. */
+@custom-variant dark (&:where([data-daypart="tarde"], [data-daypart="noche"], [data-daypart="tarde"] *, [data-daypart="noche"] *));
+
+/*
+ * Tokens por momento del día (SPEC §8.1 y docs/design/README.md).
+ * Se aplican con [data-daypart] en <html> (o en cualquier contenedor, para previsualizar).
+ * Nunca uses estos hex en componentes: usá las clases de Tailwind (bg-background, text-muted…).
+ */
+:root,
+[data-daypart="mediodia"] {
+  color-scheme: light;
+  --background: #f8efe2;
+  --surface: #fff8ee;
+  --surface-2: #ead9c2;
+  --foreground: #2a1d14;
+  --muted: #6e5a48;
+  --accent: #c9541f;
+  --accent-text: #a8431a;
+  --accent-foreground: #ffffff;
+  --hero: #f4c35a;
+  --border: #ead9c2;
+  --success: #2f6b4f;
+  --danger-soft: #a8381f;
+}
+
+[data-daypart="tarde"] {
+  color-scheme: dark;
+  --background: #22140f;
+  --surface: #331e17;
+  --surface-2: #4a2c22;
+  --foreground: #fbede4;
+  --muted: #d3ae9c;
+  --accent: #ff8a5b;
+  --accent-text: #ff8a5b;
+  --accent-foreground: #22140f;
+  --hero: #6e2f22;
+  --border: #3a241c;
+  --success: #9fd08a;
+  --danger-soft: #ff9c8a;
+}
+
+[data-daypart="noche"] {
+  color-scheme: dark;
+  --background: #191411;
+  --surface: #241d19;
+  --surface-2: #3a2e27;
+  --foreground: #f5ede3;
+  --muted: #b8a796;
+  --accent: #f2a541;
+  --accent-text: #f2a541;
+  --accent-foreground: #191411;
+  --hero: #3a2418;
+  --border: #2e2520;
+  --success: #9fd08a;
+  --danger-soft: #ff9c8a;
+}
+
+:root {
+  --radius: 1.25rem;
+}
+
+@theme inline {
+  /* Tipografía */
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-heading: var(--font-sans);
+  --font-display: var(--font-dm-serif), Georgia, serif;
+
+  /* Tokens propios del diseño */
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-hero: var(--hero);
+  --color-border: var(--border);
+  --color-success: var(--success);
+  --color-danger-soft: var(--danger-soft);
+
+  /* Nombres que esperan los componentes de shadcn/ui */
+  --color-card: var(--surface);
+  --color-card-foreground: var(--foreground);
+  --color-popover: var(--surface);
+  --color-popover-foreground: var(--foreground);
+  --color-primary: var(--accent);
+  --color-primary-foreground: var(--accent-foreground);
+  --color-secondary: var(--surface-2);
+  --color-secondary-foreground: var(--foreground);
+  --color-muted-foreground: var(--muted);
+  --color-destructive: var(--danger-soft);
+  --color-input: var(--border);
+  --color-ring: var(--accent);
+
+  /* Radios: tarjetas 1.25rem, botones principales en píldora */
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+  --radius-card: 1.25rem;
+  --radius-pill: 9999px;
+}
+
+/*
+ * `text-accent` usa --accent-text (en mediodía #A8431A) para cumplir contraste AA como texto.
+ * Va fuera de @layer a propósito: una regla sin capa gana sobre las utilidades de Tailwind.
+ * (Con variantes, ej. `hover:text-accent`, se usa el --accent de relleno.)
+ */
+.text-accent {
+  color: var(--accent-text);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+}
