@@ -81,7 +81,7 @@
 - **Verificación:** los tres comandos + `pnpm check`.
 - **Fuera de alcance:** tablas de negocio.
 
-### T0.6 — Infraestructura de tests
+### [x] T0.6 — Infraestructura de tests
 - **Depende de:** T0.5
 - **Archivos:** `vitest.config.ts`, `lib/domain/example.test.ts`, `playwright.config.ts`, `tests/e2e/smoke.spec.ts`, `supabase/tests/00_smoke.test.sql`.
 - **Pasos:**
@@ -141,3 +141,4 @@
 - T0.5: pnpm 12 exige aprobar scripts de instalación: `pnpm-workspace.yaml` → `allowBuilds` con `esbuild: true` y `supabase: true`. Se agregó `server-only` (lo pide `admin.ts`, está en el plan).
 - T0.5: `pg_trgm` y `unaccent` están en el esquema `extensions` (convención de Supabase): en SQL usar `extensions.unaccent(...)` / `extensions.similarity(...)`. Las claves locales (anon y service role) van en `.env.local`, generado desde `supabase status`. El CLI nuevo también expone `PUBLISHABLE_KEY`/`SECRET_KEY`; se mantienen los nombres `ANON_KEY`/`SERVICE_ROLE_KEY` del plan.
 - T0.5: `pnpm db:types` avisa que el archivo generado no está formateado (sugiere oxfmt); se ignora: `database.types.ts` está en `.prettierignore` y en el ignore de ESLint.
+- T0.6: Vitest usa dos `projects` (`node` para `*.test.ts(x)` y `dom` con jsdom para `*.dom.test.tsx`). `pnpm db:test` baja la imagen `pg_prove` la primera vez. En CI el e2e corre contra `pnpm start` (requiere `pnpm build` antes); en local usa `pnpm dev`. `lib/domain/example.test.ts` es un placeholder: borrarlo al agregar los primeros tests de dominio. Se excluyó `docs/` y `README.md` de Prettier para no reformatear los documentos.

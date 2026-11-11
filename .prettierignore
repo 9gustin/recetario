@@ -4,3 +4,7 @@ node_modules
 lib/supabase/database.types.ts
 docs/design/pantallas
 supabase/.temp
+docs
+README.md
+CLAUDE.md
+AGENTS.md

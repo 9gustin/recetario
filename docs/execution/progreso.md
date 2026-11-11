@@ -10,7 +10,7 @@ Archivo compartido entre los tres agentes. Cada uno lo lee al empezar y lo actua
 - [x] Paso 4 — T0.3 Estructura de la app
 - [x] Paso 5 — T0.4 PWA
 - [x] Paso 6 — T0.5 Supabase local
-- [ ] Paso 7 — T0.6 Pruebas
+- [x] Paso 7 — T0.6 Pruebas
 - [ ] Paso 8 — T0.7 CI
 - [ ] Paso 9 — T0.8 Producción
 - [ ] Paso 10 — Google OAuth
