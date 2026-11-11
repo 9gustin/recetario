@@ -8,7 +8,7 @@ Producción: **Vercel** (app) + **Supabase** `recetario-prod` (región São Paul
 ## Cómo se despliega
 
 - **App:** cada push a `main` despliega a producción en Vercel; cada PR/rama genera un preview.
-- **Base de datos:** al hacer push a `main` con cambios en `supabase/migrations/**`, el workflow `.github/workflows/migrate.yml` corre `supabase link` y `supabase db push`. También se puede lanzar a mano (Actions → "Migrar producción" → Run workflow).
+- **Base de datos:** al hacer push a `main` con cambios en `supabase/migrations/**`, el workflow `.github/workflows/migrate.yml` corre `supabase link` y `supabase db push --remote`. También se puede lanzar a mano (Actions → "Migrar producción" → Run workflow).
 - **CI:** `.github/workflows/ci.yml` corre lint, tipos, tests, build, migraciones + pgTAP y (en `main`) el e2e.
 
 ## Vincular y migrar a mano
@@ -16,7 +16,8 @@ Producción: **Vercel** (app) + **Supabase** `recetario-prod` (región São Paul
 ```bash
 pnpm supabase login
 pnpm supabase link --project-ref <project-ref>   # pide la contraseña de la base
-pnpm supabase db push
+# Ojo: la CLI 3.x apunta a la base LOCAL por defecto; para producción hay que pasar --remote.
+pnpm supabase db push --remote
 ```
 
 El *project ref* no es secreto (está en la URL del proyecto). La contraseña de la base va en el gestor de contraseñas, nunca en el repo.
