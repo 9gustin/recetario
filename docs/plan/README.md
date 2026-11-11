@@ -85,6 +85,7 @@ Ejecutá la tarea T1.3 del plan.
 | 3 | [etapa-03-modo-cocinar.md](etapa-03-modo-cocinar.md) | Cocinar paso a paso tipo stories | |
 | 4 | [etapa-04-compartir.md](etapa-04-compartir.md) | Link público, copiar a grupo, enviar a persona | **MVP-1** |
 | 5 | [etapa-05-ia-importar.md](etapa-05-ia-importar.md) | Importar recetas por texto, link, foto o voz | |
+| 5b | [etapa-05b-asistente.md](etapa-05b-asistente.md) | Preguntale: chat con @receta, también por voz mientras cocinás | |
 | 6 | [etapa-06-perfil-alimentario.md](etapa-06-perfil-alimentario.md) | Perfil por voz/archivos, compatibilidad | |
 | 7 | [etapa-07-plan-semanal.md](etapa-07-plan-semanal.md) | Plan manual + plan con IA, home Hoy con estados, ¿Qué tenés? e ideas | |
 | 8 | [etapa-08-lista-compras.md](etapa-08-lista-compras.md) | Lista de compras en tiempo real | **MVP-2** |
@@ -104,6 +105,7 @@ Marcar `[x]` al terminar cada tarea (lo hace el agente).
 **Etapa 3** — [ ] T3.1 · [ ] T3.2 · [ ] T3.3 · [ ] T3.4 · [ ] T3.5 · [ ] T3.6 · [ ] T3.7 · [ ] T3.8
 **Etapa 4** — [ ] T4.1 · [ ] T4.2 · [ ] T4.3 · [ ] T4.4 · [ ] T4.5 · [ ] T4.6
 **Etapa 5** — [ ] T5.1 · [ ] T5.2 · [ ] T5.3 · [ ] T5.4 · [ ] T5.5 · [ ] T5.6
+**Etapa 5b** — [ ] T5B.1 · [ ] T5B.2 · [ ] T5B.3 · [ ] T5B.4 · [ ] T5B.5 · [ ] T5B.6 (después de 8b)
 **Etapa 6** — [ ] T6.1 · [ ] T6.2 · [ ] T6.3 · [ ] T6.4 · [ ] T6.5 · [ ] T6.6 · [ ] T6.7
 **Etapa 7** — [ ] T7.1 · [ ] T7.2 · [ ] T7.3 · [ ] T7.4 · [ ] T7.5 · [ ] T7.6 · [ ] T7.7 · [ ] T7.8 · [ ] T7.9 · [ ] T7.10 · [ ] T7.11 · [ ] T7.12 · [ ] T7.13 · [ ] T7.14
 **Etapa 8** — [ ] T8.1 · [ ] T8.2 · [ ] T8.3 · [ ] T8.4 · [ ] T8.5 · [ ] T8.6

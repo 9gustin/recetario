@@ -256,7 +256,33 @@ Los planes de nutricionista suelen llegar como un PDF largo y difícil de seguir
 5. **Seguimiento:** grilla semanal (comidas × días) con colores por estado, % de cumplimiento, permitidos restantes hasta el domingo y un mensaje corto y positivo. Historial por semana para llevar a la nutricionista (exportable como texto/PDF).
 6. **Integración:** el plan vivo actúa como regla para el plan semanal con IA (F6), las ideas del día y "¿Qué tenés?" (F15): solo propone comidas que encajan en la fórmula del momento del día para esa persona.
 
-> El tono es de acompañamiento, nunca de reto: sin rojos de "fallaste", los permitidos son parte del plan. Disclaimer: la app organiza el plan que te dieron; no lo reemplaza ni da indicaciones médicas.
+> El tono es de acompañamiento y nunca reta a la persona: sin rojos de "fallaste", los permitidos son parte del plan. Disclaimer: la app organiza el plan que te dieron; no lo reemplaza ni da indicaciones médicas.
+
+### F16. Preguntale: asistente de cocina [MVP-2]
+
+Un chat con IA para sacarse dudas en cualquier momento, que **conoce el contexto de la casa**: recetas del grupo, perfil y plan vivo de quien pregunta, plan de la semana, lista de compras y catálogo de ingredientes (vida útil, conservación).
+
+**Dónde aparece**
+- **Inicio:** botón "Preguntar" arriba a la derecha (también en el estado sin plan, junto a la barra de texto/voz).
+- **Detalle de receta:** "Preguntar por esta receta" abre el chat con la receta ya citada.
+- **Modo cocinar:** botón de pregunta en cada paso. Abre un panel sobre el paso actual; el asistente sabe **qué receta, qué paso, las porciones y los timers activos**. Pensado para manos ocupadas: botón grande "Tocá y hablá", respuesta corta y opción de **respuesta en voz alta** (síntesis de voz del navegador).
+
+**Citar recetas con @**
+- Escribir `@` abre un buscador de recetas del grupo; elegir una inserta un chip (`@Pollo al limón con zapallitos`). Se pueden citar varias ("¿qué combina mejor con @Salmón: @Ensalada de repollo o @Puré de calabaza?").
+- Por voz: "arroba pollo al limón…" o simplemente nombrar la receta; el asistente la resuelve y la muestra como chip para confirmar.
+
+**Qué responde**
+- Sobre una receta: reemplazos y agregados ("¿le puedo poner brócoli?"), cuánto dura, si se puede freezar y cómo, con qué acompañarla, cómo escalarla, qué hacer si algo salió mal.
+- Generales: conservación y freezer, vencimientos ("¿esto sigue bien?"), combinaciones, técnicas, equivalencias de medidas.
+- Siempre respetando las restricciones de quien pregunta (si sugiere un agregado, chequea compatibilidad) y su plan vivo.
+
+**Acciones desde el chat** (siempre con confirmación, nunca automáticas):
+- "Sumarlo a la receta" → crea una versión nueva con el cambio (como en F10).
+- "Agregar a la lista de compras", "Agregar al plan de hoy", "Anotar en la receta" (nota).
+
+**Seguridad alimentaria:** en dudas de vencimiento o conservación responde de forma conservadora ("ante la duda, no"), con señales concretas a revisar, y nunca da indicaciones médicas.
+
+**Historial:** las conversaciones quedan guardadas por usuario (privadas); las preguntas hechas desde una receta quedan accesibles desde esa receta ("Preguntas sobre esta receta").
 
 ### Fuera de alcance (por ahora)
 
@@ -607,8 +633,14 @@ RLS: todo solo para el propio usuario. Lo único visible para el grupo son las r
 #### IA (trazabilidad)
 
 ```sql
-ai_conversations (id, group_id, user_id, purpose text, plan_id uuid null)
-ai_messages      (id, conversation_id, role text, content jsonb, created_at)
+ai_conversations (
+  id, group_id, user_id,
+  purpose text,                     -- 'plan_chat','diet_plan','assistant'
+  plan_id uuid null,
+  context jsonb,                    -- asistente: {"recipe_ids":[...],"cooking_session_id":..,"step":4,"origin":"home|recipe|cooking"}
+  title text, last_message_at timestamptz
+)
+ai_messages      (id, conversation_id, role text, content jsonb, mentions uuid[], created_at)
 ai_runs (                           -- cada llamada al modelo
   id, user_id, group_id, feature text, model text,
   input_tokens int, output_tokens int, latency_ms int,
@@ -721,6 +753,16 @@ Salida: `prep_tasks[]` con `suggested_date`, `duration_minutes`, `kind`, `relate
 - Paso determinístico primero: buscar en el recetario por cobertura de ingredientes (`have`) o por señales (`ideas`: perecederos comprados que vencen pronto, recetas no comidas hace tiempo, sobras posibles), filtrando por compatibilidad (F5) y por la fórmula del plan vivo (F14) de cada comensal.
 - La IA (Haiku) ordena, redacta el **motivo** de cada idea y, si hay menos de 3 candidatas, propone recetas nuevas (borrador `status = 'draft'`).
 
+### 6.9 Preguntale — asistente con contexto
+
+- `POST /api/ai/assistant/chat` (streaming SSE). Input: `{ conversationId?, message, mentions: recipeId[], context?: { origin, cookingSessionId?, step? } }`.
+- El servidor arma el contexto inicial: recetas citadas (completas), si viene del modo cocinar la receta + paso actual + porciones + timers, y un resumen corto de restricciones del usuario.
+- Tools (con el cliente del usuario, respetan RLS): `get_recipe(id)`, `search_recipes(query)`, `get_ingredient_info(names)` (vida útil, conservación, familia), `check_compatibility(recipe_id, changes)`, `get_today()` (plan del día y lista activa), `get_my_diet_plan()`, y acciones que **solo proponen** (devuelven una tarjeta que el usuario confirma): `propose_recipe_change`, `propose_add_to_list`, `propose_add_to_plan`.
+- Modelo: `MODELS.fast` por defecto; `MODELS.smart` si la pregunta involucra varias recetas o el plan (heurística simple por cantidad de menciones/tools). En modo cocinar se pide respuesta de ≤ 3 oraciones.
+- System prompt: voseo, breve, práctico; seguridad alimentaria conservadora; nunca consejo médico; si propone un ingrediente, verificar compatibilidad antes.
+- Voz: entrada con `VoiceRecorder`/transcripción; salida opcional con `speechSynthesis` (es-AR si está disponible).
+- Cuota `assistant` (ej. 100 mensajes/día por usuario).
+
 ### 6.10 Costos y límites
 
 - Cache de prompts para el system prompt + catálogo.
@@ -761,6 +803,8 @@ IA
   POST   /api/ai/diet-plan/ingest            digitalizar plan
   POST   /api/ai/diet-plan/:id/chat          ajustar plan (stream)
   POST   /api/ai/meal-logs/classify          clasificar lo que comí
+  POST   /api/ai/assistant/chat              asistente (stream) con @recetas y contexto
+  GET    /api/ai/assistant/conversations     historial (filtrable por receta)
 Plan vivo
   GET    /api/diet-plan                      plan activo + hoy + adherencia
   PUT    /api/meal-logs                      { date, slot, status, note }
@@ -804,6 +848,7 @@ Diseño de referencia (canvas con todas las pantallas): https://claude.ai/artifa
 
 ### 8.2 Pantallas
 
+0. **Preguntale (F16):** accesible desde Hoy (botón "Preguntar"), desde el detalle de receta y desde cada paso del modo cocinar (panel sobre el paso, con "Tocá y hablá").
 1. **Hoy:** según F6b: con comida planeada (hero + plan de acción del día) o sin plan ("¿Qué comemos hoy?" + tres arranques).
    - **¿Qué tenés?** y **Ideas para hoy** (F15).
 2. **Recetas:** buscador, filtros (chips), grilla con foto + tiempo + indicadores de compatibilidad por persona. FAB "+" → Manual / Pegar texto o link / Foto / Dictar.
@@ -886,6 +931,14 @@ Cada etapa termina con algo **usable en producción** (deploy en Vercel) y crite
 
 ✅ Foto de una receta del cuaderno → receta cargada con pasos y timers en < 1 min.
 
+### Etapa 5b — Preguntale: asistente (≈ 1,5 semanas)
+
+- Chat con streaming, menciones `@receta`, historial.
+- Contexto de receta y del paso actual en modo cocinar; voz de entrada y respuesta en voz alta.
+- Tools de consulta (recetas, ingredientes, compatibilidad) y acciones propuestas con confirmación.
+
+✅ Mientras cocino pregunto por voz "¿puedo usar manteca en vez de aceite?" y recibo una respuesta corta sobre ese paso.
+
 ### Etapa 6 — Perfil alimentario (≈ 1,5 semanas)
 
 - Pantalla "Mi alimentación": voz, texto, archivos (PDF/imagen).
@@ -950,12 +1003,13 @@ Heladera/despensa (F13), control por voz en modo cocinar, sincronizar cambios de
 | 3 | Modo cocinar | 1,5 | 5,5 |
 | 4 | Compartir | 1 | 6,5 — **MVP-1** |
 | 5 | IA importar + voz | 1,5 | 8 |
-| 6 | Perfil alimentario | 1,5 | 9,5 |
-| 7 | Plan semanal + Hoy + ¿Qué tenés? | 3,5 | 13 |
-| 8 | Lista de compras | 1,5 | 14,5 — **MVP-2** |
-| 8b | Plan vivo | 2 | 16,5 |
-| 9 | Meal prep | 1 | 17,5 |
-| 10 | Notificaciones y pulido | 1,5 | 19 |
+| 5b | Preguntale (asistente) | 1,5 | 9,5 |
+| 6 | Perfil alimentario | 1,5 | 11 |
+| 7 | Plan semanal + Hoy + ¿Qué tenés? | 3,5 | 14,5 |
+| 8 | Lista de compras | 1,5 | 16 — **MVP-2** |
+| 8b | Plan vivo | 2 | 18 |
+| 9 | Meal prep | 1 | 19 |
+| 10 | Notificaciones y pulido | 1,5 | 20,5 |
 
 ---
 
@@ -989,6 +1043,7 @@ Heladera/despensa (F13), control por voz en modo cocinar, sincronizar cambios de
 | 5 | Dirección visual | **"Fuego lento"** (§8.1): títulos serif, hero grande con un botón principal, tres temas según el momento del día. |
 | 6 | Home | Se adapta: con comida planeada muestra el plan de acción; sin plan ofrece tres arranques (elegí / ¿qué tenés? / planificá). |
 | 7 | Plan de nutricionista | Se digitaliza como **plan vivo** por persona, con reemplazos, permitidos y registro diario (F14). |
+| 8 | Asistente | Un solo chat "Preguntale" (F16) con contexto, accesible desde la home, la receta y cada paso del modo cocinar; cita recetas con `@`; las acciones que modifican algo siempre se confirman. |
 
 ### Abiertas
 
