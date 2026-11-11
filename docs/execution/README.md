@@ -8,7 +8,7 @@ El desarrollo se reparte en tres roles. Cada uno tiene su archivo con el prompt 
 | **Código** | DeepSeek (local) | Implementa las tareas de código de las Etapas 1 a 10, una tarea por vez, en una rama por etapa. | [02-codigo-deepseek.md](02-codigo-deepseek.md) |
 | **Revisión** | Claude Sonnet (Claude Code) | Al cerrar cada etapa: levanta el proyecto, corre todas las pruebas, compara con el diseño, revisa seguridad, arregla lo chico, deja tareas para lo grande, mergea y despliega. Al final, una revisión general. | [03-revision-sonnet.md](03-revision-sonnet.md) |
 
-**Prompts listos para copiar y pegar, etapa por etapa:** [`prompts/`](prompts/README.md). Cada archivo trae, en orden, el prompt de configuración, uno por cada tarea de código y el de revisión. Si cambia el plan, se regeneran con `python3 scripts/gen-execution-prompts.py .`.
+**Prompts listos para copiar y pegar:** [`prompts/`](prompts/README.md). Cada etapa tiene **3 prompts**: configuración (Sonnet), código (DeepSeek, todas las tareas de la etapa en una sesión) y revisión (Sonnet). Si cambia el plan, se regeneran con `python3 scripts/gen-execution-prompts.py .`.
 
 Por qué así:
 - **La Etapa 0 entera la hace Sonnet**: además de configuración (base de datos, Vercel, CI) incluye el sistema de diseño y la estructura de la app. Si esa base queda bien, todo lo que construya después un modelo más básico sale consistente.
@@ -25,9 +25,9 @@ FASE 0 ─ Configuración inicial (Sonnet) ────────────�
 
 POR CADA ETAPA (1 → 10) ─────────────────────────────────────────────────────────
   ① Configuración puntual (Sonnet)   solo si la etapa la necesita (tabla abajo)
-  ② Código (DeepSeek)                 rama etapa-XX, una tarea por sesión, commit por tarea
+  ② Código (DeepSeek)                 rama etapa-XX, un prompt para toda la etapa, commit por tarea
   ③ Revisión de etapa (Sonnet)        pruebas + diseño + seguridad → arreglos → merge a main → deploy
-        └─ si hay problemas grandes: tareas "TX.Y-fix" → vuelven a ② → ③ de nuevo
+        └─ si deja fixes: se vuelve a pegar ② (los hace primero) → ③ de nuevo
 
 FASE FINAL ─ Revisión general (Sonnet) ──────────────────────────────────────────
   App completa: pruebas, flujos de punta a punta en el celular, seguridad, performance

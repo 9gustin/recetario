@@ -1,6 +1,6 @@
 # 02 · Código — DeepSeek (local)
 
-DeepSeek implementa las tareas de código de las **Etapas 1 a 10**, una por sesión, en la rama de la etapa. Lo corrés vos en tu máquina con cualquier agente que pueda **leer y escribir archivos y correr comandos en la terminal** (por ejemplo Aider, OpenCode, Cline o Claude Code configurado con DeepSeek), abierto en `~/projects/recetario`.
+DeepSeek implementa las tareas de código de las **Etapas 1 a 10**, con **un prompt por etapa** que recorre todas sus tareas en orden, en la rama de la etapa. Lo corrés vos en tu máquina con cualquier agente que pueda **leer y escribir archivos y correr comandos en la terminal** (por ejemplo Aider, OpenCode, Cline o Claude Code configurado con DeepSeek), abierto en `~/projects/recetario`.
 
 Antes de cada etapa, Sonnet ya hizo la configuración puntual y creó la rama `etapa-XX` ([01-configuracion-sonnet.md](01-configuracion-sonnet.md) §C). Después de la última tarea de la etapa, Sonnet hace la revisión ([03-revision-sonnet.md](03-revision-sonnet.md)).
 
@@ -8,12 +8,12 @@ Antes de cada etapa, Sonnet ya hizo la configuración puntual y creó la rama `e
 
 ## 1. Cómo usar este archivo 👤
 
-1. `git checkout etapa-XX && git pull`.
-2. Levantá la base local si está apagada: `pnpm db:start`.
-3. Abrí una sesión **nueva** del agente para cada tarea (contexto limpio = menos errores).
-4. Pegá el **prompt de tarea** (§3) cambiando `<TAREA>`, `<ETAPA>` y `<DISEÑO>` (sacá los valores de la tabla del §5).
-5. Cuando termine, mirá el resumen. Si dice que algo falló o quedó bloqueado, no sigas con la siguiente tarea: usá el prompt de §4 o anotalo para la revisión.
-6. Al terminar todas las tareas de la etapa: `git push` y pasá a la revisión con Sonnet.
+1. Abrí una sesión nueva del agente y pegá el **prompt 2 · DeepSeek — código** de la etapa, en [`prompts/etapa-XX.md`](prompts/README.md). Ya trae la lista de tareas con su diseño de referencia.
+2. El agente hace las tareas una por una (commit por tarea) y te avisa al terminar cada una.
+3. Si la sesión se corta o se llena el contexto, abrí una nueva y pegá **el mismo prompt**: retoma desde la primera tarea sin `[x]`.
+4. Al terminar, pasá al prompt 3 (revisión con Sonnet). Si la revisión deja fixes, volvé a pegar el prompt 2: los resuelve primero.
+
+Las secciones §3 y §4 de abajo (prompt por tarea suelta) quedan como alternativa si querés ir de a una tarea; la §5 es la referencia de diseño por tarea.
 
 ---
 

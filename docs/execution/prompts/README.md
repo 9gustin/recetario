@@ -1,14 +1,16 @@
-# Prompts listos por etapa
+# Prompts por etapa
 
-Un archivo por etapa con **todos los prompts en orden**: configuración (Sonnet) → cada tarea (DeepSeek) → revisión (Sonnet) → fixes. Solo hay que copiar y pegar, cada prompt en una sesión nueva.
+Cada etapa tiene **3 prompts**, en orden y cada uno en una sesión nueva:
 
-La Etapa 0 se hace completa con Sonnet: sus prompts están en [`../01-configuracion-sonnet.md`](../01-configuracion-sonnet.md) §B (sesiones B1, B2 y B3).
+1. **Sonnet — configuración**: servicios externos que pida la etapa y creación de la rama.
+2. **DeepSeek — código**: todas las tareas de la etapa, una por una, con un commit por tarea. Si la sesión se corta, se pega el mismo prompt y retoma.
+3. **Sonnet — revisión**: pruebas, diseño, seguridad, arreglos, merge y deploy. Si deja fixes, se vuelve al prompt 2 (los resuelve primero) y después al 3.
 
-Para la revisión general al final de todo: [`../03-revision-sonnet.md`](../03-revision-sonnet.md) §B.
+Al final de todo: revisión general en [`../03-revision-sonnet.md`](../03-revision-sonnet.md) §B.
 
-| Etapa | Archivo | Contenido | Tareas de código |
+| Etapa | Archivo | Contenido | Tareas |
 |---|---|---|---|
-| 0 | [01-configuracion-sonnet.md §B](../01-configuracion-sonnet.md) | Fundaciones (todo con Sonnet) | — |
+| 00 | [etapa-00.md](etapa-00.md) | Fundaciones | 3 |
 | 01 | [etapa-01.md](etapa-01.md) | Auth y grupos | 7 |
 | 02 | [etapa-02.md](etapa-02.md) | Recetario manual | 9 |
 | 03 | [etapa-03.md](etapa-03.md) | Modo cocinar | 8 |
@@ -21,4 +23,5 @@ Para la revisión general al final de todo: [`../03-revision-sonnet.md`](../03-r
 | 08b | [etapa-08b.md](etapa-08b.md) | Plan vivo | 9 |
 | 09 | [etapa-09.md](etapa-09.md) | Meal prep y tips | 4 |
 | 10 | [etapa-10.md](etapa-10.md) | Notificaciones y pulido | 6 |
-| Final | [03-revision-sonnet.md §B](../03-revision-sonnet.md) | Revisión general | — |
+
+Si cambia el plan: `python3 scripts/gen-execution-prompts.py .`
