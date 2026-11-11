@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Plan semanal con IA</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#FF9F78}a:hover{color:#FFC2A8}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #22140F; color: #FBEDE4; font-family: 'Inter', system-ui, sans-serif; display: flex; flex-direction: column; overflow: hidden; position: relative">
+
+  <header style="padding: 18px 20px 10px; display: flex; flex-direction: column; gap: 4px">
+    <div style="display: flex; justify-content: space-between; align-items: center">
+      <button aria-label="Semana anterior" style="width: 40px; height: 40px; border-radius: 50%; border: 0; background: #331E17; color: #FBEDE4; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button>
+      <span style="padding: 5px 10px; border-radius: 999px; background: #4A2C22; font-size: 12px; font-weight: 700; color: #FFB08F">Borrador</span>
+      <button aria-label="Semana siguiente" style="width: 40px; height: 40px; border-radius: 50%; border: 0; background: #331E17; color: #FBEDE4; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button>
+    </div>
+    <h1 style="margin: 6px 0 0; font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; font-size: 30px; line-height: 1.05">Semana del 16 al 22</h1>
+  </header>
+
+  <main style="padding: 0 16px; display: flex; flex-direction: column; gap: 8px">
+    <div style="display: flex; gap: 12px; align-items: center; padding: 10px 12px; border-radius: 16px; background: #331E17">
+      <span style="width: 34px; font-size: 12px; font-weight: 700; color: #D3AE9C">LUN</span>
+      <span style="width: 40px; height: 40px; flex: none; border-radius: 10px; background: #E0764F"></span>
+      <div style="flex: 1; min-width: 0"><p style="margin: 0; font-size: 14px; font-weight: 600">Salmón con rúcula y palta</p><p style="margin: 2px 0 0; font-size: 12px; color: #D3AE9C">Cena · pescado primero, dura menos</p></div>
+    </div>
+    <div style="display: flex; gap: 12px; align-items: center; padding: 10px 12px; border-radius: 16px; background: #331E17">
+      <span style="width: 34px; font-size: 12px; font-weight: 700; color: #D3AE9C">MAR</span>
+      <span style="width: 40px; height: 40px; flex: none; border-radius: 10px; background: #7FA36A"></span>
+      <div style="flex: 1; min-width: 0"><p style="margin: 0; font-size: 14px; font-weight: 600">Wok de pollo y vegetales</p><p style="margin: 2px 0 0; font-size: 12px; color: #D3AE9C">Cena · rinde para el almuerzo del mié</p></div>
+    </div>
+    <div style="display: flex; gap: 12px; align-items: center; padding: 10px 12px; border-radius: 16px; background: #331E17; box-shadow: inset 0 0 0 2px #FF8A5B">
+      <span style="width: 34px; font-size: 12px; font-weight: 700; color: #FF9F78">MIÉ</span>
+      <span style="width: 40px; height: 40px; flex: none; border-radius: 10px; background: #B5533B"></span>
+      <div style="flex: 1; min-width: 0"><p style="margin: 0; font-size: 14px; font-weight: 600">Bife con ensalada de repollo</p><p style="margin: 2px 0 0; font-size: 12px; color: #FFB08F">Cambiado recién · algo con carne</p></div>
+    </div>
+    <div style="display: flex; gap: 12px; align-items: center; padding: 10px 12px; border-radius: 16px; border: 1px dashed #4A2C22">
+      <span style="width: 34px; font-size: 12px; font-weight: 700; color: #D3AE9C">JUE</span>
+      <p style="margin: 0; flex: 1; font-size: 14px; color: #D3AE9C">Comen afuera</p>
+    </div>
+  </main>
+
+  <section aria-label="Asistente del plan" style="position: absolute; left: 0; right: 0; bottom: 0; height: 410px; background: #FBEDE4; color: #22140F; border-radius: 28px 28px 0 0; padding: 10px 16px 16px; box-sizing: border-box; display: flex; flex-direction: column; gap: 10px; box-shadow: 0 -12px 40px rgba(0,0,0,0.35)">
+    <span style="align-self: center; width: 40px; height: 5px; border-radius: 99px; background: #D9C3B4"></span>
+    <div style="display: flex; flex-direction: column; gap: 8px; flex: 1">
+      <p style="margin: 0; align-self: flex-end; max-width: 75%; padding: 10px 14px; border-radius: 18px 18px 4px 18px; background: #6E2F22; color: #FBEDE4; font-size: 14px">Armame las cenas. El jueves comemos afuera.</p>
+      <p style="margin: 0; max-width: 85%; padding: 10px 14px; border-radius: 18px 18px 18px 4px; background: #FFFFFF; font-size: 14px; line-height: 1.45">Listo: 5 cenas sin cebolla y bajas en harinas. Puse el salmón el lunes porque es lo que menos dura, y el wok rinde para un almuerzo.</p>
+      <p style="margin: 0; align-self: flex-end; max-width: 75%; padding: 10px 14px; border-radius: 18px 18px 4px 18px; background: #6E2F22; color: #FBEDE4; font-size: 14px">Cambiá el miércoles por algo con carne</p>
+      <p style="margin: 0; max-width: 85%; padding: 10px 14px; border-radius: 18px 18px 18px 4px; background: #FFFFFF; font-size: 14px; line-height: 1.45">Hecho: bife con ensalada de repollo. El repollo dura toda la semana.</p>
+    </div>
+    <div style="display: flex; gap: 8px; align-items: center">
+      <label style="flex: 1; min-width: 0">
+        <span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Pedile un cambio al plan</span>
+        <input type="text" placeholder="Pedile un cambio…" style="width: 100%; box-sizing: border-box; min-height: 48px; padding: 0 16px; border-radius: 999px; border: 1px solid #E3CDBE; background: #FFFFFF; font: inherit; font-size: 15px; color: #22140F">
+      </label>
+      <button aria-label="Hablar" style="width: 48px; height: 48px; flex: none; border-radius: 50%; border: 0; background: #22140F; color: #FBEDE4; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M5 11a7 7 0 0 0 14 0M12 18v3"></path></svg></button>
+    </div>
+    <button style="min-height: 52px; border: 0; border-radius: 999px; background: #FF8A5B; color: #22140F; font: inherit; font-size: 16px; font-weight: 700">Aprobar plan y armar la compra</button>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

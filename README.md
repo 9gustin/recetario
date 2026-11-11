@@ -29,7 +29,9 @@ Las recetas de tu casa, compartidas con tu familia. Planificá la semana respeta
 | [`docs/SPEC.md`](docs/SPEC.md) | Spec de producto y técnico: features, arquitectura, modelo de datos, diseño de la IA, API y pantallas. |
 | [`docs/plan/README.md`](docs/plan/README.md) | Plan de desarrollo: cómo ejecutar cada tarea con Claude Code, prerrequisitos y tablero de avance. |
 | [`docs/plan/etapa-*.md`](docs/plan/) | Las 13 etapas con sus tareas, criterios de aceptación y verificación. |
-| [Diseño (canvas)](https://claude.ai/artifact/B4zgaFUnFXQLHrFAkJE1zJ) | Pantallas de la app en el estilo "Fuego lento" (privado). |
+| [`docs/execution/`](docs/execution/README.md) | **Cómo se ejecuta:** línea de tiempo y prompts para configuración (Sonnet), código (DeepSeek) y revisión (Sonnet). |
+| [`docs/design/`](docs/design/README.md) | Pantallas del diseño "Fuego lento" como referencia local, tokens y qué pantalla corresponde a cada tarea. |
+| [Diseño (canvas)](https://claude.ai/artifact/B4zgaFUnFXQLHrFAkJE1zJ) | El mismo diseño en el canvas original (privado). |
 | [`CLAUDE.md`](CLAUDE.md) | Reglas y convenciones del repo para el agente. |
 
 ## Stack

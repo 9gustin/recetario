@@ -7,6 +7,8 @@ Plan ejecutable tarea por tarea con Claude Sonnet (Claude Code). Cada tarea est�
 
 ---
 
+> **Reparto de trabajo:** la ejecución real se divide en configuración (Sonnet), código (DeepSeek) y revisión (Sonnet). Los prompts de cada rol y la línea de tiempo están en [`docs/execution/`](../execution/README.md); usá esos. El prompt genérico de abajo sirve si una tarea la hace Claude Code directamente.
+
 ## 1. Cómo ejecutar cada tarea
 
 ### Flujo

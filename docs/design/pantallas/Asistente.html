@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Preguntale</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#F2B35E}a:hover{color:#FFD08F}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #191411; color: #F5EDE3; font-family: 'Inter', system-ui, sans-serif; display: flex; flex-direction: column; overflow: hidden; position: relative">
+
+  <header style="padding: 16px 16px 10px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid #2E2520">
+    <a href="Noche.dc.html" aria-label="Volver" style="width: 44px; height: 44px; border-radius: 50%; background: #241D19; display: flex; align-items: center; justify-content: center; color: #F5EDE3"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></a>
+    <div style="flex: 1">
+      <h1 style="margin: 0; font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; font-size: 26px; line-height: 1.05">Preguntale</h1>
+      <p style="margin: 2px 0 0; font-size: 12px; color: #B8A796">Conoce tus recetas, tu plan y lo que compraste</p>
+    </div>
+  </header>
+
+  <main style="flex: 1; padding: 14px 16px 0; display: flex; flex-direction: column; gap: 10px">
+    <div style="align-self: flex-end; max-width: 84%; padding: 10px 14px; border-radius: 18px 18px 4px 18px; background: #3A2418; font-size: 14px; line-height: 1.45">
+      <span style="display: inline-flex; align-items: center; gap: 6px; margin-bottom: 6px; padding: 4px 10px 4px 4px; border-radius: 999px; background: #F2A541; color: #191411; font-size: 13px; font-weight: 600"><span style="width: 20px; height: 20px; border-radius: 50%; background: #E8B04B; box-shadow: inset 0 0 0 2px #191411"></span>Pollo al limón con zapallitos</span>
+      <span style="display: block">¿Le puedo poner brócoli o mejor no?</span>
+    </div>
+
+    <div style="max-width: 90%; padding: 12px 14px; border-radius: 18px 18px 18px 4px; background: #241D19; font-size: 14px; line-height: 1.5; display: flex; flex-direction: column; gap: 8px">
+      <p style="margin: 0">Sí, queda muy bien y sigue siendo apta para los dos. Agregalo en el <strong>paso 5</strong>, junto con los zapallitos: 1 taza de ramitos chicos, 4 minutos tapado.</p>
+      <button style="align-self: flex-start; min-height: 36px; padding: 0 12px; border-radius: 999px; border: 1px solid #F2A541; background: transparent; color: #F2B35E; font: inherit; font-size: 13px; font-weight: 600">Sumarlo a la receta</button>
+    </div>
+
+    <p style="margin: 0; align-self: flex-end; max-width: 80%; padding: 10px 14px; border-radius: 18px 18px 4px 18px; background: #3A2418; font-size: 14px">¿Y se puede freezar?</p>
+
+    <p style="margin: 0; max-width: 90%; padding: 12px 14px; border-radius: 18px 18px 18px 4px; background: #241D19; font-size: 14px; line-height: 1.5">El pollo cocido sí, hasta 2 meses. Los zapallitos se ponen aguados al descongelar: si vas a freezar, separá el pollo y hacé las verduras en el momento.</p>
+
+    <div style="display: flex; gap: 8px; flex-wrap: wrap">
+      <button style="min-height: 36px; padding: 0 12px; border-radius: 999px; border: 1px solid #3A2E27; background: transparent; color: #E5D6C6; font: inherit; font-size: 13px">¿Cuánto dura en la heladera?</button>
+      <button style="min-height: 36px; padding: 0 12px; border-radius: 999px; border: 1px solid #3A2E27; background: transparent; color: #E5D6C6; font: inherit; font-size: 13px">¿Con qué lo acompaño?</button>
+    </div>
+  </main>
+
+  <div role="listbox" aria-label="Recetas que coinciden" style="position: absolute; left: 16px; right: 16px; bottom: 92px; padding: 6px; border-radius: 18px; background: #2E2520; box-shadow: 0 10px 30px rgba(0,0,0,0.45); display: flex; flex-direction: column">
+    <p style="margin: 0; padding: 6px 10px; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; color: #B8A796">TUS RECETAS</p>
+    <div role="option" aria-selected="true" style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 12px; background: #3A2E27">
+      <span style="width: 32px; height: 32px; border-radius: 8px; background: #E0764F"></span><span style="flex: 1; font-size: 14px"><strong>Sal</strong>món con rúcula y palta</span>
+    </div>
+    <div role="option" aria-selected="false" style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 12px">
+      <span style="width: 32px; height: 32px; border-radius: 8px; background: #E7D9B0"></span><span style="flex: 1; font-size: 14px"><strong>Sal</strong>sa de yogur y limón</span>
+    </div>
+  </div>
+
+  <div style="flex: none; padding: 12px 16px 22px; display: flex; gap: 8px; align-items: center; border-top: 1px solid #2E2520">
+    <label style="flex: 1; min-width: 0; display: flex; align-items: center; gap: 8px; min-height: 50px; padding: 0 6px 0 16px; border-radius: 999px; background: #241D19; border: 1px solid #3A2E27">
+      <span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Escribí tu pregunta. Usá @ para citar una receta</span>
+      <input type="text" value="¿El @sal" style="flex: 1; min-width: 0; border: 0; background: transparent; font: inherit; font-size: 15px; color: #F5EDE3; outline: none">
+      <button aria-label="Citar una receta" style="width: 38px; height: 38px; flex: none; border-radius: 50%; border: 0; background: #3A2E27; color: #F2B35E; font: inherit; font-size: 17px; font-weight: 700">@</button>
+    </label>
+    <button aria-label="Hablar" style="width: 50px; height: 50px; flex: none; border-radius: 50%; border: 0; background: #F2A541; color: #191411; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M5 11a7 7 0 0 0 14 0M12 18v3"></path></svg></button>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

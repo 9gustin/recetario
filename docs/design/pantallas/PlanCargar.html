@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Digitalizar mi plan</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#FF9F78}a:hover{color:#FFC2A8}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #22140F; color: #FBEDE4; font-family: 'Inter', system-ui, sans-serif; display: flex; flex-direction: column; overflow: hidden">
+
+  <header style="padding: 16px 16px 10px; display: flex; align-items: center; gap: 10px">
+    <a href="Perfil.dc.html" aria-label="Volver" style="width: 44px; height: 44px; border-radius: 50%; background: #331E17; display: flex; align-items: center; justify-content: center; color: #FBEDE4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></a>
+    <div style="flex: 1">
+      <h1 style="margin: 0; font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; font-size: 26px; line-height: 1.05">Digitalizar mi plan</h1>
+      <p style="margin: 2px 0 0; font-size: 12px; color: #D3AE9C">Paso 2 de 3 · ajustarlo a vos</p>
+    </div>
+  </header>
+
+  <main style="flex: 1; padding: 4px 16px 0; display: flex; flex-direction: column; gap: 10px">
+    <div style="display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: 16px; background: #331E17">
+      <span style="width: 40px; height: 48px; flex: none; border-radius: 8px; background: #FBEDE4; color: #6E2F22; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 800">PDF</span>
+      <div style="flex: 1; min-width: 0"><p style="margin: 0; font-size: 14px; font-weight: 600">plan-nutricion.pdf</p><p style="margin: 2px 0 0; font-size: 12px; color: #9FD08A">Leído · 14 páginas → 4 comidas por día</p></div>
+    </div>
+
+    <p style="margin: 0; max-width: 88%; padding: 12px 14px; border-radius: 18px 18px 18px 4px; background: #331E17; font-size: 14px; line-height: 1.45">Tu plan tiene <strong>4 comidas</strong>, proteína en almuerzo y cena, carbohidratos solo al mediodía y <strong>3 permitidos por semana</strong>. ¿Hay algo que no te guste?</p>
+    <p style="margin: 0; align-self: flex-end; max-width: 78%; padding: 12px 14px; border-radius: 18px 18px 4px 18px; background: #6E2F22; font-size: 14px; line-height: 1.45">No me gusta el yogur del desayuno</p>
+    <div style="max-width: 92%; padding: 12px 14px; border-radius: 18px 18px 18px 4px; background: #331E17; display: flex; flex-direction: column; gap: 10px">
+      <p style="margin: 0; font-size: 14px; line-height: 1.45">Estos reemplazos respetan lo que pide tu plan (proteína + lácteo):</p>
+      <button style="min-height: 46px; padding: 0 14px; border-radius: 14px; border: 1px solid #FF8A5B; background: rgba(255,138,91,0.12); color: #FBEDE4; font: inherit; font-size: 14px; font-weight: 600; text-align: left; display: flex; align-items: center; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF9F78" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12l5 5 9-10"></path></svg>Queso untable + 2 huevos</button>
+      <button style="min-height: 46px; padding: 0 14px; border-radius: 14px; border: 1px solid #4A2C22; background: transparent; color: #FBEDE4; font: inherit; font-size: 14px; font-weight: 500; text-align: left">Licuado de leche y frutos rojos</button>
+      <button style="min-height: 46px; padding: 0 14px; border-radius: 14px; border: 1px solid #4A2C22; background: transparent; color: #FBEDE4; font: inherit; font-size: 14px; font-weight: 500; text-align: left">Queso fresco con tostada de semillas</button>
+    </div>
+  </main>
+
+  <div style="flex: none; padding: 12px 16px 22px; display: flex; flex-direction: column; gap: 10px">
+    <div style="display: flex; gap: 8px; align-items: center">
+      <label style="flex: 1; min-width: 0">
+        <span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Contale algo más a la IA sobre tu plan</span>
+        <input type="text" placeholder="Algo más que quieras cambiar…" style="width: 100%; box-sizing: border-box; min-height: 48px; padding: 0 16px; border-radius: 999px; border: 1px solid #4A2C22; background: #331E17; color: #FBEDE4; font: inherit; font-size: 15px">
+      </label>
+      <button aria-label="Hablar" style="width: 48px; height: 48px; flex: none; border-radius: 50%; border: 0; background: #FF8A5B; color: #22140F; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M5 11a7 7 0 0 0 14 0M12 18v3"></path></svg></button>
+    </div>
+    <a href="PlanVivo.dc.html" style="min-height: 52px; border-radius: 999px; background: #FBEDE4; color: #22140F; text-decoration: none; font-size: 16px; font-weight: 700; display: flex; align-items: center; justify-content: center">Ver cómo quedó mi plan</a>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

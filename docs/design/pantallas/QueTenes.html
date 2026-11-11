@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>¿Qué tenés?</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#F2B35E}a:hover{color:#FFD08F}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #191411; color: #F5EDE3; font-family: 'Inter', system-ui, sans-serif; display: flex; flex-direction: column; overflow: hidden">
+
+  <header style="padding: 16px 16px 0; display: flex; align-items: center; gap: 8px">
+    <a href="Tarde.dc.html" aria-label="Volver" style="width: 44px; height: 44px; border-radius: 50%; background: #241D19; display: flex; align-items: center; justify-content: center; color: #F5EDE3">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg>
+    </a>
+  </header>
+
+  <section style="padding: 12px 20px 0; display: flex; flex-direction: column; gap: 14px">
+    <h1 style="margin: 0; font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; font-size: 36px; line-height: 1.05">¿Qué tenés?</h1>
+    <p style="margin: 0; font-size: 14px; color: #B8A796; line-height: 1.45">Decime qué hay en la heladera o qué tenés ganas de comer. Te propongo algo rápido.</p>
+
+    <div style="padding: 14px; border-radius: 22px; background: #241D19; display: flex; flex-direction: column; gap: 12px">
+      <div style="display: flex; flex-wrap: wrap; gap: 8px">
+        <span style="display: flex; align-items: center; gap: 6px; padding: 7px 8px 7px 12px; border-radius: 999px; background: #3A2E27; font-size: 14px">pollo<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#B8A796" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></span>
+        <span style="display: flex; align-items: center; gap: 6px; padding: 7px 8px 7px 12px; border-radius: 999px; background: #3A2E27; font-size: 14px">zapallitos<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#B8A796" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></span>
+        <span style="display: flex; align-items: center; gap: 6px; padding: 7px 8px 7px 12px; border-radius: 999px; background: #3A2E27; font-size: 14px">huevos<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#B8A796" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></span>
+        <span style="display: flex; align-items: center; gap: 6px; padding: 7px 8px 7px 12px; border-radius: 999px; background: #3A2E27; font-size: 14px">limón<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#B8A796" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></span>
+        <span style="display: flex; align-items: center; gap: 6px; padding: 7px 8px 7px 12px; border-radius: 999px; background: #3A2E27; font-size: 14px">queso<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#B8A796" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px">
+        <label style="flex: 1; min-width: 0">
+          <span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Agregar ingrediente</span>
+          <input type="text" placeholder="Agregá otro…" style="width: 100%; box-sizing: border-box; min-height: 44px; padding: 0 14px; border-radius: 14px; border: 1px solid #3A2E27; background: #191411; color: #F5EDE3; font: inherit; font-size: 15px">
+        </label>
+        <button aria-label="Dictar lo que tenés" style="width: 52px; height: 52px; flex: none; border-radius: 50%; border: 0; background: #F2A541; color: #191411; display: flex; align-items: center; justify-content: center">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M5 11a7 7 0 0 0 14 0M12 18v3"></path></svg>
+        </button>
+      </div>
+      <div style="display: flex; gap: 8px; flex-wrap: wrap">
+        <button style="min-height: 36px; padding: 0 12px; border-radius: 999px; border: 1px solid #F2A541; background: rgba(242,165,65,0.14); color: #F2B35E; font: inherit; font-size: 13px; font-weight: 600">Menos de 30 min</button>
+        <button style="min-height: 36px; padding: 0 12px; border-radius: 999px; border: 1px solid #3A2E27; background: transparent; color: #E5D6C6; font: inherit; font-size: 13px; font-weight: 600">Sin horno</button>
+        <button style="min-height: 36px; padding: 0 12px; border-radius: 999px; border: 1px solid #3A2E27; background: transparent; color: #E5D6C6; font: inherit; font-size: 13px; font-weight: 600">Liviano</button>
+      </div>
+    </div>
+  </section>
+
+  <main style="flex: 1; padding: 18px 20px 0; display: flex; flex-direction: column; gap: 10px">
+    <h2 style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; color: #B8A796">PODÉS HACER</h2>
+    <article style="display: flex; gap: 12px; align-items: center; padding: 12px; border-radius: 18px; background: #241D19">
+      <span style="width: 64px; height: 64px; flex: none; border-radius: 14px; background: #7FA36A"></span>
+      <div style="flex: 1; min-width: 0">
+        <p style="margin: 0; font-size: 16px; font-weight: 600">Tortilla de zapallitos y queso</p>
+        <p style="margin: 3px 0 0; font-size: 13px; color: #9FD08A">Tenés todo · 20 min</p>
+      </div>
+      <button aria-label="Cocinar tortilla de zapallitos" style="width: 44px; height: 44px; border-radius: 50%; border: 0; background: #F2A541; color: #191411; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"></path></svg></button>
+    </article>
+    <article style="display: flex; gap: 12px; align-items: center; padding: 12px; border-radius: 18px; background: #241D19">
+      <span style="width: 64px; height: 64px; flex: none; border-radius: 14px; background: #E8B04B"></span>
+      <div style="flex: 1; min-width: 0">
+        <p style="margin: 0; font-size: 16px; font-weight: 600">Pollo salteado al limón</p>
+        <p style="margin: 3px 0 0; font-size: 13px; color: #B8A796">25 min · te falta jengibre (opcional)</p>
+      </div>
+      <button aria-label="Cocinar pollo salteado" style="width: 44px; height: 44px; border-radius: 50%; border: 0; background: #3A2E27; color: #F5EDE3; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"></path></svg></button>
+    </article>
+    <p style="margin: 4px 0 0; font-size: 12px; color: #B8A796">Las dos son aptas para los dos: sin cebolla y bajas en harinas.</p>
+  </main>
+
+  <nav aria-label="Principal" style="height: 76px; flex: none; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); padding-bottom: 8px; box-sizing: border-box; background: #191411; border-top: 1px solid #2E2520">
+    <a href="Noche.dc.html" aria-current="page" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; text-decoration: none; color: #F2A541; font-size: 11px; font-weight: 700"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>Hoy</a>
+    <a href="Recetas.dc.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; text-decoration: none; color: #B8A796; font-size: 11px; font-weight: 500"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h13v16H6.5A1.5 1.5 0 0 1 5 18.5zM5 18.5A1.5 1.5 0 0 1 6.5 17H18"></path></svg>Recetas</a>
+    <a href="Plan.dc.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; text-decoration: none; color: #B8A796; font-size: 11px; font-weight: 500"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 3v4M16 3v4"></path></svg>Plan</a>
+    <a href="Compras.dc.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; text-decoration: none; color: #B8A796; font-size: 11px; font-weight: 500"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h12l-1 12H7zM9 8a3 3 0 0 1 6 0"></path></svg>Compras</a>
+    <a href="Perfil.dc.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; text-decoration: none; color: #B8A796; font-size: 11px; font-weight: 500"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg>Perfil</a>
+  </nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

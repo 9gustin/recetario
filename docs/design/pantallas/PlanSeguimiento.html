@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Registro y seguimiento</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#A8431A}a:hover{color:#7E3010}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #F8EFE2; color: #2A1D14; font-family: 'Inter', system-ui, sans-serif; display: flex; flex-direction: column; overflow: hidden">
+
+  <header style="padding: 16px 16px 8px; display: flex; align-items: center; gap: 10px">
+    <a href="PlanVivo.dc.html" aria-label="Volver" style="width: 44px; height: 44px; border-radius: 50%; background: #FFF8EE; border: 1px solid #EAD9C2; box-sizing: border-box; display: flex; align-items: center; justify-content: center; color: #2A1D14"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></a>
+    <h1 style="margin: 0; font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; font-size: 28px">Registrar</h1>
+  </header>
+
+  <main style="flex: 1; padding: 6px 16px 0; display: flex; flex-direction: column; gap: 14px">
+    <section style="padding: 16px; border-radius: 22px; background: #FFF8EE; border: 1px solid #EAD9C2; display: flex; flex-direction: column; gap: 12px">
+      <div>
+        <p style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.1em; color: #6E5A48">MERIENDA · 17:30</p>
+        <p style="margin: 4px 0 0; font-family: 'DM Serif Display', Georgia, serif; font-size: 22px; line-height: 1.15">Fruta + puñado de frutos secos</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+        <button style="min-height: 76px; border-radius: 16px; border: 0; background: #2F6B4F; color: #FFFFFF; font: inherit; font-size: 13px; font-weight: 700; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12l5 5 9-10"></path></svg>Cumplí</button>
+        <button style="min-height: 76px; border-radius: 16px; border: 1px solid #EAD9C2; background: #FFFFFF; color: #2A1D14; font: inherit; font-size: 13px; font-weight: 700; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h13l-3-3M20 17H7l3 3"></path></svg>Cambié algo</button>
+        <button style="min-height: 76px; border-radius: 16px; border: 1px solid #EAD9C2; background: #FFFFFF; color: #2A1D14; font: inherit; font-size: 13px; font-weight: 700; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9541F" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v8M8 12h8"></path></svg>Permitido</button>
+      </div>
+      <label style="display: flex; align-items: center; gap: 10px; min-height: 46px; padding: 0 6px 0 14px; border-radius: 999px; background: #FFFFFF; border: 1px solid #EAD9C2">
+        <span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Contá qué comiste</span>
+        <input type="text" placeholder="O contá qué comiste…" style="flex: 1; min-width: 0; border: 0; background: transparent; font: inherit; font-size: 14px; color: #2A1D14; outline: none">
+        <button aria-label="Dictar lo que comiste" style="width: 36px; height: 36px; flex: none; border-radius: 50%; border: 0; background: #2A1D14; color: #FFF8EE; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M5 11a7 7 0 0 0 14 0M12 18v3"></path></svg></button>
+      </label>
+    </section>
+
+    <section style="display: flex; flex-direction: column; gap: 10px">
+      <div style="display: flex; justify-content: space-between; align-items: baseline">
+        <h2 style="margin: 0; font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; font-size: 22px">Tu semana</h2>
+        <span style="font-size: 13px; font-weight: 600; color: #2F6B4F">86% cumplido</span>
+      </div>
+      <div style="display: grid; grid-template-columns: 44px repeat(7, minmax(0, 1fr)); gap: 5px; align-items: center; font-size: 11px; font-weight: 600; color: #6E5A48">
+        <span></span><span style="text-align: center">L</span><span style="text-align: center">M</span><span style="text-align: center">M</span><span style="text-align: center">J</span><span style="text-align: center">V</span><span style="text-align: center">S</span><span style="text-align: center">D</span>
+        <span>Des.</span><span style="height: 26px; border-radius: 7px; background: #2F6B4F"></span><span style="height: 26px; border-radius: 7px; background: #2F6B4F"></span><span style="height: 26px; border-radius: 7px; background: #2F6B4F"></span><span style="height: 26px; border-radius: 7px; background: #EAD9C2"></span><span style="height: 26px; border-radius: 7px; background: #EAD9C2"></span><span style="height: 26px; border-radius: 7px; background: #EAD9C2"></span><span style="height: 26px; border-radius: 7px; background: #EAD9C2"></span>
+        <span>Alm.</span><span style="height: 26px; border-radius: 7px; background: #2F6B4F"></span><span style="height: 26px; border-radius: 7px; background: #9CC7A9"></span><span style="height: 26px; border-radius: 7px; background: #2F6B4F"></span><span style="height: 26px; border-radius: 7px; background: #EAD9C2"></span><span style="height: 26px; border-radius: 7px; background: #EAD9C2"></span><span style="height: 26px; border-radius: 7px; background: #EAD9C2"></span><span style="height: 26px; border-radius: 7px; background: #EAD9C2"></span>
+        <span>Mer.</span><span style="height: 26px; border-radius: 7px; background: #2F6B4F"></span><span style="height: 26px; border-radius: 7px; background: #2F6B4F"></span><span style="height: 26px; border-radius: 7px; background: #FFFFFF; box-shadow: inset 0 0 0 2px #2A1D14"></span><span style="height: 26px; border-radius: 7px; background: #EAD9C2"></span><span style="height: 26px; border-radius: 7px; background: #EAD9C2"></span><span style="height: 26px; border-radius: 7px; background: #EAD9C2"></span><span style="height: 26px; border-radius: 7px; background: #EAD9C2"></span>
+        <span>Cena</span><span style="height: 26px; border-radius: 7px; background: #2F6B4F"></span><span style="height: 26px; border-radius: 7px; background: #E58A5E"></span><span style="height: 26px; border-radius: 7px; background: #EAD9C2"></span><span style="height: 26px; border-radius: 7px; background: #EAD9C2"></span><span style="height: 26px; border-radius: 7px; background: #EAD9C2"></span><span style="height: 26px; border-radius: 7px; background: #EAD9C2"></span><span style="height: 26px; border-radius: 7px; background: #EAD9C2"></span>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px; font-size: 12px; color: #6E5A48">
+        <span style="display: flex; align-items: center; gap: 6px"><span style="width: 12px; height: 12px; border-radius: 4px; background: #2F6B4F"></span>Cumplí</span>
+        <span style="display: flex; align-items: center; gap: 6px"><span style="width: 12px; height: 12px; border-radius: 4px; background: #9CC7A9"></span>Cambié algo</span>
+        <span style="display: flex; align-items: center; gap: 6px"><span style="width: 12px; height: 12px; border-radius: 4px; background: #E58A5E"></span>Permitido</span>
+      </div>
+    </section>
+
+    <p style="margin: 0; padding: 12px 14px; border-radius: 16px; background: #EFE3CF; font-size: 14px; line-height: 1.45">Vas muy bien. El permitido del martes ya está contado: te quedan <strong>2 hasta el domingo</strong>.</p>
+  </main>
+
+  <nav aria-label="Principal" style="height: 76px; flex: none; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); padding-bottom: 8px; box-sizing: border-box; background: #FFF8EE; border-top: 1px solid #EAD9C2">
+    <a href="Mediodia.dc.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; text-decoration: none; color: #6E5A48; font-size: 11px; font-weight: 500"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>Hoy</a>
+    <a href="Recetas.dc.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; text-decoration: none; color: #6E5A48; font-size: 11px; font-weight: 500"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h13v16H6.5A1.5 1.5 0 0 1 5 18.5zM5 18.5A1.5 1.5 0 0 1 6.5 17H18"></path></svg>Recetas</a>
+    <a href="Plan.dc.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; text-decoration: none; color: #6E5A48; font-size: 11px; font-weight: 500"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 3v4M16 3v4"></path></svg>Plan</a>
+    <a href="Compras.dc.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; text-decoration: none; color: #6E5A48; font-size: 11px; font-weight: 500"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h12l-1 12H7zM9 8a3 3 0 0 1 6 0"></path></svg>Compras</a>
+    <a href="Perfil.dc.html" aria-current="page" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; text-decoration: none; color: #A8431A; font-size: 11px; font-weight: 700"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg>Perfil</a>
+  </nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>
