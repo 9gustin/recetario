@@ -20,7 +20,7 @@
 - **Verificación:** `pnpm check`.
 - **Fuera de alcance:** UI, Supabase, PWA.
 
-### T0.2 — Design system base (shadcn/ui)
+### [x] T0.2 — Design system base (shadcn/ui)
 - **Depende de:** T0.1
 - **Spec:** §8.1 (dirección visual "Fuego lento" y tabla de temas). Referencia visual: el canvas de diseño linkeado en §8.1.
 - **Objetivo:** componentes y tokens visuales del estilo "Fuego lento", con los tres temas por momento del día.
@@ -38,7 +38,7 @@
 - **Verificación:** `pnpm check` + revisión visual.
 - **Fuera de alcance:** layout de la app.
 
-### T0.3 — App shell mobile
+### [x] T0.3 — App shell mobile
 - **Depende de:** T0.2
 - **Objetivo:** estructura de navegación de la app con páginas vacías.
 - **Spec:** §8.
@@ -133,3 +133,4 @@
 - T0.2: `--surface-2` y `--border` salen de los pares de `docs/design/README.md` (primero = border, segundo = surface-2). `--danger-soft` en mediodía (#A8381F) no estaba definido en la tabla: se eligió por contraste.
 - T0.2: Vitest se instaló ya en T0.2 (mínimo: `vitest.config.ts` y `pnpm test`) porque la tarea pide test de `day-part`. T0.6 completa jsdom/Playwright/pgTAP.
 - T0.2: el provider forzado (`force="noche"`) fija el tema en `<html>` al montarse; en carga inicial puede verse un destello hasta hidratar. Mitigación futura: pasar el tema desde el layout del modo cocinar.
+- T0.3: el selector de grupo es un botón deshabilitado con el texto "Casa" hasta T1.4. Mientras no haya auth, `BottomNav` usa el grupo `demo` si la ruta no trae `groupId` (constante `DEMO_GROUP_ID` en `components/shell/nav-items.ts`). Cada página vacía usa `EmptyState` (ícono en círculo `--hero`).

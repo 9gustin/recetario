@@ -1,7 +1,7 @@
+import { redirect } from "next/navigation";
+import { DEMO_GROUP_ID } from "@/components/shell/nav-items";
+
+// Mientras no haya auth (T1.3), la raíz lleva al grupo de demo.
 export default function Home() {
-  return (
-    <main className="flex flex-1 items-center justify-center p-6">
-      <h1 className="text-3xl font-semibold">Recetario</h1>
-    </main>
-  );
+  redirect(`/g/${DEMO_GROUP_ID}/hoy`);
 }
