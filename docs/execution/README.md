@@ -8,6 +8,8 @@ El desarrollo se reparte en tres roles. Cada uno tiene su archivo con el prompt 
 | **Código** | DeepSeek (local) | Implementa las tareas de código de las Etapas 1 a 10, una tarea por vez, en una rama por etapa. | [02-codigo-deepseek.md](02-codigo-deepseek.md) |
 | **Revisión** | Claude Sonnet (Claude Code) | Al cerrar cada etapa: levanta el proyecto, corre todas las pruebas, compara con el diseño, revisa seguridad, arregla lo chico, deja tareas para lo grande, mergea y despliega. Al final, una revisión general. | [03-revision-sonnet.md](03-revision-sonnet.md) |
 
+**Prompts listos para copiar y pegar, etapa por etapa:** [`prompts/`](prompts/README.md). Cada archivo trae, en orden, el prompt de configuración, uno por cada tarea de código y el de revisión. Si cambia el plan, se regeneran con `python3 scripts/gen-execution-prompts.py .`.
+
 Por qué así:
 - **La Etapa 0 entera la hace Sonnet**: además de configuración (base de datos, Vercel, CI) incluye el sistema de diseño y la estructura de la app. Si esa base queda bien, todo lo que construya después un modelo más básico sale consistente.
 - **DeepSeek solo escribe código** con tareas muy cerradas: archivos concretos, pasos, criterios de aceptación y la pantalla del diseño que corresponde ([`docs/design/`](../design/README.md)).
