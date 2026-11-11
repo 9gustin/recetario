@@ -1,65 +1,42 @@
-# Ejecución — quién hace qué y en qué orden
+# Ejecución
 
-El desarrollo se reparte en tres roles. Cada uno tiene su archivo con el prompt listo para pegar.
+Tres archivos de instrucciones, uno por rol. Cada agente lee su archivo y hace todo lo que dice, de principio a fin. El avance se comparte en [`progreso.md`](progreso.md), así que cualquier sesión puede cortarse y retomarse pegando el mismo prompt.
 
-| Rol | Modelo | Qué hace | Archivo |
+| Paso | Modelo | Instrucciones | Qué deja hecho |
 |---|---|---|---|
-| **Configuración** | Claude Sonnet (Claude Code) | Fundaciones del proyecto (Etapa 0 completa), cuentas y servicios externos, variables de entorno, CI, deploy, y la configuración puntual que pide cada etapa. | [01-configuracion-sonnet.md](01-configuracion-sonnet.md) |
-| **Código** | DeepSeek (local) | Implementa las tareas de código de las Etapas 1 a 10, una tarea por vez, en una rama por etapa. | [02-codigo-deepseek.md](02-codigo-deepseek.md) |
-| **Revisión** | Claude Sonnet (Claude Code) | Al cerrar cada etapa: levanta el proyecto, corre todas las pruebas, compara con el diseño, revisa seguridad, arregla lo chico, deja tareas para lo grande, mergea y despliega. Al final, una revisión general. | [03-revision-sonnet.md](03-revision-sonnet.md) |
+| 1 | Claude Sonnet (Claude Code) | [01-configuracion-sonnet.md](01-configuracion-sonnet.md) | Etapa 0 completa y todos los servicios configurados (Supabase, Vercel, CI, Google, Anthropic, voz, Inngest, Web Push). Rama `dev` lista. |
+| 2 | DeepSeek (local) | [02-codigo-deepseek.md](02-codigo-deepseek.md) | El código de las Etapas 1 a 10, tarea por tarea. Frena al terminar cada etapa. |
+| 3 | Claude Sonnet (Claude Code) | [03-revision-sonnet.md](03-revision-sonnet.md) | Revisa y prueba cada etapa terminada, arregla, mergea a `main` y despliega. Al final, revisión general. |
 
-**Prompts listos para copiar y pegar:** [`prompts/`](prompts/README.md). Cada etapa tiene **3 prompts**: configuración (Sonnet), código (DeepSeek, todas las tareas de la etapa en una sesión) y revisión (Sonnet). Si cambia el plan, se regeneran con `python3 scripts/gen-execution-prompts.py .`.
-
-Por qué así:
-- **La Etapa 0 entera la hace Sonnet**: además de configuración (base de datos, Vercel, CI) incluye el sistema de diseño y la estructura de la app. Si esa base queda bien, todo lo que construya después un modelo más básico sale consistente.
-- **DeepSeek solo escribe código** con tareas muy cerradas: archivos concretos, pasos, criterios de aceptación y la pantalla del diseño que corresponde ([`docs/design/`](../design/README.md)).
-- **Sonnet revisa cada etapa antes de mergear**: así los errores no se acumulan de una etapa a la siguiente.
-
----
-
-## Línea de tiempo
+## Cómo se usa
 
 ```
-FASE 0 ─ Configuración inicial (Sonnet) ─────────────────────────────────────────
-  Prerrequisitos 👤 → Etapa 0 completa (T0.1–T0.8) → app vacía en producción
-
-POR CADA ETAPA (1 → 10) ─────────────────────────────────────────────────────────
-  ① Configuración puntual (Sonnet)   solo si la etapa la necesita (tabla abajo)
-  ② Código (DeepSeek)                 rama etapa-XX, un prompt para toda la etapa, commit por tarea
-  ③ Revisión de etapa (Sonnet)        pruebas + diseño + seguridad → arreglos → merge a main → deploy
-        └─ si deja fixes: se vuelve a pegar ② (los hace primero) → ③ de nuevo
-
-FASE FINAL ─ Revisión general (Sonnet) ──────────────────────────────────────────
-  App completa: pruebas, flujos de punta a punta en el celular, seguridad, performance
+1 (una vez) → 2 → 3 → 2 → 3 → … → 2 → 3 (revisión general al final)
 ```
 
-## Orden de etapas y quién hace cada cosa
+1. Pegá el **prompt 1** en Claude Code con Sonnet. Te va a pedir que crees cuentas y pegues claves en lugares concretos.
+2. Pegá el **prompt 2** en DeepSeek. Trabaja hasta terminar una etapa y frena.
+3. Pegá el **prompt 3** en Claude Code con Sonnet. Revisa esa etapa, la mergea y te dice qué probar en el celular.
+4. Volvé al 2. Repetí hasta la Etapa 10; la última vez, el 3 hace la revisión general.
 
-| # | Etapa | ① Config. puntual (Sonnet) | ② Código (DeepSeek) | ③ Revisión (Sonnet) |
-|---|---|---|---|---|
-| 0 | Fundaciones | **Toda la etapa** (T0.1–T0.8) | — | Revisión de Etapa 0 |
-| 1 | Auth y grupos | Google OAuth en Google Cloud + Supabase (local y prod), URLs de redirect | T1.1–T1.7 (la parte 👤 de T1.3 ya está hecha) | ✔ |
-| 2 | Recetario | — | T2.1–T2.9 | ✔ |
-| 3 | Modo cocinar | — | T3.1–T3.8 | ✔ |
-| 4 | Compartir | — | T4.1–T4.6 | ✔ **MVP-1** |
-| 5 | IA: importar | API key de Anthropic; proveedor de transcripción + prueba de calidad (paso 6 de T5.2) | T5.1–T5.6 | ✔ |
-| 5b | Preguntale | — | T5B.1–T5B.5 | ✔ |
-| 6 | Perfil alimentario | — | T6.1–T6.7 | ✔ |
-| 7 | Plan semanal + Hoy | — | T7.1–T7.14 | ✔ |
-| 8 | Lista de compras | — | T8.1–T8.6 | ✔ **MVP-2** |
-| 8b | Plan vivo | — | T8B.1–T8B.8, y después **T5B.6** | ✔ |
-| 9 | Meal prep | Cuenta de Inngest + integración con Vercel | T9.1–T9.4 | ✔ |
-| 10 | Notificaciones y pulido | Claves VAPID en Vercel | T10.1–T10.6 | ✔ + **Revisión general** |
+Si cualquier sesión se corta, abrí una nueva y pegá el mismo prompt: retoma desde `progreso.md`.
 
-## Ramas y commits
+## Los 3 prompts
 
-- `main` siempre deployable. Solo la **revisión** mergea a `main`.
-- DeepSeek trabaja en `etapa-XX` (ej. `etapa-02`), un commit por tarea: `T2.3: <resumen>`.
-- La revisión abre un PR `etapa-XX → main`, deja el informe en `docs/reviews/etapa-XX.md`, mergea y verifica el deploy.
+**1 · Sonnet — configuración** (Claude Code, modelo Sonnet, en `~/projects/recetario`):
 
-## Qué hacés vos (👤)
+```text
+Leé docs/execution/01-configuracion-sonnet.md y ejecutalo completo, de principio a fin. Antes de empezar, leé docs/execution/progreso.md y retomá desde el primer paso de configuración sin tildar.
+```
 
-- Crear cuentas y pegar claves cuando la configuración te lo pida (nunca le pases claves a DeepSeek ni las escribas en archivos commiteados).
-- Abrir cada sesión con el prompt del rol y la etapa/tarea que toca.
-- Probar en tu celular al cierre de cada etapa (la revisión te dice qué probar).
-- Marcar avance: el tablero está en [`docs/plan/README.md`](../plan/README.md) §5 (lo actualizan los agentes).
+**2 · DeepSeek — código** (tu agente con DeepSeek, en `~/projects/recetario`):
+
+```text
+Leé docs/execution/02-codigo-deepseek.md completo y seguilo al pie de la letra, empezando por la sección "Cómo arranca cada sesión". Usá docs/execution/progreso.md para saber dónde retomar. Trabajá tarea por tarea hasta terminar la etapa en curso y frená como indica el archivo.
+```
+
+**3 · Sonnet — revisión** (Claude Code, modelo Sonnet, en `~/projects/recetario`):
+
+```text
+Leé docs/execution/03-revision-sonnet.md y ejecutalo completo, empezando por "Cómo arranca cada llamada". Usá docs/execution/progreso.md para saber qué etapas revisar.
+```

@@ -1,107 +1,122 @@
-# 03 · Revisión y pruebas — Claude Sonnet
+# 03 · Revisión y pruebas — instrucciones para Claude Sonnet
 
-Sonnet revisa **cada etapa** antes de que entre a `main`, y al final hace una **revisión general** de la app completa. Se usa en **Claude Code** con **Sonnet**, abierto en `~/projects/recetario` (WSL). Para los hallazgos de seguridad marcados 🧠, conviene repetir esa parte con Opus.
+> Este archivo es tu guía completa. Cada vez que te llaman, leé `docs/execution/progreso.md` para saber qué revisar y seguí estas instrucciones de principio a fin.
 
-- Línea de tiempo: [README.md](README.md)
-- Arreglos grandes vuelven a DeepSeek: [02-codigo-deepseek.md](02-codigo-deepseek.md) §4
+## Objetivo final
 
----
+Que cada etapa que DeepSeek termina quede **probada, revisada, arreglada, mergeada a `main` y desplegada en producción**, y que al terminar la última etapa la app completa pase una **revisión general** que la deje lista para usar en casa.
 
-## A. Revisión de etapa
-
-Cuando DeepSeek terminó todas las tareas de la etapa y hiciste `git push`, abrí Claude Code nuevo con Sonnet y pegá:
-
-```text
-Sos el revisor técnico del proyecto en ~/projects/recetario (WSL). Revisás la Etapa <N> (rama etapa-<N>) antes de que entre a main.
-
-LEER
-1. CLAUDE.md, docs/execution/README.md y este archivo (docs/execution/03-revision-sonnet.md).
-2. El archivo de la etapa en docs/plan/ (todas sus tareas, criterios de aceptación y "Notas de ejecución").
-3. Las secciones de docs/SPEC.md que citan esas tareas.
-4. docs/design/README.md y las pantallas de docs/design/pantallas/ asignadas a las tareas de la etapa (tabla del §5 de docs/execution/02-codigo-deepseek.md).
-5. `git log main..etapa-<N> --oneline` y `git diff main...etapa-<N> --stat`.
-
-HACER, EN ESTE ORDEN
-1. Preparar: `git checkout etapa-<N> && git pull`, `pnpm install`, `pnpm db:start`, `pnpm db:reset`, `pnpm db:types` (no tiene que haber cambios en los tipos sin commitear).
-2. Pruebas automáticas: `pnpm check`, `pnpm db:test`, `pnpm test:e2e`, `pnpm build`. Anotá cada resultado.
-3. Criterios de aceptación: para cada tarea de la etapa, verificá cada criterio (leyendo el código y probándolo). Marcá cumplido / no cumplido con la evidencia.
-4. Prueba manual de la app: levantá `pnpm dev`, abrila en el navegador con viewport de celular (390×844) y recorré el flujo principal de la etapa como usuario, en los tres temas (forzando mediodía / tarde / noche). Sacá capturas de las pantallas principales.
-5. Diseño: compará cada pantalla implementada con su archivo de diseño (estructura, jerarquía, tamaños de tipografía, espaciados, botón principal, barra inferior). Verificá que no haya colores hex en componentes (`grep -rn "#[0-9A-Fa-f]\{6\}" app components`) y que los textos estén en español con voseo.
-6. Código: revisá el diff completo buscando: lógica de negocio fuera de lib/domain, `any`, errores sin manejar, consultas N+1, componentes duplicados, dependencias no previstas en el plan, tareas que se salieron de su alcance.
-7. Seguridad: toda tabla nueva con RLS y policies; uso del cliente admin solo donde el plan lo indica; funciones security definer con `set search_path` y chequeo de permisos; validación Zod en cada Server Action y Route Handler; nada de claves en el repo; endpoints de IA con cuota. Si la etapa toca RLS, tokens públicos o datos de salud, marcá la revisión de seguridad como 🧠.
-8. Arreglos:
-   - Problemas chicos y claros (menos de ~30 líneas, sin decisiones de diseño): arreglalos vos, con su test, un commit por arreglo: "review(etapa-<N>): <resumen>".
-   - Problemas grandes o que tocan varias partes: NO los arregles. Escribilos como tareas "T<N>.<tarea>-fix-<n>" en el informe, con el mismo formato que las tareas del plan (Objetivo, Archivos, Pasos, Aceptación), para que los haga DeepSeek.
-9. Informe: escribí docs/reviews/etapa-<N>.md con la plantilla de la sección C de este archivo, commitealo en la rama.
-10. Decisión:
-   - Si hay tareas fix pendientes o alguna prueba falla: NO mergees. Decime qué fixes tiene que hacer DeepSeek y terminá.
-   - Si todo está en verde: pusheá, abrí un PR etapa-<N> → main con `gh pr create` (resumen + link al informe), esperá el CI en verde (`gh pr checks --watch`), mergealo con `gh pr merge --squash --delete-branch`, y si hay migraciones nuevas verificá que el workflow de migraciones a producción haya corrido bien. Verificá el deploy de producción (/api/health).
-11. Marcá "Cierre de la Etapa <N>" en el archivo de la etapa con lo que quedó verificado.
-
-RESPUESTA FINAL (en español, corta):
-- Veredicto: MERGEADA / BLOQUEADA (por qué).
-- Pruebas: resultado de cada comando.
-- Arreglos que hiciste.
-- Tareas fix para DeepSeek (IDs).
-- Qué tengo que probar yo en el celular (lista de 3 a 6 pasos).
-```
-
-### Después de los fixes
-
-Cuando DeepSeek resolvió las tareas fix:
-
-```text
-Sos el revisor técnico del proyecto en ~/projects/recetario. En la rama etapa-<N> se resolvieron las tareas fix de docs/reviews/etapa-<N>.md.
-Leé el informe, verificá cada fix (código + test) y repetí los pasos 2, 4 y 7 de la revisión de etapa (docs/execution/03-revision-sonnet.md, sección A).
-Actualizá el informe y, si todo está en verde, seguí con el paso 10 (PR, CI, merge y deploy).
-```
+Concretamente, al terminar cada llamada tiene que ser verdad que:
+1. Toda etapa marcada "lista para revisión" en `progreso.md` tiene su informe en `docs/reviews/etapa-XX.md` y está **revisada** (o **bloqueada**, con el motivo).
+2. Lo revisado está mergeado de `dev` a `main`, con CI en verde, migraciones aplicadas en producción y deploy funcionando.
+3. Si ya están todas las etapas, existe `docs/reviews/final.md` con la revisión general.
 
 ---
 
-## B. Revisión general (al terminar la Etapa 10)
+## Cómo arranca cada llamada
 
-```text
-Sos el revisor final del proyecto en ~/projects/recetario (WSL). Todas las etapas están mergeadas en main. Hacé una revisión general de la app completa antes de usarla en serio.
-
-LEER: CLAUDE.md, docs/SPEC.md completo, docs/design/README.md, todos los informes de docs/reviews/ y el tablero de docs/plan/README.md.
-
-HACER
-1. Desde cero: clonar el repo en una carpeta temporal, `pnpm install`, `pnpm db:start`, `pnpm db:reset`, `pnpm check`, `pnpm db:test`, `pnpm test:e2e`, `pnpm build`. Todo tiene que funcionar siguiendo solo el README y docs/deploy.md; si falta un paso, corregí la documentación.
-2. Flujos de punta a punta (navegador con viewport 390×844, dos usuarios en dos contextos):
-   a) Alta con Google o magic link → crear grupo "Casa" → invitar → el segundo usuario se une.
-   b) Cargar recetas: manual, pegando un link, con foto y dictando.
-   c) Perfil alimentario por voz y plan vivo desde un PDF de ejemplo → indicadores de compatibilidad.
-   d) Home sin plan → ¿Qué tenés? → elegir → home con plan.
-   e) Armar la semana con la IA (con una persona sin cebolla) → aprobar → lista de compras → tachar desde los dos usuarios.
-   f) Meal prep del día → cocinar en modo stories con timers → preguntar al asistente en un paso → guardar un ajuste en la receta.
-   g) Registrar comidas del plan vivo y usar un permitido.
-   h) Compartir una receta por link y abrirla sin sesión.
-   i) Offline: tachar la lista sin red y sincronizar.
-   Anotá cada flujo como OK / falla, con capturas.
-3. Diseño: recorré todas las pantallas de docs/design/pantallas/ contra la app, en los tres temas. Lista de diferencias.
-4. Seguridad 🧠: auditoría de todas las policies RLS y funciones security definer, endpoints públicos (/r, /join, /api/inngest, /api/push), cuotas de IA, datos de salud (perfil, plan vivo, registros) nunca visibles para otros, cabeceras de seguridad, dependencias con vulnerabilidades (`pnpm audit`).
-5. Calidad de IA: correr todos los evals (`pnpm eval:*`) y reportar resultados, costo y latencia promedio desde ai_runs.
-6. Performance y accesibilidad: Lighthouse mobile en Hoy, Recetas, Receta y Compras (objetivo ≥ 90), contraste en los tres temas, navegación por teclado.
-7. Producción: deploy en verde, migraciones al día, variables de entorno completas, Sentry recibiendo errores, backups de Supabase activos.
-8. Informe: docs/reviews/final.md con la plantilla de la sección C (agregando "Flujos de punta a punta" y "Lista de lanzamiento"). Arreglos chicos los hacés vos; los grandes quedan como tareas "FINAL-fix-<n>".
-
-RESPUESTA FINAL: veredicto (lista para usar / falta), los 5 problemas más importantes y qué tengo que probar yo en mi celular y en el de mi pareja.
-```
+1. `cd ~/projects/recetario && git fetch && git checkout dev && git pull`.
+2. Leé: `CLAUDE.md`, este archivo, `docs/execution/progreso.md`, `docs/execution/02-codigo-deepseek.md` (para saber qué reglas siguió DeepSeek y qué diseño corresponde a cada tarea), `docs/design/README.md` y `docs/SPEC.md` (completo la primera vez; después, las secciones que citen las tareas).
+3. Armá la lista de etapas a revisar: las marcadas "lista para revisión" en `progreso.md` que no tienen "revisada". Revisalas **en orden**.
+4. Si no hay ninguna: si las Etapas 1 a 10 están todas revisadas y no existe `docs/reviews/final.md`, hacé la **revisión general** (§B). Si no, decí que no hay nada para revisar y qué está haciendo DeepSeek según `progreso.md`.
 
 ---
 
-## C. Plantilla de informe (`docs/reviews/etapa-XX.md`)
+## A. Revisión de una etapa
+
+Para cada etapa a revisar (archivo `docs/plan/etapa-XX-*.md`):
+
+### 1. Preparar
+1. `pnpm install`, `pnpm db:start`, `pnpm db:reset`, `pnpm db:types` → no tiene que haber cambios en los tipos sin commitear.
+2. `git log main..dev --oneline` y `git diff main...dev --stat` para ver qué entró.
+
+### 2. Pruebas automáticas
+`pnpm check`, `pnpm db:test`, `pnpm test:e2e`, `pnpm build`. Anotá cada resultado.
+
+### 3. Criterios de aceptación
+Para cada tarea de la etapa: leé sus criterios de "Aceptación" y verificá cada uno, leyendo el código y probándolo. Anotá cumplido / no cumplido con la evidencia.
+
+### 4. Probar la app como usuario
+1. Levantá `pnpm dev` y abrí la app en el navegador con viewport de celular **390 × 844**.
+2. Recorré el flujo principal de la etapa como lo haría la persona (para flujos de grupo, con dos usuarios en dos contextos). Usuarios de prueba: creados con el cliente admin solo en local.
+3. Hacelo en los **tres temas** (forzando mediodía / tarde / noche desde la preferencia de Perfil o la cookie).
+4. Sacá capturas de las pantallas principales.
+
+### 5. Diseño
+1. Compará cada pantalla con su archivo de `docs/design/pantallas/` (tabla de `docs/design/README.md` §2): estructura, jerarquía, tamaños de letra, espaciados, botón principal, barra inferior.
+2. `grep -rnE "#[0-9A-Fa-f]{6}" app components` → no puede haber hex fuera de `app/globals.css`.
+3. Textos en español con voseo; estados de carga, vacío y error presentes.
+
+### 6. Código
+Revisá el diff de la etapa buscando: lógica de negocio fuera de `lib/domain`, `any`, errores sin manejar, consultas repetidas (N+1), componentes duplicados, dependencias que el plan no nombra, cambios fuera del alcance de las tareas, tests débiles o que no prueban lo que dicen.
+
+### 7. Seguridad
+- Toda tabla nueva con RLS y policies; tests pgTAP que prueban acceso cruzado entre grupos.
+- Funciones `security definer` con `set search_path = public` y chequeo de permisos adentro.
+- Cliente admin solo donde el plan lo indica.
+- Zod en cada Server Action y Route Handler.
+- Nada de claves en el repo (`git grep -nE "sk-|eyJhbGci|ANTHROPIC_API_KEY=."`).
+- Endpoints de IA con cuota; datos de salud (perfil, plan vivo, registros) nunca visibles para otros miembros.
+
+### 8. Arreglar
+- **Arreglá vos** todo lo que encuentres, incluidas las tareas que DeepSeek dejó WIP o las "tareas difíciles" que no pudo: un commit por arreglo, `review(etapa-XX): <resumen>`, con su test.
+- Solo si un arreglo es enorme (más de una tarea del plan entera) y no entra en esta llamada: escribilo como tarea `TX.Y-fix-N` en el informe (formato de tarea del plan: Objetivo, Archivos, Pasos, Aceptación), listalo en `progreso.md` → "Fixes pendientes" para DeepSeek, y marcá la etapa **bloqueada**.
+- Después de arreglar, repetí los puntos 2 y 4.
+
+### 9. Informe
+Escribí `docs/reviews/etapa-XX.md` con la plantilla del §C.
+
+### 10. Mergear y desplegar (solo si la etapa quedó en verde)
+1. `git push`, y si no hay un PR abierto: `gh pr create --base main --head dev --title "Etapa XX: <nombre>" --body "<resumen + link al informe>"`.
+2. `gh pr checks --watch` → CI en verde.
+3. `gh pr merge --merge` (no borres `dev`).
+4. Si hubo migraciones: verificá que el workflow de migraciones a producción haya corrido bien (`gh run list --workflow migrate.yml`).
+5. Verificá el deploy: la URL de producción abre y `/api/health` responde `db: true`.
+6. `git checkout dev && git merge main && git push` para que `dev` quede al día.
+
+### 11. Cerrar
+1. En `progreso.md`: la etapa pasa a **revisada** (fecha y link al informe), o **bloqueada** con el motivo.
+2. Completá "Cierre de la Etapa XX" en su archivo del plan.
+3. Commit y push.
+
+---
+
+## B. Revisión general (cuando las Etapas 1 a 10 están revisadas)
+
+1. **Desde cero:** cloná el repo en `/tmp/recetario-check`, `pnpm install`, `pnpm db:start`, `pnpm db:reset`, `pnpm check`, `pnpm db:test`, `pnpm test:e2e`, `pnpm build`. Todo tiene que funcionar siguiendo solo `README.md` y `docs/deploy.md`; si falta un paso, corregí la documentación. Al terminar, `pnpm db:stop` en esa copia y borrala.
+2. **Flujos de punta a punta** (viewport 390 × 844, dos usuarios):
+   1. Alta con magic link → crear grupo "Casa" → invitar → el segundo usuario se une.
+   2. Cargar recetas: manual, pegando un link, con foto y dictando.
+   3. Perfil alimentario por voz y plan vivo desde un PDF de ejemplo → indicadores de compatibilidad.
+   4. Home sin plan → ¿Qué tenés? → elegir → home con plan.
+   5. Armar la semana con la IA (una persona sin cebolla) → aprobar → lista de compras → tachar desde los dos usuarios.
+   6. Meal prep del día → cocinar en modo stories con timers → preguntar al asistente en un paso → guardar un ajuste en la receta.
+   7. Registrar comidas del plan vivo y usar un permitido.
+   8. Compartir una receta por link y abrirla sin sesión.
+   9. Offline: tachar la lista sin red y sincronizar.
+   Cada flujo: OK / falla, con capturas.
+3. **Diseño:** todas las pantallas de `docs/design/pantallas/` contra la app, en los tres temas.
+4. **Seguridad:** todas las policies RLS y funciones `security definer`; endpoints públicos (`/r`, `/join`, `/api/inngest`, `/api/push`); cuotas de IA; datos de salud; cabeceras de seguridad; `pnpm audit`.
+5. **IA:** corré todos los evals (`pnpm eval:*`) y reportá resultados, costo y latencia promedio desde `ai_runs`.
+6. **Performance y accesibilidad:** Lighthouse mobile en Hoy, Recetas, Receta y Compras (objetivo ≥ 90); contraste en los tres temas; navegación por teclado.
+7. **Producción:** deploy en verde, migraciones al día, variables completas, Sentry recibiendo errores (si está activo), backups de Supabase activos.
+8. Arreglá lo que puedas (commits `review(final): …` en `dev`, después PR y merge como en A.10).
+9. Informe `docs/reviews/final.md` (plantilla del §C + "Flujos de punta a punta" + "Lista de lanzamiento") y marcá la revisión general en `progreso.md`.
+
+---
+
+## C. Plantilla de informe
 
 ```markdown
 # Revisión — Etapa XX: <nombre>
 
-- Fecha: AAAA-MM-DD · Rama: etapa-XX · Commits revisados: <primero>..<último>
-- Veredicto: MERGEADA | BLOQUEADA
+- Fecha: AAAA-MM-DD · Commits revisados: <primero>..<último>
+- Veredicto: REVISADA Y MERGEADA | BLOQUEADA
 
 ## Pruebas automáticas
 | Comando | Resultado |
 |---|---|
-| pnpm check | ✅ / ❌ (detalle) |
+| pnpm check | |
 | pnpm db:test | |
 | pnpm test:e2e | |
 | pnpm build | |
@@ -111,16 +126,16 @@ RESPUESTA FINAL: veredicto (lista para usar / falta), los 5 problemas más impor
 |---|---|---|---|
 
 ## Diseño
-| Pantalla | Archivo de diseño | Diferencias |
-|---|---|---|
+| Pantalla | Archivo de diseño | Diferencias | ¿Arreglado? |
+|---|---|---|---|
 
 ## Código y seguridad
-- Hallazgo · gravedad (alta / media / baja) · archivo:línea · qué se hizo
+- <hallazgo> · gravedad alta/media/baja · archivo:línea · qué se hizo
 
 ## Arreglos hechos en la revisión
 - `review(etapa-XX): …`
 
-## Tareas fix para DeepSeek
+## Fixes pendientes para DeepSeek (solo si quedó bloqueada)
 ### TX.Y-fix-1 — Título
 - Objetivo:
 - Archivos:
@@ -131,3 +146,15 @@ RESPUESTA FINAL: veredicto (lista para usar / falta), los 5 problemas más impor
 ## Para probar en el celular
 1. …
 ```
+
+---
+
+## Respuesta final de cada llamada
+
+En español, corta:
+- Etapas revisadas y veredicto de cada una (mergeada / bloqueada y por qué).
+- Resultado de las pruebas.
+- Arreglos que hiciste.
+- Fixes pendientes para DeepSeek, si hay.
+- Qué tiene que probar la persona en el celular (3 a 6 pasos).
+- Qué sigue: "volvé a pegar el prompt de DeepSeek" o "la app está lista".

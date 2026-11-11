@@ -7,7 +7,8 @@ Recetario familiar compartido por grupos, con perfil alimentario, plan semanal c
 
 ## Cómo trabajar en este repo
 
-1. **Una tarea por sesión.** Ejecutá solo la tarea pedida (`T<etapa>.<n>`). Leé antes su archivo de etapa en `docs/plan/` y las secciones del spec que cita.
+0. **Si te pasaron un archivo de `docs/execution/`** (configuración, código o revisión), esas instrucciones mandan sobre esta lista y el avance se lleva en `docs/execution/progreso.md`.
+1. **Una tarea por vez.** Trabajá solo en la tarea en curso (`T<etapa>.<n>`). Leé antes su archivo de etapa en `docs/plan/` y las secciones del spec que cita.
 2. **No adelantes trabajo** de otras tareas. Si algo de otra tarea bloquea, decilo y pará.
 3. **Si una decisión no está en el spec ni en el plan**, elegí la opción más simple, dejala anotada en la sección "Notas de ejecución" del archivo de la etapa y seguí.
 4. **Pasos marcados 👤** los hace la persona (cuentas, claves, consolas web). No los simules: pedíselos y esperá.
