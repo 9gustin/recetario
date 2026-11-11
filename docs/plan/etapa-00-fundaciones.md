@@ -5,7 +5,7 @@
 
 ---
 
-### T0.1 — Crear el proyecto Next.js
+### [x] T0.1 — Crear el proyecto Next.js
 - **Depende de:** prerrequisitos 👤 (Node, pnpm, Git).
 - **Objetivo:** repo base con Next.js, TypeScript estricto, Tailwind y scripts de calidad.
 - **Archivos:** `package.json`, `tsconfig.json`, `eslint.config.mjs`, `.prettierrc`, `.editorconfig`, `.nvmrc`, `.gitignore`, `.env.example`, `app/layout.tsx`, `app/page.tsx`.
@@ -125,3 +125,4 @@
 
 ## Notas de ejecución
 <!-- El agente anota acá decisiones tomadas que no estaban en el spec. -->
+- T0.1: Node 26 (nvm) ya no trae corepack; se instaló con `npm i -g corepack` y `corepack enable` (pnpm 12). `typecheck` corre `next typegen && tsc --noEmit` porque `LayoutProps` es un tipo global generado por Next. El scaffold de create-next-app se generó en una carpeta temporal y se copió al repo para conservar `docs/` y `CLAUDE.md`. Se quitaron `cacheComponents`/`partialPrefetching` del config generado (no pedidos por el plan). `AGENTS.md` quedó con la línea indicada (Next lo regenera en `next dev`; si reaparece el bloque, revertirlo).

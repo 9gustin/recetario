@@ -1,0 +1,6 @@
+pnpm-lock.yaml
+.next
+node_modules
+lib/supabase/database.types.ts
+docs/design/pantallas
+supabase/.temp
