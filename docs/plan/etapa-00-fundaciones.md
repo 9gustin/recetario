@@ -22,16 +22,19 @@
 
 ### T0.2 — Design system base (shadcn/ui)
 - **Depende de:** T0.1
-- **Objetivo:** componentes y tokens visuales con una estética cálida y familiar.
-- **Archivos:** `components.json`, `components/ui/*`, `app/globals.css`, `lib/utils.ts`, `lib/brand.ts`.
+- **Spec:** §8.1 (dirección visual "Fuego lento" y tabla de temas). Referencia visual: el canvas de diseño linkeado en §8.1.
+- **Objetivo:** componentes y tokens visuales del estilo "Fuego lento", con los tres temas por momento del día.
+- **Archivos:** `components.json`, `components/ui/*`, `app/globals.css`, `lib/utils.ts`, `lib/brand.ts`, `lib/theme/day-part.ts` + test, `components/theme/day-part-provider.tsx`.
 - **Pasos:**
   1. `pnpm dlx shadcn@latest init`. Agregar: `button card input textarea label badge checkbox dialog sheet drawer tabs sonner skeleton avatar dropdown-menu separator scroll-area toggle-group`.
-  2. Paleta cálida en tokens CSS (claro y oscuro): fondo crema, primario terracota/tomate, acento verde hoja. Radio de borde generoso (`0.9rem`).
-  3. Tipografía de Google Fonts vía `next/font`: una redondeada para títulos (por ejemplo, Nunito) y una legible para cuerpo.
-  4. `lib/brand.ts`: `export const BRAND = { name: "Recetario", tagline: "Las recetas de tu casa" }`. Usarlo en `<title>` y metadata.
-  5. Modo oscuro según el sistema (`next-themes`).
-  6. Página `/dev/ui` (solo en desarrollo) que muestra todos los componentes, para revisar el estilo.
-- **Aceptación:** `/dev/ui` se ve bien en claro y oscuro a 375 px.
+  2. Tokens CSS semánticos (`--background`, `--surface`, `--surface-2`, `--foreground`, `--muted`, `--accent`, `--accent-foreground`, `--hero`, `--border`) definidos para tres temas con `[data-daypart="mediodia" | "tarde" | "noche"]` en `<html>`, con los valores de la tabla de §8.1. Mapearlos a los tokens de shadcn y de Tailwind. Radio: tarjetas `1.25rem`, botones principales en píldora (`9999px`).
+  3. Tipografía vía `next/font/google`: **DM Serif Display** (títulos, clase `font-display`) e **Inter** (cuerpo).
+  4. `lib/theme/day-part.ts`: `getDayPart(date, tz = "America/Argentina/Buenos_Aires")` → `mediodia` (< 16 h), `tarde` (16–20 h), `noche` (≥ 20 h o < 6 h). Tests en los bordes.
+  5. `DayPartProvider`: calcula el tema en el servidor (evita parpadeo), lo recalcula cada minuto en el cliente, respeta una preferencia manual (`auto | mediodia | tarde | noche`) guardada en cookie, y actualiza `<meta name="theme-color">`. Hook `useDayPart()`. Prop para forzar un tema (el modo cocinar usa siempre `noche`).
+  6. Componentes base del estilo: `Hero` (bloque de color con slot de imagen, título serif y un botón principal), `PillButton`, `SectionTitle`.
+  7. `lib/brand.ts`: `export const BRAND = { name: "Recetario", tagline: "Las recetas de tu casa" }`. Usarlo en `<title>` y metadata.
+  8. Página `/dev/ui` (solo en desarrollo) con todos los componentes y un selector para ver los tres temas lado a lado.
+- **Aceptación:** `/dev/ui` se ve bien en los tres temas a 375 px; todo texto pasa contraste AA; cambiar la hora del sistema cambia el tema sin recargar.
 - **Verificación:** `pnpm check` + revisión visual.
 - **Fuera de alcance:** layout de la app.
 

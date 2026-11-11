@@ -154,7 +154,28 @@ Vista semana (lunes→domingo) × momentos configurables por grupo (default: des
 
 **Validación dura:** antes de mostrar cualquier propuesta, el servidor chequea cada receta contra las restricciones `prohibido`; si alguna viola, se descarta y se le pide a la IA que la reemplace.
 
-**Planes guardados:** historial por semana. Vista **"Hoy"** (home de la app): qué se come hoy, qué hay que sacar del freezer, botón "Cocinar". Puedo duplicar un plan anterior ("repetir la semana 3 de octubre").
+**Planes guardados:** historial por semana. Puedo duplicar un plan anterior ("repetir la semana 3 de octubre").
+
+### F6b. Inicio "Hoy": se adapta a lo que ya está decidido [MVP]
+
+La home no es una pantalla fija: cambia según **si hay algo planeado** para la próxima comida y según **el momento del día**.
+
+| Estado | Qué muestra |
+|---|---|
+| **Hay comida planeada** | La próxima comida ocupa la parte de arriba con un botón grande ("Armar el almuerzo", "Empezar a cocinar"). Debajo, el **plan de acción del día**: tareas con hora (ej. 18:00 "Pasá el salmón del freezer a la heladera"), la otra comida del día y lo que falta de la compra. |
+| **No hay nada planeado** | "¿Qué comemos hoy?" con una barra para escribir o hablar ("Tengo ganas de algo con pollo…") y **tres arranques**: (1) **Elegí**: 3 ideas listas con lo que ya compraste (F15); (2) **Contame**: "¿Qué tenés en la heladera?" (F15); (3) **Planificá**: armar la semana con la IA (F6). |
+| **Comida ya hecha** | Pasa a la siguiente comida del día o, si no hay más, a "Mañana" + recordatorios para esta noche. |
+
+**Momento del día:** la app entera toma un tono según la hora local (§8.1): **mediodía** (claro, hasta las 16 h), **tarde** (atardecer, 16–20 h) y **noche** (oscuro, desde las 20 h). La "próxima comida" también se elige por hora (antes de las 15 h, el almuerzo; después, la cena).
+
+### F15. "¿Qué tenés?" e ideas para hoy [MVP-2]
+
+Dos formas rápidas de resolver una comida sin plan:
+
+- **¿Qué tenés?** Cargo ingredientes como chips (escribiendo o por voz: "tengo pollo, zapallitos, huevos…") o un antojo ("algo con pollo", "algo liviano"), con filtros rápidos (menos de 30 min, sin horno, liviano). Devuelve recetas ordenadas por cuánto de lo necesario ya tengo: "Tenés todo · 20 min" o "Te falta: jengibre (opcional)". Primero recetas del recetario; si no alcanza, propone nuevas (que se guardan solo si las elijo).
+- **Ideas para hoy:** 3 propuestas listas, cada una con **el motivo** ("la rúcula vence mañana", "no la comen hace 3 semanas", "rinde para el almuerzo"). Pestañas: *Con lo que compraste* (lista de compras de la semana marcada como comprada) · *Recetario* · *Nuevas*. "Otras 3 ideas" pide más.
+- Siempre filtradas por las restricciones de quienes comen (F5) y por el plan vivo de cada uno (F14).
+- **Elegir** una idea la agrega al plan de hoy (crea el plan de la semana si no existe) y la home pasa al estado "hay comida planeada".
 
 ### F7. Lista de compras [MVP]
 
@@ -217,6 +238,25 @@ Se siembra inicialmente con ~300 ingredientes comunes en Argentina (generado con
 ### F13. Heladera / despensa (post-MVP, opcional)
 
 Inventario simple: lo comprado pasa a "en casa" con fecha estimada de vencimiento. La vista "Hoy" avisa "la rúcula vence mañana". El plan con IA prioriza usar lo que ya hay.
+
+### F14. Plan vivo: seguir el plan de la nutricionista
+
+Los planes de nutricionista suelen llegar como un PDF largo y difícil de seguir. El **plan vivo** los convierte en algo simple y diario. Es por persona (vive en su perfil, F5) y es privado.
+
+1. **Digitalizar:** cargo lo que tenga: PDF, fotos, un audio contando el plan, texto. La IA lo resume en una estructura clara:
+   - **Comidas por momento del día** (desayuno, almuerzo, merienda, cena, colaciones) con su "fórmula" (ej. cena = proteína + verduras, sin harinas) y opciones concretas.
+   - **Porciones** cuando el plan las tiene (½ taza de arroz, 150 g de proteína).
+   - **Reglas** (carbohidratos solo al mediodía, 2 L de agua, etc.) y **prohibidos/limitados** (se vuelcan como restricciones del perfil F5).
+   - **Permitidos** con su tope (ej. 3 por semana) y qué cuenta como permitido.
+   - **Vigencia** (semana 3 de 8, próximo control).
+   - Me muestra el resumen y lo que no entendió como preguntas.
+2. **Ajustar charlando:** "no me gusta el yogur del desayuno" → la IA propone **reemplazos equivalentes** que respetan la regla de esa comida (ej. queso untable + 2 huevos). Elijo uno y queda guardado como **reemplazo** del plan. Puedo volver a ajustar cuando quiera; cada cambio queda en un historial (versiones del plan).
+3. **Seguirlo:** pantalla **Mi plan** con "Hoy toca" (cada comida con su fórmula y, si hay plan semanal, la receta que la cumple), % cumplido de la semana, permitidos usados/restantes y mis reemplazos.
+4. **Registrar:** cada comida se registra con un toque: **Cumplí** · **Cambié algo** · **Usé un permitido**. Opcional: contar qué comí (texto o voz); la IA lo clasifica contra la regla de esa comida y sugiere el estado. Si al cocinar en modo cocinar una receta del plan semanal, se registra sola como "Cumplí" (con opción de corregir).
+5. **Seguimiento:** grilla semanal (comidas × días) con colores por estado, % de cumplimiento, permitidos restantes hasta el domingo y un mensaje corto y positivo. Historial por semana para llevar a la nutricionista (exportable como texto/PDF).
+6. **Integración:** el plan vivo actúa como regla para el plan semanal con IA (F6), las ideas del día y "¿Qué tenés?" (F15): solo propone comidas que encajan en la fórmula del momento del día para esa persona.
+
+> El tono es de acompañamiento, nunca de reto: sin rojos de "fallaste", los permitidos son parte del plan. Disclaimer: la app organiza el plan que te dieron; no lo reemplaza ni da indicaciones médicas.
 
 ### Fuera de alcance (por ahora)
 
@@ -518,6 +558,52 @@ shopping_list_items (
 )
 ```
 
+#### Plan vivo (F14)
+
+```sql
+diet_plans (
+  id uuid pk, user_id uuid references profiles,
+  title text,                       -- 'Plan de la nutricionista'
+  status text check (status in ('draft','active','archived')),
+  starts_on date, ends_on date, next_checkup date,
+  rules jsonb,                      -- reglas generales: [{"text":"Carbohidratos solo al mediodía","kind":"carbs_timing", ...}]
+  allowances jsonb,                 -- {"per_week":3,"definition":"una comida libre o un postre"}
+  summary text,
+  version int default 1,
+  source_input_ids uuid[]           -- food_profile_inputs usados (PDF, audio…)
+)
+
+diet_plan_meals (                   -- "fórmula" por momento del día
+  id uuid pk, plan_id uuid, slot text,          -- 'breakfast','lunch','merienda','dinner','snack'
+  days smallint[] null,                         -- null = todos los días
+  formula text,                                 -- 'Proteína + verduras, sin harinas'
+  components jsonb,                             -- [{"group":"proteina","portion":"150 g"},{"group":"carbohidrato","portion":"½ taza","allowed":true}]
+  options jsonb,                                -- opciones concretas del PDF
+  position int
+)
+
+diet_plan_swaps (                   -- reemplazos elegidos por la persona
+  id uuid pk, plan_id uuid, meal_id uuid null,
+  original text, replacement text, reason text,
+  created_at timestamptz
+)
+
+diet_plan_versions (id, plan_id, version int, snapshot jsonb, change_note text, created_at)
+
+meal_logs (                         -- registro diario
+  id uuid pk, user_id uuid, plan_id uuid,
+  date date, slot text,
+  status text check (status in ('followed','changed','allowance','skipped')),
+  note text,                        -- "comí una tarta de verdura"
+  ai_suggested_status text,
+  plan_entry_id uuid null,          -- si vino de una comida del plan semanal
+  cooking_session_id uuid null,
+  unique (user_id, date, slot)
+)
+```
+
+RLS: todo solo para el propio usuario. Lo único visible para el grupo son las restricciones derivadas (vía `get_group_diet`) y, para planificar, la **fórmula por momento del día** (vía un RPC `get_group_meal_rules`), nunca el registro ni el PDF.
+
 #### IA (trazabilidad)
 
 ```sql
@@ -622,7 +708,20 @@ El cliente ve el plan actualizarse en vivo en la grilla mientras se conversa.
 Entrada: plan aprobado + recetas + catálogo (vida útil) + equipamiento + tiempo disponible.
 Salida: `prep_tasks[]` con `suggested_date`, `duration_minutes`, `kind`, `related_entry_ids`, más `tips[]` generales de la semana. Regla: ninguna preparación anticipada puede superar la vida útil del ingrediente preparado hasta su uso.
 
-### 6.7 Costos y límites
+### 6.7 Plan vivo — digitalizar y ajustar
+
+- `POST /api/ai/diet-plan/ingest`: PDF/imágenes como bloques de documento/imagen + transcripciones → `DietPlanDraft` (comidas por momento con fórmula, porciones y opciones; reglas; permitidos; vigencia; restricciones para F5; `open_questions`). Se guarda como `draft` hasta que la persona lo confirma.
+- `POST /api/ai/diet-plan/:id/chat`: conversación para ajustar. Tools: `propose_swaps(meal_id, dislike)` → 3 reemplazos que respetan `components` de esa comida; `apply_swap`, `update_meal`, `update_rule`. Cada cambio aplicado crea una versión.
+- `POST /api/ai/meal-logs/classify`: texto libre de lo que comí + fórmula de esa comida → estado sugerido (`followed` / `changed` / `allowance`) con una frase de explicación (Haiku).
+- Validación por código: los reemplazos no pueden incluir prohibidos del perfil; el conteo de permitidos es determinístico (`lib/domain/adherence.ts`).
+
+### 6.8 "¿Qué tenés?" e ideas del día
+
+- `POST /api/ai/suggest` con `{ mode: "have" | "ideas", ingredients?, craving?, filters, diners, slot, date }`.
+- Paso determinístico primero: buscar en el recetario por cobertura de ingredientes (`have`) o por señales (`ideas`: perecederos comprados que vencen pronto, recetas no comidas hace tiempo, sobras posibles), filtrando por compatibilidad (F5) y por la fórmula del plan vivo (F14) de cada comensal.
+- La IA (Haiku) ordena, redacta el **motivo** de cada idea y, si hay menos de 3 candidatas, propone recetas nuevas (borrador `status = 'draft'`).
+
+### 6.10 Costos y límites
 
 - Cache de prompts para el system prompt + catálogo.
 - Haiku para todo lo que es transformación chica; Sonnet solo en perfil y plan.
@@ -658,6 +757,14 @@ IA
   POST   /api/ai/recipes/:id/adapt           { profileUserIds }
   POST   /api/ai/food-profile/ingest
   POST   /api/ai/plans/:id/chat              (stream)
+  POST   /api/ai/suggest                     ¿qué tenés? / ideas del día
+  POST   /api/ai/diet-plan/ingest            digitalizar plan
+  POST   /api/ai/diet-plan/:id/chat          ajustar plan (stream)
+  POST   /api/ai/meal-logs/classify          clasificar lo que comí
+Plan vivo
+  GET    /api/diet-plan                      plan activo + hoy + adherencia
+  PUT    /api/meal-logs                      { date, slot, status, note }
+  GET    /api/meal-logs?week=                grilla semanal
 Planes y compras
   POST   /api/groups/:id/plans               { weekStart }  borrador vacío
   PATCH  /api/plans/:id/entries              edición manual
@@ -677,13 +784,37 @@ Cocina
 
 Navegación inferior (5 tabs): **Hoy · Recetas · Plan · Compras · Perfil**. Selector de grupo arriba.
 
-1. **Hoy:** comidas de hoy (botón Cocinar), tareas de meal prep, "sacar del freezer", acceso a la lista activa.
+### 8.1 Dirección visual: "Fuego lento"
+
+Diseño de referencia (canvas con todas las pantallas): https://claude.ai/artifact/B4zgaFUnFXQLHrFAkJE1zJ (privado; compartirlo desde el menú Share si otra persona lo necesita).
+
+- **Tipografía:** DM Serif Display para títulos y nombres de recetas; Inter para todo lo demás.
+- **Hero:** la pantalla principal de cada sección abre con un bloque grande de color con ilustración o foto de la receta, título serif y **un solo botón principal** en forma de píldora.
+- **Tonos por momento del día** (toda la app, según la hora local; tokens CSS por tema, cambian solos):
+
+| Tema | Horario | Fondo | Superficie | Texto | Acento | Hero |
+|---|---|---|---|---|---|---|
+| `mediodia` | hasta 16 h | `#F8EFE2` | `#FFF8EE` | `#2A1D14` | `#C9541F` | `#F4C35A` |
+| `tarde` | 16–20 h | `#22140F` | `#331E17` | `#FBEDE4` | `#FF8A5B` | `#6E2F22` |
+| `noche` | desde 20 h | `#191411` | `#241D19` | `#F5EDE3` | `#F2A541` | `#3A2418` |
+
+- El modo cocinar usa siempre el tema `noche` (menos brillo, mejor contraste en la cocina).
+- Se puede fijar un tema a mano en Perfil (automático / mediodía / tarde / noche).
+- Íconos de trazo (lucide), sin emojis en la UI. Áreas táctiles ≥ 44 px.
+
+### 8.2 Pantallas
+
+1. **Hoy:** según F6b: con comida planeada (hero + plan de acción del día) o sin plan ("¿Qué comemos hoy?" + tres arranques).
+   - **¿Qué tenés?** y **Ideas para hoy** (F15).
 2. **Recetas:** buscador, filtros (chips), grilla con foto + tiempo + indicadores de compatibilidad por persona. FAB "+" → Manual / Pegar texto o link / Foto / Dictar.
 3. **Detalle de receta:** foto, porciones ±, ingredientes, pasos, compatibilidad, historial, botones **Cocinar**, **Compartir**, **Agregar al plan**, ✏️.
 4. **Modo cocinar:** stories (F10).
 5. **Plan:** semana actual / navegación por semanas; grilla días × momentos; botón **"Armar con IA"** abre panel de chat (bottom sheet) con la grilla visible; **Aprobar**.
 6. **Compras:** lista por sección, swipe derecha = comprado, swipe izquierda = ya lo tengo; avisos de vida útil; compartir como texto.
-7. **Perfil:** mis datos, **Mi alimentación** (botón de hablar grande, subir archivos, resumen editable, restricciones como chips), mis grupos, bandeja.
+7. **Perfil:** mis datos, **Mi alimentación** (botón de hablar grande, subir archivos, resumen editable, restricciones como chips), tarjeta **Mi plan** (F14), mis grupos, bandeja.
+   - **Digitalizar mi plan:** subir PDF/foto/audio → resumen → chat para ajustar con reemplazos.
+   - **Mi plan:** hoy toca, % cumplido, permitidos, reemplazos, "Registrar lo que comí".
+   - **Registrar:** Cumplí / Cambié algo / Permitido + grilla semanal.
 8. **Grupo:** miembros, invitar (link + compartir), ajustes (momentos del día, inicio de semana).
 9. **Receta pública** `/r/:token`: vista linda sin login + "Guardar en mi recetario".
 
@@ -698,10 +829,10 @@ Cada etapa termina con algo **usable en producción** (deploy en Vercel) y crite
 ### Etapa 0 — Fundaciones (≈ 1 semana)
 
 - Repo Next.js + TS + Tailwind + shadcn/ui + ESLint/Prettier.
-- Proyecto Supabase (sa-east-1) + entornos `dev` y `prod`; Drizzle + primera migración.
+- Proyecto Supabase (sa-east-1) + entornos `dev` y `prod`; migraciones SQL + tipos generados.
 - Deploy a Vercel con preview por PR; GitHub Actions (lint, typecheck, test).
 - PWA: manifest, íconos, service worker básico, instalable.
-- Layout mobile con tab bar, tema, tipografía.
+- Layout mobile con tab bar, tipografía y los **tres temas por momento del día** (§8.1).
 - Sentry + PostHog.
 
 ✅ La app vacía se instala en el celular desde la URL de producción.
@@ -767,8 +898,9 @@ Cada etapa termina con algo **usable en producción** (deploy en Vercel) y crite
 
 ### Etapa 7 — Plan semanal (≈ 2,5 semanas)
 
-- 7a. Plan manual: grilla, agregar recetas, comensales, sobras/batch, aprobar, historial, duplicar semana, vista **Hoy**.
+- 7a. Plan manual: grilla, agregar recetas, comensales, sobras/batch, aprobar, historial, duplicar semana, vista **Hoy** con sus estados (con plan / sin plan, F6b).
 - 7b. Plan con IA: chat con tools (§6.4), streaming, grilla en vivo, `validatePlan()` con restricciones duras, variedad y perecibilidad.
+- 7c. Arranques sin plan: **¿Qué tenés?** e **Ideas para hoy** (F15).
 - Realtime para que ambos vean el mismo borrador.
 
 ✅ "Armame la semana, el jueves comemos afuera, quiero pescado una vez" → plan válido sin cebolla, low carb, sin repetir, aprobado en < 5 min de charla.
@@ -781,7 +913,16 @@ Cada etapa termina con algo **usable en producción** (deploy en Vercel) y crite
 
 ✅ Aprobamos el plan y en el súper vamos tachando entre los dos en tiempo real.
 
-**🏁 Hito MVP-2 (≈ 13–14 semanas):** el ciclo completo perfil → plan → compras → cocinar.
+**🏁 Hito MVP-2 (≈ 14–15 semanas):** el ciclo completo perfil → plan → compras → cocinar.
+
+### Etapa 8b — Plan vivo (≈ 2 semanas)
+
+- Digitalizar el plan de la nutricionista (PDF/foto/audio) → estructura por momento del día, reglas, permitidos.
+- Chat para ajustar con reemplazos equivalentes; versiones del plan.
+- Mi plan: hoy toca, % cumplido, permitidos. Registro de comidas con un toque + clasificación con IA.
+- Integración con plan semanal, ideas del día y "¿Qué tenés?".
+
+✅ Subimos el PDF de la nutricionista y en 5 minutos tenemos un plan que se sigue y se registra día a día.
 
 ### Etapa 9 — Meal prep y tips (≈ 1 semana)
 
@@ -810,10 +951,11 @@ Heladera/despensa (F13), control por voz en modo cocinar, sincronizar cambios de
 | 4 | Compartir | 1 | 6,5 — **MVP-1** |
 | 5 | IA importar + voz | 1,5 | 8 |
 | 6 | Perfil alimentario | 1,5 | 9,5 |
-| 7 | Plan semanal | 2,5 | 12 |
-| 8 | Lista de compras | 1,5 | 13,5 — **MVP-2** |
-| 9 | Meal prep | 1 | 14,5 |
-| 10 | Notificaciones y pulido | 1,5 | 16 |
+| 7 | Plan semanal + Hoy + ¿Qué tenés? | 3,5 | 13 |
+| 8 | Lista de compras | 1,5 | 14,5 — **MVP-2** |
+| 8b | Plan vivo | 2 | 16,5 |
+| 9 | Meal prep | 1 | 17,5 |
+| 10 | Notificaciones y pulido | 1,5 | 19 |
 
 ---
 
@@ -844,6 +986,9 @@ Heladera/despensa (F13), control por voz en modo cocinar, sincronizar cambios de
 | 2 | Edición de recetas | **Cualquier miembro del grupo** puede editar. El historial de versiones permite ver quién cambió qué y volver atrás. |
 | 3 | "Sin cebolla" vs. ajo/verdeo/puerro | No se asume. El catálogo agrupa cebolla, verdeo, puerro, echalote y ajo en la familia `allium`. Al cargar el perfil, la IA pregunta (`open_questions`) qué miembros de la familia están prohibidos, y solo se guardan los que la persona confirme. |
 | 4 | Transcripción | Se decide en la Etapa 5 con una prueba en español rioplatense (OpenAI vs. Deepgram), detrás de la interfaz `Transcriber`. |
+| 5 | Dirección visual | **"Fuego lento"** (§8.1): títulos serif, hero grande con un botón principal, tres temas según el momento del día. |
+| 6 | Home | Se adapta: con comida planeada muestra el plan de acción; sin plan ofrece tres arranques (elegí / ¿qué tenés? / planificá). |
+| 7 | Plan de nutricionista | Se digitaliza como **plan vivo** por persona, con reemplazos, permitidos y registro diario (F14). |
 
 ### Abiertas
 

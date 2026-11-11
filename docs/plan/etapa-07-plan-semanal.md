@@ -1,9 +1,9 @@
 # Etapa 7 — Plan semanal
 
-**Resultado:** armamos la semana a mano o charlando con la IA, que respeta las restricciones de cada uno, varía las comidas y tiene en cuenta qué se pone feo antes; aprobamos el plan y la vista "Hoy" nos dice qué comer y cocinar.
-**Spec:** §3 F6 · §5.2 (Planificación) · §6.4 · §12 (momentos del día).
+**Resultado:** armamos la semana a mano o charlando con la IA, que respeta las restricciones de cada uno, varía las comidas y tiene en cuenta qué se pone feo antes; aprobamos el plan y la home "Hoy" nos dice qué comer y cocinar, o, si no hay nada planeado, nos ayuda a decidir en un minuto.
+**Spec:** §3 F6, F6b, F15 · §5.2 (Planificación) · §6.4, §6.8 · §8.1 · §12 (momentos del día).
 
-Parte **7a** (manual, T7.1–T7.6) y parte **7b** (IA, T7.7–T7.11). La 7a sola ya es usable.
+Parte **7a** (manual, T7.1–T7.6), parte **7b** (IA, T7.7–T7.11) y parte **7c** (arranques sin plan, T7.12–T7.14). La 7a sola ya es usable.
 
 ---
 
@@ -43,15 +43,18 @@ Parte **7a** (manual, T7.1–T7.6) y parte **7b** (IA, T7.7–T7.11). La 7a sola
   3. Historial: lista de semanas anteriores con miniaturas; abrir una en solo lectura; "Repetir esta semana" → `duplicate_plan` a la semana elegida.
 - **Aceptación:** duplicar mantiene recetas, momentos, comensales y sobras (con fechas corridas).
 
-### T7.5 — Vista "Hoy"
-- **Depende de:** T7.3
-- **Archivos:** `app/(app)/g/[groupId]/hoy/page.tsx`, `components/today/*`.
+### T7.5 — Home "Hoy" con estados
+- **Depende de:** T7.3, T0.2 (temas por momento del día)
+- **Spec:** §3 F6b · §8.1 · canvas de diseño (pantallas "Inicio · Mediodía · con plan", "Inicio · Tarde · sin plan", "Inicio · Noche · con plan").
+- **Archivos:** `app/(app)/g/[groupId]/hoy/page.tsx`, `components/today/*`, `lib/domain/today.ts` + test.
 - **Pasos:**
-  1. Saludo + fecha. Tarjetas por momento de hoy: receta, quiénes comen, botón **Cocinar** (abre modo cocinar con `plan_entry_id`) o "Es sobra de ayer: calentar".
-  2. "Mañana": vista previa + avisos derivados del plan ("Mañana hay pescado: pasalo del freezer a la heladera hoy a la noche" si la receta tiene `storage_info` o el ingrediente es congelado).
-  3. Lugar reservado para tareas de meal prep (Etapa 9) y para la lista activa (Etapa 8).
-  4. Sin plan: invitación a armar la semana.
-- **Aceptación:** abrir la app a la noche muestra la cena y el botón Cocinar en la primera pantalla.
+  1. `lib/domain/today.ts`: `resolveToday({ now, entries, prepTasks, dayPart })` → `{ state: "planned" | "unplanned" | "done_for_today", nextMeal, agenda[], tomorrow }`. La próxima comida se elige por hora (antes de las 15 h almuerzo; después, cena; si ya se cocinó, la siguiente). Tests para cada estado y borde horario.
+  2. **Estado `planned`:** `Hero` con la próxima comida (ilustración/foto, "AL MEDIODÍA" / "ESTA NOCHE", título serif, "15 min · 5 pasos · ya tenés todo") y botón principal **"Armar el almuerzo" / "Empezar a cocinar"** (abre modo cocinar con `plan_entry_id`); si es sobra, "Calentar". Debajo, **"El resto del día"**: agenda con hora (tareas y la otra comida), y la tarjeta de compras (se completa en la Etapa 8).
+  3. **Estado `unplanned`:** `Hero` "¿Qué comemos hoy?" + barra de texto/voz ("Tengo ganas de algo con pollo…") que lleva a ¿Qué tenés? (T7.12) con el texto precargado; y tres tarjetas: **1 · Elegí** → Ideas para hoy (T7.13), **2 · Contame** → ¿Qué tenés? (T7.12), **3 · Planificá** → plan con IA (T7.9). Hasta que existan esas tareas, las tarjetas 1 y 2 quedan ocultas.
+  4. **Estado `done_for_today`:** "Mañana" con vista previa + recordatorios para esta noche.
+  5. Avisos derivados del plan: "Mañana hay pescado: pasalo del freezer a la heladera hoy a la noche" (si la receta tiene `storage_info` o el ingrediente es congelado).
+  6. Lugar reservado para tareas de meal prep (Etapa 9).
+- **Aceptación:** abrir la app a la noche con cena planeada muestra la cena y "Empezar a cocinar" sin scroll; sin plan, muestra los arranques; el tono cambia según la hora.
 
 ### T7.6 — Tiempo real en el plan
 - **Depende de:** T7.3
@@ -114,6 +117,33 @@ Parte **7a** (manual, T7.1–T7.6) y parte **7b** (IA, T7.7–T7.11). La 7a sola
 - **Archivos:** `tests/evals/plan/*`.
 - **Pasos:** recetario de prueba (25 recetas, 6 con cebolla) + 2 perfiles (uno sin cebolla y bajo en carbohidratos). 8 pedidos distintos. Chequeos: 0 errores de `validatePlan`, ≤ 2 warnings de monotonía, ≥ 70% recetas del recetario, ninguna receta repetida sin ser sobra. Imprime costo y tiempo.
 - **Aceptación:** 8/8 sin errores.
+
+## 7c — Arranques sin plan
+
+### T7.12 — ¿Qué tenés?
+- **Depende de:** T7.5, T6.5, T5.2
+- **Spec:** §3 F15 · §6.8 · canvas ("¿Qué tenés?").
+- **Archivos:** `app/(app)/g/[groupId]/hoy/que-tenes/page.tsx`, `components/suggest/*`, `lib/domain/coverage.ts` + test, `app/api/ai/suggest/route.ts`, `lib/ai/suggest/*`.
+- **Pasos:**
+  1. UI: ingredientes como chips (agregar escribiendo, con autocompletado de `search_ingredients`, o por voz con `VoiceRecorder`: la transcripción se separa en ingredientes), antojo opcional, filtros rápidos (Menos de 30 min · Sin horno · Liviano).
+  2. `coverage.ts`: dado lo que tengo y una receta → `{ have[], missing[], missingOptional[], score }`. Ignora básicos de alacena (sal, aceite, pimienta).
+  3. Endpoint `mode: "have"`: candidatos del recetario por cobertura, filtrados por compatibilidad de los comensales (y por el plan vivo cuando exista, Etapa 8b). Haiku ordena y redacta una línea por resultado. Si hay menos de 2 con cobertura ≥ 70%, propone 1–2 recetas nuevas (`draft`).
+  4. Resultados: "Tenés todo · 20 min" o "Te falta: jengibre (opcional)", con botón para cocinar o "Elegir para hoy" (crea la entrada en el plan de hoy, creando el plan de la semana si no existe).
+- **Aceptación:** con "pollo, zapallitos, huevos, limón" devuelve al menos 2 opciones aptas para los dos en < 6 s.
+
+### T7.13 — Ideas para hoy
+- **Depende de:** T7.12
+- **Spec:** §3 F15 · §6.8 · canvas ("Ideas para hoy").
+- **Archivos:** `app/(app)/g/[groupId]/hoy/ideas/page.tsx`, `lib/suggest/signals.ts` + test.
+- **Pasos:**
+  1. `signals.ts`: señales determinísticas por receta: usa perecederos comprados que vencen pronto (lista de compras + vida útil; hasta la Etapa 8 se omite), días desde la última vez que se cocinó, rinde para sobras, tiempo vs. hora actual.
+  2. Endpoint `mode: "ideas"` → 3 ideas con **motivo** ("La rúcula vence mañana: aprovechala hoy"). Pestañas: Con lo que compraste · Recetario · Nuevas. "Otras 3 ideas" excluye las ya mostradas.
+  3. "Elegir para hoy" igual que T7.12; la home pasa a `planned`.
+- **Aceptación:** las 3 ideas son aptas para todos los comensales y cada una explica por qué aparece.
+
+### T7.14 — E2E de la home
+- **Archivos:** `tests/e2e/today.spec.ts`.
+- **Escenario:** con `page.clock` a las 12:40 y almuerzo planeado → hero de almuerzo y tema `mediodia`; a las 18:10 sin cena → arranques y tema `tarde`; elegir una idea → la home muestra la cena y "Empezar a cocinar"; a las 21:00 → tema `noche`.
 
 ---
 

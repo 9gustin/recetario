@@ -86,8 +86,9 @@ Ejecutá la tarea T1.3 del plan.
 | 4 | [etapa-04-compartir.md](etapa-04-compartir.md) | Link público, copiar a grupo, enviar a persona | **MVP-1** |
 | 5 | [etapa-05-ia-importar.md](etapa-05-ia-importar.md) | Importar recetas por texto, link, foto o voz | |
 | 6 | [etapa-06-perfil-alimentario.md](etapa-06-perfil-alimentario.md) | Perfil por voz/archivos, compatibilidad | |
-| 7 | [etapa-07-plan-semanal.md](etapa-07-plan-semanal.md) | Plan manual + plan con IA, vista Hoy | |
+| 7 | [etapa-07-plan-semanal.md](etapa-07-plan-semanal.md) | Plan manual + plan con IA, home Hoy con estados, ¿Qué tenés? e ideas | |
 | 8 | [etapa-08-lista-compras.md](etapa-08-lista-compras.md) | Lista de compras en tiempo real | **MVP-2** |
+| 8b | [etapa-08b-plan-vivo.md](etapa-08b-plan-vivo.md) | Plan de la nutricionista digitalizado, ajustable y con registro | |
 | 9 | [etapa-09-meal-prep.md](etapa-09-meal-prep.md) | Tareas de meal prep y tips | |
 | 10 | [etapa-10-notificaciones-pulido.md](etapa-10-notificaciones-pulido.md) | Push, offline, onboarding | |
 
@@ -104,8 +105,9 @@ Marcar `[x]` al terminar cada tarea (lo hace el agente).
 **Etapa 4** — [ ] T4.1 · [ ] T4.2 · [ ] T4.3 · [ ] T4.4 · [ ] T4.5 · [ ] T4.6
 **Etapa 5** — [ ] T5.1 · [ ] T5.2 · [ ] T5.3 · [ ] T5.4 · [ ] T5.5 · [ ] T5.6
 **Etapa 6** — [ ] T6.1 · [ ] T6.2 · [ ] T6.3 · [ ] T6.4 · [ ] T6.5 · [ ] T6.6 · [ ] T6.7
-**Etapa 7** — [ ] T7.1 · [ ] T7.2 · [ ] T7.3 · [ ] T7.4 · [ ] T7.5 · [ ] T7.6 · [ ] T7.7 · [ ] T7.8 · [ ] T7.9 · [ ] T7.10 · [ ] T7.11
+**Etapa 7** — [ ] T7.1 · [ ] T7.2 · [ ] T7.3 · [ ] T7.4 · [ ] T7.5 · [ ] T7.6 · [ ] T7.7 · [ ] T7.8 · [ ] T7.9 · [ ] T7.10 · [ ] T7.11 · [ ] T7.12 · [ ] T7.13 · [ ] T7.14
 **Etapa 8** — [ ] T8.1 · [ ] T8.2 · [ ] T8.3 · [ ] T8.4 · [ ] T8.5 · [ ] T8.6
+**Etapa 8b** — [ ] T8B.1 · [ ] T8B.2 · [ ] T8B.3 · [ ] T8B.4 · [ ] T8B.5 · [ ] T8B.6 · [ ] T8B.7 · [ ] T8B.8
 **Etapa 9** — [ ] T9.1 · [ ] T9.2 · [ ] T9.3 · [ ] T9.4
 **Etapa 10** — [ ] T10.1 · [ ] T10.2 · [ ] T10.3 · [ ] T10.4 · [ ] T10.5 · [ ] T10.6
 
