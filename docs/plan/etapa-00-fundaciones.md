@@ -66,7 +66,7 @@
 - **Verificación:** Lighthouse → PWA instalable; prueba en el celular después de T0.8.
 - **Fuera de alcance:** push y cache de datos (Etapa 10).
 
-### T0.5 — Supabase local y clientes
+### [x] T0.5 — Supabase local y clientes
 - **Depende de:** T0.1 · 👤 Docker Desktop corriendo.
 - **Objetivo:** DB local funcionando y clientes tipados para server y browser.
 - **Archivos:** `supabase/config.toml`, `lib/supabase/{server,client,admin,middleware}.ts`, `middleware.ts`, `lib/supabase/database.types.ts`, `.env.example`.
@@ -137,3 +137,7 @@
 - T0.4: se usó `@serwist/turbopack` (+ `serwist` y `esbuild`) en vez de `@serwist/next`: es la misma librería, pero `@serwist/next` solo funciona con webpack y Next 16 + Tailwind del scaffold corren con Turbopack. El SW se sirve desde `app/serwist/[path]/route.ts` (`/serwist/sw.js`) y está desactivado en `next dev`. `app/sw.ts` está excluido de `tsconfig` (usa tipos de webworker). **En T0.5 el middleware debe excluir `/serwist` del matcher.**
 - T0.4: la página offline es `/offline` (precacheada y fallback de navegación). El manifest es estático con los colores de `noche`. Íconos placeholder: `public/icons/icon.svg` y PNGs 192/512/maskable/apple-touch (generados con Chromium desde el SVG).
 - T0.4: verificado en producción local (`pnpm build && pnpm start`): SW activo, manifest correcto, fallback offline. Lighthouse y la instalación en el celular (Android/iOS) quedan para después de T0.8, con la URL real.
+- T0.5: Next 16 renombró `middleware` a `proxy`: el archivo es `proxy.ts` (exporta `proxy`) y la lógica está en `lib/supabase/middleware.ts` (`updateSession`, usa `auth.getClaims()`). El matcher excluye `/serwist`, el manifest, íconos y estáticos. Si faltan las variables de Supabase, el proxy no hace nada (build en CI).
+- T0.5: pnpm 12 exige aprobar scripts de instalación: `pnpm-workspace.yaml` → `allowBuilds` con `esbuild: true` y `supabase: true`. Se agregó `server-only` (lo pide `admin.ts`, está en el plan).
+- T0.5: `pg_trgm` y `unaccent` están en el esquema `extensions` (convención de Supabase): en SQL usar `extensions.unaccent(...)` / `extensions.similarity(...)`. Las claves locales (anon y service role) van en `.env.local`, generado desde `supabase status`. El CLI nuevo también expone `PUBLISHABLE_KEY`/`SECRET_KEY`; se mantienen los nombres `ANON_KEY`/`SERVICE_ROLE_KEY` del plan.
+- T0.5: `pnpm db:types` avisa que el archivo generado no está formateado (sugiere oxfmt); se ignora: `database.types.ts` está en `.prettierignore` y en el ignore de ESLint.

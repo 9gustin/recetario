@@ -4,12 +4,12 @@ Archivo compartido entre los tres agentes. Cada uno lo lee al empezar y lo actua
 
 ## 1 · Configuración (Sonnet) — [instrucciones](01-configuracion-sonnet.md)
 
-- [ ] Paso 1 — Entorno verificado
+- [x] Paso 1 — Entorno verificado
 - [x] Paso 2 — T0.1 Proyecto base
 - [x] Paso 3 — T0.2 Sistema de diseño
 - [x] Paso 4 — T0.3 Estructura de la app
 - [x] Paso 5 — T0.4 PWA
-- [ ] Paso 6 — T0.5 Supabase local
+- [x] Paso 6 — T0.5 Supabase local
 - [ ] Paso 7 — T0.6 Pruebas
 - [ ] Paso 8 — T0.7 CI
 - [ ] Paso 9 — T0.8 Producción
