@@ -16,7 +16,7 @@ export default async function Page({
 }: {
   params: Promise<{ groupId: string; weekStart: string }>;
 }) {
-  await requireUser();
+  const user = await requireUser();
   const { groupId, weekStart } = await params;
   if (!/^\d{4}-\d{2}-\d{2}$/.test(weekStart)) notFound();
 
@@ -40,6 +40,7 @@ export default async function Page({
       plan={plan}
       initialEntries={entries}
       members={members}
+      currentUserId={user.id}
       mealSlots={settings.mealSlots}
       history={history.filter((h) => h.week_start !== weekStart)}
     />

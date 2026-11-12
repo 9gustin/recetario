@@ -5,7 +5,7 @@ import { z } from "zod";
 import { requireUser } from "@/lib/auth";
 import type { Database } from "@/lib/supabase/database.types";
 import { createClient } from "@/lib/supabase/server";
-import { ENTRY_COLUMNS, toPlanEntry } from "./queries";
+import { ENTRY_COLUMNS, getPlanEntries, toPlanEntry } from "./queries";
 import type { PlanEntry } from "./types";
 
 type Result<T = null> = { ok: true; data: T } | { ok: false; error: string };
@@ -188,4 +188,11 @@ export async function duplicatePlan(raw: unknown): Promise<Result<{ id: string }
   if (error || !data) return fail(error, "No se pudo duplicar el plan.");
   revalidatePath(`/g/${parsed.data.groupId}/plan`);
   return { ok: true, data: { id: data } };
+}
+
+/** Vuelve a leer las entradas de un plan (lo usa el tiempo real tras un cambio ajeno). */
+export async function fetchPlanEntries(planId: string): Promise<PlanEntry[]> {
+  if (!uuid.safeParse(planId).success) return [];
+  await requireUser();
+  return getPlanEntries(planId);
 }

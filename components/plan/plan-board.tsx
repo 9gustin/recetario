@@ -13,6 +13,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { toast } from "sonner";
+import { useRealtimePlan } from "@/lib/hooks/use-realtime-plan";
 import { PillButton } from "@/components/shared/pill-button";
 import { EmptyState } from "@/components/shell/empty-state";
 import {
@@ -52,6 +53,7 @@ type Props = {
   plan: PlanRow | null;
   initialEntries: PlanEntry[];
   members: PlanMember[];
+  currentUserId: string;
   mealSlots: MealSlot[];
   history: PlanHistoryItem[];
 };
@@ -66,6 +68,7 @@ export function PlanBoard({
   plan: initialPlan,
   initialEntries,
   members,
+  currentUserId,
   mealSlots,
   history,
 }: Props) {
@@ -77,6 +80,12 @@ export function PlanBoard({
   const [repeatOpen, setRepeatOpen] = useState(false);
   const [changedAfterApproval, setChangedAfterApproval] = useState(false);
   const [pending, start] = useTransition();
+  const { others } = useRealtimePlan({
+    planId: plan?.id ?? null,
+    userId: currentUserId,
+    userName: members.find((m) => m.id === currentUserId)?.name ?? "Alguien",
+    onEntries: setEntries,
+  });
 
   const days = weekDays(weekStart);
   const inWeek = days.includes(today);
@@ -209,6 +218,13 @@ export function PlanBoard({
           </DropdownMenu>
         </div>
       </div>
+      {others.length > 0 ? (
+        <p role="status" className="text-xs font-semibold text-accent">
+          {others.length === 1
+            ? `${others[0]} está viendo este plan`
+            : `${others.join(", ")} están viendo este plan`}
+        </p>
+      ) : null}
       <h2 className="font-display text-[30px] leading-[1.05] font-normal">
         {formatWeekLabel(weekStart)}
       </h2>

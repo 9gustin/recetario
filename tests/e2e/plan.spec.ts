@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { createTestUser, mobileContext, signIn } from "./helpers/auth";
+import { addMemberToGroup, createTestUser, mobileContext, signIn } from "./helpers/auth";
 import { createGroupAs, seedRecipe } from "./helpers/recipes";
 
 const password = "password123";
@@ -79,4 +79,39 @@ test("plan: duplicar una semana anterior desde el historial conserva las comidas
   await page.getByRole("button", { name: "Repetir esta semana" }).first().tap();
   await expect(page.getByText("Guiso de lentejas").first()).toBeVisible();
   await expect(page.getByText("Borrador", { exact: true })).toBeVisible();
+});
+
+test("plan: los cambios de otra persona aparecen en vivo", async ({ browser }) => {
+  test.setTimeout(120_000);
+  const run = Date.now();
+  const aEmail = `plan-rt-a-${run}@test.com`;
+  const bEmail = `plan-rt-b-${run}@test.com`;
+  await createTestUser(aEmail, password, "Ana");
+  const bId = await createTestUser(bEmail, password, "Beto");
+  const groupId = await createGroupAs(aEmail, password, "Casa");
+  await addMemberToGroup(groupId, bId);
+  await seedRecipe(aEmail, password, groupId, {
+    title: "Tarta de zapallitos",
+    ingredients: ["2 zapallitos"],
+    steps: [{ instruction: "Horneá." }],
+  });
+
+  const pageA = await (await mobileContext(browser)).newPage();
+  await signIn(pageA, aEmail, password);
+  await pageA.goto(`/g/${groupId}/plan`);
+  await pageA.getByRole("button", { name: /Armar a mano/ }).tap();
+  await expect(pageA.getByText("Borrador", { exact: true })).toBeVisible();
+
+  const pageB = await (await mobileContext(browser)).newPage();
+  await signIn(pageB, bEmail, password);
+  await pageB.goto(`/g/${groupId}/plan`);
+  await expect(pageB.getByText("Borrador", { exact: true })).toBeVisible();
+  await expect(pageB.getByText("Ana está viendo este plan")).toBeVisible();
+
+  await pageA
+    .getByRole("button", { name: /Agregar almuerzo/i })
+    .first()
+    .tap();
+  await pageA.getByRole("button", { name: /Tarta de zapallitos/ }).tap();
+  await expect(pageB.getByText("Tarta de zapallitos").first()).toBeVisible();
 });

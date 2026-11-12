@@ -135,3 +135,15 @@ export async function getTodayEntries(groupId: string, today: string, tomorrow: 
     .order("position");
   return (data ?? []).map((row) => toPlanEntry(row as unknown as RawEntry));
 }
+
+/** Entradas de un plan, ordenadas (para refrescar el tablero ante cambios en vivo). */
+export async function getPlanEntries(planId: string): Promise<PlanEntry[]> {
+  const supabase = await createClient();
+  const { data } = await supabase
+    .from("meal_plan_entries")
+    .select(ENTRY_COLUMNS)
+    .eq("plan_id", planId)
+    .order("date")
+    .order("position");
+  return (data ?? []).map((r) => toPlanEntry(r as unknown as RawEntry));
+}

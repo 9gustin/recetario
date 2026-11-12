@@ -56,7 +56,7 @@ Parte **7a** (manual, T7.1–T7.6), parte **7b** (IA, T7.7–T7.11) y parte **7c
   6. Lugar reservado para tareas de meal prep (Etapa 9).
 - **Aceptación:** abrir la app a la noche con cena planeada muestra la cena y "Empezar a cocinar" sin scroll; sin plan, muestra los arranques; el tono cambia según la hora.
 
-### T7.6 — Tiempo real en el plan
+### [x] T7.6 — Tiempo real en el plan
 - **Depende de:** T7.3
 - **Archivos:** `lib/hooks/use-realtime-plan.ts`.
 - **Pasos:** suscripción a cambios de `meal_plan_entries` del plan abierto; aplicar cambios al estado local; indicador "Sofi está editando" con Presence.
@@ -160,3 +160,5 @@ Parte **7a** (manual, T7.1–T7.6), parte **7b** (IA, T7.7–T7.11) y parte **7c
 - T7.4: Historial repite en la próxima semana libre; el banner de plan aprobado ya existía desde T7.3.
 
 - T7.5: Cards 1/2 (Ideas, ¿Qué tenés?) hidden until T7.12/T7.13; storage warnings (paso 5) and prep tasks slot arrive with Etapa 9; 'cocinado' not tracked yet so doneIds is empty; cook link passes ?entry=<id> (not consumed yet).
+
+- T7.6: Realtime requires realtime.setAuth(access_token) before subscribing (otherwise RLS filters all changes). Entries are re-read through a server action after a debounced change instead of merging payloads (recipes join is not in the payload).
