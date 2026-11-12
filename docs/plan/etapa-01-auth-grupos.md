@@ -29,7 +29,7 @@
 - **Verificación:** `pnpm db:reset && pnpm db:types`; revisar en Studio (http://localhost:54323).
 - **Fuera de alcance:** UI.
 
-### T1.2 — Tests de RLS (pgTAP)
+### [x] T1.2 — Tests de RLS (pgTAP)
 - **Depende de:** T1.1
 - **Archivos:** `supabase/tests/01_groups_rls.test.sql`, helpers en `supabase/tests/00_helpers.sql`.
 - **Pasos:**
@@ -99,3 +99,5 @@
 ## Notas de ejecución
 
 - T1.1: se agregó la función helper `shares_group_with(uid)` (security definer, stable) para la policy de `profiles` ("ver el perfil de quien comparte algún grupo") sin recursión de RLS. `group_members` no lleva `updated_at` (join table con `joined_at`, según §5.2). `create_group`/`accept_invite`/`leave_group`/`remove_member` quedan revocadas a `anon` (solo `get_invite_preview` es accesible a anon); el alta de usuario crea perfil + grupo personal "Mis recetas" + membresía owner vía trigger `on_auth_user_created`.
+
+- T1.2: `supabase/tests/00_helpers.sql` (sin `BEGIN/ROLLBACK`) crea el helper `tests.create_user(id, email, name)` con `security definer`, que inserta en `auth.users` y dispara el alta de perfil + grupo personal; emite un test trivial para que pg_prove vea un plan válido (pg_prove descubre **todos** los `**/*.sql` de `supabase/tests`). La sesión se simula con `set local role authenticated;` + `select set_config('request.jwt.claims', …)`. Se usan UUIDs fijos para evitar interpolación de psql. El caso de transferencia de ownership usa un tercer usuario C (admin), para no ensuciar el caso "B se une por invitación". `\set QUIET 1` evita que los command tags de psql ensucien el TAP.
