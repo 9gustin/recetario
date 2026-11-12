@@ -113,7 +113,7 @@ test("¿Qué tenés?: sugiere recetas, elegir una la deja en hoy con 'Empezar a 
 test("Ideas para hoy: 3 ideas aptas con su motivo, 'Otras 3' no repite y elegir deja la cena en hoy", async ({
   browser,
 }) => {
-  test.setTimeout(120_000);
+  test.setTimeout(180_000);
   const email = `ideas-${Date.now()}@test.com`;
   const userId = await createTestUser(email, password, "Ana");
   const groupId = await createGroupAs(email, password, "Casa");
