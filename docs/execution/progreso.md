@@ -18,7 +18,7 @@ Archivo compartido entre los tres agentes. Cada uno lo lee al empezar y lo actua
 - [x] Paso 12 — Transcripción (proveedor elegido: OpenAI gpt-4o-transcribe)
 - [x] Paso 13 — Jobs: sin Inngest (streaming + pg_cron), `CRON_SECRET`
 - [x] Paso 14 — Web Push (VAPID: generadas en .env.local; falta cargarlas en Vercel antes de T10.1)
-- [ ] Paso 15 — Todo listo, rama `dev` creada
+- [x] Paso 15 — Todo listo, rama `dev` creada
 
 ## 2 · Código (DeepSeek) — [instrucciones](02-codigo-deepseek.md)
 
