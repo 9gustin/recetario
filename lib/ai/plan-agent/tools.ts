@@ -69,11 +69,18 @@ async function currentCandidates(ctx: PlanToolCtx): Promise<Candidate[]> {
       "id, date, slot, recipe_id, free_text, servings, diner_ids, cook_date, leftovers_of_entry_id, is_new_recipe",
     )
     .eq("plan_id", ctx.planId);
-  return (data ?? []).map((r) => ({
-    ...r,
-    slot: r.slot as MealSlot,
-    servings: r.servings === null ? null : Number(r.servings),
-  }));
+  return (data ?? []).flatMap((r) =>
+    r.date && r.slot
+      ? [
+          {
+            ...r,
+            date: r.date,
+            slot: r.slot as MealSlot,
+            servings: r.servings === null ? null : Number(r.servings),
+          },
+        ]
+      : [],
+  );
 }
 
 const checkWindow = (ctx: PlanToolCtx, candidates: Candidate[]): string | null => {

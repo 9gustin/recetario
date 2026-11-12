@@ -465,14 +465,14 @@ isOneToOne: false
                   ]
                 },"meal_plan_entries": {
                   Row: {
-                    "cook_date": string | null,"created_at": string,"date": string,"diner_ids": (string)[],"free_text": string | null,"id": string,"is_new_recipe": boolean,"leftovers_of_entry_id": string | null,"plan_id": string,"position": number,"recipe_id": string | null,"servings": number | null,"slot": string,"updated_at": string
+                    "cook_date": string | null,"cooked_at": string | null,"created_at": string,"date": string | null,"diner_ids": (string)[],"free_text": string | null,"id": string,"is_new_recipe": boolean,"leftovers_of_entry_id": string | null,"plan_id": string,"position": number,"quantity": number,"recipe_id": string | null,"servings": number | null,"slot": string | null,"updated_at": string
                   }
                   ComputedFields: never
                   Insert: {
-                    "cook_date"?: string | null,"created_at"?: string,"date": string,"diner_ids"?: (string)[],"free_text"?: string | null,"id"?: string,"is_new_recipe"?: boolean,"leftovers_of_entry_id"?: string | null,"plan_id": string,"position"?: number,"recipe_id"?: string | null,"servings"?: number | null,"slot": string,"updated_at"?: string
+                    "cook_date"?: string | null,"cooked_at"?: string | null,"created_at"?: string,"date"?: string | null,"diner_ids"?: (string)[],"free_text"?: string | null,"id"?: string,"is_new_recipe"?: boolean,"leftovers_of_entry_id"?: string | null,"plan_id": string,"position"?: number,"quantity"?: number,"recipe_id"?: string | null,"servings"?: number | null,"slot"?: string | null,"updated_at"?: string
                   }
                   Update: {
-                    "cook_date"?: string | null,"created_at"?: string,"date"?: string,"diner_ids"?: (string)[],"free_text"?: string | null,"id"?: string,"is_new_recipe"?: boolean,"leftovers_of_entry_id"?: string | null,"plan_id"?: string,"position"?: number,"recipe_id"?: string | null,"servings"?: number | null,"slot"?: string,"updated_at"?: string
+                    "cook_date"?: string | null,"cooked_at"?: string | null,"created_at"?: string,"date"?: string | null,"diner_ids"?: (string)[],"free_text"?: string | null,"id"?: string,"is_new_recipe"?: boolean,"leftovers_of_entry_id"?: string | null,"plan_id"?: string,"position"?: number,"quantity"?: number,"recipe_id"?: string | null,"servings"?: number | null,"slot"?: string | null,"updated_at"?: string
                   }
                   Relationships: [
                     {
@@ -1002,6 +1002,9 @@ isOneToOne: false
 { Args: { "p_token": string }; Returns: {
               "group_emoji": string,"group_id": string,"group_name": string,"inviter_name": string,"is_expired": boolean,"is_revoked": boolean,"is_valid": boolean,"member_count": number
             }[]
+                           },
+"get_or_create_menu":
+{ Args: { "p_group_id": string }; Returns: string
                            },
 "get_public_collection":
 { Args: { "p_slug": string }; Returns: Json

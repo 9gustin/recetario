@@ -95,3 +95,6 @@ export function formatRangeLabel(start: string, end: string): string {
     ? `${sd} al ${ed} de ${MONTHS[em! - 1]}`
     : `${sd} de ${MONTHS[sm! - 1]} al ${ed} de ${MONTHS[em! - 1]}`;
 }
+
+/** Fecha reservada del "menú" de un grupo (comidas sin día ni momento). */
+export const MENU_DATE = "2000-01-01";

@@ -29,7 +29,9 @@ const fail = (e: { code?: string } | null, fallback: string): Result<never> => (
 
 /** Crea el plan (borrador) de una semana. */
 export async function createPlan(raw: unknown): Promise<Result<{ id: string }>> {
-  const parsed = z.object({ groupId: uuid, weekStart: date, days: z.number().int().min(1).max(14).optional() }).safeParse(raw);
+  const parsed = z
+    .object({ groupId: uuid, weekStart: date, days: z.number().int().min(1).max(14).optional() })
+    .safeParse(raw);
   if (!parsed.success) return { ok: false, error: "Datos inválidos." };
   await requireUser();
   const supabase = await createClient();

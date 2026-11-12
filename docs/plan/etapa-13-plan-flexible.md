@@ -6,7 +6,7 @@
 ### [x] T13.1 — Planes por rango (base)
 - Hecho: `meal_plans.end_date` (1–14 días), UI con "Un día / 3 días / Una semana", momento elegible al agregar. Queda como base; la T13.2 lo simplifica aún más.
 
-### [ ] T13.2 — Modelo "listado de comidas"
+### [x] T13.2 — Modelo "listado de comidas"
 - **Pasos:** `meal_plan_entries.date` y `slot` pasan a ser opcionales (comida sin fecha = "para cocinar"); `quantity` (veces que se hace, ej. ×3); `cooked_at` para tildar lo que ya se cocinó; un único "menú" vigente por grupo (se crea solo al agregar la primera comida; sin estado borrador/aprobado en la UI); `approve_plan` pasa a ser automático (recetas nuevas de la IA se guardan al agregarlas); migración + pgTAP; compat con planes viejos y con "Hoy".
 - **Aceptación:** agregar comidas sin fecha ni momento; las existentes con fecha siguen funcionando.
 
@@ -24,3 +24,6 @@
 
 ### [ ] T13.6 — E2E y cierre
 - **Pasos:** ajustar e2e de plan/compras/hoy; `pnpm check`, `db:test`, `test:e2e`, build; `progreso.md`.
+
+## Notas de ejecución
+- T13.2: el "menú" es un `meal_plans` especial por grupo (`week_start = 2000-01-01`, `MENU_DATE`), creado por `get_or_create_menu`; así reutiliza RLS, realtime, compras y agente. Sus comidas tienen `date`/`slot` nulos; `quantity` multiplica porciones en la lista de compras (que para el menú es una sola lista, sin viajes). Los planes con fecha siguen igual.

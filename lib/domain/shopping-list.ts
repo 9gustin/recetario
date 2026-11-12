@@ -12,6 +12,8 @@ export type ShopEntry = {
   date: string;
   recipeId: string | null;
   servings: number | null;
+  /** Veces que se cocina la receta (por defecto 1). */
+  quantity?: number;
   leftoversOfEntryId: string | null;
   /** Día en que se cocina, si es distinto del que se come. */
   cookDate?: string | null;
@@ -88,7 +90,7 @@ export function buildShoppingList(input: {
     if (!entry.recipeId || entry.leftoversOfEntryId) continue;
     const recipe = recipes.get(entry.recipeId);
     if (!recipe) continue;
-    const target = entry.servings ?? recipe.servings;
+    const target = (entry.servings ?? recipe.servings) * (entry.quantity ?? 1);
     const date = entry.cookDate ?? entry.date;
     for (const ing of recipe.ingredients) {
       if (!ing.name.trim()) continue;

@@ -5,7 +5,7 @@ import {
   formatPurchaseQuantity,
   type ShoppingItem,
 } from "@/lib/domain/shopping-list";
-import { addDays, dayLabel } from "@/lib/domain/week";
+import { MENU_DATE, addDays, dayLabel, todayString } from "@/lib/domain/week";
 import type { Database } from "@/lib/supabase/database.types";
 
 type Client = SupabaseClient<Database>;
@@ -29,7 +29,7 @@ export async function generateShoppingLists(
 
   const { data: entries } = await supabase
     .from("meal_plan_entries")
-    .select("id, date, recipe_id, servings, leftovers_of_entry_id, cook_date")
+    .select("id, date, recipe_id, servings, quantity, leftovers_of_entry_id, cook_date")
     .eq("plan_id", planId);
   const recipeIds = [
     ...new Set((entries ?? []).flatMap((e) => (e.recipe_id ? [e.recipe_id] : []))),
@@ -77,12 +77,15 @@ export async function generateShoppingLists(
   }));
 
   // Primera compra el día anterior al plan; segunda, a mitad de semana, solo si algo perecedero la necesita.
-  const first = addDays(plan.week_start, -1);
-  const second = addDays(plan.week_start, 3);
+  // El menú ("Mis comidas") no tiene fechas: se compra todo junto, hoy.
+  const isMenu = plan.week_start === MENU_DATE;
+  const first = isMenu ? MENU_DATE : addDays(plan.week_start, -1);
+  const second = isMenu ? first : addDays(plan.week_start, 3);
   const built = buildShoppingList({
     entries: (entries ?? []).map((e) => ({
       id: e.id,
-      date: e.date,
+      date: e.date ?? todayString(),
+      quantity: e.quantity,
       recipeId: e.recipe_id,
       servings: e.servings === null ? null : Number(e.servings),
       leftoversOfEntryId: e.leftovers_of_entry_id,
@@ -90,7 +93,7 @@ export async function generateShoppingLists(
     })),
     recipes,
     catalog,
-    shopDates: [first, second],
+    shopDates: isMenu ? [first] : [first, second],
   });
   const dates = [...new Set(built.map((i) => i.shopDate ?? first))].sort();
   const trips = dates.length > 0 ? dates : [first];

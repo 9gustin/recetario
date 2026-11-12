@@ -26,6 +26,8 @@ export type PlanEntry = {
   plan_id: string;
   date: string;
   slot: MealSlot;
+  quantity: number;
+  cooked_at: string | null;
   recipe_id: string | null;
   free_text: string | null;
   servings: number | null;
@@ -38,3 +40,9 @@ export type PlanEntry = {
 };
 
 export type PlanMember = { id: string; name: string };
+
+/** Comida del listado "Mis comidas": puede no tener día ni momento. */
+export type MenuEntry = Omit<PlanEntry, "date" | "slot"> & {
+  date: string | null;
+  slot: MealSlot | null;
+};

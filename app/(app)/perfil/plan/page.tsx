@@ -60,7 +60,7 @@ export default async function Page() {
     .select("slot, free_text, recipes(title)")
     .eq("date", today);
   const inPlan: Record<string, string> = {};
-  for (const e of planned ?? []) inPlan[e.slot] ??= e.recipes?.title ?? e.free_text ?? "";
+  for (const e of planned ?? []) if (e.slot) inPlan[e.slot] ??= e.recipes?.title ?? e.free_text ?? "";
 
   const weekNumber = plan.starts_on ? Math.floor(daysBetween(plan.starts_on, today) / 7) + 1 : null;
   const totalWeeks =

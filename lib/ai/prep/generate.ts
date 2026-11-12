@@ -37,7 +37,11 @@ export async function generatePrepTasks(
       "id, date, slot, recipe_id, cook_date, leftovers_of_entry_id, servings, recipes(title, total_minutes, recipe_ingredients(raw_text, ingredients(name, shelf_life)))",
     )
     .eq("plan_id", args.planId);
-  const entries = (rows ?? []).filter((e) => e.recipes && !e.leftovers_of_entry_id);
+  const entries = (rows ?? []).flatMap((e) =>
+    e.recipes && !e.leftovers_of_entry_id && e.date && e.slot
+      ? [{ ...e, date: e.date, slot: e.slot }]
+      : [],
+  );
   if (entries.length === 0) return { ok: true, saved: 0, rejected: [], tips: [] };
 
   const purchaseDate = addDays(plan.week_start, -1);
