@@ -7,7 +7,7 @@
 
 ---
 
-### T5B.1 — Migración: conversaciones del asistente
+### [x] T5B.1 — Migración: conversaciones del asistente
 - **Depende de:** T5.1
 - **Archivos:** `supabase/migrations/<ts>_assistant.sql`, `supabase/tests/05b_assistant.test.sql`.
 - **Pasos:**
@@ -71,3 +71,5 @@
 - [ ] Revisar costo promedio por conversación en `ai_runs`.
 
 ## Notas de ejecución
+
+- T5B.1: las columnas `context`, `title`, `last_message_at` y `mentions` ya estaban desde la migración de IA (T5.1). Acá se agregaron las policies de escritura propia (insert exige ser el dueño y miembro del grupo; update/delete del dueño; `ai_messages` solo en conversaciones propias) para que el endpoint use el cliente del usuario y respete RLS en vez del service role, y el índice GIN de `mentions`. 7 tests pgTAP en `05b_assistant.test.sql`: un miembro del mismo grupo no ve ni escribe las conversaciones de otro.
