@@ -57,7 +57,7 @@
   5. Botón principal "Registrar lo que comí". En Perfil, tarjeta "Mi plan · semana 3" con anillo de progreso.
 - **Aceptación:** coincide con el diseño del canvas a 375 px en los tres temas.
 
-### T8B.6 — Registrar y seguimiento
+### [x] T8B.6 — Registrar y seguimiento
 - **Depende de:** T8B.5
 - **Archivos:** `app/(app)/perfil/plan/registrar/page.tsx`, `components/diet-plan/log-meal.tsx`, `components/diet-plan/week-grid.tsx`, `app/api/ai/meal-logs/classify/route.ts`.
 - **Pasos:**
@@ -99,3 +99,5 @@
 - T8B.4: propose_swaps recibe candidatos del modelo y el servidor descarta los prohibidos por el perfil (checkRecipe); apply_swap vuelve a validar. runPlanAgent se generalizó (tools/feature/ctx). Falta probar con la API real en T8B.8.
 
 - T8B.5: No hay diseño canvas a mano para verificar a 375 px en los tres temas; usa tokens de color.
+
+- T8B.6: Pendiente dentro de T8B.6: registrar automático 'Cumplí' al terminar una sesión de cocinar con plan_entry_id (paso 5) y el historial de semanas anteriores; se retoman después de T8B.8 si hay tiempo.
