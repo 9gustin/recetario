@@ -1,0 +1,581 @@
+[
+  {
+    "title": "Tortilla española de papas y cebolla",
+    "description": "La clásica tortilla jugosa por dentro, con papas pochadas despacio en aceite y cebolla dulce. Se come tibia o fría, sola o en sándwich.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 22,
+    "difficulty": "media",
+    "tags": [
+      "española",
+      "almuerzo",
+      "huevo",
+      "vegetariano",
+      "sin gluten",
+      "económico"
+    ],
+    "ingredients": [
+      "4 papas medianas (unos 600 g)",
+      "1 cebolla",
+      "6 huevos",
+      "150 ml de aceite de girasol",
+      "1 cdita de sal",
+      "pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Pelá las papas y cortalas en rodajas finas; cortá la cebolla en plumas."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén antiadherente de 24 cm a fuego medio y sumá las papas y la cebolla con una pizca de sal."
+      },
+      {
+        "instruction": "Cociná removiendo de a ratos hasta que las papas estén tiernas, sin dorarse.",
+        "minutes": 12
+      },
+      {
+        "instruction": "Batí los huevos con sal y pimienta en un bowl grande."
+      },
+      {
+        "instruction": "Escurrí las papas del aceite, mezclalas con los huevos y dejá reposar.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Volcá todo en la sartén con una cucharada del aceite a fuego medio-bajo y cociná hasta que los bordes cuajen.",
+        "minutes": 4
+      },
+      {
+        "instruction": "Dale vuelta con ayuda de un plato grande y cociná del otro lado hasta que esté dorada.",
+        "minutes": 3
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Comela fría o tibia; si querés, calentala 1 minuto en sartén tapada.",
+      "tip": "Guardá el aceite colado para otra fritura."
+    }
+  },
+  {
+    "title": "Pisto manchego con huevo",
+    "description": "Verduras cocidas a fuego suave en salsa de tomate con pimentón, coronadas con huevos que se cuajan en la misma sartén.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 22,
+    "difficulty": "facil",
+    "tags": [
+      "española",
+      "vegetariano",
+      "sin gluten",
+      "huevo",
+      "verdura",
+      "una olla",
+      "cena"
+    ],
+    "ingredients": [
+      "1 cebolla",
+      "1 morrón rojo",
+      "1 morrón verde",
+      "2 zucchinis",
+      "4 tomates perita maduros",
+      "2 dientes de ajo",
+      "3 cda de aceite de oliva",
+      "1 cdita de pimentón dulce",
+      "4 huevos",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá la cebolla, los morrones y los zucchinis en cubos chicos; picá el ajo."
+      },
+      {
+        "instruction": "Rallá o picá los tomates sin la piel gruesa."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén honda y rehogá la cebolla y los morrones.",
+        "minutes": 6
+      },
+      {
+        "instruction": "Sumá el zucchini, el ajo y el pimentón y salteá un momento.",
+        "minutes": 3
+      },
+      {
+        "instruction": "Agregá el tomate, sal y pimienta, tapá y cociná a fuego bajo.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Hacé cuatro huecos en el pisto, rompé un huevo en cada uno, tapá y cociná hasta que la clara cuaje.",
+        "minutes": 4
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Calentá el pisto en sartén con un chorrito de agua; los huevos conviene hacerlos al momento.",
+      "tip": "Para freezar guardá solo el pisto, sin los huevos."
+    }
+  },
+  {
+    "title": "Garbanzos con espinaca estilo andaluz",
+    "description": "Garbanzos de lata en un guiso rápido con ajo, comino y pimentón, espesado con pan. Un plato de cuchara sencillo y con mucho sabor.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 17,
+    "difficulty": "facil",
+    "tags": [
+      "española",
+      "vegano",
+      "legumbres",
+      "sin lácteos",
+      "económico",
+      "una olla",
+      "rápido"
+    ],
+    "ingredients": [
+      "2 latas de garbanzos",
+      "1 atado de espinaca",
+      "4 dientes de ajo",
+      "2 cda de aceite de oliva",
+      "1 cdita de comino",
+      "1 cdita de pimentón dulce",
+      "2 rebanadas de pan de miga",
+      "1 cda de vinagre de vino",
+      "150 ml de agua",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Escurrí y enjuagá los garbanzos; lavá la espinaca y sacale los tallos gruesos."
+      },
+      {
+        "instruction": "Dorá el pan en una cucharada de aceite y retiralo."
+      },
+      {
+        "instruction": "En la misma olla calentá el aceite restante y doná el ajo laminado sin que se queme.",
+        "minutes": 2
+      },
+      {
+        "instruction": "Sumá el comino y el pimentón, y enseguida los garbanzos con el agua.",
+        "minutes": 5
+      },
+      {
+        "instruction": "Procesá o pisá el pan con el vinagre y un cucharón del caldo; volcalo a la olla para espesar."
+      },
+      {
+        "instruction": "Agregá la espinaca y cociná hasta que se ablande; salá a gusto.",
+        "minutes": 5,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 4,
+      "freezer_days": 90,
+      "reheat": "Calentá en olla con un chorrito de agua.",
+      "tip": "Al día siguiente espesa más; sumale agua al recalentar."
+    }
+  },
+  {
+    "title": "Anillas de calamar a la romana",
+    "description": "Calamares rebozados livianos y crocantes, para servir calentitos con limón. Salen en minutos y son ideales para compartir.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 12,
+    "difficulty": "media",
+    "tags": [
+      "española",
+      "pescado",
+      "para compartir",
+      "sin lácteos",
+      "rápido"
+    ],
+    "ingredients": [
+      "400 g de anillas de calamar",
+      "100 g de harina",
+      "1 cdita de sal",
+      "1 pizca de pimienta",
+      "500 ml de aceite de girasol para freír",
+      "1 limón"
+    ],
+    "steps": [
+      {
+        "instruction": "Secá bien las anillas con papel de cocina y salalas."
+      },
+      {
+        "instruction": "Pasalas por la harina sacudiendo el exceso."
+      },
+      {
+        "instruction": "Calentá el aceite en una olla chica hasta que un palito de madera burbujee."
+      },
+      {
+        "instruction": "Freí las anillas en tandas de a pocas, hasta que estén doradas.",
+        "minutes": 2
+      },
+      {
+        "instruction": "Escurrilas sobre papel de cocina y repetí con el resto.",
+        "minutes": 8
+      },
+      {
+        "instruction": "Serví enseguida con gajos de limón."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Recalentá en horno fuerte o airfryer unos minutos para que vuelvan a crocar.",
+      "tip": "No sobrecargues el aceite: se enfría y los calamares quedan aceitosos."
+    }
+  },
+  {
+    "title": "Patatas bravas en airfryer con salsa brava",
+    "description": "Papas doradas en cubos con una salsa de tomate y pimentón con toque picante. Un clásico de tapas, con poco aceite.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 25,
+    "difficulty": "facil",
+    "tags": [
+      "española",
+      "airfryer",
+      "vegano",
+      "sin lácteos",
+      "snack",
+      "guarnición",
+      "para compartir"
+    ],
+    "ingredients": [
+      "700 g de papas",
+      "2 cda de aceite de oliva",
+      "1 cdita de sal",
+      "2 cda de aceite de oliva (para la salsa)",
+      "1 diente de ajo",
+      "1 cda de harina",
+      "1 cdita de pimentón dulce",
+      "1/2 cdita de pimentón picante o ají molido",
+      "150 ml de caldo de verduras",
+      "3 cda de salsa de tomate",
+      "1 cdita de vinagre"
+    ],
+    "steps": [
+      {
+        "instruction": "Pelá las papas, cortalas en cubos de 2 cm y mezclalas con el aceite y la sal."
+      },
+      {
+        "instruction": "Cocinalas en la airfryer a 200 °C, sacudiendo la canasta a la mitad.",
+        "minutes": 22,
+        "passive": true
+      },
+      {
+        "instruction": "Mientras tanto, calentá el aceite de la salsa y rehogá el ajo picado un minuto."
+      },
+      {
+        "instruction": "Sumá la harina y los pimentones y mezclá medio minuto."
+      },
+      {
+        "instruction": "Agregá el caldo, la salsa de tomate y el vinagre; cociná hasta que espese.",
+        "minutes": 5
+      },
+      {
+        "instruction": "Serví las papas calientes con la salsa por encima."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Calentá las papas en airfryer 5 minutos; la salsa, en cacerola.",
+      "tip": "Guardá la salsa aparte para que las papas no se ablanden."
+    }
+  },
+  {
+    "title": "Champiñones al ajillo",
+    "description": "Champiñones salteados con mucho ajo, un toque de vino blanco y perejil. Una tapa simple que sale en diez minutos.",
+    "servings": 3,
+    "prep_minutes": 8,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "española",
+      "vegano",
+      "sin sin lácteos",
+      "snack",
+      "verdura",
+      "rápido"
+    ],
+    "ingredients": [
+      "500 g de champiñones",
+      "5 dientes de ajo",
+      "3 cda de aceite de oliva",
+      "1 pizca de ají molido",
+      "50 ml de vino blanco",
+      "1/2 atado de perejil",
+      "1 limón",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Limpiá los champiñones con un paño húmedo y cortalos en mitades o cuartos."
+      },
+      {
+        "instruction": "Laminá el ajo y picá el perejil."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén grande y salteá los champiñones a fuego fuerte sin moverlos mucho.",
+        "minutes": 5
+      },
+      {
+        "instruction": "Sumá el ajo y el ají molido y cociná un minuto.",
+        "minutes": 1
+      },
+      {
+        "instruction": "Volcá el vino y dejá que reduzca.",
+        "minutes": 3
+      },
+      {
+        "instruction": "Apagá, agregá el perejil, unas gotas de limón y sal; serví con pan."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Calentá en sartén a fuego medio.",
+      "tip": "No los laves bajo la canilla: absorben agua y no se doran."
+    }
+  },
+  {
+    "title": "Pollo al ajillo con vino blanco",
+    "description": "Cubos de pechuga dorados con ajo, pimentón y vino blanco. Quedan jugosos, con una salsita corta para mojar pan.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 20,
+    "difficulty": "facil",
+    "tags": [
+      "española",
+      "pollo",
+      "alto en proteína",
+      "sin gluten",
+      "sin lácteos",
+      "cena"
+    ],
+    "ingredients": [
+      "700 g de pechuga de pollo",
+      "6 dientes de ajo",
+      "3 cda de aceite de oliva",
+      "1 cdita de pimentón dulce",
+      "100 ml de vino blanco",
+      "1 hoja de laurel",
+      "1/2 atado de perejil",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá la pechuga en cubos de 3 cm y condimentá con sal, pimienta y pimentón."
+      },
+      {
+        "instruction": "Aplastá los ajos con la piel y dejalos enteros."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén ancha y dorá el pollo por todos lados.",
+        "minutes": 8
+      },
+      {
+        "instruction": "Sumá el ajo y el laurel y cociná un minuto.",
+        "minutes": 1
+      },
+      {
+        "instruction": "Agregá el vino y cociná a fuego medio hasta que reduzca a la mitad.",
+        "minutes": 7
+      },
+      {
+        "instruction": "Espolvoreá con perejil picado y serví."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Calentá en sartén con un chorrito de agua o caldo.",
+      "tip": "No lo cocines de más: la pechuga se seca rápido."
+    }
+  },
+  {
+    "title": "Arroz a la cubana con huevo y banana frita",
+    "description": "Arroz blanco con salsa de tomate casera, huevo frito y banana dorada. Un plato de todos los días muy querido en España.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 25,
+    "difficulty": "facil",
+    "tags": [
+      "española",
+      "arroz",
+      "huevo",
+      "vegetariano",
+      "sin gluten",
+      "económico",
+      "para chicos"
+    ],
+    "ingredients": [
+      "1 taza de arroz largo fino",
+      "2 tazas de agua",
+      "1 cdita de sal",
+      "1 cebolla chica",
+      "1 diente de ajo",
+      "300 ml de puré de tomate",
+      "3 cda de aceite",
+      "4 huevos",
+      "2 bananas firmes"
+    ],
+    "steps": [
+      {
+        "instruction": "Hervilo el agua con sal, agregá el arroz, tapá y cociná a fuego bajo hasta que absorba.",
+        "minutes": 16,
+        "passive": true
+      },
+      {
+        "instruction": "Mientras tanto, picá la cebolla y el ajo y rehogalos en una cucharada de aceite."
+      },
+      {
+        "instruction": "Sumá el puré de tomate y cociná hasta que espese; salá a gusto.",
+        "minutes": 8,
+        "passive": true
+      },
+      {
+        "instruction": "Pelá las bananas, cortalas al medio a lo largo y doralas en una sartén con aceite.",
+        "minutes": 4
+      },
+      {
+        "instruction": "En la misma sartén freí los huevos hasta que la clara quede cuajada.",
+        "minutes": 3
+      },
+      {
+        "instruction": "Armá cada plato con arroz, salsa, huevo y banana."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Calentá el arroz y la salsa en microondas; hacé el huevo al momento.",
+      "tip": "Usá bananas firmes, que no estén muy maduras."
+    }
+  },
+  {
+    "title": "Fideuà rápida de merluza y langostinos",
+    "description": "Parecida a una paella, pero con fideos finos que se cocinan en el caldo con tomate y pimentón. Todo en una sola sartén grande.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 23,
+    "difficulty": "media",
+    "tags": [
+      "española",
+      "pescado",
+      "una olla",
+      "almuerzo",
+      "para compartir"
+    ],
+    "ingredients": [
+      "250 g de fideos finos cortos",
+      "300 g de merluza en cubos",
+      "200 g de langostinos pelados",
+      "1 cebolla",
+      "1 morrón rojo",
+      "2 dientes de ajo",
+      "2 tomates",
+      "2 cda de aceite de oliva",
+      "1 cdita de pimentón dulce",
+      "1 pizca de azafrán o 1/2 cdita de cúrcuma",
+      "700 ml de caldo de pescado o verduras",
+      "1 limón"
+    ],
+    "steps": [
+      {
+        "instruction": "Picá la cebolla, el morrón y el ajo; rallá los tomates."
+      },
+      {
+        "instruction": "En una sartén ancha, dorá los fideos con una cucharada de aceite hasta que tomen color; retiralos.",
+        "minutes": 3
+      },
+      {
+        "instruction": "En la misma sartén rehogá cebolla, morrón y ajo con el resto del aceite.",
+        "minutes": 5
+      },
+      {
+        "instruction": "Agregá el tomate, el pimentón y el azafrán y cociná hasta que se reduzca.",
+        "minutes": 4
+      },
+      {
+        "instruction": "Volvé los fideos, sumá el caldo caliente y cociná sin revolver mucho.",
+        "minutes": 6
+      },
+      {
+        "instruction": "Acomodá la merluza y los langostinos encima y cociná hasta que estén opacos.",
+        "minutes": 4,
+        "passive": true
+      },
+      {
+        "instruction": "Serví con limón."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Calentá en sartén con un chorrito de caldo.",
+      "tip": "Los mariscos se cocinan rápido; no los dejes de más."
+    }
+  },
+  {
+    "title": "Sopa de ajo castellana con huevo",
+    "description": "Sopa humilde de pan, ajo y pimentón, con huevos que se escalfan en el caldo caliente. Reconforta y se hace con lo que hay en la alacena.",
+    "servings": 4,
+    "prep_minutes": 5,
+    "cook_minutes": 20,
+    "difficulty": "facil",
+    "tags": [
+      "española",
+      "sopa",
+      "invierno",
+      "huevo",
+      "económico",
+      "una olla",
+      "rápido"
+    ],
+    "ingredients": [
+      "6 dientes de ajo",
+      "4 rebanadas de pan del día anterior (unos 150 g)",
+      "3 cda de aceite de oliva",
+      "2 cdita de pimentón dulce",
+      "1 l de caldo de pollo o verduras",
+      "4 huevos",
+      "sal y pimienta a gusto",
+      "80 g de jamón crudo (opcional)"
+    ],
+    "steps": [
+      {
+        "instruction": "Laminá el ajo y cortá el pan en cubos o trozos chicos."
+      },
+      {
+        "instruction": "Calentá el aceite en una cacerola y dorá el ajo a fuego bajo sin que se queme.",
+        "minutes": 3
+      },
+      {
+        "instruction": "Sumá el pan y el jamón, si usás, y salteá hasta que tome color.",
+        "minutes": 3
+      },
+      {
+        "instruction": "Apagá el fuego, agregá el pimentón y mezclá enseguida para que no se amargue."
+      },
+      {
+        "instruction": "Volcá el caldo caliente, salpimentá y hervilo despacio hasta que el pan se deshaga.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Rompé los huevos sobre la sopa, tapá y cociná hasta que la clara cuaje.",
+        "minutes": 4
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Calentá a fuego bajo; agregá caldo si está muy espesa.",
+      "tip": "Hacé los huevos solo en las porciones que vas a comer."
+    }
+  }
+]

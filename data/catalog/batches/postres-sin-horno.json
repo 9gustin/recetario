@@ -1,0 +1,489 @@
+[
+  {
+    "title": "Crema de limón en vasitos con galletitas",
+    "description": "Postre fresco y cremoso de tres ingredientes principales: crema de leche, leche condensada y limón. Se arma en minutos.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "postre",
+      "sin horno",
+      "rápido",
+      "verano",
+      "para compartir"
+    ],
+    "ingredients": [
+      "1 lata de leche condensada",
+      "300 ml de crema de leche bien fría",
+      "3 limones (jugo y ralladura)",
+      "8 galletitas de vainilla",
+      "1 pizca de sal"
+    ],
+    "steps": [
+      {
+        "instruction": "Batí la crema de leche fría hasta que forme picos suaves."
+      },
+      {
+        "instruction": "Agregá la leche condensada y mezclá con movimientos envolventes."
+      },
+      {
+        "instruction": "Sumá el jugo de limón de a poco, mezclando; la crema va a espesar sola."
+      },
+      {
+        "instruction": "Rallá la cáscara de un limón y agregá la mitad junto con la sal."
+      },
+      {
+        "instruction": "Desmenuzá las galletitas en el fondo de los vasos y llenalos con la crema."
+      },
+      {
+        "instruction": "Llevá a la heladera hasta servir y terminá con el resto de la ralladura.",
+        "minutes": 10,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "No se recalienta; servila fría.",
+      "tip": "Rallá el limón antes de exprimirlo, es mucho más fácil."
+    }
+  },
+  {
+    "title": "Ensalada de frutas con jugo de naranja y menta",
+    "description": "Ensalada de frutas fresca, con almíbar liviano de naranja, miel y hojas de menta. Ideal para después de un almuerzo pesado.",
+    "servings": 4,
+    "prep_minutes": 15,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "postre",
+      "sin horno",
+      "rápido",
+      "liviano",
+      "fruta",
+      "verano",
+      "sin gluten"
+    ],
+    "ingredients": [
+      "2 naranjas (el jugo)",
+      "2 manzanas",
+      "2 bananas",
+      "1 taza de uvas",
+      "2 kiwis",
+      "1 cda de miel",
+      "10 hojas de menta"
+    ],
+    "steps": [
+      {
+        "instruction": "Exprimí las naranjas en un bol grande y mezclá con la miel."
+      },
+      {
+        "instruction": "Cortá las manzanas en cubos y pasalas enseguida por el jugo para que no se oscurezcan."
+      },
+      {
+        "instruction": "Pelá y cortá los kiwis y las bananas en rodajas y sumalos al bol."
+      },
+      {
+        "instruction": "Cortá las uvas por la mitad y agregalas."
+      },
+      {
+        "instruction": "Picá la menta, espolvoreala y mezclá con suavidad."
+      },
+      {
+        "instruction": "Dejá reposar en la heladera unos minutos antes de servir.",
+        "minutes": 5,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Servir fría, sin recalentar.",
+      "tip": "Agregá las bananas al final si la vas a guardar para que no se pongan blandas."
+    }
+  },
+  {
+    "title": "Parfait de yogur griego, duraznos y avena tostada",
+    "description": "Capas de yogur griego, duraznos frescos y avena tostada en sartén con canela y miel. Un postre liviano y crocante.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 6,
+    "difficulty": "facil",
+    "tags": [
+      "postre",
+      "sin horno",
+      "rápido",
+      "fruta",
+      "liviano",
+      "para chicos"
+    ],
+    "ingredients": [
+      "500 g de yogur griego natural",
+      "1 taza de avena",
+      "2 cda de miel",
+      "1/2 cdita de canela",
+      "2 duraznos maduros",
+      "40 g de nueces",
+      "1 cdita de manteca"
+    ],
+    "steps": [
+      {
+        "instruction": "Calentá la manteca en una sartén a fuego medio."
+      },
+      {
+        "instruction": "Tostá la avena con la canela, revolviendo.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá una cucharada de miel, mezclá y pasá la avena a un plato para que se enfríe."
+      },
+      {
+        "instruction": "Cortá los duraznos en cubos y picá las nueces."
+      },
+      {
+        "instruction": "Mezclá el yogur con la miel restante."
+      },
+      {
+        "instruction": "Armá capas en vasos: yogur, duraznos y avena; terminá con nueces."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Servir frío.",
+      "tip": "Guardá la avena aparte y agregala justo antes de comer para que siga crocante."
+    }
+  },
+  {
+    "title": "Bolitas de dulce de leche y coco",
+    "description": "Bocaditos de dulce de leche espesado con manteca y rebozados en coco rallado. Se hacen en una sartén y se enfrían en el freezer.",
+    "servings": 6,
+    "prep_minutes": 10,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "postre",
+      "sin horno",
+      "argentina",
+      "para chicos",
+      "para compartir",
+      "para freezar"
+    ],
+    "ingredients": [
+      "300 g de dulce de leche repostero",
+      "1 cda de manteca",
+      "1 taza de coco rallado",
+      "1/2 taza de coco rallado extra para rebozar",
+      "1 cdita de esencia de vainilla",
+      "1 pizca de sal"
+    ],
+    "steps": [
+      {
+        "instruction": "Poné el dulce de leche y la manteca en una olla chica a fuego bajo."
+      },
+      {
+        "instruction": "Revolvé hasta que se despegue del fondo y esté espeso.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Apagá el fuego y agregá la vainilla, la sal y una taza de coco."
+      },
+      {
+        "instruction": "Pasá la mezcla a un plato y dejala enfriar en el freezer.",
+        "minutes": 8,
+        "passive": true
+      },
+      {
+        "instruction": "Formá bolitas con las manos apenas húmedas."
+      },
+      {
+        "instruction": "Rebozalas en el coco extra y servilas."
+      }
+    ],
+    "storage": {
+      "fridge_days": 4,
+      "freezer_days": 60,
+      "reheat": "Sacalas de la heladera 10 minutos antes de comer.",
+      "tip": "Guardalas en un frasco hermético con papel manteca entre capas."
+    }
+  },
+  {
+    "title": "Peras al vino tinto con canela y naranja",
+    "description": "Mitades de pera cocidas lentamente en vino tinto con canela y cáscara de naranja. El almíbar se reduce hasta quedar brillante.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 17,
+    "difficulty": "facil",
+    "tags": [
+      "postre",
+      "sin horno",
+      "fruta",
+      "invierno",
+      "sin gluten",
+      "sin lácteos",
+      "vegano"
+    ],
+    "ingredients": [
+      "4 peras firmes",
+      "400 ml de vino tinto",
+      "4 cda de azúcar",
+      "1 palito de canela",
+      "3 tiras de cáscara de naranja",
+      "1 cda de jugo de limón"
+    ],
+    "steps": [
+      {
+        "instruction": "Pelá las peras, cortalas al medio y sacales las semillas con una cucharita."
+      },
+      {
+        "instruction": "Poné en una olla el vino, el azúcar, la canela, la naranja y el limón."
+      },
+      {
+        "instruction": "Llevá a hervor suave y acomodá las peras."
+      },
+      {
+        "instruction": "Cociná a fuego bajo hasta que estén tiernas.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Sacá las peras con una espumadera y pasalas a una fuente."
+      },
+      {
+        "instruction": "Reducí el almíbar a fuego fuerte hasta que espese.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Bañá las peras con el almíbar y serví tibias o frías."
+      }
+    ],
+    "storage": {
+      "fridge_days": 4,
+      "freezer_days": null,
+      "reheat": "Calentá unos segundos en el microondas o en una olla chica.",
+      "tip": "Dejalas dentro del almíbar para que sigan tomando sabor."
+    }
+  },
+  {
+    "title": "Manzanas crumble en sartén con avena y nueces",
+    "description": "Manzanas doradas con manteca y canela, cubiertas con un crumble rápido de avena y nueces hecho en la misma sartén.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "postre",
+      "sin horno",
+      "fruta",
+      "invierno",
+      "para chicos",
+      "una olla"
+    ],
+    "ingredients": [
+      "4 manzanas",
+      "2 cda de manteca",
+      "3 cda de azúcar mascabo",
+      "1 cdita de canela",
+      "1/2 taza de avena",
+      "3 cda de nueces picadas",
+      "1 cdita de jugo de limón",
+      "1 pizca de sal"
+    ],
+    "steps": [
+      {
+        "instruction": "Pelá las manzanas y cortalas en cubos chicos."
+      },
+      {
+        "instruction": "Derretí una cucharada de manteca en una sartén grande a fuego medio."
+      },
+      {
+        "instruction": "Salteá las manzanas con la mitad del azúcar, la canela y el limón.",
+        "minutes": 8,
+        "passive": false
+      },
+      {
+        "instruction": "Pasá las manzanas a una fuente o a vasos."
+      },
+      {
+        "instruction": "En la misma sartén derretí la manteca restante y tostá la avena con las nueces, el azúcar restante y la sal.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Cubrí las manzanas con el crumble y serví tibio."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Calentá las manzanas en el microondas y sumá el crumble al final.",
+      "tip": "Servilo con una cucharada de yogur o helado de crema."
+    }
+  },
+  {
+    "title": "Pudín de chocolate en vasitos",
+    "description": "Pudín cremoso de chocolate con leche, maicena y cacao, cocido en una olla y enfriado en vasos individuales.",
+    "servings": 4,
+    "prep_minutes": 5,
+    "cook_minutes": 18,
+    "difficulty": "facil",
+    "tags": [
+      "postre",
+      "sin horno",
+      "para chicos",
+      "sin gluten",
+      "una olla"
+    ],
+    "ingredients": [
+      "500 ml de leche",
+      "3 cda de maicena",
+      "4 cda de azúcar",
+      "3 cda de cacao amargo",
+      "50 g de chocolate semiamargo",
+      "1 cdita de esencia de vainilla",
+      "1 pizca de sal"
+    ],
+    "steps": [
+      {
+        "instruction": "Disolvé la maicena en 100 ml de leche fría, sin grumos."
+      },
+      {
+        "instruction": "Poné el resto de la leche, el azúcar, el cacao y la sal en una olla."
+      },
+      {
+        "instruction": "Calentá a fuego medio y sumá la maicena disuelta, revolviendo."
+      },
+      {
+        "instruction": "Cociná sin dejar de revolver hasta que espese y hierva suave.",
+        "minutes": 8,
+        "passive": false
+      },
+      {
+        "instruction": "Apagá, agregá el chocolate picado y la vainilla y mezclá hasta que se derrita."
+      },
+      {
+        "instruction": "Repartí en vasos y enfriá en el freezer.",
+        "minutes": 10,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Se sirve frío.",
+      "tip": "Apoyá film en contacto con la superficie si no lo vas a comer enseguida, así no forma piel."
+    }
+  },
+  {
+    "title": "Frutillas con chantillí y vainillas",
+    "description": "Frutillas maceradas con limón y azúcar, crema chantillí casera y galletitas de vainilla desmenuzadas. Un postre simple y vistoso.",
+    "servings": 4,
+    "prep_minutes": 15,
+    "cook_minutes": 5,
+    "difficulty": "facil",
+    "tags": [
+      "postre",
+      "sin horno",
+      "rápido",
+      "fruta",
+      "verano",
+      "para compartir"
+    ],
+    "ingredients": [
+      "500 g de frutillas",
+      "250 ml de crema de leche bien fría",
+      "3 cda de azúcar impalpable",
+      "1 cdita de esencia de vainilla",
+      "8 galletitas de vainilla",
+      "1 cda de jugo de limón"
+    ],
+    "steps": [
+      {
+        "instruction": "Lavá las frutillas, sacales el cabito y cortalas en cuartos."
+      },
+      {
+        "instruction": "Mezclalas con el limón y una cucharada de azúcar y dejalas macerar.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Batí la crema fría con el azúcar restante y la vainilla hasta que tenga punto chantillí."
+      },
+      {
+        "instruction": "Desmenuzá las galletitas en el fondo de cuatro copas."
+      },
+      {
+        "instruction": "Sumá una capa de frutillas con su jugo y otra de crema."
+      },
+      {
+        "instruction": "Repetí las capas y terminá con unas frutillas arriba."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Servir fría.",
+      "tip": "Armá las copas justo antes de comer para que las galletitas no se ablanden de más."
+    }
+  },
+  {
+    "title": "Salame de chocolate con galletitas y nueces",
+    "description": "El clásico rollo de chocolate con trozos de galletitas y nueces, firme por el frío y rebozado en azúcar impalpable.",
+    "servings": 8,
+    "prep_minutes": 12,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "postre",
+      "sin horno",
+      "argentina",
+      "para compartir",
+      "para freezar",
+      "para chicos"
+    ],
+    "ingredients": [
+      "200 g de galletitas de vainilla",
+      "150 g de chocolate semiamargo",
+      "80 g de manteca",
+      "3 cda de dulce de leche",
+      "2 cda de cacao amargo",
+      "50 g de nueces picadas",
+      "2 cda de azúcar impalpable"
+    ],
+    "steps": [
+      {
+        "instruction": "Quebrá las galletitas en trozos chicos y ponelas en un bol."
+      },
+      {
+        "instruction": "Derretí el chocolate con la manteca a baño María o en el microondas."
+      },
+      {
+        "instruction": "Mezclá el chocolate con el dulce de leche y el cacao hasta integrar."
+      },
+      {
+        "instruction": "Agregá las galletitas y las nueces y mezclá bien."
+      },
+      {
+        "instruction": "Volcá la mezcla sobre papel film y armá un rollo apretado."
+      },
+      {
+        "instruction": "Llevalo al freezer hasta que esté firme.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Rebozalo en azúcar impalpable y cortalo en rodajas."
+      }
+    ],
+    "storage": {
+      "fridge_days": 4,
+      "freezer_days": 60,
+      "reheat": "No se recalienta; sacalo 5 minutos antes de cortar.",
+      "tip": "Cortalo con un cuchillo mojado en agua caliente para rodajas prolijas."
+    }
+  }
+]

@@ -1,0 +1,606 @@
+[
+  {
+    "title": "Huevos rancheros con salsa de tomate picante",
+    "description": "Tortillas tostadas con huevo fritos y una salsa de tomate y ají que se hace en la misma sartén. Un desayuno o almuerzo bien mexicano.",
+    "servings": 2,
+    "prep_minutes": 10,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "mexicana",
+      "huevo",
+      "desayuno",
+      "almuerzo",
+      "rápido",
+      "económico"
+    ],
+    "ingredients": [
+      "4 huevos",
+      "4 tortillas de maíz",
+      "3 tomates perita maduros",
+      "1/2 cebolla",
+      "1 diente de ajo",
+      "1 ají picante chico o 1 pizca de ají molido",
+      "2 cdas de aceite",
+      "50 g de queso fresco desmenuzado",
+      "1 puñado de cilantro picado",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Rallá los tomates con rallador grueso y descartá la piel. Picá fino la cebolla, el ajo y el ají."
+      },
+      {
+        "instruction": "Calentá 1 cda de aceite en una sartén y sofreí la cebolla, el ajo y el ají 3 minutos.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el tomate rallado y sal. Cociná a fuego medio hasta que espese un poco.",
+        "minutes": 7,
+        "passive": false
+      },
+      {
+        "instruction": "Mientras tanto, calentá las tortillas 1 minuto por lado en otra sartén seca hasta que se tuesten apenas.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Hacé los huevos fritos en un chorrito de aceite, con la yema blanda."
+      },
+      {
+        "instruction": "Armá cada plato con 2 tortillas, los huevos arriba y la salsa caliente. Terminá con queso fresco y cilantro."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Recalentá solo la salsa en una sartén; los huevos hacelos al momento.",
+      "tip": "La salsa sola aguanta 3 días en la heladera y mejora al otro día."
+    }
+  },
+  {
+    "title": "Chilaquiles rojos con queso fresco y crema",
+    "description": "Triángulos de tortilla fritos y bañados en una salsa roja especiada. Se comen enseguida, con crema y queso por encima.",
+    "servings": 3,
+    "prep_minutes": 10,
+    "cook_minutes": 18,
+    "difficulty": "media",
+    "tags": [
+      "mexicana",
+      "vegetariano",
+      "almuerzo",
+      "desayuno",
+      "para compartir"
+    ],
+    "ingredients": [
+      "8 tortillas de maíz",
+      "1 lata de tomate triturado (400 g)",
+      "1 cebolla",
+      "2 dientes de ajo",
+      "1 cdita de ají molido",
+      "1 cdita de comino",
+      "1 taza de caldo de verdura",
+      "4 cdas de aceite",
+      "100 g de queso fresco",
+      "4 cdas de crema de leche",
+      "1 puñado de cilantro",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá cada tortilla en 6 triángulos."
+      },
+      {
+        "instruction": "Calentá 3 cdas de aceite y freí los triángulos por tandas hasta que estén dorados y crocantes. Escurrilos sobre papel de cocina.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "En la misma sartén, con 1 cda de aceite, sofreí la cebolla y el ajo picados 3 minutos.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el tomate, el ají, el comino, el caldo y sal. Cociná a fuego medio hasta que espese.",
+        "minutes": 6,
+        "passive": true
+      },
+      {
+        "instruction": "Incorporá los triángulos y mezclá 1 minuto para que se bañen sin ablandarse del todo."
+      },
+      {
+        "instruction": "Serví enseguida con queso fresco desmenuzado, crema y cilantro."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Recalentá en sartén 2 minutos; igual quedan más blandos.",
+      "tip": "Guardá la salsa aparte de las tortillas fritas si querés que sobrevivan crocantes."
+    }
+  },
+  {
+    "title": "Sopa de tortilla con palta y queso",
+    "description": "Caldo de tomate especiado con tiras de tortilla crocantes, palta y queso. Reconforta y sale en menos de media hora.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 20,
+    "difficulty": "facil",
+    "tags": [
+      "mexicana",
+      "sopa",
+      "vegetariano",
+      "invierno",
+      "cena"
+    ],
+    "ingredients": [
+      "4 tortillas de maíz",
+      "1 cebolla",
+      "2 dientes de ajo",
+      "1 lata de tomate triturado (400 g)",
+      "1 l de caldo de verdura",
+      "1 cdita de comino",
+      "1 cdita de pimentón",
+      "1 ají picante chico (opcional)",
+      "2 cdas de aceite",
+      "1 palta",
+      "100 g de queso fresco en cubos",
+      "1 lima",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá las tortillas en tiras finas. Freílas en 1 cda de aceite hasta que estén crocantes y reservalas.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "En una olla, sofreí la cebolla y el ajo picados con 1 cda de aceite 4 minutos.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el tomate, el comino, el pimentón y el ají. Cociná 3 minutos revolviendo.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Volcá el caldo, salá y hervilo a fuego bajo 8 minutos.",
+        "minutes": 8,
+        "passive": true
+      },
+      {
+        "instruction": "Cortá la palta en cubos y exprimí la lima."
+      },
+      {
+        "instruction": "Serví la sopa en tazones con las tiras de tortilla, la palta, el queso y unas gotas de lima."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Calentá la sopa en una olla hasta que hierva suave.",
+      "tip": "Freezá solo el caldo; las tortillas, la palta y el queso se agregan al servir."
+    }
+  },
+  {
+    "title": "Arroz rojo mexicano con arvejas y zanahoria",
+    "description": "Arroz cocido en una salsa de tomate, cebolla y ajo licuados, con verduritas. Es un buen acompañamiento para cualquier plato mexicano.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 22,
+    "difficulty": "facil",
+    "tags": [
+      "mexicana",
+      "arroz",
+      "una olla",
+      "vegano",
+      "guarnición",
+      "económico"
+    ],
+    "ingredients": [
+      "1 taza de arroz largo fino",
+      "2 tomates grandes maduros",
+      "1/2 cebolla",
+      "1 diente de ajo",
+      "1 zanahoria",
+      "1/2 taza de arvejas congeladas",
+      "2 cdas de aceite",
+      "1 cdita de comino",
+      "1 cdita de sal",
+      "agua"
+    ],
+    "steps": [
+      {
+        "instruction": "Licuá los tomates, la cebolla y el ajo con un poco de agua. Completá con agua hasta tener 2 tazas de líquido."
+      },
+      {
+        "instruction": "Pelá la zanahoria y cortala en cubitos chicos."
+      },
+      {
+        "instruction": "Calentá el aceite en una olla y salteá el arroz seco 3 minutos, hasta que tome un poco de color.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá la zanahoria, las arvejas, el comino y la sal. Volcá el licuado y mezclá una vez."
+      },
+      {
+        "instruction": "Llevá a hervor, tapá y bajá al mínimo. Cociná sin destapar.",
+        "minutes": 15,
+        "passive": true
+      },
+      {
+        "instruction": "Apagá el fuego y dejá reposar tapado 5 minutos. Soltá el arroz con un tenedor.",
+        "minutes": 5,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Recalentá en sartén o microondas con una cucharada de agua.",
+      "tip": "Enfriá el arroz rápido y guardalo en la heladera dentro de la hora de cocido."
+    }
+  },
+  {
+    "title": "Tinga de pollo en tostadas con repollo",
+    "description": "Pollo desmenuzado en una salsa de tomate ahumada y picante, servido sobre tortillas crocantes con repollo y crema.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 20,
+    "difficulty": "media",
+    "tags": [
+      "mexicana",
+      "pollo",
+      "alto en proteína",
+      "para compartir",
+      "cena"
+    ],
+    "ingredients": [
+      "500 g de pechuga de pollo",
+      "8 tortillas de maíz",
+      "1 cebolla",
+      "2 tomates perita",
+      "2 dientes de ajo",
+      "1 cdita de pimentón ahumado",
+      "1 cdita de orégano",
+      "1 cdita de ají molido",
+      "1 cda de aceite",
+      "1/2 taza de agua",
+      "2 tazas de repollo blanco fino",
+      "4 cdas de crema de leche",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá el horno a 200 °C. Cortá la pechuga en tiras finas y salala."
+      },
+      {
+        "instruction": "Poné las tortillas en una placa con un chorrito de aceite y horneá hasta que estén crocantes.",
+        "minutes": 8,
+        "passive": true
+      },
+      {
+        "instruction": "Cortá la cebolla en pluma y rallá los tomates. Picá el ajo."
+      },
+      {
+        "instruction": "Sofreí la cebolla y el ajo en una sartén con aceite 3 minutos.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el tomate, el pimentón, el orégano, el ají y el agua. Cociná 3 minutos.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el pollo, tapá y cociná a fuego medio hasta que no quede rosado.",
+        "minutes": 8,
+        "passive": true
+      },
+      {
+        "instruction": "Desmenuzá el pollo en la sartén con dos tenedores y mezclalo con la salsa."
+      },
+      {
+        "instruction": "Armá las tostadas con el pollo, el repollo y una cucharada de crema."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Recalentá el pollo en sartén con un chorrito de agua.",
+      "tip": "Guardá el pollo aparte de las tostadas, que se ablandan."
+    }
+  },
+  {
+    "title": "Esquites de choclo con lima y queso",
+    "description": "Granos de choclo salteados hasta dorarse y mezclados con mayonesa, lima y queso. Se sirve en vasito o tazón, ideal como snack.",
+    "servings": 3,
+    "prep_minutes": 5,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "mexicana",
+      "snack",
+      "vegetariano",
+      "sin gluten",
+      "rápido",
+      "verdura"
+    ],
+    "ingredients": [
+      "2 latas de choclo en granos (300 g c/u)",
+      "1 cda de manteca",
+      "1 cda de aceite",
+      "1 diente de ajo",
+      "1/2 cdita de ají molido",
+      "3 cdas de mayonesa",
+      "40 g de queso rallado o queso fresco desmenuzado",
+      "1 lima",
+      "1 puñado de cilantro picado",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Escurrí bien el choclo y secalo con un trapo para que dore mejor."
+      },
+      {
+        "instruction": "Calentá la manteca y el aceite en una sartén bien caliente. Agregá el choclo y cociná sin mover mucho, hasta que se dore.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el ajo picado y el ají molido. Revolvé 1 minuto y apagá.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Pasalo a un bowl y mezclalo con la mayonesa, el jugo de lima y sal."
+      },
+      {
+        "instruction": "Serví en vasitos con queso y cilantro por encima."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Comelo tibio o a temperatura ambiente; si querés, pasalo 1 minuto por sartén.",
+      "tip": "Agregá el cilantro y la lima recién al servir para que se mantenga fresco."
+    }
+  },
+  {
+    "title": "Fajitas de champiñones y morrones con queso",
+    "description": "Champiñones, morrones y cebolla salteados con especias en tortillas de trigo. Una cena vegetariana y rápida para armar en la mesa.",
+    "servings": 3,
+    "prep_minutes": 10,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "mexicana",
+      "vegetariano",
+      "salteado",
+      "cena",
+      "rápido"
+    ],
+    "ingredients": [
+      "400 g de champiñones",
+      "2 morrones (1 rojo y 1 verde)",
+      "1 cebolla",
+      "2 dientes de ajo",
+      "1 cdita de pimentón",
+      "1 cdita de comino",
+      "1/2 cdita de orégano",
+      "2 cdas de aceite",
+      "1 lima",
+      "6 tortillas de trigo",
+      "100 g de queso cremoso o mozzarella rallada",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá los champiñones en láminas, los morrones y la cebolla en tiras, y picá el ajo."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén grande a fuego fuerte. Salteá la cebolla y los morrones 4 minutos.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá los champiñones y el ajo. Cociná sin apurarte hasta que suelten el agua y se doren.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Condimentá con el pimentón, el comino, el orégano y sal. Apagá y sumá jugo de lima."
+      },
+      {
+        "instruction": "Calentá las tortillas 30 segundos por lado en una sartén seca."
+      },
+      {
+        "instruction": "Rellená las tortillas con las verduras y el queso. Cerralas y servilas calientes."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Recalentá las verduras en sartén 3 minutos y armá las fajitas al momento.",
+      "tip": "No amontones los champiñones en la sartén o se cocinan al vapor en vez de dorarse."
+    }
+  },
+  {
+    "title": "Pescado a la veracruzana en una sartén",
+    "description": "Filetes de merluza cocidos en una salsa de tomate con aceitunas, alcaparras y ají. Liviano, sabroso y listo en 30 minutos.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 20,
+    "difficulty": "media",
+    "tags": [
+      "mexicana",
+      "pescado",
+      "una olla",
+      "sin gluten",
+      "sin lácteos",
+      "liviano",
+      "cena"
+    ],
+    "ingredients": [
+      "4 filetes de merluza (600 g)",
+      "1 cebolla",
+      "2 dientes de ajo",
+      "3 tomates perita maduros",
+      "1/2 taza de aceitunas verdes descarozadas",
+      "1 cda de alcaparras",
+      "1 hoja de laurel",
+      "1 cdita de orégano",
+      "1 ají picante en rodajas (opcional)",
+      "2 cdas de aceite de oliva",
+      "1/2 limón",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Salpimentá los filetes y rociálos con el jugo de limón. Dejalos reposar mientras hacés la salsa."
+      },
+      {
+        "instruction": "Picá la cebolla y el ajo, y cortá los tomates en cubos."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén profunda y sofreí la cebolla y el ajo 3 minutos.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el tomate, el laurel, el orégano y el ají. Cociná a fuego medio hasta que se forme una salsa.",
+        "minutes": 8,
+        "passive": true
+      },
+      {
+        "instruction": "Sumá las aceitunas y las alcaparras. Probá y corregí la sal."
+      },
+      {
+        "instruction": "Acomodá los filetes sobre la salsa, tapá y cociná a fuego bajo hasta que el pescado se desarme con el tenedor.",
+        "minutes": 8,
+        "passive": true
+      },
+      {
+        "instruction": "Serví con arroz blanco o papas hervidas."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Recalentá a fuego bajo con la sartén tapada, sin pasarte para que no se seque.",
+      "tip": "Si usás aceitunas muy saladas, enjuagalas antes y salá la salsa al final."
+    }
+  },
+  {
+    "title": "Chocolate caliente mexicano con canela y toque picante",
+    "description": "Chocolate espeso con leche, canela y una pizca de ají para darle calor. Va muy bien con tostadas, churros o solo.",
+    "servings": 4,
+    "prep_minutes": 3,
+    "cook_minutes": 8,
+    "difficulty": "facil",
+    "tags": [
+      "mexicana",
+      "bebida",
+      "invierno",
+      "merienda",
+      "desayuno",
+      "rápido"
+    ],
+    "ingredients": [
+      "1 l de leche",
+      "100 g de chocolate semiamargo picado",
+      "2 cdas de azúcar",
+      "1 cdita de canela en polvo",
+      "1 pizca de ají molido",
+      "1 cdita de esencia de vainilla"
+    ],
+    "steps": [
+      {
+        "instruction": "Calentá la leche en una olla a fuego medio sin que hierva."
+      },
+      {
+        "instruction": "Agregá el chocolate picado, el azúcar y la canela. Batí con un batidor de alambre hasta que se derrita.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el ají y la vainilla. Cociná 2 minutos más a fuego bajo, sin dejar de revolver.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Batí fuerte para hacer un poco de espuma y servilo bien caliente."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Calentalo a fuego bajo batiendo para que no se separe.",
+      "tip": "Empezá con una pizca mínima de ají: se nota más al enfriarse."
+    }
+  },
+  {
+    "title": "Calabacitas a la mexicana con choclo y tomate",
+    "description": "Zapallitos salteados con choclo, tomate y cebolla, terminados con queso derretido. Sirve de guarnición o como plato liviano con tortillas.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "mexicana",
+      "vegetariano",
+      "verdura",
+      "guarnición",
+      "una olla",
+      "sin gluten",
+      "liviano",
+      "rápido"
+    ],
+    "ingredients": [
+      "4 zapallitos verdes",
+      "1 lata de choclo en granos (300 g)",
+      "2 tomates perita",
+      "1/2 cebolla",
+      "1 diente de ajo",
+      "1 cda de aceite",
+      "1/2 cdita de orégano",
+      "100 g de queso cremoso en cubos",
+      "1 puñado de cilantro picado",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá los zapallitos en cubos medianos, la cebolla en cubitos y los tomates sin semillas en cubos. Picá el ajo."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén grande y sofreí la cebolla y el ajo 3 minutos.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá los zapallitos y salteá a fuego fuerte hasta que se doren apenas.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el tomate, el choclo escurrido, el orégano, sal y pimienta. Cociná tapado a fuego bajo.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Poné el queso arriba, tapá 1 minuto hasta que se derrita y espolvoreá con cilantro.",
+        "minutes": 1,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Recalentá en sartén a fuego medio o en microondas 1 o 2 minutos.",
+      "tip": "Los zapallitos sueltan agua: cocinalos a fuego fuerte y sin tapar al principio."
+    }
+  }
+]

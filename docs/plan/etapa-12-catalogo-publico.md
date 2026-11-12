@@ -7,7 +7,7 @@
 - **Pasos:** `recipes.visibility ('private'|'public')`, `recipes.slug` único, `recipes.is_catalog`; grupo del sistema "Catálogo" (solo lectura para usuarios); `recipe_collections` + `recipe_collection_items` (visibility, slug); `plan_shares` (plan publicado como plantilla: comidas sin datos personales); RLS con lectura anónima solo de lo público; índices de búsqueda; pgTAP.
 - **Aceptación:** `anon` lee recetas/colecciones/planes públicos y nada privado.
 
-### [ ] T12.2 — Generador del catálogo con IA
+### [x] T12.2 — Generador del catálogo con IA
 - **Pasos:** `scripts/catalog/generate.ts` por lotes (categorías × tiempo × cocina: rápidas, desayunos, almuerzos, cenas, vegetarianas, sin gluten, de olla, airfryer, meriendas, salsas, postres simples…); salida validada con Zod y con `lib/domain` (unidades, ingredientes vinculados al catálogo); deduplicación por título/ingredientes; tags, tiempos y `storage_info`; carga idempotente al grupo Catálogo; informe de costo.
 - **Aceptación:** ≥ 500 recetas únicas cargadas, todas con ingredientes y pasos válidos.
 
@@ -27,3 +27,5 @@
 - **Pasos:** e2e del sitio público y de publicar/despublicar; `pnpm check`, `db:test`, `test:e2e`, build; marcar la etapa en `progreso.md`.
 
 - T12.1: La lectura pública es solo por RPC (security definer); las tablas siguen cerradas para anon. Publicar una colección o un plan publica sus recetas. Orden de búsqueda: comunidad primero, catálogo después.
+
+- T12.2: 548 recetas generadas con Sonnet 5.5 (≈ US$ 12 de API; 59 pedidos en scripts/catalog/briefs.ts × ~10), validadas por código (parser de ingredientes, tiempos, tags) y deduplicadas por título. Datos en data/catalog/batches (versionados) y cargables con `pnpm catalog:load`. Ampliar: agregar pedidos y correr `pnpm catalog:generate`.

@@ -1,0 +1,626 @@
+[
+  {
+    "title": "Hummus casero de garbanzos con aceite y pimentón",
+    "description": "Una pasta cremosa de garbanzos y tahini, lista en 10 minutos con garbanzos de lata. Ideal para mojar pan pita o verduras crudas.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "árabe",
+      "rápido",
+      "vegano",
+      "sin horno",
+      "snack",
+      "para compartir",
+      "sin lácteos"
+    ],
+    "ingredients": [
+      "1 lata de garbanzos (400 g)",
+      "3 cda de tahini (pasta de sésamo)",
+      "1 limón",
+      "1 diente de ajo",
+      "3 cda de agua fría",
+      "1/2 cdita de comino",
+      "3 cda de aceite de oliva",
+      "1 cdita de pimentón dulce",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Escurrí los garbanzos y guardá un poco del líquido de la lata."
+      },
+      {
+        "instruction": "Exprimí el limón y pelá el diente de ajo."
+      },
+      {
+        "instruction": "Procesá los garbanzos con el tahini, el jugo de limón, el ajo, el comino y la sal durante 2 minutos.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el agua fría de a poco, procesando, hasta lograr una crema suave. Si queda espesa, sumá un poco del líquido guardado."
+      },
+      {
+        "instruction": "Probá y corregí con sal o limón."
+      },
+      {
+        "instruction": "Serví en un plato hondo, hacé un hueco con la cuchara y volcá el aceite de oliva y el pimentón."
+      }
+    ],
+    "storage": {
+      "fridge_days": 4,
+      "freezer_days": 60,
+      "reheat": "No hace falta calentarlo; sacalo 10 minutos antes para que se afloje.",
+      "tip": "Tapalo con un chorrito de aceite para que no se seque en la heladera."
+    }
+  },
+  {
+    "title": "Tabulé de burgol con perejil, menta y limón",
+    "description": "Ensalada fresca y bien verde, con mucho perejil y poco burgol. Se hidrata sin cocinar y queda lista en minutos.",
+    "servings": 4,
+    "prep_minutes": 25,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "árabe",
+      "vegano",
+      "ensalada",
+      "sin horno",
+      "verano",
+      "sin lácteos",
+      "económico"
+    ],
+    "ingredients": [
+      "1 taza de burgol fino",
+      "1 taza de agua hirviendo",
+      "2 atados de perejil",
+      "1/2 atado de menta",
+      "3 tomates firmes",
+      "2 cebollas de verdeo",
+      "2 limones",
+      "4 cda de aceite de oliva",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Poné el burgol en un bol con sal y cubrilo con el agua hirviendo. Tapalo.",
+        "minutes": 15,
+        "passive": true
+      },
+      {
+        "instruction": "Lavá y secá bien el perejil y la menta."
+      },
+      {
+        "instruction": "Picá el perejil y la menta bien finos, sin los tallos gruesos."
+      },
+      {
+        "instruction": "Cortá los tomates en cubitos chicos y el verdeo en rodajitas finas."
+      },
+      {
+        "instruction": "Exprimí los limones y mezclalos con el aceite."
+      },
+      {
+        "instruction": "Desgranaí el burgol con un tenedor y sumale las hierbas, el tomate y el verdeo."
+      },
+      {
+        "instruction": "Aderezá con el limón y el aceite, mezclá y probá la sal."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Se come frío; no se recalienta.",
+      "tip": "Si lo preparás con anticipación, agregá el tomate al final para que no suelte agua."
+    }
+  },
+  {
+    "title": "Falafel al horno con garbanzos de lata",
+    "description": "Bolitas aplastadas de garbanzo, ajo y hierbas, doradas al horno con poco aceite. Quedan crocantes por fuera y tiernas por dentro.",
+    "servings": 4,
+    "prep_minutes": 15,
+    "cook_minutes": 20,
+    "difficulty": "media",
+    "tags": [
+      "árabe",
+      "horno",
+      "vegano",
+      "para freezar",
+      "almuerzo",
+      "cena",
+      "sin lácteos"
+    ],
+    "ingredients": [
+      "1 lata de garbanzos (400 g)",
+      "1/2 cebolla",
+      "2 dientes de ajo",
+      "1/2 atado de perejil",
+      "1 cdita de comino",
+      "1 cdita de cilantro molido",
+      "3 cda de pan rallado",
+      "3 cda de aceite de oliva",
+      "sal a gusto",
+      "pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Prendé el horno a 220 °C y aceitá una placa."
+      },
+      {
+        "instruction": "Escurrí bien los garbanzos y secalos con un repasador."
+      },
+      {
+        "instruction": "Procesá los garbanzos con la cebolla, el ajo, el perejil, las especias, la sal y el pan rallado hasta tener una pasta rugosa."
+      },
+      {
+        "instruction": "Formá 12 bolitas y aplastalas apenas con la palma."
+      },
+      {
+        "instruction": "Acomodalas en la placa y pincelalas con el aceite."
+      },
+      {
+        "instruction": "Horneá 10 minutos.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Dalas vuelta y horneá 10 minutos más, hasta que estén doradas.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Serví en pan pita con ensalada y salsa de yogur."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Calentalos 8 minutos en horno fuerte o en airfryer para que recuperen el crocante.",
+      "tip": "Congelalos en una sola capa y después pasalos a una bolsa."
+    }
+  },
+  {
+    "title": "Shakshuka de tomate, morrón y huevos",
+    "description": "Huevos pochados en una salsa especiada de tomate y morrón, todo en una sola sartén. Se sirve con pan para mojar.",
+    "servings": 2,
+    "prep_minutes": 10,
+    "cook_minutes": 20,
+    "difficulty": "facil",
+    "tags": [
+      "árabe",
+      "una olla",
+      "huevo",
+      "vegetariano",
+      "almuerzo",
+      "cena",
+      "sin gluten"
+    ],
+    "ingredients": [
+      "2 cda de aceite de oliva",
+      "1 cebolla",
+      "1 morrón rojo",
+      "2 dientes de ajo",
+      "1 cdita de comino",
+      "1 cdita de pimentón dulce",
+      "1 lata de tomates perita (400 g)",
+      "4 huevos",
+      "perejil picado a gusto",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Picá la cebolla y el morrón en cubitos y el ajo bien fino."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén profunda y rehogá la cebolla y el morrón 6 minutos.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el ajo, el comino y el pimentón y revolvé 1 minuto."
+      },
+      {
+        "instruction": "Agregá los tomates, aplastalos con la cuchara y salá."
+      },
+      {
+        "instruction": "Cociná a fuego bajo 8 minutos, hasta que espese.",
+        "minutes": 8,
+        "passive": true
+      },
+      {
+        "instruction": "Hacé 4 huecos en la salsa y rompé un huevo en cada uno."
+      },
+      {
+        "instruction": "Tapá y cociná 4 minutos, hasta que las claras cuajen.",
+        "minutes": 4,
+        "passive": true
+      },
+      {
+        "instruction": "Espolvoreá con perejil y llevá la sartén a la mesa."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Recalentá a fuego bajo con la sartén tapada, 5 minutos.",
+      "tip": "Si querés guardar, preparate la salsa sola y agregá los huevos al momento de comer."
+    }
+  },
+  {
+    "title": "Kefta de carne especiada con salsa de yogur y menta",
+    "description": "Cilindros de carne picada con cebolla, perejil y especias, dorados en la sartén. Se acompañan con una salsa fresca de yogur.",
+    "servings": 4,
+    "prep_minutes": 15,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "árabe",
+      "carne",
+      "almuerzo",
+      "cena",
+      "alto en proteína",
+      "para freezar",
+      "sin gluten"
+    ],
+    "ingredients": [
+      "500 g de carne picada",
+      "1 cebolla chica",
+      "1/2 atado de perejil",
+      "1 cdita de comino",
+      "1/2 cdita de canela",
+      "1 cdita de pimienta negra",
+      "1 cda de aceite",
+      "200 g de yogur natural",
+      "1 cda de menta fresca picada",
+      "1/2 limón",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Rallá la cebolla y escurrila apretándola con la mano."
+      },
+      {
+        "instruction": "Picá el perejil bien fino."
+      },
+      {
+        "instruction": "Mezclá la carne con la cebolla, el perejil, las especias y sal hasta que se integre."
+      },
+      {
+        "instruction": "Dividí en 8 porciones y dales forma de cilindros alargados."
+      },
+      {
+        "instruction": "Mezclá el yogur con la menta, el jugo de limón y una pizca de sal."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén grande a fuego medio-alto."
+      },
+      {
+        "instruction": "Cociná las kefta 10 a 12 minutos, dándolas vuelta cada tanto, hasta que estén bien doradas.",
+        "minutes": 12,
+        "passive": false
+      },
+      {
+        "instruction": "Serví con la salsa de yogur y pan pita."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Calentalas en sartén tapada con un chorrito de agua, 5 minutos.",
+      "tip": "Podés congelarlas crudas ya formadas, separadas con papel."
+    }
+  },
+  {
+    "title": "Fattoush con pan pita crocante y sumac",
+    "description": "Ensalada de verduras frescas con trozos de pan pita tostado y un aderezo ácido de limón. Rápida y muy refrescante.",
+    "servings": 4,
+    "prep_minutes": 15,
+    "cook_minutes": 5,
+    "difficulty": "facil",
+    "tags": [
+      "árabe",
+      "ensalada",
+      "vegano",
+      "verano",
+      "sin lácteos",
+      "económico"
+    ],
+    "ingredients": [
+      "2 panes pita",
+      "1 pepino",
+      "3 tomates",
+      "1 lechuga criolla",
+      "4 rabanitos",
+      "1/2 cebolla morada",
+      "1/2 atado de menta",
+      "2 limones",
+      "4 cda de aceite de oliva",
+      "1 cdita de sumac",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá el pan pita en trozos y mezclalos con 1 cda de aceite."
+      },
+      {
+        "instruction": "Tostalos en una sartén seca a fuego medio 5 minutos, hasta que estén crocantes.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Cortá el pepino y los tomates en cubos y los rabanitos en rodajas finas."
+      },
+      {
+        "instruction": "Cortá la cebolla en plumas finas y picá la menta."
+      },
+      {
+        "instruction": "Rompé la lechuga con las manos y ponela en una ensaladera con el resto de las verduras."
+      },
+      {
+        "instruction": "Mezclá el jugo de los limones con el resto del aceite, el sumac y sal."
+      },
+      {
+        "instruction": "Aderezá la ensalada y sumá el pan tostado recién al servir."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Se come fría; guardá el pan aparte.",
+      "tip": "Sumá el pan justo antes de comer para que no se ablande."
+    }
+  },
+  {
+    "title": "Arroz con fideos y almendras al estilo árabe",
+    "description": "Arroz suelto con fideos dorados y un toque de canela, coronado con almendras tostadas. Una guarnición perfumada para carnes y pollo.",
+    "servings": 4,
+    "prep_minutes": 5,
+    "cook_minutes": 25,
+    "difficulty": "facil",
+    "tags": [
+      "árabe",
+      "arroz",
+      "guarnición",
+      "vegano",
+      "sin lácteos",
+      "económico"
+    ],
+    "ingredients": [
+      "1 taza de arroz largo fino",
+      "1/2 taza de fideos cabello de ángel",
+      "2 cda de aceite",
+      "2 tazas de agua caliente",
+      "1/2 cdita de canela",
+      "40 g de almendras fileteadas",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Lavá el arroz hasta que el agua salga casi clara y escurrilo."
+      },
+      {
+        "instruction": "Quebrá los fideos con las manos en trozos chicos."
+      },
+      {
+        "instruction": "Calentá 1 cda de aceite en una olla y dorá los fideos 2 minutos, revolviendo.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el arroz y la canela y salteá 1 minuto."
+      },
+      {
+        "instruction": "Agregá el agua caliente y sal, y esperá que hierva."
+      },
+      {
+        "instruction": "Bajá el fuego al mínimo, tapá y cociná 15 minutos.",
+        "minutes": 15,
+        "passive": true
+      },
+      {
+        "instruction": "Mientras tanto, tostá las almendras en una sartén con el aceite restante 3 minutos.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Apagá el fuego, dejá reposar el arroz tapado 5 minutos, desgranalo y servilo con las almendras.",
+        "minutes": 5,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Calentalo en microondas con una cucharada de agua, tapado.",
+      "tip": "Guardá las almendras aparte para que no se ablanden."
+    }
+  },
+  {
+    "title": "Shawarma de pollo a la sartén con salsa de ajo y yogur",
+    "description": "Tiras de pechuga marinadas con especias y salteadas, servidas en pan pita con verduras y una salsa cremosa de yogur y ajo.",
+    "servings": 4,
+    "prep_minutes": 20,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "árabe",
+      "pollo",
+      "almuerzo",
+      "cena",
+      "alto en proteína",
+      "sándwich"
+    ],
+    "ingredients": [
+      "600 g de pechuga de pollo",
+      "1 cdita de comino",
+      "1 cdita de pimentón dulce",
+      "1/2 cdita de cúrcuma",
+      "1/2 cdita de canela",
+      "3 dientes de ajo",
+      "2 limones",
+      "2 cda de aceite",
+      "150 g de yogur natural",
+      "4 panes pita",
+      "1 tomate",
+      "1/2 pepino",
+      "1/2 cebolla morada",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá el pollo en tiras finas."
+      },
+      {
+        "instruction": "Mezclalo con las especias, 2 dientes de ajo picados, el jugo de 1 limón, 1 cda de aceite y sal. Dejalo marinar 10 minutos.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Mientras tanto, mezclá el yogur con el diente de ajo restante rallado, el jugo del otro limón y sal."
+      },
+      {
+        "instruction": "Cortá el tomate, el pepino y la cebolla en rodajas finas."
+      },
+      {
+        "instruction": "Calentá bien una sartén con el aceite restante."
+      },
+      {
+        "instruction": "Salteá el pollo a fuego fuerte, en dos tandas, 4 minutos cada una, hasta que se dore.",
+        "minutes": 8,
+        "passive": false
+      },
+      {
+        "instruction": "Calentá los panes pita unos segundos de cada lado."
+      },
+      {
+        "instruction": "Armá cada pita con pollo, verduras y salsa de yogur."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Salteá el pollo en sartén 3 minutos; armá los sándwiches al momento.",
+      "tip": "Guardá la salsa y las verduras por separado."
+    }
+  },
+  {
+    "title": "Mujaddara de lentejas, arroz y cebolla dorada",
+    "description": "Un clásico de Medio Oriente: arroz con lentejas y comino, cubierto con abundante cebolla bien dorada. Económico y muy sabroso.",
+    "servings": 4,
+    "prep_minutes": 7,
+    "cook_minutes": 25,
+    "difficulty": "media",
+    "tags": [
+      "árabe",
+      "arroz",
+      "legumbres",
+      "vegano",
+      "económico",
+      "almuerzo",
+      "sin lácteos"
+    ],
+    "ingredients": [
+      "1 taza de arroz largo fino",
+      "1 lata de lentejas (400 g)",
+      "3 cebollas",
+      "4 cda de aceite",
+      "1 cdita de comino",
+      "1/2 cdita de canela",
+      "2 tazas de agua",
+      "sal a gusto",
+      "pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá las cebollas en medias lunas finas."
+      },
+      {
+        "instruction": "Calentá 3 cda de aceite en una sartén grande y sumá las cebollas con una pizca de sal."
+      },
+      {
+        "instruction": "Cociná las cebollas a fuego medio 18 minutos, revolviendo seguido, hasta que estén doradas.",
+        "minutes": 18,
+        "passive": false
+      },
+      {
+        "instruction": "Mientras tanto, calentá 1 cda de aceite en una olla y salteá el arroz con el comino y la canela 1 minuto."
+      },
+      {
+        "instruction": "Agregá el agua y sal. Cuando hierva, bajá el fuego, tapá y cociná 15 minutos.",
+        "minutes": 15,
+        "passive": true
+      },
+      {
+        "instruction": "Escurrí y enjuagá las lentejas."
+      },
+      {
+        "instruction": "Sumá las lentejas al arroz, tapá y dejá 3 minutos para que se calienten.",
+        "minutes": 3,
+        "passive": true
+      },
+      {
+        "instruction": "Serví el arroz con lentejas y cubrilo con la cebolla dorada."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Calentá en microondas o sartén con un chorrito de agua.",
+      "tip": "Guardá la cebolla aparte si querés que siga crocante."
+    }
+  },
+  {
+    "title": "Pan pita tostado con tahini, banana y miel",
+    "description": "Un desayuno o merienda rápida: pan pita tostado, pasta de sésamo, banana y pistachos. Dulce, pero con perfume a sésamo.",
+    "servings": 2,
+    "prep_minutes": 5,
+    "cook_minutes": 5,
+    "difficulty": "facil",
+    "tags": [
+      "árabe",
+      "rápido",
+      "desayuno",
+      "merienda",
+      "vegetariano",
+      "sin horno",
+      "snack"
+    ],
+    "ingredients": [
+      "2 panes pita",
+      "2 cda de tahini",
+      "2 bananas",
+      "2 cda de miel",
+      "1 cdita de canela",
+      "2 cda de pistachos picados",
+      "1 pizca de sal"
+    ],
+    "steps": [
+      {
+        "instruction": "Calentá una sartén antiséptica o antiadherente a fuego medio, sin aceite."
+      },
+      {
+        "instruction": "Tostá los panes pita 2 minutos de cada lado, hasta que tomen color.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Mezclá el tahini con la miel y la pizca de sal."
+      },
+      {
+        "instruction": "Cortá las bananas en rodajas."
+      },
+      {
+        "instruction": "Untá cada pita con la crema de tahini y miel."
+      },
+      {
+        "instruction": "Cubrí con las bananas, espolvoreá con canela y pistachos, y comé enseguida."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "No se recalienta; conviene prepararlo al momento.",
+      "tip": "Podés guardar la crema de tahini y miel en un frasco y usarla durante la semana."
+    }
+  }
+]

@@ -1,0 +1,555 @@
+[
+  {
+    "title": "Merluza en papillote con tomate cherry y aceitunas",
+    "description": "Filetes de merluza que se cocinan al vapor dentro de un paquete de papel aluminio con tomatitos, aceitunas y limón. Casi no ensucia nada y queda jugosa.",
+    "servings": 2,
+    "prep_minutes": 8,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "cena",
+      "liviano",
+      "pescado",
+      "horno",
+      "rápido",
+      "sin gluten",
+      "sin lácteos",
+      "mediterránea"
+    ],
+    "ingredients": [
+      "4 filetes de merluza",
+      "200 g de tomates cherry",
+      "10 aceitunas verdes descarozadas",
+      "1 limón",
+      "2 cda de aceite de oliva",
+      "1 diente de ajo",
+      "1 cda de perejil picado",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Prendé el horno a 200 °C y cortá dos hojas grandes de papel aluminio.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cortá los tomates cherry al medio y picá el ajo bien fino.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Poné dos filetes sobre cada hoja y condimentá con sal, pimienta y unas gotas de limón.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Repartí encima los tomates, las aceitunas, el ajo y el aceite de oliva.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cerrá los paquetes doblando los bordes para que no se escape el vapor y llevalos a una placa.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Horneá los paquetes hasta que el pescado esté opaco y se desarme con el tenedor.",
+        "minutes": 15,
+        "passive": true
+      },
+      {
+        "instruction": "Abrí con cuidado, espolvoreá el perejil y serví con rodajas de limón.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Calentá a fuego bajo en una sartén tapada con un chorrito de agua, 2 minutos.",
+      "tip": "El pescado cocido conviene comerlo al día siguiente como máximo."
+    }
+  },
+  {
+    "title": "Sopa de pollo desmenuzado con espinaca y cabello de ángel",
+    "description": "Una sopa reconfortante y ligera con pollo en hebras, verduras chiquitas y fideos finitos que se cocinan en tres minutos.",
+    "servings": 3,
+    "prep_minutes": 7,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "cena",
+      "liviano",
+      "sopa",
+      "pollo",
+      "una olla",
+      "rápido",
+      "sobras",
+      "invierno"
+    ],
+    "ingredients": [
+      "1 pechuga de pollo chica (unos 250 g)",
+      "1,2 l de caldo de verduras",
+      "1 zanahoria",
+      "1 cebolla de verdeo",
+      "1 taza de espinaca fresca",
+      "50 g de fideos cabello de ángel",
+      "1 cda de aceite de oliva",
+      "1 hoja de laurel",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá la pechuga en 3 tiras finas para que se cocine rápido.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Rallá la zanahoria y picá el verdeo en rodajitas finas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá el aceite en una olla y rehogá el verdeo y la zanahoria 2 minutos.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el caldo, el laurel y el pollo, y llevá a hervor suave.",
+        "minutes": 8,
+        "passive": true
+      },
+      {
+        "instruction": "Sacá el pollo, desmenuzalo con dos tenedores y devolvelo a la olla.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Sumá los fideos y cociná hasta que estén tiernos.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Apagá, agregá la espinaca, sazoná y serví bien caliente.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Calentá en olla a fuego medio y sumá un chorrito de caldo o agua porque los fideos absorben.",
+      "tip": "Si pensás guardarla, cociná los fideos aparte para que no se pasen."
+    }
+  },
+  {
+    "title": "Omelette de ricota y ciboulette con rúcula",
+    "description": "Omelette suave y baja en grasa rellena con ricota cremosa y ciboulette, servida con un puñado de rúcula aliñada con limón.",
+    "servings": 1,
+    "prep_minutes": 5,
+    "cook_minutes": 6,
+    "difficulty": "media",
+    "tags": [
+      "cena",
+      "liviano",
+      "huevo",
+      "rápido",
+      "sin gluten",
+      "vegetariano",
+      "alto en proteína"
+    ],
+    "ingredients": [
+      "3 huevos",
+      "3 cda de ricota",
+      "1 cda de ciboulette picada",
+      "1 cdita de manteca",
+      "1 puñado de rúcula",
+      "1 cdita de jugo de limón",
+      "1 cdita de aceite de oliva",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Mezclá la ricota con la ciboulette, una pizca de sal y pimienta.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Batí los huevos con sal hasta que no se vean hebras de clara.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Derretí la manteca en una sartén antiadherente a fuego medio.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Volcá los huevos y movelos con una espátula hasta que cuajen los bordes.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Bajá el fuego, poné la ricota en el centro y tapá 1 minuto.",
+        "minutes": 1,
+        "passive": true
+      },
+      {
+        "instruction": "Doblá el omelette a la mitad y pasalo a un plato.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Aliñá la rúcula con limón, aceite y sal, y serví al lado.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Calentá 30 segundos en el microondas o en sartén tapada a fuego mínimo.",
+      "tip": "Quedá atento al fuego: fuego fuerte lo vuelve gomoso."
+    }
+  },
+  {
+    "title": "Pechuga grillada fina con ensalada de pepino y yogur",
+    "description": "Bifes finitos de pechuga marcados en la plancha con limón y orégano, acompañados de una ensalada fresca de pepino con yogur y menta.",
+    "servings": 2,
+    "prep_minutes": 10,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "cena",
+      "liviano",
+      "pollo",
+      "rápido",
+      "sin gluten",
+      "alto en proteína",
+      "mediterránea",
+      "verano"
+    ],
+    "ingredients": [
+      "2 pechugas de pollo chicas (unos 400 g)",
+      "1 limón",
+      "1 cdita de orégano",
+      "1 diente de ajo",
+      "1 cda de aceite de oliva",
+      "1 pepino",
+      "1/2 taza de yogur natural",
+      "1 cda de menta o perejil picado",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Abrí cada pechuga al medio para obtener cuatro bifes finos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Condimentalos con jugo de medio limón, orégano, ajo rallado, sal, pimienta y aceite.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Pelá el pepino a rayas y cortalo en rodajas finas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclá el pepino con el yogur, la menta, sal y unas gotas de limón.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá bien una plancha o sartén y cociná los bifes 3 minutos de cada lado.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Serví el pollo con la ensalada de pepino y gajos de limón.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Calentá el pollo en sartén tapada a fuego bajo; la ensalada se come fría.",
+      "tip": "Guardá el pollo y la ensalada por separado."
+    }
+  },
+  {
+    "title": "Langostinos al ajillo con perejil y limón",
+    "description": "Langostinos salteados en pocos minutos con ajo, ají molido y limón, para mojar con pan tostado. Una cena elegante y liviana.",
+    "servings": 2,
+    "prep_minutes": 8,
+    "cook_minutes": 7,
+    "difficulty": "facil",
+    "tags": [
+      "cena",
+      "liviano",
+      "pescado",
+      "rápido",
+      "sin gluten",
+      "sin lácteos",
+      "española"
+    ],
+    "ingredients": [
+      "300 g de langostinos pelados y limpios",
+      "3 dientes de ajo",
+      "3 cda de aceite de oliva",
+      "1 cdita de ají molido",
+      "1 limón",
+      "2 cda de perejil picado",
+      "sal a gusto",
+      "2 rebanadas de pan tostado"
+    ],
+    "steps": [
+      {
+        "instruction": "Secá bien los langostinos con papel de cocina y salalos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Laminá los ajos finitos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén a fuego medio y dorá el ajo apenas 30 segundos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Subí el fuego, sumá los langostinos y el ají molido.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cociná 2 minutos de cada lado hasta que estén rosados y firmes.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Apagá, exprimí el limón y espolvoreá el perejil.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Serví enseguida con el pan tostado para mojar.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Pasalos 1 minuto por sartén a fuego bajo para no resecarlos.",
+      "tip": "Los langostinos se endurecen si se pasan de cocción; sacalos apenas cambien de color."
+    }
+  },
+  {
+    "title": "Ensalada de pera, queso azul y nueces con rúcula",
+    "description": "Combinación fresca y contrastante: pera jugosa, rúcula picante, queso azul cremoso y nueces tostadas, con aderezo de limón y miel.",
+    "servings": 2,
+    "prep_minutes": 10,
+    "cook_minutes": 3,
+    "difficulty": "facil",
+    "tags": [
+      "cena",
+      "liviano",
+      "ensalada",
+      "vegetariano",
+      "rápido",
+      "fruta",
+      "sin gluten"
+    ],
+    "ingredients": [
+      "2 tazas de rúcula",
+      "2 peras maduras pero firmes",
+      "50 g de queso azul",
+      "40 g de nueces",
+      "2 cda de aceite de oliva",
+      "1 cda de jugo de limón",
+      "1 cdita de miel",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Tostá las nueces en una sartén seca 3 minutos, moviéndolas seguido.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Lavá la rúcula y secala bien.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cortá las peras en gajos finos sin pelar.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Batí el aceite, el limón, la miel, la sal y la pimienta en un frasco.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Armá la ensalada con la rúcula y las peras en una fuente.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Desmenuzá el queso azul por encima, sumá las nueces y aliñá.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Se come fría; mejor armarla recién hecha.",
+      "tip": "Rociá las peras con limón si vas a tardar en servir para que no se oscurezcan."
+    }
+  },
+  {
+    "title": "Pizzeta de pan árabe con tomate, mozzarella y rúcula",
+    "description": "Pizzeta crocante y finita hecha sobre pan árabe, con poca salsa, mozzarella derretida y rúcula fresca al final.",
+    "servings": 2,
+    "prep_minutes": 7,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "cena",
+      "liviano",
+      "horno",
+      "rápido",
+      "vegetariano",
+      "para chicos",
+      "árabe"
+    ],
+    "ingredients": [
+      "2 panes árabes",
+      "6 cda de puré de tomate",
+      "150 g de mozzarella",
+      "1 tomate",
+      "1 cdita de orégano",
+      "1 puñado de rúcula",
+      "1 cda de aceite de oliva",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Prendé el horno a 220 °C y poné los panes en una placa.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclá el puré de tomate con el orégano y una pizca de sal.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cortá el tomate en rodajas finas y la mozzarella en feta o en cubos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Untá los panes con la salsa, dejando un borde libre.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cubrí con la mozzarella y las rodajas de tomate.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Horneá hasta que el queso burbujee y los bordes estén crocantes.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Sumá la rúcula aliñada con aceite y serví enseguida.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Recalentá en horno a 180 °C unos 5 minutos para recuperar lo crocante.",
+      "tip": "Sumá la rúcula recién al servir."
+    }
+  },
+  {
+    "title": "Crema de arvejas con menta y limón",
+    "description": "Crema verde, sedosa y fresca hecha con arvejas congeladas, cebolla de verdeo y menta. Se hace en 20 minutos en una sola olla.",
+    "servings": 3,
+    "prep_minutes": 5,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "cena",
+      "liviano",
+      "sopa",
+      "una olla",
+      "vegetariano",
+      "rápido",
+      "para freezar",
+      "económico"
+    ],
+    "ingredients": [
+      "400 g de arvejas congeladas",
+      "1 cebolla de verdeo",
+      "1 papa chica",
+      "1 diente de ajo",
+      "1 cda de aceite de oliva",
+      "700 ml de caldo de verduras",
+      "1 cda de hojas de menta",
+      "1 cdita de jugo de limón",
+      "2 cda de yogur natural",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Picá el verdeo y el ajo, y pelá la papa para cortarla en cubos chicos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Rehogá el verdeo y el ajo en el aceite 2 minutos.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá la papa y el caldo y cociná hasta que la papa esté casi tierna.",
+        "minutes": 7,
+        "passive": true
+      },
+      {
+        "instruction": "Agregá las arvejas y cociná 4 minutos más.",
+        "minutes": 4,
+        "passive": true
+      },
+      {
+        "instruction": "Apagá, sumá la menta y procesá con minipimer hasta que quede lisa.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Condimentá con limón, sal y pimienta, y serví con una cucharada de yogur.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Calentá en olla a fuego bajo, revolviendo, sin dejar que hierva fuerte.",
+      "tip": "No cocines las arvejas de más para que conserven el color verde."
+    }
+  }
+]

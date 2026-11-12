@@ -1,0 +1,519 @@
+[
+  {
+    "title": "Espaguetis a la carbonara con panceta y queso",
+    "description": "La carbonara de verdad, sin crema: huevo, queso rallado, panceta crocante y pimienta. Queda sedosa si mezclás fuera del fuego.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 15,
+    "difficulty": "media",
+    "tags": [
+      "italiana",
+      "pasta",
+      "rápido",
+      "cena",
+      "almuerzo",
+      "una olla"
+    ],
+    "ingredients": [
+      "400 g de espaguetis",
+      "150 g de panceta ahumada en cubitos",
+      "3 yemas",
+      "1 huevo entero",
+      "60 g de queso parmesano o reggianito rallado",
+      "1 cdita de pimienta negra molida",
+      "sal gruesa para el agua",
+      "1 cda de aceite de oliva"
+    ],
+    "steps": [
+      {
+        "instruction": "Poné a hervir abundante agua con sal gruesa en una olla grande."
+      },
+      {
+        "instruction": "Mezclá en un bol las yemas, el huevo, el queso y la pimienta hasta formar una crema espesa."
+      },
+      {
+        "instruction": "Dorá la panceta con el aceite en una sartén a fuego medio hasta que quede crocante.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Cociná los espaguetis en el agua hirviendo según el paquete, unos 9 o 10 minutos.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Reservá una taza del agua de cocción y escurrí la pasta."
+      },
+      {
+        "instruction": "Apagá el fuego de la sartén, sumá los espaguetis y la panceta y volcá la mezcla de huevo."
+      },
+      {
+        "instruction": "Revolvé rápido, agregando agua de cocción de a poco hasta que la salsa quede cremosa. Servilo enseguida con más queso y pimienta."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "En sartén con un chorrito de agua a fuego bajo, revolviendo, sin que hierva.",
+      "tip": "Mezclá siempre fuera del fuego para que el huevo no se cuaje."
+    }
+  },
+  {
+    "title": "Ñoquis crocantes a la sartén con tomate y muzzarella",
+    "description": "Ñoquis de papa ya hechos, dorados hasta quedar crocantes por fuera y gratinados con salsa de tomate y muzzarella derretida.",
+    "servings": 4,
+    "prep_minutes": 5,
+    "cook_minutes": 18,
+    "difficulty": "facil",
+    "tags": [
+      "italiana",
+      "pasta",
+      "rápido",
+      "cena",
+      "para chicos",
+      "una olla"
+    ],
+    "ingredients": [
+      "500 g de ñoquis de papa ya hechos",
+      "2 cdas de aceite de oliva",
+      "2 dientes de ajo",
+      "1 lata de tomates triturados",
+      "150 g de muzzarella en cubos",
+      "6 hojas de albahaca",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Herví los ñoquis en agua con sal hasta que floten, unos 2 o 3 minutos, y escurrilos bien.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén grande y dorá los ñoquis a fuego medio-alto sin moverlos mucho.",
+        "minutes": 8,
+        "passive": false
+      },
+      {
+        "instruction": "Hacé lugar en un costado, picá el ajo y salteálo medio minuto."
+      },
+      {
+        "instruction": "Sumá los tomates triturados, salpimentá y cociná 4 minutos hasta que espese un poco.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Repartí la muzzarella por encima y tapá la sartén 2 minutos para que se derrita.",
+        "minutes": 2,
+        "passive": true
+      },
+      {
+        "instruction": "Terminá con albahaca fresca y llevá la sartén a la mesa."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "En sartén con una cucharada de agua, tapado, a fuego medio.",
+      "tip": "Los ñoquis tienen que estar bien escurridos para que doren y no se peguen."
+    }
+  },
+  {
+    "title": "Penne a la puttanesca con aceitunas y alcaparras",
+    "description": "Salsa intensa de tomate, aceitunas negras, alcaparras y ajo que se hace en lo que se cocina la pasta. Las anchoas son opcionales.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 18,
+    "difficulty": "facil",
+    "tags": [
+      "italiana",
+      "pasta",
+      "rápido",
+      "cena",
+      "económico"
+    ],
+    "ingredients": [
+      "350 g de penne",
+      "2 cdas de aceite de oliva",
+      "2 dientes de ajo",
+      "4 filetes de anchoas (opcional)",
+      "100 g de aceitunas negras sin carozo",
+      "2 cdas de alcaparras",
+      "1 lata de tomates triturados",
+      "1/2 cdita de ají molido",
+      "2 cdas de perejil picado",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Poné a hervir agua con sal y cociná los penne según el paquete.",
+        "minutes": 11,
+        "passive": true
+      },
+      {
+        "instruction": "Mientras tanto, calentá el aceite en una sartén y salteá el ajo picado con las anchoas hasta que se deshagan.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá las aceitunas cortadas, las alcaparras y el ají molido, y mezclá un minuto."
+      },
+      {
+        "instruction": "Volcá los tomates triturados y cociná a fuego medio unos 8 minutos.",
+        "minutes": 8,
+        "passive": true
+      },
+      {
+        "instruction": "Escurrí la pasta, guardando un poco de agua de cocción, y mezclala con la salsa."
+      },
+      {
+        "instruction": "Sumá un chorrito de agua si hace falta, espolvoreá perejil y serví."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "En sartén con un chorrito de agua o en microondas tapado.",
+      "tip": "Probá la salsa antes de salar: las aceitunas y las alcaparras ya aportan sal."
+    }
+  },
+  {
+    "title": "Risotto de champiñones y parmesano",
+    "description": "Arroz arborio cremoso con champiñones dorados, caldo caliente y mucho parmesano. Pide atención pero sale en menos de media hora.",
+    "servings": 4,
+    "prep_minutes": 7,
+    "cook_minutes": 22,
+    "difficulty": "media",
+    "tags": [
+      "italiana",
+      "arroz",
+      "cena",
+      "vegetariano",
+      "una olla"
+    ],
+    "ingredients": [
+      "300 g de arroz arborio",
+      "300 g de champiñones",
+      "1 cebolla",
+      "1 l de caldo de verduras caliente",
+      "120 ml de vino blanco (opcional)",
+      "40 g de manteca",
+      "1 cda de aceite de oliva",
+      "50 g de parmesano rallado",
+      "2 cdas de perejil picado",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Laminá los champiñones y picá la cebolla bien chiquita."
+      },
+      {
+        "instruction": "Calentá el aceite en una olla ancha y dorá los champiñones a fuego fuerte 4 minutos. Sacalos y reservalos.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "En la misma olla, rehogá la cebolla con la mitad de la manteca hasta que esté transparente.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el arroz y revolvé 1 minuto hasta que se ponga brilloso. Sumá el vino y dejá que se evapore."
+      },
+      {
+        "instruction": "Incorporá el caldo de a un cucharón, revolviendo seguido, y esperá a que se absorba antes de agregar más.",
+        "minutes": 16,
+        "passive": false
+      },
+      {
+        "instruction": "Cuando el arroz esté al dente, apagá el fuego y sumá los champiñones, la manteca restante y el parmesano."
+      },
+      {
+        "instruction": "Tapá 1 minuto, mezclá y serví con perejil y pimienta.",
+        "minutes": 1,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "En sartén con un chorro de caldo o agua, revolviendo a fuego bajo.",
+      "tip": "Mantené el caldo caliente en otra olla para que la cocción no se corte."
+    }
+  },
+  {
+    "title": "Merluza piccata con limón y alcaparras",
+    "description": "Filetes de merluza enharinados y dorados, con una salsa de manteca, limón y alcaparras. Liviana, rápida y con mucho sabor.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "italiana",
+      "pescado",
+      "rápido",
+      "cena",
+      "almuerzo"
+    ],
+    "ingredients": [
+      "4 filetes de merluza (unos 600 g)",
+      "3 cdas de harina",
+      "2 cdas de aceite de oliva",
+      "30 g de manteca",
+      "1 limón",
+      "2 cdas de alcaparras",
+      "100 ml de caldo de verduras o agua",
+      "2 cdas de perejil picado",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Secá bien los filetes con papel de cocina y salpimentalos."
+      },
+      {
+        "instruction": "Pasalos por la harina y sacudí el exceso."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén grande y cociná los filetes 3 minutos de cada lado hasta dorar. Pasalos a un plato.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "En la misma sartén, derretí la manteca y sumá el jugo del limón, la ralladura y el caldo."
+      },
+      {
+        "instruction": "Agregá las alcaparras y hervilas 2 minutos para que la salsa espese un poco.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Devolvé el pescado a la sartén, bañalo con la salsa y espolvoreá perejil."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "En sartén a fuego bajo con un chorrito de agua, tapado, 3 minutos.",
+      "tip": "Secá bien el pescado: si está húmedo, la harina se despega al dorar."
+    }
+  },
+  {
+    "title": "Minestrone rápido con fideos y porotos",
+    "description": "Sopa de verduras con porotos blancos y fideos chicos, todo en una olla. Reconfortante y lista en menos de media hora.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 18,
+    "difficulty": "facil",
+    "tags": [
+      "italiana",
+      "sopa",
+      "vegetariano",
+      "invierno",
+      "una olla",
+      "económico",
+      "para freezar"
+    ],
+    "ingredients": [
+      "2 cdas de aceite de oliva",
+      "1 cebolla",
+      "1 zanahoria",
+      "1 papa",
+      "1 zapallito",
+      "1 tallo de apio",
+      "1 lata de tomates triturados",
+      "1 lata de porotos blancos cocidos",
+      "100 g de fideos chicos tipo municiones",
+      "1,2 l de agua o caldo de verduras",
+      "queso rallado para servir",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá todas las verduras en cubitos chicos para que se cocinen rápido."
+      },
+      {
+        "instruction": "Calentá el aceite en una olla y rehogá la cebolla, la zanahoria y el apio 3 minutos.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá la papa, el zapallito, los tomates y el agua o caldo. Salpimentá y llevá a hervor."
+      },
+      {
+        "instruction": "Cociná a fuego medio hasta que la papa esté casi tierna.",
+        "minutes": 8,
+        "passive": true
+      },
+      {
+        "instruction": "Sumá los porotos escurridos y los fideos, y cociná hasta que estén al dente.",
+        "minutes": 7,
+        "passive": true
+      },
+      {
+        "instruction": "Serví bien caliente con queso rallado por encima."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "En olla a fuego medio, sumando un poco de agua porque los fideos absorben líquido.",
+      "tip": "Si vas a freezar, cociná los fideos aparte o dejalos bien al dente."
+    }
+  },
+  {
+    "title": "Bruschettas de tomate, ajo y albahaca",
+    "description": "Rodajas de pan tostado frotadas con ajo y cubiertas con tomate fresco aliñado. Un entrante clásico y fresco para compartir.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 8,
+    "difficulty": "facil",
+    "tags": [
+      "italiana",
+      "vegano",
+      "snack",
+      "para compartir",
+      "verano",
+      "sin lácteos",
+      "horno"
+    ],
+    "ingredients": [
+      "8 rodajas de pan tipo baguette o pan italiano",
+      "4 tomates maduros",
+      "2 dientes de ajo",
+      "8 hojas de albahaca",
+      "3 cdas de aceite de oliva",
+      "1 cdita de vinagre balsámico (opcional)",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá los tomates en cubitos chicos, sacándoles buena parte de las semillas."
+      },
+      {
+        "instruction": "Mezclalos en un bol con la mitad del aceite, la albahaca rota, sal, pimienta y el vinagre. Dejá reposar.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Pintá las rodajas de pan con el aceite restante y tostalas en el horno a 200 °C hasta que estén doradas.",
+        "minutes": 8,
+        "passive": true
+      },
+      {
+        "instruction": "Frotá un diente de ajo pelado sobre cada tostada todavía caliente."
+      },
+      {
+        "instruction": "Repartí el tomate sobre el pan y serví enseguida."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "No se recalienta; guardá el tomate aparte y tostá el pan de nuevo al momento.",
+      "tip": "Armalas justo antes de servir para que el pan no se ablande."
+    }
+  },
+  {
+    "title": "Piadina con jamón crudo, rúcula y muzzarella",
+    "description": "Pan chato de la Romagna hecho en sartén, sin horno ni levadura, relleno con jamón crudo, muzzarella y rúcula.",
+    "servings": 4,
+    "prep_minutes": 18,
+    "cook_minutes": 10,
+    "difficulty": "media",
+    "tags": [
+      "italiana",
+      "sándwich",
+      "almuerzo",
+      "cena",
+      "sin horno",
+      "para compartir"
+    ],
+    "ingredients": [
+      "300 g de harina 000",
+      "1 cdita de polvo de hornear",
+      "1/2 cdita de sal",
+      "3 cdas de aceite de oliva",
+      "150 ml de agua tibia",
+      "80 g de jamón crudo",
+      "150 g de muzzarella",
+      "1 puñado de rúcula"
+    ],
+    "steps": [
+      {
+        "instruction": "Mezclá la harina, el polvo de hornear y la sal en un bol."
+      },
+      {
+        "instruction": "Agregá el aceite y el agua tibia, y amasá 2 minutos hasta formar una masa lisa."
+      },
+      {
+        "instruction": "Tapá la masa y dejala descansar.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Dividí en 4 bolitas y estirá cada una bien finita, de unos 20 cm."
+      },
+      {
+        "instruction": "Cociná cada disco en una sartén seca a fuego medio-alto, 1 o 2 minutos por lado, hasta que tenga manchas doradas.",
+        "minutes": 8,
+        "passive": false
+      },
+      {
+        "instruction": "Con la piadina caliente, poné muzzarella, jamón y rúcula en una mitad y doblala."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": 60,
+      "reheat": "Los discos solos, en sartén seca 30 segundos por lado; rellenalos al momento.",
+      "tip": "Pinchá la masa con un tenedor mientras se cocina si se infla demasiado."
+    }
+  },
+  {
+    "title": "Affogato de helado de crema y café",
+    "description": "Postre italiano de cinco minutos: helado de crema frío bañado con café caliente y un toque de cacao amargo.",
+    "servings": 4,
+    "prep_minutes": 5,
+    "cook_minutes": 5,
+    "difficulty": "facil",
+    "tags": [
+      "italiana",
+      "postre",
+      "rápido",
+      "sin horno",
+      "bebida",
+      "merienda",
+      "para compartir"
+    ],
+    "ingredients": [
+      "4 bochas de helado de crema",
+      "200 ml de café espresso o muy fuerte, caliente",
+      "2 cdas de cacao amargo",
+      "4 vasos o tazas chicas"
+    ],
+    "steps": [
+      {
+        "instruction": "Poné los vasos o tazas en el freezer unos minutos para que estén bien fríos.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Preparé el café bien fuerte y mantenelo caliente."
+      },
+      {
+        "instruction": "Poné una bocha de helado en cada vaso."
+      },
+      {
+        "instruction": "Volcá 50 ml de café caliente sobre cada helado justo antes de comer."
+      },
+      {
+        "instruction": "Espolvoreá con cacao amargo y serví con cucharita."
+      }
+    ],
+    "storage": {
+      "fridge_days": 0,
+      "freezer_days": null,
+      "reheat": "No se recalienta; se arma y se come al momento.",
+      "tip": "Usá café recién hecho y helado bien firme para que no se derrita de golpe."
+    }
+  }
+]

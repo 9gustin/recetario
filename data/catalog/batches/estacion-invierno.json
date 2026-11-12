@@ -1,0 +1,565 @@
+[
+  {
+    "title": "Crema de zapallo con jengibre y semillas",
+    "description": "Una sopa cremosa y bien calentita, con zapallo anco, un toque de jengibre fresco y semillas tostadas por encima. Sale en una sola olla.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 25,
+    "difficulty": "facil",
+    "tags": [
+      "invierno",
+      "sopa",
+      "vegetariano",
+      "una olla",
+      "para freezar",
+      "económico",
+      "cena"
+    ],
+    "ingredients": [
+      "800 g de zapallo anco pelado",
+      "1 papa mediana",
+      "1 cebolla",
+      "1 cda de aceite de oliva",
+      "1 cdita de jengibre fresco rallado",
+      "700 ml de agua caliente",
+      "100 ml de crema de leche",
+      "2 cdas de semillas de zapallo",
+      "sal a gusto",
+      "pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá el zapallo, la papa y la cebolla en cubos chicos para que se cocinen rápido."
+      },
+      {
+        "instruction": "Calentá el aceite en una olla y rehogá la cebolla con el jengibre durante 3 minutos.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el zapallo y la papa, cubrí con el agua caliente y salpimentá."
+      },
+      {
+        "instruction": "Cociná tapado a fuego medio hasta que el zapallo se deshaga con el tenedor.",
+        "minutes": 18,
+        "passive": true
+      },
+      {
+        "instruction": "Procesá la sopa con la minipimer hasta que quede lisa."
+      },
+      {
+        "instruction": "Agregá la crema, mezclá y calentá un minuto sin hervir.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Tostá las semillas en una sartén seca y servilas sobre cada plato."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Calentá en olla a fuego bajo, revolviendo, con un chorrito de agua si espesó.",
+      "tip": "Si la vas a freezar, sumá la crema recién al recalentar."
+    }
+  },
+  {
+    "title": "Sopa de cebolla gratinada con pan y queso",
+    "description": "Cebollas bien doradas en caldo caliente, con tostadas cubiertas de queso gratinado. Un clásico de invierno que se arma con pocos ingredientes.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 35,
+    "difficulty": "media",
+    "tags": [
+      "invierno",
+      "sopa",
+      "horno",
+      "cena"
+    ],
+    "ingredients": [
+      "4 cebollas grandes",
+      "30 g de manteca",
+      "1 cda de aceite",
+      "1 cda de harina",
+      "1 l de caldo de verdura caliente",
+      "100 ml de vino blanco",
+      "1 hoja de laurel",
+      "4 rodajas de pan francés",
+      "150 g de queso cremoso o gruyere rallado",
+      "sal a gusto",
+      "pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá las cebollas en medias lunas finas."
+      },
+      {
+        "instruction": "Derretí la manteca con el aceite en una olla y cociná las cebollas a fuego medio-bajo, revolviendo seguido, hasta que estén doradas.",
+        "minutes": 20,
+        "passive": false
+      },
+      {
+        "instruction": "Espolvoreá la harina, mezclá un minuto y volcá el vino para que se evapore.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el caldo y el laurel, salpimentá y cociná a fuego suave.",
+        "minutes": 8,
+        "passive": true
+      },
+      {
+        "instruction": "Prendé el grill del horno y tostá las rodajas de pan en una placa un par de minutos."
+      },
+      {
+        "instruction": "Repartí la sopa en cuencos aptos para horno, poné el pan arriba y cubrí con el queso."
+      },
+      {
+        "instruction": "Gratiná hasta que el queso burbujee y se dore.",
+        "minutes": 4,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Calentá la sopa sola en una olla y gratiná el pan con queso recién al servir.",
+      "tip": "Guardá el pan y el queso aparte para que no se ablanden."
+    }
+  },
+  {
+    "title": "Pastel de papa rápido con carne y queso gratinado",
+    "description": "Puré de papa cremoso sobre un relleno de carne picada condimentado, gratinado con queso. Papas en cubos chicos para llegar a tiempo.",
+    "servings": 4,
+    "prep_minutes": 15,
+    "cook_minutes": 30,
+    "difficulty": "media",
+    "tags": [
+      "invierno",
+      "horno",
+      "carne",
+      "una bandeja",
+      "para freezar",
+      "argentina",
+      "almuerzo",
+      "cena"
+    ],
+    "ingredients": [
+      "800 g de papas",
+      "400 g de carne picada",
+      "1 cebolla",
+      "1 morrón rojo",
+      "1 cda de aceite",
+      "1 cdita de pimentón",
+      "1 cdita de comino",
+      "40 g de manteca",
+      "100 ml de leche",
+      "100 g de queso cremoso rallado",
+      "sal a gusto",
+      "pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá el horno a 220 °C y poné a hervir agua con sal."
+      },
+      {
+        "instruction": "Pelá las papas, cortalas en cubos de 2 cm y hervilas hasta que estén blandas.",
+        "minutes": 14,
+        "passive": true
+      },
+      {
+        "instruction": "Mientras tanto, picá la cebolla y el morrón y rehogalos en el aceite 4 minutos.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá la carne picada, el pimentón y el comino y cociná hasta que pierda el color rosado.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Escurrí las papas y hacelas puré con la manteca, la leche, sal y pimienta."
+      },
+      {
+        "instruction": "Poné el relleno en una fuente, cubrí con el puré y espolvoreá el queso."
+      },
+      {
+        "instruction": "Llevá al horno hasta que la superficie esté dorada.",
+        "minutes": 10,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Calentá porciones en horno a 180 °C o en microondas hasta que estén bien calientes.",
+      "tip": "Para freezar, armalo en porciones antes de gratinar."
+    }
+  },
+  {
+    "title": "Revuelto gramajo con papas fritas y jamón",
+    "description": "Papas fritas finitas mezcladas con jamón y huevos revueltos cremosos. Un plato argentino contundente que sale en 30 minutos.",
+    "servings": 2,
+    "prep_minutes": 10,
+    "cook_minutes": 20,
+    "difficulty": "facil",
+    "tags": [
+      "invierno",
+      "huevo",
+      "argentina",
+      "cena",
+      "rápido",
+      "sin gluten"
+    ],
+    "ingredients": [
+      "400 g de papas",
+      "400 ml de aceite para freír",
+      "150 g de jamón cocido en cubos",
+      "4 huevos",
+      "1 cebolla de verdeo",
+      "sal a gusto",
+      "pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Pelá las papas, cortalas en bastones muy finos y secalas con un trapo."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén honda y freí las papas por tandas hasta que estén doradas.",
+        "minutes": 10,
+        "passive": false
+      },
+      {
+        "instruction": "Escurrí las papas sobre papel de cocina y salalas."
+      },
+      {
+        "instruction": "Sacá casi todo el aceite de la sartén y salteá el verdeo picado con el jamón 2 minutos.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Batí los huevos con sal y pimienta, volcalos en la sartén y revolvé a fuego bajo hasta que cuajen apenas.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá las papas, mezclá suavemente y serví enseguida."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Calentá en sartén a fuego medio un par de minutos.",
+      "tip": "Se come mejor recién hecho; las papas pierden el crocante."
+    }
+  },
+  {
+    "title": "Chili con carne en una olla",
+    "description": "Carne picada con porotos, tomate y especias suaves, para comer bien caliente con pan o arroz. Se hace en una olla y rinde para freezar.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 30,
+    "difficulty": "facil",
+    "tags": [
+      "invierno",
+      "mexicana",
+      "carne",
+      "legumbres",
+      "guiso",
+      "una olla",
+      "para freezar",
+      "cena"
+    ],
+    "ingredients": [
+      "400 g de carne picada",
+      "1 cebolla",
+      "1 morrón rojo",
+      "2 dientes de ajo",
+      "1 cda de aceite",
+      "1 cda de pimentón",
+      "1 cdita de comino",
+      "1/2 cdita de ají molido",
+      "1 lata de tomate triturado",
+      "1 lata de porotos negros o colorados escurridos",
+      "200 ml de agua",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Picá la cebolla, el morrón y el ajo bien chicos."
+      },
+      {
+        "instruction": "Calentá el aceite en una olla y rehogá la cebolla y el morrón 4 minutos.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el ajo y la carne y cociná desmenuzando hasta que se dore.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el pimentón, el comino y el ají y mezclá 1 minuto.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Volcá el tomate, el agua, los porotos y la sal."
+      },
+      {
+        "instruction": "Cociná a fuego bajo con la olla semitapada, revolviendo de vez en cuando.",
+        "minutes": 20,
+        "passive": true
+      },
+      {
+        "instruction": "Probá, corregí la sal y serví caliente."
+      }
+    ],
+    "storage": {
+      "fridge_days": 4,
+      "freezer_days": 90,
+      "reheat": "Calentá en olla a fuego bajo con un chorrito de agua.",
+      "tip": "Al día siguiente queda más sabroso."
+    }
+  },
+  {
+    "title": "Arroz con pollo en una olla con morrón y arvejas",
+    "description": "Cubitos de muslo dorados y arroz cocido en la misma olla, con morrón, zanahoria y arvejas. Un plato casero, sabroso y completo.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 36,
+    "difficulty": "facil",
+    "tags": [
+      "invierno",
+      "arroz",
+      "pollo",
+      "una olla",
+      "almuerzo",
+      "cena",
+      "para freezar"
+    ],
+    "ingredients": [
+      "600 g de muslos de pollo deshuesados",
+      "1 cebolla",
+      "1 morrón rojo",
+      "1 zanahoria",
+      "2 dientes de ajo",
+      "2 cdas de aceite",
+      "1 cdita de pimentón",
+      "1/2 cdita de cúrcuma",
+      "1 1/2 taza de arroz largo fino",
+      "3 tazas de caldo caliente",
+      "1/2 taza de arvejas congeladas",
+      "sal a gusto",
+      "pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá el pollo en cubos y picá la cebolla, el morrón, la zanahoria y el ajo."
+      },
+      {
+        "instruction": "Dorá el pollo salpimentado en el aceite, en una olla ancha.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá las verduras y el ajo y rehogá hasta que ablanden.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el pimentón, la cúrcuma y el arroz y revolvé 2 minutos.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Volcá el caldo caliente y las arvejas, mezclá una vez y llevá a hervor.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Tapá y cociná a fuego mínimo sin destapar.",
+        "minutes": 15,
+        "passive": true
+      },
+      {
+        "instruction": "Apagá el fuego y dejá reposar tapado.",
+        "minutes": 5,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Calentá en sartén o microondas con una cucharada de agua, tapado.",
+      "tip": "Enfriá el arroz rápido antes de guardarlo."
+    }
+  },
+  {
+    "title": "Submarino casero con chocolate negro",
+    "description": "Leche bien caliente con una barra de chocolate que se va derritiendo en la taza. Ideal para la merienda de una tarde fría.",
+    "servings": 2,
+    "prep_minutes": 3,
+    "cook_minutes": 7,
+    "difficulty": "facil",
+    "tags": [
+      "invierno",
+      "bebida",
+      "merienda",
+      "desayuno",
+      "para chicos",
+      "argentina",
+      "rápido"
+    ],
+    "ingredients": [
+      "400 ml de leche entera",
+      "100 g de chocolate semiamargo en barra",
+      "1 cdita de azúcar",
+      "1 pizca de canela"
+    ],
+    "steps": [
+      {
+        "instruction": "Calentá la leche en una cacerola a fuego medio, sin dejar que hierva.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Serví la leche en dos tazas grandes y endulzá con el azúcar si querés."
+      },
+      {
+        "instruction": "Sumergí la barra de chocolate en cada taza y revolvé hasta que se derrita."
+      }
+    ],
+    "storage": {
+      "fridge_days": 0,
+      "freezer_days": null,
+      "reheat": "Mejor tomarlo recién hecho.",
+      "tip": "Usá chocolate de buena calidad para que no quede aguado."
+    }
+  },
+  {
+    "title": "Milanesas a la napolitana al horno",
+    "description": "Milanesas de nalga horneadas y cubiertas con salsa de tomate, jamón y mozzarella gratinada. Un plato argentino de domingo que sale rápido.",
+    "servings": 4,
+    "prep_minutes": 15,
+    "cook_minutes": 28,
+    "difficulty": "media",
+    "tags": [
+      "invierno",
+      "milanesa",
+      "carne",
+      "horno",
+      "una bandeja",
+      "argentina",
+      "almuerzo",
+      "cena"
+    ],
+    "ingredients": [
+      "600 g de bifes de nalga finos",
+      "2 huevos",
+      "1 taza de pan rallado",
+      "1 diente de ajo picado",
+      "1 cda de perejil picado",
+      "4 cdas de aceite",
+      "150 ml de salsa de tomate",
+      "4 fetas de jamón cocido",
+      "200 g de mozzarella en fetas",
+      "1 cdita de orégano",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá el horno a 220 °C y aceitá una placa grande."
+      },
+      {
+        "instruction": "Batí los huevos con el ajo, el perejil y sal."
+      },
+      {
+        "instruction": "Pasá cada bife por el huevo y luego por el pan rallado, presionando bien."
+      },
+      {
+        "instruction": "Acomodá las milanesas en la placa y rocialas con aceite."
+      },
+      {
+        "instruction": "Horneá 12 minutos, dalas vuelta y horneá 8 minutos más.",
+        "minutes": 20,
+        "passive": true
+      },
+      {
+        "instruction": "Cubrí cada milanesa con salsa, una feta de jamón, mozzarella y orégano."
+      },
+      {
+        "instruction": "Gratiná hasta que el queso se derrita y se dore.",
+        "minutes": 6,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": 60,
+      "reheat": "Calentá en horno a 180 °C hasta que el queso burbujee.",
+      "tip": "Para freezar, congelalas sin la cobertura de queso."
+    }
+  },
+  {
+    "title": "Tortilla de papas jugosa a la sartén",
+    "description": "Tortilla española casera con papas y cebolla cocidas despacio en aceite, cuajada y jugosa por dentro. Simple y muy reconfortante.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 30,
+    "difficulty": "media",
+    "tags": [
+      "invierno",
+      "huevo",
+      "española",
+      "cena",
+      "sin gluten",
+      "sin lácteos",
+      "económico"
+    ],
+    "ingredients": [
+      "500 g de papas",
+      "1 cebolla",
+      "5 huevos",
+      "150 ml de aceite",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Pelá las papas y cortalas en rodajas finas; picá la cebolla en juliana."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén antiadherente de 24 cm y cociná las papas y la cebolla a fuego medio-bajo, moviendo de vez en cuando, hasta que estén tiernas.",
+        "minutes": 15,
+        "passive": false
+      },
+      {
+        "instruction": "Escurrí las papas y la cebolla, dejando el aceite en un bowl."
+      },
+      {
+        "instruction": "Batí los huevos con sal, mezclalos con las papas y dejá reposar.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Calentá 1 cucharada del aceite en la sartén, volcá la mezcla y cociná a fuego medio-bajo hasta que cuaje abajo.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Dala vuelta con un plato y cociná el otro lado.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Dejá entibiar un momento y cortala en porciones."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Calentá una porción 1 minuto en microondas o comela a temperatura ambiente.",
+      "tip": "Colá y guardá el aceite sobrante para otra fritura."
+    }
+  }
+]

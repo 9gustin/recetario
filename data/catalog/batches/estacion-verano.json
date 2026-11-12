@@ -1,0 +1,558 @@
+[
+  {
+    "title": "Ensalada de sandía, queso feta y menta",
+    "description": "Dulce, salada y súper refrescante. Se arma en diez minutos y no necesita cocción: ideal para días de calor fuerte.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "verano",
+      "rápido",
+      "liviano",
+      "vegetariano",
+      "ensalada",
+      "sin gluten",
+      "fruta"
+    ],
+    "ingredients": [
+      "600 g de sandía bien fría",
+      "150 g de queso feta",
+      "1/2 cebolla morada",
+      "1 atado chico de menta",
+      "1 lima",
+      "2 cda de aceite de oliva",
+      "pimienta negra a gusto",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá la sandía en cubos y sacale las semillas que veas."
+      },
+      {
+        "instruction": "Cortá la cebolla morada en plumas finas y dejala 5 minutos en agua fría para suavizarla.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Desmenuzá el queso feta con las manos y picá las hojas de menta."
+      },
+      {
+        "instruction": "Escurrí la cebolla y mezclala con la sandía en una fuente."
+      },
+      {
+        "instruction": "Aliñá con jugo de lima, aceite, pimienta y apenas de sal, porque el feta ya es salado."
+      },
+      {
+        "instruction": "Sumá el feta y la menta por encima y serví enseguida."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": 0,
+      "reheat": "No se recalienta: se come fría.",
+      "tip": "Aliñá justo antes de servir para que la sandía no suelte tanto jugo."
+    }
+  },
+  {
+    "title": "Ensalada de garbanzos con tomate, pepino y menta",
+    "description": "Una ensalada fresca y llenadora con garbanzos de lata, perfecta como almuerzo liviano o para llevar a la playa.",
+    "servings": 4,
+    "prep_minutes": 12,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "verano",
+      "rápido",
+      "vegano",
+      "legumbres",
+      "ensalada",
+      "económico",
+      "sin horno",
+      "almuerzo"
+    ],
+    "ingredients": [
+      "2 latas de garbanzos cocidos",
+      "2 tomates firmes",
+      "1 pepino",
+      "1/2 cebolla morada",
+      "1 atado chico de menta",
+      "1 limón",
+      "3 cda de aceite de oliva",
+      "1 cdita de comino",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Colá los garbanzos y enjuagalos bajo la canilla."
+      },
+      {
+        "instruction": "Cortá los tomates y el pepino en cubos chicos."
+      },
+      {
+        "instruction": "Picá la cebolla morada bien fina y la menta en tiritas."
+      },
+      {
+        "instruction": "Mezclá todo en un bowl grande con los garbanzos."
+      },
+      {
+        "instruction": "Aliñá con jugo de limón, aceite, comino y sal."
+      },
+      {
+        "instruction": "Dejá reposar 5 minutos en la heladera antes de servir.",
+        "minutes": 5,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 0,
+      "reheat": "Se come fría; sacala 10 minutos antes de la heladera.",
+      "tip": "Si la guardás, agregá el tomate recién al servir para que no se ablande."
+    }
+  },
+  {
+    "title": "Ensalada de fideos moñito con choclo, cherry y mozzarella",
+    "description": "Pasta fría con vegetales crocantes y un aderezo con mostaza. Se hace en un ratito y rinde para llevar.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "verano",
+      "pasta",
+      "vegetariano",
+      "almuerzo",
+      "para compartir",
+      "económico",
+      "para chicos"
+    ],
+    "ingredients": [
+      "300 g de fideos moñito",
+      "1 lata de choclo en granos",
+      "200 g de tomates cherry",
+      "200 g de mozzarella en cubos",
+      "1 puñado de hojas de albahaca",
+      "3 cda de aceite de oliva",
+      "1 cda de vinagre de manzana",
+      "1 cdita de mostaza",
+      "sal a gusto",
+      "pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Hervi los fideos en abundante agua con sal el tiempo del paquete.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Mientras tanto, cortá los cherry a la mitad y colá el choclo."
+      },
+      {
+        "instruction": "Escurrí los fideos y pasalos por agua fría para cortar la cocción."
+      },
+      {
+        "instruction": "Mezclá aceite, vinagre, mostaza, sal y pimienta en un frasco y agitá."
+      },
+      {
+        "instruction": "Juntá fideos, choclo, cherry y mozzarella en una fuente."
+      },
+      {
+        "instruction": "Agregá el aderezo y la albahaca rota con la mano, y mezclá."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 0,
+      "reheat": "Se come fría; si se secó, sumá un chorrito de aceite.",
+      "tip": "Guardala en un recipiente tapado y agregá la albahaca recién al servir."
+    }
+  },
+  {
+    "title": "Tabulé de cuscús con pepino, tomate y perejil",
+    "description": "Versión rápida del tabulé con cuscús hidratado, muchísimo perejil y limón. Fresco, liviano y sin prender el horno.",
+    "servings": 4,
+    "prep_minutes": 12,
+    "cook_minutes": 5,
+    "difficulty": "facil",
+    "tags": [
+      "verano",
+      "vegano",
+      "árabe",
+      "ensalada",
+      "guarnición",
+      "sin horno",
+      "económico",
+      "liviano"
+    ],
+    "ingredients": [
+      "1 taza de cuscús",
+      "1 taza de agua recién hervida",
+      "1 atado de perejil",
+      "1/2 atado de menta",
+      "2 tomates",
+      "1 pepino",
+      "2 cebollas de verdeo",
+      "2 limones",
+      "3 cda de aceite de oliva",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Poné el cuscús en un bowl con una pizca de sal y volcá el agua hirviendo."
+      },
+      {
+        "instruction": "Tapalo y dejalo hidratar 5 minutos.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Soltá el cuscús con un tenedor y dejalo enfriar un poco."
+      },
+      {
+        "instruction": "Picá finito el perejil, la menta y el verdeo."
+      },
+      {
+        "instruction": "Cortá tomates y pepino en cubitos chicos."
+      },
+      {
+        "instruction": "Mezclá todo con el cuscús, el jugo de los limones, el aceite y sal."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 0,
+      "reheat": "Se come frío o a temperatura ambiente.",
+      "tip": "Escurrí un poco los tomates picados para que no ablanden el cuscús."
+    }
+  },
+  {
+    "title": "Melón con jamón crudo, limón y menta",
+    "description": "Clásico agridulce de verano: melón bien frío con jamón crudo y un toque cítrico. Entrada o cena ligera en 10 minutos.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "verano",
+      "rápido",
+      "sin gluten",
+      "sin lácteos",
+      "fruta",
+      "para compartir",
+      "sin horno",
+      "cena"
+    ],
+    "ingredients": [
+      "1 melón chico bien frío",
+      "8 fetas de jamón crudo",
+      "1/2 limón",
+      "1 cda de aceite de oliva",
+      "6 hojas de menta",
+      "pimienta negra a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá el melón al medio y sacale las semillas con una cuchara."
+      },
+      {
+        "instruction": "Cortalo en gajos y sacale la cáscara con un cuchillo."
+      },
+      {
+        "instruction": "Envolvé cada gajo con una feta de jamón crudo."
+      },
+      {
+        "instruction": "Acomodalos en una fuente."
+      },
+      {
+        "instruction": "Rociá con jugo de limón y aceite, y terminá con pimienta y menta picada."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": 0,
+      "reheat": "No se recalienta: servir frío.",
+      "tip": "Envolvé el melón con el jamón justo antes de servir para que no se humedezca."
+    }
+  },
+  {
+    "title": "Fideos de arroz fríos con verduras y salsa de maní",
+    "description": "Fideos finos fríos con zanahoria, pepino y repollo colorado, bañados en una salsa cremosa de maní, soja y lima.",
+    "servings": 3,
+    "prep_minutes": 12,
+    "cook_minutes": 8,
+    "difficulty": "facil",
+    "tags": [
+      "verano",
+      "asiática",
+      "vegano",
+      "sin lácteos",
+      "almuerzo",
+      "sin horno",
+      "liviano"
+    ],
+    "ingredients": [
+      "200 g de fideos de arroz finos",
+      "2 zanahorias",
+      "1 pepino",
+      "1 taza de repollo colorado rallado",
+      "3 cda de manteca de maní",
+      "2 cda de salsa de soja",
+      "1 lima",
+      "1 cdita de jengibre rallado",
+      "3 cda de agua tibia",
+      "2 cda de maní tostado picado",
+      "1 cebolla de verdeo"
+    ],
+    "steps": [
+      {
+        "instruction": "Hidratá los fideos en agua recién hervida el tiempo que indique el paquete.",
+        "minutes": 7,
+        "passive": true
+      },
+      {
+        "instruction": "Colalos y pasalos por agua fría; dejalos bien escurridos."
+      },
+      {
+        "instruction": "Rallá las zanahorias y cortá el pepino en bastones finos."
+      },
+      {
+        "instruction": "Mezclá la manteca de maní con la soja, el jugo de lima, el jengibre y el agua tibia hasta lograr una salsa lisa."
+      },
+      {
+        "instruction": "Mezclá los fideos con las verduras y la salsa."
+      },
+      {
+        "instruction": "Serví con verdeo picado y maní por encima."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": 0,
+      "reheat": "Se come frío; si se pegan, mojalos con un chorrito de agua tibia.",
+      "tip": "Guardá la salsa aparte para que los fideos no se pasen."
+    }
+  },
+  {
+    "title": "Wraps de hummus rápido con zanahoria, pepino y rúcula",
+    "description": "Hummus casero hecho con garbanzos de lata y rollitos crocantes con vegetales frescos. Sin cocción y muy fáciles de llevar.",
+    "servings": 4,
+    "prep_minutes": 15,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "verano",
+      "vegano",
+      "árabe",
+      "legumbres",
+      "almuerzo",
+      "sin horno",
+      "rápido",
+      "sándwich"
+    ],
+    "ingredients": [
+      "4 tortillas de trigo grandes",
+      "1 lata de garbanzos cocidos",
+      "2 cda de pasta de sésamo (tahini)",
+      "1 limón",
+      "1 diente de ajo",
+      "2 cda de aceite de oliva",
+      "3 cda de agua",
+      "2 zanahorias",
+      "1 pepino",
+      "1 taza de hojas de rúcula",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Colá y enjuagá los garbanzos."
+      },
+      {
+        "instruction": "Procesá los garbanzos con tahini, jugo de limón, ajo, aceite, agua y sal hasta que quede cremoso."
+      },
+      {
+        "instruction": "Rallá las zanahorias y cortá el pepino en bastones."
+      },
+      {
+        "instruction": "Untá cada tortilla con una buena capa de hummus."
+      },
+      {
+        "instruction": "Repartí zanahoria, pepino y rúcula en el centro."
+      },
+      {
+        "instruction": "Enrollá bien apretado y cortá a la mitad."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": 0,
+      "reheat": "Se come frío; el hummus sobrante dura 4 días en la heladera.",
+      "tip": "Envolvé los wraps en film para que no se sequen si los llevás."
+    }
+  },
+  {
+    "title": "Limonada de menta y jengibre",
+    "description": "Limonada bien fría con un almíbar rápido de jengibre y mucha menta. Se prepara en un jarro y rinde para todos.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 5,
+    "difficulty": "facil",
+    "tags": [
+      "verano",
+      "bebida",
+      "vegano",
+      "sin gluten",
+      "sin lácteos",
+      "económico",
+      "para compartir"
+    ],
+    "ingredients": [
+      "5 limones",
+      "20 g de jengibre fresco",
+      "1 atado de menta",
+      "4 cda de azúcar",
+      "1 l de agua fría",
+      "hielo a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Pelá el jengibre y cortalo en rodajas finas."
+      },
+      {
+        "instruction": "Calentá en una ollita 200 ml de agua con el azúcar y el jengibre hasta que hierva."
+      },
+      {
+        "instruction": "Apagá, sumá la mitad de la menta y dejá infusionar 5 minutos.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Exprimí los limones y colá el jugo."
+      },
+      {
+        "instruction": "Colá el almíbar sobre una jarra y sumá el jugo y el agua fría."
+      },
+      {
+        "instruction": "Agregá hielo y el resto de la menta; probá y ajustá el dulzor."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": 0,
+      "reheat": "Se toma fría.",
+      "tip": "Sacá la cáscara blanca de los limones si exprimís a mano, para que no amargue."
+    }
+  },
+  {
+    "title": "Ensalada de pollo con manzana verde, apio y yogur",
+    "description": "Ideal para aprovechar pollo cocido que sobró. Crocante, cremosa y fresca, para comer sola o en sándwich.",
+    "servings": 4,
+    "prep_minutes": 15,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "verano",
+      "pollo",
+      "sobras",
+      "ensalada",
+      "alto en proteína",
+      "sin horno",
+      "almuerzo"
+    ],
+    "ingredients": [
+      "400 g de pollo cocido desmenuzado",
+      "1 manzana verde",
+      "2 tallos de apio",
+      "150 g de yogur natural",
+      "1 cdita de mostaza",
+      "1/2 limón",
+      "3 cda de nueces picadas",
+      "1 lechuga criolla chica",
+      "sal a gusto",
+      "pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá la manzana en cubitos y rociala con limón para que no se oscurezca."
+      },
+      {
+        "instruction": "Picá el apio en rodajitas finas."
+      },
+      {
+        "instruction": "Mezclá el yogur con la mostaza, sal y pimienta."
+      },
+      {
+        "instruction": "Sumá el pollo, la manzana, el apio y las nueces al aderezo."
+      },
+      {
+        "instruction": "Mezclá bien y dejá enfriar 5 minutos en la heladera.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Serví sobre hojas de lechuga."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": 0,
+      "reheat": "Se come fría.",
+      "tip": "Usá pollo bien frío y guardalo enseguida en la heladera."
+    }
+  },
+  {
+    "title": "Ensalada de langostinos con palta y pomelo",
+    "description": "Langostinos cocidos con palta cremosa y gajos de pomelo. Cítrica, delicada y lista en 15 minutos sin cocinar nada.",
+    "servings": 3,
+    "prep_minutes": 15,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "verano",
+      "pescado",
+      "ensalada",
+      "sin gluten",
+      "sin lácteos",
+      "liviano",
+      "sin horno",
+      "cena"
+    ],
+    "ingredients": [
+      "300 g de langostinos cocidos y pelados",
+      "2 paltas maduras",
+      "1 pomelo rosado",
+      "1/4 cebolla morada",
+      "1 lima",
+      "2 cda de aceite de oliva",
+      "1 puñado de perejil",
+      "sal a gusto",
+      "pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Pelá el pomelo a vivo y sacá los gajos sin la piel blanca, guardando el jugo."
+      },
+      {
+        "instruction": "Cortá la cebolla morada en plumas bien finas."
+      },
+      {
+        "instruction": "Cortá las paltas en cubos y rociálas con lima."
+      },
+      {
+        "instruction": "Mezclá el jugo del pomelo con aceite, sal y pimienta."
+      },
+      {
+        "instruction": "Juntá langostinos, palta, pomelo y cebolla en una fuente."
+      },
+      {
+        "instruction": "Aliñá con cuidado y terminá con perejil picado."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": 0,
+      "reheat": "No se recalienta: servir fría.",
+      "tip": "Consumila el mismo día; los langostinos y la palta no aguantan mucho."
+    }
+  }
+]

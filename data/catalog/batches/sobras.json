@@ -1,0 +1,589 @@
+[
+  {
+    "title": "Tortitas de arroz y queso a la sartén",
+    "description": "Con el arroz que quedó de ayer armás tortitas doradas por fuera y cremosas por dentro. Van bien con ensalada o un huevo frito.",
+    "servings": 3,
+    "prep_minutes": 10,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "sobras",
+      "rápido",
+      "económico",
+      "arroz",
+      "almuerzo",
+      "cena"
+    ],
+    "ingredients": [
+      "2 tazas de arroz blanco cocido y frío",
+      "2 huevos",
+      "100 g de queso cremoso en cubitos",
+      "3 cdas de pan rallado",
+      "2 cdas de perejil picado",
+      "1 diente de ajo picado",
+      "aceite para dorar",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Desarmá el arroz frío con un tenedor en un bowl grande para que no queden grumos."
+      },
+      {
+        "instruction": "Agregá los huevos, el pan rallado, el perejil, el ajo, la sal y la pimienta."
+      },
+      {
+        "instruction": "Sumá el queso en cubitos y mezclá hasta que la masa se pueda moldear."
+      },
+      {
+        "instruction": "Formá ocho tortitas aplastadas con las manos húmedas."
+      },
+      {
+        "instruction": "Calentá un chorro de aceite en una sartén a fuego medio.",
+        "minutes": 2,
+        "passive": true
+      },
+      {
+        "instruction": "Doralas 4 minutos de cada lado, sin moverlas, hasta que estén crocantes.",
+        "minutes": 8,
+        "passive": false
+      },
+      {
+        "instruction": "Escurrilas sobre papel de cocina y servilas calientes."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": 60,
+      "reheat": "En sartén con una gota de aceite o en airfryer 5 minutos a 180 °C.",
+      "tip": "Usá arroz bien frío: con arroz tibio la masa queda pegajosa."
+    }
+  },
+  {
+    "title": "Arroz frito con huevo y verduras sobrantes",
+    "description": "Un salteado rápido al wok o sartén con arroz del día anterior, huevo revuelto y las verduras que tengas en la heladera.",
+    "servings": 2,
+    "prep_minutes": 10,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "sobras",
+      "rápido",
+      "arroz",
+      "salteado",
+      "asiática",
+      "cena",
+      "económico"
+    ],
+    "ingredients": [
+      "3 tazas de arroz cocido y frío",
+      "2 huevos",
+      "1 zanahoria rallada",
+      "1/2 morrón cortado en cubitos",
+      "2 cebollas de verdeo picadas",
+      "2 dientes de ajo picados",
+      "2 cdas de salsa de soja",
+      "1 cdita de aceite de sésamo (opcional)",
+      "2 cdas de aceite",
+      "pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Desarmá el arroz con las manos para separar los granos."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén grande a fuego fuerte."
+      },
+      {
+        "instruction": "Salteá la zanahoria, el morrón y el ajo 3 minutos.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Empujá las verduras a un costado y revolvé los huevos batidos en el hueco hasta que cuajen."
+      },
+      {
+        "instruction": "Sumá el arroz y salteá 3 minutos sin dejar de mover.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Condimentá con la soja, el aceite de sésamo y la pimienta."
+      },
+      {
+        "instruction": "Apagá el fuego y terminá con el verdeo crudo."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "En sartén caliente 3 minutos, hasta que humee bien.",
+      "tip": "Enfriá el arroz rápido y guardalo en la heladera apenas lo cocinás."
+    }
+  },
+  {
+    "title": "Arroz con leche exprés con arroz cocido",
+    "description": "Un postre cremoso en 20 minutos usando arroz ya cocido, sin esperar una hora de cocción. Con canela por encima.",
+    "servings": 3,
+    "prep_minutes": 3,
+    "cook_minutes": 18,
+    "difficulty": "facil",
+    "tags": [
+      "sobras",
+      "postre",
+      "arroz",
+      "económico",
+      "para chicos",
+      "sin horno"
+    ],
+    "ingredients": [
+      "1 taza de arroz blanco cocido",
+      "2 tazas de leche",
+      "3 cdas de azúcar",
+      "1 cdita de esencia de vainilla",
+      "1 tira de cáscara de limón",
+      "1 pizca de sal",
+      "canela en polvo a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Poné el arroz, la leche, el azúcar, la sal y la cáscara de limón en una cacerola."
+      },
+      {
+        "instruction": "Llevá a hervor suave a fuego medio, revolviendo seguido.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Bajá el fuego y cociná 12 minutos más, hasta que espese y quede cremoso.",
+        "minutes": 12,
+        "passive": false
+      },
+      {
+        "instruction": "Sacá la cáscara de limón y agregá la vainilla."
+      },
+      {
+        "instruction": "Serví tibio o frío, con canela espolvoreada."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Tibialo a fuego bajo con un chorrito de leche.",
+      "tip": "Al enfriarse espesa: sumale leche al recalentar."
+    }
+  },
+  {
+    "title": "Quesadillas de pollo desmenuzado y queso",
+    "description": "Pollo cocido que sobró, mezclado con cebolla, morrón y comino, dentro de tortillas bien doradas con queso fundido.",
+    "servings": 2,
+    "prep_minutes": 8,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "sobras",
+      "rápido",
+      "pollo",
+      "mexicana",
+      "cena",
+      "para chicos"
+    ],
+    "ingredients": [
+      "2 tazas de pollo cocido desmenuzado",
+      "4 tortillas de trigo medianas",
+      "200 g de muzzarella rallada",
+      "1/2 cebolla en cubitos",
+      "1/2 morrón en cubitos",
+      "1 cdita de comino",
+      "1 cdita de pimentón dulce",
+      "1 cda de aceite",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Calentá el aceite y rehogá la cebolla y el morrón 4 minutos.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el pollo, el comino, el pimentón y la sal, y mezclá 2 minutos.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Repartí queso sobre la mitad de cada tortilla."
+      },
+      {
+        "instruction": "Poné el relleno de pollo y más queso, y doblá la tortilla al medio."
+      },
+      {
+        "instruction": "Doralas en una sartén seca 2 o 3 minutos de cada lado, hasta que el queso se derrita.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Cortalas en triángulos y servilas calientes."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": 30,
+      "reheat": "En sartén o airfryer a 180 °C unos 4 minutos.",
+      "tip": "Si el pollo está seco, mezclalo con una cucharada de yogur o salsa."
+    }
+  },
+  {
+    "title": "Ensalada tibia de pollo, papas y arvejas con mostaza",
+    "description": "Una ensalada contundente con pollo y papas hervidas que sobraron, aderezada con una vinagreta cremosa de mostaza y yogur.",
+    "servings": 3,
+    "prep_minutes": 12,
+    "cook_minutes": 5,
+    "difficulty": "facil",
+    "tags": [
+      "sobras",
+      "pollo",
+      "ensalada",
+      "almuerzo",
+      "una olla",
+      "alto en proteína"
+    ],
+    "ingredients": [
+      "300 g de pollo cocido en tiras",
+      "4 papas hervidas en cubos",
+      "1/2 taza de arvejas (frescas o congeladas)",
+      "1 cda de mostaza",
+      "2 cdas de yogur natural",
+      "2 cdas de aceite de oliva",
+      "1 cda de vinagre de manzana",
+      "2 cebollas de verdeo picadas",
+      "2 cdas de perejil picado",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Hervi las arvejas 3 minutos en agua con sal y escurrilas.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Mezclá en un bowl la mostaza, el yogur, el aceite, el vinagre, la sal y la pimienta."
+      },
+      {
+        "instruction": "Calentá las papas y el pollo 2 minutos en una sartén o en el microondas.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Juntá papas, pollo, arvejas, verdeo y perejil en una ensaladera."
+      },
+      {
+        "instruction": "Volcá el aderezo y mezclá con cuidado para no romper las papas."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Se come tibia o fría; si querés, entibiala 1 minuto en microondas.",
+      "tip": "Aderezala justo antes de servir para que las papas no se pongan blandas."
+    }
+  },
+  {
+    "title": "Panzanella de pan viejo con tomate y albahaca",
+    "description": "Ensalada toscana para rescatar pan duro: cubos crocantes que se empapan con el jugo de tomate y una vinagreta de ajo.",
+    "servings": 3,
+    "prep_minutes": 12,
+    "cook_minutes": 6,
+    "difficulty": "facil",
+    "tags": [
+      "sobras",
+      "ensalada",
+      "vegano",
+      "económico",
+      "verano",
+      "rápido",
+      "mediterránea"
+    ],
+    "ingredients": [
+      "250 g de pan del día anterior en cubos",
+      "3 tomates maduros en cubos",
+      "1/2 pepino en rodajas",
+      "1/2 cebolla morada en plumas finas",
+      "10 hojas de albahaca",
+      "4 cdas de aceite de oliva",
+      "2 cdas de vinagre de vino",
+      "1 diente de ajo rallado",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Tostá los cubos de pan en una sartén con 1 cucharada de aceite, 5 o 6 minutos, hasta que estén dorados.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Mezclá el resto del aceite con el vinagre, el ajo, la sal y la pimienta."
+      },
+      {
+        "instruction": "Poné los tomates, el pepino y la cebolla en una ensaladera y sumá la vinagreta."
+      },
+      {
+        "instruction": "Agregá el pan tostado y la albahaca rota con las manos."
+      },
+      {
+        "instruction": "Dejá reposar 5 minutos para que el pan absorba los jugos.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Probá, rectificá la sal y serví."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "No se recalienta; comela fría o a temperatura ambiente.",
+      "tip": "Guardá el pan tostado aparte si querés conservarlo crocante."
+    }
+  },
+  {
+    "title": "Torrejas de pan con banana y canela",
+    "description": "Pan que quedó duro, remojado en leche con vainilla y dorado en manteca. Se sirven con banana caramelizada.",
+    "servings": 3,
+    "prep_minutes": 8,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "sobras",
+      "postre",
+      "desayuno",
+      "merienda",
+      "para chicos",
+      "fruta",
+      "económico"
+    ],
+    "ingredients": [
+      "6 rodajas gruesas de pan del día anterior",
+      "2 huevos",
+      "1 taza de leche",
+      "1 cdita de esencia de vainilla",
+      "1 cdita de canela en polvo",
+      "1 banana en rodajas",
+      "1 cda de manteca",
+      "2 cdas de azúcar",
+      "miel a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Batí los huevos con la leche, la vainilla y la mitad de la canela."
+      },
+      {
+        "instruction": "Remojá cada rodaja de pan 30 segundos de cada lado, sin que se deshaga.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Derretí la manteca en una sartén a fuego medio."
+      },
+      {
+        "instruction": "Doralas 2 o 3 minutos por lado hasta que estén bien tostadas.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Retiralas y salteá la banana con el azúcar 2 minutos en la misma sartén.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Serví las torrejas con la banana, canela y un hilo de miel."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": 30,
+      "reheat": "En tostadora o sartén 3 minutos, hasta que estén calientes y firmes.",
+      "tip": "El pan duro absorbe mejor la mezcla que el pan fresco."
+    }
+  },
+  {
+    "title": "Revuelto gramajo con papas sobrantes",
+    "description": "Clásico argentino de bodegón con papas hervidas que quedaron, jamón, cebolla y huevos cremosos.",
+    "servings": 3,
+    "prep_minutes": 8,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "sobras",
+      "argentina",
+      "huevo",
+      "almuerzo",
+      "cena",
+      "rápido",
+      "económico"
+    ],
+    "ingredients": [
+      "4 papas hervidas en bastones",
+      "150 g de jamón cocido en tiras",
+      "1 cebolla en plumas",
+      "4 huevos",
+      "3 cdas de aceite",
+      "2 cdas de perejil picado",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Calentá el aceite en una sartén grande a fuego medio-fuerte."
+      },
+      {
+        "instruction": "Dorá las papas 6 minutos, moviendo poco, hasta que se pongan crocantes.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá la cebolla y cociná 4 minutos más.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el jamón y salteá 1 minuto."
+      },
+      {
+        "instruction": "Bajá el fuego y volcá los huevos batidos con sal y pimienta."
+      },
+      {
+        "instruction": "Revolvé suave 2 minutos hasta que cuajen pero queden húmedos.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Espolvoreá con perejil y serví enseguida."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "En sartén a fuego bajo con una cucharada de agua, 2 minutos.",
+      "tip": "Sacalo del fuego antes de que se seque: el huevo sigue cocinándose."
+    }
+  },
+  {
+    "title": "Medallones de puré y queso a la sartén",
+    "description": "Reciclá el puré de ayer en medallones crocantes con corazón de queso. Salen rápido y los chicos los adoran.",
+    "servings": 3,
+    "prep_minutes": 10,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "sobras",
+      "verdura",
+      "para chicos",
+      "vegetariano",
+      "almuerzo",
+      "cena",
+      "económico"
+    ],
+    "ingredients": [
+      "3 tazas de puré de papa sobrante",
+      "1 huevo",
+      "4 cdas de pan rallado",
+      "100 g de muzzarella en cubitos",
+      "2 cdas de ciboulette picada",
+      "1 pizca de nuez moscada",
+      "pan rallado extra para rebozar",
+      "3 cdas de aceite",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Mezclá el puré con el huevo, 4 cucharadas de pan rallado, la ciboulette, la nuez moscada, la sal y la pimienta."
+      },
+      {
+        "instruction": "Con las manos húmedas, formá bolas del tamaño de una mandarina."
+      },
+      {
+        "instruction": "Hundí un cubito de muzzarella en el centro y cerralo."
+      },
+      {
+        "instruction": "Aplastá cada bola para darle forma de medallón y pasala por pan rallado."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén a fuego medio."
+      },
+      {
+        "instruction": "Doralos 4 o 5 minutos de cada lado, hasta que estén crocantes.",
+        "minutes": 9,
+        "passive": false
+      },
+      {
+        "instruction": "Escurrilos sobre papel y servilos calientes."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": 60,
+      "reheat": "En airfryer o horno a 190 °C unos 8 minutos.",
+      "tip": "Si el puré está muy blando, sumá más pan rallado hasta que se pueda moldear."
+    }
+  },
+  {
+    "title": "Sopa de ajo con pan duro y huevo",
+    "description": "Una sopa española de cuchara que convierte el pan duro en una cena reconfortante, con huevos que se cocinan en el caldo.",
+    "servings": 3,
+    "prep_minutes": 5,
+    "cook_minutes": 18,
+    "difficulty": "facil",
+    "tags": [
+      "sobras",
+      "sopa",
+      "huevo",
+      "invierno",
+      "española",
+      "económico",
+      "una olla"
+    ],
+    "ingredients": [
+      "200 g de pan duro en rebanadas finas",
+      "4 dientes de ajo en láminas",
+      "1 cda de pimentón dulce",
+      "800 ml de caldo de verduras o de pollo",
+      "4 huevos",
+      "3 cdas de aceite de oliva",
+      "2 cdas de perejil picado",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Calentá el aceite en una olla a fuego medio y dorá el ajo 1 minuto, sin quemarlo.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el pan y salteá 2 minutos para que se impregne."
+      },
+      {
+        "instruction": "Apagá el fuego, agregá el pimentón y mezclá rápido para que no se amargue."
+      },
+      {
+        "instruction": "Volcá el caldo caliente y la sal, y cociná a fuego bajo 10 minutos, hasta que el pan se ablande.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Hacé cuatro huecos en la sopa y quebrá un huevo en cada uno."
+      },
+      {
+        "instruction": "Tapá y cociná 3 minutos, hasta que las claras cuajen.",
+        "minutes": 3,
+        "passive": true
+      },
+      {
+        "instruction": "Serví con perejil y pimienta."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "A fuego bajo con un poco de caldo o agua, hasta que hierva suave.",
+      "tip": "Los huevos quedan mejor recién hechos: si vas a guardar, cociná solo los que vas a comer."
+    }
+  }
+]

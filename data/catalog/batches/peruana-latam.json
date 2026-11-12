@@ -1,0 +1,716 @@
+[
+  {
+    "title": "Lomo saltado casero con papas fritas",
+    "description": "Clásico peruano de tiras de carne salteadas a fuego fuerte con cebolla, tomate, soja y vinagre, mezcladas con papas fritas. Se hace en una sartén grande.",
+    "servings": 4,
+    "prep_minutes": 15,
+    "cook_minutes": 20,
+    "difficulty": "media",
+    "tags": [
+      "carne",
+      "salteado",
+      "latinoamericana",
+      "almuerzo",
+      "cena"
+    ],
+    "ingredients": [
+      "500 g de bife angosto o lomo en tiras finas",
+      "600 g de papas",
+      "1 cebolla grande en gajos",
+      "2 tomates firmes en gajos",
+      "2 dientes de ajo picados",
+      "3 cda de salsa de soja",
+      "1 cda de vinagre",
+      "1 cdita de ají molido",
+      "1 cdita de comino",
+      "1 puñado de perejil o cilantro picado",
+      "aceite para freír",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá las papas en bastones de 1 cm y secalas bien con un trapo.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá 2 cm de aceite en una sartén y freí las papas por tandas hasta que estén doradas.",
+        "minutes": 12,
+        "passive": false
+      },
+      {
+        "instruction": "Escurrí las papas sobre papel de cocina y salalas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Condimentá la carne con sal, pimienta, comino y ají molido.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá 2 cucharadas de aceite en otra sartén grande a fuego fuerte y sellá la carne en dos tandas por 2 minutos cada una.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá la cebolla y el ajo y salteá 2 minutos más.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el tomate, la soja y el vinagre y salteá 1 minuto sin cocinar de más.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Apagá el fuego, mezclá con las papas y el perejil y serví enseguida.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "En sartén caliente 3 minutos para que las papas recuperen algo de textura.",
+      "tip": "Guardá las papas aparte de la carne si querés que no se ablanden."
+    }
+  },
+  {
+    "title": "Ceviche de pescado blanco con cebolla morada y cilantro",
+    "description": "Pescado fresco curado en limón con cebolla morada, ají y cilantro, al estilo peruano. No lleva cocción y es ideal para días de calor.",
+    "servings": 3,
+    "prep_minutes": 25,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "pescado",
+      "rápido",
+      "sin horno",
+      "sin gluten",
+      "liviano",
+      "latinoamericana",
+      "verano"
+    ],
+    "ingredients": [
+      "400 g de filet de pescado blanco muy fresco (merluza, corvina o lenguado)",
+      "8 limones (jugo, unos 200 ml)",
+      "1 cebolla morada chica",
+      "1 ají picante fresco o 1 cdita de ají molido",
+      "1 diente de ajo",
+      "1/2 atado de cilantro",
+      "1 choclo cocido",
+      "1 batata cocida",
+      "hojas de lechuga",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá la cebolla morada en pluma fina y remojala 5 minutos en agua fría con una pizca de sal.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Cortá el pescado en cubos de 2 cm y ponelo en un bol frío.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Picá el ajo y el ají y sumalos al pescado con sal.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Exprimí los limones, volcá el jugo sobre el pescado y mezclá.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Dejá curar en la heladera hasta que el pescado esté opaco por fuera.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Escurrí la cebolla, picá el cilantro y mezclalos con el pescado.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Serví sobre hojas de lechuga con rodajas de choclo y batata.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 0,
+      "freezer_days": null,
+      "reheat": "No se recalienta: se come frío y recién hecho.",
+      "tip": "Usá pescado muy fresco, comprado el mismo día, y consumilo en el momento."
+    }
+  },
+  {
+    "title": "Papas a la huancaína con huevo duro",
+    "description": "Papas hervidas bañadas con una salsa cremosa de queso fresco y ají amarillo, típica de Perú. Se sirve tibia o a temperatura ambiente.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 20,
+    "difficulty": "facil",
+    "tags": [
+      "vegetariano",
+      "huevo",
+      "salsa",
+      "latinoamericana",
+      "almuerzo"
+    ],
+    "ingredients": [
+      "800 g de papas",
+      "4 huevos",
+      "150 g de queso fresco",
+      "100 ml de leche",
+      "2 cda de pasta de ají amarillo (o 1 morrón amarillo asado y 1 cdita de ají molido)",
+      "4 galletitas de agua",
+      "3 cda de aceite",
+      "1 diente de ajo",
+      "hojas de lechuga",
+      "8 aceitunas negras",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá las papas en rodajas gruesas y ponelas en una olla con agua fría y sal.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Sumá los huevos a la olla y hervilos junto con las papas hasta que las papas estén tiernas.",
+        "minutes": 15,
+        "passive": true
+      },
+      {
+        "instruction": "Mientras tanto, poné en la licuadora el queso, la leche, el ají, el ajo y las galletitas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Licuá y agregá el aceite en hilo hasta obtener una salsa cremosa.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Escurrí las papas y enfriá los huevos con agua fría. Pelalos y cortalos al medio.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Armá los platos con lechuga, papas, salsa por encima, huevo y aceitunas.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Se come frío o a temperatura ambiente, no hace falta recalentar.",
+      "tip": "Guardá la salsa en un frasco aparte y bañá las papas al servir."
+    }
+  },
+  {
+    "title": "Patacones con hogao",
+    "description": "Rodajas de plátano verde fritas, aplastadas y fritas otra vez, con una salsa colombiana de tomate y cebolla de verdeo. Crocantes por fuera y tiernas por dentro.",
+    "servings": 4,
+    "prep_minutes": 15,
+    "cook_minutes": 20,
+    "difficulty": "media",
+    "tags": [
+      "vegano",
+      "sin gluten",
+      "sin lácteos",
+      "snack",
+      "guarnición",
+      "latinoamericana",
+      "para compartir"
+    ],
+    "ingredients": [
+      "2 plátanos verdes grandes",
+      "aceite para freír",
+      "sal a gusto",
+      "2 tomates maduros",
+      "4 cebollas de verdeo",
+      "1 diente de ajo",
+      "1 cdita de comino",
+      "1 cda de aceite",
+      "1 pizca de azúcar"
+    ],
+    "steps": [
+      {
+        "instruction": "Picá los tomates sin semillas y las cebollas de verdeo bien finitas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Rehogá el verdeo con 1 cucharada de aceite y el ajo picado 2 minutos.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el tomate, el comino, el azúcar y sal, y cociná a fuego bajo hasta que espese.",
+        "minutes": 8,
+        "passive": true
+      },
+      {
+        "instruction": "Pelá los plátanos con un cuchillo y cortalos en rodajas de 2 cm.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Freí las rodajas en aceite caliente hasta que estén apenas doradas.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Sacalas y aplastalas con el fondo de un vaso o una tabla hasta que queden finas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Volvé a freír los patacones hasta que estén dorados y crocantes, escurrilos y salalos.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Serví los patacones calientes con el hogao.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Recalentá los patacones en horno fuerte o airfryer 5 minutos; el hogao, en una cacerola.",
+      "tip": "El hogao se conserva mejor que los patacones, que son mejores recién hechos."
+    }
+  },
+  {
+    "title": "Huevos pericos con tomate y cebolla de verdeo",
+    "description": "Huevos revueltos al estilo colombiano con tomate y verdeo, jugosos y rápidos. Perfectos para el desayuno o una cena liviana con pan o arepas.",
+    "servings": 2,
+    "prep_minutes": 8,
+    "cook_minutes": 8,
+    "difficulty": "facil",
+    "tags": [
+      "huevo",
+      "rápido",
+      "desayuno",
+      "sin gluten",
+      "latinoamericana",
+      "cena"
+    ],
+    "ingredients": [
+      "4 huevos",
+      "1 tomate maduro",
+      "3 cebollas de verdeo",
+      "1 cda de manteca",
+      "1 pizca de comino",
+      "sal y pimienta a gusto",
+      "pan tostado o arepas para acompañar"
+    ],
+    "steps": [
+      {
+        "instruction": "Picá el tomate sin semillas y el verdeo en trozos chicos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Derretí la manteca en una sartén a fuego medio y rehogá el verdeo.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el tomate, el comino y sal, y cociná hasta que suelte el jugo.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Batí los huevos con sal y pimienta y volcalos en la sartén.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Revolvé suavemente hasta que cuajen pero sigan cremosos.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Serví enseguida con pan tostado.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Calentá a fuego bajo en sartén con una cucharadita de agua.",
+      "tip": "Sacalos del fuego cuando todavía se vean brillantes, se terminan de cocinar solos."
+    }
+  },
+  {
+    "title": "Ajiaco rápido de pollo y papas con choclo",
+    "description": "Versión express de la sopa colombiana: pollo en cubos, papas, choclo y comino, terminada con crema, palta y alcaparras. Una olla y listo.",
+    "servings": 4,
+    "prep_minutes": 15,
+    "cook_minutes": 20,
+    "difficulty": "facil",
+    "tags": [
+      "sopa",
+      "pollo",
+      "una olla",
+      "latinoamericana",
+      "invierno",
+      "almuerzo"
+    ],
+    "ingredients": [
+      "2 pechugas de pollo (unos 500 g)",
+      "800 g de papas",
+      "1 lata de choclo en granos",
+      "1 cebolla",
+      "2 dientes de ajo",
+      "1,2 l de agua o caldo",
+      "1 cdita de comino",
+      "1 cda de aceite",
+      "4 cda de crema de leche",
+      "1 palta",
+      "1 cda de alcaparras",
+      "1 puñado de cilantro",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá el pollo en cubos de 2 cm y las papas en cubos de 1 cm.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Rehogá la cebolla picada y el ajo en aceite 3 minutos en una olla.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el agua o caldo, las papas, el comino y sal, y llevá a hervor.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Sumá el pollo y cociná a fuego medio hasta que las papas estén tiernas.",
+        "minutes": 14,
+        "passive": true
+      },
+      {
+        "instruction": "Aplastá unas cuantas papas contra la olla para espesar el caldo.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Agregá el choclo escurrido y calentá 2 minutos.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Serví con crema, palta en cubos, alcaparras y cilantro picado.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Calentá en una cacerola a fuego bajo con un chorrito de agua.",
+      "tip": "Si vas a freezar, hacelo sin la crema ni la palta y sumalas al servir."
+    }
+  },
+  {
+    "title": "Arepas con reina pepiada",
+    "description": "Arepas de harina de maíz doradas en sartén, rellenas con la clásica ensalada venezolana de pollo, palta y cilantro. Crocantes por fuera y suaves adentro.",
+    "servings": 4,
+    "prep_minutes": 15,
+    "cook_minutes": 25,
+    "difficulty": "media",
+    "tags": [
+      "pollo",
+      "sin gluten",
+      "latinoamericana",
+      "almuerzo",
+      "cena",
+      "para compartir"
+    ],
+    "ingredients": [
+      "2 tazas de harina de maíz precocida (tipo arepa)",
+      "2 1/2 tazas de agua tibia",
+      "1 cdita de sal",
+      "1 cda de aceite",
+      "2 pechugas de pollo",
+      "1 palta grande",
+      "3 cda de mayonesa",
+      "2 cebollas de verdeo",
+      "2 cda de cilantro picado",
+      "el jugo de 1 limón",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Hervé las pechugas en agua con sal hasta que estén bien cocidas.",
+        "minutes": 12,
+        "passive": true
+      },
+      {
+        "instruction": "Mientras tanto, mezclá el agua tibia con la sal y volcá la harina de a poco, amasando hasta que no se pegue.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Dejá reposar la masa tapada.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Formá 8 bollos y aplastalos hasta dejar discos de 1,5 cm de alto.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Doralos en una sartén aceitada a fuego medio, 6 minutos de cada lado, hasta que suenen huecos al golpearlos.",
+        "minutes": 12,
+        "passive": false
+      },
+      {
+        "instruction": "Desmenuzá el pollo y mezclalo con la palta pisada, mayonesa, verdeo, cilantro, limón, sal y pimienta.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Abrí las arepas como un pan y rellenalas con el pollo.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Recalentá las arepas en sartén o tostadora y servilas con el relleno frío.",
+      "tip": "Guardá el relleno aparte con film pegado a la superficie para que la palta no se oscurezca."
+    }
+  },
+  {
+    "title": "Pabellón express con carne picada, porotos negros y banana frita",
+    "description": "Versión rápida del plato venezolano: carne picada sazonada, porotos negros, arroz blanco y bananas bien maduras fritas. Un plato completo para el almuerzo.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 25,
+    "difficulty": "media",
+    "tags": [
+      "carne",
+      "arroz",
+      "legumbres",
+      "latinoamericana",
+      "almuerzo",
+      "cena"
+    ],
+    "ingredients": [
+      "1 taza de arroz",
+      "400 g de carne picada",
+      "1 lata de porotos negros (400 g)",
+      "1 cebolla",
+      "1 morrón rojo",
+      "2 tomates",
+      "2 dientes de ajo",
+      "1 cdita de comino",
+      "1 cda de vinagre",
+      "2 bananas bien maduras",
+      "3 cda de aceite",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cociná el arroz en 2 tazas de agua con sal, tapado y a fuego bajo.",
+        "minutes": 15,
+        "passive": true
+      },
+      {
+        "instruction": "Picá la cebolla, el morrón, los tomates y el ajo en cubos chicos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Rehogá cebolla, morrón y ajo con 1 cucharada de aceite en una sartén grande.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá la carne picada y cociná desarmándola hasta que se dore.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el tomate, el comino, el vinagre, sal y pimienta y cociná hasta que espese.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Calentá los porotos escurridos en una cacerola con un chorrito de agua y sal.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Cortá las bananas en rodajas gruesas al sesgo y doralas en aceite 2 minutos por lado.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Serví el arroz con la carne, los porotos y las bananas.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Recalentá en microondas o sartén con un chorrito de agua.",
+      "tip": "Para freezar, guardá la carne, los porotos y el arroz sin las bananas fritas."
+    }
+  },
+  {
+    "title": "Cachapas de choclo con queso",
+    "description": "Panqueques venezolanos de choclo, dulces y tiernos, doblados sobre queso derretido. Se hacen en sartén con una masa licuada.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 20,
+    "difficulty": "facil",
+    "tags": [
+      "vegetariano",
+      "sin horno",
+      "latinoamericana",
+      "cena",
+      "para compartir"
+    ],
+    "ingredients": [
+      "400 g de choclo en granos (lata o congelado, descongelado)",
+      "1 huevo",
+      "4 cda de harina de maíz fina o harina común",
+      "2 cda de azúcar",
+      "1/2 cdita de sal",
+      "2 cda de leche",
+      "1 cda de manteca",
+      "200 g de queso cremoso o mozzarella en fetas"
+    ],
+    "steps": [
+      {
+        "instruction": "Procesá el choclo con el huevo, la harina, el azúcar, la sal y la leche, dejando algo de textura.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá una sartén antiadherente a fuego medio con un poco de manteca.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Volcá un cucharón de masa y estirala hasta formar un disco de 12 cm.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cociná hasta que se formen burbujas en la superficie y se dore abajo.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Dalas vuelta con cuidado y cociná el otro lado.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Poné queso sobre la mitad, doblá la cachapa y dejá que se derrita.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Repetí con el resto de la masa y serví calientes.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": 60,
+      "reheat": "Calentá en sartén a fuego bajo hasta que el queso se ablande.",
+      "tip": "Separá las cachapas ya cocidas con papel manteca antes de freezar."
+    }
+  },
+  {
+    "title": "Tequeños de queso al horno con salsa de ajo",
+    "description": "Palitos de queso envueltos en masa y horneados hasta quedar crocantes, un clásico venezolano para picar. Usan tapas de empanada para ir más rápido.",
+    "servings": 4,
+    "prep_minutes": 15,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "snack",
+      "para compartir",
+      "vegetariano",
+      "empanada",
+      "horno",
+      "latinoamericana"
+    ],
+    "ingredients": [
+      "6 tapas de empanada",
+      "200 g de queso semiduro (tipo pategrás o provolone)",
+      "1 huevo",
+      "1 cda de agua",
+      "3 cda de mayonesa",
+      "1 diente de ajo rallado",
+      "1 cdita de jugo de limón"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá el horno a 200 °C y forrá una placa con papel manteca.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cortá el queso en 12 bastones de 8 cm de largo.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cortá cada tapa al medio para obtener 12 semicírculos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Poné un bastón de queso en el borde recto de cada semicírculo y enrollalo, cerrando bien los extremos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Acomodalos en la placa con el cierre hacia abajo y pintalos con el huevo batido con agua.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Horneá hasta que estén dorados.",
+        "minutes": 15,
+        "passive": true
+      },
+      {
+        "instruction": "Mezclá la mayonesa con el ajo y el limón para la salsa y serví los tequeños calientes.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Recalentá en horno fuerte o airfryer 6 minutos para que vuelvan a quedar crocantes.",
+      "tip": "Podés freezarlos crudos y hornearlos directo del freezer sumando 5 minutos."
+    }
+  }
+]
