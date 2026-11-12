@@ -69,7 +69,7 @@
   4. `finished_at` y vuelta al detalle. En el detalle aparece "La última vez: 12/11, ⭐ 4" y las notas de sesiones anteriores.
 - **Aceptación:** una edición hecha cocinando aparece como versión nueva con origen "mientras cocinaba".
 
-### T3.8 — Tests del modo cocinar
+### [x] T3.8 — Tests del modo cocinar
 - **Archivos:** `tests/e2e/cooking.spec.ts`.
 - **Escenario:** abrir Cocinar → mise en place → avanzar con "Listo" y con tap → iniciar timer de un paso pasivo (con `page.clock` para adelantar el tiempo) → chip flotante → editar duración de un paso → terminar → guardar en receta → ver la versión nueva.
 
@@ -94,3 +94,5 @@
 - T3.6: los ajustes son una lista de operaciones (`CookingEdit`) que se aplican en orden con `applyCookingEdits` (15 tests); cada operación usa los índices de la receta ya modificada. Se guardan en `cooking_sessions.pending_edits` junto con el progreso y se retoman al volver. `SET_STEPS` en el reducer actualiza el total de pantallas. La cantidad se escribe para las porciones actuales y se guarda convertida a las de la receta; también se reescribe el número inicial de `raw_text`. Límite conocido: los timers se identifican por `recipeId:índice`, así que agregar o borrar un paso con un timer en marcha en un paso posterior puede desalinear ese chip. e2e de ajustes en `cooking.spec.ts`.
 
 - T3.7: la pantalla final junta todo en un solo paso: tiempo real, resumen de ajustes con "Guardar en la receta" o "Solo por esta vez", puntaje, nota y foto, y un botón "Terminar". `finishCookingSession` guarda los ajustes como versión nueva (`origin = 'cooking_session'`, nota automática "Ajustes mientras cocinabas: …") reutilizando `saveRecipe`, y cierra la sesión; los ajustes los manda el cliente (autoritativos, no depende del guardado con debounce). Si la receta no tiene foto, la del plato puede quedar como portada. La foto se sube al bucket `recipe-images` (máx. 8 MB, solo imágenes). El detalle muestra "La última vez" (por `recipe_last_cooked`) y las notas propias. Límite conocido: si otra persona edita la receta mientras se cocina, guardar los ajustes pisa esa edición (se guarda la receta completa).
+
+- T3.8: cuatro escenarios en `tests/e2e/cooking.spec.ts`: recorrido + timer pasivo con chip flotante (el tiempo en segundo plano se simula adelantando `endsAt` en localStorage, no con `page.clock`), retomar sesión, ajustar un paso, y terminar guardando en la receta con foto.
