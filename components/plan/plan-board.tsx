@@ -31,13 +31,7 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet";
 import { MEAL_SLOTS, type MealSlot } from "@/lib/domain/meal-slots";
-import {
-  addDays,
-  dayLabel,
-  formatRangeLabel,
-  rangeDays,
-  rangeLength,
-} from "@/lib/domain/week";
+import { addDays, dayLabel, formatRangeLabel, rangeDays, rangeLength } from "@/lib/domain/week";
 import {
   addEntry,
   approvePlan,

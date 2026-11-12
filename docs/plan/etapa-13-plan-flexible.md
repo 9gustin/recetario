@@ -10,20 +10,21 @@
 - **Pasos:** `meal_plan_entries.date` y `slot` pasan a ser opcionales (comida sin fecha = "para cocinar"); `quantity` (veces que se hace, ej. ×3); `cooked_at` para tildar lo que ya se cocinó; un único "menú" vigente por grupo (se crea solo al agregar la primera comida; sin estado borrador/aprobado en la UI); `approve_plan` pasa a ser automático (recetas nuevas de la IA se guardan al agregarlas); migración + pgTAP; compat con planes viejos y con "Hoy".
 - **Aceptación:** agregar comidas sin fecha ni momento; las existentes con fecha siguen funcionando.
 
-### [ ] T13.3 — Pantalla "Mis comidas" simple
+### [x] T13.3 — Pantalla "Mis comidas" simple
 - **Pasos:** reemplaza el tablero semanal: tarjetas compactas (foto, título, ×N, tilde "cocinada"); agregar por voz/texto/receta/catálogo; quitar el flujo "Aprobar plan"; fecha opcional dentro de cada comida ("Asignar día"), no obligatoria; resumen corto arriba ("7 comidas · 12 ingredientes para comprar").
 - **Aceptación:** de cero a una lista de 3 comidas en ≤ 3 toques o con un audio.
 
-### [ ] T13.4 — IA conversacional que arma el listado
+### [x] T13.4 — IA conversacional que arma el listado
 - **Pasos:** el agente recibe pedidos libres ("pollo con ensalada 3 veces, sugerime ensaladas"), agrega comidas sin día/hora, sugiere opciones (catálogo/recetario) y responde con un resumen breve; entrada por audio (transcripción existente); todo se guarda por defecto, sin confirmaciones; los cambios son visibles y reversibles ("deshacer").
 - **Aceptación:** un audio con 5 pedidos crea 5+ comidas; `eval:plan` actualizado.
 
-### [ ] T13.5 — Lista de compras resumida y por categorías
+### [x] T13.5 — Lista de compras resumida y por categorías
 - **Pasos:** debajo del listado, lista de compras automática (se regenera sola al cambiar las comidas); agrupada por lugar/categoría (verdulería, carnicería/pollería, almacén/súper, lácteos, otros); sección final colapsada "Cosas que seguro tenés" (aceite, sal, azúcar, especias…) con tilde para ignorar; cantidades redondeadas y agrupadas; editable (tildar, agregar, quitar).
 - **Aceptación:** la lista de un menú de 7 comidas cabe en ~2 pantallas y los básicos quedan al final.
 
-### [ ] T13.6 — E2E y cierre
+### [x] T13.6 — E2E y cierre
 - **Pasos:** ajustar e2e de plan/compras/hoy; `pnpm check`, `db:test`, `test:e2e`, build; `progreso.md`.
 
 ## Notas de ejecución
 - T13.2: el "menú" es un `meal_plans` especial por grupo (`week_start = 2000-01-01`, `MENU_DATE`), creado por `get_or_create_menu`; así reutiliza RLS, realtime, compras y agente. Sus comidas tienen `date`/`slot` nulos; `quantity` multiplica porciones en la lista de compras (que para el menú es una sola lista, sin viajes). Los planes con fecha siguen igual.
+- T13.3–T13.5: `/g/[id]/plan` ahora es "Mis comidas" (el tablero por días sigue en `/plan/[fecha]`, enlazado como "Planificar por días"). Las comidas se guardan solas (sin aprobar) y la lista de compras se regenera en cada cambio; los básicos (`pantry_staple`) van a una sección final colapsada "Cosas que seguro tenés". El agente en modo menú usa `add_meals` / `list_meals` / `remove_meals` (valida solo ingredientes prohibidos y límites; no reglas por momento ni variedad).

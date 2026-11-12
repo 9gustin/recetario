@@ -61,3 +61,17 @@ export async function getActiveListProgress(groupId: string) {
     done: items.filter((i) => i.state !== "pending").length,
   };
 }
+
+/** Lista activa de un plan (la del menú, por ejemplo), si ya se generó. */
+export async function getPlanList(planId: string): Promise<ListRow | null> {
+  const supabase = await createClient();
+  const { data } = await supabase
+    .from("shopping_lists")
+    .select("id, group_id, name, status, shop_date")
+    .eq("plan_id", planId)
+    .neq("status", "archived")
+    .order("created_at", { ascending: false })
+    .limit(1)
+    .maybeSingle();
+  return data;
+}

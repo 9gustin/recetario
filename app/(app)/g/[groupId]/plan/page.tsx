@@ -1,18 +1,30 @@
-import { redirect } from "next/navigation";
+import { MenuView } from "@/components/menu/menu-view";
 import { requireUser } from "@/lib/auth";
 import { todayString, weekStartOf } from "@/lib/domain/week";
-import { getCurrentPlanStart, getGroupPlanSettings } from "@/lib/plan/queries";
+import { getGroupPlanSettings, getMenu, getPlanMembers } from "@/lib/plan/queries";
+import { getListItems, getPlanList } from "@/lib/shopping/queries";
 
-export const metadata = { title: "Plan" };
+export const metadata = { title: "Mis comidas" };
 
-/** Lleva al plan vigente (el que cubre hoy); si no hay, a la semana actual vacía. */
+/** "Mis comidas": listado simple de lo que querés cocinar, con las compras debajo. */
 export default async function Page({ params }: { params: Promise<{ groupId: string }> }) {
   await requireUser();
   const { groupId } = await params;
-  const today = todayString();
-  const [current, settings] = await Promise.all([
-    getCurrentPlanStart(groupId, today),
+  const [menu, members, settings] = await Promise.all([
+    getMenu(groupId),
+    getPlanMembers(groupId),
     getGroupPlanSettings(groupId),
   ]);
-  redirect(`/g/${groupId}/plan/${current ?? weekStartOf(new Date(), settings.weekStartsOn)}`);
+  const list = menu.planId ? await getPlanList(menu.planId) : null;
+  const items = list ? await getListItems(list.id) : [];
+  return (
+    <MenuView
+      groupId={groupId}
+      planId={menu.planId}
+      initialEntries={menu.entries}
+      initialSnapshot={{ listId: list?.id ?? null, items }}
+      members={members}
+      weekHref={`/g/${groupId}/plan/${weekStartOf(todayString(), settings.weekStartsOn)}`}
+    />
+  );
 }

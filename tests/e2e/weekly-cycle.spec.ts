@@ -69,7 +69,7 @@ test("ciclo semanal: plan con sobra → aprobar → lista → tachado compartido
 
   const pageA = await (await mobileContext(browser)).newPage();
   await signIn(pageA, aEmail, password);
-  await pageA.goto(`/g/${groupId}/plan`);
+  await pageA.goto(`/g/${groupId}/plan/${weekStartOf(todayString())}`);
   await pageA.getByRole("button", { name: "Aprobar plan" }).tap();
   await expect(pageA.getByText("Aprobado", { exact: true })).toBeVisible();
   // El pipeline post-aprobación muestra su avance y termina.
@@ -102,7 +102,7 @@ test("ciclo semanal: plan con sobra → aprobar → lista → tachado compartido
   await expect(chicken).toHaveAttribute("aria-checked", "true", { timeout: 15_000 });
 
   // Se edita el plan (sale el pollo al limón) y se regenera: lo tachado se conserva.
-  await pageA.goto(`/g/${groupId}/plan`);
+  await pageA.goto(`/g/${groupId}/plan/${weekStartOf(todayString())}`);
   await pageA.getByRole("button", { name: /Pollo al limón/ }).tap();
   await pageA.getByRole("button", { name: /Quitar/ }).tap();
   await pageA.getByRole("button", { name: "Actualizar la lista de compras" }).tap();
@@ -145,7 +145,7 @@ test("bandeja: aprobar el plan avisa a los demás miembros y se puede marcar tod
 
   const pageA = await (await mobileContext(browser)).newPage();
   await signIn(pageA, aEmail, password);
-  await pageA.goto(`/g/${groupId}/plan`);
+  await pageA.goto(`/g/${groupId}/plan/${weekStartOf(todayString())}`);
   await pageA.getByRole("button", { name: "Aprobar plan" }).tap();
   await expect(pageA.getByText("Aprobado", { exact: true })).toBeVisible();
 

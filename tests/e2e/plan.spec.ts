@@ -24,7 +24,7 @@ test("plan: armar la semana a mano, editar una comida y aprobar", async ({ brows
 
   const page = await (await mobileContext(browser)).newPage();
   await signIn(page, email, password);
-  await page.goto(`/g/${groupId}/plan`);
+  await page.goto(`/g/${groupId}/plan/${weekStartOf(todayString())}`);
 
   // Sin plan: estado vacío con las tres opciones.
   await expect(page.getByText("Todavía no hay plan")).toBeVisible();
@@ -34,7 +34,7 @@ test("plan: armar la semana a mano, editar una comida y aprobar", async ({ brows
 
   // Agregar una receta al primer día disponible.
   await page
-    .getByRole("button", { name: /Agregar almuerzo/i })
+    .getByRole("button", { name: /Agregar comida el/i })
     .first()
     .tap();
   await page.getByRole("button", { name: /Milanesas al horno/ }).tap();
@@ -42,9 +42,10 @@ test("plan: armar la semana a mano, editar una comida y aprobar", async ({ brows
 
   // Agregar texto libre en la cena.
   await page
-    .getByRole("button", { name: /Agregar cena/i })
+    .getByRole("button", { name: /Agregar comida el/i })
     .first()
     .tap();
+  await page.getByRole("radio", { name: "Cena" }).tap();
   await page.getByLabel("O escribí algo").fill("Comemos afuera");
   await page.getByRole("button", { name: "Agregar", exact: true }).tap();
   await expect(page.getByText("Comemos afuera")).toBeVisible();
@@ -73,10 +74,10 @@ test("plan: duplicar una semana anterior desde el historial conserva las comidas
   });
   const page = await (await mobileContext(browser)).newPage();
   await signIn(page, email, password);
-  await page.goto(`/g/${groupId}/plan`);
+  await page.goto(`/g/${groupId}/plan/${weekStartOf(todayString())}`);
   await page.getByRole("button", { name: /Armar a mano/ }).tap();
   await page
-    .getByRole("button", { name: /Agregar almuerzo/i })
+    .getByRole("button", { name: /Agregar comida el/i })
     .first()
     .tap();
   await page.getByRole("button", { name: /Guiso de lentejas/ }).tap();
@@ -105,18 +106,18 @@ test("plan: los cambios de otra persona aparecen en vivo", async ({ browser }) =
 
   const pageA = await (await mobileContext(browser)).newPage();
   await signIn(pageA, aEmail, password);
-  await pageA.goto(`/g/${groupId}/plan`);
+  await pageA.goto(`/g/${groupId}/plan/${weekStartOf(todayString())}`);
   await pageA.getByRole("button", { name: /Armar a mano/ }).tap();
   await expect(pageA.getByText("Borrador", { exact: true })).toBeVisible();
 
   const pageB = await (await mobileContext(browser)).newPage();
   await signIn(pageB, bEmail, password);
-  await pageB.goto(`/g/${groupId}/plan`);
+  await pageB.goto(`/g/${groupId}/plan/${weekStartOf(todayString())}`);
   await expect(pageB.getByText("Borrador", { exact: true })).toBeVisible();
   await expect(pageB.getByText("Ana está viendo este plan")).toBeVisible();
 
   await pageA
-    .getByRole("button", { name: /Agregar almuerzo/i })
+    .getByRole("button", { name: /Agregar comida el/i })
     .first()
     .tap();
   await pageA.getByRole("button", { name: /Tarta de zapallitos/ }).tap();
@@ -173,7 +174,7 @@ test("plan con IA: el chat aplica cambios del plan en vivo y marca advertencias"
     });
   });
 
-  await page.goto(`/g/${groupId}/plan`);
+  await page.goto(`/g/${groupId}/plan/${weekStartOf(todayString())}`);
   await page.getByRole("button", { name: /Armar con IA/ }).tap();
   const panel = page.getByRole("dialog", { name: "Armar el plan con IA" });
   await expect(panel).toBeVisible();
@@ -225,7 +226,7 @@ test("recetas nuevas de la IA: invisibles en el recetario hasta aprobar el plan"
   await page.goto(`/g/${groupId}/recetas`);
   await expect(page.getByText("Budín inventado por la IA")).toHaveCount(0);
 
-  await page.goto(`/g/${groupId}/plan`);
+  await page.goto(`/g/${groupId}/plan/${weekStartOf(todayString())}`);
   await expect(page.getByText("Budín inventado por la IA")).toBeVisible();
   await expect(page.getByText("Nueva").first()).toBeVisible();
   await page.getByRole("button", { name: "Aprobar plan" }).tap();
@@ -283,7 +284,7 @@ test("preparaciones: se ven por día en la pestaña del plan y en Hoy, y se tild
     "true",
   );
 
-  await page.goto(`/g/${groupId}/plan`);
+  await page.goto(`/g/${groupId}/plan/${weekStartOf(todayString())}`);
   await page.getByRole("tab", { name: "Preparación" }).tap();
   await expect(page.getByText("· 5 min").first()).toBeVisible();
   await expect(page.getByText("Descongelar el pollo")).toBeVisible();

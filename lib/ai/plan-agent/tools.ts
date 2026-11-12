@@ -582,6 +582,121 @@ const useCatalogRecipe = defineTool({
   },
 });
 
+// ---------------------------------------------------------------------------
+// Modo "Mis comidas": listado sin días ni momentos
+// ---------------------------------------------------------------------------
+
+const MENU_PLACEHOLDER_DATE = "2000-01-01";
+
+const addMeals = defineTool({
+  name: "add_meals",
+  description:
+    "Agrega comidas al listado 'Mis comidas' (sin día ni momento). Cada una con recipe_id (del recetario o del catálogo) o free_text, y quantity = cuántas veces se cocina. Valida restricciones: si hay errores no se guarda nada.",
+  schema: z.object({
+    meals: z
+      .array(
+        z.object({
+          recipe_id: uuid.nullish(),
+          free_text: z.string().trim().max(200).nullish(),
+          quantity: z.number().int().min(1).max(20).default(1),
+        }),
+      )
+      .min(1)
+      .max(30),
+  }),
+  async run({ meals }, ctx) {
+    if (meals.some((m) => !m.recipe_id && !m.free_text))
+      return { result: { error: "Cada comida necesita una receta o un texto." }, isError: true };
+    const adopted = await adoptCatalogIds(
+      ctx,
+      meals.map((m) => m.recipe_id),
+    );
+    const next: Candidate[] = meals.map((m) => ({
+      id: randomUUID(),
+      date: MENU_PLACEHOLDER_DATE,
+      slot: "lunch",
+      recipe_id: m.recipe_id ? (adopted.get(m.recipe_id) ?? m.recipe_id) : null,
+      free_text: m.recipe_id ? null : (m.free_text ?? null),
+      servings: null,
+      diner_ids: [],
+      cook_date: null,
+      leftovers_of_entry_id: null,
+      is_new_recipe: false,
+    }));
+    const v = await validateCandidates(ctx.supabase, ctx.groupId, next, undefined, {
+      ignoreMealRules: true,
+    });
+    if (v.missingRecipeIds.length > 0)
+      return {
+        result: {
+          error: `Estas recetas no existen en el recetario: ${v.missingRecipeIds.join(", ")}`,
+        },
+        isError: true,
+      };
+    const KEEP = new Set(["FORBIDDEN_INGREDIENT", "LIMIT_EXCEEDED"]);
+    const errors = v.errors.filter((i) => KEEP.has(i.code));
+    if (errors.length > 0)
+      return {
+        result: {
+          applied: false,
+          message:
+            "No se guardó nada: hay comidas que no cumplen las restricciones. Corregilas y reintentá.",
+          errors: issueLines(errors),
+        },
+        isError: true,
+      };
+    const rows = next.map((c, i) => ({
+      plan_id: ctx.planId,
+      recipe_id: c.recipe_id,
+      free_text: c.free_text,
+      quantity: meals[i]!.quantity,
+      position: i,
+    })) satisfies Database["public"]["Tables"]["meal_plan_entries"]["Insert"][];
+    const ins = await ctx.supabase.from("meal_plan_entries").insert(rows).select("id");
+    if (ins.error)
+      return { result: { error: "No se pudieron guardar las comidas." }, isError: true };
+    ctx.emit({ type: "plan_updated", entries: [], warnings: [], changedIds: [] });
+    return { result: { applied: true, added: rows.length } };
+  },
+});
+
+const listMeals = defineTool({
+  name: "list_meals",
+  description: "Devuelve las comidas que ya están en 'Mis comidas' (id, título, cantidad).",
+  schema: z.object({}),
+  async run(_input, ctx) {
+    const { data } = await ctx.supabase
+      .from("meal_plan_entries")
+      .select("id, free_text, quantity, cooked_at, recipes(title)")
+      .eq("plan_id", ctx.planId)
+      .order("created_at", { ascending: false });
+    return {
+      result: (data ?? []).map((e) => ({
+        id: e.id,
+        title: e.recipes?.title ?? e.free_text,
+        quantity: e.quantity,
+        cooked: Boolean(e.cooked_at),
+      })),
+    };
+  },
+});
+
+const removeMeals = defineTool({
+  name: "remove_meals",
+  description: "Quita comidas de 'Mis comidas' por id (usá list_meals para ver los ids).",
+  schema: z.object({ ids: z.array(uuid).min(1).max(30) }),
+  async run({ ids }, ctx) {
+    const del = await ctx.supabase
+      .from("meal_plan_entries")
+      .delete()
+      .eq("plan_id", ctx.planId)
+      .in("id", ids);
+    if (del.error) return { result: { error: "No se pudieron quitar." }, isError: true };
+    ctx.emit({ type: "plan_updated", entries: [], warnings: [], changedIds: [] });
+    return { result: { removed: ids.length } };
+  },
+});
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const PLAN_TOOLS: ToolDef<any>[] = [
   searchRecipes,
@@ -595,8 +710,24 @@ export const PLAN_TOOLS: ToolDef<any>[] = [
   updateEntries,
 ];
 
-export function planToolDefinitions(): Anthropic.Messages.Tool[] {
-  return PLAN_TOOLS.map((t) => {
+export const MENU_TOOLS: ToolDef<any>[] = [
+  searchRecipes,
+  searchCatalogTool,
+  useCatalogRecipe,
+  getParticipants,
+  getIngredientInfo,
+  proposeRecipe,
+  listMeals,
+  addMeals,
+  removeMeals,
+];
+
+export const menuToolDefinitions = () => toolDefinitions(MENU_TOOLS);
+export const planToolDefinitions = () => toolDefinitions(PLAN_TOOLS);
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function toolDefinitions(list: ToolDef<any>[]): Anthropic.Messages.Tool[] {
+  return list.map((t) => {
     const { $schema: _ignored, ...input_schema } = z.toJSONSchema(t.schema) as Record<
       string,
       unknown
@@ -610,12 +741,19 @@ export function planToolDefinitions(): Anthropic.Messages.Tool[] {
   });
 }
 
-export async function runPlanTool(
+export const runMenuTool = (name: string, input: unknown, ctx: PlanToolCtx) =>
+  runTool(MENU_TOOLS, name, input, ctx);
+export const runPlanTool = (name: string, input: unknown, ctx: PlanToolCtx) =>
+  runTool(PLAN_TOOLS, name, input, ctx);
+
+async function runTool(
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  list: ToolDef<any>[],
   name: string,
   input: unknown,
   ctx: PlanToolCtx,
 ): Promise<PlanToolOutput> {
-  const tool = PLAN_TOOLS.find((t) => t.name === name);
+  const tool = list.find((t) => t.name === name);
   if (!tool) return { result: { error: `Herramienta desconocida: ${name}` }, isError: true };
   const parsed = tool.schema.safeParse(input);
   if (!parsed.success) {
