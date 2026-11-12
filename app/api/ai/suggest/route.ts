@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { getNow } from "@/lib/now";
 import { checkQuota } from "@/lib/ai/rate-limit";
 import { suggestFromPantry, suggestIdeas } from "@/lib/ai/suggest/suggest";
 import { hourIn } from "@/lib/domain/today";
@@ -36,7 +37,7 @@ export async function POST(request: Request) {
     );
   }
 
-  const now = new Date();
+  const now = await getNow();
   const result =
     body.mode === "ideas"
       ? await suggestIdeas({

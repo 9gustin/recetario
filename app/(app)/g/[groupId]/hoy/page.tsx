@@ -1,5 +1,6 @@
 import { TodayView } from "@/components/today/today-view";
 import { requireUser } from "@/lib/auth";
+import { getNow } from "@/lib/now";
 import { resolveToday, hourIn, type TodayEntry } from "@/lib/domain/today";
 import { addDays, todayString } from "@/lib/domain/week";
 import { getGroupPlanSettings, getTodayEntries } from "@/lib/plan/queries";
@@ -9,7 +10,7 @@ export const metadata = { title: "Hoy" };
 export default async function Page({ params }: { params: Promise<{ groupId: string }> }) {
   await requireUser();
   const { groupId } = await params;
-  const now = new Date();
+  const now = await getNow();
   const today = todayString(now);
   const tomorrow = addDays(today, 1);
 

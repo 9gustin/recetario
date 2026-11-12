@@ -3,6 +3,7 @@
 import { revalidatePath } from "next/cache";
 import { z } from "zod";
 import { requireUser } from "@/lib/auth";
+import { getNow } from "@/lib/now";
 import { hourIn } from "@/lib/domain/today";
 import { todayString, weekStartOf } from "@/lib/domain/week";
 import { createClient } from "@/lib/supabase/server";
@@ -36,7 +37,7 @@ export async function chooseForToday(
     .select("week_starts_on")
     .eq("id", groupId)
     .maybeSingle();
-  const now = new Date();
+  const now = await getNow();
   const today = todayString(now);
   const weekStart = weekStartOf(today, group?.week_starts_on ?? 1);
 

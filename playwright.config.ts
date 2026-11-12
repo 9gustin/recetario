@@ -32,6 +32,8 @@ export default defineConfig({
     command: process.env.CI ? `pnpm start --port ${PORT}` : "pnpm dev",
     url: `http://localhost:${PORT}`,
     reuseExistingServer: !process.env.CI,
+    // Permite fijar la hora del servidor desde los tests (cookie e2e-now); nunca se define en producción.
+    env: { E2E_TIME_OVERRIDE: "1" },
     timeout: 120_000,
   },
 });
