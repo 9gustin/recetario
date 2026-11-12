@@ -35,7 +35,7 @@
   4. Al terminar: sonido (Web Audio, generado, sin archivos externos), `navigator.vibrate`, toast persistente "¡Listo el horno!" y `Notification` si el permiso fue concedido (pedirlo la primera vez que se inicia un timer, con explicación previa).
 - **Aceptación:** con dos timers corriendo y la pantalla bloqueada 1 minuto, al volver el tiempo restante es correcto.
 
-### T3.4 — Pantalla siempre encendida
+### [x] T3.4 — Pantalla siempre encendida
 - **Depende de:** T3.2
 - **Archivos:** `lib/hooks/use-wake-lock.ts`.
 - **Pasos:** pedir `navigator.wakeLock.request('screen')` al entrar al modo cocinar; volver a pedirlo en `visibilitychange`; liberarlo al salir. Si no hay soporte, mostrar una vez el aviso "Tu celular puede apagar la pantalla; subí el tiempo de bloqueo mientras cocinás".
@@ -86,3 +86,5 @@
 - T3.2: la ruta vive en el grupo `app/(cook)/…/cocinar` (mismo URL, layout propio sin barras y con `DayPartProvider force="noche"` + `data-daypart="noche"` en el contenedor para que el tema salga bien desde el servidor). Se instaló `framer-motion` y `zustand` (nombrados en el plan). Los pasos creados por el formulario no traen `ingredient_ids`, así que `ingredientsForStep` (lib/domain/cooking-display.ts) usa los ids si existen y, si no, los ingredientes nombrados en el texto del paso. Zonas de tap (tercios izquierdo/derecho) solo en pantallas de paso; la mise en place y la final son interactivas y no las tienen. El botón Cocinar del detalle ya está habilitado. Helper de e2e `seedRecipe` en `tests/e2e/helpers/recipes.ts` (crea recetas por la API como el usuario).
 
 - T3.3: los timers se guardan con `endsAt` (timestamp) en `localStorage` (zustand `persist` con `skipHydration`, se rehidrata en `TimerEngine`) y se descartan a las 12 h. Alertas al terminar: pitidos generados con Web Audio (`lib/sound.ts`, se desbloquea con el tap en Iniciar), `navigator.vibrate`, toast persistente y notificación local (`lib/notify.ts`; pide permiso con un diálogo explicativo la primera vez). Si la app estaba en segundo plano, las alertas saltan al volver (JS suspendido no puede avisar antes; el aviso con la app cerrada llega con Web Push en la Etapa 10). Los chips flotantes se muestran para cualquier timer de otro paso (activo o pasivo). En el e2e no se usa `page.clock`: falsear el reloj traba las animaciones de Framer Motion; se simula el tiempo en segundo plano adelantando `endsAt` en localStorage y recargando.
+
+- T3.4: `useWakeLock` pide el lock al montar, lo vuelve a pedir en `visibilitychange` si el navegador lo soltó y lo libera al salir; sin soporte muestra un toast una sola vez por dispositivo (`localStorage`). Test en jsdom con la API simulada (3 casos). La verificación real (5 minutos en Android Chrome e iOS Safari 17.4+) queda para la prueba en el celular del cierre de etapa.

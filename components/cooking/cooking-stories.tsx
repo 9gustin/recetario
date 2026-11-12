@@ -13,7 +13,9 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import { toast } from "sonner";
 import { estimatedMinutes, ingredientsForStep } from "@/lib/domain/cooking-display";
+import { useWakeLock } from "@/lib/hooks/use-wake-lock";
 import type { RecipeDetail } from "@/lib/recipes/queries";
 import { MiseEnPlace } from "./mise-en-place";
 import { ProgressSegments } from "./progress-segments";
@@ -31,6 +33,21 @@ const slide = {
   exit: (dir: number) => ({ x: dir * -48, opacity: 0 }),
 };
 
+const WAKE_NOTICE_KEY = "recetario-wakelock-notice";
+
+/** Avisa una sola vez (por dispositivo) que la pantalla se puede apagar. */
+function noticeWakeLockUnsupported() {
+  try {
+    if (localStorage.getItem(WAKE_NOTICE_KEY) === "1") return;
+    localStorage.setItem(WAKE_NOTICE_KEY, "1");
+  } catch {
+    // sin localStorage: se avisa igual
+  }
+  toast("Tu celular puede apagar la pantalla; subí el tiempo de bloqueo mientras cocinás.", {
+    duration: 10_000,
+  });
+}
+
 type Props = { groupId: string; recipe: RecipeDetail };
 
 /** Modo cocinar tipo historias: un paso por pantalla, con tap y swipe para navegar. */
@@ -40,6 +57,7 @@ export function CookingStories({ groupId, recipe }: Props) {
   const [state, dispatch] = useCookingReducer({ steps: steps.length, servings: recipe.servings });
   const [exitOpen, setExitOpen] = useState(false);
   const dragged = useRef(false);
+  useWakeLock({ onUnsupported: noticeWakeLockUnsupported });
 
   const isMise = state.index === 0;
   const isFinal = state.index === state.total - 1;
