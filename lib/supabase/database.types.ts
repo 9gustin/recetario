@@ -591,6 +591,70 @@ isOneToOne: false
       referencedColumns: ["id"]
     }
                   ]
+                },"shopping_list_items": {
+                  Row: {
+                    "aisle": string,"created_at": string,"display_name": string,"id": string,"ingredient_id": string | null,"is_manual": boolean,"list_id": string,"needed_by": string | null,"no_longer_needed": boolean,"note": string | null,"pantry_staple": boolean,"position": number,"purchase_hint": string | null,"quantity": number | null,"shelf_life_warning": string | null,"source_entry_ids": (string)[],"state": string,"state_at": string | null,"state_by": string | null,"unit": string | null
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "aisle"?: string,"created_at"?: string,"display_name": string,"id"?: string,"ingredient_id"?: string | null,"is_manual"?: boolean,"list_id": string,"needed_by"?: string | null,"no_longer_needed"?: boolean,"note"?: string | null,"pantry_staple"?: boolean,"position"?: number,"purchase_hint"?: string | null,"quantity"?: number | null,"shelf_life_warning"?: string | null,"source_entry_ids"?: (string)[],"state"?: string,"state_at"?: string | null,"state_by"?: string | null,"unit"?: string | null
+                  }
+                  Update: {
+                    "aisle"?: string,"created_at"?: string,"display_name"?: string,"id"?: string,"ingredient_id"?: string | null,"is_manual"?: boolean,"list_id"?: string,"needed_by"?: string | null,"no_longer_needed"?: boolean,"note"?: string | null,"pantry_staple"?: boolean,"position"?: number,"purchase_hint"?: string | null,"quantity"?: number | null,"shelf_life_warning"?: string | null,"source_entry_ids"?: (string)[],"state"?: string,"state_at"?: string | null,"state_by"?: string | null,"unit"?: string | null
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "shopping_list_items_ingredient_id_fkey"
+      columns: ["ingredient_id"]
+isOneToOne: false
+      referencedRelation: "ingredients"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "shopping_list_items_list_id_fkey"
+      columns: ["list_id"]
+isOneToOne: false
+      referencedRelation: "shopping_lists"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "shopping_list_items_state_by_fkey"
+      columns: ["state_by"]
+isOneToOne: false
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"shopping_lists": {
+                  Row: {
+                    "created_at": string,"created_by": string | null,"group_id": string,"id": string,"name": string,"plan_id": string | null,"shop_date": string | null,"status": string,"updated_at": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "created_at"?: string,"created_by"?: string | null,"group_id": string,"id"?: string,"name": string,"plan_id"?: string | null,"shop_date"?: string | null,"status"?: string,"updated_at"?: string
+                  }
+                  Update: {
+                    "created_at"?: string,"created_by"?: string | null,"group_id"?: string,"id"?: string,"name"?: string,"plan_id"?: string | null,"shop_date"?: string | null,"status"?: string,"updated_at"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "shopping_lists_created_by_fkey"
+      columns: ["created_by"]
+isOneToOne: false
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "shopping_lists_group_id_fkey"
+      columns: ["group_id"]
+isOneToOne: false
+      referencedRelation: "groups"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "shopping_lists_plan_id_fkey"
+      columns: ["plan_id"]
+isOneToOne: false
+      referencedRelation: "meal_plans"
+      referencedColumns: ["id"]
+    }
+                  ]
                 }
           }
           Views: {
@@ -655,6 +719,9 @@ isOneToOne: false
 "leave_group":
 { Args: { "gid": string }; Returns: undefined
                            },
+"list_group_id":
+{ Args: { "p_list_id": string }; Returns: string
+                           },
 "plan_group_id":
 { Args: { "p_plan_id": string }; Returns: string
                            },
@@ -683,6 +750,35 @@ isOneToOne: false
 "send_recipe_to_user":
 { Args: { "p_recipe_id": string,"p_user_id": string }; Returns: string
                            },
+"set_item_state":
+{ Args: { "p_item_id": string,"p_state": string }; Returns: {
+              "aisle": string,
+"created_at": string,
+"display_name": string,
+"id": string,
+"ingredient_id": string | null,
+"is_manual": boolean,
+"list_id": string,
+"needed_by": string | null,
+"no_longer_needed": boolean,
+"note": string | null,
+"pantry_staple": boolean,
+"position": number,
+"purchase_hint": string | null,
+"quantity": number | null,
+"shelf_life_warning": string | null,
+"source_entry_ids": (string)[],
+"state": string,
+"state_at": string | null,
+"state_by": string | null,
+"unit": string | null
+            }
+                          SetofOptions: {
+        from: "*"
+        to: "shopping_list_items"
+        isOneToOne: true
+        isSetofReturn: false
+      } },
 "set_member_role":
 { Args: { "gid": string,"p_role": string,"p_user_id": string }; Returns: undefined
                            },
