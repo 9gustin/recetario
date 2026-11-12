@@ -43,7 +43,7 @@ Parte **7a** (manual, T7.1–T7.6), parte **7b** (IA, T7.7–T7.11) y parte **7c
   3. Historial: lista de semanas anteriores con miniaturas; abrir una en solo lectura; "Repetir esta semana" → `duplicate_plan` a la semana elegida.
 - **Aceptación:** duplicar mantiene recetas, momentos, comensales y sobras (con fechas corridas).
 
-### T7.5 — Home "Hoy" con estados
+### [x] T7.5 — Home "Hoy" con estados
 - **Depende de:** T7.3, T0.2 (temas por momento del día)
 - **Spec:** §3 F6b · §8.1 · canvas de diseño (pantallas "Inicio · Mediodía · con plan", "Inicio · Tarde · sin plan", "Inicio · Noche · con plan").
 - **Archivos:** `app/(app)/g/[groupId]/hoy/page.tsx`, `components/today/*`, `lib/domain/today.ts` + test.
@@ -158,3 +158,5 @@ Parte **7a** (manual, T7.1–T7.6), parte **7b** (IA, T7.7–T7.11) y parte **7c
 - T7.3: Plan board keyed by plan id so router.refresh remounts it; 'Armar con IA' stays disabled until T7.9; history link target /plan/historial is built in T7.4.
 
 - T7.4: Historial repite en la próxima semana libre; el banner de plan aprobado ya existía desde T7.3.
+
+- T7.5: Cards 1/2 (Ideas, ¿Qué tenés?) hidden until T7.12/T7.13; storage warnings (paso 5) and prep tasks slot arrive with Etapa 9; 'cocinado' not tracked yet so doneIds is empty; cook link passes ?entry=<id> (not consumed yet).

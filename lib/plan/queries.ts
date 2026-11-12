@@ -122,3 +122,16 @@ export async function getPlanHistory(groupId: string): Promise<PlanHistoryItem[]
     thumbs: byPlan.get(p.id)?.thumbs ?? [],
   }));
 }
+
+/** Comidas de hoy y mañana del grupo (de cualquier plan no archivado), para la home. */
+export async function getTodayEntries(groupId: string, today: string, tomorrow: string) {
+  const supabase = await createClient();
+  const { data } = await supabase
+    .from("meal_plan_entries")
+    .select(`${ENTRY_COLUMNS}, meal_plans!inner(group_id, status)`)
+    .eq("meal_plans.group_id", groupId)
+    .neq("meal_plans.status", "archived")
+    .in("date", [today, tomorrow])
+    .order("position");
+  return (data ?? []).map((row) => toPlanEntry(row as unknown as RawEntry));
+}
