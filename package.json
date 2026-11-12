@@ -20,6 +20,7 @@
     "test:e2e": "playwright test"
   },
   "dependencies": {
+    "@hookform/resolvers": "^7.0.5",
     "@sentry/nextjs": "^11.12.0",
     "@serwist/turbopack": "^9.5.13",
     "@supabase/ssr": "^0.12.7",
@@ -33,6 +34,7 @@
     "radix-ui": "^1.8.1",
     "react": "19.3.0",
     "react-dom": "19.3.0",
+    "react-hook-form": "^7.91.0",
     "server-only": "^0.0.1",
     "serwist": "^9.5.13",
     "shadcn": "^4.23.0",

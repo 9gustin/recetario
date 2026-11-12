@@ -49,7 +49,7 @@
   3. `actions.ts` (Server Actions): `saveRecipe(input)` → resuelve `ingredient_id` con el matcher → `save_recipe` RPC; `deleteRecipe` (soft delete); `toggleFavorite`; `uploadRecipeImage`.
 - **Aceptación:** tipos sin `any`; las acciones devuelven `{ ok, data } | { ok: false, error }`.
 
-### T2.5 — Formulario de receta
+### [x] T2.5 — Formulario de receta
 - **Depende de:** T2.4
 - **Archivos:** `app/(app)/g/[groupId]/recetas/nueva/page.tsx`, `.../recetas/[id]/editar/page.tsx`, `components/recipes/recipe-form/*`.
 - **Pasos:**
@@ -109,3 +109,5 @@
 - T2.3: el catálogo son **263 ingredientes** (cercano a los ~300 pedidos; quedan cubiertas verduras, frutas, carnes, lácteos, almacén, especias, legumbres y congelados) con `aliases` regionales (palta/aguacate, zapallito/calabacín, morrón/pimiento, choclo/maíz, frutilla/fresa, ananá/piña, porotos/frijoles, chaucha/judía). `unit_weight_g` y `shelf_life` solo para los más comunes; `nutrition_per_100g` se deja para la ficha que complete la IA. El dato vive en `supabase/seed/ingredients.json`; `supabase/seed.sql` se **genera** con un script (dollar-quote del JSON) para que `db:reset` lo cargue idempotente (`on conflict (name) do update`). El matcher (`matchLocal`/`normalizeName`) hace exacto→alias tras normalizar (minúsculas, sin acentos, singular simple, sin relleno); el fuzzy queda en el RPC `search_ingredients`.
 
 - T2.4: `saveRecipe` resuelve el `ingredient_id` con `matchLocal` (parsea el `raw_text` con `parseIngredientLine` para sacar el nombre) y llama al RPC `save_recipe`. `save_recipe` devuelve `jsonb`, así que el resultado se castea a `{ id, current_version }`. `uploadRecipeImage` sube a Storage (bucket `recipe-images`, path `<group>/<recipe>/<uuid>.<ext>`) y actualiza `image_url` con la URL pública. `last_cooked_at` queda `null` hasta la Etapa 3.
+
+- T2.5: se instalaron `react-hook-form` + `@hookform/resolvers` (el plan los nombra). Los ingredientes van en un `textarea` (una línea por ingrediente) con parseo en vivo (`parseIngredientLine`) mostrando chips; pegar varias líneas crea varios. Los pasos usan `useFieldArray` con reordenar por **botones ↑/↓** en vez de `@dnd-kit` (drag-and-drop táctil es menos fiable; se deja fuera para simplificar). La foto se comprime en el cliente (canvas → webp, máx 1600 px) y sube vía `uploadRecipeImage`. El total de tiempo se calcula (prep + cocción).
