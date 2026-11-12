@@ -36,7 +36,7 @@ Archivo compartido entre los tres agentes. Cada uno lo lee al empezar y lo actua
 | 7 · Plan semanal + Hoy | lista para revisión |
 | 8 · Lista de compras | lista para revisión |
 | 8b · Plan vivo (+ T5B.6) | lista para revisión |
-| 9 · Meal prep | pendiente |
+| 9 · Meal prep | lista para revisión |
 | 10 · Notificaciones y pulido | pendiente |
 
 Estados: `pendiente` → `en curso` → `lista para revisión` → `revisada (fecha, informe)` o `bloqueada (motivo)`.
