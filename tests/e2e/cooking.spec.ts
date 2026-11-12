@@ -35,6 +35,10 @@ async function elapseInBackground(page: import("@playwright/test").Page, ms: num
     localStorage.setItem("recetario-timers", JSON.stringify(data));
   }, ms);
   await page.reload();
+  // Al volver, la sesión a medias ofrece continuar: se elige "Continuar".
+  const resume = page.getByRole("button", { name: "Continuar" });
+  await resume.waitFor({ state: "visible", timeout: 5000 });
+  await resume.tap();
 }
 
 test("modo cocinar: recorrido y timer pasivo con chip flotante", async ({ browser }) => {
@@ -65,6 +69,7 @@ test("modo cocinar: recorrido y timer pasivo con chip flotante", async ({ browse
   await expect(chip).toContainText(/(25:00|24:5\d)/);
 
   // La pantalla estuvo bloqueada 1 minuto: al volver, el tiempo restante es correcto.
+  await page.waitForTimeout(2000); // deja que se guarde el progreso (debounce de 1 s)
   await elapseInBackground(page, 60_000);
   await expect(chip).toContainText(/(24:0\d|23:5\d)/);
 
@@ -78,4 +83,35 @@ test("modo cocinar: recorrido y timer pasivo con chip flotante", async ({ browse
   await expect(page.getByText("Paso 2 de 3")).toBeVisible();
   await expect(page.getByRole("heading", { name: "Horneá el pollo." })).toBeVisible();
   await expect(page.getByText("¡Listo!", { exact: true })).toBeVisible();
+});
+
+test("modo cocinar: cerrar a mitad y volver retoma el mismo paso", async ({ browser }) => {
+  test.setTimeout(120_000);
+  const { page, groupId, recipeId } = await setup(browser);
+  const url = `/g/${groupId}/recetas/${recipeId}/cocinar`;
+
+  await page.goto(url);
+  await page.getByRole("button", { name: "Más porciones" }).tap();
+  await page.getByRole("button", { name: "Empezar" }).tap();
+  await page.getByRole("button", { name: "Listo" }).tap();
+  await expect(page.getByText("Paso 2 de 3")).toBeVisible();
+  await page.waitForTimeout(2500); // el progreso se guarda con 1 s de debounce
+
+  // "Cierra la PWA" y vuelve: ofrece seguir en el paso 2.
+  await page.goto(`/g/${groupId}/recetas/${recipeId}`);
+  await page.goto(url);
+  await expect(page.getByRole("heading", { name: "Seguís en el paso 2" })).toBeVisible();
+  await page.getByRole("button", { name: "Continuar" }).tap();
+  await expect(page.getByText("Paso 2 de 3")).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Horneá el pollo." })).toBeVisible();
+
+  // "Empezar de nuevo" descarta la sesión: vuelve a la mise en place.
+  await page.goto(`/g/${groupId}/recetas/${recipeId}`);
+  await page.goto(url);
+  await page.getByRole("button", { name: "Empezar de nuevo" }).tap();
+  await expect(page.getByText("Mise en place")).toBeVisible();
+  await page.waitForTimeout(1500);
+  await page.goto(`/g/${groupId}/recetas/${recipeId}`);
+  await page.goto(url);
+  await expect(page.getByRole("heading", { name: /Seguís en el paso/ })).toHaveCount(0);
 });

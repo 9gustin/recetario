@@ -46,4 +46,12 @@ describe("cookingReducer", () => {
     expect(s.index).toBe(3);
     expect(s.completed.size).toBe(3);
   });
+
+  it("RESET vuelve a la mise en place sin pasos completados", () => {
+    let s = initCookingState({ steps: 3, servings: 2, index: 3, completed: [0, 1, 2] });
+    s = cookingReducer(s, { type: "RESET", servings: 2 });
+    expect(s.index).toBe(0);
+    expect(s.completed.size).toBe(0);
+    expect(s.total).toBe(5);
+  });
 });

@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/dialog";
 import { toast } from "sonner";
 import { estimatedMinutes, ingredientsForStep } from "@/lib/domain/cooking-display";
+import { resumeInit, type OpenSession } from "@/lib/domain/cooking-session";
 import { useWakeLock } from "@/lib/hooks/use-wake-lock";
 import type { RecipeDetail } from "@/lib/recipes/queries";
 import { MiseEnPlace } from "./mise-en-place";
@@ -24,6 +25,7 @@ import { FloatingTimers } from "./timers/floating-timers";
 import { StepTimer } from "./timers/step-timer";
 import { TimerEngine } from "./timers/timer-engine";
 import { useCookingReducer } from "./use-cooking-reducer";
+import { useSessionSync } from "./use-session-sync";
 
 const SWIPE_DISTANCE = 70;
 
@@ -48,13 +50,27 @@ function noticeWakeLockUnsupported() {
   });
 }
 
-type Props = { groupId: string; recipe: RecipeDetail };
+type Props = {
+  groupId: string;
+  recipe: RecipeDetail;
+  /** Sesión a medias de esta persona (ya validada: reciente y sin terminar). */
+  resume: OpenSession | null;
+};
 
 /** Modo cocinar tipo historias: un paso por pantalla, con tap y swipe para navegar. */
-export function CookingStories({ groupId, recipe }: Props) {
+export function CookingStories({ groupId, recipe, resume }: Props) {
   const router = useRouter();
   const steps = recipe.steps;
-  const [state, dispatch] = useCookingReducer({ steps: steps.length, servings: recipe.servings });
+  const [state, dispatch] = useCookingReducer(
+    resume ? resumeInit(resume, steps.length) : { steps: steps.length, servings: recipe.servings },
+  );
+  const [askResume, setAskResume] = useState(resume !== null);
+  const sync = useSessionSync({
+    recipeId: recipe.id,
+    initialSessionId: resume?.id ?? null,
+    index: state.index,
+    servings: state.servings,
+  });
   const [exitOpen, setExitOpen] = useState(false);
   const dragged = useRef(false);
   useWakeLock({ onUnsupported: noticeWakeLockUnsupported });
@@ -82,6 +98,17 @@ export function CookingStories({ groupId, recipe }: Props) {
   function advance() {
     dispatch({ type: "COMPLETE" });
     dispatch({ type: "NEXT" });
+  }
+
+  function start() {
+    sync.begin();
+    advance();
+  }
+
+  function startOver() {
+    sync.discard();
+    dispatch({ type: "RESET", servings: recipe.servings });
+    setAskResume(false);
   }
 
   function onDragEnd(_: unknown, info: PanInfo) {
@@ -211,7 +238,7 @@ export function CookingStories({ groupId, recipe }: Props) {
 
       <div className="flex gap-2.5">
         {isMise ? (
-          <PillButton className="min-h-[60px] flex-1 text-lg" onClick={advance}>
+          <PillButton className="min-h-[60px] flex-1 text-lg" onClick={start}>
             <Play fill="currentColor" /> Empezar
           </PillButton>
         ) : isFinal ? (
@@ -227,6 +254,25 @@ export function CookingStories({ groupId, recipe }: Props) {
           </PillButton>
         )}
       </div>
+
+      <Dialog open={askResume}>
+        <DialogContent showCloseButton={false} onInteractOutside={(e) => e.preventDefault()}>
+          <DialogHeader>
+            <DialogTitle>Seguís en el paso {state.index}</DialogTitle>
+            <DialogDescription>
+              Dejaste esta receta a medias. ¿Continuás donde estabas o empezás de nuevo?
+            </DialogDescription>
+          </DialogHeader>
+          <DialogFooter className="gap-2">
+            <PillButton variant="outline" size="md" onClick={startOver}>
+              Empezar de nuevo
+            </PillButton>
+            <PillButton size="md" onClick={() => setAskResume(false)}>
+              Continuar
+            </PillButton>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
 
       <Dialog open={exitOpen} onOpenChange={setExitOpen}>
         <DialogContent>

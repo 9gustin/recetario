@@ -41,7 +41,7 @@
 - **Pasos:** pedir `navigator.wakeLock.request('screen')` al entrar al modo cocinar; volver a pedirlo en `visibilitychange`; liberarlo al salir. Si no hay soporte, mostrar una vez el aviso "Tu celular puede apagar la pantalla; subí el tiempo de bloqueo mientras cocinás".
 - **Aceptación:** en Android Chrome y iOS Safari (17.4+) la pantalla no se apaga durante 5 minutos.
 
-### T3.5 — Persistir y retomar la sesión
+### [x] T3.5 — Persistir y retomar la sesión
 - **Depende de:** T3.1, T3.2
 - **Archivos:** `lib/cooking/actions.ts`, ajustes en `cooking-stories.tsx`.
 - **Pasos:**
@@ -88,3 +88,5 @@
 - T3.3: los timers se guardan con `endsAt` (timestamp) en `localStorage` (zustand `persist` con `skipHydration`, se rehidrata en `TimerEngine`) y se descartan a las 12 h. Alertas al terminar: pitidos generados con Web Audio (`lib/sound.ts`, se desbloquea con el tap en Iniciar), `navigator.vibrate`, toast persistente y notificación local (`lib/notify.ts`; pide permiso con un diálogo explicativo la primera vez). Si la app estaba en segundo plano, las alertas saltan al volver (JS suspendido no puede avisar antes; el aviso con la app cerrada llega con Web Push en la Etapa 10). Los chips flotantes se muestran para cualquier timer de otro paso (activo o pasivo). En el e2e no se usa `page.clock`: falsear el reloj traba las animaciones de Framer Motion; se simula el tiempo en segundo plano adelantando `endsAt` en localStorage y recargando.
 
 - T3.4: `useWakeLock` pide el lock al montar, lo vuelve a pedir en `visibilitychange` si el navegador lo soltó y lo libera al salir; sin soporte muestra un toast una sola vez por dispositivo (`localStorage`). Test en jsdom con la API simulada (3 casos). La verificación real (5 minutos en Android Chrome e iOS Safari 17.4+) queda para la prueba en el celular del cierre de etapa.
+
+- T3.5: al tocar Empezar se crea la sesión (con `recipe_version`) y cada cambio de pantalla o porciones se guarda con debounce de 1 s (`useSessionSync`, reintenta cada 5 s y al volver la red). `current_step` guarda el índice de pantalla (0 = mise en place). Al abrir Cocinar con una sesión sin terminar de menos de 12 h, un diálogo ofrece "Continuar" o "Empezar de nuevo" (esto último borra la sesión). La decisión de si se puede retomar la toma el servidor (`getResumableSession`), no el cliente. `plan_entry_id` ya se acepta en la acción pero hasta la Etapa 7 nadie lo manda. e2e en `cooking.spec.ts`.
