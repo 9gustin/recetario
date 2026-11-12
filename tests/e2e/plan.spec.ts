@@ -26,12 +26,18 @@ test("plan: armar la semana a mano, editar una comida y aprobar", async ({ brows
   await expect(page.getByText("Borrador", { exact: true })).toBeVisible();
 
   // Agregar una receta al primer día disponible.
-  await page.getByRole("button", { name: /Agregar almuerzo/i }).first().tap();
+  await page
+    .getByRole("button", { name: /Agregar almuerzo/i })
+    .first()
+    .tap();
   await page.getByRole("button", { name: /Milanesas al horno/ }).tap();
   await expect(page.getByText("Milanesas al horno").first()).toBeVisible();
 
   // Agregar texto libre en la cena.
-  await page.getByRole("button", { name: /Agregar cena/i }).first().tap();
+  await page
+    .getByRole("button", { name: /Agregar cena/i })
+    .first()
+    .tap();
   await page.getByLabel("O escribí algo").fill("Comemos afuera");
   await page.getByRole("button", { name: "Agregar", exact: true }).tap();
   await expect(page.getByText("Comemos afuera")).toBeVisible();
@@ -44,4 +50,33 @@ test("plan: armar la semana a mano, editar una comida y aprobar", async ({ brows
   await page.reload();
   await expect(page.getByText("Aprobado", { exact: true })).toBeVisible();
   await expect(page.getByText("Milanesas al horno").first()).toBeVisible();
+});
+
+test("plan: duplicar una semana anterior desde el historial conserva las comidas", async ({
+  browser,
+}) => {
+  test.setTimeout(120_000);
+  const email = `plan-hist-${Date.now()}@test.com`;
+  await createTestUser(email, password, "Ana");
+  const groupId = await createGroupAs(email, password, "Casa");
+  await seedRecipe(email, password, groupId, {
+    title: "Guiso de lentejas",
+    ingredients: ["2 tazas de lentejas"],
+    steps: [{ instruction: "Cociná." }],
+  });
+  const page = await (await mobileContext(browser)).newPage();
+  await signIn(page, email, password);
+  await page.goto(`/g/${groupId}/plan`);
+  await page.getByRole("button", { name: /Armar a mano/ }).tap();
+  await page
+    .getByRole("button", { name: /Agregar almuerzo/i })
+    .first()
+    .tap();
+  await page.getByRole("button", { name: /Guiso de lentejas/ }).tap();
+  await expect(page.getByText("Guiso de lentejas").first()).toBeVisible();
+
+  await page.goto(`/g/${groupId}/plan/historial`);
+  await page.getByRole("button", { name: "Repetir esta semana" }).first().tap();
+  await expect(page.getByText("Guiso de lentejas").first()).toBeVisible();
+  await expect(page.getByText("Borrador", { exact: true })).toBeVisible();
 });
