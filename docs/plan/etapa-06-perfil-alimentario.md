@@ -20,7 +20,7 @@
 - **Archivos:** `lib/schemas/food-profile.ts` + test.
 - **Pasos:** Zod de `FoodProfileData` exactamente como §6.2 (`restrictions[]` con `target`, `type: ingredient|family|category`, `severity: forbidden|limit`, `reason?`, `limit?`, `includes?`; `goals[]`; `likes`; `dislikes`; `cuisines`; `schedule`; `equipment`; `skill`; `valid_until`). Más `FoodProfileProposal = { profile, summary, changes[], open_questions[] }`. Helpers `emptyProfile()`, `mergeProfiles()` (para aplicar ediciones manuales).
 
-### T6.3 — Endpoint de ingesta
+### [x] T6.3 — Endpoint de ingesta
 - **Depende de:** T6.2, T5.2
 - **Archivos:** `app/api/ai/food-profile/ingest/route.ts`, `lib/ai/prompts/food-profile.ts`, `lib/ai/food-profile/ingest.ts`.
 - **Pasos:**
@@ -86,3 +86,5 @@
 - T6.1: `food_profiles`, `food_profile_inputs` (con `kind` extra `'answer'` para las respuestas a preguntas abiertas) y `food_profile_drafts`: todo con RLS solo del propio usuario; bucket privado `profile-inputs` (carpeta por usuario, 15 MB). `get_group_diet(group)` es `security definer`, exige ser miembro y devuelve únicamente `restrictions` y `goals` de los miembros con perfil vigente (respeta `valid_until`); el resumen, las fuentes y los archivos nunca salen. 10 tests pgTAP, entre ellos que B lee las restricciones de A por la RPC pero no `food_profiles`/inputs/drafts, que C no obtiene nada, y que la RPC devuelve solo esas cuatro columnas.
 
 - T6.2: esquema exacto de SPEC §6.2. `meals_at_home` usa `z.partialRecord` (en Zod 4 un `record` con claves de enum las exige todas). `mergeProfiles` reemplaza las listas que vienen en el parche, combina el horario y deduplica restricciones por tipo + objetivo (gana la más estricta). `foodProfileProposalSchema` (perfil + resumen + cambios + preguntas abiertas) es lo que se le pide a la IA en T6.3.
+
+- T6.3: `POST /api/ai/food-profile/ingest` guarda las fuentes (texto, dictado, archivos, respuestas) en `food_profile_inputs`, arma el mensaje con el perfil actual + novedades (PDF como bloque `document`, fotos como `image`, solo del propio bucket `<user_id>/…`, máx. 3 archivos de 10 MB) y llama a Sonnet con `foodProfileProposalSchema`; guarda un único borrador pendiente (descarta los anteriores) y lo devuelve. `POST /api/food-profile/apply` valida el borrador, aplica las ediciones con `mergeProfiles`, sube la versión y marca fuentes y borrador como procesados. El prompt no asume la familia `allium`: guarda solo lo dicho y pregunta por el resto. Verificado con la IA real: dictado → cebolla `forbidden` + harinas `limit` + pregunta de la familia; la respuesta "sí el verdeo y el puerro" los suma a `includes`; foto de un plan → `carbs_g_per_day_max: 50`, `protein_g_per_day_min: 100` y `valid_until` a 3 meses; un archivo ajeno da 400.
