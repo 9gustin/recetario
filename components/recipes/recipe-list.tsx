@@ -1,13 +1,13 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import Link from "next/link";
-import { BookOpen, Plus, Search, SearchX } from "lucide-react";
+import { BookOpen, Search, SearchX } from "lucide-react";
 import { EmptyState } from "@/components/shell/empty-state";
 import { searchRecipes } from "@/lib/recipes/actions";
 import type { RecipeListItem } from "@/lib/recipes/queries";
 import { RECIPES_PAGE_SIZE } from "@/lib/schemas/recipe-search";
 import { EMPTY_FILTERS, RecipeFilters, hasActiveFilters, type RecipeFilterState } from "./filters";
+import { NewRecipeMenu } from "./new-recipe-menu";
 import { RecipeCard } from "./recipe-card";
 
 type Props = { groupId: string; topTags: string[]; total: number };
@@ -19,7 +19,6 @@ export function RecipeList({ groupId, topTags, total }: Props) {
   const [hasMore, setHasMore] = useState(false);
   const [status, setStatus] = useState<"loading" | "ready" | "error">("loading");
   const [loadingMore, setLoadingMore] = useState(false);
-  const [fabOpen, setFabOpen] = useState(false);
   const requestId = useRef(0);
   const sentinel = useRef<HTMLDivElement | null>(null);
 
@@ -142,27 +141,7 @@ export function RecipeList({ groupId, topTags, total }: Props) {
         </div>
       ) : null}
 
-      <div className="pointer-events-none fixed inset-x-0 bottom-[calc(76px+env(safe-area-inset-bottom)+16px)] z-30 mx-auto flex max-w-md flex-col items-end gap-2 px-5">
-        {fabOpen ? (
-          <div className="pointer-events-auto flex flex-col rounded-2xl border border-border bg-surface p-2 shadow-lg">
-            <Link
-              href={`/g/${groupId}/recetas/nueva`}
-              className="flex min-h-11 items-center rounded-xl px-4 text-sm font-semibold"
-            >
-              Escribir receta
-            </Link>
-          </div>
-        ) : null}
-        <button
-          type="button"
-          aria-label="Agregar receta"
-          aria-expanded={fabOpen}
-          onClick={() => setFabOpen((v) => !v)}
-          className="pointer-events-auto flex size-[60px] items-center justify-center rounded-full bg-accent text-accent-foreground shadow-lg"
-        >
-          <Plus className="size-6" aria-hidden="true" />
-        </button>
-      </div>
+      <NewRecipeMenu groupId={groupId} />
     </div>
   );
 }
