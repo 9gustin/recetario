@@ -64,7 +64,7 @@ Parte **7a** (manual, T7.1–T7.6), parte **7b** (IA, T7.7–T7.11) y parte **7c
 
 ## 7b — Plan con IA
 
-### T7.7 — Dominio: `validatePlan` 🧠
+### [x] T7.7 — Dominio: `validatePlan` 🧠
 - **Depende de:** T6.5, T7.2
 - **Archivos:** `lib/domain/validate-plan.ts` + test, `lib/domain/perishability.ts` + test.
 - **Pasos:**
@@ -162,3 +162,5 @@ Parte **7a** (manual, T7.1–T7.6), parte **7b** (IA, T7.7–T7.11) y parte **7c
 - T7.5: Cards 1/2 (Ideas, ¿Qué tenés?) hidden until T7.12/T7.13; storage warnings (paso 5) and prep tasks slot arrive with Etapa 9; 'cocinado' not tracked yet so doneIds is empty; cook link passes ?entry=<id> (not consumed yet).
 
 - T7.6: Realtime requires realtime.setAuth(access_token) before subscribing (otherwise RLS filters all changes). Entries are re-read through a server action after a debounced change instead of merging payloads (recipes join is not in the payload).
+
+- T7.7: Familias de proteína (ave, pescado, huevo) dependen del catálogo; si faltan, PROTEIN_MONOTONY no dispara. LIMIT_EXCEEDED solo evalúa un tope diario único de carbohidratos con datos completos.
