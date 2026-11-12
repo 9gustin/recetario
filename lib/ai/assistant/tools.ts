@@ -8,6 +8,7 @@ import { loadOwnRestrictions } from "./profile";
 import { matchLocal, normalizeName, type CatalogIngredient } from "@/lib/domain/ingredient-match";
 import { cookingEditsSchema } from "@/lib/schemas/cooking-edits";
 import type { Database } from "@/lib/supabase/database.types";
+import { addDays, todayString, weekStartOf } from "@/lib/domain/week";
 import type { Proposal } from "./events";
 
 export type ToolCtx = { supabase: SupabaseClient<Database>; userId: string; groupId: string };
@@ -241,6 +242,134 @@ const proposeNote = {
   },
 } satisfies ToolDef<z.ZodObject<{ recipe_id: z.ZodString; text: z.ZodString }>>;
 
+const getToday = {
+  name: "get_today",
+  description:
+    "Qué hay planeado para hoy y mañana en el grupo, y la lista de compras activa con su progreso.",
+  schema: z.object({}),
+  async run(_input, ctx) {
+    const now = new Date();
+    const today = todayString(now);
+    const tomorrow = addDays(today, 1);
+    const { data: entries } = await ctx.supabase
+      .from("meal_plan_entries")
+      .select(
+        "date, slot, free_text, recipe_id, recipes(title), meal_plans!inner(group_id, status)",
+      )
+      .eq("meal_plans.group_id", ctx.groupId)
+      .neq("meal_plans.status", "archived")
+      .in("date", [today, tomorrow]);
+    const { data: list } = await ctx.supabase
+      .from("shopping_lists")
+      .select("id, name, shopping_list_items(state, no_longer_needed)")
+      .eq("group_id", ctx.groupId)
+      .eq("status", "active")
+      .order("shop_date")
+      .limit(1)
+      .maybeSingle();
+    const items = (list?.shopping_list_items ?? []).filter((i) => !i.no_longer_needed);
+    return {
+      result: {
+        today,
+        meals: (entries ?? []).map((e) => ({
+          date: e.date,
+          slot: e.slot,
+          title: e.recipes?.title ?? e.free_text,
+          recipe_id: e.recipe_id,
+        })),
+        shopping_list: list
+          ? {
+              id: list.id,
+              name: list.name,
+              done: items.filter((i) => i.state !== "pending").length,
+              total: items.length,
+            }
+          : null,
+      },
+    };
+  },
+} satisfies ToolDef<z.ZodObject<Record<string, never>>>;
+
+const getMyDietPlan = {
+  name: "get_my_diet_plan",
+  description:
+    "El plan de alimentación activo de la persona que pregunta: fórmula por momento, permitidos de la semana y cuántos usó.",
+  schema: z.object({}),
+  async run(_input, ctx) {
+    const { data: plan } = await ctx.supabase
+      .from("diet_plans")
+      .select(
+        "id, title, allowances, rules, diet_plan_meals(slot, days, formula, components, position)",
+      )
+      .eq("user_id", ctx.userId)
+      .eq("status", "active")
+      .maybeSingle();
+    if (!plan)
+      return {
+        result: { plan: null, nota: "La persona no tiene un plan de alimentación cargado." },
+      };
+    const today = todayString(new Date());
+    const weekStart = weekStartOf(today, 1);
+    const { data: logs } = await ctx.supabase
+      .from("meal_logs")
+      .select("status")
+      .gte("date", weekStart)
+      .lte("date", addDays(weekStart, 6));
+    const used = (logs ?? []).filter((l) => l.status === "allowance").length;
+    const perWeek = (plan.allowances as { per_week?: number } | null)?.per_week ?? 0;
+    return {
+      result: {
+        title: plan.title,
+        rules: plan.rules,
+        meals: [...(plan.diet_plan_meals ?? [])]
+          .sort((a, b) => a.position - b.position)
+          .map((m) => ({
+            slot: m.slot,
+            days: m.days,
+            formula: m.formula,
+            components: m.components,
+          })),
+        allowances: { per_week: perWeek, used, left: Math.max(0, perWeek - used) },
+      },
+    };
+  },
+} satisfies ToolDef<z.ZodObject<Record<string, never>>>;
+
+const proposeAddToPlan = {
+  name: "propose_add_to_plan",
+  description: "Propone sumar una receta del recetario al plan de hoy. La persona confirma.",
+  schema: z.object({ recipe_id: uuid }),
+  async run({ recipe_id }, ctx) {
+    const r = await loadRecipe(ctx, recipe_id);
+    if (!r) return { result: { error: "No encontré esa receta." } };
+    return {
+      result: { status: "propuesta_lista" },
+      proposal: { kind: "add_to_plan", recipeId: r.id, recipeTitle: r.title },
+    };
+  },
+} satisfies ToolDef<z.ZodObject<{ recipe_id: z.ZodString }>>;
+
+const proposeAddToList = {
+  name: "propose_add_to_list",
+  description: "Propone sumar algo a la lista de compras activa del grupo. La persona confirma.",
+  schema: z.object({ item: z.string().min(1).max(80) }),
+  async run({ item }, ctx) {
+    const { data: list } = await ctx.supabase
+      .from("shopping_lists")
+      .select("id, name")
+      .eq("group_id", ctx.groupId)
+      .eq("status", "active")
+      .order("shop_date")
+      .limit(1)
+      .maybeSingle();
+    if (!list) return { result: { error: "No hay una lista de compras activa." } };
+    return {
+      result: { status: "propuesta_lista", lista: list.name },
+      proposal: { kind: "add_to_list", listId: list.id, listName: list.name, itemName: item },
+    };
+  },
+} satisfies ToolDef<z.ZodObject<{ item: z.ZodString }>>;
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const ASSISTANT_TOOLS: ToolDef<any>[] = [
   getRecipe,
@@ -249,6 +378,10 @@ export const ASSISTANT_TOOLS: ToolDef<any>[] = [
   checkCompatibility,
   proposeRecipeChange,
   proposeNote,
+  getToday,
+  getMyDietPlan,
+  proposeAddToPlan,
+  proposeAddToList,
 ];
 
 /** Definiciones para la API de Anthropic (JSON Schema derivado de Zod). */

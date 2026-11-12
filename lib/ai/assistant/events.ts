@@ -11,7 +11,9 @@ export type Proposal =
       /** Una línea por cambio ("Paso 2: 25 min → 30 min", "+ 1 paso"). */
       summary: string[];
     }
-  | { kind: "note"; recipeId: string; recipeTitle: string; text: string };
+  | { kind: "note"; recipeId: string; recipeTitle: string; text: string }
+  | { kind: "add_to_plan"; recipeId: string; recipeTitle: string }
+  | { kind: "add_to_list"; listId: string; listName: string; itemName: string };
 
 /** Eventos que el servidor manda por SSE. */
 export type AssistantEvent =

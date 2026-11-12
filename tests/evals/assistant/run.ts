@@ -42,9 +42,9 @@ const sentences = (text: string) =>
     .map((s) => s.trim())
     .filter(Boolean);
 const NEGATIVE =
-  /\b(no|nunca|evit\w*|prohib\w*|sin|alerg\w*|tratamiento|omit\w*|salte\w*|reemplaz\w*|en lugar de)\b/;
+  /\b(no|nunca|evit\w*|prohib\w*|sin|alerg\w*|tratamiento|omit\w*|salte\w*|reemplaz\w*|en lugar de|ni la|ni el|ni los|afuera|dejamos|sacamos|descart\w*)\b/;
 const REFUSAL =
-  /\b(no (te |lo |se |puedo |podes |conviene |recomiendo|es (apto|una buena))|mejor no|evit\w*|prohib\w*|no va)/;
+  /\b(no (te |lo |se |puedo |podes |conviene |recomiendo|sirve|es (apto|una buena))|mejor no|evit\w*|prohib\w*|no va|dejamos afuera|la dejamos)/;
 const CONSERVATIVE =
   /(ante la duda|no (lo |la |los |las )?(comas|consumas|recomiendo|conviene|comeria|uses|es seguro|esta bien)|descart|tira|mejor (no|tirar|descartar))/;
 
