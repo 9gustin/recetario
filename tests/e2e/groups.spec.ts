@@ -83,6 +83,7 @@ test("contexto: desde Perfil, la barra inferior vuelve al último grupo y no al 
   const page = await (await mobileContext(browser)).newPage();
   await signIn(page, email, "password123");
   await page.goto(`/g/${groupId}/recetas`);
+  await page.waitForLoadState("networkidle");
   await page.goto("/perfil");
   await expect(page.getByRole("button", { name: /Familia: cambiar de grupo/ })).toBeVisible();
   await page.waitForLoadState("networkidle");
