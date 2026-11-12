@@ -38,8 +38,8 @@ Archivo compartido entre los tres agentes. Cada uno lo lee al empezar y lo actua
 | 8b · Plan vivo (+ T5B.6) | lista para revisión |
 | 9 · Meal prep | lista para revisión |
 | 10 · Notificaciones y pulido | lista para revisión |
-| 11 · Ajustes y chat general | en curso |
-| 12 · Catálogo y sitio público | pendiente |
+| 11 · Ajustes y chat general | lista para revisión |
+| 12 · Catálogo y sitio público | en curso |
 
 Estados: `pendiente` → `en curso` → `lista para revisión` → `revisada (fecha, informe)` o `bloqueada (motivo)`.
 
