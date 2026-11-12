@@ -40,7 +40,7 @@
   4. `ingredient-match.ts`: `normalizeName()` (minúsculas, sin acentos, singular simple, sin palabras de relleno: "de", "fresco", "picado") y `matchLocal(name, catalog)` exacto → alias. El fuzzy se resuelve con el RPC `search_ingredients` desde el servidor.
 - **Aceptación:** el seed carga sin errores; los tests de matching cubren alias regionales y plurales.
 
-### T2.4 — Esquemas y acceso a datos de recetas
+### [x] T2.4 — Esquemas y acceso a datos de recetas
 - **Depende de:** T2.1, T2.2
 - **Archivos:** `lib/schemas/recipe.ts`, `lib/recipes/queries.ts`, `lib/recipes/actions.ts`.
 - **Pasos:**
@@ -107,3 +107,5 @@
 - T2.2: se eliminó `lib/domain/example.test.ts` (placeholder de T0.6). El parser soporta enteros, decimales con coma/punto, fracciones (`1/2`, `½`, `1 y 1/2`), rangos (`2-3` → 2,5 + nota), "a gusto"/"c/n" y "(opcional)". La cantidad sin unidad explícita se interpreta como `unidad` (conteo). `roundQuantity` redondea gramos a 5/10, cucharadas a 1/2 y volúmenes chicos a cuartos; la pluralización es plural solo cuando la cantidad es mayor a 1 ("½ taza", "1 ½ tazas").
 
 - T2.3: el catálogo son **263 ingredientes** (cercano a los ~300 pedidos; quedan cubiertas verduras, frutas, carnes, lácteos, almacén, especias, legumbres y congelados) con `aliases` regionales (palta/aguacate, zapallito/calabacín, morrón/pimiento, choclo/maíz, frutilla/fresa, ananá/piña, porotos/frijoles, chaucha/judía). `unit_weight_g` y `shelf_life` solo para los más comunes; `nutrition_per_100g` se deja para la ficha que complete la IA. El dato vive en `supabase/seed/ingredients.json`; `supabase/seed.sql` se **genera** con un script (dollar-quote del JSON) para que `db:reset` lo cargue idempotente (`on conflict (name) do update`). El matcher (`matchLocal`/`normalizeName`) hace exacto→alias tras normalizar (minúsculas, sin acentos, singular simple, sin relleno); el fuzzy queda en el RPC `search_ingredients`.
+
+- T2.4: `saveRecipe` resuelve el `ingredient_id` con `matchLocal` (parsea el `raw_text` con `parseIngredientLine` para sacar el nombre) y llama al RPC `save_recipe`. `save_recipe` devuelve `jsonb`, así que el resultado se castea a `{ id, current_version }`. `uploadRecipeImage` sube a Storage (bucket `recipe-images`, path `<group>/<recipe>/<uuid>.<ext>`) y actualiza `image_url` con la URL pública. `last_cooked_at` queda `null` hasta la Etapa 3.
