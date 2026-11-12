@@ -170,12 +170,16 @@ test("Ideas para hoy: 3 ideas aptas con su motivo, 'Otras 3' no repite y elegir 
   const first = await list.getByRole("heading", { level: 3 }).allTextContents();
 
   await page.waitForLoadState("networkidle");
-  await page.getByRole("button", { name: "Otras 3 ideas" }).tap();
+  // Toca "Otras 3 ideas" solo mientras se sigan viendo las primeras (si la página aún no hidrató, reintenta).
   await expect(async () => {
+    const current = await list.getByRole("heading", { level: 3 }).allTextContents();
+    if (current.length > 0 && current.every((t) => first.includes(t))) {
+      await page.getByRole("button", { name: "Otras 3 ideas" }).tap({ timeout: 3000 });
+    }
     const second = await list.getByRole("heading", { level: 3 }).allTextContents();
     expect(second.length).toBeGreaterThan(0);
     expect(second.some((t) => first.includes(t))).toBe(false);
-  }).toPass({ timeout: 15_000 });
+  }).toPass({ timeout: 30_000 });
 
   await list.getByRole("button", { name: "Elegir para hoy" }).first().tap();
   await expect(page).toHaveURL(new RegExp(`/g/${groupId}/hoy$`));
