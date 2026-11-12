@@ -30,7 +30,7 @@ Archivo compartido entre los tres agentes. Cada uno lo lee al empezar y lo actua
 | 2 · Recetario | lista para revisión |
 | 3 · Modo cocinar | lista para revisión |
 | 4 · Compartir | lista para revisión |
-| 5 · IA: importar | pendiente |
+| 5 · IA: importar | lista para revisión |
 | 5b · Preguntale | pendiente |
 | 6 · Perfil alimentario | pendiente |
 | 7 · Plan semanal + Hoy | pendiente |
