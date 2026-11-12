@@ -45,6 +45,7 @@ Los nombres están en `.env.example`. Local: `.env.local` (nunca se commitea). P
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Clave pública de Supabase (respeta RLS) | `.env.local` · Vercel |
 | `SUPABASE_SERVICE_ROLE_KEY` | Clave de servidor, ignora RLS. Solo servidor | `.env.local` · Vercel |
 | `SENTRY_DSN`, `NEXT_PUBLIC_SENTRY_DSN` | Errores (opcional: sin ellas queda desactivado) | Vercel |
+| `ANTHROPIC_API_KEY` | Claude (IA). Solo servidor | `.env.local` · Vercel |
 | `NEXT_PUBLIC_POSTHOG_KEY`, `NEXT_PUBLIC_POSTHOG_HOST` | Analytics (opcional) | Vercel |
 
 Las variables de los demás servicios (Anthropic, transcripción, Inngest, Web Push) se agregan en las secciones siguientes a medida que se configuran.

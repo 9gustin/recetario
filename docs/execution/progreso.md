@@ -14,7 +14,7 @@ Archivo compartido entre los tres agentes. Cada uno lo lee al empezar y lo actua
 - [x] Paso 8 — T0.7 CI
 - [x] Paso 9 — T0.8 Producción
 - [x] Paso 10 — Login email + contraseña (sin Google)
-- [ ] Paso 11 — Anthropic
+- [x] Paso 11 — Anthropic
 - [ ] Paso 12 — Transcripción (proveedor elegido: ___)
 - [ ] Paso 13 — Inngest
 - [ ] Paso 14 — Web Push (VAPID)
