@@ -1,6 +1,8 @@
+import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import { requireUser } from "@/lib/auth";
 import { createClient } from "@/lib/supabase/server";
+import { JoinToast } from "@/components/groups/join-toast";
 
 /** Verifica que el usuario sea miembro del grupo; si no, 404. */
 export default async function GroupLayout({
@@ -23,5 +25,12 @@ export default async function GroupLayout({
 
   if (!data) notFound();
 
-  return <>{children}</>;
+  return (
+    <>
+      <Suspense fallback={null}>
+        <JoinToast />
+      </Suspense>
+      {children}
+    </>
+  );
 }

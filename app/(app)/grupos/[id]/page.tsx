@@ -26,6 +26,13 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
   const myRole = members?.find((m) => m.user_id === user.id)?.role;
   if (!myRole) notFound();
 
+  const { data: invites } = await supabase
+    .from("group_invites")
+    .select("id, token, expires_at")
+    .eq("group_id", id)
+    .is("revoked_at", null)
+    .order("created_at", { ascending: false });
+
   return (
     <main className="flex flex-col gap-6 px-5 pt-5">
       <GroupSettings
@@ -37,6 +44,11 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
         }))}
         myRole={myRole}
         myUserId={user.id}
+        invites={(invites ?? []).map((i) => ({
+          id: i.id,
+          token: i.token,
+          expires_at: i.expires_at,
+        }))}
       />
     </main>
   );

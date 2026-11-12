@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { PillButton } from "@/components/shared/pill-button";
 import { EmojiGrid } from "./emoji-grid";
+import { InviteSheet } from "./invite-sheet";
 import { ROLE_LABELS } from "@/lib/groups/constants";
 import {
   leaveGroup,
@@ -27,9 +28,10 @@ type Props = {
   members: GroupMember[];
   myRole: string;
   myUserId: string;
+  invites: { id: string; token: string; expires_at: string | null }[];
 };
 
-export function GroupSettings({ group, members, myRole, myUserId }: Props) {
+export function GroupSettings({ group, members, myRole, myUserId, invites }: Props) {
   const router = useRouter();
   const [name, setName] = useState(group.name);
   const [emoji, setEmoji] = useState<string | null>(group.emoji);
@@ -190,6 +192,10 @@ export function GroupSettings({ group, members, myRole, myUserId }: Props) {
           );
         })}
       </div>
+
+      {!group.is_personal && (myRole === "owner" || myRole === "admin") ? (
+        <InviteSheet groupId={group.id} groupName={group.name} initialInvites={invites} />
+      ) : null}
 
       {group.is_personal ? (
         <p className="text-sm text-muted">

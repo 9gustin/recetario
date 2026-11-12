@@ -70,7 +70,7 @@
   4. El grupo personal no muestra "Invitar" ni "Salir"; muestra "Para compartir con otras personas, creá un grupo".
 - **Aceptación:** todas las acciones respetan roles (los botones no aparecen si no corresponde y el servidor también lo rechaza).
 
-### T1.6 — Invitaciones por link
+### [x] T1.6 — Invitaciones por link
 - **Depende de:** T1.5
 - **Archivos:** `components/groups/invite-sheet.tsx`, `lib/groups/invites.ts`, `app/join/[token]/page.tsx`, `app/join/[token]/accept/route.ts`.
 - **Pasos:**
@@ -107,3 +107,5 @@
 - T1.4: la cookie `last_group_id` se escribe en el `proxy.ts`/`updateSession` (los Server Components no pueden escribir cookies). `BottomNav` recibe `defaultGroupId` (grupo personal) para resolver los tabs en `/perfil`, que no tiene `groupId` en la URL. La membresía se valida en `app/(app)/g/[groupId]/layout.tsx` (404 si no es miembro o el grupo no existe). Los botones "Crear grupo"/"Administrar grupos" del selector apuntan a `/grupos/nuevo` y `/grupos`, que se implementan en T1.5 (dan 404 hasta entonces, por diseño incremental). Se quitó `DEMO_GROUP_ID` de T0.3.
 
 - T1.5: para "cambiar rol" hizo falta una migración nueva (`20261112013000_set_member_role.sql`) con el RPC `set_member_role(gid, uid, role)` (`security definer`): solo un `owner` puede cambiar roles, no puede cambiarse a sí mismo, y se revoca a `anon`. Renombrar/emoji usan `update` directo sobre `groups` (la policy `groups_update_owner_admin` de T1.1 ya lo restringe a owner/admin); sacar miembro usa `remove_member` y salir usa `leave_group` (T1.1). El tipo generado marca `p_emoji` de `create_group` como `string` aunque el parámetro SQL es nullable: se castea al llamar al RPC.
+
+- T1.6: el token se genera con `crypto.randomBytes(24).toString("base64url")` (7 días, `max_uses` nulo = usos ilimitados) en un Server Action (`lib/groups/invites.ts`). Crear/revocar invitaciones usan el cliente normal: la RLS de `group_invites` (owner/admin) ya lo restringe. La página `/join/[token]` usa `get_invite_preview` (accesible a `anon`) y chequea la sesión sin redirigir; si el usuario ya es miembro redirige directo. El toast "¡Te uniste a X!" se pasa por query `?joined=` y lo muestra `JoinToast` (envuelto en `Suspense`) desde el layout de grupo. Un `member` que abre ajustes no ve invitaciones: la RLS le devuelve lista vacía (no error).
