@@ -145,6 +145,7 @@ export async function listRecipes(groupId: string, filters: RecipeFilters = {}) 
 
 export type RecipeVersion = {
   id: string;
+  author_name: string | null;
   version: number;
   snapshot: Record<string, unknown>;
   changed_by: string | null;
@@ -160,7 +161,26 @@ export async function getVersions(recipeId: string) {
     .select("id, version, snapshot, changed_by, change_note, origin, created_at")
     .eq("recipe_id", recipeId)
     .order("version", { ascending: false });
-  return { data: (data ?? []) as RecipeVersion[], error };
+
+  const rows = data ?? [];
+  const authorIds = [...new Set(rows.map((r) => r.changed_by).filter((v): v is string => !!v))];
+  const names = new Map<string, string | null>();
+  if (authorIds.length) {
+    const { data: profiles } = await supabase
+      .from("profiles")
+      .select("id, display_name")
+      .in("id", authorIds);
+    for (const p of profiles ?? []) names.set(p.id, p.display_name);
+  }
+
+  return {
+    data: rows.map((r) => ({
+      ...r,
+      snapshot: r.snapshot as Record<string, unknown>,
+      author_name: r.changed_by ? (names.get(r.changed_by) ?? null) : null,
+    })) as RecipeVersion[],
+    error,
+  };
 }
 
 /** Etiquetas más usadas del grupo (para los chips de filtro) y cantidad total de recetas. */

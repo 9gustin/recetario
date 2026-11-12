@@ -81,7 +81,7 @@
   5. Estado vacío: "Cargá tu primera receta. Empezá por la que más cocinan."
 - **Aceptación:** con 50 recetas, buscar "pollo" responde en < 300 ms en local.
 
-### T2.8 — Historial de versiones
+### [x] T2.8 — Historial de versiones
 - **Depende de:** T2.6
 - **Archivos:** `app/(app)/g/[groupId]/recetas/[id]/historial/page.tsx`, `lib/domain/recipe-diff.ts` + test.
 - **Pasos:**
@@ -115,3 +115,5 @@
 - T2.6: el detalle escala ingredientes en vivo con `scaleQuantity` + `formatQuantity` al cambiar porciones. El botón "Cocinar" queda deshabilitado (Etapa 3); Compartir y "Agregar al plan" llegan en Etapas 4 y 7. "la hicieron X veces" se omite hasta tener sesiones de cocina (Etapa 3). El header usa `bg-hero` con foto (`image_url`) si existe.
 
 - T2.7: búsqueda con debounce (250 ms) sobre `search_tsv`; chips Favoritas, Menos de 30 min, las 5 etiquetas más usadas del grupo y "Tiene ingrediente…" (autocompleta con `search_ingredients`, filtra por `recipe_ingredients.ingredient_id`). Paginación de a 24 con IntersectionObserver (la acción pide una fila de más para saber si hay otra página). Validación Zod en `lib/schemas/recipe-search.ts`. Medido: 'pollo' sobre 50 recetas, 16 resultados en 0,1 ms. El título 'Recetas' lo da la barra superior, por eso la pantalla no repite el h1; el FAB se ancla al contenedor max-w-md. Las advertencias de lint de `recipe-form.tsx` son de T2.5 y quedan para la revisión.
+
+- T2.8: historial en `<details>` (sin JS) con el diff contra la versión anterior (`lib/domain/recipe-diff.ts`, 6 tests). Los ingredientes se emparejan por `ingredient_id` (o texto normalizado si no hay) y los pasos por posición, así que insertar un paso en el medio se ve como varios cambios. Restaurar llama a `saveRecipe` con `origin = 'restore'` y nota "Restaurada la versión N". El nombre del autor sale de `profiles` (RLS permite leer a quienes comparten grupo).

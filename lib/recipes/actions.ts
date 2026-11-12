@@ -1,11 +1,13 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
+import { z } from "zod";
 import { createClient } from "@/lib/supabase/server";
 import { requireUser } from "@/lib/auth";
 import { recipeInputSchema } from "@/lib/schemas/recipe";
 import { matchLocal } from "@/lib/domain/ingredient-match";
 import { parseIngredientLine } from "@/lib/domain/ingredient-line";
+import { parseSnapshot } from "@/lib/domain/recipe-diff";
 import type { RecipeListItem } from "./queries";
 import { ingredientSearchSchema, recipeSearchSchema } from "@/lib/schemas/recipe-search";
 
@@ -205,4 +207,58 @@ export async function searchIngredientSuggestions(
   const { data, error } = await supabase.rpc("search_ingredients", { q: parsed.data.q, lim: 6 });
   if (error) return { ok: false, error: "No se pudo buscar ingredientes." };
   return { ok: true, data: (data ?? []).map((i) => ({ id: i.id, name: i.name })) };
+}
+
+const restoreSchema = z.object({
+  recipeId: z.string().uuid(),
+  version: z.number().int().positive(),
+});
+
+/** Vuelve a una versión anterior: crea una versión nueva (origin = restore), no borra historia. */
+export async function restoreRecipeVersion(
+  raw: unknown,
+): Promise<
+  { ok: true; data: { id: string; current_version: number } } | { ok: false; error: string }
+> {
+  const parsed = restoreSchema.safeParse(raw);
+  if (!parsed.success) return { ok: false, error: "Versión inválida." };
+
+  await requireUser();
+  const supabase = await createClient();
+
+  const { data: recipe } = await supabase
+    .from("recipes")
+    .select("id, group_id")
+    .eq("id", parsed.data.recipeId)
+    .is("deleted_at", null)
+    .maybeSingle();
+  if (!recipe) return { ok: false, error: "No encontramos la receta." };
+
+  const { data: version } = await supabase
+    .from("recipe_versions")
+    .select("snapshot")
+    .eq("recipe_id", recipe.id)
+    .eq("version", parsed.data.version)
+    .maybeSingle();
+  if (!version) return { ok: false, error: "No encontramos esa versión." };
+
+  const snap = parseSnapshot(version.snapshot);
+  const result = await saveRecipe({
+    id: recipe.id,
+    group_id: recipe.group_id,
+    title: snap.title,
+    description: snap.description,
+    servings: snap.servings ?? 2,
+    prep_minutes: snap.prep_minutes,
+    cook_minutes: snap.cook_minutes,
+    total_minutes: snap.total_minutes,
+    difficulty: snap.difficulty,
+    tags: snap.tags,
+    ingredients: snap.ingredients.map((i) => ({ ...i, raw_text: i.raw_text ?? "" })),
+    steps: snap.steps,
+    change_note: `Restaurada la versión ${parsed.data.version}`,
+    origin: "restore",
+  });
+  if (result.ok) revalidatePath(`/g/${recipe.group_id}/recetas/${recipe.id}`);
+  return result;
 }
