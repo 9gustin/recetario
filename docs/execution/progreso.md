@@ -22,7 +22,7 @@ Archivo compartido entre los tres agentes. Cada uno lo lee al empezar y lo actua
 
 ## 2 · Código (DeepSeek) — [instrucciones](02-codigo-deepseek.md)
 
-**Próxima tarea:** T1.1
+**Próxima tarea:** T1.2
 
 | Etapa | Estado |
 |---|---|

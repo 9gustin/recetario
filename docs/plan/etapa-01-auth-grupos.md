@@ -5,7 +5,7 @@
 
 ---
 
-### T1.1 — Migración: perfiles, grupos, miembros, invitaciones
+### [x] T1.1 — Migración: perfiles, grupos, miembros, invitaciones
 - **Depende de:** T0.5
 - **Archivos:** `supabase/migrations/<ts>_groups.sql`.
 - **Pasos:**
@@ -97,3 +97,5 @@
 - [ ] Revisión de RLS (🧠 recomendado con Opus): leer todas las policies y buscar huecos.
 
 ## Notas de ejecución
+
+- T1.1: se agregó la función helper `shares_group_with(uid)` (security definer, stable) para la policy de `profiles` ("ver el perfil de quien comparte algún grupo") sin recursión de RLS. `group_members` no lleva `updated_at` (join table con `joined_at`, según §5.2). `create_group`/`accept_invite`/`leave_group`/`remove_member` quedan revocadas a `anon` (solo `get_invite_preview` es accesible a anon); el alta de usuario crea perfil + grupo personal "Mis recetas" + membresía owner vía trigger `on_auth_user_created`.

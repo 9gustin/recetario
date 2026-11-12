@@ -23,13 +23,130 @@ export type Database = {
           }
         },"public": {
           Tables: {
-            [_ in never]: never
+            "group_invites": {
+                  Row: {
+                    "created_at": string,"created_by": string | null,"expires_at": string | null,"group_id": string,"id": string,"max_uses": number | null,"revoked_at": string | null,"token": string,"updated_at": string,"uses": number
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "created_at"?: string,"created_by"?: string | null,"expires_at"?: string | null,"group_id": string,"id"?: string,"max_uses"?: number | null,"revoked_at"?: string | null,"token": string,"updated_at"?: string,"uses"?: number
+                  }
+                  Update: {
+                    "created_at"?: string,"created_by"?: string | null,"expires_at"?: string | null,"group_id"?: string,"id"?: string,"max_uses"?: number | null,"revoked_at"?: string | null,"token"?: string,"updated_at"?: string,"uses"?: number
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "group_invites_created_by_fkey"
+      columns: ["created_by"]
+isOneToOne: false
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "group_invites_group_id_fkey"
+      columns: ["group_id"]
+isOneToOne: false
+      referencedRelation: "groups"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"group_members": {
+                  Row: {
+                    "group_id": string,"joined_at": string,"role": string,"user_id": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "group_id": string,"joined_at"?: string,"role": string,"user_id": string
+                  }
+                  Update: {
+                    "group_id"?: string,"joined_at"?: string,"role"?: string,"user_id"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "group_members_group_id_fkey"
+      columns: ["group_id"]
+isOneToOne: false
+      referencedRelation: "groups"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "group_members_user_id_fkey"
+      columns: ["user_id"]
+isOneToOne: false
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"groups": {
+                  Row: {
+                    "archived_at": string | null,"created_at": string,"created_by": string | null,"emoji": string | null,"id": string,"image_url": string | null,"is_personal": boolean,"meal_slots": (string)[],"name": string,"updated_at": string,"week_starts_on": number
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "archived_at"?: string | null,"created_at"?: string,"created_by"?: string | null,"emoji"?: string | null,"id"?: string,"image_url"?: string | null,"is_personal"?: boolean,"meal_slots"?: (string)[],"name": string,"updated_at"?: string,"week_starts_on"?: number
+                  }
+                  Update: {
+                    "archived_at"?: string | null,"created_at"?: string,"created_by"?: string | null,"emoji"?: string | null,"id"?: string,"image_url"?: string | null,"is_personal"?: boolean,"meal_slots"?: (string)[],"name"?: string,"updated_at"?: string,"week_starts_on"?: number
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "groups_created_by_fkey"
+      columns: ["created_by"]
+isOneToOne: false
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"profiles": {
+                  Row: {
+                    "avatar_url": string | null,"created_at": string,"display_name": string | null,"id": string,"locale": string,"personal_group_id": string | null,"updated_at": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "avatar_url"?: string | null,"created_at"?: string,"display_name"?: string | null,"id": string,"locale"?: string,"personal_group_id"?: string | null,"updated_at"?: string
+                  }
+                  Update: {
+                    "avatar_url"?: string | null,"created_at"?: string,"display_name"?: string | null,"id"?: string,"locale"?: string,"personal_group_id"?: string | null,"updated_at"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "profiles_personal_group_id_fkey"
+      columns: ["personal_group_id"]
+isOneToOne: false
+      referencedRelation: "groups"
+      referencedColumns: ["id"]
+    }
+                  ]
+                }
           }
           Views: {
             [_ in never]: never
           }
           Functions: {
-            [_ in never]: never
+            "accept_invite":
+{ Args: { "p_token": string }; Returns: string
+                           },
+"create_group":
+{ Args: { "p_emoji": string,"p_name": string }; Returns: string
+                           },
+"get_invite_preview":
+{ Args: { "p_token": string }; Returns: {
+              "group_emoji": string,"group_id": string,"group_name": string,"inviter_name": string,"is_expired": boolean,"is_revoked": boolean,"is_valid": boolean,"member_count": number
+            }[]
+                           },
+"group_role":
+{ Args: { "gid": string }; Returns: string
+                           },
+"is_group_member":
+{ Args: { "gid": string }; Returns: boolean
+                           },
+"leave_group":
+{ Args: { "gid": string }; Returns: undefined
+                           },
+"remove_member":
+{ Args: { "gid": string,"p_user_id": string }; Returns: undefined
+                           },
+"shares_group_with":
+{ Args: { "p_user_id": string }; Returns: boolean
+                           }
           }
           Enums: {
             [_ in never]: never
