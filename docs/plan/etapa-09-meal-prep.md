@@ -16,7 +16,7 @@
   5. Estado visible en el plan ("Armando tu lista y tus preparaciones…").
 - **Aceptación:** aprobar un plan muestra el avance en vivo; si la IA falla en un paso, lo ya guardado queda y se puede reintentar sin duplicar.
 
-### T9.2 — Generar tareas de meal prep
+### [x] T9.2 — Generar tareas de meal prep
 - **Depende de:** T9.1, T7.7
 - **Archivos:** `lib/ai/prep/generate.ts`, `lib/ai/prompts/meal-prep.ts`, `lib/schemas/prep.ts`, `lib/domain/validate-prep.ts` + test.
 - **Pasos:**
@@ -53,3 +53,5 @@
 ## Notas de ejecución
 
 - T9.1: Pasos shopping-list → enrich-list (el de preparaciones se suma en T9.2); fallo no crítico no corta, reintento por paso con {only}. Si el cliente se va, el trabajo sigue (emit tolerante).
+
+- T9.2: kind no incluye 'freezar': se usa portion con 'freezar' en el título. Tips en meal_plans.prep_tips (migración nueva). Eval pnpm eval:prep: 5 tareas (porcionar/freezar el día de la compra, descongelar el día anterior). No se consideran equipamiento ni tiempo disponible del perfil todavía.

@@ -23,6 +23,7 @@
     "eval:assistant": "tsx --conditions=react-server tests/evals/assistant/run.ts",
     "eval:plan": "tsx --conditions=react-server tests/evals/plan/run.ts",
     "eval:suggest": "tsx --conditions=react-server tests/evals/plan/suggest.ts",
+    "eval:prep": "tsx --conditions=react-server tests/evals/plan/prep.ts",
     "eval:diet": "tsx --conditions=react-server tests/evals/diet-plan/run.ts"
   },
   "dependencies": {

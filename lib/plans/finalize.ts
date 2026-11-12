@@ -1,6 +1,7 @@
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { enrichShoppingList } from "@/lib/ai/shopping/enrich";
 import type { StreamEvent } from "@/lib/ai/stream";
+import { generatePrepTasks } from "@/lib/ai/prep/generate";
 import { generateShoppingLists } from "@/lib/shopping/generate";
 import type { Database } from "@/lib/supabase/database.types";
 
@@ -43,6 +44,19 @@ export const FINALIZE_STEPS: FinalizeStep[] = [
           userId: ctx.userId,
           groupId: ctx.groupId,
         });
+    },
+  },
+  {
+    name: "prep-tasks",
+    label: "Pensando qué preparar con anticipación",
+    critical: false,
+    async run(ctx) {
+      const res = await generatePrepTasks(ctx.supabase, {
+        planId: ctx.planId,
+        userId: ctx.userId,
+        groupId: ctx.groupId,
+      });
+      if (!res.ok) throw new Error(res.error);
     },
   },
 ];

@@ -2,6 +2,7 @@ import { describe, expect, it, vi } from "vitest";
 
 vi.mock("@/lib/ai/shopping/enrich", () => ({ enrichShoppingList: vi.fn() }));
 vi.mock("@/lib/shopping/generate", () => ({ generateShoppingLists: vi.fn() }));
+vi.mock("@/lib/ai/prep/generate", () => ({ generatePrepTasks: vi.fn() }));
 
 import type { StreamEvent } from "@/lib/ai/stream";
 import { runFinalize, type FinalizeCtx, type FinalizeStep } from "./finalize";
