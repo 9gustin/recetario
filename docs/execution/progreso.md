@@ -22,7 +22,7 @@ Archivo compartido entre los tres agentes. Cada uno lo lee al empezar y lo actua
 
 ## 2 · Código (DeepSeek) — [instrucciones](02-codigo-deepseek.md)
 
-**Próxima tarea:** —(plan completo)
+**Próxima tarea:** T12.2
 
 | Etapa | Estado |
 |---|---|
@@ -38,6 +38,8 @@ Archivo compartido entre los tres agentes. Cada uno lo lee al empezar y lo actua
 | 8b · Plan vivo (+ T5B.6) | lista para revisión |
 | 9 · Meal prep | lista para revisión |
 | 10 · Notificaciones y pulido | lista para revisión |
+| 11 · Ajustes y chat general | lista para revisión |
+| 12 · Catálogo y sitio público | lista para revisión |
 
 Estados: `pendiente` → `en curso` → `lista para revisión` → `revisada (fecha, informe)` o `bloqueada (motivo)`.
 

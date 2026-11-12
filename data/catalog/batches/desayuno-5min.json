@@ -1,0 +1,482 @@
+[
+  {
+    "title": "Tostado de jamón y queso en sartén",
+    "description": "El clásico de todos los días, crocante por fuera y con el queso bien derretido. Listo en lo que se calienta el agua del mate.",
+    "servings": 2,
+    "prep_minutes": 3,
+    "cook_minutes": 5,
+    "difficulty": "facil",
+    "tags": [
+      "desayuno",
+      "rápido",
+      "sándwich",
+      "para chicos"
+    ],
+    "ingredients": [
+      "4 fetas de pan lactal",
+      "4 fetas de jamón cocido",
+      "4 fetas de queso cremoso",
+      "1 cdita de manteca",
+      "1 pizca de orégano"
+    ],
+    "steps": [
+      {
+        "instruction": "Armá dos sándwiches con 2 fetas de jamón y 2 de queso cada uno."
+      },
+      {
+        "instruction": "Untá la parte de afuera del pan con un poquito de manteca."
+      },
+      {
+        "instruction": "Calentá una sartén antihderente a fuego medio y apoyá los sándwiches.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Dalos vuelta cuando estén dorados y cociná del otro lado hasta que el queso se derrita.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Espolvoreá con orégano, cortá en triángulos y serví caliente."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Pasalo por la sartén o la tostadora unos 2 minutos para que recupere el crocante.",
+      "tip": "Mejor comerlo al momento; recalentado pierde textura."
+    }
+  },
+  {
+    "title": "Avena cremosa en microondas con manzana y canela",
+    "description": "Un bol de avena calentito que se hace en una sola taza, sin ensuciar ollas. Dulce natural de la manzana y toque de canela.",
+    "servings": 1,
+    "prep_minutes": 3,
+    "cook_minutes": 3,
+    "difficulty": "facil",
+    "tags": [
+      "desayuno",
+      "rápido",
+      "sin horno",
+      "fruta",
+      "económico",
+      "vegetariano"
+    ],
+    "ingredients": [
+      "1/2 taza de avena arrollada",
+      "1 taza de leche",
+      "1/2 manzana",
+      "1 cdita de azúcar o miel",
+      "1 pizca de canela",
+      "1 cda de nueces picadas"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá la media manzana en cubitos chicos."
+      },
+      {
+        "instruction": "Poné en un bol grande la avena, la leche y la manzana, y mezclá."
+      },
+      {
+        "instruction": "Cociná en el microondas a potencia máxima, revolviendo a la mitad.",
+        "minutes": 3,
+        "passive": true
+      },
+      {
+        "instruction": "Endulzá con azúcar o miel, agregá la canela y las nueces, y serví."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Calentá en el microondas 1 minuto con un chorrito de leche.",
+      "tip": "Usá un bol bien grande: la leche sube al hervir."
+    }
+  },
+  {
+    "title": "Huevos revueltos cremosos con tomate",
+    "description": "Huevos suaves con tomate fresco y cebolla de verdeo, para acompañar con tostadas. Sale en una sola sartén.",
+    "servings": 2,
+    "prep_minutes": 3,
+    "cook_minutes": 5,
+    "difficulty": "facil",
+    "tags": [
+      "desayuno",
+      "rápido",
+      "huevo",
+      "alto en proteína"
+    ],
+    "ingredients": [
+      "4 huevos",
+      "1 tomate",
+      "1 cebolla de verdeo",
+      "1 cda de aceite de oliva",
+      "sal a gusto",
+      "pimienta a gusto",
+      "2 fetas de pan lactal tostado"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá el tomate en cubitos y picá finita la parte blanca del verdeo."
+      },
+      {
+        "instruction": "Batí los huevos con sal y pimienta."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén y salteá el verdeo y el tomate.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Volcá los huevos y revolvé despacio con una espátula.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Apagá el fuego cuando todavía estén húmedos y serví sobre las tostadas."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Calentá en sartén a fuego bajo 1 minuto.",
+      "tip": "Sacalos del fuego un poco antes: siguen cocinándose en el plato."
+    }
+  },
+  {
+    "title": "Yogur con frutas y granola",
+    "description": "Un desayuno fresco sin cocción, con capas de yogur, fruta de estación y algo crocante. Ideal para días de calor.",
+    "servings": 1,
+    "prep_minutes": 5,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "desayuno",
+      "rápido",
+      "sin horno",
+      "fruta",
+      "liviano",
+      "vegetariano"
+    ],
+    "ingredients": [
+      "1 pote de yogur natural (200 g)",
+      "1 banana",
+      "5 frutillas",
+      "3 cdas de granola",
+      "1 cdita de miel"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá la banana en rodajas y las frutillas en cuartos."
+      },
+      {
+        "instruction": "Poné la mitad del yogur en un vaso o bol."
+      },
+      {
+        "instruction": "Sumá la mitad de la fruta y de la granola."
+      },
+      {
+        "instruction": "Repetí las capas con lo que queda y terminá con un hilo de miel."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Se come frío, no se recalienta.",
+      "tip": "Agregá la granola recién al servir para que no se ablande."
+    }
+  },
+  {
+    "title": "Tostada con palta, tomate y semillas",
+    "description": "Pan tostado con palta pisada y limón, tomate fresco y semillas de girasol. Salado, liviano y bien rápido.",
+    "servings": 1,
+    "prep_minutes": 5,
+    "cook_minutes": 3,
+    "difficulty": "facil",
+    "tags": [
+      "desayuno",
+      "rápido",
+      "vegano",
+      "liviano",
+      "sin lácteos"
+    ],
+    "ingredients": [
+      "2 fetas de pan integral",
+      "1/2 palta",
+      "1/2 tomate",
+      "1 cdita de jugo de limón",
+      "1 cda de semillas de girasol",
+      "sal a gusto",
+      "1 cdita de aceite de oliva"
+    ],
+    "steps": [
+      {
+        "instruction": "Tostá las fetas de pan hasta que estén doradas.",
+        "minutes": 3,
+        "passive": true
+      },
+      {
+        "instruction": "Pisá la palta con un tenedor, el limón y sal."
+      },
+      {
+        "instruction": "Cortá el tomate en rodajas finas."
+      },
+      {
+        "instruction": "Untá las tostadas con la palta, sumá el tomate y las semillas."
+      },
+      {
+        "instruction": "Terminá con un hilo de aceite de oliva."
+      }
+    ],
+    "storage": {
+      "fridge_days": 0,
+      "freezer_days": null,
+      "reheat": "Se come al momento, no se recalienta.",
+      "tip": "Dejale el carozo a la palta sobrante y tapala para que no se oscurezca."
+    }
+  },
+  {
+    "title": "Licuado de banana, avena y leche",
+    "description": "Bebida espesa y dulce para tomar en el apuro, con banana madura y avena que da saciedad. Sin azúcar agregada.",
+    "servings": 2,
+    "prep_minutes": 5,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "desayuno",
+      "rápido",
+      "bebida",
+      "fruta",
+      "sin horno",
+      "vegetariano"
+    ],
+    "ingredients": [
+      "2 bananas maduras",
+      "2 tazas de leche fría",
+      "4 cdas de avena arrollada",
+      "1 cdita de esencia de vainilla",
+      "1 pizca de canela",
+      "4 cubos de hielo"
+    ],
+    "steps": [
+      {
+        "instruction": "Pelá las bananas y cortalas en trozos."
+      },
+      {
+        "instruction": "Poné todo en la licuadora: bananas, leche, avena, vainilla y hielo."
+      },
+      {
+        "instruction": "Licuá hasta que quede cremoso.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Serví en vasos y espolvoreá con canela."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Se toma frío; mezclalo bien antes de servir porque se separa.",
+      "tip": "Usá bananas congeladas en rodajas para que quede tipo batido helado."
+    }
+  },
+  {
+    "title": "Panqueques de banana y avena",
+    "description": "Tres ingredientes y una sartén: masa de banana pisada, huevo y avena. Salen esponjosos y sin harina.",
+    "servings": 2,
+    "prep_minutes": 3,
+    "cook_minutes": 6,
+    "difficulty": "media",
+    "tags": [
+      "desayuno",
+      "rápido",
+      "fruta",
+      "para chicos",
+      "vegetariano"
+    ],
+    "ingredients": [
+      "1 banana madura",
+      "2 huevos",
+      "4 cdas de avena arrollada",
+      "1 cdita de aceite",
+      "1 cda de miel",
+      "1 pizca de canela"
+    ],
+    "steps": [
+      {
+        "instruction": "Pisá la banana con un tenedor hasta hacer un puré."
+      },
+      {
+        "instruction": "Sumá los huevos, la avena y la canela, y mezclá bien."
+      },
+      {
+        "instruction": "Engrasá apenas una sartén antiadherente y calentala a fuego medio-bajo."
+      },
+      {
+        "instruction": "Volcá cucharadas de masa y cociná hasta que salgan burbujas.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Dalos vuelta con cuidado y cociná del otro lado.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Repetí con el resto de la masa y serví con miel."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": 30,
+      "reheat": "Calentalos 30 segundos en el microondas o en la tostadora.",
+      "tip": "Hacelos chiquitos: son más fáciles de dar vuelta."
+    }
+  },
+  {
+    "title": "Tostadas con ricota, miel y nueces",
+    "description": "Pan crocante con ricota fresca, un hilo de miel y nueces. Un desayuno dulce que no necesita cocción.",
+    "servings": 2,
+    "prep_minutes": 5,
+    "cook_minutes": 2,
+    "difficulty": "facil",
+    "tags": [
+      "desayuno",
+      "rápido",
+      "vegetariano",
+      "sin horno"
+    ],
+    "ingredients": [
+      "4 fetas de pan de campo",
+      "150 g de ricota",
+      "2 cdas de miel",
+      "4 nueces",
+      "1 pizca de canela"
+    ],
+    "steps": [
+      {
+        "instruction": "Tostá las fetas de pan hasta que estén crocantes.",
+        "minutes": 2,
+        "passive": true
+      },
+      {
+        "instruction": "Picá las nueces con un cuchillo."
+      },
+      {
+        "instruction": "Untá cada tostada con ricota en una capa generosa."
+      },
+      {
+        "instruction": "Sumá las nueces, la miel y una pizca de canela."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "No se recalienta; armalas justo antes de comer.",
+      "tip": "Guardá la ricota sobrante tapada en la heladera y usala en 3 días."
+    }
+  },
+  {
+    "title": "Huevo en el agujero",
+    "description": "Un huevo cocinado dentro de una rodaja de pan, dorado en manteca. Divertido para chicos y listo en minutos.",
+    "servings": 2,
+    "prep_minutes": 2,
+    "cook_minutes": 6,
+    "difficulty": "facil",
+    "tags": [
+      "desayuno",
+      "rápido",
+      "huevo",
+      "para chicos"
+    ],
+    "ingredients": [
+      "2 fetas de pan lactal grueso",
+      "2 huevos",
+      "1 cdita de manteca",
+      "sal a gusto",
+      "pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Hacé un agujero en el centro de cada feta con un vaso chico."
+      },
+      {
+        "instruction": "Derretí la manteca en una sartén a fuego medio."
+      },
+      {
+        "instruction": "Apoyá el pan y rompé un huevo dentro de cada agujero."
+      },
+      {
+        "instruction": "Cociná hasta que la clara cuaje y el pan se dore.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Girá con cuidado y cociná 1 minuto más.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Salpimentá y serví; tostá los redondeles sobrantes en la misma sartén."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Calentá en sartén 1 minuto a fuego bajo.",
+      "tip": "Si te gusta la yema líquida, no lo des vuelta."
+    }
+  },
+  {
+    "title": "Quesadilla de queso y choclo",
+    "description": "Tortillas rellenas de queso fundido y granos de choclo, doradas en sartén. Un desayuno salado distinto y rápido.",
+    "servings": 2,
+    "prep_minutes": 3,
+    "cook_minutes": 5,
+    "difficulty": "facil",
+    "tags": [
+      "desayuno",
+      "rápido",
+      "mexicana",
+      "vegetariano"
+    ],
+    "ingredients": [
+      "2 tortillas de trigo grandes",
+      "150 g de queso mozzarella rallado",
+      "4 cdas de granos de choclo en lata",
+      "1 cdita de aceite",
+      "1 pizca de pimentón dulce"
+    ],
+    "steps": [
+      {
+        "instruction": "Escurrí bien el choclo."
+      },
+      {
+        "instruction": "Repartí el queso y el choclo sobre la mitad de cada tortilla y espolvoreá pimentón."
+      },
+      {
+        "instruction": "Doblá las tortillas al medio, como una media luna."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén y cociná cada quesadilla hasta que dore.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Dalas vuelta y cociná hasta que el queso se derrita.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Cortá en triángulos y serví."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Calentá en sartén seca a fuego medio 2 minutos por lado.",
+      "tip": "No pongas demasiado relleno para que no se escape al dar vuelta."
+    }
+  }
+]

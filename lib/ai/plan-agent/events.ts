@@ -31,6 +31,8 @@ export function parsePlanSseBlock(block: string): PlanAgentEvent | null {
 /** Texto que se muestra mientras corre cada herramienta. */
 export const TOOL_LABELS: Record<string, string> = {
   search_recipes: "Revisando tus recetas…",
+  search_catalog: "Mirando el catálogo de recetas…",
+  use_catalog_recipe: "Guardando una receta del catálogo…",
   get_recent_meals: "Mirando lo que comieron últimamente…",
   get_participants: "Revisando quiénes comen y qué restricciones hay…",
   get_ingredient_info: "Chequeando ingredientes…",

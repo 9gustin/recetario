@@ -1,0 +1,598 @@
+[
+  {
+    "title": "Salteado de ternera con brócoli y jengibre",
+    "description": "Tiras de carne tiernas con brócoli verde y crocante, en una salsa de soja y jengibre que se hace en la misma sartén.",
+    "servings": 3,
+    "prep_minutes": 10,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "salteado",
+      "rápido",
+      "carne",
+      "asiática",
+      "alto en proteína",
+      "sin lácteos",
+      "cena"
+    ],
+    "ingredients": [
+      "400 g de bife angosto o nalga en tiras finas",
+      "1 brócoli chico (unos 300 g) en ramitos",
+      "2 dientes de ajo picados",
+      "1 cda de jengibre fresco rallado",
+      "3 cda de salsa de soja",
+      "1 cdita de almidón de maíz",
+      "50 ml de agua",
+      "2 cda de aceite",
+      "pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Mezclá la soja, el agua y el almidón en un vaso hasta que no queden grumos."
+      },
+      {
+        "instruction": "Calentá 1 cda de aceite en la sartén a fuego fuerte y sellá la carne 2 minutos sin mover mucho.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Retirá la carne a un plato y dejá la sartén en el fuego."
+      },
+      {
+        "instruction": "Agregá el aceite restante, el brócoli y 2 cdas de agua, y salteá tapado 3 minutos.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el ajo y el jengibre y salteá 30 segundos hasta que perfumen."
+      },
+      {
+        "instruction": "Volcá la carne y la mezcla de soja y cociná 2 minutos hasta que la salsa espese y brille.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Serví enseguida con pimienta recién molida."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "En sartén a fuego medio con una cucharada de agua, 3 minutos.",
+      "tip": "Cortá la carne a contrapelo para que quede bien tierna."
+    }
+  },
+  {
+    "title": "Salteado de tofu con verduras y salsa de maní",
+    "description": "Tofu dorado con morrón, zanahoria y zapallito, bañado en una salsa cremosa de pasta de maní, soja y lima. Vegano y bien sabroso.",
+    "servings": 2,
+    "prep_minutes": 10,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "salteado",
+      "rápido",
+      "vegano",
+      "sin lácteos",
+      "asiática",
+      "cena",
+      "almuerzo"
+    ],
+    "ingredients": [
+      "300 g de tofu firme",
+      "1 morrón rojo en tiras",
+      "1 zanahoria en bastones finos",
+      "1 zapallito verde en medias lunas",
+      "2 cda de pasta de maní",
+      "2 cda de salsa de soja",
+      "1 cda de jugo de lima",
+      "3 cda de agua tibia",
+      "2 cda de aceite",
+      "1 cdita de semillas de sésamo"
+    ],
+    "steps": [
+      {
+        "instruction": "Secá el tofu con papel de cocina y cortalo en cubos de 2 cm."
+      },
+      {
+        "instruction": "Mezclá la pasta de maní, la soja, la lima y el agua tibia hasta lograr una salsa lisa."
+      },
+      {
+        "instruction": "Calentá 1 cda de aceite en la sartén y dorá el tofu 5 minutos, dándolo vuelta de a poco.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Pasá el tofu a un plato y agregá el aceite restante a la sartén."
+      },
+      {
+        "instruction": "Salteá la zanahoria 2 minutos y sumá el morrón y el zapallito 3 minutos más.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Devolvé el tofu, volcá la salsa y mezclá 1 minuto a fuego bajo."
+      },
+      {
+        "instruction": "Espolvoreá con sésamo y serví."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "En sartén a fuego medio con un chorrito de agua para aflojar la salsa.",
+      "tip": "Si querés más punch, sumá una pizca de ají molido a la salsa."
+    }
+  },
+  {
+    "title": "Cerdo agridulce con ananá y morrón",
+    "description": "Tiras de cerdo doradas con morrón, cebolla y ananá en una salsa agridulce casera de ketchup, soja y vinagre.",
+    "servings": 3,
+    "prep_minutes": 10,
+    "cook_minutes": 13,
+    "difficulty": "facil",
+    "tags": [
+      "salteado",
+      "rápido",
+      "cerdo",
+      "asiática",
+      "sin lácteos",
+      "cena"
+    ],
+    "ingredients": [
+      "400 g de peceto o solomillo de cerdo en tiras",
+      "1 morrón rojo en cubos",
+      "1 cebolla en gajos",
+      "200 g de ananá en cubos",
+      "3 cda de ketchup",
+      "2 cda de salsa de soja",
+      "1 cda de vinagre de manzana",
+      "1 cda de azúcar",
+      "3 cda de agua",
+      "2 cda de aceite",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Mezclá el ketchup, la soja, el vinagre, el azúcar y el agua en un bol."
+      },
+      {
+        "instruction": "Condimentá el cerdo con sal y pimienta."
+      },
+      {
+        "instruction": "Calentá 1 cda de aceite en la sartén bien caliente y dorá el cerdo 4 minutos.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Sacá el cerdo y agregá el aceite restante."
+      },
+      {
+        "instruction": "Salteá la cebolla y el morrón 3 minutos para que queden firmes.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el ananá y el cerdo, volcá la salsa y cociná 3 minutos hasta que espese.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Probá, rectificá la sal y serví caliente."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "En sartén a fuego medio con un chorrito de agua, 4 minutos.",
+      "tip": "No cocines de más el cerdo: se seca rápido en tiras finas."
+    }
+  },
+  {
+    "title": "Revuelto de zapallitos y choclo",
+    "description": "Huevos revueltos cremosos con zapallitos salteados, granos de choclo y cebolla. Un almuerzo económico y rápido, hecho en una sola sartén.",
+    "servings": 2,
+    "prep_minutes": 8,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "salteado",
+      "rápido",
+      "huevo",
+      "vegetariano",
+      "económico",
+      "almuerzo",
+      "cena"
+    ],
+    "ingredients": [
+      "4 huevos",
+      "2 zapallitos verdes en cubitos",
+      "1 taza de granos de choclo cocidos",
+      "1/2 cebolla picada",
+      "1 cda de aceite",
+      "1 cda de perejil picado",
+      "1 pizca de pimentón",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Calentá el aceite en la sartén y rehogá la cebolla 2 minutos.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá los zapallitos y salteá a fuego fuerte 4 minutos hasta que doren apenas.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el choclo, la sal y el pimentón y mezclá 1 minuto."
+      },
+      {
+        "instruction": "Batí los huevos con pimienta y volcalos sobre las verduras."
+      },
+      {
+        "instruction": "Revolvé con espátula a fuego bajo 2 minutos, hasta que cuajen pero queden húmedos.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Apagá, espolvoreá con perejil y serví."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "En sartén a fuego bajo, 2 minutos, o en microondas 40 segundos.",
+      "tip": "Sacalo del fuego un poco antes: sigue cocinándose con el calor de la sartén."
+    }
+  },
+  {
+    "title": "Hongos y espinaca salteados al ajo",
+    "description": "Champiñones dorados con ajo y espinaca fresca que se marchita al final, con un toque de soja y limón. Va con carne, pollo o solo.",
+    "servings": 3,
+    "prep_minutes": 7,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "salteado",
+      "rápido",
+      "vegano",
+      "sin sin lácteos",
+      "guarnición",
+      "verdura",
+      "sin lácteos"
+    ],
+    "ingredients": [
+      "400 g de champiñones laminados",
+      "200 g de espinaca fresca",
+      "3 dientes de ajo en láminas",
+      "2 cda de aceite de oliva",
+      "1 cda de salsa de soja",
+      "1 cdita de jugo de limón",
+      "pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Calentá una sartén grande bien caliente, sin aceite, y poné los champiñones en una sola capa."
+      },
+      {
+        "instruction": "Cociná los champiñones 4 minutos sin mover hasta que suelten el agua y doren.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el aceite y el ajo y salteá 1 minuto.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá la espinaca y la soja y revolvé 2 minutos hasta que se achique.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Apagá, rociá con limón, sumá pimienta y serví."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "En sartén a fuego medio 2 minutos.",
+      "tip": "No salés al principio: los hongos sueltan más agua y no doran."
+    }
+  },
+  {
+    "title": "Lentejas salteadas con cebolla morada y comino",
+    "description": "Lentejas ya cocidas que se doran en la sartén con cebolla morada, zanahoria rallada, comino y pimentón. Un plato vegano que sale en minutos.",
+    "servings": 2,
+    "prep_minutes": 8,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "salteado",
+      "rápido",
+      "legumbres",
+      "vegano",
+      "económico",
+      "sin lácteos",
+      "almuerzo",
+      "sobras"
+    ],
+    "ingredients": [
+      "2 tazas de lentejas cocidas y escurridas",
+      "1 cebolla morada en plumas",
+      "1 zanahoria rallada",
+      "1 cdita de comino",
+      "1 cdita de pimentón",
+      "1 cda de vinagre de manzana",
+      "2 cda de aceite",
+      "2 cda de perejil picado",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Calentá el aceite en la sartén y salteá la cebolla 3 minutos.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá la zanahoria y el comino y salteá 2 minutos más.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá las lentejas y el pimentón y salteá a fuego fuerte 4 minutos, hasta que se doren.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Apagá, sumá el vinagre, la sal y la pimienta y mezclá."
+      },
+      {
+        "instruction": "Terminá con el perejil y serví tibio."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "En sartén a fuego medio con una cucharada de agua, 3 minutos.",
+      "tip": "Escurrí bien las lentejas para que se doren en vez de hervir."
+    }
+  },
+  {
+    "title": "Berenjenas salteadas con ajo y soja",
+    "description": "Cubos de berenjena tiernos y glaseados con ajo, soja y un poquito de miel, con verdeo fresco y sésamo por encima.",
+    "servings": 3,
+    "prep_minutes": 8,
+    "cook_minutes": 14,
+    "difficulty": "facil",
+    "tags": [
+      "salteado",
+      "rápido",
+      "vegetariano",
+      "verdura",
+      "sin lácteos",
+      "asiática",
+      "guarnición"
+    ],
+    "ingredients": [
+      "2 berenjenas medianas en cubos de 2 cm",
+      "3 dientes de ajo picados",
+      "3 cda de salsa de soja",
+      "1 cda de miel",
+      "1 cda de vinagre de arroz o de manzana",
+      "3 cda de aceite",
+      "2 cebollas de verdeo en rodajas",
+      "1 cdita de semillas de sésamo",
+      "50 ml de agua"
+    ],
+    "steps": [
+      {
+        "instruction": "Mezclá la soja, la miel, el vinagre y el agua en un vaso."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén grande y salteá la berenjena a fuego fuerte 6 minutos, hasta que dore.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Bajá el fuego, sumá el ajo y la parte blanca del verdeo y salteá 1 minuto."
+      },
+      {
+        "instruction": "Volcá la salsa, tapá y cociná 4 minutos hasta que la berenjena esté blanda.",
+        "minutes": 4,
+        "passive": true
+      },
+      {
+        "instruction": "Destapá y cociná 1 minuto más para que la salsa se pegue.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Serví con el verdeo verde y el sésamo."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "En sartén a fuego medio 3 minutos o en microondas 1 minuto.",
+      "tip": "La berenjena absorbe mucho aceite: agregalo todo al principio y no sumes más."
+    }
+  },
+  {
+    "title": "Salmón salteado con espárragos y limón",
+    "description": "Cubos de salmón apenas dorados con espárragos crocantes, manteca, ajo y limón. Una cena liviana lista en menos de 20 minutos.",
+    "servings": 2,
+    "prep_minutes": 8,
+    "cook_minutes": 10,
+    "difficulty": "media",
+    "tags": [
+      "salteado",
+      "rápido",
+      "pescado",
+      "alto en proteína",
+      "bajo en carbohidratos",
+      "sin gluten",
+      "cena"
+    ],
+    "ingredients": [
+      "400 g de salmón rosado sin piel en cubos",
+      "1 atado de espárragos",
+      "1 cda de manteca",
+      "1 cda de aceite",
+      "2 dientes de ajo picados",
+      "1 limón",
+      "1 cda de eneldo picado",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá la parte dura de los espárragos y partilos en trozos de 4 cm."
+      },
+      {
+        "instruction": "Salpimentá el salmón."
+      },
+      {
+        "instruction": "Calentá el aceite en la sartén y salteá los espárragos 3 minutos.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Empujalos a un costado, sumá la manteca y dorá el salmón 3 minutos, dándolo vuelta con cuidado.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el ajo y salteá 30 segundos."
+      },
+      {
+        "instruction": "Apagá, rallá la cáscara de medio limón y exprimí el jugo sobre todo."
+      },
+      {
+        "instruction": "Espolvoreá con eneldo y serví enseguida."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "En sartén a fuego bajo 2 minutos, o comelo frío en ensalada.",
+      "tip": "Mové poco el salmón: se desarma si lo revolvés mucho."
+    }
+  },
+  {
+    "title": "Repollo salteado con panceta y mostaza",
+    "description": "Repollo crocante salteado con panceta dorada y cebolla, con un toque de mostaza y vinagre que le da frescura. Va con cualquier carne.",
+    "servings": 3,
+    "prep_minutes": 8,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "salteado",
+      "rápido",
+      "cerdo",
+      "verdura",
+      "guarnición",
+      "bajo en carbohidratos",
+      "sin gluten"
+    ],
+    "ingredients": [
+      "200 g de panceta ahumada en tiras",
+      "1/2 repollo blanco chico (unos 400 g) en tiras finas",
+      "1 cebolla en plumas",
+      "1 cda de mostaza",
+      "1 cda de vinagre de manzana",
+      "1 cdita de azúcar",
+      "pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Poné la panceta en una sartén grande fría y encendé el fuego medio."
+      },
+      {
+        "instruction": "Doralá 5 minutos hasta que suelte la grasa y quede crocante.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá la cebolla y salteá 3 minutos.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el repollo y subí el fuego, salteá 5 minutos hasta que se ablande pero quede firme.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Mezclá la mostaza con el vinagre y el azúcar y volcalo sobre el repollo."
+      },
+      {
+        "instruction": "Revolvé 1 minuto, sumá pimienta y serví. Casi no necesita sal."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "En sartén a fuego medio 3 minutos.",
+      "tip": "Si la panceta suelta mucha grasa, sacá un poco antes de agregar el repollo."
+    }
+  },
+  {
+    "title": "Chauchas salteadas con almendras y ajo",
+    "description": "Chauchas verdes y firmes con ajo dorado, almendras tostadas y ralladura de limón. Una guarnición simple y elegante.",
+    "servings": 3,
+    "prep_minutes": 7,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "salteado",
+      "rápido",
+      "vegetariano",
+      "verdura",
+      "guarnición",
+      "sin gluten"
+    ],
+    "ingredients": [
+      "400 g de chauchas (vainitas) sin las puntas",
+      "40 g de almendras fileteadas",
+      "2 dientes de ajo en láminas",
+      "1 cda de manteca",
+      "1 cda de aceite",
+      "1 limón",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Hervilas chauchas en agua con sal 4 minutos.",
+        "minutes": 4,
+        "passive": true
+      },
+      {
+        "instruction": "Escurrilas y pasalas por agua fría para que mantengan el color."
+      },
+      {
+        "instruction": "Tostá las almendras en la sartén seca 2 minutos y reservalas.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "En la misma sartén calentá el aceite y la manteca y dorá el ajo 30 segundos."
+      },
+      {
+        "instruction": "Sumá las chauchas y salteá a fuego fuerte 4 minutos.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Apagá, agregá las almendras, la ralladura y unas gotas de limón, y serví."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "En sartén a fuego medio 2 minutos.",
+      "tip": "Guardá las almendras aparte si no las vas a comer enseguida, así no se ablandan."
+    }
+  }
+]

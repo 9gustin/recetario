@@ -1,0 +1,643 @@
+[
+  {
+    "title": "Crema de mango y lima en vasitos",
+    "description": "Postre frío y sedoso con mango congelado, queso crema y yogur. Se licúa en minutos y queda fresco, cítrico y bien tropical.",
+    "servings": 4,
+    "prep_minutes": 20,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "postre",
+      "fruta",
+      "rápido",
+      "sin horno",
+      "verano"
+    ],
+    "ingredients": [
+      "300 g de mango congelado",
+      "200 g de queso crema",
+      "150 g de yogur natural",
+      "3 cda de azúcar",
+      "1 lima",
+      "1 cda de coco rallado"
+    ],
+    "steps": [
+      {
+        "instruction": "Rallá la cáscara de la lima y exprimí el jugo.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Procesá el mango con el queso crema, el yogur, el azúcar y el jugo de lima hasta que quede liso.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Probá y agregá más azúcar o lima si hace falta.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Repartí la crema en 4 vasitos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Llevá al freezer para que tome cuerpo.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Serví con coco rallado y la ralladura de lima por encima.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": 30,
+      "reheat": "No se recalienta; si la congelaste, dejala 15 minutos en la heladera antes de servir.",
+      "tip": "Si el mango es muy ácido, sumá una cucharada más de azúcar."
+    }
+  },
+  {
+    "title": "Peras escalfadas con naranja y canela",
+    "description": "Peras tiernas cocidas en un almíbar liviano de jugo de naranja, canela y clavo. Se sirven tibias o frías, solas o con yogur.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "postre",
+      "fruta",
+      "una olla",
+      "liviano",
+      "sin lácteos",
+      "invierno"
+    ],
+    "ingredients": [
+      "4 peras firmes",
+      "2 naranjas",
+      "2 tazas de agua",
+      "3 cda de azúcar",
+      "1 palito de canela",
+      "2 clavos de olor",
+      "1 cdita de esencia de vainilla"
+    ],
+    "steps": [
+      {
+        "instruction": "Pelá las peras, cortalas al medio y sacales las semillas con una cucharita.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Exprimí las naranjas y llevá el jugo a una olla con el agua, el azúcar, la canela y los clavos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá hasta que hierva y sumá las peras con el lado cortado hacia abajo.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Bajá el fuego, tapá y cociná hasta que se pinchen fácil con un cuchillo.",
+        "minutes": 12,
+        "passive": true
+      },
+      {
+        "instruction": "Sacá las peras y agregá la vainilla al líquido.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Reducí el almíbar a fuego fuerte hasta que espese un poco.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Serví las peras con el almíbar por encima.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Calentá unos segundos en el microondas o comelas frías.",
+      "tip": "Guardalas dentro del almíbar para que no se oscurezcan."
+    }
+  },
+  {
+    "title": "Crumble de manzana y canela en airfryer",
+    "description": "Manzanas tiernas con una cubierta crocante de avena, manteca y azúcar mascabo. Individual, rápido y con olor a casa.",
+    "servings": 2,
+    "prep_minutes": 10,
+    "cook_minutes": 13,
+    "difficulty": "facil",
+    "tags": [
+      "postre",
+      "fruta",
+      "airfryer",
+      "para chicos"
+    ],
+    "ingredients": [
+      "2 manzanas rojas",
+      "1 cda de azúcar",
+      "1 cdita de canela",
+      "1 cda de jugo de limón",
+      "4 cda de avena",
+      "3 cda de harina",
+      "3 cda de azúcar mascabo",
+      "40 g de manteca fría",
+      "1 pizca de sal"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá la airfryer a 180 °C.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cortá las manzanas en cubos chicos, con cáscara.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclá la manzana con el azúcar, la canela y el limón.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Repartí la manzana en 2 cazuelitas aptas para airfryer.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclá con los dedos la avena, la harina, el azúcar mascabo, la sal y la manteca hasta obtener migas gruesas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cubrí las manzanas con las migas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cociná hasta que la cubierta esté dorada y el centro burbujee.",
+        "minutes": 13,
+        "passive": true
+      },
+      {
+        "instruction": "Dejá entibiar unos minutos antes de servir.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Calentá 3 minutos en la airfryer a 160 °C para recuperar lo crocante.",
+      "tip": "Guardá la cubierta aparte si querés que se mantenga crocante."
+    }
+  },
+  {
+    "title": "Helado cremoso de frutillas y yogur",
+    "description": "Un helado express con frutillas congeladas y yogur, sin heladera ni máquina. Queda cremoso, rosado y bien frutal.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "postre",
+      "fruta",
+      "rápido",
+      "sin horno",
+      "verano",
+      "para chicos"
+    ],
+    "ingredients": [
+      "400 g de frutillas congeladas",
+      "250 g de yogur natural",
+      "3 cda de miel",
+      "1 cda de jugo de limón",
+      "2 cda de leche"
+    ],
+    "steps": [
+      {
+        "instruction": "Dejá las frutillas a temperatura ambiente unos 5 minutos para que se ablanden apenas.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Procesá las frutillas con el yogur, la miel y el limón.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Sumá la leche de a poco si la mezcla no gira.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Raspá los bordes y procesá otra vez hasta que quede cremoso.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Serví enseguida en bochas o en vasitos.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 0,
+      "freezer_days": 30,
+      "reheat": "No se recalienta; sacalo del freezer 10 minutos antes de servir.",
+      "tip": "Si lo guardás, taparlo con film pegado a la superficie evita los cristales."
+    }
+  },
+  {
+    "title": "Ensalada de frutas con almíbar de limón y menta",
+    "description": "Frutas de estación en un almíbar liviano con limón y menta. Refrescante y fácil de multiplicar para varios.",
+    "servings": 6,
+    "prep_minutes": 20,
+    "cook_minutes": 3,
+    "difficulty": "facil",
+    "tags": [
+      "postre",
+      "fruta",
+      "liviano",
+      "vegano",
+      "sin lácteos",
+      "para compartir",
+      "verano"
+    ],
+    "ingredients": [
+      "2 naranjas",
+      "1 manzana verde",
+      "2 kiwis",
+      "1 taza de uvas",
+      "1 taza de frutillas",
+      "1/4 de melón",
+      "3 cda de azúcar",
+      "1/2 taza de agua",
+      "1 limón",
+      "10 hojas de menta"
+    ],
+    "steps": [
+      {
+        "instruction": "Calentá el agua con el azúcar hasta que se disuelva.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Retirá del fuego y agregá el jugo del limón y la mitad de la menta picada.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Pelá las naranjas y los kiwis y cortalos en cubos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cortá la manzana, el melón y las frutillas en trozos parejos y dividí las uvas al medio.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Poné todas las frutas en un bol y volcá el almíbar tibio.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclá suave y servila con el resto de la menta.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Se come fría; no se recalienta.",
+      "tip": "Agregá las frutillas y los kiwis justo antes de servir si querés que se vean enteras."
+    }
+  },
+  {
+    "title": "Vasitos de frutillas con crema y galletitas",
+    "description": "Capas de frutillas con azúcar, crema batida y galletitas desmenuzadas. Un postre de vaso sin horno, ideal para sorprender.",
+    "servings": 4,
+    "prep_minutes": 20,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "postre",
+      "fruta",
+      "sin horno",
+      "para chicos",
+      "para compartir"
+    ],
+    "ingredients": [
+      "400 g de frutillas",
+      "2 cda de azúcar",
+      "1 cdita de jugo de limón",
+      "200 ml de crema de leche",
+      "2 cda de azúcar impalpable",
+      "1 cdita de esencia de vainilla",
+      "8 galletitas dulces tipo vainilla"
+    ],
+    "steps": [
+      {
+        "instruction": "Lavá las frutillas, sacales el cabito y cortalas en rodajas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclalas con el azúcar y el limón y dejalas soltar jugo.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Batí la crema bien fría con el azúcar impalpable y la vainilla hasta que forme picos suaves.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Desmenuzá las galletitas con las manos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Armá en cada vaso una capa de galletitas, una de frutillas con su jugo y una de crema.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Repetí las capas y terminá con crema y una frutilla entera.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Se come frío.",
+      "tip": "Armalos poco antes de servir para que las galletitas no se ablanden de más."
+    }
+  },
+  {
+    "title": "Copa de ricota, mandarina y miel",
+    "description": "Ricota batida con ralladura de naranja, gajos de mandarina y un hilo de miel. Liviano, cremoso y listo en 10 minutos.",
+    "servings": 2,
+    "prep_minutes": 10,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "postre",
+      "fruta",
+      "rápido",
+      "liviano",
+      "sin horno",
+      "vegetariano"
+    ],
+    "ingredients": [
+      "250 g de ricota",
+      "2 cda de miel",
+      "1 cdita de ralladura de naranja",
+      "3 mandarinas",
+      "2 cda de almendras fileteadas",
+      "1 pizca de canela"
+    ],
+    "steps": [
+      {
+        "instruction": "Pelá las mandarinas y separá los gajos, sacándoles las semillas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Batí la ricota con una cucharada de miel y la ralladura de naranja hasta que quede cremosa.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Tostá las almendras en una sartén seca, moviendo seguido.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Poné la mitad de la ricota en dos copas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Sumá una capa de gajos de mandarina y cubrí con el resto de la ricota.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Terminá con almendras, canela y la miel restante.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Se come fría.",
+      "tip": "Escurrí bien la ricota si viene muy húmeda."
+    }
+  },
+  {
+    "title": "Ananá grillado con miel y coco",
+    "description": "Rodajas de ananá doradas en la plancha con miel, lima y coco tostado. Caramelizadas por fuera y jugosas por dentro.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "postre",
+      "fruta",
+      "rápido",
+      "sin lácteos",
+      "verano"
+    ],
+    "ingredients": [
+      "1 ananá mediano",
+      "2 cda de miel",
+      "1 lima",
+      "2 cda de coco rallado",
+      "1 cdita de manteca",
+      "1 pizca de canela"
+    ],
+    "steps": [
+      {
+        "instruction": "Pelá el ananá, sacale el centro duro y cortalo en rodajas de 1 cm.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Tostá el coco rallado en una sartén seca hasta que dore y reservalo.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Calentá una plancha o sartén grande con la manteca a fuego medio-alto.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cociná las rodajas hasta que estén doradas de un lado.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Dalas vuelta, pincelalas con miel y cociná del otro lado.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Serví con jugo de lima, canela y coco tostado.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Calentá 30 segundos en el microondas o en la sartén.",
+      "tip": "Usá un ananá bien maduro: se carameliza mejor."
+    }
+  },
+  {
+    "title": "Hojaldritos de durazno y queso crema en airfryer",
+    "description": "Tapas de empanada para horno rellenas de duraznos en lata y queso crema. Salen doradas, crocantes y con centro cremoso.",
+    "servings": 4,
+    "prep_minutes": 12,
+    "cook_minutes": 12,
+    "difficulty": "media",
+    "tags": [
+      "postre",
+      "fruta",
+      "airfryer",
+      "para compartir"
+    ],
+    "ingredients": [
+      "6 tapas de empanada para horno",
+      "4 duraznos en lata",
+      "100 g de queso crema",
+      "2 cda de azúcar",
+      "1 cdita de canela",
+      "1 huevo",
+      "1 cda de azúcar impalpable"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá la airfryer a 180 °C.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Escurrí bien los duraznos y cortalos en cubitos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclá el queso crema con el azúcar y la canela.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Poné una cucharada de crema y otra de durazno en el centro de cada tapa.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Pintá los bordes con huevo batido, cerrá en media luna y sellá con un tenedor.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Pintá la superficie con huevo y hacé un cortecito con un cuchillo.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cociná en tandas hasta que estén bien doradas.",
+        "minutes": 12,
+        "passive": true
+      },
+      {
+        "instruction": "Dejá entibiar y espolvoreá con azúcar impalpable.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Calentá 3 minutos en la airfryer a 170 °C.",
+      "tip": "No rellenes de más o se abren y pierden el relleno."
+    }
+  },
+  {
+    "title": "Mermelada rápida de frutillas en sartén",
+    "description": "Un dulce casero de frutillas cocido en sartén en pocos minutos, con limón para que quede brillante. Ideal para tostadas, yogur o panqueques.",
+    "servings": 8,
+    "prep_minutes": 7,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "postre",
+      "fruta",
+      "económico",
+      "desayuno",
+      "sin lácteos",
+      "vegano"
+    ],
+    "ingredients": [
+      "500 g de frutillas",
+      "200 g de azúcar",
+      "1 limón",
+      "1 cda de agua"
+    ],
+    "steps": [
+      {
+        "instruction": "Lavá las frutillas, sacales el cabito y cortalas en cuartos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Ponelas en una sartén ancha con el azúcar, el jugo del limón y el agua.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cociná a fuego medio revolviendo hasta que el azúcar se disuelva.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Subí el fuego y hervilas aplastando la fruta con una cuchara de madera.",
+        "minutes": 9,
+        "passive": false
+      },
+      {
+        "instruction": "Probá una gota en un plato frío: si no corre enseguida, está lista.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Pasala a un frasco limpio y dejala enfriar antes de tapar.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 4,
+      "freezer_days": 90,
+      "reheat": "No hace falta recalentar; sacala de la heladera 10 minutos antes de usar.",
+      "tip": "Usá un frasco de vidrio bien lavado y secado."
+    }
+  }
+]

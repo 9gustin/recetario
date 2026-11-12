@@ -1,0 +1,743 @@
+[
+  {
+    "title": "Curry de garbanzos y tomate estilo chana masala",
+    "description": "Garbanzos de lata en una salsa de tomate, cebolla y especias. Sale en media hora, con una sola sartén, y es económico y bien sabroso.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 20,
+    "difficulty": "facil",
+    "tags": [
+      "india",
+      "vegano",
+      "legumbres",
+      "una olla",
+      "económico",
+      "almuerzo"
+    ],
+    "ingredients": [
+      "2 latas de garbanzos cocidos",
+      "2 cebollas",
+      "3 dientes de ajo",
+      "1 trozo de jengibre fresco de 2 cm",
+      "3 tomates maduros",
+      "2 cdas de aceite de girasol",
+      "2 cditas de comino molido",
+      "2 cditas de cilantro molido",
+      "1 cdita de cúrcuma",
+      "1 cdita de pimentón dulce",
+      "1 cdita de garam masala",
+      "1 taza de agua",
+      "jugo de 1/2 limón",
+      "cilantro o perejil fresco para terminar",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Picá las cebollas finitas y rallá el jengibre. Picá el ajo y cortá los tomates en cubos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén honda y cociná la cebolla a fuego medio hasta que se dore.",
+        "minutes": 7,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el ajo y el jengibre y revolvé 1 minuto. Sumá comino, cilantro, cúrcuma y pimentón.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Incorporá el tomate con una pizca de sal y cociná hasta que se deshaga y suelte el aceite.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Escurrí y enjuagá los garbanzos. Agregalos con el agua y mezclá.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Tapá y cociná a fuego bajo. Aplastá unos garbanzos con el cucharón para espesar la salsa.",
+        "minutes": 8,
+        "passive": true
+      },
+      {
+        "instruction": "Apagá el fuego, sumá el garam masala y el limón. Probá y corregí la sal. Serví con cilantro picado.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 4,
+      "freezer_days": 90,
+      "reheat": "En una cacerola con un chorrito de agua, a fuego bajo, revolviendo.",
+      "tip": "Mejora de un día para el otro. Agregá el limón recién al servir."
+    }
+  },
+  {
+    "title": "Pollo tikka masala rápido en sartén",
+    "description": "Cubos de pollo marinados en yogur y especias, en una salsa cremosa de tomate. Queda perfecto con arroz blanco.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 22,
+    "difficulty": "media",
+    "tags": [
+      "india",
+      "pollo",
+      "cena",
+      "una olla",
+      "alto en proteína"
+    ],
+    "ingredients": [
+      "600 g de pechuga de pollo",
+      "150 g de yogur natural",
+      "2 cditas de garam masala",
+      "1 cdita de cúrcuma",
+      "2 cditas de pimentón dulce",
+      "1 cebolla",
+      "3 dientes de ajo",
+      "1 trozo de jengibre fresco de 2 cm",
+      "2 cdas de aceite",
+      "400 g de tomate triturado",
+      "100 ml de crema de leche",
+      "1 cdita de azúcar",
+      "cilantro fresco para servir",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá el pollo en cubos de 3 cm. Mezclalos con el yogur, la mitad de las especias y sal. Dejá marinar mientras seguís.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Picá la cebolla fina. Picá el ajo y rallá el jengibre.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá 1 cda de aceite en una sartén grande y dorá el pollo en tandas, 2 minutos por lado. Reservalo.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "En la misma sartén poné el resto del aceite y cociná la cebolla hasta que esté blanda.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá ajo, jengibre y el resto de las especias. Revolvé 1 minuto.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el tomate y el azúcar. Cociná a fuego medio hasta que espese un poco.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Volvé el pollo a la sartén con la crema. Cociná a fuego bajo hasta que esté bien cocido por dentro.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Probá, ajustá la sal y serví con cilantro picado.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "En sartén a fuego bajo con un chorrito de agua o leche.",
+      "tip": "Guardalo sin el arroz para que no se pase."
+    }
+  },
+  {
+    "title": "Curry de papa y arvejas con tomate",
+    "description": "Papas en cubos chicos y arvejas en una salsa especiada y liviana. Es un plato vegano de todos los días, bien reconfortante.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 22,
+    "difficulty": "facil",
+    "tags": [
+      "india",
+      "vegano",
+      "verdura",
+      "económico",
+      "una olla",
+      "almuerzo"
+    ],
+    "ingredients": [
+      "600 g de papas",
+      "1 taza de arvejas congeladas",
+      "1 cebolla",
+      "2 tomates",
+      "2 dientes de ajo",
+      "1 trozo de jengibre fresco de 2 cm",
+      "2 cdas de aceite",
+      "1 cdita de semillas de comino",
+      "1 cdita de cúrcuma",
+      "1 cdita de cilantro molido",
+      "1/2 cdita de ají molido",
+      "1 taza de agua",
+      "1 cdita de garam masala",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Pelá las papas y cortalas en cubos de 1,5 cm así se cocinan rápido.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá el aceite y tostá las semillas de comino 30 segundos.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá la cebolla picada y cociná hasta que se ablande.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá ajo y jengibre picados, cúrcuma, cilantro y ají. Revolvé 1 minuto.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Incorporá el tomate picado y las papas. Salá y mezclá bien.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el agua, tapá y cociná a fuego medio hasta que las papas estén tiernas.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Sumá las arvejas y cociná 3 minutos más. Terminá con el garam masala.",
+        "minutes": 3,
+        "passive": false
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "En cacerola con un chorrito de agua, a fuego bajo.",
+      "tip": "Las papas cocidas pierden textura al freezar, mejor comelo en la semana."
+    }
+  },
+  {
+    "title": "Espinaca cremosa con queso en cubos estilo palak paneer",
+    "description": "Una salsa verde de espinaca y especias con cubos de queso cremoso firme dorados. Se hace en 30 minutos y queda muy cremosa.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 18,
+    "difficulty": "media",
+    "tags": [
+      "india",
+      "vegetariano",
+      "verdura",
+      "cena",
+      "sin gluten"
+    ],
+    "ingredients": [
+      "400 g de espinaca fresca",
+      "250 g de queso cremoso firme",
+      "1 cebolla",
+      "3 dientes de ajo",
+      "1 trozo de jengibre fresco de 2 cm",
+      "1 tomate",
+      "2 cdas de aceite",
+      "1 cdita de comino molido",
+      "1 cdita de garam masala",
+      "1/2 cdita de cúrcuma",
+      "80 ml de crema de leche",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Hervilas hojas de espinaca 2 minutos en agua con sal. Escurrilas y pasalas por agua fría.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Cortá el queso en cubos de 2 cm. Doralos en una sartén con 1 cda de aceite y reservalos.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "En la misma sartén, cociná la cebolla picada con el resto del aceite hasta que esté transparente.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá ajo, jengibre, comino, cúrcuma y el tomate picado. Cociná hasta que se ablande.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Licuá la espinaca con la mezcla de cebolla y un chorrito de agua hasta lograr una crema.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Volcá la crema en la sartén, agregá la crema de leche y el garam masala. Calentá a fuego bajo.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá los cubos de queso, salá y calentá 1 minuto más.",
+        "minutes": 1,
+        "passive": false
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "En cacerola a fuego bajo con un chorrito de leche, sin hervir fuerte.",
+      "tip": "Hervir la espinaca poco tiempo mantiene el color verde intenso."
+    }
+  },
+  {
+    "title": "Merluza al curry con leche de coco y tomate",
+    "description": "Filetes de merluza cocidos a fuego suave en una salsa de coco, tomate y curry. Rápido, suave y muy aromático.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "india",
+      "pescado",
+      "sin gluten",
+      "sin lácteos",
+      "cena",
+      "rápido"
+    ],
+    "ingredients": [
+      "4 filetes de merluza",
+      "1 cebolla",
+      "2 dientes de ajo",
+      "1 trozo de jengibre fresco de 2 cm",
+      "1 tomate",
+      "1 cda de aceite",
+      "1 cda de curry en polvo",
+      "1/2 cdita de cúrcuma",
+      "1 lata de leche de coco",
+      "jugo de 1/2 limón",
+      "cilantro o perejil fresco",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Secá los filetes con papel y salalos. Cortalos en trozos grandes.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén ancha y cociná la cebolla picada hasta que esté blanda.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá ajo y jengibre picados, curry y cúrcuma. Revolvé 1 minuto.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el tomate en cubos y cociná 2 minutos.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Volcá la leche de coco y llevá a un hervor suave.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Acomodá la merluza en la salsa. Tapá y cociná a fuego bajo sin mover mucho.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Exprimí el limón, probá la sal y serví con hierbas picadas.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "En sartén a fuego bajo, tapado, unos minutos.",
+      "tip": "Consumilo pronto: el pescado cocido se seca al recalentar."
+    }
+  },
+  {
+    "title": "Arroz pulao con arvejas, pasas y comino",
+    "description": "Arroz largo fino aromatizado con especias, arvejas y pasas, cocido todo en una olla. Es un acompañamiento ideal para cualquier curry.",
+    "servings": 4,
+    "prep_minutes": 5,
+    "cook_minutes": 25,
+    "difficulty": "facil",
+    "tags": [
+      "india",
+      "arroz",
+      "guarnición",
+      "vegetariano",
+      "una olla",
+      "económico"
+    ],
+    "ingredients": [
+      "1 1/2 tazas de arroz largo fino",
+      "3 tazas de agua caliente",
+      "1 cebolla",
+      "2 cdas de manteca",
+      "1 cdita de semillas de comino",
+      "1 ramita de canela en rama",
+      "3 clavos de olor",
+      "1 cdita de cúrcuma",
+      "1/2 taza de arvejas congeladas",
+      "2 cdas de pasas de uva",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Lavá el arroz en un colador hasta que el agua salga casi clara. Escurrilo bien.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Derretí la manteca en una olla. Tostá el comino, la canela y los clavos 30 segundos.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá la cebolla en medias lunas finas y cociná hasta que se dore apenas.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el arroz y la cúrcuma. Mezclá 2 minutos para que se cubra de grasa.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el agua caliente, la sal, las arvejas y las pasas. Revolvé una sola vez.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Tapá y cociná a fuego muy bajo hasta que el agua se absorba.",
+        "minutes": 14,
+        "passive": true
+      },
+      {
+        "instruction": "Apagá, dejá reposar tapado 5 minutos y soltá con un tenedor.",
+        "minutes": 5,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "En microondas con una cucharada de agua, tapado.",
+      "tip": "Enfrialo rápido y guardalo en la heladera dentro de las 2 horas."
+    }
+  },
+  {
+    "title": "Curry de huevos duros con salsa de tomate y cebolla",
+    "description": "Huevos duros en una salsa espesa de cebolla, tomate y especias. Un plato económico con mucha proteína, ideal con arroz o pan.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 22,
+    "difficulty": "facil",
+    "tags": [
+      "india",
+      "huevo",
+      "económico",
+      "vegetariano",
+      "sin gluten",
+      "cena"
+    ],
+    "ingredients": [
+      "6 huevos",
+      "2 cebollas",
+      "3 dientes de ajo",
+      "1 trozo de jengibre fresco de 2 cm",
+      "3 tomates maduros",
+      "2 cdas de aceite",
+      "1 cdita de cúrcuma",
+      "2 cditas de curry en polvo",
+      "1 cdita de pimentón dulce",
+      "1/2 taza de agua",
+      "1 cda de yogur natural",
+      "cilantro o perejil fresco",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Poné los huevos en agua hirviendo y cocinalos 10 minutos. Pasalos por agua fría y pelalos.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Mientras tanto, picá las cebollas bien finas. Picá el ajo, rallá el jengibre y cortá los tomates.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cociná la cebolla en el aceite hasta que esté dorada.",
+        "minutes": 8,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá ajo, jengibre, cúrcuma, curry y pimentón. Revolvé 1 minuto.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el tomate y el agua. Salá y cociná hasta que se forme una salsa espesa.",
+        "minutes": 8,
+        "passive": true
+      },
+      {
+        "instruction": "Hacé un corte superficial en cada huevo y ponelos en la salsa. Cociná 3 minutos dándolos vuelta.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Apagá, mezclá el yogur y serví con hierbas picadas.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "En cacerola a fuego bajo con un chorrito de agua.",
+      "tip": "No se recomienda freezar los huevos duros."
+    }
+  },
+  {
+    "title": "Curry de berenjena y tomate con yogur",
+    "description": "Cubos de berenjena cocidos hasta quedar sedosos en una salsa de tomate y especias, con yogur fresco al final.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 22,
+    "difficulty": "facil",
+    "tags": [
+      "india",
+      "vegetariano",
+      "verdura",
+      "una olla",
+      "sin gluten",
+      "cena"
+    ],
+    "ingredients": [
+      "2 berenjenas medianas",
+      "1 cebolla",
+      "3 tomates",
+      "3 dientes de ajo",
+      "1 trozo de jengibre fresco de 2 cm",
+      "3 cdas de aceite",
+      "1 cdita de semillas de mostaza",
+      "1 cdita de comino molido",
+      "1 cdita de cúrcuma",
+      "1/2 cdita de ají molido",
+      "1/2 taza de agua",
+      "4 cdas de yogur natural",
+      "cilantro o perejil fresco",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá las berenjenas en cubos de 2 cm. No hace falta pelarlas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá 2 cdas de aceite en una sartén grande y dorá la berenjena a fuego fuerte, en dos tandas. Reservala.",
+        "minutes": 8,
+        "passive": false
+      },
+      {
+        "instruction": "En la misma sartén, agregá el aceite restante y las semillas de mostaza. Cuando salten, sumá la cebolla picada.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá ajo y jengibre picados, comino, cúrcuma y ají. Revolvé 1 minuto.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el tomate picado y el agua. Cociná hasta que se haga una salsa.",
+        "minutes": 4,
+        "passive": true
+      },
+      {
+        "instruction": "Volvé la berenjena, salá y cociná tapado a fuego bajo hasta que esté bien tierna.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Apagá el fuego y servilo con cucharadas de yogur y hierbas.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "En sartén a fuego bajo o en microondas.",
+      "tip": "Guardá el yogur aparte y agregalo al servir."
+    }
+  },
+  {
+    "title": "Keema de carne picada con arvejas",
+    "description": "Carne picada especiada con tomate y arvejas, de cocción rápida. Se come con arroz, en pan o dentro de un pan árabe.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 20,
+    "difficulty": "facil",
+    "tags": [
+      "india",
+      "carne",
+      "una olla",
+      "alto en proteína",
+      "almuerzo",
+      "sobras"
+    ],
+    "ingredients": [
+      "500 g de carne picada",
+      "1 cebolla grande",
+      "3 dientes de ajo",
+      "1 trozo de jengibre fresco de 2 cm",
+      "2 tomates",
+      "1 taza de arvejas congeladas",
+      "2 cdas de aceite",
+      "2 cditas de comino molido",
+      "2 cditas de cilantro molido",
+      "1 cdita de cúrcuma",
+      "1 cdita de garam masala",
+      "1/2 taza de agua",
+      "jugo de 1/2 limón",
+      "cilantro o perejil fresco",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Picá la cebolla fina. Picá el ajo, rallá el jengibre y cortá los tomates.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cociná la cebolla en el aceite a fuego medio hasta que esté dorada.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá ajo y jengibre. Revolvé 1 minuto.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá la carne picada, desgranala con una cuchara de madera y cociná hasta que pierda el color rosado.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá comino, cilantro, cúrcuma y sal. Mezclá bien.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Incorporá el tomate y el agua. Tapá y cociná a fuego bajo.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Sumá las arvejas y cociná 3 minutos más. Apagá y agregá el garam masala y el limón.",
+        "minutes": 3,
+        "passive": false
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 90,
+      "reheat": "En sartén a fuego medio con un chorrito de agua hasta que esté bien caliente.",
+      "tip": "Freezalo en porciones planas para descongelar rápido."
+    }
+  },
+  {
+    "title": "Pan naan de yogur en sartén",
+    "description": "Panes blandos y con burbujas hechos con harina y yogur, sin horno ni levadura. Van perfectos para mojar en cualquier curry.",
+    "servings": 6,
+    "prep_minutes": 20,
+    "cook_minutes": 12,
+    "difficulty": "media",
+    "tags": [
+      "india",
+      "sin horno",
+      "vegetariano",
+      "económico",
+      "guarnición"
+    ],
+    "ingredients": [
+      "2 tazas de harina 000",
+      "1 cdita de polvo de hornear",
+      "1/2 cdita de sal",
+      "150 g de yogur natural",
+      "1 cda de aceite",
+      "4 cdas de agua tibia",
+      "1 cda de manteca derretida",
+      "1 diente de ajo picado",
+      "perejil o cilantro picado"
+    ],
+    "steps": [
+      {
+        "instruction": "Mezclá en un bol la harina, el polvo de hornear y la sal.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Agregá el yogur, el aceite y el agua. Unilo y amasá 3 minutos hasta que quede una masa suave.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Tapá el bol con un paño y dejá descansar la masa.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Dividí la masa en 6 bollitos. Estiralos con palote en óvalos de medio centímetro.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá una sartén seca a fuego medio-fuerte. Cociná cada pan hasta que salgan burbujas y se dore abajo.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Dalo vuelta y cociná 1 minuto más. Repetí con el resto.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Mezclá la manteca con el ajo y las hierbas. Pincelá los panes calientes.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": 60,
+      "reheat": "En sartén seca 30 segundos por lado o en tostadora.",
+      "tip": "Guardalos envueltos en un paño para que se mantengan blandos."
+    }
+  }
+]

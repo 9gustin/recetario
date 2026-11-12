@@ -370,6 +370,41 @@ const proposeAddToList = {
   },
 } satisfies ToolDef<z.ZodObject<{ item: z.ZodString }>>;
 
+/** Secciones a las que el asistente puede llevar a la persona (rutas fijas: nunca inventa direcciones). */
+export const NAV_TARGETS: Record<string, { label: string; href: (g: string) => string }> = {
+  hoy: { label: "Hoy", href: (g) => `/g/${g}/hoy` },
+  recetas: { label: "Recetas", href: (g) => `/g/${g}/recetas` },
+  nueva_receta: { label: "Cargar una receta", href: (g) => `/g/${g}/recetas/importar` },
+  plan: { label: "Plan de la semana", href: (g) => `/g/${g}/plan` },
+  historial_planes: { label: "Historial de planes", href: (g) => `/g/${g}/plan/historial` },
+  compras: { label: "Lista de compras", href: (g) => `/g/${g}/compras` },
+  que_tenes: { label: "¿Qué tenés en casa?", href: (g) => `/g/${g}/hoy/que-tenes` },
+  ideas: { label: "Ideas para hoy", href: (g) => `/g/${g}/hoy/ideas` },
+  mi_plan: { label: "Mi plan de alimentación", href: () => "/perfil/plan" },
+  registrar: { label: "Registrar lo que comí", href: () => "/perfil/plan/registrar" },
+  digitalizar_plan: { label: "Digitalizar mi plan", href: () => "/perfil/plan/digitalizar" },
+  mi_alimentacion: { label: "Mi alimentación (restricciones)", href: () => "/perfil/alimentacion" },
+  notificaciones: { label: "Notificaciones", href: () => "/perfil/notificaciones" },
+  bandeja: { label: "Bandeja", href: () => "/perfil/bandeja" },
+  actividad: { label: "Mi actividad", href: () => "/perfil/actividad" },
+  mis_datos: { label: "Mis datos", href: () => "/perfil/datos" },
+  grupos: { label: "Mis grupos", href: () => "/grupos" },
+  explorar: { label: "Explorar recetas", href: () => "/explorar" },
+};
+
+const navigateTo = {
+  name: "navigate_to",
+  description: `Lleva a la persona a una sección de la app (tarjeta con link). Secciones: ${Object.keys(NAV_TARGETS).join(", ")}.`,
+  schema: z.object({ section: z.enum(Object.keys(NAV_TARGETS) as [string, ...string[]]) }),
+  async run({ section }, ctx) {
+    const target = NAV_TARGETS[section]!;
+    return {
+      result: { status: "tarjeta_lista", seccion: target.label },
+      proposal: { kind: "navigate", label: target.label, href: target.href(ctx.groupId) },
+    };
+  },
+} satisfies ToolDef<z.ZodObject<{ section: z.ZodEnum<{ [k: string]: string }> }>>;
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const ASSISTANT_TOOLS: ToolDef<any>[] = [
   getRecipe,
@@ -382,6 +417,7 @@ export const ASSISTANT_TOOLS: ToolDef<any>[] = [
   getMyDietPlan,
   proposeAddToPlan,
   proposeAddToList,
+  navigateTo,
 ];
 
 /** Definiciones para la API de Anthropic (JSON Schema derivado de Zod). */

@@ -1,0 +1,641 @@
+[
+  {
+    "title": "Pechugas rellenas de espinaca y mozzarella a la sartén",
+    "description": "Pechugas abiertas como libro, rellenas de espinaca al ajo y queso fundido, selladas en sartén tapada. Jugosas y sin nada de harina ni pan rallado.",
+    "servings": 2,
+    "prep_minutes": 10,
+    "cook_minutes": 18,
+    "difficulty": "media",
+    "tags": [
+      "bajo en carbohidratos",
+      "pollo",
+      "alto en proteína",
+      "cena",
+      "almuerzo"
+    ],
+    "ingredients": [
+      "2 pechugas de pollo (unos 500 g)",
+      "150 g de espinaca fresca",
+      "1 diente de ajo picado",
+      "100 g de mozzarella en fetas o cubos",
+      "2 cda de aceite de oliva",
+      "sal y pimienta a gusto",
+      "1 pizca de nuez moscada",
+      "palillos de madera"
+    ],
+    "steps": [
+      {
+        "instruction": "Abrí cada pechuga por el costado como un libro y aplastala un poco para que quede pareja.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Salteá la espinaca con el ajo y 1 cda de aceite hasta que se achique, unos 2 minutos. Condimentá con sal y nuez moscada.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Salpimentá las pechugas, repartí la espinaca y la mozzarella en el centro y cerralas con palillos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá el resto del aceite en una sartén y sellá las pechugas 3 minutos de cada lado a fuego medio-fuerte.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Bajá el fuego, tapá y cociná 6 minutos más, hasta que no quede nada rosado por dentro.",
+        "minutes": 6,
+        "passive": true
+      },
+      {
+        "instruction": "Dejalas reposar 2 minutos, sacá los palillos y cortalas en rodajas gruesas.",
+        "minutes": 2,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Al horno a 160 °C tapadas con papel aluminio unos 10 minutos, o en microondas a potencia media.",
+      "tip": "Si el relleno se escapa, cerrá bien los bordes y no sobrecargues de espinaca."
+    }
+  },
+  {
+    "title": "Arroz de coliflor salteado con huevo y verdeo",
+    "description": "Coliflor rallada que se saltea como si fuera arroz, con huevo revuelto, morrón y soja. Un plato rápido y liviano para cuando no querés nada pesado.",
+    "servings": 3,
+    "prep_minutes": 10,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "bajo en carbohidratos",
+      "rápido",
+      "vegetariano",
+      "huevo",
+      "asiática",
+      "una olla",
+      "cena"
+    ],
+    "ingredients": [
+      "1 coliflor mediana (unos 800 g)",
+      "3 huevos",
+      "4 cebollas de verdeo",
+      "1 morrón rojo",
+      "2 dientes de ajo",
+      "2 cda de salsa de soja",
+      "1 cda de aceite de girasol",
+      "1 cdita de aceite de sésamo",
+      "1 cdita de jengibre rallado"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá la coliflor en ramitos y rallalos con el lado grueso del rallador, o procesalos a pulsos hasta que parezcan granos de arroz.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Picá el morrón en cubitos, el verdeo en rodajas finas y el ajo bien chiquito.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá el aceite de girasol en una sartén grande y salteá el morrón, el ajo, el jengibre y la parte blanca del verdeo por 2 minutos.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Empujá todo a un costado, volcá los huevos batidos y revolvelos hasta que cuajen.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá la coliflor y la soja, mezclá y cociná a fuego fuerte 4 minutos, sin tapar, para que no largue agua.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Apagá, agregá el aceite de sésamo y el verde del verdeo, y serví enseguida.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "En sartén caliente 2 minutos o en microondas tapado.",
+      "tip": "Secá bien la coliflor rallada con un repasador: así queda suelta y no se hace puré."
+    }
+  },
+  {
+    "title": "Lechuga wraps de carne picada con lima y menta",
+    "description": "Carne picada salteada con ajo, soja y lima, servida en hojas de lechuga crocantes con pepino y menta. Fresco, picante y sin tortillas.",
+    "servings": 3,
+    "prep_minutes": 10,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "bajo en carbohidratos",
+      "rápido",
+      "carne",
+      "asiática",
+      "alto en proteína",
+      "cena",
+      "para compartir"
+    ],
+    "ingredients": [
+      "500 g de carne picada magra",
+      "1 cebolla morada",
+      "2 dientes de ajo",
+      "2 cda de salsa de soja",
+      "1 lima",
+      "1 cda de aceite de girasol",
+      "1 cdita de ají molido",
+      "1 atado chico de menta",
+      "1 pepino",
+      "12 hojas de lechuga criolla o mantecosa"
+    ],
+    "steps": [
+      {
+        "instruction": "Picá la cebolla en pluma fina, el ajo bien chico y el pepino en bastones. Deshojá la menta.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén grande y salteá el ajo con el ají 30 segundos.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá la carne y desmenuzala con una cuchara de madera. Cociná a fuego fuerte hasta que se dore, unos 6 minutos.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá la soja y el jugo de media lima, mezclá y apagá el fuego.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Mezclá la cebolla morada con la menta y el resto del jugo de lima.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Armá cada hoja de lechuga con carne, pepino y la mezcla de cebolla y menta. Comé con las manos.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Recalentá solo la carne en sartén o microondas.",
+      "tip": "Guardá la carne aparte de la lechuga y las hierbas para que no se ablanden."
+    }
+  },
+  {
+    "title": "Chuletas de cerdo con manteca, ajo y salvia",
+    "description": "Chuletas finas doradas en sartén y bañadas en manteca aromática con ajo, salvia y limón. Quedan listas en 20 minutos con muy pocos ingredientes.",
+    "servings": 2,
+    "prep_minutes": 5,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "bajo en carbohidratos",
+      "cerdo",
+      "rápido",
+      "alto en proteína",
+      "cena",
+      "almuerzo"
+    ],
+    "ingredients": [
+      "4 chuletas de cerdo finas (unos 600 g)",
+      "2 cda de manteca",
+      "4 dientes de ajo",
+      "8 hojas de salvia",
+      "1 limón",
+      "1 cda de aceite de girasol",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Sacá las chuletas de la heladera 10 minutos antes y secalas con papel de cocina. Salpimentalas de los dos lados.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén grande a fuego fuerte y dorá las chuletas 4 minutos por lado.",
+        "minutes": 8,
+        "passive": false
+      },
+      {
+        "instruction": "Bajá el fuego, sumá la manteca, los ajos aplastados con cáscara y la salvia.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Bañá las chuletas con la manteca derretida con una cuchara durante 2 minutos.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Apagá el fuego, exprimí el limón encima y dejalas reposar 3 minutos antes de servir.",
+        "minutes": 3,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "En sartén con un chorrito de agua, tapadas, 3 minutos a fuego bajo.",
+      "tip": "No las cocines de más: el cerdo fino se seca rápido, mejor pasalas por la sartén apenas."
+    }
+  },
+  {
+    "title": "Albóndigas de carne y ricota en salsa de tomate",
+    "description": "Albóndigas tiernas hechas sin pan rallado, con ricota y queso rallado, cocidas directamente en una salsa de tomate con orégano en la misma sartén.",
+    "servings": 4,
+    "prep_minutes": 12,
+    "cook_minutes": 16,
+    "difficulty": "media",
+    "tags": [
+      "bajo en carbohidratos",
+      "carne",
+      "italiana",
+      "para freezar",
+      "cena",
+      "una olla"
+    ],
+    "ingredients": [
+      "500 g de carne picada",
+      "100 g de ricota",
+      "1 huevo",
+      "4 cda de queso rallado",
+      "1 diente de ajo picado",
+      "2 cda de perejil picado",
+      "1 cda de aceite de oliva",
+      "1 lata de tomate triturado (400 g)",
+      "1 cdita de orégano",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Mezclá en un bol la carne, la ricota, el huevo, el queso rallado, el perejil, sal y pimienta.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Formá bolitas del tamaño de una nuez con las manos húmedas. Salen unas 20.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén amplia y doralas 4 minutos, moviéndolas con cuidado.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el ajo y el tomate triturado con el orégano y media taza de agua. Salpimentá.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Tapá y cociná a fuego medio-bajo 10 minutos, dándolas vuelta a la mitad.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Probá la salsa, rectificá la sal y serví con más queso rallado.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 4,
+      "freezer_days": 90,
+      "reheat": "En una cacerola con un chorrito de agua, a fuego bajo, hasta que hiervan suave.",
+      "tip": "Congelalas ya cocidas en su salsa, en porciones, para tener cena lista."
+    }
+  },
+  {
+    "title": "Sopa cremosa de espinaca y queso crema",
+    "description": "Una sopa verde, sedosa y rápida, con espinaca, cebolla y un toque de nuez moscada. Se hace en una olla y se tritura con minipimer.",
+    "servings": 3,
+    "prep_minutes": 5,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "bajo en carbohidratos",
+      "sopa",
+      "vegetariano",
+      "una olla",
+      "invierno",
+      "para freezar",
+      "cena"
+    ],
+    "ingredients": [
+      "400 g de espinaca fresca",
+      "1 cebolla",
+      "1 diente de ajo",
+      "1 cda de manteca",
+      "500 ml de caldo de verdura",
+      "100 g de queso crema",
+      "1 pizca de nuez moscada",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Picá la cebolla fina y el ajo. Lavá bien la espinaca y sacale los tallos más gruesos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Derretí la manteca en una olla y rehogá la cebolla y el ajo 4 minutos a fuego medio.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el caldo caliente y la espinaca. Cociná 5 minutos, hasta que se ablande.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Sumá el queso crema, la nuez moscada, sal y pimienta.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Triturá con minipimer hasta que quede lisa y calentala 2 minutos más sin que hierva fuerte.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Serví con pimienta recién molida y un chorrito de aceite de oliva.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "En olla a fuego bajo, revolviendo; si espesó, agregá un chorrito de caldo o agua.",
+      "tip": "No la hiervas fuerte después de triturar para que conserve el color verde."
+    }
+  },
+  {
+    "title": "Paltas rellenas con atún, huevo y yogur",
+    "description": "Mitades de palta rellenas con una mezcla cremosa de atún, huevo duro y verdeo, aderezada con yogur y limón. Se arma sin horno y es ideal para el almuerzo.",
+    "servings": 2,
+    "prep_minutes": 10,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "bajo en carbohidratos",
+      "pescado",
+      "sin horno",
+      "alto en proteína",
+      "almuerzo",
+      "verano"
+    ],
+    "ingredients": [
+      "2 paltas maduras",
+      "1 lata de atún al natural",
+      "2 huevos",
+      "2 cda de yogur natural",
+      "1 cdita de mostaza",
+      "1/2 limón",
+      "1 cebolla de verdeo",
+      "sal y pimienta a gusto",
+      "1 pizca de pimentón dulce"
+    ],
+    "steps": [
+      {
+        "instruction": "Hervilos huevos en agua hirviendo durante 10 minutos y enfrialos bajo la canilla.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Mientras tanto, escurrí el atún y desmenuzalo en un bol.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Picá el verdeo fino y mezclalo con el atún, el yogur, la mostaza y el jugo de limón.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Pelá y picá los huevos e incorporalos con cuidado. Salpimentá.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cortá las paltas al medio, sacá el carozo y ahuecá apenas con una cuchara.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Rellená cada mitad con la mezcla y espolvoreá con pimentón.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Se come frío, no se recalienta.",
+      "tip": "Rociá la palta con limón y tapá con film pegado al relleno para que no se oscurezca."
+    }
+  },
+  {
+    "title": "Ensalada griega con queso feta y aceitunas",
+    "description": "Tomate, pepino, morrón y cebolla morada con queso feta, aceitunas negras y orégano. Sin cocción, fresca y lista en 10 minutos.",
+    "servings": 3,
+    "prep_minutes": 10,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "bajo en carbohidratos",
+      "ensalada",
+      "vegetariano",
+      "mediterránea",
+      "rápido",
+      "sin horno",
+      "verano"
+    ],
+    "ingredients": [
+      "3 tomates maduros",
+      "1 pepino",
+      "1 morrón verde",
+      "1/2 cebolla morada",
+      "150 g de queso feta",
+      "100 g de aceitunas negras",
+      "3 cda de aceite de oliva",
+      "1 cda de vinagre de vino",
+      "1 cdita de orégano",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá los tomates en gajos gruesos y el pepino en medias lunas gruesas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cortá el morrón en aros y la cebolla en pluma muy fina.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Poné todo en una fuente con las aceitunas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclá el aceite con el vinagre, el orégano y una pizca de sal, y aliñá las verduras.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Poné el queso feta en bloque o desmenuzado arriba y terminá con más orégano.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Se come fría, no se recalienta.",
+      "tip": "Salá poco: el feta y las aceitunas ya aportan bastante sal."
+    }
+  },
+  {
+    "title": "Omelette de jamón, queso y rúcula",
+    "description": "Omelette esponjoso de seis huevos para compartir, relleno de jamón cocido, queso cremoso y rúcula fresca que se tibia con el calor.",
+    "servings": 2,
+    "prep_minutes": 5,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "bajo en carbohidratos",
+      "huevo",
+      "rápido",
+      "alto en proteína",
+      "cena",
+      "desayuno"
+    ],
+    "ingredients": [
+      "6 huevos",
+      "4 fetas de jamón cocido",
+      "80 g de queso cremoso",
+      "1 puñado de rúcula",
+      "1 cda de manteca",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Batí los huevos con sal y pimienta hasta que estén bien mezclados.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cortá el jamón en tiras y el queso en cubos chicos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Derretí la manteca en una sartén antiadherente de 24 cm a fuego medio.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Volcá los huevos y movelos suavemente con una espátula hasta que cuajen los bordes, unos 3 minutos.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Repartí el jamón y el queso en una mitad, tapá 2 minutos a fuego bajo para que funda.",
+        "minutes": 2,
+        "passive": true
+      },
+      {
+        "instruction": "Sumá la rúcula, doblá el omelette al medio y cortalo en dos porciones.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "En sartén a fuego bajo 2 minutos o microondas 30 segundos.",
+      "tip": "Sacalo del fuego cuando todavía esté apenas húmedo: sigue cocinándose solo."
+    }
+  },
+  {
+    "title": "Ensalada César con pollo grillado y sin crutones",
+    "description": "Tiras de pollo doradas sobre lechuga crocante con lascas de parmesano y un aderezo de yogur, ajo, limón y mostaza. Una César liviana sin pan.",
+    "servings": 2,
+    "prep_minutes": 10,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "bajo en carbohidratos",
+      "ensalada",
+      "pollo",
+      "alto en proteína",
+      "almuerzo",
+      "liviano"
+    ],
+    "ingredients": [
+      "400 g de pechuga de pollo",
+      "1 cda de aceite de oliva",
+      "1 lechuga romana o mantecosa",
+      "40 g de queso parmesano",
+      "3 cda de yogur natural",
+      "1 cdita de mostaza",
+      "1 diente de ajo rallado",
+      "1 cda de jugo de limón",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá la pechuga en tiras de 1 cm de grosor y salpimentala.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén y cociná el pollo 3 a 4 minutos por lado, hasta que esté dorado y bien cocido.",
+        "minutes": 8,
+        "passive": false
+      },
+      {
+        "instruction": "Mientras tanto, mezclá el yogur con la mostaza, el ajo, el limón, sal y pimienta para hacer el aderezo.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Lavá y secá bien la lechuga, cortala en trozos grandes y ponela en una fuente.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Sumá el pollo tibio, el aderezo y el parmesano en lascas finas con un pelapapas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclá suave y serví enseguida.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Guardá el pollo aparte y recalentalo en sartén; la ensalada se come fría.",
+      "tip": "Armá la ensalada recién al servir para que la lechuga siga crocante."
+    }
+  }
+]

@@ -96,7 +96,7 @@ test("compartir: link público, guardar desde un link, revocar, copiar a otro gr
   await pageB.goto("/perfil/bandeja");
   await expect(pageB.getByText(/te compartió/)).toBeVisible();
   await pageB.getByRole("button", { name: "Guardar" }).tap();
-  await pageB.getByRole("button", { name: /Mis recetas/ }).tap();
+  await pageB.getByRole("button", { name: "Mis recetas", exact: true }).tap();
   await expect(pageB.getByText("Guardada en Mis recetas")).toBeVisible();
   await expect(pageB.getByText("No tenés novedades")).toBeVisible();
   await expect(pageB.getByRole("status", { name: /novedad/ })).toHaveCount(0);

@@ -1,0 +1,630 @@
+[
+  {
+    "title": "Shakshuka de morrón y comino con huevos pochados",
+    "description": "Huevos cocidos en una salsa especiada de tomate y morrón, directo desde la sartén. Se come con pan para mojar y rinde una cena ligera en media hora.",
+    "servings": 2,
+    "prep_minutes": 8,
+    "cook_minutes": 20,
+    "difficulty": "facil",
+    "tags": [
+      "mediterránea",
+      "huevo",
+      "vegetariano",
+      "una olla",
+      "cena",
+      "rápido"
+    ],
+    "ingredients": [
+      "2 cda de aceite de oliva",
+      "1 cebolla",
+      "1 morrón rojo",
+      "2 dientes de ajo",
+      "1 cdita de pimentón ahumado",
+      "1 cdita de comino",
+      "1 lata de tomate perita triturado (400 g)",
+      "4 huevos",
+      "sal y pimienta a gusto",
+      "2 cda de perejil picado",
+      "pan crocante para acompañar"
+    ],
+    "steps": [
+      {
+        "instruction": "Picá la cebolla y el morrón en cubitos y el ajo bien fino."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén profunda y cociná la cebolla y el morrón a fuego medio.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el ajo, el pimentón y el comino y mezclá un minuto.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Volcá el tomate, salpimentá y cociná a fuego bajo hasta que espese.",
+        "minutes": 8,
+        "passive": false
+      },
+      {
+        "instruction": "Hacé cuatro huecos en la salsa y poné un huevo en cada uno."
+      },
+      {
+        "instruction": "Tapá la sartén y cociná hasta que las claras cuajen y las yemas queden blandas.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Espolvoreá con perejil y llevá la sartén a la mesa con el pan."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Recalentá la salsa en sartén a fuego bajo; los huevos quedan mejor recién hechos.",
+      "tip": "Podés guardar solo la salsa hasta 3 días y sumar huevos frescos al recalentar."
+    }
+  },
+  {
+    "title": "Spanakorizo: arroz griego con espinaca, limón y eneldo",
+    "description": "Arroz meloso cocinado con espinaca, verdeo y mucho limón, al estilo de las casas griegas. Sale en una sola olla y va bien solo o con feta.",
+    "servings": 4,
+    "prep_minutes": 7,
+    "cook_minutes": 22,
+    "difficulty": "facil",
+    "tags": [
+      "mediterránea",
+      "arroz",
+      "vegetariano",
+      "una olla",
+      "almuerzo",
+      "verdura"
+    ],
+    "ingredients": [
+      "3 cda de aceite de oliva",
+      "1 cebolla",
+      "3 cebollas de verdeo",
+      "1 taza de arroz largo fino",
+      "300 g de espinaca fresca",
+      "2 tazas de agua caliente",
+      "1 limón",
+      "3 cda de eneldo picado",
+      "sal y pimienta a gusto",
+      "100 g de queso feta (opcional)"
+    ],
+    "steps": [
+      {
+        "instruction": "Picá la cebolla y el verdeo. Lavá y cortá grueso la espinaca."
+      },
+      {
+        "instruction": "Calentá el aceite en una olla y rehogá la cebolla y el verdeo hasta que se ablanden.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el arroz y mezclá un minuto para que se impregne de aceite.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el agua caliente, sal y pimienta y llevá a hervor."
+      },
+      {
+        "instruction": "Bajá el fuego, tapá y cociná hasta que el arroz esté casi tierno.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Incorporá la espinaca, tapá y cociná hasta que se marchite y el arroz termine de cocinarse.",
+        "minutes": 4,
+        "passive": true
+      },
+      {
+        "instruction": "Apagá, exprimí el limón, sumá el eneldo y desmenuzá el feta por encima."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Recalentá en sartén con un chorrito de agua o en microondas tapado.",
+      "tip": "Agregá el limón y el eneldo recién al servir para que no pierdan aroma."
+    }
+  },
+  {
+    "title": "Pitas de souvlaki de cerdo con yogur, tomate y cebolla",
+    "description": "Cubitos de cerdo marinados con limón y orégano, dorados en sartén y servidos en pan pita con yogur al ajo. Un clásico griego de calle, hecho en casa.",
+    "servings": 4,
+    "prep_minutes": 15,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "mediterránea",
+      "cerdo",
+      "sándwich",
+      "rápido",
+      "cena",
+      "para compartir"
+    ],
+    "ingredients": [
+      "500 g de bondiola de cerdo en cubos de 2 cm",
+      "3 cda de aceite de oliva",
+      "1 limón",
+      "1 cda de orégano seco",
+      "2 dientes de ajo",
+      "sal y pimienta a gusto",
+      "1 taza de yogur natural firme",
+      "4 panes pita o panes árabes",
+      "2 tomates",
+      "1 cebolla morada",
+      "1 cdita de pimentón dulce"
+    ],
+    "steps": [
+      {
+        "instruction": "Mezclá el cerdo con aceite, jugo de medio limón, orégano, un diente de ajo picado, sal y pimienta."
+      },
+      {
+        "instruction": "Dejá marinar mientras preparás el resto.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Mezclá el yogur con el otro diente de ajo rallado, el jugo del medio limón restante y una pizca de sal."
+      },
+      {
+        "instruction": "Cortá los tomates en rodajas y la cebolla en medias lunas finas."
+      },
+      {
+        "instruction": "Calentá bien una sartén y dorá el cerdo por tandas, sin amontonarlo.",
+        "minutes": 8,
+        "passive": false
+      },
+      {
+        "instruction": "Calentá los panes un minuto de cada lado en la misma sartén o en una plancha."
+      },
+      {
+        "instruction": "Armá cada pita con yogur, tomate, cebolla, cerdo y una pizca de pimentón."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Recalentá el cerdo en sartén caliente un par de minutos.",
+      "tip": "Guardá la carne, la salsa y las verduras por separado y armá las pitas al momento."
+    }
+  },
+  {
+    "title": "Fideos municiones con tomate, aceitunas y feta en una olla",
+    "description": "Pastita corta cocinada directo en la salsa de tomate, con aceitunas negras y feta desmenuzado. Cremosa, salada y lista en una sola olla.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 18,
+    "difficulty": "facil",
+    "tags": [
+      "mediterránea",
+      "pasta",
+      "vegetariano",
+      "una olla",
+      "cena",
+      "almuerzo"
+    ],
+    "ingredients": [
+      "2 cda de aceite de oliva",
+      "1 cebolla",
+      "2 dientes de ajo",
+      "250 g de fideos municiones o puntitos",
+      "1 lata de tomate perita triturado (400 g)",
+      "2 tazas de agua caliente",
+      "1 cdita de orégano",
+      "1/2 taza de aceitunas negras",
+      "150 g de queso feta",
+      "sal y pimienta a gusto",
+      "1 puñado de albahaca o perejil"
+    ],
+    "steps": [
+      {
+        "instruction": "Picá la cebolla y el ajo bien chiquitos."
+      },
+      {
+        "instruction": "Rehogá la cebolla en el aceite hasta que esté transparente.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el ajo y el orégano y mezclá medio minuto.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá los fideos, el tomate, el agua, sal y pimienta y llevá a hervor."
+      },
+      {
+        "instruction": "Cociná a fuego medio revolviendo seguido hasta que los fideos estén tiernos y la salsa espese.",
+        "minutes": 10,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá las aceitunas y desmenuzá el feta por encima.",
+        "minutes": 2,
+        "passive": true
+      },
+      {
+        "instruction": "Serví con hojas de albahaca o perejil picado."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Recalentá en sartén con un chorrito de agua para aflojar la salsa.",
+      "tip": "Los fideos siguen absorbiendo líquido en la heladera, por eso conviene sumar agua al recalentar."
+    }
+  },
+  {
+    "title": "Tortitas de zapallito y feta con menta",
+    "description": "Tortitas doradas de zapallito rallado, feta y menta, al estilo de los kolokithokeftedes griegos. Crocantes por fuera y tiernas por dentro, ideales con yogur.",
+    "servings": 4,
+    "prep_minutes": 18,
+    "cook_minutes": 12,
+    "difficulty": "media",
+    "tags": [
+      "mediterránea",
+      "vegetariano",
+      "verdura",
+      "almuerzo",
+      "cena",
+      "para compartir"
+    ],
+    "ingredients": [
+      "3 zapallitos redondos o 400 g de zapallitos (rallados)",
+      "1 cdita de sal",
+      "150 g de queso feta",
+      "2 huevos",
+      "4 cda de harina común",
+      "2 cebollas de verdeo",
+      "2 cda de menta picada",
+      "1 pizca de pimienta",
+      "3 cda de aceite de girasol",
+      "1/2 taza de yogur natural",
+      "1/2 limón"
+    ],
+    "steps": [
+      {
+        "instruction": "Rallá los zapallitos con la parte gruesa del rallador y mezclalos con la sal."
+      },
+      {
+        "instruction": "Dejá reposar para que suelten agua.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Exprimí el zapallito con las manos o en un paño limpio hasta sacar casi toda el agua."
+      },
+      {
+        "instruction": "Mezclá en un bowl el zapallito, el feta desmenuzado, los huevos, la harina, el verdeo picado, la menta y la pimienta."
+      },
+      {
+        "instruction": "Calentá un poco de aceite en una sartén y poné cucharadas de mezcla, aplastándolas apenas."
+      },
+      {
+        "instruction": "Doralas de cada lado hasta que estén bien tostadas, y repetí con el resto.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Mezclá el yogur con unas gotas de limón y servilo al lado."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Recalentá en sartén seca o en horno a 180 °C hasta que estén calientes y crocantes.",
+      "tip": "Escurrí muy bien el zapallito: si queda agua, las tortitas se deshacen."
+    }
+  },
+  {
+    "title": "Garbanzos salteados con espinaca, ajo y comino",
+    "description": "Garbanzos de lata dorados con ajo, pimentón y comino, con espinaca que se marchita al final. Un plato vegano de inspiración española, rápido y contundente.",
+    "servings": 3,
+    "prep_minutes": 5,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "mediterránea",
+      "española",
+      "vegano",
+      "legumbres",
+      "rápido",
+      "salteado",
+      "sin lácteos"
+    ],
+    "ingredients": [
+      "2 latas de garbanzos (800 g)",
+      "3 cda de aceite de oliva",
+      "3 dientes de ajo",
+      "1 cdita de comino",
+      "1 cdita de pimentón ahumado",
+      "1 atado de espinaca",
+      "1 cda de vinagre de vino",
+      "sal y pimienta a gusto",
+      "1/2 limón",
+      "pan para acompañar"
+    ],
+    "steps": [
+      {
+        "instruction": "Escurrí los garbanzos, enjuagalos y secalos con un paño."
+      },
+      {
+        "instruction": "Laminá el ajo y lavá la espinaca."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén grande y dorá los garbanzos a fuego medio-alto.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Bajá el fuego, agregá el ajo, el comino y el pimentón y mezclá un minuto.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el vinagre y la espinaca y mové hasta que se marchite.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Probá, ajustá la sal y la pimienta y exprimí el limón por encima."
+      },
+      {
+        "instruction": "Serví caliente con pan."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Recalentá en sartén con unas gotas de aceite.",
+      "tip": "Quedan muy bien fríos sobre ensalada al día siguiente."
+    }
+  },
+  {
+    "title": "Falafel al horno con salsa de yogur y limón",
+    "description": "Bolitas aplastadas de garbanzo, perejil y especias, horneadas hasta quedar doradas. Se hacen con garbanzos de lata, sin freír y sin remojar.",
+    "servings": 3,
+    "prep_minutes": 10,
+    "cook_minutes": 19,
+    "difficulty": "media",
+    "tags": [
+      "mediterránea",
+      "árabe",
+      "horno",
+      "vegetariano",
+      "legumbres",
+      "almuerzo",
+      "una bandeja"
+    ],
+    "ingredients": [
+      "1 lata de garbanzos (400 g)",
+      "1/2 cebolla",
+      "2 dientes de ajo",
+      "1/2 atado de perejil",
+      "1 cdita de comino",
+      "1 cdita de coriandro molido",
+      "3 cda de harina común",
+      "1/2 cdita de polvo de hornear",
+      "sal y pimienta a gusto",
+      "2 cda de aceite de oliva",
+      "1 taza de yogur natural",
+      "1/2 limón"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá el horno a 200 °C y cubrí una placa con papel manteca."
+      },
+      {
+        "instruction": "Escurrí y secá bien los garbanzos."
+      },
+      {
+        "instruction": "Procesá los garbanzos con la cebolla, el ajo, el perejil, las especias, la sal y la pimienta hasta lograr una pasta con textura."
+      },
+      {
+        "instruction": "Agregá la harina y el polvo de hornear y mezclá."
+      },
+      {
+        "instruction": "Formá 12 bolitas, apoyalas en la placa y aplastalas un poco. Pincelalas con aceite."
+      },
+      {
+        "instruction": "Horneá, dándolas vuelta a mitad de cocción, hasta que estén doradas.",
+        "minutes": 18,
+        "passive": true
+      },
+      {
+        "instruction": "Mezclá el yogur con el jugo de limón y una pizca de sal para acompañar."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Recalentá en horno a 190 °C unos 8 minutos para que vuelvan a quedar crocantes.",
+      "tip": "Si la masa queda muy húmeda, sumá una cucharada más de harina."
+    }
+  },
+  {
+    "title": "Espaguetis a la puttanesca con aceitunas, alcaparras y anchoas",
+    "description": "Pasta con salsa intensa de tomate, aceitunas negras, alcaparras y anchoas que se deshacen en el aceite. Salada, picante y lista mientras hierve el agua.",
+    "servings": 3,
+    "prep_minutes": 5,
+    "cook_minutes": 20,
+    "difficulty": "facil",
+    "tags": [
+      "mediterránea",
+      "italiana",
+      "pasta",
+      "cena",
+      "rápido"
+    ],
+    "ingredients": [
+      "300 g de espaguetis",
+      "3 cda de aceite de oliva",
+      "3 dientes de ajo",
+      "1 lata chica de filetes de anchoas",
+      "1 lata de tomate perita triturado (400 g)",
+      "1/2 taza de aceitunas negras sin carozo",
+      "2 cda de alcaparras",
+      "1 pizca de ají molido",
+      "sal a gusto",
+      "2 cda de perejil picado"
+    ],
+    "steps": [
+      {
+        "instruction": "Poné a hervir abundante agua con sal para la pasta."
+      },
+      {
+        "instruction": "Picá el ajo, las aceitunas y las anchoas."
+      },
+      {
+        "instruction": "Cociná los espaguetis según el paquete y reservá una taza del agua de cocción.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Mientras tanto, calentá el aceite en una sartén y cociná el ajo, las anchoas y el ají hasta que las anchoas se deshagan.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el tomate, las aceitunas y las alcaparras y cociná a fuego medio.",
+        "minutes": 8,
+        "passive": false
+      },
+      {
+        "instruction": "Escurrí la pasta y mezclala con la salsa, sumando un chorrito del agua reservada si hace falta."
+      },
+      {
+        "instruction": "Terminá con perejil picado."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Recalentá en sartén con un chorrito de agua.",
+      "tip": "Probá la salsa antes de salar: las anchoas, aceitunas y alcaparras ya aportan mucha sal."
+    }
+  },
+  {
+    "title": "Duraznos grillados con ricota, miel y pistachos",
+    "description": "Mitades de durazno doradas en sartén, servidas con ricota cremosa, miel y frutos secos. Un postre fresco y simple, muy de la costa mediterránea.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 8,
+    "difficulty": "facil",
+    "tags": [
+      "mediterránea",
+      "postre",
+      "fruta",
+      "vegetariano",
+      "sin horno",
+      "rápido",
+      "verano"
+    ],
+    "ingredients": [
+      "4 duraznos maduros pero firmes",
+      "1 cda de manteca",
+      "200 g de ricota",
+      "3 cda de miel",
+      "1 cdita de ralladura de limón",
+      "3 cda de pistachos o nueces picadas",
+      "1 pizca de canela"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá los duraznos al medio y sacales el carozo."
+      },
+      {
+        "instruction": "Mezclá la ricota con una cucharada de miel y la ralladura de limón."
+      },
+      {
+        "instruction": "Derretí la manteca en una sartén a fuego medio."
+      },
+      {
+        "instruction": "Apoyá los duraznos con el corte hacia abajo y doralos hasta que estén marcados.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Dalos vuelta y cociná un par de minutos más.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Serví los duraznos tibios con una cucharada de ricota en el centro."
+      },
+      {
+        "instruction": "Terminá con la miel restante, los frutos secos y una pizca de canela."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Comelos recién hechos; si sobran, recalentá apenas en sartén.",
+      "tip": "Si no hay duraznos, probá con ciruelas, damascos o peras firmes."
+    }
+  },
+  {
+    "title": "Tabulé de burgol con perejil, menta y tomate",
+    "description": "Ensalada fresca de trigo burgol hidratado con mucho perejil, menta, tomate y limón. No lleva cocción y se arma en el tiempo que el trigo tarda en hidratarse.",
+    "servings": 4,
+    "prep_minutes": 25,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "mediterránea",
+      "árabe",
+      "ensalada",
+      "vegano",
+      "sin horno",
+      "verano",
+      "sin lácteos"
+    ],
+    "ingredients": [
+      "1 taza de trigo burgol fino",
+      "1 taza de agua hirviendo",
+      "3 tomates firmes",
+      "1 pepino",
+      "2 atados de perejil",
+      "1/2 atado de menta",
+      "2 cebollas de verdeo",
+      "4 cda de aceite de oliva",
+      "3 limones",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Poné el burgol en un bowl, cubrilo con el agua hirviendo y una pizca de sal, y tapalo.",
+        "minutes": 15,
+        "passive": true
+      },
+      {
+        "instruction": "Mientras tanto, lavá y secá bien el perejil y la menta."
+      },
+      {
+        "instruction": "Picá finito el perejil, la menta y el verdeo."
+      },
+      {
+        "instruction": "Cortá los tomates y el pepino en cubitos chicos."
+      },
+      {
+        "instruction": "Soltá el burgol con un tenedor y dejalo enfriar un poco."
+      },
+      {
+        "instruction": "Mezclá el burgol con las verduras, las hierbas, el aceite y el jugo de los limones."
+      },
+      {
+        "instruction": "Probá, ajustá sal y pimienta y servilo fresco."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Se come frío; sacalo de la heladera 10 minutos antes de servir.",
+      "tip": "Secá bien las hojas de perejil para que la ensalada no quede aguada."
+    }
+  }
+]

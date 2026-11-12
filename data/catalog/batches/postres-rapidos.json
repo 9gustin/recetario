@@ -1,0 +1,472 @@
+[
+  {
+    "title": "Chocotorta en vasitos",
+    "description": "La clásica chocotorta pero armada en vasos individuales: queso crema, dulce de leche y galletitas de chocolate mojadas en café con leche. Sin horno y lista en un rato.",
+    "servings": 4,
+    "prep_minutes": 25,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "postre",
+      "sin horno",
+      "argentina",
+      "para chicos",
+      "para compartir"
+    ],
+    "ingredients": [
+      "250 g de queso crema",
+      "200 g de dulce de leche",
+      "1 taza de leche",
+      "1 cdita de café instantáneo",
+      "1 paquete de galletitas de chocolate (unos 170 g)",
+      "2 cda de cacao amargo",
+      "2 cda de nueces picadas (opcional)"
+    ],
+    "steps": [
+      {
+        "instruction": "Mezclá el queso crema con el dulce de leche hasta lograr una crema lisa."
+      },
+      {
+        "instruction": "Calentá apenas la leche y disolvé el café. Dejala entibiar en un plato hondo."
+      },
+      {
+        "instruction": "Mojá las galletitas de a una en la leche, rápido, para que no se deshagan."
+      },
+      {
+        "instruction": "Armá en cada vaso una capa de galletitas rotas y cubrí con crema. Repetí hasta llenar."
+      },
+      {
+        "instruction": "Llevá los vasos a la heladera para que tomen firmeza.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Espolvoreá con cacao y nueces justo antes de servir."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "No se recalienta; servila bien fría.",
+      "tip": "Si la dejás más tiempo, las galletitas se ablandan y queda más cremosa."
+    }
+  },
+  {
+    "title": "Ananá a la plancha con miel y coco",
+    "description": "Rodajas de ananá doradas en la sartén con manteca y miel, terminadas con coco rallado tostado. Un postre liviano y aromático.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "postre",
+      "fruta",
+      "rápido",
+      "sin gluten",
+      "verano"
+    ],
+    "ingredients": [
+      "1 ananá mediano",
+      "2 cda de manteca",
+      "3 cda de miel",
+      "3 cda de coco rallado",
+      "1 cdita de canela",
+      "el jugo de 1/2 limón"
+    ],
+    "steps": [
+      {
+        "instruction": "Pelá el ananá, sacale el centro duro y cortalo en rodajas de 1 cm."
+      },
+      {
+        "instruction": "Tostá el coco rallado en una sartén seca unos 2 minutos, moviendo seguido. Reservalo.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Derretí la manteca en la misma sartén a fuego medio-alto."
+      },
+      {
+        "instruction": "Cociná las rodajas 3 o 4 minutos de cada lado hasta que se doren.",
+        "minutes": 7,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá la miel, la canela y el jugo de limón. Cociná 1 minuto más."
+      },
+      {
+        "instruction": "Serví las rodajas con el almíbar de la sartén y el coco tostado por encima."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Calentalo unos segundos en el microondas o en sartén.",
+      "tip": "Elegí un ananá bien maduro para que caramelice mejor."
+    }
+  },
+  {
+    "title": "Manzanas salteadas con canela y crumble de avena",
+    "description": "Manzanas tiernas con canela y azúcar mascabo, cubiertas con un crumble crocante de avena y nueces hecho en la misma sartén. Sin horno.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "postre",
+      "fruta",
+      "sin horno",
+      "invierno",
+      "una olla"
+    ],
+    "ingredients": [
+      "4 manzanas",
+      "3 cda de manteca",
+      "3 cda de azúcar mascabo",
+      "1 cdita de canela",
+      "1/2 taza de avena arrollada",
+      "3 cda de nueces picadas",
+      "el jugo de 1/2 limón",
+      "50 ml de agua",
+      "1 pizca de sal"
+    ],
+    "steps": [
+      {
+        "instruction": "Pelá las manzanas, sacales el centro y cortalas en cubos medianos."
+      },
+      {
+        "instruction": "Derretí 1 cucharada de manteca en una sartén y cociná las manzanas con el limón y el agua, tapadas, a fuego medio.",
+        "minutes": 8,
+        "passive": true
+      },
+      {
+        "instruction": "Agregá 1 cucharada de azúcar y la canela. Destapá y cociná 2 minutos hasta que el líquido espese."
+      },
+      {
+        "instruction": "Pasá las manzanas a un bol y reservalas."
+      },
+      {
+        "instruction": "En la misma sartén derretí el resto de la manteca y sumá la avena, las nueces, el azúcar restante y la sal. Tostá 4 minutos revolviendo.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Serví las manzanas tibias con el crumble por encima."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Calentá las manzanas en microondas y sumá el crumble recién al servir.",
+      "tip": "Guardá el crumble aparte para que siga crocante."
+    }
+  },
+  {
+    "title": "Mousse de limón con leche condensada",
+    "description": "Un postre aéreo y fresco de limón, con crema batida y leche condensada. Se arma en 10 minutos y se sirve fría en vasitos.",
+    "servings": 6,
+    "prep_minutes": 25,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "postre",
+      "sin horno",
+      "verano",
+      "para compartir"
+    ],
+    "ingredients": [
+      "1 lata de leche condensada",
+      "200 ml de crema de leche bien fría",
+      "100 ml de jugo de limón (unos 3 limones)",
+      "la ralladura de 1 limón",
+      "4 galletitas dulces trituradas",
+      "hojas de menta para decorar"
+    ],
+    "steps": [
+      {
+        "instruction": "Batí la crema de leche bien fría hasta que tome punto medio, sin pasarte."
+      },
+      {
+        "instruction": "En otro bol mezclá la leche condensada con el jugo y la mitad de la ralladura. Va a espesar sola."
+      },
+      {
+        "instruction": "Incorporá la crema batida en dos tandas, con movimientos envolventes."
+      },
+      {
+        "instruction": "Repartí en vasitos y llevá a la heladera.",
+        "minutes": 15,
+        "passive": true
+      },
+      {
+        "instruction": "Decorá con galletitas trituradas, ralladura y menta antes de servir."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 30,
+      "reheat": "No se recalienta; si la freezás, pasala 15 minutos a la heladera antes de servir.",
+      "tip": "Rallá el limón antes de exprimirlo: es mucho más fácil."
+    }
+  },
+  {
+    "title": "Helado exprés de frutillas y yogur",
+    "description": "Un helado cremoso hecho con frutillas congeladas y yogur, procesado en minutos. Sin máquina ni cocción.",
+    "servings": 3,
+    "prep_minutes": 10,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "postre",
+      "rápido",
+      "sin horno",
+      "sin gluten",
+      "verano",
+      "vegetariano"
+    ],
+    "ingredients": [
+      "400 g de frutillas congeladas",
+      "1 taza de yogur natural",
+      "3 cda de miel",
+      "1 cdita de esencia de vainilla",
+      "1 cda de jugo de limón"
+    ],
+    "steps": [
+      {
+        "instruction": "Sacá las frutillas del freezer y dejalas a temperatura ambiente.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Colocalas en la procesadora con el yogur, la miel, la vainilla y el limón."
+      },
+      {
+        "instruction": "Procesá raspando los costados hasta lograr una crema suave y espesa."
+      },
+      {
+        "instruction": "Probá y agregá más miel si hace falta."
+      },
+      {
+        "instruction": "Serví enseguida en copas o bochas."
+      }
+    ],
+    "storage": {
+      "fridge_days": 0,
+      "freezer_days": 30,
+      "reheat": "Sacalo del freezer 10 minutos antes de servir.",
+      "tip": "Para más cremosidad, usá yogur entero y procesalo de nuevo después de freezarlo."
+    }
+  },
+  {
+    "title": "Postre de maicena tibio con vainilla y canela",
+    "description": "Una crema suave de leche y maicena aromatizada con vainilla y limón, que se sirve en copas con canela. Un postre de la infancia.",
+    "servings": 4,
+    "prep_minutes": 5,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "postre",
+      "una olla",
+      "sin gluten",
+      "para chicos",
+      "argentina"
+    ],
+    "ingredients": [
+      "500 ml de leche",
+      "3 cda de maicena",
+      "3 cda de azúcar",
+      "1 cdita de esencia de vainilla",
+      "1 tira de cáscara de limón",
+      "1 cdita de canela",
+      "2 cda de dulce de leche (opcional)"
+    ],
+    "steps": [
+      {
+        "instruction": "Disolvé la maicena en 100 ml de leche fría, sin grumos."
+      },
+      {
+        "instruction": "Poné el resto de la leche en una cacerola con el azúcar y la cáscara de limón."
+      },
+      {
+        "instruction": "Calentá a fuego medio, sumá la maicena disuelta y revolvé sin parar.",
+        "minutes": 8,
+        "passive": false
+      },
+      {
+        "instruction": "Retirá cuando espese y dé hervor. Sacá la cáscara y agregá la vainilla."
+      },
+      {
+        "instruction": "Repartí en copas y dejá entibiar.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Serví con canela y una cucharada de dulce de leche si querés."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Calentala en microondas de a 20 segundos, revolviendo.",
+      "tip": "Tapala con film en contacto con la crema para que no forme costra."
+    }
+  },
+  {
+    "title": "Peras pochadas en jugo de naranja",
+    "description": "Peras tiernas cocidas en jugo de naranja con canela y clavo, con un almíbar ligero. Un postre sin lácteos y muy aromático.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 20,
+    "difficulty": "facil",
+    "tags": [
+      "postre",
+      "fruta",
+      "vegano",
+      "sin lácteos",
+      "sin gluten",
+      "invierno",
+      "una olla"
+    ],
+    "ingredients": [
+      "4 peras firmes",
+      "1 taza de jugo de naranja",
+      "2 cda de azúcar",
+      "1 palito de canela",
+      "3 clavos de olor",
+      "1 tira de cáscara de naranja",
+      "2 cda de pasas de uva"
+    ],
+    "steps": [
+      {
+        "instruction": "Pelá las peras, cortalas al medio y sacales las semillas con una cucharita."
+      },
+      {
+        "instruction": "Poné en una cacerola el jugo, el azúcar, la canela, los clavos, la cáscara y las pasas."
+      },
+      {
+        "instruction": "Llevá a hervor y acomodá las peras con el lado cortado hacia abajo."
+      },
+      {
+        "instruction": "Tapá y cociná a fuego bajo hasta que estén tiernas al pinchar.",
+        "minutes": 15,
+        "passive": true
+      },
+      {
+        "instruction": "Sacá las peras y reducí el líquido a fuego fuerte.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Serví las peras tibias con el almíbar por encima."
+      }
+    ],
+    "storage": {
+      "fridge_days": 4,
+      "freezer_days": null,
+      "reheat": "Calentalas en microondas o servilas frías.",
+      "tip": "Combinan muy bien con una cucharada de yogur o helado de crema."
+    }
+  },
+  {
+    "title": "Crema de ricota con miel, limón y nueces",
+    "description": "Ricota batida con ralladura de limón y vainilla, servida con miel y nueces tostadas. Un postre simple, fresco y sin horno.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 3,
+    "difficulty": "facil",
+    "tags": [
+      "postre",
+      "rápido",
+      "vegetariano",
+      "sin horno",
+      "sin gluten",
+      "mediterránea"
+    ],
+    "ingredients": [
+      "400 g de ricota",
+      "3 cda de miel",
+      "la ralladura de 1 limón",
+      "1 cda de jugo de limón",
+      "1 cdita de esencia de vainilla",
+      "1/2 taza de nueces picadas",
+      "1 pizca de canela"
+    ],
+    "steps": [
+      {
+        "instruction": "Tostá las nueces en una sartén seca 3 minutos, moviéndolas seguido. Dejalas enfriar.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Procesá o batí la ricota con 2 cucharadas de miel, la ralladura, el jugo y la vainilla hasta que quede cremosa."
+      },
+      {
+        "instruction": "Probá y ajustá el dulzor."
+      },
+      {
+        "instruction": "Repartí la crema en cuatro cuencos."
+      },
+      {
+        "instruction": "Terminá con las nueces, un hilo de miel y una pizca de canela."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "No se recalienta; servila fría.",
+      "tip": "Agregá las nueces al final para que sigan crocantes."
+    }
+  },
+  {
+    "title": "Fondue de chocolate con frutas",
+    "description": "Chocolate semiamargo fundido con crema para mojar frutas frescas en pinchos. Un postre para compartir, listo en 20 minutos.",
+    "servings": 4,
+    "prep_minutes": 15,
+    "cook_minutes": 8,
+    "difficulty": "facil",
+    "tags": [
+      "postre",
+      "fruta",
+      "para compartir",
+      "sin gluten",
+      "sin horno",
+      "para chicos"
+    ],
+    "ingredients": [
+      "200 g de chocolate semiamargo",
+      "100 ml de crema de leche",
+      "1 cda de manteca",
+      "2 bananas",
+      "250 g de frutillas",
+      "2 mandarinas",
+      "1 manzana",
+      "el jugo de 1/2 limón"
+    ],
+    "steps": [
+      {
+        "instruction": "Lavá las frutillas y cortá las bananas y la manzana en trozos. Rociá la manzana con limón."
+      },
+      {
+        "instruction": "Separá las mandarinas en gajos y acomodá toda la fruta en una fuente con palillos."
+      },
+      {
+        "instruction": "Picá el chocolate y ponelo en un bol sobre una olla con agua apenas hirviendo, sin que la toque."
+      },
+      {
+        "instruction": "Agregá la crema y la manteca. Revolvé hasta que el chocolate se derrita y quede brillante.",
+        "minutes": 8,
+        "passive": false
+      },
+      {
+        "instruction": "Pasá el chocolate a un bol chico o cacerolita tibia."
+      },
+      {
+        "instruction": "Serví enseguida para mojar la fruta."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Calentá el chocolate a baño maría o en microondas de a 20 segundos, revolviendo.",
+      "tip": "Guardá el chocolate sobrante aparte; no conviene guardar la fruta cortada."
+    }
+  }
+]

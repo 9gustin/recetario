@@ -1,0 +1,577 @@
+[
+  {
+    "title": "Bolitas de dátiles, cacao y coco",
+    "description": "Bocaditos dulces sin horno, con dátiles, nueces y cacao. Se arman en minutos y entran en cualquier vianda.",
+    "servings": 4,
+    "prep_minutes": 12,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "snack",
+      "liviano",
+      "sin horno",
+      "vegano",
+      "para freezar"
+    ],
+    "ingredients": [
+      "200 g de dátiles sin carozo",
+      "50 g de nueces",
+      "3 cda de cacao amargo",
+      "4 cda de coco rallado",
+      "1 cda de agua tibia",
+      "1 pizca de sal"
+    ],
+    "steps": [
+      {
+        "instruction": "Si los dátiles están duros, remojalos en agua caliente y escurrilos bien.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Procesá las nueces hasta que queden como arena gruesa.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Sumá los dátiles, el cacao, la sal y el agua, y procesá hasta lograr una pasta pegajosa.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Armá bolitas del tamaño de una nuez con las manos húmedas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Pasalas por el coco rallado y guardalas en un táper.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 4,
+      "freezer_days": 60,
+      "reheat": "No hace falta: sacalas 10 minutos antes de comerlas si estaban congeladas.",
+      "tip": "Separalas con papel manteca para que no se peguen entre sí."
+    }
+  },
+  {
+    "title": "Rollitos de jamón cocido, queso crema y pepino",
+    "description": "Fetas de jamón enrolladas con queso crema y bastones de verdura. Fresquitos, sin cocción y fáciles de llevar.",
+    "servings": 2,
+    "prep_minutes": 10,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "snack",
+      "liviano",
+      "rápido",
+      "sin horno",
+      "alto en proteína",
+      "para chicos"
+    ],
+    "ingredients": [
+      "8 fetas de jamón cocido",
+      "100 g de queso crema",
+      "1 pepino",
+      "1 zanahoria",
+      "1 cda de cebolla de verdeo picada",
+      "pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá el pepino y la zanahoria en bastones finos, del ancho de las fetas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclá el queso crema con el verdeo y la pimienta.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Untá cada feta de jamón con una capa fina de queso crema.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Poné un bastón de pepino y uno de zanahoria en el borde y enrollá.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Guardalos apretados en un táper con la unión hacia abajo.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Se comen fríos, directo de la heladera.",
+      "tip": "Llevalos con una unidad de hielo si van a estar mucho tiempo fuera."
+    }
+  },
+  {
+    "title": "Mix de frutos secos tostados con pimentón",
+    "description": "Almendras, maníes y semillas tostados en sartén con pimentón ahumado. Un snack crocante que reemplaza a las papas fritas.",
+    "servings": 4,
+    "prep_minutes": 2,
+    "cook_minutes": 7,
+    "difficulty": "facil",
+    "tags": [
+      "snack",
+      "liviano",
+      "rápido",
+      "sin horno",
+      "vegano",
+      "sin gluten"
+    ],
+    "ingredients": [
+      "100 g de almendras",
+      "100 g de maníes sin sal",
+      "3 cda de semillas de girasol",
+      "1 cdita de aceite de oliva",
+      "1/2 cdita de pimentón ahumado",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Calentá una sartén seca a fuego medio.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Tostá las almendras y los maníes 4 minutos, moviendo seguido.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá las semillas y tostá 2 minutos más, hasta que huelan bien.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Apagá el fuego, agregá el aceite, el pimentón y la sal, y mezclá rápido.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Dejá enfriar en un plato antes de guardar en un frasco.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 0,
+      "freezer_days": null,
+      "reheat": "No se recalienta; se come a temperatura ambiente.",
+      "tip": "Guardalo en un frasco hermético, en un lugar fresco y seco, hasta 10 días."
+    }
+  },
+  {
+    "title": "Bastones de zanahoria y apio con dip de yogur y menta",
+    "description": "Verduras crocantes con un dip cremoso de yogur natural, limón y menta. Se arma en frasquitos listos para llevar.",
+    "servings": 2,
+    "prep_minutes": 10,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "snack",
+      "liviano",
+      "rápido",
+      "sin horno",
+      "vegetariano",
+      "verano"
+    ],
+    "ingredients": [
+      "200 g de yogur natural sin azúcar",
+      "1 cda de menta fresca picada",
+      "1/2 limón",
+      "1 diente de ajo",
+      "2 zanahorias",
+      "1 pepino",
+      "2 tallos de apio",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Pelá las zanahorias y cortalas en bastones junto con el pepino y el apio.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Rallá el ajo bien fino y mezclalo con el yogur.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Sumá la menta, el jugo de limón y sal, y revolvé.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Serví el dip en dos frascos chicos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Poné los bastones parados dentro de los frascos, o en un táper aparte.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Se come frío; no se recalienta.",
+      "tip": "Guardá las verduras con un papel de cocina para que no larguen agua."
+    }
+  },
+  {
+    "title": "Huevos duros con sésamo y pimentón",
+    "description": "Huevos duros pelados y condimentados con aceite de oliva, sésamo y pimentón. Una porción de proteína lista para la mochila.",
+    "servings": 2,
+    "prep_minutes": 3,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "snack",
+      "alto en proteína",
+      "sin gluten",
+      "económico",
+      "huevo",
+      "sin horno"
+    ],
+    "ingredients": [
+      "4 huevos",
+      "1 cdita de aceite de oliva",
+      "1 cdita de sésamo",
+      "1/2 cdita de pimentón dulce",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Poné los huevos en una olla con agua fría hasta cubrirlos y llevá a hervor.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cociná los huevos 10 minutos desde que hierve el agua.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Pasalos a un bol con agua fría y hielo, y dejalos 2 minutos.",
+        "minutes": 2,
+        "passive": true
+      },
+      {
+        "instruction": "Pelalos y cortalos al medio.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Rociá con aceite y espolvoreá con sésamo, pimentón y sal.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Se comen fríos; no se recalientan.",
+      "tip": "Condimentalos recién antes de comer si querés que el sésamo quede crocante."
+    }
+  },
+  {
+    "title": "Ensalada de garbanzos en frasco",
+    "description": "Garbanzos de lata con tomate cherry, pepino y cebolla morada, aliñados con limón y perejil. Se lleva en un frasco y rinde como snack o colación.",
+    "servings": 2,
+    "prep_minutes": 10,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "snack",
+      "liviano",
+      "rápido",
+      "sin horno",
+      "vegano",
+      "legumbres",
+      "ensalada"
+    ],
+    "ingredients": [
+      "1 lata de garbanzos",
+      "10 tomates cherry",
+      "1/2 pepino",
+      "1/2 cebolla morada",
+      "2 cda de perejil picado",
+      "1 limón",
+      "2 cda de aceite de oliva",
+      "1 pizca de comino",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Colá los garbanzos y enjuagalos bajo la canilla.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cortá los tomates al medio, el pepino en cubitos y la cebolla en tiras muy finas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclá en un bol el jugo de limón, el aceite, el comino y la sal.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Poné el aderezo en el fondo del frasco y sumá los garbanzos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Agregá las verduras y el perejil arriba, y cerrá. Agitá antes de comer.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Se come fría; sacala 10 minutos antes si querés que pierda el frío.",
+      "tip": "Poné el aderezo siempre abajo y las verduras arriba para que no se ablanden."
+    }
+  },
+  {
+    "title": "Manzana con pasta de maní, chía y coco",
+    "description": "Rodajas de manzana con una capa de pasta de maní, chía y coco rallado. Dulce, crocante y sin cocción.",
+    "servings": 2,
+    "prep_minutes": 7,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "snack",
+      "liviano",
+      "rápido",
+      "fruta",
+      "vegano",
+      "sin gluten",
+      "para chicos"
+    ],
+    "ingredients": [
+      "2 manzanas",
+      "3 cda de pasta de maní",
+      "1 cda de chía",
+      "1 cda de coco rallado",
+      "1/2 limón"
+    ],
+    "steps": [
+      {
+        "instruction": "Lavá las manzanas, sacales el centro y cortalas en rodajas gruesas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Rociá las rodajas con unas gotas de limón para que no se oscurezcan.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Untá cada rodaja con una capa de pasta de maní.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Espolvoreá con la chía y el coco rallado.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Armá sándwiches de a dos rodajas o guardalas en capas con papel manteca.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Se come fría o a temperatura ambiente.",
+      "tip": "Armalas el mismo día; la manzana se oscurece y se ablanda con las horas."
+    }
+  },
+  {
+    "title": "Brochetitas de queso, uvas y nueces",
+    "description": "Cubos de queso cremoso, uvas y nueces pinchados en palitos. Un snack dulce y salado que no necesita cocción.",
+    "servings": 2,
+    "prep_minutes": 8,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "snack",
+      "rápido",
+      "sin horno",
+      "vegetariano",
+      "fruta",
+      "para compartir",
+      "para chicos"
+    ],
+    "ingredients": [
+      "150 g de queso cremoso",
+      "20 uvas sin semillas",
+      "8 mitades de nuez",
+      "4 palitos de brochette",
+      "1 cdita de aceite de oliva",
+      "1 pizca de orégano"
+    ],
+    "steps": [
+      {
+        "instruction": "Lavá las uvas y secalas bien con un trapo limpio.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cortá el queso en cubos de 2 cm.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Pinchá en cada palito una uva, un cubo de queso, una nuez y repetí.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Terminá con otra uva en la punta.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Rociá con aceite y orégano, y guardalas en un táper.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Se comen frías; sacalas 10 minutos antes para que el queso ablande.",
+      "tip": "Si son para chicos chiquitos, usá palitos sin punta o servilo sin pinchar."
+    }
+  },
+  {
+    "title": "Pochoclo de sartén con pimentón ahumado",
+    "description": "Pochoclo casero hecho en olla con poco aceite, condimentado con pimentón y ajo en polvo. Liviano, crocante y muy económico.",
+    "servings": 3,
+    "prep_minutes": 2,
+    "cook_minutes": 7,
+    "difficulty": "facil",
+    "tags": [
+      "snack",
+      "liviano",
+      "económico",
+      "rápido",
+      "sin horno",
+      "vegano",
+      "sin gluten",
+      "una olla"
+    ],
+    "ingredients": [
+      "1/4 taza de maíz pisingallo",
+      "1 cda de aceite neutro",
+      "1/2 cdita de pimentón ahumado",
+      "1 pizca de ajo en polvo",
+      "sal fina a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Poné el aceite y tres granos de maíz en una olla con tapa, a fuego medio.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cuando exploten los tres granos, agregá el resto del maíz y tapá.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Sacudí la olla de a ratos hasta que dejen de sonar las explosiones, unos 4 minutos.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Pasá el pochoclo a un bol grande.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Espolvoreá con el pimentón, el ajo y la sal, y mezclá bien.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 0,
+      "freezer_days": null,
+      "reheat": "No se recalienta; se come a temperatura ambiente.",
+      "tip": "Guardalo en una bolsa o frasco hermético apenas se enfríe, así no se ablanda."
+    }
+  },
+  {
+    "title": "Chips de zapallito en airfryer",
+    "description": "Rodajas finas de zapallito doradas en la freidora de aire con orégano y pimentón. Un snack crocante con muy poco aceite.",
+    "servings": 2,
+    "prep_minutes": 5,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "snack",
+      "liviano",
+      "airfryer",
+      "vegano",
+      "verdura",
+      "sin gluten"
+    ],
+    "ingredients": [
+      "3 zapallitos redondos o 2 zucchinis",
+      "1 cda de aceite de oliva",
+      "1/2 cdita de pimentón dulce",
+      "1 cdita de orégano",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá la airfryer a 180 °C.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cortá los zapallitos en rodajas bien finas, de 2 a 3 mm.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Secalas con papel de cocina y mezclalas con el aceite, el pimentón, el orégano y la sal.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cociná en una sola capa 8 minutos, dándolas vuelta a la mitad.",
+        "minutes": 8,
+        "passive": true
+      },
+      {
+        "instruction": "Sacá las más doradas y dejá el resto 1 o 2 minutos más. Enfriá antes de guardar.",
+        "minutes": 2,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Pasalas 2 minutos por la airfryer a 160 °C para que recuperen el crocante.",
+      "tip": "Guardalas recién frías, en un táper con papel de cocina, sin cerrar del todo."
+    }
+  }
+]

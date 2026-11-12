@@ -1,0 +1,565 @@
+[
+  {
+    "title": "Smoothie verde de espinaca, ananá y jengibre",
+    "description": "Un licuado fresco y cítrico, sin lácteos, con espinaca que casi no se siente y un toque picante de jengibre.",
+    "servings": 2,
+    "prep_minutes": 7,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "bebida",
+      "rápido",
+      "vegano",
+      "sin lácteos",
+      "liviano"
+    ],
+    "ingredients": [
+      "2 tazas de espinaca fresca",
+      "1 taza de ananá en trozos",
+      "1 banana madura",
+      "1 cdita de jengibre fresco rallado",
+      "1 taza de agua fría",
+      "4 cubos de hielo",
+      "1 cdita de jugo de limón"
+    ],
+    "steps": [
+      {
+        "instruction": "Lavá bien la espinaca y escurrila.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Pelá la banana y cortala en rodajas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Poné el agua, la espinaca, el ananá, la banana, el jengibre y el limón en la licuadora.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Licuá un minuto y medio hasta que quede bien lisa.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el hielo, licuá 20 segundos más y serví enseguida.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "No se recalienta; tomalo frío y mezclalo antes de servir.",
+      "tip": "Guardalo en un frasco lleno hasta el borde y tapado para que no se oxide."
+    }
+  },
+  {
+    "title": "Licuado de frutilla y yogur natural",
+    "description": "Cremoso, rosado y apenas ácido. Ideal para la merienda o para arrancar el día con algo fresco.",
+    "servings": 2,
+    "prep_minutes": 5,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "bebida",
+      "rápido",
+      "merienda",
+      "para chicos",
+      "fruta"
+    ],
+    "ingredients": [
+      "2 tazas de frutillas",
+      "1 pote de yogur natural (200 g)",
+      "1/2 taza de leche fría",
+      "1 cda de miel",
+      "4 cubos de hielo"
+    ],
+    "steps": [
+      {
+        "instruction": "Lavá las frutillas y sacales el cabito verde.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Poné las frutillas, el yogur, la leche y la miel en la licuadora.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Licuá hasta que no queden trozos.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el hielo y licuá unos segundos más.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Probá, ajustá la miel y serví en vasos altos.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "No se recalienta; tomalo frío.",
+      "tip": "Si se separa, agitalo o pasalo de nuevo por la licuadora."
+    }
+  },
+  {
+    "title": "Limonada con menta y jengibre",
+    "description": "Limonada licuada con cáscara y un toque de jengibre, bien refrescante y con menta fresca.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "bebida",
+      "rápido",
+      "verano",
+      "sin lácteos",
+      "vegano"
+    ],
+    "ingredients": [
+      "3 limones",
+      "1 l de agua fría",
+      "4 cdas de azúcar",
+      "1 cdita de jengibre fresco rallado",
+      "10 hojas de menta",
+      "8 cubos de hielo"
+    ],
+    "steps": [
+      {
+        "instruction": "Lavá bien los limones y cortalos en cuartos sin las puntas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Licuá los limones con 500 ml de agua, el azúcar y el jengibre durante 10 segundos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Colá la mezcla sobre una jarra apretando bien.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Agregá el resto del agua, la menta y el hielo.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclá con una cuchara y serví bien fría.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "No se recalienta; servila con hielo.",
+      "tip": "No licues más de 10 segundos para que la cáscara no la amargue."
+    }
+  },
+  {
+    "title": "Lassi de mango",
+    "description": "Bebida cremosa de yogur y mango con un toque de cardamomo, inspirada en la cocina india.",
+    "servings": 2,
+    "prep_minutes": 5,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "bebida",
+      "rápido",
+      "india",
+      "fruta",
+      "verano"
+    ],
+    "ingredients": [
+      "1 taza de mango en trozos (fresco o congelado)",
+      "1 pote de yogur natural (200 g)",
+      "1/2 taza de agua fría",
+      "1 cda de miel",
+      "1 pizca de cardamomo molido",
+      "4 cubos de hielo"
+    ],
+    "steps": [
+      {
+        "instruction": "Poné el mango, el yogur, el agua y la miel en la licuadora.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Agregá el cardamomo y el hielo.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Licuá un minuto hasta que quede espeso y parejo.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Serví enseguida y espolvoreá con otra pizca de cardamomo.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "No se recalienta; tomalo frío.",
+      "tip": "Con mango congelado queda más espeso y no hace falta hielo."
+    }
+  },
+  {
+    "title": "Café frío con leche y dulce de leche",
+    "description": "Café helado cremoso con un toque de dulce de leche, listo en minutos y sin horno ni cafetera.",
+    "servings": 2,
+    "prep_minutes": 5,
+    "cook_minutes": 2,
+    "difficulty": "facil",
+    "tags": [
+      "bebida",
+      "rápido",
+      "desayuno",
+      "merienda",
+      "argentina",
+      "sin horno"
+    ],
+    "ingredients": [
+      "2 cdas de café instantáneo",
+      "100 ml de agua caliente",
+      "300 ml de leche fría",
+      "2 cdas de dulce de leche",
+      "8 cubos de hielo"
+    ],
+    "steps": [
+      {
+        "instruction": "Calentá el agua sin que llegue a hervir.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Disolvé el café y el dulce de leche en el agua caliente.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Llená dos vasos con hielo.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Volcá la mezcla de café sobre el hielo.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Sumá la leche fría, revolvé y serví.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "No se recalienta; tomalo frío y con hielo nuevo.",
+      "tip": "Podés dejar la base de café en la heladera y sumar la leche al servir."
+    }
+  },
+  {
+    "title": "Licuado de cacao y palta",
+    "description": "Licuado espeso y sedoso que sabe a postre de chocolate, con palta para darle cremosidad.",
+    "servings": 2,
+    "prep_minutes": 6,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "bebida",
+      "rápido",
+      "postre",
+      "merienda",
+      "sin horno"
+    ],
+    "ingredients": [
+      "1/2 palta madura",
+      "2 tazas de leche fría",
+      "2 cdas de cacao amargo en polvo",
+      "2 cdas de miel",
+      "1/2 cdita de esencia de vainilla",
+      "4 cubos de hielo"
+    ],
+    "steps": [
+      {
+        "instruction": "Sacale la pulpa a la palta con una cuchara.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Poné la palta, la leche, el cacao, la miel y la vainilla en la licuadora.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Licuá un minuto hasta que no queden grumos.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el hielo y licuá 15 segundos más.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Serví enseguida en vasos fríos.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "No se recalienta; tomalo frío y mezclalo antes.",
+      "tip": "Usá la palta bien madura para que no quede amarga ni con hilachas."
+    }
+  },
+  {
+    "title": "Agua fresca de pepino, limón y menta",
+    "description": "Bebida liviana y casi sin calorías, perfecta para los días de calor, que se licúa en un minuto.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "bebida",
+      "rápido",
+      "liviano",
+      "verano",
+      "vegano",
+      "sin lácteos"
+    ],
+    "ingredients": [
+      "1 pepino grande",
+      "2 limones (el jugo)",
+      "1 l de agua fría",
+      "2 cdas de azúcar",
+      "10 hojas de menta",
+      "8 cubos de hielo"
+    ],
+    "steps": [
+      {
+        "instruction": "Pelá el pepino y cortalo en trozos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Exprimí los limones.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Licuá el pepino con la menta, el jugo de limón, el azúcar y 400 ml de agua.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Colá sobre una jarra y sumá el resto del agua.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Agregá el hielo, mezclá y serví.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "No se recalienta; servila bien fría.",
+      "tip": "Mezclala antes de servir porque la pulpa fina se asienta."
+    }
+  },
+  {
+    "title": "Té helado de durazno",
+    "description": "Té negro infusionado bien fuerte y enfriado con hielo, con jugo de durazno y limón.",
+    "servings": 4,
+    "prep_minutes": 3,
+    "cook_minutes": 6,
+    "difficulty": "facil",
+    "tags": [
+      "bebida",
+      "rápido",
+      "verano",
+      "sin lácteos",
+      "vegano"
+    ],
+    "ingredients": [
+      "4 saquitos de té negro",
+      "500 ml de agua",
+      "3 cdas de azúcar",
+      "1 durazno maduro",
+      "1 limón",
+      "500 ml de agua fría",
+      "10 cubos de hielo"
+    ],
+    "steps": [
+      {
+        "instruction": "Hervi 500 ml de agua en una pava u olla.",
+        "minutes": 3,
+        "passive": true
+      },
+      {
+        "instruction": "Apagá el fuego y sumá los saquitos de té.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Dejá infusionar 4 minutos y sacá los saquitos.",
+        "minutes": 4,
+        "passive": true
+      },
+      {
+        "instruction": "Disolvé el azúcar en el té caliente.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Licuá el durazno pelado con el jugo de limón y un poco del agua fría.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclá todo en una jarra con el agua fría restante y el hielo.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "No se recalienta; servilo con hielo.",
+      "tip": "Usá mucho hielo: el té caliente lo derrite rápido."
+    }
+  },
+  {
+    "title": "Smoothie de sandía y lima",
+    "description": "Granizado bebible de sandía bien fría con lima y un poco de sal para realzar el dulzor.",
+    "servings": 2,
+    "prep_minutes": 6,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "bebida",
+      "rápido",
+      "verano",
+      "liviano",
+      "vegano",
+      "sin lácteos",
+      "fruta"
+    ],
+    "ingredients": [
+      "3 tazas de sandía en cubos sin semillas",
+      "1 lima (el jugo)",
+      "6 cubos de hielo",
+      "1 cdita de miel",
+      "1 pizca de sal",
+      "4 hojas de menta"
+    ],
+    "steps": [
+      {
+        "instruction": "Sacale las semillas a la sandía y cortala en cubos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Exprimí la lima.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Poné la sandía, el jugo de lima, la miel, la sal y el hielo en la licuadora.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Licuá un minuto hasta lograr una textura de granizado.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Serví con hojas de menta por encima.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "No se recalienta; tomalo bien frío.",
+      "tip": "Si usás sandía de la heladera, ponele menos hielo para que no se aguade."
+    }
+  },
+  {
+    "title": "Licuado de durazno y naranja con avena y jengibre",
+    "description": "Licuado cítrico y frutal con jugo de naranja y durazno, con un toque de jengibre y vainilla.",
+    "servings": 2,
+    "prep_minutes": 7,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "bebida",
+      "rápido",
+      "desayuno",
+      "fruta",
+      "sin lácteos"
+    ],
+    "ingredients": [
+      "3 naranjas (el jugo)",
+      "2 duraznos maduros",
+      "1/2 cdita de jengibre fresco rallado",
+      "1/2 cdita de esencia de vainilla",
+      "6 cubos de hielo"
+    ],
+    "steps": [
+      {
+        "instruction": "Exprimí las naranjas y colá el jugo.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Lavá los duraznos, sacales el carozo y cortalos en trozos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Poné el jugo, los duraznos, el jengibre y la vainilla en la licuadora.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Licuá un minuto hasta que quede parejo.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el hielo, licuá unos segundos y serví.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "No se recalienta; tomalo frío.",
+      "tip": "Tomalo el mismo día para aprovechar la vitamina del jugo recién exprimido y que no pierda sabor."
+    }
+  }
+]

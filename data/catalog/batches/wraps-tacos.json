@@ -1,0 +1,720 @@
+[
+  {
+    "title": "Tacos de carne picada especiada con lechuga y tomate",
+    "description": "Relleno de carne picada con comino y pimentón, listo en 15 minutos. Se arma en la mesa con tortillas calentitas, tomate, lechuga y queso.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "rápido",
+      "carne",
+      "mexicana",
+      "cena",
+      "para compartir"
+    ],
+    "ingredients": [
+      "400 g de carne picada",
+      "1 cebolla",
+      "2 dientes de ajo",
+      "1 cdita de pimentón dulce",
+      "1 cdita de comino",
+      "1/2 cdita de ají molido",
+      "2 cda de puré de tomate",
+      "100 ml de agua",
+      "8 tortillas de maíz chicas",
+      "1 tomate",
+      "2 tazas de lechuga cortada fina",
+      "100 g de queso cremoso o rallado",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Picá la cebolla y el ajo bien chiquitos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá una sartén con un chorrito de aceite y rehogá la cebolla 3 minutos.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá la carne y desmenuzala con una cuchara de madera hasta que pierda el color rosado.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá ajo, pimentón, comino, ají, sal, puré de tomate y el agua.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cociná 4 minutos a fuego medio hasta que se espese y quede jugoso.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Calentá las tortillas 30 segundos de cada lado en otra sartén seca.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Cortá el tomate en cubitos y rellená las tortillas con carne, tomate, lechuga y queso.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Recalentá el relleno en sartén con un chorrito de agua; las tortillas, en sartén seca.",
+      "tip": "Guardá el relleno aparte de las tortillas y las verduras frescas."
+    }
+  },
+  {
+    "title": "Wrap de pollo grillado estilo César",
+    "description": "Tiras de pollo doradas, lechuga crocante y un aderezo cremoso de yogur, limón y queso rallado, todo enrollado en una tortilla de trigo.",
+    "servings": 2,
+    "prep_minutes": 10,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "rápido",
+      "pollo",
+      "almuerzo",
+      "sándwich"
+    ],
+    "ingredients": [
+      "2 supremas chicas de pollo (300 g)",
+      "1 cda de aceite de oliva",
+      "1 cdita de ajo en polvo",
+      "2 tortillas de trigo grandes",
+      "4 hojas de lechuga",
+      "3 cda de yogur natural",
+      "1 cda de jugo de limón",
+      "2 cda de queso rallado",
+      "1 cdita de mostaza",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá el pollo en tiras finas y condimentalo con sal, pimienta y ajo en polvo.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén y cociná el pollo 8 minutos, dándolo vuelta, hasta que esté bien dorado y cocido por dentro.",
+        "minutes": 8,
+        "passive": false
+      },
+      {
+        "instruction": "Mezclá en un bowl el yogur, el limón, la mostaza y la mitad del queso rallado.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cortá la lechuga en tiras anchas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá las tortillas 20 segundos de cada lado para que se doblen sin romperse.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Repartí aderezo, lechuga, pollo y el queso restante sobre cada tortilla.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Doblá los costados, enrollá bien apretado y cortá al medio.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Comelo frío o calentalo 1 minuto en sartén.",
+      "tip": "Si lo llevás de vianda, guardá el aderezo aparte y armalo al momento."
+    }
+  },
+  {
+    "title": "Burrito de porotos negros, arroz y queso",
+    "description": "Burrito vegetariano y bien llenador con porotos negros especiados, arroz cocido y queso fundido. Ideal para aprovechar arroz que sobró.",
+    "servings": 3,
+    "prep_minutes": 10,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "rápido",
+      "vegetariano",
+      "legumbres",
+      "arroz",
+      "sobras",
+      "mexicana",
+      "almuerzo"
+    ],
+    "ingredients": [
+      "1 lata de porotos negros (aprox. 300 g escurridos)",
+      "2 tazas de arroz cocido",
+      "1/2 cebolla",
+      "1/2 morrón rojo",
+      "1 cdita de comino",
+      "1 cdita de pimentón ahumado",
+      "1 cda de aceite",
+      "3 tortillas de trigo grandes",
+      "150 g de queso cremoso en fetas",
+      "1 limón",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Escurrí y enjuagá los porotos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cortá la cebolla y el morrón en cubitos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Rehogá cebolla y morrón en el aceite durante 4 minutos.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá los porotos, el comino, el pimentón y sal, y aplastá algunos con un tenedor.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Mezclá con el arroz y exprimí medio limón. Apagá el fuego.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Poné relleno y queso en el centro de cada tortilla, doblá los lados y enrollá.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Doralos en una sartén 2 minutos de cada lado hasta que el queso se derrita.",
+        "minutes": 4,
+        "passive": false
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Calentalos en sartén tapada a fuego bajo 5 minutos o en el microondas envueltos en papel.",
+      "tip": "Para freezar, envolvé cada burrito por separado en film."
+    }
+  },
+  {
+    "title": "Tacos de merluza con repollo y lima",
+    "description": "Trocitos de merluza dorados con especias, repollo crocante y salsita de yogur y lima. Livianos y rapidísimos.",
+    "servings": 3,
+    "prep_minutes": 10,
+    "cook_minutes": 8,
+    "difficulty": "facil",
+    "tags": [
+      "rápido",
+      "pescado",
+      "mexicana",
+      "cena",
+      "liviano"
+    ],
+    "ingredients": [
+      "400 g de filet de merluza",
+      "1 cdita de pimentón dulce",
+      "1/2 cdita de comino",
+      "2 cda de harina",
+      "1 cda de aceite",
+      "6 tortillas de maíz chicas",
+      "2 tazas de repollo blanco fino",
+      "4 cda de yogur natural",
+      "1 lima",
+      "1/2 cebolla morada",
+      "1 puñado de cilantro o perejil",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Secá la merluza con papel y cortala en trozos de 3 cm.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclá harina, pimentón, comino y sal, y pasá los trozos por esa mezcla.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cociná el pescado en la sartén con aceite 2 o 3 minutos por lado hasta que dore.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Salsa: mezclá el yogur con el jugo de media lima y una pizca de sal.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cortá la cebolla morada en plumas finas y mezclala con el repollo.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá las tortillas en una sartén seca 30 segundos por lado.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Armá los tacos con pescado, repollo, salsa y hojitas de cilantro. Servilos con gajos de lima.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Recalentá el pescado en sartén 2 minutos; el pescado se seca si lo pasás de tiempo.",
+      "tip": "Armá los tacos recién antes de comer para que no se humedezcan."
+    }
+  },
+  {
+    "title": "Wrap vegano de zanahoria, repollo y salsa de maní",
+    "description": "Verduras crudas ralladas con una salsa de pasta de maní, limón y salsa de soja. No hace falta prender la cocina.",
+    "servings": 2,
+    "prep_minutes": 15,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "rápido",
+      "vegano",
+      "sin lácteos",
+      "sin horno",
+      "asiática",
+      "almuerzo",
+      "liviano"
+    ],
+    "ingredients": [
+      "2 tortillas de trigo grandes",
+      "2 zanahorias",
+      "2 tazas de repollo colorado fino",
+      "1/2 pepino",
+      "3 cda de pasta de maní",
+      "1 cda de salsa de soja",
+      "1 cda de jugo de limón",
+      "1 cdita de jengibre rallado",
+      "2 cda de agua tibia",
+      "1 puñado de maní tostado picado"
+    ],
+    "steps": [
+      {
+        "instruction": "Rallá las zanahorias con la parte gruesa del rallador.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cortá el pepino en bastones finos y el repollo en tiritas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclá la pasta de maní, la soja, el limón, el jengibre y el agua tibia hasta que quede cremosa.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclá las verduras con la mitad de la salsa.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Untá cada tortilla con un poco de la salsa restante.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Poné las verduras en el centro y esparcí el maní picado.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Doblá los lados, enrollá bien firme y cortá al medio.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Se come frío.",
+      "tip": "Guardá la salsa aparte hasta último momento para que la tortilla no se ablande."
+    }
+  },
+  {
+    "title": "Tacos de chorizo con salsa criolla",
+    "description": "Una versión argentina de tacos: chorizo fresco desmenuzado y dorado, con salsa criolla fresquita y un toque de chimichurri.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "rápido",
+      "cerdo",
+      "argentina",
+      "cena",
+      "para compartir"
+    ],
+    "ingredients": [
+      "4 chorizos frescos",
+      "8 tortillas de maíz chicas",
+      "1 tomate",
+      "1/2 cebolla",
+      "1/2 morrón verde",
+      "1 cda de vinagre",
+      "2 cda de aceite",
+      "1 cdita de orégano",
+      "1 diente de ajo",
+      "2 cda de perejil picado",
+      "1 cdita de ají molido",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Sacale la piel a los chorizos y desmenuzá la carne con las manos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cociná la carne en una sartén sin aceite, moviendo seguido, hasta que esté bien dorada.",
+        "minutes": 10,
+        "passive": false
+      },
+      {
+        "instruction": "Mientras tanto, cortá tomate, cebolla y morrón en cubitos para la criolla.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclalos con vinagre, 1 cda de aceite, orégano y sal.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Picá el ajo y mezclalo con perejil, ají, 1 cda de aceite y una pizca de sal.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá las tortillas 30 segundos por lado en una sartén seca.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Rellená con chorizo, criolla y unas gotas de chimichurri.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Recalentá el chorizo en sartén 3 minutos.",
+      "tip": "La criolla se guarda aparte y mejora con unas horas de reposo."
+    }
+  },
+  {
+    "title": "Wrap de bife con morrones y cebolla",
+    "description": "Tiras de bife salteadas a fuego fuerte con morrón y cebolla, estilo fajita, en una tortilla con queso crema.",
+    "servings": 3,
+    "prep_minutes": 10,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "rápido",
+      "carne",
+      "salteado",
+      "cena",
+      "mexicana"
+    ],
+    "ingredients": [
+      "350 g de bife angosto o cuadril",
+      "1 morrón rojo",
+      "1 morrón verde",
+      "1 cebolla",
+      "1 cdita de pimentón",
+      "1 cdita de comino",
+      "1 cda de aceite",
+      "3 tortillas de trigo grandes",
+      "3 cda de queso crema",
+      "1 cda de jugo de limón",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá la carne en tiras finas y condimentala con pimentón, comino, sal y pimienta.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cortá morrones y cebolla en tiras.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá bien la sartén con la mitad del aceite y sellá la carne 3 minutos. Retirala.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Con el aceite restante, salteá las verduras 5 minutos hasta que estén tiernas pero con mordida.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Volvé a poner la carne, sumá el limón y mezclá 30 segundos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Untá las tortillas calientes con queso crema.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Repartí el salteado, doblá y enrollá.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Calentá el relleno en sartén a fuego medio 3 minutos.",
+      "tip": "No amontones la carne en la sartén: se cocina mejor en dos tandas."
+    }
+  },
+  {
+    "title": "Cucuruchos de lechuga con cerdo picado y jengibre",
+    "description": "Cerdo picado salteado con ajo, jengibre y soja, servido en hojas de lechuga crocantes. Un wrap sin tortilla, liviano y sin gluten si usás soja apta.",
+    "servings": 3,
+    "prep_minutes": 10,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "rápido",
+      "cerdo",
+      "salteado",
+      "sin gluten",
+      "bajo en carbohidratos",
+      "asiática",
+      "cena"
+    ],
+    "ingredients": [
+      "400 g de cerdo picado",
+      "2 dientes de ajo",
+      "1 cda de jengibre rallado",
+      "2 cebollas de verdeo",
+      "1 zanahoria",
+      "2 cda de salsa de soja",
+      "1 cdita de miel",
+      "1 cda de aceite",
+      "1 cdita de aceite de sésamo o 1 cda de semillas de sésamo",
+      "8 hojas grandes de lechuga",
+      "1 lima"
+    ],
+    "steps": [
+      {
+        "instruction": "Picá el ajo y el verdeo, y rallá la zanahoria.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén grande a fuego fuerte.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cociná el cerdo desmenuzándolo 5 minutos hasta que dore.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá ajo, jengibre y zanahoria y salteá 2 minutos.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá la soja y la miel y cociná 1 minuto más hasta que se pegotee.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Lavá y secá bien las hojas de lechuga.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Rellená cada hoja con carne, verdeo, sésamo y un chorrito de lima.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Recalentá la carne en sartén o microondas; la lechuga siempre fresca.",
+      "tip": "Secá bien la lechuga para que no quede aguada."
+    }
+  },
+  {
+    "title": "Wrap de garbanzos al curry con yogur",
+    "description": "Garbanzos aplastados y especiados con curry, pasas y yogur, para un relleno cremoso y económico que no requiere cocción.",
+    "servings": 3,
+    "prep_minutes": 12,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "rápido",
+      "vegetariano",
+      "legumbres",
+      "económico",
+      "sin horno",
+      "india",
+      "almuerzo"
+    ],
+    "ingredients": [
+      "1 lata de garbanzos (aprox. 250 g escurridos)",
+      "4 cda de yogur natural",
+      "1 cdita de curry en polvo",
+      "1 cda de jugo de limón",
+      "1 zanahoria",
+      "1 puñado de pasas de uva",
+      "2 cda de cebolla de verdeo picada",
+      "3 tortillas de trigo grandes",
+      "1 taza de rúcula",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Escurrí y enjuagá los garbanzos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Aplastalos con un tenedor en un bowl, dejando algunos enteros.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Sumá yogur, curry, limón, sal y pimienta y mezclá.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Rallá la zanahoria e incorporala junto con las pasas y el verdeo.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá las tortillas 20 segundos por lado para hacerlas flexibles.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Poné rúcula y el relleno de garbanzos en el centro de cada tortilla.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Doblá los costados, enrollá y cortá al medio.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Se come frío o a temperatura ambiente.",
+      "tip": "El relleno se guarda en un frasco y se arma el wrap al momento."
+    }
+  },
+  {
+    "title": "Tacos de coliflor crocante en airfryer con salsa de limón",
+    "description": "Floretes de coliflor especiados y crocantes en la airfryer, en tortillas con yogur cremoso y limón. Vegetarianos y muy sabrosos.",
+    "servings": 3,
+    "prep_minutes": 10,
+    "cook_minutes": 14,
+    "difficulty": "facil",
+    "tags": [
+      "vegetariano",
+      "airfryer",
+      "verdura",
+      "mexicana",
+      "cena"
+    ],
+    "ingredients": [
+      "1/2 coliflor mediana (aprox. 400 g)",
+      "2 cda de aceite",
+      "1 cdita de pimentón ahumado",
+      "1 cdita de comino",
+      "1/2 cdita de ajo en polvo",
+      "6 tortillas de maíz chicas",
+      "4 cda de yogur natural",
+      "1 limón",
+      "1/2 cebolla morada",
+      "1 puñado de perejil",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá la airfryer a 200 °C unos 3 minutos.",
+        "minutes": 3,
+        "passive": true
+      },
+      {
+        "instruction": "Cortá la coliflor en floretes chicos, de 2 a 3 cm.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclalos con aceite, pimentón, comino, ajo en polvo y sal.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cociná en la canasta 12 minutos, sacudiéndola a la mitad, hasta que estén dorados.",
+        "minutes": 12,
+        "passive": true
+      },
+      {
+        "instruction": "Mientras tanto, mezclá el yogur con jugo de limón y sal. Cortá la cebolla en plumas finas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá las tortillas en una sartén seca 30 segundos por lado.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Armá los tacos con salsa, coliflor, cebolla y perejil picado.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Recalentá la coliflor en la airfryer 3 minutos a 180 °C para recuperar el crocante.",
+      "tip": "No llenes de más la canasta: si se amontona, la coliflor se ablanda en vez de dorarse."
+    }
+  }
+]

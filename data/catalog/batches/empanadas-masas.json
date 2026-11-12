@@ -1,0 +1,659 @@
+[
+  {
+    "title": "Empanadas de carne en airfryer con tapas comprada",
+    "description": "Relleno jugoso de carne picada con cebolla, comino y pimentón, en tapas listas y doradas en la airfryer sin freír.",
+    "servings": 4,
+    "prep_minutes": 12,
+    "cook_minutes": 26,
+    "difficulty": "facil",
+    "tags": [
+      "empanada",
+      "airfryer",
+      "carne",
+      "argentina",
+      "cena",
+      "para compartir"
+    ],
+    "ingredients": [
+      "8 tapas de empanadas para horno",
+      "300 g de carne picada",
+      "2 cebollas",
+      "1 cda de aceite de oliva",
+      "1 cda de pimentón dulce",
+      "1 cdita de comino",
+      "8 aceitunas verdes",
+      "1 huevo",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Picá las cebollas bien chiquitas y las aceitunas en rodajas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Rehogá la cebolla en el aceite a fuego medio hasta que esté transparente.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá la carne y salteala desgranándola hasta que pierda el color crudo.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Condimentá con pimentón, comino, sal y pimienta. Apagá y dejá entibiar.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Mezclá las aceitunas con el relleno y poné una cucharada generosa en cada tapa.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cerrá las empanadas con el repulgue y pintalas con huevo batido.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cociná en la airfryer a 180 °C en dos tandas de 4, unos 9 minutos cada una, hasta que estén doradas.",
+        "minutes": 18,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Airfryer a 170 °C por 5 minutos o horno fuerte 8 minutos.",
+      "tip": "Dejá enfriar el relleno antes de armar para que la masa no se rompa."
+    }
+  },
+  {
+    "title": "Empanadas de humita al horno",
+    "description": "Relleno cremoso de choclo, cebolla y queso, con un toque de nuez moscada. Clásicas, simples y bien argentinas.",
+    "servings": 4,
+    "prep_minutes": 15,
+    "cook_minutes": 22,
+    "difficulty": "facil",
+    "tags": [
+      "empanada",
+      "horno",
+      "vegetariano",
+      "argentina",
+      "almuerzo",
+      "para compartir"
+    ],
+    "ingredients": [
+      "8 tapas de empanadas para horno",
+      "1 lata de choclo cremoso",
+      "1 cebolla",
+      "1 cda de manteca",
+      "1 cda de maicena",
+      "100 g de queso cremoso en cubitos",
+      "1 pizca de nuez moscada",
+      "1 huevo",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá el horno a 200 °C y picá la cebolla fina.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Derretí la manteca y rehogá la cebolla hasta que se ablande.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el choclo con la maicena disuelta en un chorrito de agua y revolvé hasta que espese.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Condimentá con sal y nuez moscada y dejá entibiar.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Mezclá el queso con el relleno y repartilo en las tapas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cerrá bien las empanadas, pintalas con huevo y acomodalas en una placa.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Horneá hasta que estén doradas.",
+        "minutes": 15,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Horno a 180 °C por 10 minutos.",
+      "tip": "Cerrá bien los bordes para que el queso no se escape al hornear."
+    }
+  },
+  {
+    "title": "Empanadas fritas de queso y cebolla",
+    "description": "Empanadas crocantes de mozzarella y cebolla cocida, fritas en sartén con poco aceite. Salen en un ratito.",
+    "servings": 4,
+    "prep_minutes": 15,
+    "cook_minutes": 20,
+    "difficulty": "media",
+    "tags": [
+      "empanada",
+      "vegetariano",
+      "almuerzo",
+      "para compartir",
+      "argentina"
+    ],
+    "ingredients": [
+      "8 tapas de empanadas para freír",
+      "2 cebollas",
+      "200 g de mozzarella en cubos",
+      "1 cda de aceite de oliva",
+      "1 cdita de orégano",
+      "400 ml de aceite de girasol para freír",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá las cebollas en plumas finas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cocinalas en el aceite de oliva a fuego medio hasta que estén blandas y doradas.",
+        "minutes": 8,
+        "passive": false
+      },
+      {
+        "instruction": "Apagá, condimentá con sal, pimienta y orégano y dejá entibiar.",
+        "minutes": 4,
+        "passive": true
+      },
+      {
+        "instruction": "Mezclá la cebolla con la mozzarella y rellená las tapas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cerrá con el repulgue, apretando bien los bordes.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá el aceite de girasol en una sartén honda a fuego medio.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Freí de a 2 o 3 empanadas, 2 minutos por lado, y escurrilas sobre papel de cocina.",
+        "minutes": 6,
+        "passive": false
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Horno a 200 °C por 8 minutos para que vuelvan a quedar crocantes.",
+      "tip": "Probá el aceite con un trocito de masa: tiene que burbujear sin humear."
+    }
+  },
+  {
+    "title": "Empanadas dulces de manzana y canela",
+    "description": "Manzana cocida con canela y un toque de limón dentro de una tapa dorada. Perfectas para la merienda.",
+    "servings": 4,
+    "prep_minutes": 12,
+    "cook_minutes": 25,
+    "difficulty": "facil",
+    "tags": [
+      "empanada",
+      "postre",
+      "merienda",
+      "horno",
+      "vegetariano",
+      "para compartir"
+    ],
+    "ingredients": [
+      "8 tapas de empanadas para horno",
+      "3 manzanas",
+      "2 cda de azúcar",
+      "1 cdita de canela",
+      "1 cda de manteca",
+      "1 cdita de jugo de limón",
+      "1 huevo",
+      "1 cda de azúcar para espolvorear"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá el horno a 200 °C. Pelá las manzanas y cortalas en cubitos chicos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cociná la manzana con manteca, azúcar, canela y limón a fuego medio hasta que se ablande.",
+        "minutes": 8,
+        "passive": false
+      },
+      {
+        "instruction": "Dejá enfriar el relleno.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Poné una cucharada de relleno en cada tapa y cerrá bien los bordes con un tenedor.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Pintá con huevo batido, espolvoreá con azúcar y pinchalas una vez.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Horneá hasta que estén doradas.",
+        "minutes": 14,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Horno a 170 °C por 8 minutos.",
+      "tip": "Usá poco líquido en el relleno para que no mojes la masa."
+    }
+  },
+  {
+    "title": "Empanadas de jamón y queso con masa casera",
+    "description": "Masa simple de harina y manteca, sin descanso largo, rellena de jamón cocido y mozzarella. Al horno bien fuerte.",
+    "servings": 5,
+    "prep_minutes": 25,
+    "cook_minutes": 14,
+    "difficulty": "media",
+    "tags": [
+      "empanada",
+      "horno",
+      "almuerzo",
+      "cena",
+      "para compartir",
+      "argentina"
+    ],
+    "ingredients": [
+      "400 g de harina 000",
+      "80 g de manteca",
+      "180 ml de agua tibia",
+      "1 cdita de sal",
+      "150 g de jamón cocido picado",
+      "200 g de mozzarella en cubos",
+      "1 huevo",
+      "1 cda de leche"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá el horno bien fuerte, a 220 °C.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclá la harina con la sal y desmenuzá la manteca con la punta de los dedos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Agregá el agua tibia de a poco y amasá hasta lograr una masa lisa.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Tapá la masa y dejala descansar.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Estirá la masa fina y cortá 10 discos con un plato chico o un cortante.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Rellená con jamón y mozzarella, cerrá y repulgá los bordes.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Pintá con huevo y leche batidos y horneá hasta que estén doradas.",
+        "minutes": 14,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Horno a 180 °C por 10 minutos.",
+      "tip": "Si la masa se encoge al estirarla, dejala descansar 5 minutos más."
+    }
+  },
+  {
+    "title": "Tortilla de papa española rápida",
+    "description": "Papas cortadas finitas y cebolla en sartén, unidas con huevo. Queda jugosa por dentro y dorada por fuera.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 28,
+    "difficulty": "media",
+    "tags": [
+      "huevo",
+      "sin gluten",
+      "vegetariano",
+      "almuerzo",
+      "cena",
+      "española"
+    ],
+    "ingredients": [
+      "4 papas medianas",
+      "1 cebolla",
+      "5 huevos",
+      "100 ml de aceite de girasol",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Pelá las papas y cortalas en rodajas muy finas. Cortá la cebolla en plumas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén antiadherente de 24 cm a fuego medio.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Sumá las papas y la cebolla con sal, tapá y cociná revolviendo de vez en cuando.",
+        "minutes": 14,
+        "passive": true
+      },
+      {
+        "instruction": "Batí los huevos con una pizca de sal en un bol grande.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Escurrí el exceso de aceite de las papas y mezclalas con los huevos. Dejá reposar.",
+        "minutes": 3,
+        "passive": true
+      },
+      {
+        "instruction": "Volcá todo en la sartén con un chorrito de aceite y cociná a fuego bajo.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Dalo vuelta con ayuda de un plato y cociná del otro lado hasta que cuaje.",
+        "minutes": 4,
+        "passive": false
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Comela fría o tibia, 30 segundos en microondas.",
+      "tip": "Cortá las papas parejas para que se cocinen todas igual."
+    }
+  },
+  {
+    "title": "Tortilla de acelga y queso en sartén",
+    "description": "Tortilla verde y sencilla con acelga hervida, cebolla de verdeo y cuartirolo que se funde adentro.",
+    "servings": 3,
+    "prep_minutes": 12,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "huevo",
+      "verdura",
+      "vegetariano",
+      "sin gluten",
+      "rápido",
+      "almuerzo"
+    ],
+    "ingredients": [
+      "1 atado de acelga",
+      "4 huevos",
+      "100 g de queso cuartirolo en cubos",
+      "2 cebollas de verdeo",
+      "1 cda de aceite de oliva",
+      "sal y pimienta a gusto",
+      "1 pizca de nuez moscada"
+    ],
+    "steps": [
+      {
+        "instruction": "Lavá la acelga, sacale los tallos y hervila.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Escurrila apretando bien y picala fina.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cortá el verdeo en rodajas finas y rehogalo en la mitad del aceite.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Batí los huevos con sal, pimienta y nuez moscada. Sumá la acelga, el verdeo y el queso.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá el aceite restante en una sartén y volcá la mezcla. Cociná tapada a fuego bajo.",
+        "minutes": 6,
+        "passive": true
+      },
+      {
+        "instruction": "Dala vuelta con un plato y cociná del otro lado.",
+        "minutes": 3,
+        "passive": false
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Microondas 40 segundos o sartén tibia.",
+      "tip": "Escurrí muy bien la acelga o la tortilla queda aguada."
+    }
+  },
+  {
+    "title": "Tortillas de harina caseras para tacos y wraps",
+    "description": "Masa simple de harina, aceite y agua tibia que se cocina en sartén seca. Salen blanditas y se pueden freezar.",
+    "servings": 8,
+    "prep_minutes": 20,
+    "cook_minutes": 16,
+    "difficulty": "media",
+    "tags": [
+      "mexicana",
+      "vegano",
+      "económico",
+      "sin horno",
+      "para freezar",
+      "sin lácteos"
+    ],
+    "ingredients": [
+      "300 g de harina 000",
+      "1 cdita de sal",
+      "1 cdita de polvo de hornear",
+      "4 cda de aceite de girasol",
+      "150 ml de agua tibia"
+    ],
+    "steps": [
+      {
+        "instruction": "Mezclá la harina, la sal y el polvo de hornear en un bol.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Agregá el aceite y el agua tibia y amasá hasta que quede lisa y suave.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Dividí en 8 bolitas, tapalas con un repasador y dejalas descansar.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Estirá cada bolita con palote hasta formar un disco finito.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá una sartén seca a fuego medio-fuerte.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Cociná cada tortilla 1 minuto por lado, hasta que aparezcan burbujas y manchitas doradas.",
+        "minutes": 12,
+        "passive": false
+      },
+      {
+        "instruction": "Guardalas tapadas con un repasador para que no se sequen.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 4,
+      "freezer_days": 90,
+      "reheat": "Pasalas 20 segundos por sartén seca o 10 segundos en microondas tapadas.",
+      "tip": "Poné un papel manteca entre cada una antes de freezar."
+    }
+  },
+  {
+    "title": "Pizzetas de sartén con masa de yogur",
+    "description": "Masa simple de yogur y harina que se cocina en sartén, con salsa de tomate y mozzarella. Sin horno y sin amasado largo.",
+    "servings": 4,
+    "prep_minutes": 15,
+    "cook_minutes": 20,
+    "difficulty": "facil",
+    "tags": [
+      "italiana",
+      "sin horno",
+      "vegetariano",
+      "cena",
+      "para chicos",
+      "rápido"
+    ],
+    "ingredients": [
+      "250 g de harina 000",
+      "150 g de yogur natural",
+      "1 cdita de polvo de hornear",
+      "1/2 cdita de sal",
+      "1 cda de aceite de oliva",
+      "200 g de puré de tomate",
+      "150 g de mozzarella rallada",
+      "1 cdita de orégano"
+    ],
+    "steps": [
+      {
+        "instruction": "Mezclá la harina, el polvo de hornear y la sal. Sumá el yogur y amasá hasta integrar.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Dividí la masa en 4 bollitos y estiralos finitos, de unos 15 cm.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá una sartén con un chorrito de aceite a fuego medio.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cociná una pizzeta 3 minutos de un solo lado, hasta que dore.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Dalas vuelta y cubrí la parte cocida con puré de tomate, mozzarella y orégano.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Tapá la sartén a fuego bajo hasta que el queso se funda. Repetí con el resto.",
+        "minutes": 12,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": 30,
+      "reheat": "Sartén tapada a fuego bajo 4 minutos.",
+      "tip": "Estirá la masa fina para que se cocine bien por dentro."
+    }
+  },
+  {
+    "title": "Chipá de horno rápido",
+    "description": "Bocaditos de queso con almidón de mandioca, crocantes por fuera y elásticos por dentro. Sin gluten y sin leudar.",
+    "servings": 6,
+    "prep_minutes": 12,
+    "cook_minutes": 20,
+    "difficulty": "facil",
+    "tags": [
+      "horno",
+      "sin gluten",
+      "vegetariano",
+      "merienda",
+      "para compartir",
+      "para freezar",
+      "argentina"
+    ],
+    "ingredients": [
+      "250 g de almidón de mandioca",
+      "150 g de queso cremoso rallado grueso",
+      "60 g de manteca blanda",
+      "1 huevo",
+      "60 ml de leche",
+      "1/2 cdita de sal"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá el horno a 200 °C y forrá una placa con papel manteca.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclá el almidón, el queso y la sal en un bol.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Agregá la manteca, el huevo y la leche y amasá hasta que se integre.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Formá bolitas del tamaño de una nuez y acomodalas en la placa, separadas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Horneá hasta que estén dorados.",
+        "minutes": 20,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 90,
+      "reheat": "Horno a 180 °C por 6 minutos.",
+      "tip": "Si la masa quedó seca, agregá leche de a cucharadas."
+    }
+  }
+]

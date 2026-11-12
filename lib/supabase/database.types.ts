@@ -23,7 +23,33 @@ export type Database = {
           }
         },"public": {
           Tables: {
-            "ai_conversations": {
+            "activity_events": {
+                  Row: {
+                    "created_at": string,"group_id": string | null,"id": string,"kind": string,"meta": NonNullable<Json>,"path": string | null,"user_id": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "created_at"?: string,"group_id"?: string | null,"id"?: string,"kind": string,"meta"?: NonNullable<Json>,"path"?: string | null,"user_id"?: string
+                  }
+                  Update: {
+                    "created_at"?: string,"group_id"?: string | null,"id"?: string,"kind"?: string,"meta"?: NonNullable<Json>,"path"?: string | null,"user_id"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "activity_events_group_id_fkey"
+      columns: ["group_id"]
+isOneToOne: false
+      referencedRelation: "groups"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "activity_events_user_id_fkey"
+      columns: ["user_id"]
+isOneToOne: false
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"ai_conversations": {
                   Row: {
                     "context": NonNullable<Json>,"created_at": string,"group_id": string,"id": string,"last_message_at": string,"plan_id": string | null,"purpose": string,"title": string | null,"user_id": string
                   }
@@ -521,6 +547,32 @@ isOneToOne: true
       referencedColumns: ["id"]
     }
                   ]
+                },"plan_shares": {
+                  Row: {
+                    "created_at": string,"created_by": string | null,"description": string | null,"id": string,"plan_id": string,"slug": string,"title": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "created_at"?: string,"created_by"?: string | null,"description"?: string | null,"id"?: string,"plan_id": string,"slug": string,"title": string
+                  }
+                  Update: {
+                    "created_at"?: string,"created_by"?: string | null,"description"?: string | null,"id"?: string,"plan_id"?: string,"slug"?: string,"title"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "plan_shares_created_by_fkey"
+      columns: ["created_by"]
+isOneToOne: false
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "plan_shares_plan_id_fkey"
+      columns: ["plan_id"]
+isOneToOne: true
+      referencedRelation: "meal_plans"
+      referencedColumns: ["id"]
+    }
+                  ]
                 },"prep_tasks": {
                   Row: {
                     "created_at": string,"details": string | null,"done_at": string | null,"done_by": string | null,"duration_minutes": number | null,"id": string,"kind": string,"plan_id": string,"related_entry_ids": (string)[],"remind_at": string | null,"reminded_at": string | null,"suggested_date": string | null,"title": string
@@ -584,6 +636,58 @@ isOneToOne: false
       columns: ["user_id"]
 isOneToOne: false
       referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"recipe_collection_items": {
+                  Row: {
+                    "collection_id": string,"position": number,"recipe_id": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "collection_id": string,"position"?: number,"recipe_id": string
+                  }
+                  Update: {
+                    "collection_id"?: string,"position"?: number,"recipe_id"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "recipe_collection_items_collection_id_fkey"
+      columns: ["collection_id"]
+isOneToOne: false
+      referencedRelation: "recipe_collections"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "recipe_collection_items_recipe_id_fkey"
+      columns: ["recipe_id"]
+isOneToOne: false
+      referencedRelation: "recipes"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"recipe_collections": {
+                  Row: {
+                    "created_at": string,"created_by": string | null,"description": string | null,"group_id": string,"id": string,"published_at": string | null,"slug": string | null,"title": string,"updated_at": string,"visibility": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "created_at"?: string,"created_by"?: string | null,"description"?: string | null,"group_id": string,"id"?: string,"published_at"?: string | null,"slug"?: string | null,"title": string,"updated_at"?: string,"visibility"?: string
+                  }
+                  Update: {
+                    "created_at"?: string,"created_by"?: string | null,"description"?: string | null,"group_id"?: string,"id"?: string,"published_at"?: string | null,"slug"?: string | null,"title"?: string,"updated_at"?: string,"visibility"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "recipe_collections_created_by_fkey"
+      columns: ["created_by"]
+isOneToOne: false
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "recipe_collections_group_id_fkey"
+      columns: ["group_id"]
+isOneToOne: false
+      referencedRelation: "groups"
       referencedColumns: ["id"]
     }
                   ]
@@ -713,14 +817,14 @@ isOneToOne: false
                   ]
                 },"recipes": {
                   Row: {
-                    "cook_minutes": number | null,"created_at": string,"created_by": string | null,"current_version": number,"deleted_at": string | null,"description": string | null,"difficulty": string | null,"draft_for_plan_id": string | null,"forked_from_group_name": string | null,"forked_from_recipe_id": string | null,"forked_from_title": string | null,"forked_from_version": number | null,"group_id": string,"id": string,"image_url": string | null,"prep_minutes": number | null,"search_tsv": unknown,"servings": number,"source_type": string,"source_url": string | null,"status": string,"storage_info": Json | null,"tags": (string)[],"title": string,"total_minutes": number | null,"updated_at": string
+                    "cook_minutes": number | null,"created_at": string,"created_by": string | null,"current_version": number,"deleted_at": string | null,"description": string | null,"difficulty": string | null,"draft_for_plan_id": string | null,"forked_from_group_name": string | null,"forked_from_recipe_id": string | null,"forked_from_title": string | null,"forked_from_version": number | null,"group_id": string,"id": string,"image_url": string | null,"is_catalog": boolean,"prep_minutes": number | null,"published_at": string | null,"search_tsv": unknown,"servings": number,"slug": string | null,"source_type": string,"source_url": string | null,"status": string,"storage_info": Json | null,"tags": (string)[],"title": string,"total_minutes": number | null,"updated_at": string,"visibility": string
                   }
                   ComputedFields: never
                   Insert: {
-                    "cook_minutes"?: number | null,"created_at"?: string,"created_by"?: string | null,"current_version"?: number,"deleted_at"?: string | null,"description"?: string | null,"difficulty"?: string | null,"draft_for_plan_id"?: string | null,"forked_from_group_name"?: string | null,"forked_from_recipe_id"?: string | null,"forked_from_title"?: string | null,"forked_from_version"?: number | null,"group_id": string,"id"?: string,"image_url"?: string | null,"prep_minutes"?: number | null,"search_tsv"?: unknown,"servings"?: number,"source_type"?: string,"source_url"?: string | null,"status"?: string,"storage_info"?: Json | null,"tags"?: (string)[],"title": string,"total_minutes"?: number | null,"updated_at"?: string
+                    "cook_minutes"?: number | null,"created_at"?: string,"created_by"?: string | null,"current_version"?: number,"deleted_at"?: string | null,"description"?: string | null,"difficulty"?: string | null,"draft_for_plan_id"?: string | null,"forked_from_group_name"?: string | null,"forked_from_recipe_id"?: string | null,"forked_from_title"?: string | null,"forked_from_version"?: number | null,"group_id": string,"id"?: string,"image_url"?: string | null,"is_catalog"?: boolean,"prep_minutes"?: number | null,"published_at"?: string | null,"search_tsv"?: unknown,"servings"?: number,"slug"?: string | null,"source_type"?: string,"source_url"?: string | null,"status"?: string,"storage_info"?: Json | null,"tags"?: (string)[],"title": string,"total_minutes"?: number | null,"updated_at"?: string,"visibility"?: string
                   }
                   Update: {
-                    "cook_minutes"?: number | null,"created_at"?: string,"created_by"?: string | null,"current_version"?: number,"deleted_at"?: string | null,"description"?: string | null,"difficulty"?: string | null,"draft_for_plan_id"?: string | null,"forked_from_group_name"?: string | null,"forked_from_recipe_id"?: string | null,"forked_from_title"?: string | null,"forked_from_version"?: number | null,"group_id"?: string,"id"?: string,"image_url"?: string | null,"prep_minutes"?: number | null,"search_tsv"?: unknown,"servings"?: number,"source_type"?: string,"source_url"?: string | null,"status"?: string,"storage_info"?: Json | null,"tags"?: (string)[],"title"?: string,"total_minutes"?: number | null,"updated_at"?: string
+                    "cook_minutes"?: number | null,"created_at"?: string,"created_by"?: string | null,"current_version"?: number,"deleted_at"?: string | null,"description"?: string | null,"difficulty"?: string | null,"draft_for_plan_id"?: string | null,"forked_from_group_name"?: string | null,"forked_from_recipe_id"?: string | null,"forked_from_title"?: string | null,"forked_from_version"?: number | null,"group_id"?: string,"id"?: string,"image_url"?: string | null,"is_catalog"?: boolean,"prep_minutes"?: number | null,"published_at"?: string | null,"search_tsv"?: unknown,"servings"?: number,"slug"?: string | null,"source_type"?: string,"source_url"?: string | null,"status"?: string,"storage_info"?: Json | null,"tags"?: (string)[],"title"?: string,"total_minutes"?: number | null,"updated_at"?: string,"visibility"?: string
                   }
                   Relationships: [
                     {
@@ -842,6 +946,9 @@ isOneToOne: false
             "_fork_recipe_core":
 { Args: { "p_source_id": string,"p_target_group_id": string }; Returns: string
                            },
+"_slugify":
+{ Args: { "p_id": string,"p_text": string }; Returns: string
+                           },
 "accept_inbox_recipe":
 { Args: { "p_inbox_id": string,"p_target_group_id": string }; Returns: string
                            },
@@ -857,6 +964,9 @@ isOneToOne: false
 "consume_ai_quota":
 { Args: { "p_feature": string,"p_limit": number,"p_user_id": string }; Returns: boolean
                            },
+"copy_public_plan":
+{ Args: { "p_group_id": string,"p_slug": string,"p_week_start": string }; Returns: string
+                           },
 "create_group":
 { Args: { "p_emoji": string,"p_name": string }; Returns: string
                            },
@@ -871,6 +981,9 @@ isOneToOne: false
                            },
 "fork_public_recipe":
 { Args: { "p_target_group_id": string,"p_token": string }; Returns: string
+                           },
+"fork_published_recipe":
+{ Args: { "p_recipe_id": string,"p_target_group_id": string }; Returns: string
                            },
 "fork_recipe":
 { Args: { "p_source_recipe_id": string,"p_target_group_id": string }; Returns: string
@@ -890,8 +1003,17 @@ isOneToOne: false
               "group_emoji": string,"group_id": string,"group_name": string,"inviter_name": string,"is_expired": boolean,"is_revoked": boolean,"is_valid": boolean,"member_count": number
             }[]
                            },
+"get_public_collection":
+{ Args: { "p_slug": string }; Returns: Json
+                           },
+"get_public_plan":
+{ Args: { "p_slug": string }; Returns: Json
+                           },
 "get_public_recipe":
 { Args: { "p_token": string }; Returns: Json
+                           },
+"get_published_recipe":
+{ Args: { "p_slug": string }; Returns: Json
                            },
 "group_role":
 { Args: { "gid": string }; Returns: string
@@ -910,6 +1032,11 @@ isOneToOne: false
                            },
 "list_group_id":
 { Args: { "p_list_id": string }; Returns: string
+                           },
+"list_public_slugs":
+{ Args: Record<PropertyKey, never>; Returns: {
+              "kind": string,"slug": string,"updated": string
+            }[]
                            },
 "log_meal":
 { Args: { "p_ai_suggested"?: string,"p_date": string,"p_note"?: string,"p_plan_entry_id"?: string,"p_slot": string,"p_status": string }; Returns: {
@@ -937,6 +1064,17 @@ isOneToOne: false
 "prepare_account_deletion":
 { Args: { "p_user_id": string }; Returns: undefined
                            },
+"public_recipe_ingredients":
+{ Args: { "p_ids": (string)[] }; Returns: {
+              "ingredient_id": string,"optional": boolean,"pos": number,"raw_text": string,"recipe_id": string
+            }[]
+                           },
+"publish_plan":
+{ Args: { "p_description"?: string,"p_plan_id": string,"p_title": string }; Returns: string
+                           },
+"purge_old_activity":
+{ Args: Record<PropertyKey, never>; Returns: undefined
+                           },
 "recipe_last_cooked":
 { Args: { "p_recipe_id": string }; Returns: {
               "cooked_by": string,"finished_at": string,"rating": number
@@ -962,8 +1100,16 @@ isOneToOne: false
               "aliases": (string)[],"id": string,"name": string,"similarity": number
             }[]
                            },
+"search_public_recipes":
+{ Args: { "p_catalog"?: string,"p_limit"?: number,"p_max_minutes"?: number,"p_offset"?: number,"p_q"?: string,"p_tag"?: string }; Returns: {
+              "description": string,"id": string,"image_url": string,"is_catalog": boolean,"servings": number,"slug": string,"tags": (string)[],"title": string,"total_count": number,"total_minutes": number
+            }[]
+                           },
 "send_recipe_to_user":
 { Args: { "p_recipe_id": string,"p_user_id": string }; Returns: string
+                           },
+"set_collection_visibility":
+{ Args: { "p_collection_id": string,"p_public": boolean }; Returns: string
                            },
 "set_item_state":
 { Args: { "p_item_id": string,"p_state": string }; Returns: {
@@ -997,8 +1143,14 @@ isOneToOne: false
 "set_member_role":
 { Args: { "gid": string,"p_role": string,"p_user_id": string }; Returns: undefined
                            },
+"set_recipe_visibility":
+{ Args: { "p_public": boolean,"p_recipe_id": string }; Returns: string
+                           },
 "shares_group_with":
 { Args: { "p_user_id": string }; Returns: boolean
+                           },
+"unpublish_plan":
+{ Args: { "p_plan_id": string }; Returns: undefined
                            }
           }
           Enums: {

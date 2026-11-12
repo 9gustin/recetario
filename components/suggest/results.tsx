@@ -18,7 +18,7 @@ export function SuggestResults({ groupId, cards }: { groupId: string; cards: Sug
   function choose(card: SuggestCard) {
     setChosen(card.recipeId);
     start(async () => {
-      const res = await chooseForToday({ groupId, recipeId: card.recipeId });
+      const res = await chooseForToday({ groupId, recipeId: card.recipeId, catalog: card.catalog });
       if (!res.ok) {
         setChosen(null);
         return void toast.error(res.error);
@@ -79,7 +79,13 @@ export function SuggestResults({ groupId, cards }: { groupId: string; cards: Sug
               <ChefHat /> Elegir para hoy
             </PillButton>
             <PillButton asChild size="md" variant="outline">
-              <Link href={`/g/${groupId}/recetas/${c.recipeId}`}>Ver</Link>
+              <Link
+                href={
+                  c.catalog && c.slug ? `/receta/${c.slug}` : `/g/${groupId}/recetas/${c.recipeId}`
+                }
+              >
+                Ver
+              </Link>
             </PillButton>
           </div>
         </li>

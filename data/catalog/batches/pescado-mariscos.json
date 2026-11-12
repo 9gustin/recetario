@@ -1,0 +1,719 @@
+[
+  {
+    "title": "Merluza a la plancha con manteca de limón y alcaparras",
+    "description": "Filetes de merluza apenas enharinados, dorados en sartén y terminados con una salsita de manteca, limón y alcaparras. Salen en 15 minutos.",
+    "servings": 4,
+    "prep_minutes": 5,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "pescado",
+      "rápido",
+      "almuerzo",
+      "cena",
+      "una olla",
+      "liviano"
+    ],
+    "ingredients": [
+      "4 filetes de merluza (600 g en total)",
+      "3 cda de harina",
+      "1 cda de aceite",
+      "40 g de manteca",
+      "1 limón",
+      "1 cda de alcaparras",
+      "1 diente de ajo",
+      "2 cda de perejil picado",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Secá bien los filetes con papel de cocina y salpimentalos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Pasalos por la harina y sacudí el exceso.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén grande a fuego medio-fuerte.",
+        "minutes": 2,
+        "passive": true
+      },
+      {
+        "instruction": "Cociná los filetes 3 minutos de cada lado hasta que estén dorados. Pasalos a una fuente.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Bajá el fuego y sumá la manteca con el ajo picado. Cociná 1 minuto sin que se queme.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el jugo de medio limón, las alcaparras y el perejil. Mezclá y volcá la salsa sobre el pescado.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Servilo con rodajas del limón restante.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "En sartén tapada a fuego bajo 3 minutos con un chorrito de agua.",
+      "tip": "Secar bien el pescado es lo que garantiza el dorado."
+    }
+  },
+  {
+    "title": "Salmón al horno con costra de mostaza y miel",
+    "description": "Trozos de salmón con una pasta de mostaza, miel y pan rallado que se dora en el horno. Queda jugoso por dentro y crocante por fuera.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "pescado",
+      "horno",
+      "cena",
+      "alto en proteína",
+      "una bandeja"
+    ],
+    "ingredients": [
+      "4 trozos de salmón rosado (600 g en total)",
+      "2 cda de mostaza",
+      "1 cda de miel",
+      "4 cda de pan rallado",
+      "1 diente de ajo",
+      "1 cda de aceite de oliva",
+      "1 cda de perejil picado",
+      "1 limón",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá el horno a 200 °C.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Mezclá en un bol la mostaza, la miel, el ajo rallado y un poco de pimienta.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclá el pan rallado con el perejil y el aceite hasta que quede como arena húmeda.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Poné el salmón en una fuente aceitada, con la piel hacia abajo, y salalo apenas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Pintá cada trozo con la mezcla de mostaza y cubrilo con el pan rallado, apretando suave.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Horneá 12 a 15 minutos, hasta que la costra esté dorada y el salmón se desarme con el tenedor.",
+        "minutes": 15,
+        "passive": true
+      },
+      {
+        "instruction": "Serví con gajos de limón.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Horno a 160 °C por 8 minutos, tapado con papel aluminio.",
+      "tip": "Si el trozo es muy grueso, sumá 3 minutos de horno."
+    }
+  },
+  {
+    "title": "Langostinos salteados con soja, miel y jengibre",
+    "description": "Langostinos pelados salteados a fuego fuerte con morrón y verdeo, y una salsita agridulce con jengibre. Van muy bien con arroz blanco.",
+    "servings": 3,
+    "prep_minutes": 8,
+    "cook_minutes": 8,
+    "difficulty": "facil",
+    "tags": [
+      "pescado",
+      "rápido",
+      "salteado",
+      "asiática",
+      "cena",
+      "sin horno"
+    ],
+    "ingredients": [
+      "400 g de colas de langostinos peladas",
+      "1 morrón rojo",
+      "2 cebollas de verdeo",
+      "2 dientes de ajo",
+      "1 cda de jengibre rallado",
+      "3 cda de salsa de soja",
+      "1 cda de miel",
+      "1 cda de aceite",
+      "1 cda de semillas de sésamo",
+      "1 lima"
+    ],
+    "steps": [
+      {
+        "instruction": "Secá los langostinos con papel de cocina.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cortá el morrón en tiras finas y el verdeo en rodajas, separando el blanco del verde.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclá la soja con la miel en una taza.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén grande a fuego fuerte.",
+        "minutes": 2,
+        "passive": true
+      },
+      {
+        "instruction": "Salteá el morrón y la parte blanca del verdeo 2 minutos.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el ajo picado y el jengibre, mezclá 30 segundos y agregá los langostinos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cociná 2 minutos, hasta que estén rosados, y volcá la salsa de soja y miel. Dejá que espese 1 minuto.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Apagá, sumá el verdeo verde, el sésamo y un chorrito de lima.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Salteá 1 minuto a fuego medio, sin pasarte para que no se endurezcan.",
+      "tip": "No los cocines de más: en cuanto se enroscan y se ponen rosados, están listos."
+    }
+  },
+  {
+    "title": "Medallones de atún y papa a la sartén",
+    "description": "Medallones dorados hechos con atún de lata, papa y verdeo. Una opción económica para el almuerzo o para armar un sándwich.",
+    "servings": 4,
+    "prep_minutes": 12,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "pescado",
+      "económico",
+      "rápido",
+      "almuerzo",
+      "para chicos",
+      "para freezar"
+    ],
+    "ingredients": [
+      "3 papas medianas",
+      "2 latas de atún al natural (320 g en total)",
+      "1 huevo",
+      "4 cda de pan rallado",
+      "1 cebolla de verdeo",
+      "2 cda de perejil picado",
+      "1 cdita de pimentón dulce",
+      "3 cda de aceite",
+      "1 limón",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Pelá las papas, cortalas en cubos chicos y ponelas en un bol apto microondas con 3 cda de agua. Tapá.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cociná en el microondas 7 minutos, hasta que estén tiernas. Escurrí y hacelas puré con un tenedor.",
+        "minutes": 8,
+        "passive": true
+      },
+      {
+        "instruction": "Escurrí bien el atún y desmenuzalo.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclá el puré con el atún, el huevo, el verdeo picado, el perejil, el pimentón, sal y pimienta.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Sumá el pan rallado hasta que la masa se pueda armar. Formá 8 medallones chatos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Dorá los medallones en una sartén con el aceite, 3 a 4 minutos de cada lado.",
+        "minutes": 7,
+        "passive": false
+      },
+      {
+        "instruction": "Serví con limón.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Sartén con una gota de aceite 2 minutos por lado, o airfryer a 180 °C 5 minutos.",
+      "tip": "Para freezarlos, ponelos crudos separados por papel manteca."
+    }
+  },
+  {
+    "title": "Rabas en airfryer con salsa de yogur y limón",
+    "description": "Anillas de calamar enharinadas y crocantes, hechas en la airfryer con muy poco aceite. Se acompañan con una salsa fresca de yogur y limón.",
+    "servings": 3,
+    "prep_minutes": 10,
+    "cook_minutes": 10,
+    "difficulty": "media",
+    "tags": [
+      "pescado",
+      "airfryer",
+      "rápido",
+      "para compartir",
+      "snack",
+      "cena"
+    ],
+    "ingredients": [
+      "400 g de anillas de calamar descongeladas",
+      "1/2 taza de leche",
+      "1 taza de harina",
+      "1 cdita de pimentón dulce",
+      "1 cdita de ajo en polvo",
+      "2 cda de aceite",
+      "1 limón",
+      "4 cda de yogur natural",
+      "1 cda de perejil picado",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Secá bien las anillas con papel de cocina y ponelas en un bol con la leche. Dejá 5 minutos.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Mezclá en otro bol la harina, el pimentón, el ajo en polvo, sal y pimienta.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Precalentá la airfryer a 200 °C.",
+        "minutes": 3,
+        "passive": true
+      },
+      {
+        "instruction": "Escurrí las anillas y pasalas por la harina, apretando para que se pegue.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Ponelas en la canasta en una sola capa y rociá con el aceite.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cociná 8 a 10 minutos, sacudiendo la canasta a la mitad. Si hace falta, hacelo en dos tandas.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Mientras, mezclá el yogur con jugo de medio limón, perejil y una pizca de sal.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Serví las rabas calientes con la salsa y gajos de limón.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Airfryer a 190 °C por 3 minutos para recuperar el crocante.",
+      "tip": "Mejor comerlas al momento; el calamar se pone gomoso si se recalienta mucho."
+    }
+  },
+  {
+    "title": "Merluza en papillote con zapallitos y tomate",
+    "description": "Filetes de merluza cocidos al vapor dentro de un paquetito de papel aluminio con zapallitos, tomate y aceitunas. Casi no ensucia nada.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "pescado",
+      "horno",
+      "liviano",
+      "cena",
+      "sin gluten",
+      "una bandeja"
+    ],
+    "ingredients": [
+      "4 filetes de merluza (600 g en total)",
+      "2 zapallitos",
+      "2 tomates",
+      "8 aceitunas verdes",
+      "1 cebolla chica",
+      "2 cda de aceite de oliva",
+      "1 cdita de orégano",
+      "1 limón",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá el horno a 200 °C.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Cortá los zapallitos en rodajas finas, los tomates en rodajas y la cebolla en aros finitos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cortá 4 cuadrados grandes de papel aluminio y aceitalos apenas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Armá en cada uno una cama de zapallito, cebolla y tomate. Salpimentá.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Apoyá un filete encima, salalo y sumá aceitunas, orégano, aceite y unas gotas de limón.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cerrá cada paquete doblando los bordes para que no escape el vapor.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Horneá 15 minutos sobre una placa.",
+        "minutes": 15,
+        "passive": true
+      },
+      {
+        "instruction": "Abrí con cuidado, que sale vapor caliente, y serví en el mismo paquete.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Microondas 1 minuto y medio a potencia media, o sartén tapada a fuego bajo.",
+      "tip": "Cortá las verduras bien finas para que se cocinen junto con el pescado."
+    }
+  },
+  {
+    "title": "Mejillones al vino blanco y ajo",
+    "description": "Mejillones abiertos al vapor en una olla con vino blanco, ajo y verdeo. Se comen con pan para mojar en el caldito.",
+    "servings": 3,
+    "prep_minutes": 10,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "pescado",
+      "una olla",
+      "rápido",
+      "para compartir",
+      "cena",
+      "mediterránea"
+    ],
+    "ingredients": [
+      "1 kg de mejillones con valva, bien lavados",
+      "1 taza de vino blanco seco",
+      "3 dientes de ajo",
+      "2 cebollas de verdeo",
+      "2 cda de aceite de oliva",
+      "2 cda de perejil picado",
+      "1 limón",
+      "pan para acompañar",
+      "pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Lavá los mejillones bajo el chorro de agua y sacales las barbas. Descartá los que estén rotos o abiertos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Picá el ajo y el verdeo finito.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá el aceite en una olla grande y rehogá el ajo y el verdeo 2 minutos.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Volcá el vino y dejá hervir 1 minuto para que se evapore el alcohol.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá los mejillones, tapá y cociná a fuego fuerte 5 a 6 minutos, sacudiendo la olla una vez.",
+        "minutes": 6,
+        "passive": true
+      },
+      {
+        "instruction": "Destapá y tirá los que no se hayan abierto.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Terminá con perejil, pimienta y jugo de limón. Serví con el caldo y el pan.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Calentá apenas en olla tapada 2 minutos; no los hiervas.",
+      "tip": "Comelos el mismo día y guardalos sin las valvas si te sobran."
+    }
+  },
+  {
+    "title": "Curry rápido de pescado con leche de coco y espinaca",
+    "description": "Cubos de merluza cocidos en una salsa cremosa de leche de coco, curry y jengibre, con espinaca fresca. Servilo con arroz blanco.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "pescado",
+      "una olla",
+      "rápido",
+      "cena",
+      "sin lácteos",
+      "india"
+    ],
+    "ingredients": [
+      "500 g de filet de merluza",
+      "1 cebolla",
+      "2 dientes de ajo",
+      "1 cda de jengibre rallado",
+      "1 cda de curry en polvo",
+      "1 cda de aceite",
+      "1 lata de leche de coco (400 ml)",
+      "1 tomate",
+      "2 tazas de espinaca fresca",
+      "1 lima",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá la merluza en cubos de 3 cm y salala.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Picá la cebolla fina, el ajo y el tomate en cubitos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén honda y rehogá la cebolla 3 minutos.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el ajo, el jengibre y el curry. Mezclá 30 segundos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Agregá el tomate y la leche de coco. Hervila a fuego medio 4 minutos para que espese un poco.",
+        "minutes": 4,
+        "passive": true
+      },
+      {
+        "instruction": "Incorporá el pescado con cuidado y cociná 4 minutos sin revolver mucho.",
+        "minutes": 4,
+        "passive": true
+      },
+      {
+        "instruction": "Sumá la espinaca, esperá a que se achique y apagá. Terminá con jugo de lima.",
+        "minutes": 1,
+        "passive": false
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Olla a fuego bajo con un chorrito de agua, revolviendo suave.",
+      "tip": "Si te gusta picante, sumá una pizca de ají molido junto con el curry."
+    }
+  },
+  {
+    "title": "Tostadas de sardinas con tomate rallado y limón",
+    "description": "Pan tostado frotado con ajo, tomate rallado y sardinas de lata con limón y ají molido. Una merienda o cena sin cocción, lista en 12 minutos.",
+    "servings": 2,
+    "prep_minutes": 8,
+    "cook_minutes": 4,
+    "difficulty": "facil",
+    "tags": [
+      "pescado",
+      "rápido",
+      "económico",
+      "sin horno",
+      "merienda",
+      "snack"
+    ],
+    "ingredients": [
+      "4 rebanadas de pan de campo",
+      "2 latas de sardinas en aceite",
+      "2 tomates maduros",
+      "1 diente de ajo",
+      "1 limón",
+      "1 cda de aceite de oliva",
+      "2 cda de perejil picado",
+      "1 pizca de ají molido",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Tostá las rebanadas de pan en una sartén o tostadora hasta que estén bien doradas.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Frotá cada tostada con el diente de ajo cortado al medio.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Rallá los tomates con el lado grueso del rallador y descartá la piel.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclá el tomate rallado con el aceite de oliva y una pizca de sal.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Repartí el tomate sobre las tostadas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Escurrí las sardinas y apoyalas encima, 2 o 3 por tostada.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Terminá con jugo de limón, perejil y el ají molido. Comelas enseguida.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "No se recalienta: armalas justo antes de comer.",
+      "tip": "Guardá las sardinas sobrantes en un frasco tapado, fuera de la lata."
+    }
+  },
+  {
+    "title": "Pejerreyes fritos con limón",
+    "description": "Pejerreyes enteros y limpios, enharinados y fritos hasta quedar crocantes. Un clásico argentino que sale en un ratito.",
+    "servings": 3,
+    "prep_minutes": 8,
+    "cook_minutes": 12,
+    "difficulty": "media",
+    "tags": [
+      "pescado",
+      "argentina",
+      "rápido",
+      "almuerzo",
+      "para compartir",
+      "sin lácteos"
+    ],
+    "ingredients": [
+      "500 g de pejerreyes limpios y sin cabeza",
+      "1/2 taza de harina",
+      "1 cdita de pimentón dulce",
+      "300 ml de aceite de girasol",
+      "2 limones",
+      "1 cda de perejil picado",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Lavá los pejerreyes y secalos muy bien con papel de cocina.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Salpimentalos y rociá con el jugo de medio limón. Dejá reposar 5 minutos.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Mezclá la harina con el pimentón en una fuente.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén honda a fuego medio-fuerte. Probá con una pizca de harina: tiene que burbujear enseguida.",
+        "minutes": 4,
+        "passive": true
+      },
+      {
+        "instruction": "Enhariná los pescados y sacudí el exceso.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Freí de a pocos, 2 a 3 minutos por lado, hasta que estén dorados.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Escurrilos sobre papel absorbente, espolvoreá con perejil y serví con gajos de limón.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Horno o airfryer a 190 °C por 4 minutos.",
+      "tip": "No llenes la sartén: si entran muchos juntos bajan la temperatura del aceite y salen blandos."
+    }
+  }
+]

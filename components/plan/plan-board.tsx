@@ -50,6 +50,7 @@ import { EditEntrySheet, type Patch } from "./edit-entry-sheet";
 import { EntryRow } from "./entry-row";
 import { PrepList } from "@/components/prep/prep-list";
 import type { PrepTaskRow } from "@/lib/prep/actions";
+import { publishPlanAction, unpublishPlanAction } from "@/lib/public/manage";
 import { PlanChatSheet } from "./plan-chat-sheet";
 
 type Props = {
@@ -60,6 +61,7 @@ type Props = {
   initialEntries: PlanEntry[];
   members: PlanMember[];
   currentUserId: string;
+  shareSlug: string | null;
   prepTasks: PrepTaskRow[];
   prepTips: string[];
   mealSlots: MealSlot[];
@@ -77,6 +79,7 @@ export function PlanBoard({
   initialEntries,
   members,
   currentUserId,
+  shareSlug,
   prepTasks,
   prepTips,
   mealSlots,
@@ -198,6 +201,31 @@ export function PlanBoard({
     });
   }
 
+  function publish() {
+    if (!plan) return;
+    const title = window.prompt(
+      "¿Cómo se llama este plan? (se publica solo con las comidas, sin datos de tu grupo)",
+      plan.title ?? "Mi semana",
+    );
+    if (!title?.trim()) return;
+    start(async () => {
+      const res = await publishPlanAction({ planId: plan.id, groupId, title });
+      if (!res.ok) return void toast.error(res.error);
+      toast.success("Plan público. Se publicaron también sus recetas.");
+      router.refresh();
+    });
+  }
+
+  function unpublish() {
+    if (!plan) return;
+    start(async () => {
+      const res = await unpublishPlanAction({ planId: plan.id, groupId });
+      if (!res.ok) return void toast.error(res.error);
+      toast.success("Dejaste de compartir el plan.");
+      router.refresh();
+    });
+  }
+
   function discard() {
     if (
       !plan ||
@@ -285,6 +313,18 @@ export function PlanBoard({
               <DropdownMenuItem onSelect={openAi}>
                 <Sparkles className="size-4" /> Armar con IA
               </DropdownMenuItem>
+              {plan ? (
+                shareSlug ? (
+                  <>
+                    <DropdownMenuItem asChild>
+                      <Link href={`/plan-publico/${shareSlug}`}>Ver plan público</Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem onSelect={unpublish}>Dejar de compartir</DropdownMenuItem>
+                  </>
+                ) : (
+                  <DropdownMenuItem onSelect={publish}>Publicar este plan</DropdownMenuItem>
+                )
+              ) : null}
               {plan && !approved ? (
                 <DropdownMenuItem onSelect={discard}>Descartar borrador</DropdownMenuItem>
               ) : null}

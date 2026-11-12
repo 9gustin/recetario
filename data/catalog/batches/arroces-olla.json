@@ -1,0 +1,693 @@
+[
+  {
+    "title": "Risotto de champiñones y queso rallado",
+    "description": "Un risotto cremoso de olla única, con champiñones dorados, vino blanco y queso. Se hace en media hora y no necesita técnica rebuscada.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 22,
+    "difficulty": "media",
+    "tags": [
+      "arroz",
+      "una olla",
+      "vegetariano",
+      "cena",
+      "italiana"
+    ],
+    "ingredients": [
+      "300 g de arroz arborio o carnaroli",
+      "400 g de champiñones",
+      "1 cebolla",
+      "2 dientes de ajo",
+      "1 l de caldo de verduras caliente",
+      "100 ml de vino blanco",
+      "50 g de queso rallado",
+      "1 cda de manteca",
+      "2 cdas de aceite de oliva",
+      "1 cda de perejil picado",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Picá la cebolla y el ajo bien chiquitos. Cortá los champiñones en láminas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá el aceite en una olla ancha y rehogá la cebolla con una pizca de sal.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá los champiñones y el ajo y cociná hasta que se doren y largue el agua.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el arroz y revolvé hasta que se ponga translúcido en los bordes.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Volcá el vino y dejá que se evapore casi por completo.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Añadí el caldo de a cucharones, revolviendo seguido. Esperá a que se absorba antes de poner más.",
+        "minutes": 15,
+        "passive": false
+      },
+      {
+        "instruction": "Apagá el fuego y mezclá la manteca, el queso, el perejil y pimienta. Tapá y dejá reposar.",
+        "minutes": 2,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "En una cacerola con un chorrito de caldo o agua, a fuego bajo, revolviendo.",
+      "tip": "El risotto no queda igual al freezar; conviene comerlo fresco o al día siguiente."
+    }
+  },
+  {
+    "title": "Arroz con pollo y morrón en una olla",
+    "description": "El clásico arroz con pollo de todos los días: cubitos de pechuga dorados, morrón, arvejas y un toque de pimentón. Todo se cocina en la misma olla.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 22,
+    "difficulty": "facil",
+    "tags": [
+      "arroz",
+      "una olla",
+      "pollo",
+      "almuerzo",
+      "cena",
+      "argentina",
+      "para freezar"
+    ],
+    "ingredients": [
+      "400 g de pechuga de pollo",
+      "300 g de arroz largo fino",
+      "1 cebolla",
+      "1 morrón rojo",
+      "2 dientes de ajo",
+      "100 g de arvejas",
+      "1 cdita de pimentón dulce",
+      "700 ml de caldo o agua caliente",
+      "2 cdas de aceite",
+      "1 cda de perejil picado",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá el pollo en cubos y salpimentalo. Picá la cebolla, el morrón y el ajo.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá el aceite en una olla y dorá el pollo por todos lados. Retiralo a un plato.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "En la misma olla rehogá la cebolla, el morrón y el ajo.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el arroz sin lavar y el pimentón y mezclá un minuto para que se impregne.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Devolvé el pollo, agregá las arvejas y el caldo caliente. Mezclá una vez y llevá a hervor.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Tapá y cociná a fuego mínimo sin destapar.",
+        "minutes": 12,
+        "passive": true
+      },
+      {
+        "instruction": "Apagá, dejá reposar tapado y soltá el arroz con tenedor. Terminá con perejil.",
+        "minutes": 3,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "En sartén con un chorrito de agua, tapado, o 2 minutos en microondas.",
+      "tip": "Enfriá el arroz rápido y guardalo en la heladera dentro de la hora de cocinado."
+    }
+  },
+  {
+    "title": "Arroz con chorizo, morrón y choclo",
+    "description": "Arroz sabroso con rodajas de chorizo fresco que sueltan su grasa y perfuman todo. Con choclo y pimentón ahumado queda bien contundente.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 22,
+    "difficulty": "facil",
+    "tags": [
+      "arroz",
+      "una olla",
+      "cerdo",
+      "cena",
+      "argentina",
+      "económico"
+    ],
+    "ingredients": [
+      "2 chorizos frescos",
+      "300 g de arroz largo fino",
+      "1 cebolla",
+      "1 morrón rojo",
+      "1 lata de choclo en granos",
+      "1 cdita de pimentón ahumado",
+      "700 ml de agua caliente",
+      "1 cda de aceite",
+      "1 cda de perejil picado",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Sacales la tripa a los chorizos y cortalos en rodajas gruesas. Picá la cebolla y el morrón.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Doná los chorizos en una olla con el aceite hasta que suelten grasa y se doren.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá la cebolla y el morrón y rehogá hasta que ablanden.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el arroz, el pimentón y el choclo escurrido. Mezclá un minuto.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Volcá el agua caliente, poné sal con cuidado y llevá a hervor.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Tapá y cociná a fuego mínimo hasta que el arroz absorba el líquido.",
+        "minutes": 12,
+        "passive": true
+      },
+      {
+        "instruction": "Dejá reposar tapado, soltá con tenedor y espolvoreá con perejil.",
+        "minutes": 3,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "En sartén con una cucharada de agua o en microondas tapado.",
+      "tip": "Probá la sal al final: el chorizo ya aporta bastante."
+    }
+  },
+  {
+    "title": "Arroz al curry con garbanzos y espinaca",
+    "description": "Arroz cocido directamente en leche de coco con curry, jengibre y garbanzos. Las hojas de espinaca se agregan al final y se marchitan con el calor.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 20,
+    "difficulty": "facil",
+    "tags": [
+      "arroz",
+      "una olla",
+      "vegano",
+      "sin lácteos",
+      "sin gluten",
+      "legumbres",
+      "cena",
+      "india"
+    ],
+    "ingredients": [
+      "300 g de arroz largo fino",
+      "1 lata de garbanzos cocidos",
+      "1 lata de leche de coco (400 ml)",
+      "300 ml de agua",
+      "1 cebolla",
+      "2 dientes de ajo",
+      "1 cdita de jengibre rallado",
+      "1 cda de curry en polvo",
+      "100 g de hojas de espinaca",
+      "1 cda de aceite",
+      "sal a gusto",
+      "1 limón"
+    ],
+    "steps": [
+      {
+        "instruction": "Picá la cebolla y el ajo. Escurrí y enjuagá los garbanzos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Rehogá la cebolla en el aceite hasta que esté transparente. Sumá ajo, jengibre y curry.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el arroz y los garbanzos y mezclá un minuto.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Volcá la leche de coco y el agua, salá y llevá a hervor suave.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Tapá y cociná a fuego mínimo hasta que el arroz esté tierno.",
+        "minutes": 14,
+        "passive": true
+      },
+      {
+        "instruction": "Incorporá la espinaca, tapá y dejá 2 minutos hasta que se marchite. Mezclá y exprimí limón.",
+        "minutes": 2,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "En cacerola con un chorrito de agua o en microondas tapado.",
+      "tip": "Si espesa en la heladera, agregale un poco de agua al recalentar."
+    }
+  },
+  {
+    "title": "Arroz con langostinos, ajo y limón",
+    "description": "Arroz con sabor a mar, cocido en caldo con morrón y pimentón. Los langostinos se cocinan arriba al vapor y quedan tiernos.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 20,
+    "difficulty": "media",
+    "tags": [
+      "arroz",
+      "una olla",
+      "pescado",
+      "cena",
+      "para compartir",
+      "mediterránea"
+    ],
+    "ingredients": [
+      "300 g de langostinos pelados",
+      "300 g de arroz largo fino",
+      "1 cebolla",
+      "1 morrón rojo",
+      "3 dientes de ajo",
+      "1 cdita de pimentón dulce",
+      "700 ml de caldo de pescado o verduras caliente",
+      "1 limón",
+      "2 cdas de aceite de oliva",
+      "1 cda de perejil picado",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Secá los langostinos y condimentalos con sal, pimienta, ajo picado y ralladura de limón.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Rehogá la cebolla y el morrón picados en aceite de oliva en una olla ancha.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el arroz y el pimentón y mezclá un minuto.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el caldo caliente, mezclá una vez y llevá a hervor. Tapá y bajá el fuego.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Acomodá los langostinos arriba del arroz, tapá otra vez y cociná hasta que se pongan rosados.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Apagá, dejá reposar un momento y servilo con perejil y gajos de limón.",
+        "minutes": 2,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "En sartén a fuego bajo con un chorrito de agua, apenas para entibiar.",
+      "tip": "Los mariscos se resecan al recalentar: comé esta receta el mismo día si podés."
+    }
+  },
+  {
+    "title": "Risotto de zapallo y salvia",
+    "description": "Risotto cremoso con zapallo anco rallado, que se deshace y le da color y dulzor sin necesidad de crema. Rapidísimo para ser un risotto.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 22,
+    "difficulty": "media",
+    "tags": [
+      "arroz",
+      "una olla",
+      "vegetariano",
+      "cena",
+      "invierno",
+      "italiana"
+    ],
+    "ingredients": [
+      "300 g de arroz arborio o carnaroli",
+      "400 g de zapallo anco pelado",
+      "1 cebolla",
+      "1 l de caldo de verduras caliente",
+      "6 hojas de salvia",
+      "50 g de queso rallado",
+      "1 cda de manteca",
+      "1 cda de aceite de oliva",
+      "1 pizca de nuez moscada",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Rallá el zapallo con la parte gruesa del rallador. Picá la cebolla y la salvia.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Rehogá la cebolla en el aceite hasta que esté blanda.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el arroz y tostalo un minuto, revolviendo.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el zapallo, la salvia y un cucharón de caldo. Revolvé hasta que se absorba.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Seguí agregando caldo de a poco, revolviendo seguido, hasta que el arroz esté al dente.",
+        "minutes": 14,
+        "passive": false
+      },
+      {
+        "instruction": "Apagá y mezclá la manteca, el queso, la nuez moscada y pimienta. Dejá reposar tapado.",
+        "minutes": 2,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "En cacerola con un chorrito de caldo o agua, a fuego bajo, revolviendo.",
+      "tip": "Si queda muy espeso, aflojalo con caldo caliente justo antes de servir."
+    }
+  },
+  {
+    "title": "Arroz con atún, tomate y aceitunas",
+    "description": "Arroz de despensa con tomates frescos, atún y aceitunas. Sabe mediterráneo, se hace con pocos ingredientes y es un salvavidas para días ocupados.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 20,
+    "difficulty": "facil",
+    "tags": [
+      "arroz",
+      "una olla",
+      "pescado",
+      "económico",
+      "almuerzo",
+      "mediterránea"
+    ],
+    "ingredients": [
+      "300 g de arroz largo fino",
+      "2 latas de atún al natural",
+      "3 tomates perita",
+      "1 cebolla",
+      "2 dientes de ajo",
+      "10 aceitunas verdes",
+      "1 cdita de orégano",
+      "700 ml de agua caliente",
+      "1 cda de aceite de oliva",
+      "1 cda de perejil picado",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Picá la cebolla, el ajo y los tomates en cubos. Cortá las aceitunas en rodajas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Rehogá cebolla y ajo en el aceite de oliva hasta que se ablanden.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá los tomates y el orégano y cociná hasta que se deshagan un poco.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el arroz, mezclá y volcá el agua caliente. Salá y llevá a hervor.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Tapá y cociná a fuego mínimo hasta que se absorba el agua.",
+        "minutes": 12,
+        "passive": true
+      },
+      {
+        "instruction": "Destapá, sumá el atún escurrido, las aceitunas y el perejil. Mezclá suave con tenedor.",
+        "minutes": 2,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "En sartén a fuego bajo con un chorrito de agua o en microondas tapado.",
+      "tip": "También queda rico frío, como ensalada de arroz con un poco de limón."
+    }
+  },
+  {
+    "title": "Arroz frito con huevo y verduras",
+    "description": "Una forma genial de usar arroz cocido que sobró de ayer. Se saltea a fuego fuerte con zanahoria, arvejas, verdeo y huevo, y queda listo en 20 minutos.",
+    "servings": 3,
+    "prep_minutes": 10,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "arroz",
+      "una olla",
+      "rápido",
+      "huevo",
+      "sobras",
+      "asiática",
+      "cena"
+    ],
+    "ingredients": [
+      "600 g de arroz cocido frío",
+      "3 huevos",
+      "2 zanahorias",
+      "100 g de arvejas",
+      "4 cebollas de verdeo",
+      "2 dientes de ajo",
+      "1 cdita de jengibre rallado",
+      "3 cdas de salsa de soja",
+      "1 cdita de aceite de sésamo",
+      "2 cdas de aceite",
+      "pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá la zanahoria en cubitos bien chicos. Picá el verdeo separando lo blanco de lo verde, y el ajo.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá una sartén grande o wok con 1 cda de aceite y salteá zanahoria y arvejas.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá lo blanco del verdeo, el ajo y el jengibre y salteá 1 minuto. Hacé lugar al costado.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Poné el resto del aceite en el hueco, volcá los huevos batidos y revolvé hasta que cuajen.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el arroz frío desgranado y salteá a fuego fuerte para que se dore.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Condimentá con salsa de soja, aceite de sésamo y pimienta. Terminá con lo verde del verdeo.",
+        "minutes": 1,
+        "passive": false
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": 60,
+      "reheat": "En sartén caliente 3 minutos o en microondas tapado.",
+      "tip": "Usá arroz bien frío y seco: recién cocido se pasa y se pega."
+    }
+  },
+  {
+    "title": "Risotto de arvejas, limón y menta",
+    "description": "Un risotto fresco y liviano con arvejas, ralladura de limón y menta. Ideal para una cena de primavera.",
+    "servings": 4,
+    "prep_minutes": 7,
+    "cook_minutes": 22,
+    "difficulty": "media",
+    "tags": [
+      "arroz",
+      "una olla",
+      "vegetariano",
+      "cena",
+      "italiana",
+      "verano"
+    ],
+    "ingredients": [
+      "300 g de arroz arborio o carnaroli",
+      "200 g de arvejas congeladas",
+      "1 cebolla",
+      "1 l de caldo de verduras caliente",
+      "1 limón",
+      "60 g de queso rallado",
+      "1 cda de manteca",
+      "1 cda de aceite de oliva",
+      "10 hojas de menta",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Picá la cebolla fina. Rallá la cáscara del limón y picá la menta.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Rehogá la cebolla en el aceite con una pizca de sal hasta que esté transparente.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el arroz y revolvé un minuto hasta que se ponga translúcido.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el caldo de a cucharones, revolviendo seguido, esperando que se absorba cada vez.",
+        "minutes": 14,
+        "passive": false
+      },
+      {
+        "instruction": "Incorporá las arvejas en los últimos 4 minutos de cocción.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Apagá y mezclá la manteca, el queso, la ralladura, un chorrito de jugo de limón y la menta. Tapá y dejá reposar.",
+        "minutes": 2,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "En cacerola con un chorrito de caldo, a fuego bajo, revolviendo.",
+      "tip": "Sumá la menta y el limón recién al final para que no pierdan aroma."
+    }
+  },
+  {
+    "title": "Arroz árabe con carne picada, canela y pasas",
+    "description": "Arroz especiado con carne picada, cebolla, canela y pasas de uva, coronado con almendras. Dulce, salado y perfumado.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 22,
+    "difficulty": "facil",
+    "tags": [
+      "arroz",
+      "una olla",
+      "carne",
+      "cena",
+      "árabe",
+      "para compartir"
+    ],
+    "ingredients": [
+      "300 g de arroz largo fino",
+      "300 g de carne picada",
+      "1 cebolla",
+      "1/2 cdita de canela",
+      "1/2 cdita de pimienta de Jamaica",
+      "50 g de pasas de uva",
+      "40 g de almendras fileteadas",
+      "700 ml de agua caliente",
+      "1 cda de aceite",
+      "1 cda de perejil picado",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Picá la cebolla bien fina. Hidratá las pasas en agua tibia.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá el aceite en una olla y dorá la cebolla.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá la carne picada, salpimentá y desmenuzala con una cuchara hasta que se dore.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá canela, pimienta de Jamaica y arroz, y mezclá un minuto.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Volcá el agua caliente y las pasas escurridas. Salá y llevá a hervor.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Tapá y cociná a fuego mínimo hasta que el arroz esté tierno. Dejá reposar tapado.",
+        "minutes": 12,
+        "passive": true
+      },
+      {
+        "instruction": "Tostá las almendras en seco en una sartén y servilas arriba con perejil.",
+        "minutes": 2,
+        "passive": false
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "En sartén con un chorrito de agua o en microondas tapado.",
+      "tip": "Servilo con yogur natural para equilibrar las especias."
+    }
+  }
+]

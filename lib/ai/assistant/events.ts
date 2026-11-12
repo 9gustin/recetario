@@ -12,6 +12,7 @@ export type Proposal =
       summary: string[];
     }
   | { kind: "note"; recipeId: string; recipeTitle: string; text: string }
+  | { kind: "navigate"; label: string; href: string }
   | { kind: "add_to_plan"; recipeId: string; recipeTitle: string }
   | { kind: "add_to_list"; listId: string; listName: string; itemName: string };
 

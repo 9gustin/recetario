@@ -13,13 +13,22 @@ function activeGroupId(pathname: string): string | null {
 }
 
 /** Selector de grupo activo en la barra superior: Sheet con la lista de mis grupos. */
-export function GroupSwitcher({ groups }: { groups: GroupSummary[] }) {
+export function GroupSwitcher({
+  groups,
+  defaultGroupId,
+}: {
+  groups: GroupSummary[];
+  defaultGroupId?: string;
+}) {
   const pathname = usePathname();
   const router = useRouter();
   const [open, setOpen] = useState(false);
 
   const activeId = activeGroupId(pathname);
-  const active = groups.find((g) => g.id === activeId) ?? groups[0];
+  const active =
+    groups.find((g) => g.id === activeId) ??
+    groups.find((g) => g.id === defaultGroupId) ??
+    groups[0];
 
   function selectGroup(id: string) {
     setOpen(false);

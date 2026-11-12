@@ -8,7 +8,11 @@ import { hourIn } from "@/lib/domain/today";
 import { todayString, weekStartOf } from "@/lib/domain/week";
 import { createClient } from "@/lib/supabase/server";
 
-const schema = z.object({ groupId: z.string().uuid(), recipeId: z.string().uuid() });
+const schema = z.object({
+  groupId: z.string().uuid(),
+  recipeId: z.string().uuid(),
+  catalog: z.boolean().optional(),
+});
 
 /**
  * "Elegir para hoy": suma la receta a hoy en el plan de la semana (se crea si no existe).
@@ -19,9 +23,21 @@ export async function chooseForToday(
 ): Promise<{ ok: true; data: null } | { ok: false; error: string }> {
   const parsed = schema.safeParse(raw);
   if (!parsed.success) return { ok: false, error: "Datos inválidos." };
-  const { groupId, recipeId } = parsed.data;
+  const { groupId } = parsed.data;
+  let recipeId = parsed.data.recipeId;
   const user = await requireUser();
   const supabase = await createClient();
+
+  // Receta del catálogo: primero se guarda en el recetario del grupo.
+  if (parsed.data.catalog) {
+    const forked = await supabase.rpc("fork_published_recipe", {
+      p_recipe_id: recipeId,
+      p_target_group_id: groupId,
+    });
+    if (forked.error || !forked.data)
+      return { ok: false, error: "No se pudo guardar la receta del catálogo." };
+    recipeId = forked.data;
+  }
 
   const { data: recipe } = await supabase
     .from("recipes")

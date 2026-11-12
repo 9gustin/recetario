@@ -1,0 +1,596 @@
+[
+  {
+    "title": "Milanesitas de pollo en airfryer con limón",
+    "description": "Tiritas de pechuga rebozadas, crocantes por fuera y jugosas por dentro, con muy poco aceite. Ideales para llevar a la mesa con una ensalada.",
+    "servings": 3,
+    "prep_minutes": 12,
+    "cook_minutes": 14,
+    "difficulty": "facil",
+    "tags": [
+      "pollo",
+      "rápido",
+      "airfryer",
+      "milanesa",
+      "para chicos"
+    ],
+    "ingredients": [
+      "500 g de pechuga de pollo",
+      "2 huevos",
+      "1 taza de pan rallado",
+      "1 diente de ajo picado fino",
+      "1 cda de perejil picado",
+      "1 cdita de pimentón dulce",
+      "1 cda de aceite de oliva",
+      "1 limón",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá la pechuga en tiras de 2 cm de ancho y salalas."
+      },
+      {
+        "instruction": "Batí los huevos con el ajo, el perejil y un poco de pimienta en un plato hondo."
+      },
+      {
+        "instruction": "Mezclá el pan rallado con el pimentón en otro plato."
+      },
+      {
+        "instruction": "Pasá cada tira por el huevo y después por el pan rallado, apretando bien."
+      },
+      {
+        "instruction": "Rociá las tiras con el aceite y acomodalas en la canasta sin que se toquen."
+      },
+      {
+        "instruction": "Cociná a 200 °C, dando vuelta las tiras a la mitad.",
+        "minutes": 14,
+        "passive": true
+      },
+      {
+        "instruction": "Serví con gajos de limón."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Airfryer a 180 °C por 4 minutos para que vuelvan a quedar crocantes.",
+      "tip": "Congelalas crudas y rebozadas, separadas por papel manteca."
+    }
+  },
+  {
+    "title": "Pollo a la mostaza y verdeo en sartén",
+    "description": "Supremas doradas en una salsa cremosa de mostaza y verdeo. Se resuelve en una sola sartén y queda riquísimo con puré o arroz blanco.",
+    "servings": 3,
+    "prep_minutes": 8,
+    "cook_minutes": 17,
+    "difficulty": "facil",
+    "tags": [
+      "pollo",
+      "rápido",
+      "almuerzo",
+      "cena",
+      "argentina"
+    ],
+    "ingredients": [
+      "3 supremas de pollo (unos 500 g)",
+      "3 cebollas de verdeo",
+      "2 cda de mostaza",
+      "200 ml de crema de leche",
+      "1 cda de aceite",
+      "1 cda de manteca",
+      "100 ml de caldo de verduras",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá las supremas por la mitad a lo ancho para que queden más finas y salalas."
+      },
+      {
+        "instruction": "Picá el verdeo, separando lo blanco de lo verde."
+      },
+      {
+        "instruction": "Calentá el aceite y la manteca y doralá el pollo 4 minutos de cada lado.",
+        "minutes": 8,
+        "passive": false
+      },
+      {
+        "instruction": "Retirá el pollo y salteá lo blanco del verdeo 2 minutos en la misma sartén."
+      },
+      {
+        "instruction": "Sumá el caldo y la mostaza y raspá el fondo con una cuchara de madera."
+      },
+      {
+        "instruction": "Agregá la crema y devolvé el pollo a la sartén."
+      },
+      {
+        "instruction": "Cociná a fuego bajo hasta que la salsa espese y sumá el verde del verdeo.",
+        "minutes": 5,
+        "passive": false
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "En sartén a fuego bajo con un chorrito de leche o caldo.",
+      "tip": "No hiervas fuerte la salsa para que la crema no se corte."
+    }
+  },
+  {
+    "title": "Pollo al curry y leche de coco en una olla",
+    "description": "Cubos de pollo en una salsa suave de curry, tomate y leche de coco, con espinaca que se achica al final. Pide arroz blanco al lado.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 18,
+    "difficulty": "facil",
+    "tags": [
+      "pollo",
+      "rápido",
+      "una olla",
+      "india",
+      "cena",
+      "sin gluten"
+    ],
+    "ingredients": [
+      "600 g de pechuga de pollo",
+      "1 cebolla",
+      "2 dientes de ajo",
+      "1 cda de jengibre rallado",
+      "1 cda de curry en polvo",
+      "1 cda de aceite",
+      "2 tomates perita",
+      "1 lata de leche de coco (400 ml)",
+      "2 tazas de hojas de espinaca",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá el pollo en cubos de 2 cm y la cebolla en cubitos."
+      },
+      {
+        "instruction": "Rallá o picá los tomates y picá el ajo."
+      },
+      {
+        "instruction": "Calentá el aceite en una olla y sofreí la cebolla 3 minutos.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá ajo, jengibre y curry y mové 30 segundos hasta que larguen aroma."
+      },
+      {
+        "instruction": "Agregá el pollo y sellalo 3 minutos, revolviendo.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Volcá el tomate y la leche de coco, salá y tapá."
+      },
+      {
+        "instruction": "Cociná a fuego medio-bajo hasta que el pollo esté bien cocido.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Incorporá la espinaca y apagá cuando se achique."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "En olla a fuego bajo con un chorrito de agua.",
+      "tip": "Probá la salsa antes del final y corregí con sal y un poco de limón."
+    }
+  },
+  {
+    "title": "Salteado de pollo con morrón y soja",
+    "description": "Tiritas de pollo salteadas a fuego fuerte con morrón, cebolla y una salsa rápida de soja y miel. Queda brillante y en minutos.",
+    "servings": 3,
+    "prep_minutes": 12,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "pollo",
+      "rápido",
+      "salteado",
+      "asiática",
+      "cena"
+    ],
+    "ingredients": [
+      "500 g de pechuga de pollo",
+      "1 morrón rojo",
+      "1 cebolla",
+      "1 zanahoria",
+      "2 dientes de ajo",
+      "1 cda de jengibre rallado",
+      "3 cda de salsa de soja",
+      "1 cda de miel",
+      "1 cdita de almidón de maíz",
+      "2 cda de aceite",
+      "1 cda de semillas de sésamo"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá el pollo en tiras finas y mezclalo con el almidón."
+      },
+      {
+        "instruction": "Cortá morrón, cebolla y zanahoria en tiras finitas."
+      },
+      {
+        "instruction": "Mezclá la soja con la miel y 2 cucharadas de agua."
+      },
+      {
+        "instruction": "Calentá bien una sartén grande con la mitad del aceite y salteá el pollo 4 minutos. Sacalo.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Salteá en el resto del aceite las verduras con ajo y jengibre 4 minutos.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Devolvé el pollo, volcá la salsa y mové 1 minuto hasta que espese."
+      },
+      {
+        "instruction": "Espolvoreá con sésamo y serví."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "En sartén caliente 3 minutos o en microondas tapado.",
+      "tip": "Usá fuego fuerte y no amontones el pollo para que dore y no se hierva."
+    }
+  },
+  {
+    "title": "Pinchos de pollo especiado con salsa de yogur",
+    "description": "Cubos de pollo marinados con comino y pimentón, cocidos en sartén en palitos y acompañados con una salsa fresca de yogur y pepino.",
+    "servings": 4,
+    "prep_minutes": 12,
+    "cook_minutes": 12,
+    "difficulty": "media",
+    "tags": [
+      "pollo",
+      "rápido",
+      "árabe",
+      "para compartir",
+      "sin gluten"
+    ],
+    "ingredients": [
+      "600 g de pechuga de pollo",
+      "1 cdita de comino",
+      "1 cdita de pimentón dulce",
+      "1 diente de ajo",
+      "2 cda de aceite de oliva",
+      "1 limón",
+      "1 pote de yogur natural (170 g)",
+      "1/2 pepino",
+      "1 cda de menta fresca picada",
+      "sal y pimienta a gusto",
+      "8 palitos de brochette"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá el pollo en cubos de 3 cm."
+      },
+      {
+        "instruction": "Mezclalo con comino, pimentón, ajo rallado, aceite, el jugo de medio limón, sal y pimienta. Dejalo reposar mientras seguís.",
+        "minutes": 8,
+        "passive": true
+      },
+      {
+        "instruction": "Rallá el pepino, exprimilo y mezclalo con el yogur, la menta, sal y unas gotas de limón."
+      },
+      {
+        "instruction": "Ensartá los cubos en los palitos."
+      },
+      {
+        "instruction": "Cociná los pinchos en una sartén o plancha bien caliente, dándolos vuelta, hasta que estén dorados y cocidos por dentro.",
+        "minutes": 10,
+        "passive": false
+      },
+      {
+        "instruction": "Serví con la salsa de yogur."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "En sartén con unas gotas de aceite 3 minutos.",
+      "tip": "Guardá la salsa de yogur aparte y comela dentro de 2 días."
+    }
+  },
+  {
+    "title": "Sopa rápida de pollo con fideos y zanahoria",
+    "description": "Una sopa reconfortante con pollo desmenuzado, verduras y fideos finitos, lista en media hora. Perfecta para días fríos.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 20,
+    "difficulty": "facil",
+    "tags": [
+      "pollo",
+      "rápido",
+      "sopa",
+      "una olla",
+      "invierno",
+      "para chicos"
+    ],
+    "ingredients": [
+      "400 g de pechuga de pollo",
+      "1 cebolla",
+      "2 zanahorias",
+      "1 tallo de apio",
+      "1 diente de ajo",
+      "1 cda de aceite",
+      "1,2 l de agua",
+      "1 cubito de caldo de verduras",
+      "80 g de fideos cabello de ángel",
+      "1 cda de perejil picado",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá la cebolla, las zanahorias y el apio en cubitos chicos."
+      },
+      {
+        "instruction": "Sofreí las verduras con el ajo en el aceite 3 minutos en una olla.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el agua y el cubito y llevá a hervor."
+      },
+      {
+        "instruction": "Sumá la pechuga entera, bajá el fuego y cociná con la olla tapada.",
+        "minutes": 12,
+        "passive": true
+      },
+      {
+        "instruction": "Sacá el pollo, desmenuzalo con dos tenedores y devolvelo a la olla."
+      },
+      {
+        "instruction": "Agregá los fideos y cociná hasta que estén tiernos.",
+        "minutes": 3,
+        "passive": true
+      },
+      {
+        "instruction": "Sumá el perejil, probá la sal y serví bien caliente."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "En olla a fuego medio; sumá un poco de agua porque los fideos absorben caldo.",
+      "tip": "Si vas a guardar varios días, cociná los fideos aparte."
+    }
+  },
+  {
+    "title": "Arroz con pollo y arvejas en una olla",
+    "description": "Arroz y pollo cocidos juntos en la misma olla con pimentón y arvejas. Un plato completo para resolver la cena sin ensuciar mucho.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 21,
+    "difficulty": "facil",
+    "tags": [
+      "pollo",
+      "arroz",
+      "una olla",
+      "almuerzo",
+      "económico"
+    ],
+    "ingredients": [
+      "500 g de pechuga de pollo",
+      "1 taza de arroz largo fino",
+      "1 cebolla",
+      "1 morrón rojo",
+      "2 dientes de ajo",
+      "1 cdita de pimentón dulce",
+      "2 cda de aceite",
+      "2 tazas de agua caliente",
+      "1 cubito de caldo",
+      "1/2 taza de arvejas congeladas",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá el pollo en cubos chicos y la cebolla y el morrón en cubitos."
+      },
+      {
+        "instruction": "Calentá el aceite en una olla y dorá el pollo 4 minutos. Salpimentalo.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá cebolla, morrón y ajo y rehogá 2 minutos.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el arroz y el pimentón y revolvé 1 minuto."
+      },
+      {
+        "instruction": "Volcá el agua caliente con el cubito disuelto y las arvejas, y mezclá."
+      },
+      {
+        "instruction": "Tapá y cociná a fuego bajo sin destapar.",
+        "minutes": 14,
+        "passive": true
+      },
+      {
+        "instruction": "Apagá, dejá reposar tapado 3 minutos y soltá el arroz con un tenedor."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "En microondas tapado con una cucharada de agua.",
+      "tip": "Enfriá el arroz rápido y guardalo en la heladera dentro de la hora."
+    }
+  },
+  {
+    "title": "Pollo a la plancha con chimichurri fresco",
+    "description": "Pechuga fileteada y cocida a la plancha, terminada con un chimichurri casero de ajo, perejil y orégano. Simple y bien argentino.",
+    "servings": 3,
+    "prep_minutes": 10,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "pollo",
+      "rápido",
+      "argentina",
+      "sin gluten",
+      "liviano",
+      "sin lácteos"
+    ],
+    "ingredients": [
+      "3 supremas de pollo (unos 500 g)",
+      "1 cda de aceite",
+      "1/2 taza de perejil picado fino",
+      "2 dientes de ajo picados",
+      "1 cdita de orégano seco",
+      "1/2 cdita de ají molido",
+      "3 cda de aceite de oliva",
+      "2 cda de vinagre de vino",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Abrí cada suprema por la mitad a lo largo, como un libro, para que quede fina."
+      },
+      {
+        "instruction": "Mezclá perejil, ajo, orégano, ají, aceite de oliva, vinagre y una pizca de sal. Dejalo reposar mientras cocinás.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Salpimentá el pollo y pincelalo con el aceite."
+      },
+      {
+        "instruction": "Cocinalo en plancha o sartén bien caliente, 4 minutos de cada lado, hasta que no quede rosado.",
+        "minutes": 8,
+        "passive": false
+      },
+      {
+        "instruction": "Dejalo descansar 2 minutos y cubrilo con el chimichurri."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "En sartén tapada a fuego bajo con una cucharada de agua.",
+      "tip": "Guardá el chimichurri aparte para que el perejil no se oscurezca."
+    }
+  },
+  {
+    "title": "Pollo al ajillo con pimentón y limón",
+    "description": "Cubitos de pollo salteados en abundante ajo dorado, pimentón y un chorrito de vino blanco. Pide pan para mojar en la salsa.",
+    "servings": 3,
+    "prep_minutes": 8,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "pollo",
+      "rápido",
+      "española",
+      "sin lácteos",
+      "para compartir"
+    ],
+    "ingredients": [
+      "600 g de pechuga o muslo deshuesado",
+      "6 dientes de ajo",
+      "3 cda de aceite de oliva",
+      "1 cdita de pimentón ahumado",
+      "1/4 taza de vino blanco",
+      "1 limón",
+      "1 cda de perejil picado",
+      "1 hoja de laurel",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá el pollo en cubos de 2 a 3 cm y salpimentalo."
+      },
+      {
+        "instruction": "Laminá los ajos finitos."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén y dorá el pollo en tandas, unos 5 minutos.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Bajá el fuego, sumá el ajo, el laurel y el pimentón y mové 1 minuto, sin que el ajo se queme."
+      },
+      {
+        "instruction": "Volcá el vino y dejá que se evapore el alcohol.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Apagá, agregá jugo de limón y perejil, y serví con pan."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "En sartén a fuego medio 3 minutos.",
+      "tip": "Si el ajo se pone marrón oscuro amarga, así que bajá el fuego antes de agregarlo."
+    }
+  },
+  {
+    "title": "Pollo a la pizzaiola en sartén",
+    "description": "Supremas finas cubiertas con salsa de tomate, orégano y mozzarella gratinada en la misma sartén. Un clásico de casa, rápido y filoso.",
+    "servings": 3,
+    "prep_minutes": 8,
+    "cook_minutes": 17,
+    "difficulty": "media",
+    "tags": [
+      "pollo",
+      "rápido",
+      "italiana",
+      "cena",
+      "una olla"
+    ],
+    "ingredients": [
+      "3 supremas de pollo (unos 500 g)",
+      "1 cda de aceite",
+      "1 diente de ajo",
+      "1 taza de puré de tomate",
+      "1 cdita de orégano",
+      "6 fetas de mozzarella",
+      "1 cda de albahaca fresca o perejil",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Abrí las supremas por la mitad a lo largo para que queden finas y salpimentalas."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén grande y dorá el pollo 3 minutos de cada lado.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el ajo picado y el puré de tomate alrededor del pollo."
+      },
+      {
+        "instruction": "Espolvoreá orégano y cociná tapado a fuego bajo.",
+        "minutes": 6,
+        "passive": true
+      },
+      {
+        "instruction": "Cubrí cada pieza con mozzarella y tapá de nuevo hasta que se derrita.",
+        "minutes": 3,
+        "passive": true
+      },
+      {
+        "instruction": "Terminá con albahaca o perejil y serví."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "En sartén tapada a fuego bajo o en microondas.",
+      "tip": "Fileteá bien las supremas: cuanto más finas, más rápido se cocinan."
+    }
+  }
+]

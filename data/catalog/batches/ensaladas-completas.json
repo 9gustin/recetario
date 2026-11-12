@@ -1,0 +1,684 @@
+[
+  {
+    "title": "Ensalada de lentejas, zanahoria y queso fresco",
+    "description": "Una ensalada fresca y contundente con lentejas de lata, verduras crudas y cubos de queso. Se arma en un santiamén y llena como un plato principal.",
+    "servings": 2,
+    "prep_minutes": 12,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "ensalada",
+      "liviano",
+      "legumbres",
+      "rápido",
+      "económico",
+      "almuerzo"
+    ],
+    "ingredients": [
+      "2 latas de lentejas cocidas",
+      "2 zanahorias",
+      "1 morrón rojo",
+      "1/2 cebolla morada",
+      "2 taza de rúcula",
+      "200 g de queso fresco",
+      "3 cda de aceite de oliva",
+      "2 cda de vinagre de manzana",
+      "1 cdita de mostaza",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Escurrí las lentejas y enjuagalas bajo el agua fría.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Rallá las zanahorias y cortá el morrón y la cebolla en cubitos chicos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cortá el queso fresco en cubos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclá en un bol el aceite, el vinagre, la mostaza, sal y pimienta.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Sumá lentejas, verduras y queso al bol y mezclá con el aderezo.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Serví sobre la rúcula y listo.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Se come fría; sacala de la heladera 10 minutos antes de servir.",
+      "tip": "Guardá la rúcula aparte y aderezá al momento para que no se ponga fofa."
+    }
+  },
+  {
+    "title": "Ensalada tibia de pollo, batata y rúcula",
+    "description": "Cubitos de pollo dorados y batata tierna sobre un colchón de rúcula, con un aderezo de limón y mostaza. Tibia, rendidora y con buen balance de proteína.",
+    "servings": 2,
+    "prep_minutes": 8,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "ensalada",
+      "pollo",
+      "alto en proteína",
+      "almuerzo",
+      "cena",
+      "sin gluten"
+    ],
+    "ingredients": [
+      "400 g de pechuga de pollo",
+      "2 batatas medianas",
+      "3 taza de rúcula",
+      "1 tomate",
+      "1/2 cebolla morada",
+      "3 cda de aceite de oliva",
+      "1 limón",
+      "1 cdita de mostaza",
+      "1 cdita de pimentón",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Poné a hervir una olla con agua mientras pelás las batatas y las cortás en cubos de 1 cm.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Hervilas 8 minutos, hasta que estén tiernas pero firmes, y escurrilas.",
+        "minutes": 8,
+        "passive": true
+      },
+      {
+        "instruction": "Cortá el pollo en cubos y condimentalo con sal, pimienta y pimentón.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Dorá el pollo en una sartén con 1 cda de aceite durante 7 u 8 minutos, moviendo seguido.",
+        "minutes": 8,
+        "passive": false
+      },
+      {
+        "instruction": "Mezclá el jugo de limón, la mostaza, el aceite restante, sal y pimienta.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cortá el tomate y la cebolla y armá la ensalada con la rúcula, la batata y el pollo tibio.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Rociá con el aderezo y serví.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Comela fría o calentá el pollo y la batata 1 minuto en microondas antes de sumar la rúcula.",
+      "tip": "Guardá la rúcula separada del resto para que no se ablande."
+    }
+  },
+  {
+    "title": "Ensalada de bife, rúcula y tomates cherry",
+    "description": "Bife de cuadril a la plancha cortado en tiras, sobre rúcula, cherry y lascas de queso. Un plato único simple, con sabor a parrilla.",
+    "servings": 2,
+    "prep_minutes": 8,
+    "cook_minutes": 8,
+    "difficulty": "facil",
+    "tags": [
+      "ensalada",
+      "carne",
+      "alto en proteína",
+      "sin gluten",
+      "cena",
+      "rápido"
+    ],
+    "ingredients": [
+      "2 bifes de cuadril finos (400 g en total)",
+      "3 taza de rúcula",
+      "250 g de tomates cherry",
+      "80 g de queso parmesano en lascas",
+      "3 cda de aceite de oliva",
+      "1 limón",
+      "1 diente de ajo",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Sacá los bifes de la heladera y secalos con papel de cocina; salpimentalos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá una sartén bien caliente con 1 cda de aceite.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cociná los bifes 3 minutos de cada lado, según el punto que te guste.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Dejalos reposar 5 minutos sobre una tabla.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Mientras tanto, cortá los cherry al medio y picá el ajo bien fino.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclá el ajo, el jugo de limón, el aceite restante, sal y pimienta.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cortá los bifes en tiras y armá los platos con rúcula, cherry, queso y la carne.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Aderezá justo antes de comer.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Comela fría o a temperatura ambiente; no recalientes la carne para que no se seque.",
+      "tip": "Cortá la carne en contra de la fibra para que quede tierna."
+    }
+  },
+  {
+    "title": "Ensalada de quinoa, garbanzos y menta",
+    "description": "Quinoa suelta con garbanzos, pepino y tomate, aromatizada con menta y limón. Vegana, fresca y muy saciante.",
+    "servings": 3,
+    "prep_minutes": 5,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "ensalada",
+      "liviano",
+      "vegano",
+      "legumbres",
+      "árabe",
+      "almuerzo"
+    ],
+    "ingredients": [
+      "1 taza de quinoa",
+      "2 taza de agua",
+      "1 lata de garbanzos cocidos",
+      "1 pepino",
+      "2 tomates",
+      "1/2 cebolla morada",
+      "1 puñado de hojas de menta",
+      "1 atado de perejil",
+      "4 cda de aceite de oliva",
+      "2 limones",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Enjuagá la quinoa en un colador bajo el agua fría para sacarle el amargor.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Hervila con el agua y una pizca de sal, tapada y a fuego bajo, 12 a 15 minutos.",
+        "minutes": 15,
+        "passive": true
+      },
+      {
+        "instruction": "Mientras se cocina, escurrí los garbanzos y cortá el pepino, los tomates y la cebolla en cubitos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Picá la menta y el perejil.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Soltá la quinoa con un tenedor y dejala entibiar un par de minutos.",
+        "minutes": 2,
+        "passive": true
+      },
+      {
+        "instruction": "Mezclá todo en un bol con el aceite, el jugo de limón y sal.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Se come fría o a temperatura ambiente.",
+      "tip": "Mejora después de 30 minutos en la heladera, cuando los sabores se integran."
+    }
+  },
+  {
+    "title": "Ensalada de fideos de arroz, vegetales y maní",
+    "description": "Fideos de arroz hidratados con zanahoria, pepino y repollo colorado, bañados en una salsa de soja, lima y jengibre. Fresca, crocante y vegana.",
+    "servings": 2,
+    "prep_minutes": 10,
+    "cook_minutes": 8,
+    "difficulty": "facil",
+    "tags": [
+      "ensalada",
+      "vegano",
+      "sin lácteos",
+      "asiática",
+      "almuerzo",
+      "verano"
+    ],
+    "ingredients": [
+      "200 g de fideos de arroz",
+      "1 zanahoria",
+      "1 pepino",
+      "2 taza de repollo colorado rallado",
+      "3 cebollas de verdeo",
+      "1 puñado de cilantro o perejil",
+      "50 g de maní tostado sin sal",
+      "3 cda de salsa de soja",
+      "2 cda de jugo de lima",
+      "1 cda de aceite de girasol",
+      "1 cdita de azúcar",
+      "1 cdita de jengibre rallado"
+    ],
+    "steps": [
+      {
+        "instruction": "Cubrí los fideos con agua recién hervida y dejalos 8 minutos, o hasta que estén tiernos.",
+        "minutes": 8,
+        "passive": true
+      },
+      {
+        "instruction": "Mientras tanto, cortá la zanahoria y el pepino en bastoncitos finos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Picá el verdeo, el cilantro y el maní.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclá la soja, la lima, el aceite, el azúcar y el jengibre.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Escurrí los fideos y pasalos por agua fría para cortar la cocción.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclá fideos, verduras y salsa; terminá con maní y cilantro por encima.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Se come fría; si se pegan los fideos, mezclalos con un chorrito de agua.",
+      "tip": "Sumá el maní recién al servir para que no se ablande."
+    }
+  },
+  {
+    "title": "Ensalada mexicana de porotos negros, choclo y palta",
+    "description": "Porotos negros, granos de choclo, tomate y palta con lima y comino. Sin cocción, vegana y lista para comer en 12 minutos.",
+    "servings": 2,
+    "prep_minutes": 12,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "ensalada",
+      "vegano",
+      "legumbres",
+      "mexicana",
+      "rápido",
+      "almuerzo"
+    ],
+    "ingredients": [
+      "1 lata de porotos negros",
+      "1 lata de choclo en granos",
+      "2 tomates",
+      "1 palta",
+      "1/2 cebolla morada",
+      "1 puñado de cilantro o perejil",
+      "2 limas",
+      "2 cda de aceite de oliva",
+      "1 cdita de comino",
+      "1 pizca de ají molido",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Escurrí y enjuagá los porotos y el choclo.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cortá los tomates y la cebolla en cubitos y picá el cilantro.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclá el jugo de lima, el aceite, el comino, el ají y sal en un bol grande.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Sumá porotos, choclo, tomate, cebolla y cilantro y mezclá bien.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cortá la palta en cubos y agregala al final, con cuidado.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Se come fría.",
+      "tip": "Si sobra, dejá el carozo de la palta en el bol para que se oscurezca menos."
+    }
+  },
+  {
+    "title": "Ensalada de espinaca, champiñones y panceta crocante",
+    "description": "Hojas de espinaca con champiñones y panceta dorada, aderezadas con la grasa tibia de la panceta, mostaza y vinagre. Un plato único con mucho sabor.",
+    "servings": 2,
+    "prep_minutes": 8,
+    "cook_minutes": 10,
+    "difficulty": "media",
+    "tags": [
+      "ensalada",
+      "cerdo",
+      "sin gluten",
+      "cena",
+      "almuerzo"
+    ],
+    "ingredients": [
+      "200 g de panceta ahumada en tiritas",
+      "300 g de champiñones",
+      "200 g de espinaca baby",
+      "1/2 cebolla morada",
+      "80 g de queso sardo en lascas",
+      "2 cda de vinagre de vino",
+      "1 cdita de mostaza",
+      "1 cdita de miel",
+      "pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cociná la panceta en una sartén sin aceite a fuego medio, 5 minutos, hasta que esté crocante.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Sacá la panceta con una espumadera y dejala sobre papel de cocina.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Laminá los champiñones y salteálos en la misma sartén 4 minutos, hasta que se doren.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Apagá el fuego y sumá el vinagre, la mostaza, la miel y pimienta; mezclá rápido.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Poné la espinaca y la cebolla en láminas finas en una fuente.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Volcá los champiñones tibios con su aderezo sobre las hojas y mezclá.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Terminá con la panceta y las lascas de queso.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Mejor comerla al momento; si sobra, comela fría.",
+      "tip": "La panceta ya aporta sal, así que no agregues más hasta probar."
+    }
+  },
+  {
+    "title": "Fattoush con queso fresco",
+    "description": "Ensalada libanesa de verduras crocantes con pan árabe tostado en trocitos, aderezada con limón, perejil y menta. Con queso fresco queda completa.",
+    "servings": 3,
+    "prep_minutes": 12,
+    "cook_minutes": 6,
+    "difficulty": "facil",
+    "tags": [
+      "ensalada",
+      "vegetariano",
+      "árabe",
+      "almuerzo",
+      "verano",
+      "liviano"
+    ],
+    "ingredients": [
+      "2 panes árabes",
+      "3 tomates",
+      "2 pepinos",
+      "6 rabanitos",
+      "3 cebollas de verdeo",
+      "1 atado de perejil",
+      "1 puñado de hojas de menta",
+      "200 g de queso fresco",
+      "4 cda de aceite de oliva",
+      "2 limones",
+      "1 diente de ajo",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá el pan árabe en cuadrados, mezclalo con 1 cda de aceite y tostalo en sartén o al horno 6 minutos hasta dorar.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Cortá los tomates, los pepinos y los rabanitos en trozos medianos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Picá el verdeo, el perejil y la menta.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Rallá el ajo y mezclalo con el jugo de limón, el aceite restante, sal y pimienta.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclá las verduras con el aderezo y el queso en cubos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Sumá el pan tostado justo antes de servir para que quede crocante.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Se come fría.",
+      "tip": "Guardá el pan tostado aparte en un frasco para conservar el crocante."
+    }
+  },
+  {
+    "title": "Ensalada de tirabuzones, mozzarella y cherry",
+    "description": "Pasta fría con tomates cherry, mozzarella, jamón cocido y rúcula, con aderezo de aceite de oliva y albahaca. Ideal para llevar al trabajo.",
+    "servings": 3,
+    "prep_minutes": 6,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "ensalada",
+      "pasta",
+      "italiana",
+      "almuerzo",
+      "para chicos",
+      "sobras"
+    ],
+    "ingredients": [
+      "250 g de tirabuzones",
+      "250 g de tomates cherry",
+      "200 g de mozzarella",
+      "6 fetas de jamón cocido",
+      "2 taza de rúcula",
+      "1 puñado de hojas de albahaca",
+      "4 cda de aceite de oliva",
+      "1 cda de vinagre de vino",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Hervilos tirabuzones en agua con sal el tiempo que indique el paquete, unos 10 minutos.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Mientras tanto, cortá los cherry al medio, la mozzarella en cubos y el jamón en tiritas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Escurrí la pasta y enfriala bajo el chorro de agua fría.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclá el aceite, el vinagre, la albahaca picada, sal y pimienta.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Combiná la pasta con cherry, mozzarella, jamón y aderezo.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Sumá la rúcula al final y serví.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Se come fría; sacala de la heladera 10 minutos antes.",
+      "tip": "Agregá un chorrito de aceite si se seca al día siguiente."
+    }
+  },
+  {
+    "title": "Ensalada de langostinos, palta y pomelo",
+    "description": "Langostinos salteados con ajo, palta cremosa y gajos de pomelo sobre hojas verdes. Fresca, cítrica y lista en menos de 20 minutos.",
+    "servings": 2,
+    "prep_minutes": 12,
+    "cook_minutes": 5,
+    "difficulty": "media",
+    "tags": [
+      "ensalada",
+      "liviano",
+      "pescado",
+      "sin gluten",
+      "sin lácteos",
+      "verano",
+      "cena"
+    ],
+    "ingredients": [
+      "400 g de langostinos pelados",
+      "2 paltas",
+      "1 pomelo",
+      "3 taza de mix de hojas verdes",
+      "1/2 cebolla morada",
+      "1 diente de ajo",
+      "3 cda de aceite de oliva",
+      "1 lima",
+      "1 cdita de pimentón",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Secá bien los langostinos con papel de cocina y condimentalos con sal, pimienta y pimentón.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá 1 cda de aceite en una sartén y salteá el ajo picado 30 segundos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Sumá los langostinos y cocinalos 2 minutos de cada lado, hasta que estén rosados.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Pelá el pomelo a vivo y sacá los gajos; cortá la palta en láminas y la cebolla en pluma fina.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclá el aceite restante con el jugo de lima, sal y pimienta.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Armá los platos con las hojas, la palta, el pomelo, la cebolla y los langostinos tibios.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Rociá con el aderezo y serví enseguida.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Comela fría; no recalientes los langostinos para que no se pongan gomosos.",
+      "tip": "Cociná los langostinos poco: apenas cambian de color ya están listos."
+    }
+  }
+]

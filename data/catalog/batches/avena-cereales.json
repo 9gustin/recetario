@@ -1,0 +1,466 @@
+[
+  {
+    "title": "Overnight oats de cacao y frutilla",
+    "description": "Avena que se hace sola en la heladera mientras dormís: sabor a chocolate con frutillas frescas por arriba. Dulce, fría y lista para llevar.",
+    "servings": 1,
+    "prep_minutes": 5,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "desayuno",
+      "liviano",
+      "sin horno",
+      "para chicos"
+    ],
+    "ingredients": [
+      "1/2 taza de avena arrollada",
+      "3/4 taza de leche",
+      "2 cdas de yogur natural",
+      "1 cda de cacao amargo",
+      "1 cda de miel",
+      "1 cdita de semillas de chía",
+      "6 frutillas",
+      "1 pizca de sal"
+    ],
+    "steps": [
+      {
+        "instruction": "Mezclá en un frasco la avena, el cacao, la chía y la sal."
+      },
+      {
+        "instruction": "Agregá la leche, el yogur y la miel, y revolvé bien hasta que no queden grumos."
+      },
+      {
+        "instruction": "Tapá el frasco y llevalo a la heladera toda la noche (mínimo 4 horas).",
+        "minutes": 240,
+        "passive": true
+      },
+      {
+        "instruction": "Cortá las frutillas en láminas y ponelas arriba antes de comer."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Se come fría; si querés, sacala 10 minutos antes de la heladera.",
+      "tip": "Sumá las frutillas recién al servir para que no suelten agua."
+    }
+  },
+  {
+    "title": "Bircher de manzana rallada y naranja",
+    "description": "Muesli suizo remojado en jugo de naranja con manzana rallada y yogur. Queda fresco, húmedo y con un toque cítrico.",
+    "servings": 2,
+    "prep_minutes": 8,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "desayuno",
+      "liviano",
+      "sin horno",
+      "vegetariano"
+    ],
+    "ingredients": [
+      "1 taza de avena arrollada",
+      "1 manzana verde",
+      "1/2 taza de jugo de naranja exprimido",
+      "1/2 taza de yogur natural",
+      "1/4 taza de leche",
+      "2 cdas de pasas de uva",
+      "2 cdas de almendras picadas",
+      "1 cdita de miel"
+    ],
+    "steps": [
+      {
+        "instruction": "Rallá la manzana con cáscara usando la parte gruesa del rallador."
+      },
+      {
+        "instruction": "Mezclá en un bowl la avena, la manzana, el jugo, el yogur, la leche y las pasas."
+      },
+      {
+        "instruction": "Tapá y dejá reposar en la heladera toda la noche (mínimo 4 horas).",
+        "minutes": 240,
+        "passive": true
+      },
+      {
+        "instruction": "Serví en dos bowls y terminá con almendras y un hilo de miel."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Se come frío, directo de la heladera.",
+      "tip": "Rallá la manzana justo antes de mezclar para que no se oscurezca."
+    }
+  },
+  {
+    "title": "Overnight oats de coco y ananá",
+    "description": "Versión vegana con leche de coco, avena y ananá en cubitos. Sabor tropical, cremosa y sin nada de cocción.",
+    "servings": 1,
+    "prep_minutes": 6,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "desayuno",
+      "liviano",
+      "vegano",
+      "sin lácteos",
+      "sin horno"
+    ],
+    "ingredients": [
+      "1/2 taza de avena arrollada",
+      "3/4 taza de leche de coco",
+      "1 cda de coco rallado",
+      "1 cdita de semillas de chía",
+      "1 cdita de azúcar mascabo",
+      "1/2 taza de ananá en cubos"
+    ],
+    "steps": [
+      {
+        "instruction": "Poné en un frasco la avena, la chía, el coco rallado y el azúcar."
+      },
+      {
+        "instruction": "Volcá la leche de coco y mezclá bien con una cuchara."
+      },
+      {
+        "instruction": "Tapá y dejá en la heladera toda la noche (mínimo 4 horas).",
+        "minutes": 240,
+        "passive": true
+      },
+      {
+        "instruction": "Cortá el ananá en cubos chicos y sumalo arriba al servir."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Se come fría. Si quedó muy espesa, agregá un chorrito de leche de coco.",
+      "tip": "Si usás ananá de lata, escurrilo bien para que no aguade la avena."
+    }
+  },
+  {
+    "title": "Avena salada con huevo y verdeo",
+    "description": "Un porridge salado, tibio y reconfortante: avena cocida en caldo con huevo poché al paso, queso rallado y cebolla de verdeo.",
+    "servings": 1,
+    "prep_minutes": 3,
+    "cook_minutes": 7,
+    "difficulty": "media",
+    "tags": [
+      "desayuno",
+      "rápido",
+      "huevo",
+      "una olla"
+    ],
+    "ingredients": [
+      "1/2 taza de avena arrollada",
+      "1 taza de caldo de verdura",
+      "1 huevo",
+      "1 cebolla de verdeo",
+      "2 cdas de queso rallado",
+      "1 cdita de aceite de oliva",
+      "pimienta a gusto",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Picá finita la parte verde de la cebolla de verdeo."
+      },
+      {
+        "instruction": "Llevá el caldo a hervor en una cacerola chica y sumá la avena."
+      },
+      {
+        "instruction": "Cociná a fuego bajo revolviendo, hasta que espese.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Hacé un hueco, rompé el huevo adentro y tapá la cacerola.",
+        "minutes": 2,
+        "passive": true
+      },
+      {
+        "instruction": "Serví en un bowl con el queso, el verdeo, el aceite y pimienta."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Mejor al momento; si sobra, recalentá en microondas con un chorrito de agua.",
+      "tip": "Probá el caldo antes de salar, ya suele traer sal."
+    }
+  },
+  {
+    "title": "Avena con membrillo y queso cremoso",
+    "description": "Avena tibia con la clásica dupla argentina de dulce de membrillo y queso. Dulce, salada y muy cremosa.",
+    "servings": 1,
+    "prep_minutes": 3,
+    "cook_minutes": 6,
+    "difficulty": "facil",
+    "tags": [
+      "desayuno",
+      "rápido",
+      "argentina",
+      "vegetariano"
+    ],
+    "ingredients": [
+      "1/2 taza de avena arrollada",
+      "1 taza de leche",
+      "1 feta de dulce de membrillo",
+      "2 cdas de queso crema",
+      "1 cda de nueces picadas",
+      "1 pizca de sal"
+    ],
+    "steps": [
+      {
+        "instruction": "Poné la avena, la leche y la sal en una cacerola chica."
+      },
+      {
+        "instruction": "Cociná a fuego medio-bajo revolviendo seguido hasta que quede cremosa.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Cortá el membrillo en cubitos mientras tanto."
+      },
+      {
+        "instruction": "Serví la avena en un bowl y sumá el queso crema en cucharadas."
+      },
+      {
+        "instruction": "Terminá con el membrillo y las nueces."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Recalentá en microondas con un chorrito de leche, sin el queso ni el membrillo.",
+      "tip": "Sumá el queso y el membrillo recién al servir."
+    }
+  },
+  {
+    "title": "Ensalada de frutas con avena crocante",
+    "description": "Frutas de estación cortadas con un toque de limón y una lluvia de avena tostada en sartén con miel. Fresca y con textura.",
+    "servings": 2,
+    "prep_minutes": 7,
+    "cook_minutes": 3,
+    "difficulty": "facil",
+    "tags": [
+      "desayuno",
+      "liviano",
+      "fruta",
+      "rápido",
+      "vegetariano"
+    ],
+    "ingredients": [
+      "1 banana",
+      "1 naranja",
+      "1 kiwi",
+      "1 taza de uvas",
+      "1/3 taza de avena arrollada",
+      "1 cda de miel",
+      "1 cdita de jugo de limón",
+      "1 pizca de canela"
+    ],
+    "steps": [
+      {
+        "instruction": "Tostá la avena en una sartén seca a fuego medio, moviendo seguido.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Apagá el fuego, sumá la miel y la canela y mezclá. Dejá enfriar en un plato."
+      },
+      {
+        "instruction": "Pelá y cortá la naranja, el kiwi y la banana en trozos."
+      },
+      {
+        "instruction": "Mezclá las frutas con las uvas y el jugo de limón en un bowl."
+      },
+      {
+        "instruction": "Repartí en dos bowls y cubrí con la avena crocante."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Se come fría; guardá la avena aparte en un frasco.",
+      "tip": "El limón evita que la banana se oscurezca."
+    }
+  },
+  {
+    "title": "Bowl de copos de maíz con banana y dulce de leche",
+    "description": "Cereal crocante con leche fría, rodajas de banana y un chorro de dulce de leche. Un desayuno de chicos, listo en dos minutos.",
+    "servings": 1,
+    "prep_minutes": 4,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "desayuno",
+      "rápido",
+      "para chicos",
+      "sin horno",
+      "argentina"
+    ],
+    "ingredients": [
+      "1.5 tazas de copos de maíz sin azúcar",
+      "1 taza de leche fría",
+      "1 banana",
+      "1 cda de dulce de leche",
+      "1 cda de maní tostado sin sal"
+    ],
+    "steps": [
+      {
+        "instruction": "Pelá la banana y cortala en rodajas."
+      },
+      {
+        "instruction": "Poné los copos de maíz en un bowl hondo."
+      },
+      {
+        "instruction": "Sumá la banana y el dulce de leche en cucharaditas."
+      },
+      {
+        "instruction": "Volcá la leche fría, espolvoreá con el maní y comé enseguida."
+      }
+    ],
+    "storage": {
+      "fridge_days": 0,
+      "freezer_days": null,
+      "reheat": "No se guarda armado; comelo al momento.",
+      "tip": "Servilo recién hecho para que los copos no se ablanden."
+    }
+  },
+  {
+    "title": "Smoothie bowl de frutos rojos y avena",
+    "description": "Frutos rojos congelados procesados hasta lograr una crema espesa para comer con cuchara, con avena y semillas arriba.",
+    "servings": 1,
+    "prep_minutes": 6,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "desayuno",
+      "liviano",
+      "fruta",
+      "sin horno",
+      "rápido"
+    ],
+    "ingredients": [
+      "1 taza de frutos rojos congelados",
+      "1/2 banana congelada",
+      "1/2 taza de yogur natural",
+      "2 cdas de leche",
+      "2 cdas de avena arrollada",
+      "1 cdita de semillas de chía",
+      "1 cdita de coco rallado"
+    ],
+    "steps": [
+      {
+        "instruction": "Procesá los frutos rojos, la banana, el yogur y la leche hasta que quede espesa."
+      },
+      {
+        "instruction": "Frená y raspá las paredes si hace falta; agregá leche de a poco."
+      },
+      {
+        "instruction": "Pasá la crema a un bowl con una espátula."
+      },
+      {
+        "instruction": "Decorá con la avena, la chía y el coco rallado, y comé enseguida."
+      }
+    ],
+    "storage": {
+      "fridge_days": 0,
+      "freezer_days": null,
+      "reheat": "No se guarda; se come recién hecho.",
+      "tip": "Usá poca leche: la textura tiene que ser de helado blando."
+    }
+  },
+  {
+    "title": "Pudding de chía, avena y mango",
+    "description": "Chía y avena hidratadas en leche con yogur, coronadas con mango fresco. Cremoso, liviano y listo para la mañana siguiente.",
+    "servings": 2,
+    "prep_minutes": 7,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "desayuno",
+      "liviano",
+      "sin horno",
+      "vegetariano",
+      "fruta"
+    ],
+    "ingredients": [
+      "1/3 taza de avena arrollada",
+      "3 cdas de semillas de chía",
+      "1.5 tazas de leche",
+      "1/2 taza de yogur natural",
+      "1 cda de miel",
+      "1 mango maduro",
+      "1 cda de coco rallado"
+    ],
+    "steps": [
+      {
+        "instruction": "Mezclá en un bowl la avena, la chía, la leche, el yogur y la miel."
+      },
+      {
+        "instruction": "Revolvé de nuevo a los 5 minutos para que la chía no se pegue."
+      },
+      {
+        "instruction": "Repartí en dos vasos, tapá y llevá a la heladera toda la noche (mínimo 4 horas).",
+        "minutes": 240,
+        "passive": true
+      },
+      {
+        "instruction": "Pelá el mango, cortalo en cubos y ponelo arriba con el coco."
+      }
+    ],
+    "storage": {
+      "fridge_days": 4,
+      "freezer_days": null,
+      "reheat": "Se come frío; si quedó espeso, agregá un chorrito de leche.",
+      "tip": "Sumá el mango fresco recién al servir."
+    }
+  },
+  {
+    "title": "Porridge de avena con pasta de maní y banana",
+    "description": "Avena cocida en leche, cremosa y tibia, con banana en rodajas y una cucharada de pasta de maní que se derrite por arriba.",
+    "servings": 1,
+    "prep_minutes": 3,
+    "cook_minutes": 6,
+    "difficulty": "facil",
+    "tags": [
+      "desayuno",
+      "rápido",
+      "una olla",
+      "alto en proteína",
+      "para chicos"
+    ],
+    "ingredients": [
+      "1/2 taza de avena arrollada",
+      "1 taza de leche",
+      "1/2 taza de agua",
+      "1 banana",
+      "1 cda de pasta de maní",
+      "1 cdita de miel",
+      "1 pizca de canela",
+      "1 pizca de sal"
+    ],
+    "steps": [
+      {
+        "instruction": "Poné la avena, la leche, el agua y la sal en una cacerola."
+      },
+      {
+        "instruction": "Cociná a fuego medio revolviendo hasta que espese y quede cremosa.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Cortá la banana en rodajas mientras se cocina."
+      },
+      {
+        "instruction": "Serví en un bowl y sumá la banana, la pasta de maní, la miel y la canela."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Recalentá en microondas con un chorrito de leche, revolviendo a la mitad.",
+      "tip": "Sumá la banana al servir para que no se ponga oscura."
+    }
+  }
+]

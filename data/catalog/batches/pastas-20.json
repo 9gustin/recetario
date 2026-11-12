@@ -1,0 +1,632 @@
+[
+  {
+    "title": "Spaghetti aglio e olio con perejil y ají molido",
+    "description": "El clásico de las noches sin ganas de cocinar: ajo dorado en aceite, un toque picante y mucho perejil. Lo tenés en 15 minutos.",
+    "servings": 2,
+    "prep_minutes": 3,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "pasta",
+      "rápido",
+      "económico",
+      "italiana",
+      "cena"
+    ],
+    "ingredients": [
+      "200 g de spaghetti",
+      "4 dientes de ajo",
+      "5 cdas de aceite de oliva",
+      "1 cdita de ají molido",
+      "1 puñado de perejil fresco",
+      "sal a gusto",
+      "queso rallado a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Herví abundante agua con sal y cociná los spaghetti hasta que estén al dente.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Mientras tanto, laminá los ajos y picá el perejil.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá el aceite a fuego bajo y dorá el ajo con el ají molido sin que se queme.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Reservá media taza del agua de cocción y escurrí la pasta.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclá los spaghetti con el aceite de ajo y un chorrito del agua reservada hasta que quede brillante.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el perejil, probá la sal y serví con queso rallado.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "En sartén con un chorrito de agua o aceite, a fuego bajo.",
+      "tip": "Si los ajos se ponen marrones oscuros amargan: sacalos del fuego a tiempo."
+    }
+  },
+  {
+    "title": "Tallarines al limón con ricota y pimienta",
+    "description": "Una pasta fresca y cremosa sin cocinar la salsa: la ricota se une con el agua caliente y la ralladura de limón.",
+    "servings": 2,
+    "prep_minutes": 5,
+    "cook_minutes": 11,
+    "difficulty": "facil",
+    "tags": [
+      "pasta",
+      "rápido",
+      "vegetariano",
+      "italiana",
+      "almuerzo"
+    ],
+    "ingredients": [
+      "200 g de tallarines",
+      "200 g de ricota",
+      "1 limón",
+      "2 cdas de queso rallado",
+      "1 cda de manteca",
+      "pimienta negra a gusto",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cociná los tallarines en agua con sal hasta que estén al dente.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Rallá la cáscara del limón y exprimí la mitad del jugo.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "En un bol mezclá la ricota, la ralladura, el jugo, el queso rallado y bastante pimienta.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Reservá media taza del agua de cocción y escurrí los tallarines.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Volvé la pasta a la olla con la manteca y la mezcla de ricota.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Revolvé a fuego mínimo 1 minuto, sumando agua de cocción hasta lograr una salsa cremosa.",
+        "minutes": 1,
+        "passive": false
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "En sartén con un chorrito de agua o leche a fuego bajo.",
+      "tip": "Agregá el limón siempre al final para que no se corte la ricota."
+    }
+  },
+  {
+    "title": "Penne con tomates cherry y albahaca en sartén",
+    "description": "Los cherry se rompen en la sartén y hacen su propia salsa dulce y fresca. Ideal para el verano.",
+    "servings": 2,
+    "prep_minutes": 4,
+    "cook_minutes": 14,
+    "difficulty": "facil",
+    "tags": [
+      "pasta",
+      "rápido",
+      "vegetariano",
+      "verano",
+      "italiana",
+      "cena"
+    ],
+    "ingredients": [
+      "200 g de penne",
+      "300 g de tomates cherry",
+      "2 dientes de ajo",
+      "3 cdas de aceite de oliva",
+      "1 puñado de hojas de albahaca",
+      "1 pizca de azúcar",
+      "sal a gusto",
+      "queso rallado a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cociná los penne en agua con sal hasta que estén al dente.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Cortá los cherry por la mitad y picá el ajo.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén y salteá el ajo 30 segundos.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá los cherry, la sal y el azúcar, y cociná hasta que se deshagan.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Escurrí los penne y mezclalos en la sartén con la salsa y un poco del agua de cocción.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Apagá, agregá la albahaca rota con la mano y serví con queso rallado.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "En sartén a fuego bajo o en microondas tapado.",
+      "tip": "Aplastá algunos cherry con la cuchara para que suelten más jugo."
+    }
+  },
+  {
+    "title": "Moñitos con atún, tomate y aceitunas",
+    "description": "Una pasta de alacena con atún de lata, tomate y aceitunas verdes. Sale con lo que tenés a mano.",
+    "servings": 2,
+    "prep_minutes": 5,
+    "cook_minutes": 13,
+    "difficulty": "facil",
+    "tags": [
+      "pasta",
+      "rápido",
+      "pescado",
+      "económico",
+      "almuerzo"
+    ],
+    "ingredients": [
+      "200 g de moñitos",
+      "1 lata de atún al natural",
+      "2 tomates maduros",
+      "8 aceitunas verdes",
+      "1 cebolla de verdeo",
+      "2 cdas de aceite de oliva",
+      "1 cdita de orégano",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cociná los moñitos en agua con sal hasta que estén al dente.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Picá los tomates en cubos, la cebolla de verdeo en rodajas y las aceitunas en trozos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén y rehogá el verdeo 2 minutos.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el tomate y el orégano y cociná 4 minutos hasta que largue jugo.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el atún escurrido y las aceitunas y calentá 1 minuto.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Escurrí la pasta, mezclala con la salsa y serví.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "En microondas tapado, 1 a 2 minutos.",
+      "tip": "También queda muy bien fría, como ensalada de pasta."
+    }
+  },
+  {
+    "title": "Spaghetti a la carbonara casera",
+    "description": "Huevo, queso y panceta crocante, sin crema. La clave es mezclar fuera del fuego para que quede sedosa y no revuelta.",
+    "servings": 2,
+    "prep_minutes": 4,
+    "cook_minutes": 13,
+    "difficulty": "media",
+    "tags": [
+      "pasta",
+      "rápido",
+      "huevo",
+      "cerdo",
+      "italiana",
+      "cena"
+    ],
+    "ingredients": [
+      "200 g de spaghetti",
+      "120 g de panceta ahumada",
+      "2 huevos",
+      "1 yema",
+      "4 cdas de queso rallado",
+      "pimienta negra a gusto",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cociná los spaghetti en agua con poca sal hasta que estén al dente.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Cortá la panceta en tiritas y dorala en una sartén sin aceite hasta que quede crocante.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Batí en un bol los huevos, la yema, el queso rallado y mucha pimienta.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Reservá una taza del agua de cocción y escurrí la pasta.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Con el fuego apagado, mezclá los spaghetti con la panceta en la sartén.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Volcá la mezcla de huevo y revolvé rápido, sumando agua de cocción hasta lograr una salsa cremosa.",
+        "minutes": 1,
+        "passive": false
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "En sartén a fuego mínimo con un chorrito de agua, revolviendo.",
+      "tip": "Si la sartén está muy caliente el huevo se cuaja: apagá el fuego antes de mezclar."
+    }
+  },
+  {
+    "title": "Penne al pesto de rúcula y nueces",
+    "description": "Un pesto picante y rápido hecho en la procesadora con rúcula en lugar de albahaca. No se cocina: se mezcla con la pasta caliente.",
+    "servings": 2,
+    "prep_minutes": 6,
+    "cook_minutes": 11,
+    "difficulty": "facil",
+    "tags": [
+      "pasta",
+      "rápido",
+      "vegetariano",
+      "salsa",
+      "italiana",
+      "cena"
+    ],
+    "ingredients": [
+      "200 g de penne",
+      "2 tazas de rúcula",
+      "40 g de nueces",
+      "1 diente de ajo",
+      "4 cdas de aceite de oliva",
+      "3 cdas de queso rallado",
+      "1 cdita de jugo de limón",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cociná los penne en agua con sal hasta que estén al dente.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Procesá la rúcula, las nueces, el ajo, el aceite, el queso y el limón hasta obtener una pasta.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Probá el pesto y ajustá la sal.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Reservá media taza del agua de cocción y escurrí la pasta.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclá los penne con el pesto fuera del fuego, sumando agua de cocción para aflojar.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Comela tibia o a temperatura ambiente; si recalentás, hacelo suave en sartén.",
+      "tip": "No cocines el pesto: el calor fuerte lo vuelve amargo y le saca el color."
+    }
+  },
+  {
+    "title": "Fideos salteados con verduras y salsa de soja",
+    "description": "Un wok casero con tallarines, zanahoria, morrón y repollo, aderezado con soja y jengibre. Todo en una sartén grande.",
+    "servings": 2,
+    "prep_minutes": 8,
+    "cook_minutes": 11,
+    "difficulty": "media",
+    "tags": [
+      "pasta",
+      "rápido",
+      "salteado",
+      "asiática",
+      "vegano",
+      "cena"
+    ],
+    "ingredients": [
+      "200 g de tallarines secos",
+      "1 zanahoria",
+      "1 morrón rojo",
+      "2 tazas de repollo en tiras",
+      "2 dientes de ajo",
+      "1 cdita de jengibre rallado",
+      "3 cdas de salsa de soja",
+      "2 cdas de aceite",
+      "1 cdita de aceite de sésamo",
+      "1 cebolla de verdeo"
+    ],
+    "steps": [
+      {
+        "instruction": "Cociná los tallarines 2 minutos menos que lo indicado en el paquete y escurrilos.",
+        "minutes": 8,
+        "passive": true
+      },
+      {
+        "instruction": "Cortá la zanahoria y el morrón en tiras finas y picá el ajo y el verdeo.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén grande a fuego fuerte y salteá la zanahoria 2 minutos.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el morrón, el repollo, el ajo y el jengibre y salteá 3 minutos más.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá los tallarines y la soja y mezclá 2 minutos a fuego fuerte.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Apagá, sumá el aceite de sésamo y el verdeo y serví.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Salteá en sartén caliente 2 minutos o usá el microondas.",
+      "tip": "Mantené el fuego fuerte y no apilés las verduras para que se salteen y no se hiervan."
+    }
+  },
+  {
+    "title": "Fusilli con brócoli, ajo y queso",
+    "description": "El brócoli se cocina en la misma olla que la pasta y después se aplasta con ajo y aceite para formar una salsa verde rústica.",
+    "servings": 2,
+    "prep_minutes": 4,
+    "cook_minutes": 14,
+    "difficulty": "facil",
+    "tags": [
+      "pasta",
+      "rápido",
+      "vegetariano",
+      "una olla",
+      "verdura",
+      "almuerzo"
+    ],
+    "ingredients": [
+      "200 g de fusilli",
+      "1 brócoli chico",
+      "3 dientes de ajo",
+      "4 cdas de aceite de oliva",
+      "1 cdita de ají molido",
+      "4 cdas de queso rallado",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Separá el brócoli en ramitos chicos y picá el ajo.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Herví agua con sal y cociná los fusilli 5 minutos.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Agregá el brócoli a la misma olla y cociná 4 minutos más hasta que la pasta esté al dente.",
+        "minutes": 4,
+        "passive": true
+      },
+      {
+        "instruction": "Mientras tanto, calentá el aceite con el ajo y el ají molido 2 minutos en una sartén.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Escurrí todo, reservando media taza del agua de cocción.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclá en la sartén, aplastá parte del brócoli con el tenedor y sumá el queso con un poco de agua.",
+        "minutes": 1,
+        "passive": false
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "En sartén con un chorrito de agua a fuego medio.",
+      "tip": "Cuanto más aplastes el brócoli, más cremosa queda la salsa."
+    }
+  },
+  {
+    "title": "Mostacholes con champiñones y mostaza",
+    "description": "Champiñones dorados con crema y un toque de mostaza en grano. Una salsa intensa que se hace mientras hierve la pasta.",
+    "servings": 2,
+    "prep_minutes": 4,
+    "cook_minutes": 14,
+    "difficulty": "facil",
+    "tags": [
+      "pasta",
+      "rápido",
+      "vegetariano",
+      "cena",
+      "salteado"
+    ],
+    "ingredients": [
+      "200 g de mostacholes",
+      "250 g de champiñones",
+      "1 cebolla chica",
+      "1 diente de ajo",
+      "1 cda de aceite",
+      "1 cda de mostaza",
+      "100 ml de crema de leche",
+      "1 cda de perejil picado",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cociná los mostacholes en agua con sal hasta que estén al dente.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Laminá los champiñones y picá la cebolla y el ajo bien chicos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Dorá los champiñones en el aceite a fuego fuerte 4 minutos sin moverlos mucho.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá la cebolla y el ajo y cociná 2 minutos.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá la mostaza y la crema y cociná 1 minuto a fuego bajo.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Escurrí la pasta, mezclala con la salsa y terminá con perejil y pimienta.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "En sartén a fuego bajo con un chorrito de leche o agua.",
+      "tip": "No salés los champiñones al principio: sueltan agua y no se doran."
+    }
+  },
+  {
+    "title": "Tirabuzones con salsa de morrones y queso crema",
+    "description": "Una salsa rosada, suave y levemente dulce hecha con morrones de frasco y queso crema, lista en el tiempo que tarda la pasta.",
+    "servings": 2,
+    "prep_minutes": 5,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "pasta",
+      "rápido",
+      "vegetariano",
+      "salsa",
+      "para chicos",
+      "almuerzo"
+    ],
+    "ingredients": [
+      "200 g de tirabuzones",
+      "1 frasco de morrones asados (unos 200 g)",
+      "100 g de queso crema",
+      "1 diente de ajo",
+      "1 cda de aceite de oliva",
+      "1 cdita de pimentón dulce",
+      "sal a gusto",
+      "albahaca o perejil para decorar"
+    ],
+    "steps": [
+      {
+        "instruction": "Cociná los tirabuzones en agua con sal hasta que estén al dente.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Escurrí los morrones y procesalos con el ajo, el queso crema y el pimentón hasta que quede una salsa lisa.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá el aceite en la sartén y volcá la salsa.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cociná la salsa a fuego bajo 3 minutos, revolviendo, y ajustá la sal.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Reservá un poco del agua de cocción y escurrí la pasta.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclá la pasta con la salsa, aflojá con agua si hace falta y serví con hierbas.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "En microondas tapado o en sartén con un chorrito de agua.",
+      "tip": "Si querés más sabor, agregale una pizca de ají molido o queso rallado."
+    }
+  }
+]

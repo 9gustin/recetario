@@ -1,0 +1,587 @@
+[
+  {
+    "title": "Tallarines al pesto de rúcula y nueces con cherry",
+    "description": "Pasta con un pesto verde y picante hecho en minutos con rúcula, nueces y queso rallado. Los tomates cherry salteados le dan frescura y jugo.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "vegetariano",
+      "rápido",
+      "pasta",
+      "cena",
+      "italiana"
+    ],
+    "ingredients": [
+      "400 g de tallarines",
+      "2 tazas de rúcula",
+      "1/2 taza de nueces",
+      "1 diente de ajo",
+      "60 g de queso parmesano rallado",
+      "80 ml de aceite de oliva",
+      "250 g de tomates cherry",
+      "1 cda de jugo de limón",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Hervir abundante agua con sal en una olla grande y cocinar los tallarines según el paquete.",
+        "minutes": 11,
+        "passive": true
+      },
+      {
+        "instruction": "Mientras tanto, procesar la rúcula, las nueces, el ajo, el queso, el limón y el aceite hasta lograr una pasta algo rústica."
+      },
+      {
+        "instruction": "Cortar los cherry por la mitad y saltearlos 3 minutos en una sartén con un chorrito de aceite.",
+        "minutes": 3
+      },
+      {
+        "instruction": "Reservar una taza del agua de cocción y escurrir los tallarines."
+      },
+      {
+        "instruction": "Mezclar los tallarines con el pesto fuera del fuego, sumando agua de cocción hasta que quede cremoso."
+      },
+      {
+        "instruction": "Servir con los cherry encima y más queso rallado."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "En sartén con un chorrito de agua, a fuego bajo.",
+      "tip": "Guardá el pesto aparte con una capa de aceite para que no se oscurezca."
+    }
+  },
+  {
+    "title": "Arroz frito con huevo, arvejas y zanahoria",
+    "description": "Arroz salteado a fuego fuerte con huevo revuelto, verduras y salsa de soja. Ideal para aprovechar arroz cocido del día anterior.",
+    "servings": 3,
+    "prep_minutes": 10,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "vegetariano",
+      "rápido",
+      "arroz",
+      "salteado",
+      "asiática",
+      "sobras"
+    ],
+    "ingredients": [
+      "3 tazas de arroz cocido frío",
+      "3 huevos",
+      "1 zanahoria",
+      "1/2 taza de arvejas",
+      "3 cebollas de verdeo",
+      "2 dientes de ajo",
+      "2 cdas de salsa de soja",
+      "1 cdita de aceite de sésamo",
+      "2 cdas de aceite",
+      "1 cdita de jengibre rallado"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortar la zanahoria en cubitos chicos y picar el verdeo, separando lo blanco de lo verde."
+      },
+      {
+        "instruction": "Calentar 1 cda de aceite en un wok o sartén grande y saltear la zanahoria 3 minutos.",
+        "minutes": 3
+      },
+      {
+        "instruction": "Agregar el ajo picado, el jengibre, lo blanco del verdeo y las arvejas; saltear 2 minutos.",
+        "minutes": 2
+      },
+      {
+        "instruction": "Empujar todo a un costado, agregar el resto del aceite y cocinar los huevos batidos revolviendo hasta que cuajen.",
+        "minutes": 2
+      },
+      {
+        "instruction": "Sumar el arroz y desgranarlo con una cuchara. Saltear a fuego fuerte 3 minutos.",
+        "minutes": 3
+      },
+      {
+        "instruction": "Condimentar con la soja y el aceite de sésamo, mezclar y servir con el verdeo verde por encima."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": 60,
+      "reheat": "En sartén caliente 3 minutos o en microondas tapado.",
+      "tip": "Usá el arroz bien frío para que no se pegotee."
+    }
+  },
+  {
+    "title": "Quesadillas de porotos negros y queso con salsa fresca",
+    "description": "Tortillas rellenas de porotos negros especiados y queso fundido, doradas en sartén y servidas con una salsa cruda de tomate y cilantro.",
+    "servings": 4,
+    "prep_minutes": 12,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "vegetariano",
+      "rápido",
+      "mexicana",
+      "cena",
+      "legumbres",
+      "para compartir"
+    ],
+    "ingredients": [
+      "8 tortillas de trigo medianas",
+      "1 lata de porotos negros (400 g)",
+      "250 g de queso cremoso o mozzarella rallado",
+      "1/2 cebolla",
+      "1 cdita de comino",
+      "1 cdita de pimentón",
+      "2 tomates",
+      "1/2 atado de cilantro o perejil",
+      "1 lima",
+      "1 cda de aceite",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Picar la cebolla y rehogarla en una sartén con aceite 3 minutos.",
+        "minutes": 3
+      },
+      {
+        "instruction": "Agregar los porotos escurridos, el comino, el pimentón y sal. Aplastar la mitad con un tenedor y cocinar 4 minutos.",
+        "minutes": 4
+      },
+      {
+        "instruction": "Cortar los tomates en cubitos, mezclarlos con el cilantro picado, jugo de lima y sal para la salsa."
+      },
+      {
+        "instruction": "Armar las quesadillas: queso y porotos sobre media tortilla, doblar al medio."
+      },
+      {
+        "instruction": "Dorar cada quesadilla en una sartén seca 2 minutos de cada lado hasta que el queso se derrita.",
+        "minutes": 4
+      },
+      {
+        "instruction": "Cortar en triángulos y servir con la salsa fresca."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "En sartén seca a fuego medio para que vuelvan a quedar crocantes.",
+      "tip": "Guardá la salsa aparte para que las tortillas no se humedezcan."
+    }
+  },
+  {
+    "title": "Bowl de quinoa con palta, choclo y huevo",
+    "description": "Un bowl completo y fresco con quinoa tibia, choclo, tomate, palta y huevo cocido, aderezado con limón y comino.",
+    "servings": 2,
+    "prep_minutes": 10,
+    "cook_minutes": 18,
+    "difficulty": "facil",
+    "tags": [
+      "vegetariano",
+      "liviano",
+      "almuerzo",
+      "ensalada",
+      "sin gluten",
+      "latinoamericana"
+    ],
+    "ingredients": [
+      "1 taza de quinoa",
+      "2 tazas de agua",
+      "2 huevos",
+      "1 lata de choclo en granos",
+      "1 palta",
+      "2 tomates",
+      "1/2 cebolla morada",
+      "1 limón",
+      "1 cdita de comino",
+      "3 cdas de aceite de oliva",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Enjuagar la quinoa en un colador bajo la canilla durante 1 minuto."
+      },
+      {
+        "instruction": "Hervir la quinoa con el agua y una pizca de sal, tapada y a fuego bajo, 15 minutos.",
+        "minutes": 15,
+        "passive": true
+      },
+      {
+        "instruction": "En otra olla, cocinar los huevos 9 minutos desde que hierve el agua, enfriarlos y pelarlos.",
+        "minutes": 9,
+        "passive": true
+      },
+      {
+        "instruction": "Cortar los tomates, la cebolla morada en plumas finas y la palta en cubos."
+      },
+      {
+        "instruction": "Mezclar el aceite, el jugo de limón, el comino y sal para el aderezo."
+      },
+      {
+        "instruction": "Armar los bowls con quinoa, choclo, tomate, cebolla, palta y huevo en mitades. Aderezar y servir."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Se come frío o a temperatura ambiente.",
+      "tip": "Agregá la palta recién al servir para que no se oxide."
+    }
+  },
+  {
+    "title": "Arroz cremoso de zapallo y queso en una olla",
+    "description": "Arroz meloso con zapallo rallado que se deshace y lo vuelve cremoso, terminado con queso y un toque de nuez moscada.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 20,
+    "difficulty": "facil",
+    "tags": [
+      "vegetariano",
+      "una olla",
+      "arroz",
+      "cena",
+      "invierno",
+      "económico"
+    ],
+    "ingredients": [
+      "1 taza y 1/2 de arroz de grano largo",
+      "400 g de zapallo anco",
+      "1 cebolla",
+      "2 dientes de ajo",
+      "3 tazas y 1/2 de caldo de verduras caliente",
+      "100 g de queso cremoso",
+      "50 g de queso rallado",
+      "1 cda de manteca",
+      "1 pizca de nuez moscada",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Pelar el zapallo y rallarlo con la parte gruesa del rallador. Picar la cebolla y el ajo."
+      },
+      {
+        "instruction": "Derretir la manteca en una olla y rehogar la cebolla y el ajo 3 minutos.",
+        "minutes": 3
+      },
+      {
+        "instruction": "Agregar el arroz y el zapallo rallado y mezclar 1 minuto para que se impregne.",
+        "minutes": 1
+      },
+      {
+        "instruction": "Verter el caldo caliente, sumar nuez moscada, sal y pimienta. Cocinar tapado a fuego medio-bajo 15 minutos, revolviendo un par de veces.",
+        "minutes": 15,
+        "passive": true
+      },
+      {
+        "instruction": "Apagar el fuego, incorporar el queso cremoso en cubos y el rallado y mezclar hasta que se fundan."
+      },
+      {
+        "instruction": "Dejar reposar 2 minutos tapado y servir."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "En olla o microondas con un chorrito de agua o leche.",
+      "tip": "Si queda muy espeso al recalentar, sumale un poco de caldo."
+    }
+  },
+  {
+    "title": "Ensalada tibia de cuscús con verduras salteadas y queso fresco",
+    "description": "Cuscús hidratado en minutos, mezclado con zapallitos, morrón y cebolla salteados, y cubos de queso fresco con hierbas.",
+    "servings": 3,
+    "prep_minutes": 10,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "vegetariano",
+      "rápido",
+      "almuerzo",
+      "ensalada",
+      "mediterránea",
+      "árabe"
+    ],
+    "ingredients": [
+      "1 taza de cuscús",
+      "1 taza de agua caliente",
+      "2 zapallitos",
+      "1 morrón rojo",
+      "1/2 cebolla",
+      "200 g de queso fresco",
+      "1 limón",
+      "1 cdita de comino",
+      "3 cdas de aceite de oliva",
+      "1 puñado de perejil",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Poner el cuscús en un bol con una pizca de sal y 1 cda de aceite. Cubrir con el agua caliente, tapar y dejar 5 minutos.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Cortar los zapallitos, el morrón y la cebolla en cubos chicos."
+      },
+      {
+        "instruction": "Saltear las verduras en una sartén con 2 cdas de aceite a fuego fuerte durante 8 minutos, con comino, sal y pimienta.",
+        "minutes": 8
+      },
+      {
+        "instruction": "Desgranar el cuscús con un tenedor."
+      },
+      {
+        "instruction": "Mezclar el cuscús con las verduras, el jugo de limón y el perejil picado."
+      },
+      {
+        "instruction": "Servir tibio con el queso fresco en cubos por encima."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Se puede comer frío o tibio en microondas 1 minuto.",
+      "tip": "Agregá el queso recién al servir."
+    }
+  },
+  {
+    "title": "Sopa crema de zanahoria y jengibre con tostadas de queso",
+    "description": "Sopa sedosa de zanahoria con jengibre fresco y un toque cítrico, acompañada de tostadas gratinadas con queso.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 20,
+    "difficulty": "facil",
+    "tags": [
+      "vegetariano",
+      "sopa",
+      "invierno",
+      "cena",
+      "económico"
+    ],
+    "ingredients": [
+      "600 g de zanahorias",
+      "1 cebolla",
+      "1 papa mediana",
+      "1 trozo de jengibre fresco (2 cm)",
+      "1 l de agua o caldo de verduras",
+      "1 cda de aceite",
+      "1 naranja (solo el jugo)",
+      "4 rodajas de pan",
+      "100 g de queso rallado",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Pelar y cortar en rodajas finas las zanahorias, la papa y la cebolla. Rallar el jengibre."
+      },
+      {
+        "instruction": "Rehogar la cebolla y el jengibre con el aceite 2 minutos en una olla.",
+        "minutes": 2
+      },
+      {
+        "instruction": "Agregar zanahoria, papa y el líquido. Cocinar tapado 15 minutos hasta que estén muy tiernas.",
+        "minutes": 15,
+        "passive": true
+      },
+      {
+        "instruction": "Mientras tanto, cubrir el pan con queso y gratinarlo en el horno o tostador hasta que burbujee.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Procesar o licuar la sopa con el jugo de naranja hasta que quede lisa."
+      },
+      {
+        "instruction": "Condimentar con sal y pimienta y servir con las tostadas."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 90,
+      "reheat": "En olla a fuego bajo, revolviendo.",
+      "tip": "Freezá solo la sopa; las tostadas hacelas al momento."
+    }
+  },
+  {
+    "title": "Polenta cremosa con tomates cherry y huevo frito",
+    "description": "Polenta instantánea cremosa con queso, coronada con tomates cherry salteados con ajo y un huevo frito de yema líquida.",
+    "servings": 2,
+    "prep_minutes": 5,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "vegetariano",
+      "rápido",
+      "cena",
+      "huevo",
+      "argentina",
+      "económico"
+    ],
+    "ingredients": [
+      "1 taza de polenta de cocción rápida",
+      "4 tazas de agua o caldo de verduras",
+      "60 g de queso rallado",
+      "1 cda de manteca",
+      "250 g de tomates cherry",
+      "2 dientes de ajo",
+      "2 huevos",
+      "2 cdas de aceite de oliva",
+      "1 cdita de orégano",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Hervir el agua con sal en una olla y volcar la polenta en forma de lluvia, revolviendo con batidor."
+      },
+      {
+        "instruction": "Cocinar a fuego bajo 5 minutos, revolviendo seguido, hasta que espese.",
+        "minutes": 5
+      },
+      {
+        "instruction": "Incorporar la manteca y el queso rallado, mezclar y mantener tapada."
+      },
+      {
+        "instruction": "En una sartén, calentar 1 cda de aceite y saltear el ajo laminado con los cherry enteros 5 minutos, con orégano y sal.",
+        "minutes": 5
+      },
+      {
+        "instruction": "Freír los huevos en el aceite restante hasta que la clara cuaje."
+      },
+      {
+        "instruction": "Servir la polenta con los tomates y el huevo encima."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "La polenta, en olla con un chorro de leche o agua. Hacé el huevo fresco.",
+      "tip": "Si se enfría y se firma, cortala en porciones y doralas en sartén."
+    }
+  },
+  {
+    "title": "Pad thai vegetariano con fideos de arroz y maní",
+    "description": "Fideos de arroz salteados con huevo, brotes y verduras en una salsa agridulce de soja, lima y azúcar, con maní picado.",
+    "servings": 3,
+    "prep_minutes": 12,
+    "cook_minutes": 13,
+    "difficulty": "media",
+    "tags": [
+      "vegetariano",
+      "rápido",
+      "asiática",
+      "salteado",
+      "cena",
+      "pasta"
+    ],
+    "ingredients": [
+      "200 g de fideos de arroz",
+      "2 huevos",
+      "1 zanahoria",
+      "1 morrón rojo",
+      "3 cebollas de verdeo",
+      "1 taza de brotes de soja",
+      "2 dientes de ajo",
+      "3 cdas de salsa de soja",
+      "1 cda de azúcar",
+      "2 cdas de jugo de lima",
+      "1 cda de pasta de maní o ketchup casero",
+      "1/3 taza de maní tostado picado",
+      "2 cdas de aceite"
+    ],
+    "steps": [
+      {
+        "instruction": "Hidratar los fideos en agua caliente 8 minutos, hasta que estén flexibles pero firmes. Escurrir.",
+        "minutes": 8,
+        "passive": true
+      },
+      {
+        "instruction": "Mezclar en un bol la soja, el azúcar, la lima y la pasta de maní para la salsa."
+      },
+      {
+        "instruction": "Cortar la zanahoria y el morrón en tiras finas; picar el verdeo y el ajo."
+      },
+      {
+        "instruction": "Saltear zanahoria, morrón y ajo con el aceite a fuego fuerte 3 minutos.",
+        "minutes": 3
+      },
+      {
+        "instruction": "Hacer un hueco, agregar los huevos y revolver hasta que cuajen."
+      },
+      {
+        "instruction": "Sumar los fideos, la salsa, los brotes y el verdeo. Saltear 2 minutos.",
+        "minutes": 2
+      },
+      {
+        "instruction": "Servir con el maní picado y un gajo de lima."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "En sartén con un chorrito de agua a fuego medio.",
+      "tip": "No los hidrates de más: terminan de cocinarse en la sartén."
+    }
+  },
+  {
+    "title": "Ensalada tibia de papas, huevo y rúcula con mostaza y yogur",
+    "description": "Papas en cubos cocidas al punto con huevo duro y rúcula, vestidas con un aderezo cremoso de yogur, mostaza y limón.",
+    "servings": 3,
+    "prep_minutes": 10,
+    "cook_minutes": 18,
+    "difficulty": "facil",
+    "tags": [
+      "vegetariano",
+      "almuerzo",
+      "ensalada",
+      "huevo",
+      "económico",
+      "sobras"
+    ],
+    "ingredients": [
+      "700 g de papas",
+      "3 huevos",
+      "2 tazas de rúcula",
+      "1/2 cebolla morada",
+      "1 pote de yogur natural (170 g)",
+      "1 cda de mostaza",
+      "1 cda de jugo de limón",
+      "2 cdas de aceite de oliva",
+      "1 cda de semillas de sésamo",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortar las papas en cubos de 2 cm y ponerlas en una olla con agua fría y sal."
+      },
+      {
+        "instruction": "Llevar a hervor y cocinar las papas 10 minutos, hasta que estén tiernas pero firmes.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Sumar los huevos a la misma olla durante los últimos 9 minutos de cocción para ahorrar tiempo.",
+        "minutes": 9,
+        "passive": true
+      },
+      {
+        "instruction": "Mezclar el yogur, la mostaza, el limón, el aceite, sal y pimienta para el aderezo."
+      },
+      {
+        "instruction": "Escurrir, enfriar los huevos bajo agua fría, pelarlos y cortarlos en cuartos."
+      },
+      {
+        "instruction": "Mezclar las papas tibias con la cebolla en plumas finas y la mitad del aderezo."
+      },
+      {
+        "instruction": "Servir sobre la rúcula con los huevos, el resto del aderezo y el sésamo."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Se come tibia o fría; no se recomienda recalentar.",
+      "tip": "Guardá la rúcula aparte y agregala al servir."
+    }
+  }
+]

@@ -70,3 +70,27 @@ test("A crea Casa, invita a B y C no puede unirse tras revocar", async ({ browse
   await ctxB.close();
   await ctxC.close();
 });
+
+test("contexto: desde Perfil, la barra inferior vuelve al último grupo y no al personal", async ({
+  browser,
+}) => {
+  test.setTimeout(90_000);
+  const { createTestUser, mobileContext, signIn } = await import("./helpers/auth");
+  const { createGroupAs } = await import("./helpers/recipes");
+  const email = `ctx-${Date.now()}@test.com`;
+  await createTestUser(email, "password123", "Ana");
+  const groupId = await createGroupAs(email, "password123", "Familia");
+  const page = await (await mobileContext(browser)).newPage();
+  await signIn(page, email, "password123");
+  await page.goto(`/g/${groupId}/recetas`);
+  await page.goto("/perfil");
+  await expect(page.getByRole("button", { name: /Familia: cambiar de grupo/ })).toBeVisible();
+  await page.waitForLoadState("networkidle");
+  await expect(async () => {
+    await page
+      .getByRole("navigation", { name: "Principal" })
+      .getByRole("link", { name: "Plan" })
+      .tap({ timeout: 3000 });
+    await expect(page).toHaveURL(new RegExp(`/g/${groupId}/plan`), { timeout: 5000 });
+  }).toPass({ timeout: 30_000 });
+});

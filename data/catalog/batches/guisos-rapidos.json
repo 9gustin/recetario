@@ -1,0 +1,658 @@
+[
+  {
+    "title": "Guiso de carne picada con papas y arvejas",
+    "description": "Un guiso de olla de todos los días: carne picada, papas en cubitos chicos y arvejas en un caldo de tomate con pimentón. Sale en media hora y rinde para repetir.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 25,
+    "difficulty": "facil",
+    "tags": [
+      "guiso",
+      "carne",
+      "una olla",
+      "económico",
+      "almuerzo",
+      "argentina"
+    ],
+    "ingredients": [
+      "2 cda de aceite",
+      "1 cebolla",
+      "1 morrón rojo",
+      "2 dientes de ajo",
+      "400 g de carne picada",
+      "3 papas medianas",
+      "1 cda de pimentón dulce",
+      "1 cdita de comino",
+      "1 lata de tomates triturados",
+      "400 ml de caldo de verduras o agua",
+      "1 taza de arvejas congeladas",
+      "sal y pimienta a gusto",
+      "perejil picado para terminar"
+    ],
+    "steps": [
+      {
+        "instruction": "Picá la cebolla y el morrón en cubitos y el ajo bien fino. Pelá las papas y cortalas en cubos de 1 cm y medio."
+      },
+      {
+        "instruction": "Calentá el aceite en una olla y sofreí la cebolla y el morrón durante 4 minutos.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá la carne picada y el ajo, y desmenuzá con una cuchara hasta que pierda el color rosado.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el pimentón, el comino, sal y pimienta, y mezclá 30 segundos para que larguen aroma."
+      },
+      {
+        "instruction": "Incorporá el tomate, el caldo y las papas. Tapá y cociná a fuego medio.",
+        "minutes": 15,
+        "passive": true
+      },
+      {
+        "instruction": "Agregá las arvejas y cociná 3 minutos más, hasta que las papas estén tiernas y el caldo espese un poco.",
+        "minutes": 3,
+        "passive": true
+      },
+      {
+        "instruction": "Probá, corregí la sal y servilo con perejil picado por encima."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "En olla a fuego bajo con un chorrito de agua, o en microondas tapado.",
+      "tip": "Las papas se ablandan al freezar; si vas a congelar, cortalas un poco más grandes."
+    }
+  },
+  {
+    "title": "Guiso de fideos moñito con pollo y morrón",
+    "description": "Cubitos de pechuga y fideos cocinados directo en el caldo con tomate: la clásica olla de guiso con fideos que se arma sin escurrir nada y queda sedosa.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 25,
+    "difficulty": "facil",
+    "tags": [
+      "guiso",
+      "pollo",
+      "pasta",
+      "una olla",
+      "almuerzo",
+      "para chicos"
+    ],
+    "ingredients": [
+      "2 cda de aceite",
+      "1 cebolla",
+      "1 morrón rojo",
+      "1 zanahoria",
+      "2 dientes de ajo",
+      "400 g de pechuga de pollo",
+      "1 cda de pimentón dulce",
+      "1 lata de tomates triturados",
+      "800 ml de caldo de pollo o agua",
+      "200 g de fideos moñito",
+      "1 cdita de orégano",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá el pollo en cubos de 2 cm y salpimentalo. Picá la cebolla y el morrón, rallá la zanahoria y picá el ajo."
+      },
+      {
+        "instruction": "Doná el pollo en el aceite caliente, en una olla, durante 4 minutos hasta que se selle.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá la cebolla, el morrón, la zanahoria y el ajo, y cociná 4 minutos revolviendo.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el pimentón, el tomate, el orégano y el caldo. Llevá a hervor."
+      },
+      {
+        "instruction": "Echá los fideos, bajá el fuego y cociná sin tapar, revolviendo de vez en cuando, hasta que estén tiernos.",
+        "minutes": 10,
+        "passive": false
+      },
+      {
+        "instruction": "Apagá y dejá reposar 2 minutos antes de servir, así el guiso termina de espesar.",
+        "minutes": 2,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "En olla con un chorro de caldo o agua, porque los fideos absorben el líquido.",
+      "tip": "Es mejor comerlo el mismo día; los fideos siguen hinchándose en la heladera."
+    }
+  },
+  {
+    "title": "Guiso de lentejas rojas con zapallo y curry",
+    "description": "Las lentejas rojas se deshacen en 15 minutos y no necesitan remojo. Con zapallo, leche de coco y curry queda un guiso cremoso, suave y bien reconfortante.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 25,
+    "difficulty": "facil",
+    "tags": [
+      "guiso",
+      "vegano",
+      "legumbres",
+      "india",
+      "una olla",
+      "sin gluten",
+      "invierno"
+    ],
+    "ingredients": [
+      "1 cda de aceite",
+      "1 cebolla",
+      "2 dientes de ajo",
+      "1 cda de jengibre fresco rallado",
+      "1 cda de curry en polvo",
+      "1 cdita de comino",
+      "300 g de zapallo anco",
+      "1 taza de lentejas rojas",
+      "1 lata de leche de coco",
+      "500 ml de agua",
+      "el jugo de 1/2 limón",
+      "sal a gusto",
+      "cilantro o perejil picado"
+    ],
+    "steps": [
+      {
+        "instruction": "Picá la cebolla fina, el ajo bien chiquito y cortá el zapallo en cubos de 1 cm. Enjuagá las lentejas en un colador."
+      },
+      {
+        "instruction": "Sofreí la cebolla en el aceite durante 4 minutos, hasta que esté transparente.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el ajo, el jengibre, el curry y el comino, y revolvé 1 minuto."
+      },
+      {
+        "instruction": "Sumá el zapallo, las lentejas, la leche de coco, el agua y un poco de sal. Llevá a hervor suave."
+      },
+      {
+        "instruction": "Tapá y cociná a fuego bajo, revolviendo un par de veces, hasta que el zapallo y las lentejas estén tiernos.",
+        "minutes": 18,
+        "passive": true
+      },
+      {
+        "instruction": "Aplastá un poco el zapallo con el revés de una cuchara, exprimí el limón y corregí la sal."
+      },
+      {
+        "instruction": "Serví con cilantro o perejil por encima."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 90,
+      "reheat": "En olla a fuego bajo con un chorrito de agua, revolviendo.",
+      "tip": "Espesa mucho al enfriarse: sumale agua al recalentar."
+    }
+  },
+  {
+    "title": "Garbanzos estofados con espinaca y pimentón ahumado",
+    "description": "Garbanzos de lata en una salsa de tomate con ajo, comino y pimentón ahumado, con espinaca que se achica al final. Económico, vegano y listo en 25 minutos.",
+    "servings": 3,
+    "prep_minutes": 8,
+    "cook_minutes": 20,
+    "difficulty": "facil",
+    "tags": [
+      "guiso",
+      "vegano",
+      "legumbres",
+      "española",
+      "una olla",
+      "rápido",
+      "económico",
+      "sin lácteos"
+    ],
+    "ingredients": [
+      "2 cda de aceite de oliva",
+      "1 cebolla",
+      "3 dientes de ajo",
+      "1 cda de pimentón ahumado",
+      "1 cdita de comino",
+      "1 lata de tomates triturados",
+      "2 latas de garbanzos",
+      "200 ml de agua",
+      "200 g de espinaca fresca",
+      "1 cda de vinagre de vino",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Escurrí y enjuagá los garbanzos. Picá la cebolla fina y laminá el ajo."
+      },
+      {
+        "instruction": "Rehogá la cebolla en el aceite de oliva durante 5 minutos a fuego medio.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el ajo, el pimentón y el comino, y mezclá apenas 30 segundos para que no se quemen."
+      },
+      {
+        "instruction": "Volcá el tomate, el agua y los garbanzos. Salpimentá y cociná a fuego medio-bajo.",
+        "minutes": 12,
+        "passive": true
+      },
+      {
+        "instruction": "Incorporá la espinaca por puñados y mezclá 2 minutos hasta que se achique.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Apagá, sumá el vinagre y probá la sal."
+      }
+    ],
+    "storage": {
+      "fridge_days": 4,
+      "freezer_days": 90,
+      "reheat": "En sartén u olla con un chorrito de agua a fuego medio.",
+      "tip": "Mejora al día siguiente, cuando los sabores se asientan."
+    }
+  },
+  {
+    "title": "Guiso de arroz con chorizo y verduras",
+    "description": "Arroz cocinado en la misma olla con chorizo desmenuzado, morrón, zanahoria y choclo. Queda húmedo y sabroso, de esos platos únicos que salvan la cena.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 28,
+    "difficulty": "media",
+    "tags": [
+      "guiso",
+      "arroz",
+      "cerdo",
+      "una olla",
+      "cena",
+      "argentina",
+      "sin gluten"
+    ],
+    "ingredients": [
+      "2 chorizos frescos",
+      "1 cebolla",
+      "1 morrón rojo",
+      "1 zanahoria",
+      "2 dientes de ajo",
+      "2 tomates perita",
+      "1 cdita de pimentón dulce",
+      "1 taza de arroz largo fino",
+      "2 tazas y 1/2 de caldo caliente o agua",
+      "1 lata de choclo en granos",
+      "1 hoja de laurel",
+      "sal y pimienta a gusto",
+      "perejil picado"
+    ],
+    "steps": [
+      {
+        "instruction": "Sacale la tripa a los chorizos y desmenuzalos en una olla grande sin aceite. Cocinalos 5 minutos hasta que larguen grasa y se doren.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá la cebolla, el morrón y la zanahoria en cubitos, y cociná 4 minutos.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el ajo picado, los tomates en cubos y el pimentón. Cociná 3 minutos más.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Incorporá el arroz y revolvé 1 minuto para que se nacare con la grasa."
+      },
+      {
+        "instruction": "Volcá el caldo caliente, el laurel y una pizca de sal. Mezclá una sola vez, tapá y cociná a fuego bajo.",
+        "minutes": 15,
+        "passive": true
+      },
+      {
+        "instruction": "Agregá el choclo escurrido, tapá de nuevo y dejá reposar con el fuego apagado.",
+        "minutes": 3,
+        "passive": true
+      },
+      {
+        "instruction": "Sacá el laurel, soltá el arroz con un tenedor y serví con perejil."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "En microondas tapado con una cucharada de agua, o en sartén a fuego medio.",
+      "tip": "Enfriá el arroz rápido y guardalo en la heladera dentro de la hora de cocinado."
+    }
+  },
+  {
+    "title": "Estofado de pollo con calabaza y choclo",
+    "description": "Cubos de pollo, calabaza cortada chica y choclo en un caldo con pimentón y orégano. La calabaza se ablanda y espesa el estofado de forma natural, sin harina.",
+    "servings": 4,
+    "prep_minutes": 12,
+    "cook_minutes": 25,
+    "difficulty": "facil",
+    "tags": [
+      "guiso",
+      "pollo",
+      "una olla",
+      "almuerzo",
+      "invierno",
+      "argentina"
+    ],
+    "ingredients": [
+      "2 cda de aceite",
+      "600 g de pechuga de pollo",
+      "1 cebolla",
+      "2 dientes de ajo",
+      "400 g de calabaza",
+      "1 cda de pimentón dulce",
+      "1 cdita de orégano",
+      "500 ml de caldo de pollo o agua",
+      "1 lata de choclo en granos",
+      "1 cda de salsa de tomate",
+      "sal y pimienta a gusto",
+      "perejil picado"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá el pollo en cubos de 3 cm y salpimentalo. Cortá la calabaza, sin cáscara, en cubos de 1 cm y medio."
+      },
+      {
+        "instruction": "Doná el pollo en el aceite caliente, en tandas, 4 minutos hasta que tome color. Retiralo a un plato.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "En la misma olla rehogá la cebolla picada 4 minutos y sumá el ajo, el pimentón y el orégano.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Devolvé el pollo y agregá la calabaza, la salsa de tomate y el caldo. Tapá y cociná a fuego medio-bajo.",
+        "minutes": 15,
+        "passive": true
+      },
+      {
+        "instruction": "Sumá el choclo escurrido y cociná 2 minutos más. Aplastá un poco de calabaza para espesar.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Probá, corregí la sal y serví con perejil."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "En olla a fuego bajo con un chorrito de caldo o agua.",
+      "tip": "Si queda líquido de más, cocinalo 3 minutos sin tapa para que espese."
+    }
+  },
+  {
+    "title": "Estofado de merluza con papas y tomate",
+    "description": "Papas en rodajas finas que se cocinan en un caldo de tomate, morrón y pimentón, y al final los filetes de merluza, que se hacen en pocos minutos y quedan jugosos.",
+    "servings": 3,
+    "prep_minutes": 10,
+    "cook_minutes": 25,
+    "difficulty": "media",
+    "tags": [
+      "guiso",
+      "pescado",
+      "una olla",
+      "sin gluten",
+      "sin lácteos",
+      "almuerzo"
+    ],
+    "ingredients": [
+      "2 cda de aceite de oliva",
+      "1 cebolla",
+      "1 morrón verde",
+      "2 dientes de ajo",
+      "1 cdita de pimentón dulce",
+      "1 lata de tomates triturados",
+      "200 ml de caldo de verduras o agua",
+      "2 papas medianas",
+      "1 hoja de laurel",
+      "500 g de filetes de merluza",
+      "sal y pimienta a gusto",
+      "perejil picado",
+      "1 limón para servir"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá la cebolla y el morrón en tiritas, picá el ajo y pelá las papas en rodajas de medio centímetro."
+      },
+      {
+        "instruction": "Rehogá la cebolla y el morrón en el aceite de oliva durante 5 minutos.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el ajo y el pimentón, y mezclá 30 segundos."
+      },
+      {
+        "instruction": "Sumá el tomate, el caldo, el laurel y las papas. Salpimentá, tapá y cociná a fuego medio.",
+        "minutes": 13,
+        "passive": true
+      },
+      {
+        "instruction": "Cortá la merluza en trozos grandes, salala y acomodala sobre las papas. Tapá y cociná sin revolver.",
+        "minutes": 6,
+        "passive": true
+      },
+      {
+        "instruction": "Sacá el laurel, espolvoreá con perejil y serví con gajos de limón."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "En sartén tapada a fuego bajo, con un chorrito de agua, sin hervir fuerte.",
+      "tip": "El pescado cocido se conserva menos: comelo dentro de las 24 horas."
+    }
+  },
+  {
+    "title": "Guiso de porotos blancos con panceta y tomate",
+    "description": "Porotos alubia de lata con panceta ahumada, zanahoria y tomate, perfumados con salvia. Un guiso de cuchara intenso que sale sin remojo ni horas de hervor.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 22,
+    "difficulty": "facil",
+    "tags": [
+      "guiso",
+      "legumbres",
+      "cerdo",
+      "una olla",
+      "invierno",
+      "rápido",
+      "sin gluten"
+    ],
+    "ingredients": [
+      "1 cda de aceite",
+      "100 g de panceta ahumada",
+      "1 cebolla",
+      "1 zanahoria",
+      "2 dientes de ajo",
+      "1 cdita de pimentón ahumado",
+      "4 hojas de salvia",
+      "1 lata de tomates triturados",
+      "300 ml de caldo o agua",
+      "2 latas de porotos alubia",
+      "sal y pimienta a gusto",
+      "1 cda de perejil picado"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá la panceta en cubitos, picá la cebolla, la zanahoria y el ajo. Escurrí y enjuagá los porotos."
+      },
+      {
+        "instruction": "Cociná la panceta en el aceite hasta que esté dorada y crocante.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá la cebolla y la zanahoria y rehogá 4 minutos. Sumá el ajo, el pimentón y la salvia.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Volcá el tomate y el caldo, y dejá que hierva suave.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Incorporá los porotos, salpimentá y cociná a fuego bajo hasta que la salsa espese.",
+        "minutes": 8,
+        "passive": true
+      },
+      {
+        "instruction": "Aplastá un puñado de porotos contra la olla para dar cremosidad. Serví con perejil."
+      }
+    ],
+    "storage": {
+      "fridge_days": 4,
+      "freezer_days": 90,
+      "reheat": "En olla a fuego bajo con un chorrito de agua, revolviendo.",
+      "tip": "Probá la sal al final: la panceta y el caldo ya aportan bastante."
+    }
+  },
+  {
+    "title": "Estofado de cerdo con manzana verde y mostaza",
+    "description": "Tiras de carré de cerdo salteadas y cocidas con cebolla, manzana verde, mostaza y un chorro de crema. Mezcla de dulce y ácido para servir con arroz o puré.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 22,
+    "difficulty": "media",
+    "tags": [
+      "guiso",
+      "cerdo",
+      "salteado",
+      "cena",
+      "rápido"
+    ],
+    "ingredients": [
+      "500 g de bifes de cerdo (carré o peceto)",
+      "1 cda de aceite",
+      "1 cda de manteca",
+      "1 cebolla",
+      "2 manzanas verdes",
+      "1 cda de harina",
+      "1 cda de mostaza",
+      "1 cdita de tomillo",
+      "200 ml de caldo de pollo o agua",
+      "100 ml de crema de leche",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá el cerdo en tiras de 1 cm de ancho y salpimentalas. Cortá la cebolla en pluma y las manzanas en gajos finos."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén grande y doná las tiras de cerdo en dos tandas, 3 minutos cada una. Retirá a un plato.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "En la misma sartén derretí la manteca y cociná la cebolla 4 minutos.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá las manzanas y el tomillo, y cociná 3 minutos más.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Espolvoreá la harina, mezclá 1 minuto y sumá la mostaza y el caldo. Revolvé hasta que espese apenas.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Devolvé la carne con sus jugos y agregá la crema. Cociná a fuego bajo 3 minutos y probá la sal.",
+        "minutes": 3,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "En sartén a fuego bajo con un chorrito de caldo, sin hervir fuerte.",
+      "tip": "No lo cocines de más: el cerdo en tiras finas se seca rápido."
+    }
+  },
+  {
+    "title": "Guiso de ñoquis con espinaca y queso cremoso",
+    "description": "Ñoquis de papa cocidos directamente en una salsa de tomate liviana, con espinaca y cubos de queso cremoso que se derriten. Todo en una olla y en 25 minutos.",
+    "servings": 3,
+    "prep_minutes": 8,
+    "cook_minutes": 20,
+    "difficulty": "facil",
+    "tags": [
+      "guiso",
+      "vegetariano",
+      "pasta",
+      "italiana",
+      "una olla",
+      "rápido",
+      "cena"
+    ],
+    "ingredients": [
+      "1 cda de aceite de oliva",
+      "1 cebolla",
+      "2 dientes de ajo",
+      "1 lata de tomates triturados",
+      "300 ml de caldo de verduras o agua",
+      "1 cdita de orégano",
+      "500 g de ñoquis de papa",
+      "150 g de espinaca fresca",
+      "150 g de queso cremoso",
+      "sal y pimienta a gusto",
+      "queso rallado para servir"
+    ],
+    "steps": [
+      {
+        "instruction": "Picá la cebolla fina y el ajo. Cortá el queso cremoso en cubos de 1 cm."
+      },
+      {
+        "instruction": "Rehogá la cebolla en el aceite de oliva durante 4 minutos y sumá el ajo 1 minuto.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el tomate, el caldo, el orégano, sal y pimienta. Hervilo a fuego medio.",
+        "minutes": 8,
+        "passive": true
+      },
+      {
+        "instruction": "Echá los ñoquis y cociná revolviendo suave hasta que floten y estén tiernos.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá la espinaca y mezclá 1 minuto hasta que se achique.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Apagá, repartí los cubos de queso por encima y tapá 2 minutos para que se derritan.",
+        "minutes": 2,
+        "passive": true
+      },
+      {
+        "instruction": "Serví con queso rallado."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "En sartén a fuego bajo con un chorrito de agua, tapado.",
+      "tip": "Los ñoquis se ablandan al guardarlos; es mejor hacer solo lo que vayas a comer."
+    }
+  }
+]

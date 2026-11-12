@@ -11,6 +11,7 @@ import { mismatchedGroups, rulesFor } from "@/lib/domain/meal-rules";
 import { dayOfWeek, daysBetween } from "@/lib/domain/week";
 import { pickIdeas, type RecipeSignal } from "@/lib/suggest/signals";
 import { loadIngredientsForCheck } from "@/lib/recipes/compatibility";
+import { searchCatalog } from "@/lib/public/catalog";
 import { saveRecipeWith } from "@/lib/recipes/save";
 import {
   newRecipesSchema,
@@ -199,14 +200,59 @@ export async function suggestFromPantry(
     (c) => c.missing.length === 0 || scoreOf(scored, c.recipeId) >= STRONG,
   );
   if (strong.length < 2 && have.length > 0) {
-    const created = await proposeNew(input, diets, 2 - strong.length);
-    for (const card of created) cards.set(card.recipeId, card);
+    // Primero el catálogo público (gratis y sin IA); la IA solo si todavía faltan opciones.
+    const fromCatalog = await catalogByCoverage(supabase, have, diets, 2 - strong.length);
+    for (const card of fromCatalog) cards.set(card.recipeId, card);
+    const missing = 2 - strong.length - fromCatalog.length;
+    if (missing > 0) {
+      const created = await proposeNew(input, diets, missing);
+      for (const card of created) cards.set(card.recipeId, card);
+    }
   }
 
   return { ok: true, cards: [...cards.values()] };
 }
 
 const scoreOf = (scored: Scored[], id: string) => scored.find((s) => s.c.id === id)?.cov.score ?? 0;
+
+/** Recetas del catálogo que se pueden hacer con lo que hay (cobertura por código), aptas para todo el grupo. */
+async function catalogByCoverage(
+  supabase: Client,
+  have: string[],
+  diets: Awaited<ReturnType<typeof loadDiets>>,
+  count: number,
+): Promise<SuggestCard[]> {
+  if (count <= 0) return [];
+  const hits = await searchCatalog(supabase, {
+    q: have.length ? have.join(" or ") : undefined,
+    diets,
+    limit: 20,
+  });
+  const scored = hits
+    .map((h) => ({ h, cov: computeCoverage(have, h.ingredients) }))
+    .filter((s) => have.length === 0 || s.cov.score >= 0.6)
+    .sort(
+      (a, b) =>
+        b.cov.score - a.cov.score || (a.h.total_minutes ?? 999) - (b.h.total_minutes ?? 999),
+    );
+  // Sin ingredientes dichos (ideas), se muestra variedad en vez de siempre las mismas.
+  const picked =
+    have.length === 0
+      ? scored.sort(() => Math.random() - 0.5).slice(0, count)
+      : scored.slice(0, count);
+  return picked.map(({ h, cov }) => ({
+    recipeId: h.id,
+    title: h.title,
+    imageUrl: h.image_url,
+    totalMinutes: h.total_minutes,
+    line: have.length ? coverageLabel(cov) : "Del catálogo: rápida y probada",
+    label: have.length ? coverageLabel(cov) : "Del catálogo",
+    missing: cov.missing,
+    isNew: false,
+    catalog: true,
+    slug: h.slug,
+  }));
+}
 
 export async function proposeNew(
   input: PantryInput,
@@ -295,6 +341,10 @@ export async function suggestIdeas(
   const diets = await loadDiets(supabase, groupId);
 
   if (input.tab === "new") {
+    // Primero el catálogo (sin costo); si no alcanza, la IA inventa el resto.
+    const fromCatalog = await catalogByCoverage(supabase, [], diets, 3);
+    if (fromCatalog.length >= 3)
+      return { ok: true, cards: fromCatalog.map((c) => ({ ...c, reason: c.line })) };
     const cards = await proposeNew(
       {
         supabase,

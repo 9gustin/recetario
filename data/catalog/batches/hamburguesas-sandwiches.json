@@ -1,0 +1,593 @@
+[
+  {
+    "title": "Lomito completo a la plancha",
+    "description": "El clásico lomito de bife finito con jamón, queso, huevo frito, lechuga y tomate, armado en 20 minutos en la sartén.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "sándwich",
+      "carne",
+      "argentina",
+      "almuerzo",
+      "cena",
+      "rápido"
+    ],
+    "ingredients": [
+      "400 g de lomo cortado en bifes finos",
+      "4 panes de lomito o panes grandes",
+      "4 fetas de jamón cocido",
+      "4 fetas de queso de sándwich",
+      "4 huevos",
+      "1 tomate",
+      "4 hojas de lechuga",
+      "2 cda de aceite",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá el tomate en rodajas y lavá la lechuga. Abrí los panes al medio."
+      },
+      {
+        "instruction": "Salpimentá los bifes y aplastalos con la mano para que queden bien finos."
+      },
+      {
+        "instruction": "Calentá una sartén grande con la mitad del aceite y cociná los bifes 2 minutos de cada lado.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Poné una feta de queso sobre cada bife y tapá un minuto para que se derrita.",
+        "minutes": 1,
+        "passive": true
+      },
+      {
+        "instruction": "Tostá los panes unos segundos en la misma sartén o en una plancha.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Freí los huevos en el resto del aceite hasta que la clara se cuaje y dejá la yema a tu gusto.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Armá cada lomito con lechuga, tomate, jamón, el bife con queso y el huevo arriba."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Recalentá el bife en sartén y armá el sándwich recién antes de comer.",
+      "tip": "Guardá la carne separada de la verdura y el pan para que no se ablande."
+    }
+  },
+  {
+    "title": "Choripán con salsa criolla exprés",
+    "description": "Chorizos mariposa bien dorados en pan crujiente, con una salsa criolla fresca de tomate, cebolla y perejil que se hace mientras se cocinan.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "sándwich",
+      "cerdo",
+      "argentina",
+      "para compartir",
+      "rápido",
+      "cena"
+    ],
+    "ingredients": [
+      "4 chorizos frescos",
+      "4 panes de pancho grandes o medialunas saladas",
+      "2 tomates",
+      "1/2 cebolla",
+      "2 cda de perejil picado",
+      "1 cda de vinagre",
+      "2 cda de aceite de oliva",
+      "1 cdita de orégano",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá cada chorizo al medio a lo largo sin separarlo del todo, para abrirlo en mariposa."
+      },
+      {
+        "instruction": "Picá los tomates y la cebolla en cubos chiquitos y mezclalos con perejil, vinagre, aceite, orégano y sal."
+      },
+      {
+        "instruction": "Calentá una sartén grande o plancha a fuego medio y poné los chorizos con el lado abierto hacia abajo.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Dalos vuelta y cociná 5 minutos más hasta que estén bien dorados y cocidos por dentro.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Abrí los panes y tostalos un minuto en la grasa de la sartén.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Armá con el chorizo y cubrí con la salsa criolla."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Recalentá el chorizo en sartén 3 minutos de cada lado.",
+      "tip": "La salsa criolla guardala aparte y consumila en el día."
+    }
+  },
+  {
+    "title": "Hamburguesas de pollo con palta y limón",
+    "description": "Medallones jugosos de pollo picado con ajo y perejil, servidos con palta pisada con limón y hojas verdes.",
+    "servings": 4,
+    "prep_minutes": 12,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "sándwich",
+      "pollo",
+      "alto en proteína",
+      "almuerzo",
+      "cena",
+      "para chicos"
+    ],
+    "ingredients": [
+      "500 g de carne de pollo picada",
+      "1 diente de ajo",
+      "2 cda de perejil picado",
+      "1/2 taza de pan rallado",
+      "1 huevo",
+      "1 palta madura",
+      "1 limón",
+      "4 panes de hamburguesa",
+      "1 tomate",
+      "hojas verdes a gusto",
+      "1 cda de aceite",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Mezclá el pollo con el ajo rallado, perejil, pan rallado, huevo, sal y pimienta."
+      },
+      {
+        "instruction": "Formá 4 hamburguesas y aplastalas un poco para que se cocinen parejas."
+      },
+      {
+        "instruction": "Pisá la palta con el jugo de medio limón y una pizca de sal."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén y cociná las hamburguesas 5 minutos de cada lado, hasta que no queden rosadas.",
+        "minutes": 10,
+        "passive": false
+      },
+      {
+        "instruction": "Tostá los panes en la sartén un minuto.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Armá con palta, hamburguesa, tomate en rodajas y hojas verdes."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Recalentá las hamburguesas en sartén tapada 3 minutos de cada lado.",
+      "tip": "Congelá los medallones crudos separados con papel manteca."
+    }
+  },
+  {
+    "title": "Hamburguesas de lentejas y zanahoria",
+    "description": "Hamburguesas vegetarianas hechas con lentejas de lata, zanahoria rallada y comino, firmes y doraditas, con queso crema y rúcula.",
+    "servings": 4,
+    "prep_minutes": 12,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "sándwich",
+      "vegetariano",
+      "legumbres",
+      "económico",
+      "almuerzo",
+      "para freezar"
+    ],
+    "ingredients": [
+      "1 lata de lentejas cocidas (400 g)",
+      "1 zanahoria",
+      "1/2 cebolla",
+      "4 cda de avena arrollada",
+      "1 huevo",
+      "1 cdita de comino",
+      "1 cdita de pimentón",
+      "4 panes de hamburguesa",
+      "4 cda de queso crema",
+      "1 puñado de rúcula",
+      "2 cda de aceite",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Escurrí bien las lentejas, enjuagalas y pisalas con un tenedor dejando algo de textura."
+      },
+      {
+        "instruction": "Rallá la zanahoria y picá finita la cebolla."
+      },
+      {
+        "instruction": "Mezclá todo con la avena, el huevo, el comino, el pimentón y sal. Dejá reposar 3 minutos.",
+        "minutes": 3,
+        "passive": true
+      },
+      {
+        "instruction": "Formá 4 hamburguesas con las manos húmedas."
+      },
+      {
+        "instruction": "Doralas en una sartén con aceite 4 o 5 minutos de cada lado, dándolas vuelta con cuidado.",
+        "minutes": 9,
+        "passive": false
+      },
+      {
+        "instruction": "Untá los panes con queso crema y armá con la hamburguesa y la rúcula."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 90,
+      "reheat": "Recalentá en sartén o airfryer 4 minutos de cada lado.",
+      "tip": "Si la mezcla queda muy húmeda, sumá una cucharada más de avena."
+    }
+  },
+  {
+    "title": "Hamburguesas de cerdo con salsa barbacoa casera y repollo",
+    "description": "Carne de cerdo picada con pimentón ahumado, una salsa barbacoa que se hace en 3 minutos y repollo colorado crocante.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 13,
+    "difficulty": "facil",
+    "tags": [
+      "sándwich",
+      "cerdo",
+      "salsa",
+      "cena",
+      "para compartir"
+    ],
+    "ingredients": [
+      "500 g de carne de cerdo picada",
+      "1 cdita de pimentón ahumado",
+      "1 diente de ajo",
+      "3 cda de salsa de tomate",
+      "1 cda de mostaza",
+      "1 cda de azúcar mascabo",
+      "1 cda de vinagre de manzana",
+      "1 taza de repollo colorado rallado",
+      "4 panes de hamburguesa",
+      "1 cda de aceite",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Mezclá el cerdo con el ajo rallado, la mitad del pimentón, sal y pimienta. Formá 4 hamburguesas."
+      },
+      {
+        "instruction": "En una ollita poné la salsa de tomate, mostaza, azúcar, vinagre y el resto del pimentón."
+      },
+      {
+        "instruction": "Cociná la salsa a fuego bajo 3 minutos, revolviendo, hasta que espese.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén y cociná las hamburguesas 5 minutos de cada lado.",
+        "minutes": 10,
+        "passive": false
+      },
+      {
+        "instruction": "Pincelá las hamburguesas con un poco de salsa en el último minuto."
+      },
+      {
+        "instruction": "Armá los panes con el repollo, la hamburguesa y más salsa."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Recalentá las hamburguesas en sartén tapada con un chorrito de agua.",
+      "tip": "El cerdo tiene que quedar bien cocido y sin partes rosadas."
+    }
+  },
+  {
+    "title": "Sándwich caliente de champiñones y provolone",
+    "description": "Champiñones salteados con cebolla, ajo y soja sobre pan ciabatta, gratinados con provolone. Vegetariano y contundente.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 13,
+    "difficulty": "facil",
+    "tags": [
+      "sándwich",
+      "vegetariano",
+      "verdura",
+      "almuerzo",
+      "cena"
+    ],
+    "ingredients": [
+      "400 g de champiñones",
+      "1 cebolla",
+      "2 dientes de ajo",
+      "1 cda de salsa de soja",
+      "1 cdita de orégano",
+      "4 panes tipo ciabatta",
+      "8 fetas de queso provolone",
+      "1 cda de aceite",
+      "2 cda de perejil picado",
+      "pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Laminá los champiñones, cortá la cebolla en plumas y picá el ajo."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén grande y salteá la cebolla 3 minutos.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá los champiñones y salteá a fuego fuerte 6 minutos, hasta que se dore el líquido.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el ajo, la soja, el orégano y pimienta. Cociná 1 minuto más y apagá.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Abrí los panes, poné champiñones y cubrí con el provolone."
+      },
+      {
+        "instruction": "Gratiná los sándwiches en una sartén tapada a fuego bajo o en el horno fuerte hasta que se derrita el queso.",
+        "minutes": 3,
+        "passive": true
+      },
+      {
+        "instruction": "Espolvoreá con perejil y servilos calientes."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Recalentá en sartén tapada o en airfryer 3 minutos.",
+      "tip": "No sales los champiñones al principio, así sueltan menos agua y se doran."
+    }
+  },
+  {
+    "title": "Panini de berenjena grillada, muzzarella y albahaca",
+    "description": "Rodajas de berenjena doradas con muzzarella derretida, tomate y albahaca en pan ciabatta tostado y prensado en la sartén.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 15,
+    "difficulty": "media",
+    "tags": [
+      "sándwich",
+      "vegetariano",
+      "italiana",
+      "verdura",
+      "almuerzo"
+    ],
+    "ingredients": [
+      "1 berenjena grande",
+      "8 rebanadas de pan ciabatta o pan de campo",
+      "200 g de muzzarella en fetas",
+      "1 tomate",
+      "12 hojas de albahaca",
+      "3 cda de aceite de oliva",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá la berenjena en rodajas de 1 cm y salalas apenas."
+      },
+      {
+        "instruction": "Calentá una sartén con 1 cucharada de aceite y dorá las rodajas de a tandas, 3 minutos de cada lado.",
+        "minutes": 10,
+        "passive": false
+      },
+      {
+        "instruction": "Secá las berenjenas con papel de cocina para sacar el exceso de grasa."
+      },
+      {
+        "instruction": "Armá los sándwiches con berenjena, muzzarella, tomate en rodajas finas y albahaca."
+      },
+      {
+        "instruction": "Pincelá el exterior del pan con aceite y cociná en la sartén, apretando con una tapa o con un plato pesado, 2 minutos de cada lado.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Cortá al medio y serví caliente."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Recalentá en sartén o airfryer hasta que el pan esté crocante.",
+      "tip": "Podés dorar la berenjena en airfryer para usar menos aceite."
+    }
+  },
+  {
+    "title": "Sándwich de huevo, panceta crocante y queso",
+    "description": "Un sándwich de desayuno o cena rápida: panceta bien crocante, huevo a la plancha y queso derretido en pan de hamburguesa tostado.",
+    "servings": 4,
+    "prep_minutes": 5,
+    "cook_minutes": 13,
+    "difficulty": "facil",
+    "tags": [
+      "sándwich",
+      "huevo",
+      "desayuno",
+      "cena",
+      "rápido",
+      "para chicos"
+    ],
+    "ingredients": [
+      "8 fetas de panceta ahumada",
+      "4 huevos",
+      "4 panes de hamburguesa",
+      "4 fetas de queso cheddar o de sándwich",
+      "1 cda de manteca",
+      "pimienta a gusto",
+      "hojas de rúcula a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Poné la panceta en una sartén fría y encendé el fuego medio."
+      },
+      {
+        "instruction": "Cociná la panceta 6 minutos, dándola vuelta, hasta que quede crocante. Pasala a un plato con papel.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Sacá el exceso de grasa de la sartén, agregá la manteca y tostá los panes abiertos 1 minuto.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Cascá los huevos en la sartén y cocinalos 3 minutos con pimienta, tapados si te gustan bien cuajados.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Poné el queso sobre los huevos al final para que se derrita.",
+        "minutes": 1,
+        "passive": true
+      },
+      {
+        "instruction": "Armá cada pan con rúcula, panceta y el huevo con queso."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Recalentá la panceta y el huevo en sartén 2 minutos.",
+      "tip": "Para que no se ablande el pan, armalo justo antes de comer."
+    }
+  },
+  {
+    "title": "Sándwich cubano prensado de jamón, queso y pepinillos",
+    "description": "Pan francés relleno con jamón, queso, pepinillos y mostaza, tostado y aplastado en la sartén hasta quedar crocante por fuera y fundido por dentro.",
+    "servings": 4,
+    "prep_minutes": 7,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "sándwich",
+      "rápido",
+      "almuerzo",
+      "cena",
+      "sin horno",
+      "latinoamericana"
+    ],
+    "ingredients": [
+      "4 panes francés chicos o 2 largos cortados al medio",
+      "8 fetas de jamón cocido",
+      "8 fetas de queso cremoso",
+      "4 pepinillos en vinagre",
+      "2 cda de mostaza",
+      "1 cda de manteca"
+    ],
+    "steps": [
+      {
+        "instruction": "Abrí los panes al medio y untá ambos lados con mostaza."
+      },
+      {
+        "instruction": "Rellená con jamón, queso y los pepinillos cortados en rodajas finas."
+      },
+      {
+        "instruction": "Untá el exterior de los panes con manteca blanda."
+      },
+      {
+        "instruction": "Calentá una sartén grande a fuego medio y poné los sándwiches. Apretalos con otra sartén o un plato con peso.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Dalos vuelta y cociná 4 minutos más, hasta que el pan esté dorado y el queso derretido.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Cortalos en diagonal y servilos calientes."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Recalentá en sartén a fuego bajo, prensado, 3 minutos de cada lado.",
+      "tip": "Usá fuego medio: si es muy fuerte, el pan se quema antes de que se derrita el queso."
+    }
+  },
+  {
+    "title": "Tostado gratinado de atún, tomate y cebolla de verdeo",
+    "description": "Pan de molde relleno con ensalada de atún cremosa, tomate y queso, dorado en la sartén hasta que se derrite todo.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "sándwich",
+      "pescado",
+      "económico",
+      "rápido",
+      "almuerzo",
+      "cena"
+    ],
+    "ingredients": [
+      "2 latas de atún al natural",
+      "3 cda de mayonesa",
+      "1 cebolla de verdeo",
+      "1 cdita de mostaza",
+      "1/2 limón",
+      "8 rebanadas de pan de molde grandes",
+      "8 fetas de queso cremoso",
+      "1 tomate",
+      "2 cda de manteca",
+      "pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Escurrí el atún y desmenuzalo en un bowl."
+      },
+      {
+        "instruction": "Sumá la mayonesa, la mostaza, el jugo de limón, la cebolla de verdeo picada fina y pimienta. Mezclá."
+      },
+      {
+        "instruction": "Cortá el tomate en rodajas finas."
+      },
+      {
+        "instruction": "Armá 4 sándwiches con queso, atún, tomate y otra feta de queso arriba."
+      },
+      {
+        "instruction": "Untá el exterior del pan con manteca."
+      },
+      {
+        "instruction": "Doralos en una sartén a fuego medio-bajo, 4 minutos de cada lado, tapados para que el queso se derrita.",
+        "minutes": 8,
+        "passive": false
+      },
+      {
+        "instruction": "Cortá en triángulos y servilos calientes."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Recalentá en sartén a fuego bajo hasta que el pan vuelva a estar crocante.",
+      "tip": "Guardá la mezcla de atún en la heladera hasta el momento de armar."
+    }
+  }
+]

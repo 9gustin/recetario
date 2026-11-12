@@ -1,0 +1,681 @@
+[
+  {
+    "title": "Crema de zapallo y jengibre",
+    "description": "Crema sedosa de zapallo anco con un toque de jengibre fresco. Cortado bien chico, se cocina en un ratito.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 20,
+    "difficulty": "facil",
+    "tags": [
+      "sopa",
+      "liviano",
+      "vegano",
+      "sin lácteos",
+      "una olla",
+      "invierno",
+      "para freezar"
+    ],
+    "ingredients": [
+      "700 g de zapallo anco pelado",
+      "1 cebolla",
+      "1 cda de jengibre fresco rallado",
+      "1 cda de aceite de oliva",
+      "1 papa mediana",
+      "800 ml de agua o caldo de verduras",
+      "sal a gusto",
+      "1 pizca de nuez moscada",
+      "semillas de zapallo para decorar"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá el zapallo, la papa y la cebolla en cubos chicos de 1 cm.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá el aceite en una olla y rehogá la cebolla con el jengibre.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el zapallo y la papa, y salá.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Agregá el agua o el caldo y llevá a hervor.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Tapá y cociná a fuego medio hasta que las verduras estén tiernas.",
+        "minutes": 15,
+        "passive": true
+      },
+      {
+        "instruction": "Procesá con mixer hasta que quede lisa y probá la sal.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Serví con nuez moscada y semillas de zapallo.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 4,
+      "freezer_days": 90,
+      "reheat": "En olla a fuego bajo, sumando un chorrito de agua si espesó.",
+      "tip": "Si la querés más cremosa, dejá algo de papa de más."
+    }
+  },
+  {
+    "title": "Sopa cremosa de tomate y albahaca",
+    "description": "Sopa de tomates en lata con ajo y albahaca, suave y con un fondo dulzón. Va de maravilla con tostadas.",
+    "servings": 4,
+    "prep_minutes": 5,
+    "cook_minutes": 20,
+    "difficulty": "facil",
+    "tags": [
+      "sopa",
+      "liviano",
+      "vegetariano",
+      "una olla",
+      "rápido",
+      "invierno"
+    ],
+    "ingredients": [
+      "2 latas de tomate perita entero",
+      "1 cebolla",
+      "2 dientes de ajo",
+      "2 cdas de aceite de oliva",
+      "400 ml de caldo de verduras",
+      "1 cdita de azúcar",
+      "1 puñado de hojas de albahaca",
+      "3 cdas de queso crema",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Picá la cebolla y el ajo bien finitos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Rehogá la cebolla y el ajo en el aceite hasta que se ablanden.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá los tomates con su jugo, el caldo, el azúcar, sal y pimienta.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cociná a fuego medio, aplastando los tomates con una cuchara.",
+        "minutes": 15,
+        "passive": true
+      },
+      {
+        "instruction": "Sumá la albahaca y procesá con mixer hasta que quede lisa.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Incorporá el queso crema, mezclá y serví caliente.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 4,
+      "freezer_days": 90,
+      "reheat": "En olla a fuego bajo, revolviendo, sin dejar que hierva fuerte.",
+      "tip": "Si queda ácida, sumá una pizca más de azúcar."
+    }
+  },
+  {
+    "title": "Crema de brócoli y papa",
+    "description": "Crema verde, liviana y reconfortante, con papa que le da cuerpo sin necesidad de crema de leche.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 18,
+    "difficulty": "facil",
+    "tags": [
+      "sopa",
+      "liviano",
+      "vegetariano",
+      "una olla",
+      "económico",
+      "para freezar"
+    ],
+    "ingredients": [
+      "1 brócoli grande (unos 400 g)",
+      "2 papas medianas",
+      "1 cebolla",
+      "1 diente de ajo",
+      "1 cda de aceite de oliva",
+      "900 ml de agua",
+      "2 cdas de queso rallado",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Separá el brócoli en ramitos y cortá el tronco en rodajas finas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Pelá las papas y cortalas en cubos chicos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Rehogá la cebolla picada y el ajo en el aceite.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá las papas, el brócoli, el agua y sal.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cociná tapado hasta que las papas se deshagan al pincharlas.",
+        "minutes": 15,
+        "passive": true
+      },
+      {
+        "instruction": "Procesá con mixer, sumá el queso rallado y pimienta.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "En olla a fuego bajo con un chorrito de agua.",
+      "tip": "No lo cocines de más para que conserve el color verde."
+    }
+  },
+  {
+    "title": "Sopa de lentejas rojas y zanahoria con comino",
+    "description": "Las lentejas rojas se cocinan en minutos y no necesitan remojo. Sopa espesa, especiada y bien reconfortante.",
+    "servings": 4,
+    "prep_minutes": 7,
+    "cook_minutes": 20,
+    "difficulty": "facil",
+    "tags": [
+      "sopa",
+      "vegano",
+      "sin lácteos",
+      "legumbres",
+      "una olla",
+      "económico",
+      "invierno"
+    ],
+    "ingredients": [
+      "1 taza de lentejas rojas",
+      "2 zanahorias",
+      "1 cebolla",
+      "2 dientes de ajo",
+      "1 cda de aceite de oliva",
+      "1 cdita de comino",
+      "1 cdita de pimentón dulce",
+      "1 l de agua o caldo",
+      "1/2 limón",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Enjuagá las lentejas en un colador.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Picá la cebolla, el ajo y la zanahoria en cubitos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Rehogá cebolla, ajo y zanahoria en el aceite con el comino y el pimentón.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá las lentejas y el agua o caldo, y llevá a hervor.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Bajá el fuego y cociná hasta que las lentejas se deshagan.",
+        "minutes": 15,
+        "passive": true
+      },
+      {
+        "instruction": "Salá, exprimí el limón y mezclá. Procesá un poco si querés textura más lisa.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 4,
+      "freezer_days": 90,
+      "reheat": "En olla con un chorrito de agua, porque espesa al enfriarse.",
+      "tip": "El limón al final le levanta mucho el sabor."
+    }
+  },
+  {
+    "title": "Sopa cremosa de choclo y verdeo",
+    "description": "Con choclo en lata o congelado, queda dulce y cremosa. El verdeo le aporta frescura.",
+    "servings": 4,
+    "prep_minutes": 7,
+    "cook_minutes": 18,
+    "difficulty": "facil",
+    "tags": [
+      "sopa",
+      "vegetariano",
+      "una olla",
+      "rápido",
+      "económico",
+      "argentina"
+    ],
+    "ingredients": [
+      "2 latas de choclo en granos",
+      "3 cebollas de verdeo",
+      "1 papa chica",
+      "1 cda de manteca",
+      "600 ml de caldo de verduras",
+      "100 ml de leche",
+      "1 pizca de pimentón dulce",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Escurrí el choclo y reservá 3 cdas para decorar.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Picá el verdeo y cortá la papa en cubitos chicos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Derretí la manteca y rehogá el verdeo, reservando un poco del verde.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el choclo, la papa y el caldo.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Hervilo a fuego medio hasta que la papa esté tierna.",
+        "minutes": 12,
+        "passive": true
+      },
+      {
+        "instruction": "Procesá con mixer, sumá la leche y calentá un minuto más.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Serví con el choclo reservado, verdeo crudo y pimentón.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "En olla a fuego bajo, revolviendo para que no se corte la leche.",
+      "tip": "Pasala por colador si querés una textura finísima."
+    }
+  },
+  {
+    "title": "Minestrone express con pastina",
+    "description": "Versión rápida de la sopa italiana de verduras, con cubitos bien chicos para que se cocine en un santiamén.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 18,
+    "difficulty": "facil",
+    "tags": [
+      "sopa",
+      "liviano",
+      "vegetariano",
+      "italiana",
+      "una olla",
+      "verdura"
+    ],
+    "ingredients": [
+      "1 zanahoria",
+      "1 zapallito",
+      "1 tallo de apio",
+      "1 cebolla",
+      "1 papa chica",
+      "2 dientes de ajo",
+      "1 cda de aceite de oliva",
+      "1 lata de tomate perita triturado",
+      "1 l de caldo de verduras",
+      "1/2 taza de pastina",
+      "1 taza de arvejas",
+      "queso rallado para servir",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá todas las verduras en cubitos de medio centímetro.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Rehogá cebolla, ajo, apio y zanahoria en el aceite.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá la papa, el tomate y el caldo, y llevá a hervor.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cociná a fuego medio hasta que la papa casi esté lista.",
+        "minutes": 8,
+        "passive": true
+      },
+      {
+        "instruction": "Agregá la pastina, el zapallito y las arvejas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cociná hasta que la pasta esté tierna, salá y condimentá.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Serví con queso rallado por encima.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "En olla con un poco de agua, porque la pastina absorbe el caldo.",
+      "tip": "Si la vas a guardar, cociná la pastina aparte para que no se pase."
+    }
+  },
+  {
+    "title": "Crema de espinaca y puerro",
+    "description": "Crema verde intensa, suave y fresca. Las espinacas se suman al final para que no pierdan color.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 17,
+    "difficulty": "facil",
+    "tags": [
+      "sopa",
+      "liviano",
+      "vegetariano",
+      "una olla",
+      "verdura",
+      "rápido"
+    ],
+    "ingredients": [
+      "2 puerros",
+      "1 papa grande",
+      "1 atado de espinaca",
+      "1 cda de manteca",
+      "800 ml de caldo de verduras",
+      "3 cdas de queso crema",
+      "1 pizca de nuez moscada",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Lavá bien los puerros y cortá la parte blanca y verde clara en rodajas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Pelá la papa y cortala en cubitos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Derretí la manteca y cociná el puerro sin que se dore.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá la papa y el caldo, y hervilo hasta que esté tierna.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Sumá las hojas de espinaca lavadas y cociná un minuto.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Procesá con mixer junto con el queso crema, la nuez moscada, sal y pimienta.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "En olla a fuego bajo, sin hervir fuerte para cuidar el color.",
+      "tip": "Enfriala rápido si no la vas a comer enseguida."
+    }
+  },
+  {
+    "title": "Sopa de zanahoria, coco y curry",
+    "description": "Sopa vegana de zanahoria con leche de coco y curry suave. Cremosa, aromática y lista en media hora.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 20,
+    "difficulty": "facil",
+    "tags": [
+      "sopa",
+      "vegano",
+      "sin lácteos",
+      "sin gluten",
+      "una olla",
+      "india"
+    ],
+    "ingredients": [
+      "5 zanahorias",
+      "1 cebolla",
+      "2 dientes de ajo",
+      "1 cda de aceite de oliva",
+      "2 cditas de curry en polvo",
+      "700 ml de agua o caldo",
+      "200 ml de leche de coco",
+      "1/2 limón",
+      "sal a gusto",
+      "cilantro o perejil para decorar"
+    ],
+    "steps": [
+      {
+        "instruction": "Pelá las zanahorias y cortalas en rodajas finas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Rehogá la cebolla y el ajo picados en el aceite.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el curry y revolvé medio minuto.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Agregá las zanahorias y el agua, y salá.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Tapá y cociná hasta que las zanahorias estén muy tiernas.",
+        "minutes": 15,
+        "passive": true
+      },
+      {
+        "instruction": "Sumá la leche de coco y procesá con mixer.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Terminá con el jugo de limón y las hierbas picadas.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 4,
+      "freezer_days": 90,
+      "reheat": "En olla a fuego bajo o en microondas, revolviendo a mitad.",
+      "tip": "Agitá la lata de coco antes de abrirla para mezclar bien."
+    }
+  },
+  {
+    "title": "Crema de arvejas y menta",
+    "description": "Con arvejas congeladas se arma enseguida. Queda verde brillante, dulce y con un aire fresco de menta.",
+    "servings": 4,
+    "prep_minutes": 5,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "sopa",
+      "liviano",
+      "vegetariano",
+      "una olla",
+      "rápido",
+      "primavera"
+    ],
+    "ingredients": [
+      "500 g de arvejas congeladas",
+      "1 cebolla de verdeo",
+      "1 papa chica",
+      "1 cda de aceite de oliva",
+      "700 ml de caldo de verduras",
+      "10 hojas de menta",
+      "2 cdas de yogur natural",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Picá el verdeo y cortá la papa en cubitos chicos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Rehogá el verdeo en el aceite hasta que esté transparente.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá la papa y el caldo y cociná hasta que se ablande.",
+        "minutes": 7,
+        "passive": true
+      },
+      {
+        "instruction": "Sumá las arvejas y cociná hasta que vuelva el hervor.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá la menta y procesá con mixer hasta que quede lisa.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Serví con una cucharada de yogur y pimienta.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "En olla a fuego bajo, sin dejar que hierva fuerte.",
+      "tip": "También se puede comer fría en verano."
+    }
+  },
+  {
+    "title": "Crema de champiñones y cebolla",
+    "description": "Crema rústica con champiñones dorados y un toque de tomillo. Intensa de sabor y lista en poco tiempo.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 20,
+    "difficulty": "media",
+    "tags": [
+      "sopa",
+      "vegetariano",
+      "una olla",
+      "invierno",
+      "cena"
+    ],
+    "ingredients": [
+      "400 g de champiñones frescos",
+      "1 cebolla grande",
+      "2 dientes de ajo",
+      "1 cda de manteca",
+      "1 cda de aceite de oliva",
+      "1 cda de harina",
+      "700 ml de caldo de verduras",
+      "100 ml de crema de leche",
+      "1/2 cdita de tomillo seco",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Limpiá los champiñones con un paño y cortalos en láminas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Picá la cebolla y el ajo finitos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Doralos champiñones en el aceite y la manteca a fuego fuerte, sin amontonarlos.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá la cebolla, el ajo y el tomillo y cociná hasta que se ablanden.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Espolvoreá la harina y revolvé un minuto.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el caldo de a poco, revolviendo, y cociná a fuego suave.",
+        "minutes": 8,
+        "passive": true
+      },
+      {
+        "instruction": "Procesá con mixer dejando algo de textura, sumá la crema y salpimentá.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "En olla a fuego bajo, revolviendo seguido.",
+      "tip": "Reservá unas láminas doradas para decorar el plato."
+    }
+  }
+]

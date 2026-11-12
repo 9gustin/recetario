@@ -1,0 +1,562 @@
+[
+  {
+    "title": "Omelette de queso cremoso y cebolla de verdeo",
+    "description": "Un omelette finito y jugoso, relleno de queso derretido y cebolla de verdeo. Sale en 10 minutos con una sola sartén.",
+    "servings": 1,
+    "prep_minutes": 4,
+    "cook_minutes": 5,
+    "difficulty": "media",
+    "tags": [
+      "desayuno",
+      "rápido",
+      "huevo",
+      "vegetariano",
+      "sin horno"
+    ],
+    "ingredients": [
+      "3 huevos",
+      "1 cda de leche",
+      "1 cebolla de verdeo",
+      "60 g de queso cremoso",
+      "1 cdita de manteca",
+      "sal a gusto",
+      "pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá la cebolla de verdeo en rodajas finas y el queso en cubitos."
+      },
+      {
+        "instruction": "Batí los huevos con la leche, sal y pimienta en un bol."
+      },
+      {
+        "instruction": "Derretí la manteca en una sartén antiadherente a fuego medio y salteá la cebolla de verdeo 1 minuto.",
+        "minutes": 1
+      },
+      {
+        "instruction": "Volcá los huevos y revolvé apenas con un tenedor mientras se cuajan los bordes.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Poné el queso en una mitad, doblá el omelette y cociná 1 minuto más para que el queso se derrita.",
+        "minutes": 1
+      },
+      {
+        "instruction": "Deslizalo al plato y comelo enseguida."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Mejor al momento; si sobra, calentalo 30 segundos en microondas.",
+      "tip": "Usá fuego medio para que no se dore de más y quede tierno."
+    }
+  },
+  {
+    "title": "Huevos rancheros express con porotos negros",
+    "description": "Tortilla tostada con porotos negros especiados, salsa de tomate casera y huevo a la plancha. Un desayuno contundente de inspiración mexicana.",
+    "servings": 2,
+    "prep_minutes": 4,
+    "cook_minutes": 11,
+    "difficulty": "media",
+    "tags": [
+      "desayuno",
+      "mexicana",
+      "huevo",
+      "legumbres",
+      "una olla",
+      "rápido"
+    ],
+    "ingredients": [
+      "2 tortillas de maíz o de trigo",
+      "1/2 lata de porotos negros",
+      "1/2 taza de tomate triturado",
+      "1/4 cebolla",
+      "1 diente de ajo",
+      "1 cdita de comino",
+      "2 cdas de aceite de girasol",
+      "2 huevos",
+      "30 g de queso rallado",
+      "perejil picado a gusto",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Picá finita la cebolla y el ajo."
+      },
+      {
+        "instruction": "Calentá 1 cda de aceite en una sartén y sofreí la cebolla y el ajo 2 minutos.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el tomate, el comino y sal, y cociná 3 minutos.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá los porotos escurridos, aplastá algunos con un tenedor y llevá a un costado de la sartén o a un bol."
+      },
+      {
+        "instruction": "En otra sartén, calentá el aceite restante y tostá las tortillas 1 minuto por lado. Reservalas.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Frei los huevos en la misma sartén hasta que la clara cuaje, unos 3 minutos.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Armá cada plato con tortilla, porotos con salsa, huevo, queso rallado y perejil."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Calentá los porotos con salsa en microondas; hacé los huevos y las tortillas al momento.",
+      "tip": "Guardá la salsa de porotos aparte para usarla en otros desayunos."
+    }
+  },
+  {
+    "title": "Sándwich de huevo frito, queso y rúcula",
+    "description": "Pan tostado, huevo con yema blandita, queso derretido y rúcula fresca con un toque de mostaza. Rápido y para comer con las manos.",
+    "servings": 1,
+    "prep_minutes": 3,
+    "cook_minutes": 7,
+    "difficulty": "facil",
+    "tags": [
+      "desayuno",
+      "sándwich",
+      "huevo",
+      "rápido",
+      "sin horno"
+    ],
+    "ingredients": [
+      "2 rodajas de pan de campo",
+      "1 huevo",
+      "2 fetas de queso tipo barra",
+      "20 g de rúcula",
+      "1 cdita de mostaza",
+      "1 cdita de aceite de girasol",
+      "sal a gusto",
+      "pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Tostá el pan en tostadora o en una sartén seca, 2 minutos por lado.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén y rompé el huevo adentro."
+      },
+      {
+        "instruction": "Cociná el huevo 2 minutos, salpimentá y poné las fetas de queso encima. Tapá 1 minuto para que se derrita.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Untá una tostada con mostaza y poné la rúcula."
+      },
+      {
+        "instruction": "Sumá el huevo con queso, tapá con la otra tostada y cortá al medio."
+      }
+    ],
+    "storage": {
+      "fridge_days": 0,
+      "freezer_days": null,
+      "reheat": "No se recomienda guardar; comelo recién hecho.",
+      "tip": "Si te gusta la yema firme, dalo vuelta y cocinalo 1 minuto más."
+    }
+  },
+  {
+    "title": "Palta rellena con huevo en airfryer",
+    "description": "Mitades de palta con un huevo adentro, queso rallado y pimentón, cocidas en la airfryer. Se sirve en su propia cáscara y casi no ensucia nada.",
+    "servings": 2,
+    "prep_minutes": 3,
+    "cook_minutes": 12,
+    "difficulty": "media",
+    "tags": [
+      "desayuno",
+      "airfryer",
+      "huevo",
+      "sin gluten",
+      "bajo en carbohidratos",
+      "alto en proteína"
+    ],
+    "ingredients": [
+      "1 palta grande y madura",
+      "2 huevos chicos",
+      "2 cdas de queso rallado",
+      "1 pizca de pimentón dulce",
+      "sal a gusto",
+      "pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá la palta al medio y sacá el carozo."
+      },
+      {
+        "instruction": "Sacá 1 cucharada de pulpa de cada mitad para agrandar el hueco y guardala para comer."
+      },
+      {
+        "instruction": "Acomodá las mitades en la canasta de la airfryer, bien paradas y apoyadas contra el borde."
+      },
+      {
+        "instruction": "Poné un huevo en cada hueco, con cuidado de que no se desborde. Salpimentá y espolvoreá con queso y pimentón."
+      },
+      {
+        "instruction": "Cociná a 180 °C durante 10 a 12 minutos, según qué tan firme quieras la yema.",
+        "minutes": 11,
+        "passive": true
+      },
+      {
+        "instruction": "Sacá con cuidado con una espátula y servilas con la pulpa reservada."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Mejor al momento; si sobra, calentá 1 minuto en microondas a potencia media.",
+      "tip": "Usá una palta bien madura pero firme para que no se deshaga."
+    }
+  },
+  {
+    "title": "Provoleta con tomates cherry y pan tostado",
+    "description": "Provolone dorado en sartén, con tomates cherry tibios, orégano y ají molido. Un desayuno salado y para compartir, bien argentino.",
+    "servings": 2,
+    "prep_minutes": 3,
+    "cook_minutes": 7,
+    "difficulty": "facil",
+    "tags": [
+      "desayuno",
+      "argentina",
+      "vegetariano",
+      "rápido",
+      "para compartir",
+      "sin horno"
+    ],
+    "ingredients": [
+      "150 g de queso provolone en rodaja gruesa",
+      "6 tomates cherry",
+      "1 cdita de orégano",
+      "1 pizca de ají molido",
+      "1 cdita de aceite de oliva",
+      "4 rodajas de pan"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá los tomates cherry al medio."
+      },
+      {
+        "instruction": "Calentá una sartén antiadherente a fuego medio, sin aceite, y poné el provolone."
+      },
+      {
+        "instruction": "Cociná 2 o 3 minutos hasta que se dore la base y los bordes se derritan.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Dalo vuelta con una espátula y dorá 1 minuto más.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Mientras tanto, tostá el pan y calentá los tomates 1 minuto en otra sartén con el aceite."
+      },
+      {
+        "instruction": "Pasá la provoleta a un plato y cubrila con los tomates, el orégano y el ají molido."
+      }
+    ],
+    "storage": {
+      "fridge_days": 0,
+      "freezer_days": null,
+      "reheat": "Comela en el momento, el queso se endurece al enfriarse.",
+      "tip": "Sacá el queso de la sartén cuando esté blando y dorado, antes de que se escurra."
+    }
+  },
+  {
+    "title": "Tostadas francesas saladas con queso",
+    "description": "Sándwich de pan de molde y queso pasado por huevo y dorado en sartén. Queda crocante afuera y derretido adentro.",
+    "servings": 2,
+    "prep_minutes": 4,
+    "cook_minutes": 8,
+    "difficulty": "facil",
+    "tags": [
+      "desayuno",
+      "huevo",
+      "sándwich",
+      "vegetariano",
+      "rápido",
+      "para chicos"
+    ],
+    "ingredients": [
+      "4 rodajas de pan de molde",
+      "4 fetas de queso",
+      "2 huevos",
+      "4 cdas de leche",
+      "1 cdita de orégano",
+      "1 cda de manteca",
+      "sal a gusto",
+      "pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Armá 2 sándwiches con el pan y las fetas de queso."
+      },
+      {
+        "instruction": "Batí los huevos con la leche, el orégano, sal y pimienta en un plato hondo."
+      },
+      {
+        "instruction": "Derretí la manteca en una sartén a fuego medio."
+      },
+      {
+        "instruction": "Pasá cada sándwich por el huevo, de ambos lados, y apoyalo en la sartén."
+      },
+      {
+        "instruction": "Dorá 3 a 4 minutos por lado, hasta que el queso se derrita.",
+        "minutes": 7,
+        "passive": false
+      },
+      {
+        "instruction": "Cortá en triángulos y serví caliente."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Recalentá en sartén seca a fuego bajo 2 minutos por lado.",
+      "tip": "Remojá el pan solo unos segundos para que no se deshaga."
+    }
+  },
+  {
+    "title": "Taza de huevo con morrón y queso en microondas",
+    "description": "Huevos batidos con morrón y queso cocidos directo en una taza. Listo en 3 minutos y sin sartén para lavar.",
+    "servings": 1,
+    "prep_minutes": 3,
+    "cook_minutes": 3,
+    "difficulty": "facil",
+    "tags": [
+      "desayuno",
+      "rápido",
+      "huevo",
+      "sin horno",
+      "sin gluten",
+      "alto en proteína"
+    ],
+    "ingredients": [
+      "2 huevos",
+      "2 cdas de leche",
+      "1/4 morrón rojo",
+      "2 cdas de queso rallado",
+      "1 cdita de aceite de oliva",
+      "sal a gusto",
+      "pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá el morrón en cubitos bien chicos."
+      },
+      {
+        "instruction": "Untá una taza grande con el aceite."
+      },
+      {
+        "instruction": "Poné los huevos, la leche, el morrón, la mitad del queso, sal y pimienta, y batí con un tenedor."
+      },
+      {
+        "instruction": "Cociná en microondas 1 minuto a potencia máxima.",
+        "minutes": 1,
+        "passive": true
+      },
+      {
+        "instruction": "Revolvé, espolvoreá el queso restante y cociná de a 30 segundos hasta que cuaje.",
+        "minutes": 1,
+        "passive": true
+      },
+      {
+        "instruction": "Dejá reposar 30 segundos antes de comer, porque la taza quema."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Calentá 20 segundos en microondas, sin pasarte para que no se ponga gomoso.",
+      "tip": "Usá una taza ancha: los huevos suben mucho al cocinarse."
+    }
+  },
+  {
+    "title": "Pan árabe con queso crema, pepino y aceitunas",
+    "description": "Pan árabe tostado con queso crema, pepino fresco, aceitunas y un chorrito de limón. Fresco, liviano y sin cocción.",
+    "servings": 1,
+    "prep_minutes": 8,
+    "cook_minutes": 3,
+    "difficulty": "facil",
+    "tags": [
+      "desayuno",
+      "mediterránea",
+      "vegetariano",
+      "rápido",
+      "sin horno",
+      "liviano"
+    ],
+    "ingredients": [
+      "1 pan árabe",
+      "100 g de queso crema",
+      "1/2 pepino",
+      "6 aceitunas verdes",
+      "1/2 limón",
+      "1 cda de aceite de oliva",
+      "1 cdita de orégano",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá el pepino en rodajas finas y las aceitunas en rodajas."
+      },
+      {
+        "instruction": "Tostá el pan árabe 1 minuto por lado en una sartén seca.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Mezclá el queso crema con jugo de limón, orégano y una pizca de sal."
+      },
+      {
+        "instruction": "Untá el pan con la mezcla de queso."
+      },
+      {
+        "instruction": "Cubrí con el pepino y las aceitunas, y terminá con el aceite de oliva."
+      },
+      {
+        "instruction": "Cortá en gajos o enrollá."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Se come a temperatura ambiente; guardá el queso aparte del pan.",
+      "tip": "Escurrí el pepino sobre papel de cocina para que no ablande el pan."
+    }
+  },
+  {
+    "title": "Bowl de huevo duro, palta y pepino",
+    "description": "Huevos duros, palta cremosa, pepino y tomates cherry con limón y aceite de oliva. Un bowl fresco y saciante, sin pan.",
+    "servings": 1,
+    "prep_minutes": 5,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "desayuno",
+      "huevo",
+      "ensalada",
+      "sin gluten",
+      "sin lácteos",
+      "liviano",
+      "alto en proteína"
+    ],
+    "ingredients": [
+      "2 huevos",
+      "1 palta madura",
+      "1/2 pepino",
+      "4 tomates cherry",
+      "1/2 limón",
+      "1 cda de aceite de oliva",
+      "1 pizca de ají molido",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Poné los huevos en una cacerola con agua hirviendo y cocinalos 9 minutos.",
+        "minutes": 9,
+        "passive": true
+      },
+      {
+        "instruction": "Mientras tanto, cortá la palta en cubos y rociala con limón."
+      },
+      {
+        "instruction": "Cortá el pepino en medias lunas y los tomates al medio."
+      },
+      {
+        "instruction": "Enfriá los huevos bajo agua fría 1 minuto y pelalos.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Armá el bowl con la palta, el pepino y los tomates, y sumá los huevos cortados al medio."
+      },
+      {
+        "instruction": "Condimentá con aceite de oliva, sal y ají molido."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Se come frío; no recalientes los huevos.",
+      "tip": "Podés dejar los huevos duros pelados en la heladera hasta 3 días y armarlo en 3 minutos."
+    }
+  },
+  {
+    "title": "Huevos al plato con espinaca y crema",
+    "description": "Espinaca salteada con ajo y crema, con dos huevos cocidos encima y queso gratinado en la misma sartén tapada.",
+    "servings": 1,
+    "prep_minutes": 3,
+    "cook_minutes": 10,
+    "difficulty": "media",
+    "tags": [
+      "desayuno",
+      "huevo",
+      "verdura",
+      "vegetariano",
+      "una olla",
+      "sin horno"
+    ],
+    "ingredients": [
+      "150 g de espinaca fresca",
+      "2 huevos",
+      "3 cdas de crema de leche",
+      "30 g de queso rallado",
+      "1 diente de ajo",
+      "1 cdita de manteca",
+      "1 pizca de nuez moscada",
+      "sal a gusto",
+      "pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Picá el ajo y cortá la espinaca en trozos grandes."
+      },
+      {
+        "instruction": "Derretí la manteca en una sartén chica a fuego medio y salteá el ajo 30 segundos."
+      },
+      {
+        "instruction": "Sumá la espinaca y cociná 2 minutos, hasta que se achique.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá la crema, la nuez moscada, sal y pimienta, y mezclá 1 minuto.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Hacé dos huecos en la espinaca y poné un huevo en cada uno."
+      },
+      {
+        "instruction": "Espolvoreá con el queso, tapá y cociná a fuego bajo 4 a 5 minutos, hasta que la clara cuaje.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Serví directo de la sartén, con pan si querés."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Calentá en microondas a potencia media 40 segundos.",
+      "tip": "Si usás espinaca congelada, escurrila muy bien para que no suelte agua."
+    }
+  }
+]

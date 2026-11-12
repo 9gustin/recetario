@@ -1,0 +1,602 @@
+[
+  {
+    "title": "Polenta cremosa con salsa de tomate y queso",
+    "description": "Polenta de cocción rápida bien cremosa, con una salsa de tomate casera y queso fundido. Un plato reconfortante que sale en 20 minutos.",
+    "servings": 3,
+    "prep_minutes": 5,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "sin gluten",
+      "vegetariano",
+      "rápido",
+      "una olla",
+      "cena",
+      "argentina"
+    ],
+    "ingredients": [
+      "1 taza de polenta de cocción rápida",
+      "4 tazas de agua",
+      "1 cebolla",
+      "2 dientes de ajo",
+      "1 lata de tomate triturado",
+      "1 cda de aceite de oliva",
+      "1 cda de manteca",
+      "100 g de queso cremoso en cubos",
+      "3 cda de queso rallado",
+      "1 cdita de orégano",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Picá la cebolla y el ajo bien chiquitos."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén y sofreí la cebolla y el ajo hasta que estén blandos.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el tomate triturado, el orégano, sal y pimienta, y cociná a fuego bajo.",
+        "minutes": 8,
+        "passive": true
+      },
+      {
+        "instruction": "Mientras tanto, hervÍ el agua con una pizca de sal en una olla."
+      },
+      {
+        "instruction": "Volcá la polenta en forma de lluvia y revolvé sin parar hasta que espese.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Apagá el fuego y agregá la manteca y el queso rallado. Mezclá hasta integrar."
+      },
+      {
+        "instruction": "Serví la polenta en platos hondos, cubrí con la salsa y sumá los cubos de queso cremoso para que se fundan."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Recalentá en una olla con un chorrito de agua o leche, revolviendo para que vuelva a ser cremosa.",
+      "tip": "Buscá el logo sin TACC en el paquete de polenta."
+    }
+  },
+  {
+    "title": "Ensalada tibia de quinoa con palta, pepino y limón",
+    "description": "Quinoa suelta mezclada con palta, tomate y pepino, aliñada con limón y aceite de oliva. Fresca, liviana y llenadora.",
+    "servings": 3,
+    "prep_minutes": 10,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "sin gluten",
+      "vegano",
+      "liviano",
+      "ensalada",
+      "almuerzo",
+      "verano"
+    ],
+    "ingredients": [
+      "1 taza de quinoa",
+      "2 tazas de agua",
+      "1 palta",
+      "1 pepino",
+      "2 tomates",
+      "1/2 cebolla morada",
+      "1 limón",
+      "3 cda de aceite de oliva",
+      "perejil picado a gusto",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Enjuagá la quinoa bajo el chorro de agua fría en un colador fino para sacarle el amargor."
+      },
+      {
+        "instruction": "Poné la quinoa con el agua y una pizca de sal en una olla y llevá a hervor."
+      },
+      {
+        "instruction": "Tapá, bajá el fuego y cociná hasta que absorba toda el agua.",
+        "minutes": 15,
+        "passive": true
+      },
+      {
+        "instruction": "Mientras tanto, cortá el pepino, los tomates y la palta en cubos y picá la cebolla morada fina."
+      },
+      {
+        "instruction": "Aflojá la quinoa con un tenedor y dejala entibiar unos minutos."
+      },
+      {
+        "instruction": "Mezclá la quinoa con las verduras, el perejil, el jugo de limón, el aceite, sal y pimienta."
+      },
+      {
+        "instruction": "Probá, corregí el aliño y serví enseguida."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Comela fría o a temperatura ambiente, no hace falta recalentar.",
+      "tip": "Si la guardás, sumá la palta recién al servir para que no se oscurezca."
+    }
+  },
+  {
+    "title": "Fideos de arroz salteados con verduras, huevo y maní",
+    "description": "Fideos de arroz con zanahoria, morrón y huevo, perfumados con jengibre y lima y cubiertos con maní. Un salteado rápido de estilo asiático.",
+    "servings": 2,
+    "prep_minutes": 10,
+    "cook_minutes": 12,
+    "difficulty": "media",
+    "tags": [
+      "sin gluten",
+      "salteado",
+      "asiática",
+      "rápido",
+      "cena",
+      "sin lácteos"
+    ],
+    "ingredients": [
+      "200 g de fideos de arroz",
+      "2 huevos",
+      "1 zanahoria",
+      "1 morrón rojo",
+      "1 cebolla de verdeo",
+      "2 dientes de ajo",
+      "1 cda de jengibre rallado",
+      "3 cda de maní tostado sin sal",
+      "1 lima",
+      "1 cda de miel",
+      "2 cda de aceite",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cubrí los fideos con agua recién hervida y dejalos hidratar hasta que estén tiernos.",
+        "minutes": 8,
+        "passive": true
+      },
+      {
+        "instruction": "Cortá la zanahoria y el morrón en tiras finas, y picá el verdeo y el ajo."
+      },
+      {
+        "instruction": "Escurrí los fideos y cortalos un poco con la tijera para que no queden larguísimos."
+      },
+      {
+        "instruction": "Calentá el aceite en un wok o sartén grande y salteá la zanahoria y el morrón a fuego fuerte.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el ajo, el jengibre y el verdeo, y salteá un minuto más.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Hacé un hueco, volcá los huevos batidos y revolvé hasta que cuajen."
+      },
+      {
+        "instruction": "Agregá los fideos, la miel, el jugo de lima y sal, y mezclá todo a fuego fuerte.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Serví con el maní picado por encima."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Salteá en una sartén con un chorrito de agua para que no se peguen.",
+      "tip": "Revisá que los fideos digan sin TACC en el envase."
+    }
+  },
+  {
+    "title": "Panqueques de banana y huevo",
+    "description": "Panqueques chiquitos hechos solo con banana, huevo y canela, sin harina. Ideales para un desayuno rápido o una merienda con los chicos.",
+    "servings": 2,
+    "prep_minutes": 5,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "sin gluten",
+      "desayuno",
+      "merienda",
+      "rápido",
+      "para chicos",
+      "económico"
+    ],
+    "ingredients": [
+      "2 bananas bien maduras",
+      "2 huevos",
+      "1 cdita de canela",
+      "1 cdita de manteca",
+      "miel a gusto",
+      "1 pizca de sal"
+    ],
+    "steps": [
+      {
+        "instruction": "Pisá las bananas con un tenedor hasta que queden como un puré."
+      },
+      {
+        "instruction": "Agregá los huevos, la canela y la sal, y batí hasta integrar."
+      },
+      {
+        "instruction": "Calentá una sartén antiadherente con un poquito de manteca a fuego medio-bajo."
+      },
+      {
+        "instruction": "Volcá cucharadas de mezcla para formar panqueques chicos y cociná hasta que salgan burbujas.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Da vuelta con cuidado y cociná del otro lado.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Repetí con el resto de la mezcla y serví con un hilo de miel."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": 30,
+      "reheat": "Calentalos un minuto en una sartén o en la tostadora.",
+      "tip": "Hacelos chicos: son frágiles y se dan vuelta más fácil."
+    }
+  },
+  {
+    "title": "Churrasquitos de cerdo a la naranja y romero",
+    "description": "Bifes finos de cerdo dorados en sartén y terminados en una salsa de naranja, miel y romero. Jugosos y con un toque agridulce.",
+    "servings": 4,
+    "prep_minutes": 5,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "sin gluten",
+      "cerdo",
+      "carne",
+      "sin lácteos",
+      "cena",
+      "rápido"
+    ],
+    "ingredients": [
+      "600 g de bifes finos de cerdo",
+      "2 naranjas",
+      "1 cda de romero fresco picado",
+      "2 dientes de ajo",
+      "1 cda de miel",
+      "2 cda de aceite",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Salpimentá los bifes de cerdo de ambos lados."
+      },
+      {
+        "instruction": "Exprimí las naranjas y picá el ajo y el romero."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén grande y dorá los bifes de a pocos, unos 3 minutos por lado.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Reservá la carne en un plato."
+      },
+      {
+        "instruction": "En la misma sartén, poné el ajo, el romero, el jugo de naranja y la miel."
+      },
+      {
+        "instruction": "Dejá reducir la salsa hasta que espese un poco.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Volvé la carne a la sartén, dalé una vuelta en la salsa y serví."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Calentá en sartén con un chorrito de agua, a fuego bajo, para que no se seque.",
+      "tip": "Cortá los bifes finitos: si son gruesos, se cocinan de más por fuera."
+    }
+  },
+  {
+    "title": "Albóndigas de carne y queso en salsa de tomate",
+    "description": "Albóndigas sin pan rallado, con queso rallado y huevo, cocidas en una salsa de tomate casera. Quedan tiernas y salen en media hora.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 18,
+    "difficulty": "media",
+    "tags": [
+      "sin gluten",
+      "carne",
+      "una olla",
+      "almuerzo",
+      "para chicos",
+      "para freezar"
+    ],
+    "ingredients": [
+      "500 g de carne picada",
+      "1 huevo",
+      "4 cda de queso rallado",
+      "1 diente de ajo",
+      "2 cda de perejil picado",
+      "1 cdita de orégano",
+      "1 cebolla",
+      "1 lata de tomate triturado",
+      "1 cda de aceite",
+      "1/2 taza de agua",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Mezclá en un bol la carne, el huevo, el queso rallado, el ajo picado, el perejil, el orégano, sal y pimienta."
+      },
+      {
+        "instruction": "Armá bolitas del tamaño de una nuez con las manos húmedas."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén honda y sofreí la cebolla picada hasta que se ablande.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el tomate triturado, el agua y una pizca de sal, y llevá a hervor suave."
+      },
+      {
+        "instruction": "Acomodá las albóndigas en la salsa sin amontonarlas."
+      },
+      {
+        "instruction": "Tapá y cociná a fuego bajo, dándolas vuelta a mitad de cocción.",
+        "minutes": 12,
+        "passive": true
+      },
+      {
+        "instruction": "Serví con la salsa y un poco más de queso rallado."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 90,
+      "reheat": "Recalentá en olla tapada con la salsa, a fuego bajo.",
+      "tip": "Freezalas ya cocidas en su salsa, en porciones."
+    }
+  },
+  {
+    "title": "Ensalada tibia de papas, arvejas y huevo con salsa de yogur",
+    "description": "Papas y huevos hervidos juntos, con arvejas y un aderezo cremoso de yogur y limón. Práctica, económica y se come tibia o fría.",
+    "servings": 3,
+    "prep_minutes": 8,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "sin gluten",
+      "ensalada",
+      "vegetariano",
+      "económico",
+      "almuerzo",
+      "una olla"
+    ],
+    "ingredients": [
+      "600 g de papas",
+      "3 huevos",
+      "150 g de arvejas congeladas",
+      "1 cebolla de verdeo",
+      "150 g de yogur natural",
+      "1 limón",
+      "2 cda de aceite de oliva",
+      "perejil picado a gusto",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá las papas en cubos de 2 cm, sin pelar si son nuevas."
+      },
+      {
+        "instruction": "Poné las papas y los huevos en una olla con agua fría y sal, y llevá a hervor."
+      },
+      {
+        "instruction": "Cociná hasta que las papas estén tiernas y los huevos duros.",
+        "minutes": 12,
+        "passive": true
+      },
+      {
+        "instruction": "Sumá las arvejas los últimos 3 minutos de cocción.",
+        "minutes": 3,
+        "passive": true
+      },
+      {
+        "instruction": "Escurrí todo y pasá los huevos por agua fría para pelarlos."
+      },
+      {
+        "instruction": "Mezclá el yogur con el jugo de limón, el aceite, el verdeo picado, sal y pimienta."
+      },
+      {
+        "instruction": "Combiná las papas y las arvejas con el aderezo, sumá los huevos en trozos y espolvoreá con perejil."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Comela fría o sacala de la heladera 15 minutos antes de servir.",
+      "tip": "Aderezá las papas aún tibias para que absorban más sabor."
+    }
+  },
+  {
+    "title": "Bananas salteadas con dulce de leche y nueces",
+    "description": "Bananas caramelizadas en manteca con una salsa rápida de dulce de leche y nueces crocantes. Un postre de 10 minutos.",
+    "servings": 3,
+    "prep_minutes": 5,
+    "cook_minutes": 8,
+    "difficulty": "facil",
+    "tags": [
+      "sin gluten",
+      "postre",
+      "rápido",
+      "para chicos",
+      "fruta",
+      "argentina"
+    ],
+    "ingredients": [
+      "3 bananas firmes",
+      "1 cda de manteca",
+      "4 cda de dulce de leche",
+      "50 ml de leche",
+      "3 cda de nueces picadas",
+      "1 pizca de canela"
+    ],
+    "steps": [
+      {
+        "instruction": "Pelá las bananas y cortalas al medio a lo largo."
+      },
+      {
+        "instruction": "Derretí la manteca en una sartén a fuego medio."
+      },
+      {
+        "instruction": "Doralas con el lado cortado hacia abajo hasta que estén caramelizadas.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Dalas vuelta con cuidado y cociná un minuto más.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Pasalas a los platos."
+      },
+      {
+        "instruction": "En la misma sartén, derretí el dulce de leche con la leche y la canela, revolviendo.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Volcá la salsa sobre las bananas y terminá con las nueces."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Mejor comerlas al momento; si sobra salsa, calentala unos segundos en el microondas.",
+      "tip": "Usá bananas pintonas: maduras de más se deshacen en la sartén."
+    }
+  },
+  {
+    "title": "Tacos de lechuga con pollo especiado y palta",
+    "description": "Hojas de lechuga como tacos, rellenas de pollo salteado con comino y pimentón, palta, tomate y lima. Frescos y livianos.",
+    "servings": 3,
+    "prep_minutes": 12,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "sin gluten",
+      "pollo",
+      "mexicana",
+      "bajo en carbohidratos",
+      "alto en proteína",
+      "rápido",
+      "cena"
+    ],
+    "ingredients": [
+      "500 g de pechuga de pollo",
+      "1 cdita de comino",
+      "1 cdita de pimentón",
+      "1 diente de ajo",
+      "1 cda de aceite",
+      "1 palta",
+      "2 tomates",
+      "1/2 cebolla morada",
+      "2 limas",
+      "8 hojas grandes de lechuga",
+      "cilantro o perejil picado a gusto",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá la pechuga en tiras finas y condimentala con el comino, el pimentón, el ajo picado, sal y pimienta."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén a fuego fuerte y salteá el pollo hasta que esté dorado y cocido.",
+        "minutes": 8,
+        "passive": false
+      },
+      {
+        "instruction": "Cortá el tomate, la palta y la cebolla morada en cubitos."
+      },
+      {
+        "instruction": "Mezclá la palta, el tomate y la cebolla con el jugo de una lima y un poco de sal."
+      },
+      {
+        "instruction": "Lavá y secá bien las hojas de lechuga."
+      },
+      {
+        "instruction": "Rellená cada hoja con pollo y la mezcla de palta, y terminá con cilantro y gotas de lima."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Calentá solo el pollo en sartén o microondas y armá los tacos al momento.",
+      "tip": "Guardá el pollo separado de la palta y la lechuga."
+    }
+  },
+  {
+    "title": "Ensalada de lentejas con pepino, tomate y queso feta",
+    "description": "Lentejas de lata con verduras frescas, rúcula y queso feta, aliñadas con aceite de oliva y vinagre. No lleva cocción y rinde para el almuerzo.",
+    "servings": 3,
+    "prep_minutes": 10,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "sin gluten",
+      "ensalada",
+      "legumbres",
+      "vegetariano",
+      "rápido",
+      "económico",
+      "mediterránea"
+    ],
+    "ingredients": [
+      "1 lata de lentejas cocidas (400 g)",
+      "1 pepino",
+      "2 tomates",
+      "1/2 cebolla morada",
+      "150 g de queso feta",
+      "40 g de rúcula",
+      "3 cda de aceite de oliva",
+      "1 cda de vinagre de vino",
+      "1 cdita de orégano",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Colá las lentejas y enjuagalas bajo el chorro de agua fría."
+      },
+      {
+        "instruction": "Cortá el pepino y los tomates en cubos y la cebolla morada en plumas finas."
+      },
+      {
+        "instruction": "Mezclá el aceite, el vinagre, el orégano, sal y pimienta en un frasco."
+      },
+      {
+        "instruction": "Combiná las lentejas con las verduras y la mitad del aderezo."
+      },
+      {
+        "instruction": "Sumá la rúcula y el queso feta desmenuzado, y mezclá suave."
+      },
+      {
+        "instruction": "Serví con el resto del aderezo por encima."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Comela fría; sumá la rúcula recién al servir si la vas a guardar.",
+      "tip": "Dejala reposar 10 minutos antes de comer para que las lentejas tomen sabor."
+    }
+  }
+]

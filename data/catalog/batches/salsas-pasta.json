@@ -1,0 +1,644 @@
+[
+  {
+    "title": "Salsa fileto rápida con ajo y albahaca",
+    "description": "Una salsa de tomate liviana y con mucho ajo, ideal para cuando no hay nada en la heladera. Queda lista en lo que se hierve la pasta.",
+    "servings": 4,
+    "prep_minutes": 5,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "pasta",
+      "salsa",
+      "rápido",
+      "vegano",
+      "económico",
+      "italiana",
+      "para freezar"
+    ],
+    "ingredients": [
+      "1 lata de tomates perita enteros (400 g)",
+      "3 dientes de ajo",
+      "3 cda de aceite de oliva",
+      "1 cdita de azúcar",
+      "8 hojas de albahaca",
+      "sal y pimienta a gusto",
+      "400 g de fideos secos"
+    ],
+    "steps": [
+      {
+        "instruction": "Poné a hervir agua con sal y cociná los fideos según el paquete.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Laminá los ajos y doralos suavemente en el aceite, sin que se quemen.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá los tomates y pisalos con un tenedor o cuchara de madera.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Sumá el azúcar, sal y pimienta, y cociná a fuego medio.",
+        "minutes": 10,
+        "passive": false
+      },
+      {
+        "instruction": "Apagá el fuego, rompé la albahaca con las manos y mezclala.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclá la salsa con los fideos escurridos y serví enseguida.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 4,
+      "freezer_days": 90,
+      "reheat": "En una olla a fuego bajo con un chorrito de agua, o en microondas tapada.",
+      "tip": "Congelá la salsa sola en porciones y sumá la albahaca fresca al servir."
+    }
+  },
+  {
+    "title": "Pesto de albahaca y nueces sin cocción",
+    "description": "Pesto casero con nueces en lugar de piñones, cremoso y aromático. Se hace en la procesadora y no necesita fuego.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "pasta",
+      "salsa",
+      "rápido",
+      "vegetariano",
+      "italiana",
+      "sin horno"
+    ],
+    "ingredients": [
+      "2 tazas de hojas de albahaca",
+      "60 g de nueces peladas",
+      "1 diente de ajo",
+      "50 g de queso parmesano rallado",
+      "100 ml de aceite de oliva",
+      "1 cda de jugo de limón",
+      "sal a gusto",
+      "400 g de tallarines secos"
+    ],
+    "steps": [
+      {
+        "instruction": "Hervi los tallarines en agua con sal hasta que estén al dente.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Procesá la albahaca, las nueces y el ajo hasta que quede una pasta gruesa.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Agregá el queso rallado y el limón, y procesá unos segundos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Sumá el aceite en hilo mientras procesás hasta lograr una crema.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Reservá una taza del agua de cocción antes de colar los tallarines.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclá la pasta con el pesto fuera del fuego, aflojando con agua de cocción.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Mezclá el pesto frío o templado con pasta caliente; no lo hiervas.",
+      "tip": "Cubrí el pesto guardado con un chorrito de aceite para que no se oscurezca."
+    }
+  },
+  {
+    "title": "Salsa de limón y manteca con parmesano",
+    "description": "Una salsa fresca y cremosa de pocos ingredientes, con ralladura de limón y queso. Perfecta para fideos largos o tagliatelles.",
+    "servings": 3,
+    "prep_minutes": 5,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "pasta",
+      "salsa",
+      "rápido",
+      "vegetariano",
+      "italiana"
+    ],
+    "ingredients": [
+      "40 g de manteca",
+      "1 limón grande",
+      "80 ml de crema de leche",
+      "40 g de queso parmesano rallado",
+      "1 diente de ajo",
+      "pimienta negra a gusto",
+      "sal a gusto",
+      "300 g de tallarines secos"
+    ],
+    "steps": [
+      {
+        "instruction": "Cociná los tallarines en agua con sal y reservá media taza del agua.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Rallá la cáscara del limón y exprimí el jugo.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Derretí la manteca con el ajo picado a fuego bajo.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá la crema, el jugo y la mitad de la ralladura, y calentá sin hervir.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá los tallarines, el parmesano y el agua reservada, y mezclá bien.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Serví con pimienta y el resto de la ralladura.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "En sartén a fuego bajo con un chorrito de leche o agua.",
+      "tip": "No dejes hervir la crema con el limón para que no se corte."
+    }
+  },
+  {
+    "title": "Salsa cremosa de morrón asado y queso crema",
+    "description": "Salsa rosada y suave hecha con morrones asados de frasco, queso crema y un toque de pimentón. Se licúa y se calienta en minutos.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 8,
+    "difficulty": "facil",
+    "tags": [
+      "pasta",
+      "salsa",
+      "rápido",
+      "vegetariano",
+      "verdura"
+    ],
+    "ingredients": [
+      "1 frasco de morrones asados (unos 250 g escurridos)",
+      "150 g de queso crema",
+      "1 diente de ajo",
+      "1 cda de aceite de oliva",
+      "1 cdita de pimentón dulce",
+      "50 ml de leche",
+      "sal y pimienta a gusto",
+      "400 g de penne secos"
+    ],
+    "steps": [
+      {
+        "instruction": "Hervi los penne en agua con sal hasta que estén al dente.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Escurrí los morrones y procesalos con el ajo, el queso crema y la leche.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén y sumá el pimentón apenas unos segundos.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Volcá la crema de morrón y calentá a fuego bajo sin hervir.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Condimentá con sal y pimienta y mezclá con los penne escurridos.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "En sartén a fuego bajo con un chorrito de leche.",
+      "tip": "Si queda espesa, aflojala con agua de cocción de la pasta."
+    }
+  },
+  {
+    "title": "Spaghetti al ajo, aceite y ají molido",
+    "description": "El clásico aglio e olio a la rioplatense: mucho ajo, aceite de oliva, ají molido y perejil. Sin vueltas y listo en 15 minutos.",
+    "servings": 3,
+    "prep_minutes": 5,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "pasta",
+      "salsa",
+      "rápido",
+      "vegano",
+      "económico",
+      "italiana"
+    ],
+    "ingredients": [
+      "300 g de espaguetis secos",
+      "5 dientes de ajo",
+      "5 cda de aceite de oliva",
+      "1 cdita de ají molido",
+      "3 cda de perejil picado",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Hervi los espaguetis en abundante agua con sal.",
+        "minutes": 9,
+        "passive": true
+      },
+      {
+        "instruction": "Laminá los ajos finitos y picá el perejil.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá el aceite a fuego bajo y cociná el ajo hasta que apenas dore.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Apagá el fuego y agregá el ají molido.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Colá los espaguetis reservando una taza del agua de cocción.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Salteá los espaguetis en la sartén con el aceite y un poco de agua hasta que ligue.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el perejil y serví enseguida.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "En sartén con un chorrito de agua y un hilo de aceite.",
+      "tip": "Si el ajo se dora de más se amarga: bajá el fuego o empezá de nuevo."
+    }
+  },
+  {
+    "title": "Salsa de atún, tomate y aceitunas",
+    "description": "Salsa rápida de despensa con atún en lata, tomate triturado y aceitunas verdes. Sabrosa, económica y con poco para lavar.",
+    "servings": 4,
+    "prep_minutes": 5,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "pasta",
+      "salsa",
+      "rápido",
+      "económico",
+      "pescado",
+      "una olla",
+      "mediterránea"
+    ],
+    "ingredients": [
+      "2 latas de atún al natural (unos 240 g)",
+      "1 cebolla chica",
+      "2 dientes de ajo",
+      "2 cda de aceite de oliva",
+      "400 g de tomate triturado",
+      "10 aceitunas verdes descarozadas",
+      "1 cda de perejil picado",
+      "sal y pimienta a gusto",
+      "400 g de moñitos secos"
+    ],
+    "steps": [
+      {
+        "instruction": "Hervi los moñitos en agua con sal hasta que estén al dente.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Picá la cebolla y los ajos bien chiquitos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Rehogá la cebolla y el ajo en el aceite hasta que se ablanden.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el tomate triturado y cociná a fuego medio.",
+        "minutes": 7,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el atún escurrido y las aceitunas cortadas, y calentá 2 minutos.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Mezclá con la pasta y espolvoreá con perejil.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "En sartén a fuego bajo o en microondas tapado.",
+      "tip": "Escurrí bien el atún para que la salsa no quede aceitosa."
+    }
+  },
+  {
+    "title": "Crema de espinaca y queso azul",
+    "description": "Salsa verde y cremosa con espinaca fresca y queso azul para quienes buscan un sabor intenso. Se hace en una sola sartén.",
+    "servings": 3,
+    "prep_minutes": 5,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "pasta",
+      "salsa",
+      "rápido",
+      "vegetariano",
+      "verdura",
+      "italiana"
+    ],
+    "ingredients": [
+      "200 g de hojas de espinaca fresca",
+      "1 cebolla de verdeo",
+      "1 cda de manteca",
+      "150 ml de crema de leche",
+      "80 g de queso azul",
+      "1 pizca de nuez moscada",
+      "pimienta a gusto",
+      "300 g de fusilli secos"
+    ],
+    "steps": [
+      {
+        "instruction": "Hervi los fusilli en agua con sal y reservá un vaso del agua.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Picá la cebolla de verdeo y saltéala en la manteca.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá la espinaca y cociná hasta que se achique.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá la crema y el queso azul desmenuzado, y revolvé a fuego bajo.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Condimentá con nuez moscada y pimienta.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclá con los fusilli y aflojá con agua de cocción si hace falta.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "En sartén a fuego bajo con un chorrito de leche.",
+      "tip": "El queso azul ya es salado: probá antes de agregar sal."
+    }
+  },
+  {
+    "title": "Salsa exprés de carne picada y tomate",
+    "description": "Una boloñesa rápida con carne picada, zanahoria rallada y tomate triturado. Cocina en 15 minutos y rinde para varias porciones.",
+    "servings": 4,
+    "prep_minutes": 5,
+    "cook_minutes": 15,
+    "difficulty": "media",
+    "tags": [
+      "pasta",
+      "salsa",
+      "carne",
+      "para freezar",
+      "una olla",
+      "italiana"
+    ],
+    "ingredients": [
+      "300 g de carne picada",
+      "1 cebolla",
+      "1 zanahoria chica",
+      "2 dientes de ajo",
+      "1 cda de aceite",
+      "400 g de tomate triturado",
+      "1 cdita de orégano",
+      "sal y pimienta a gusto",
+      "400 g de tirabuzones secos"
+    ],
+    "steps": [
+      {
+        "instruction": "Poné a hervir el agua con sal para los tirabuzones.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Picá la cebolla y el ajo, y rallá la zanahoria.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Rehogá la cebolla y la zanahoria en el aceite a fuego fuerte.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá la carne picada y desmenuzala hasta que se dore.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el ajo, el tomate, el orégano, sal y pimienta.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cociná a fuego medio y cociná los tirabuzones al mismo tiempo.",
+        "minutes": 8,
+        "passive": true
+      },
+      {
+        "instruction": "Mezclá la pasta escurrida con la salsa y serví.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 90,
+      "reheat": "En olla a fuego bajo con un chorrito de agua, removiendo.",
+      "tip": "Doblá la receta y congelá porciones individuales para otro día."
+    }
+  },
+  {
+    "title": "Salsa de panceta y huevo estilo carbonara casera",
+    "description": "Panceta crocante y una crema de yemas con queso que ligás fuera del fuego, sin crema de leche. Se sirve al toque.",
+    "servings": 3,
+    "prep_minutes": 5,
+    "cook_minutes": 12,
+    "difficulty": "media",
+    "tags": [
+      "pasta",
+      "salsa",
+      "rápido",
+      "cerdo",
+      "huevo",
+      "italiana"
+    ],
+    "ingredients": [
+      "150 g de panceta ahumada en cubitos",
+      "3 yemas",
+      "1 huevo entero",
+      "60 g de queso parmesano o reggianito rallado",
+      "pimienta negra recién molida",
+      "300 g de espaguetis secos"
+    ],
+    "steps": [
+      {
+        "instruction": "Hervi los espaguetis en agua con sal y reservá una taza del agua.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Doná la panceta en una sartén sin aceite hasta que quede crocante.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Batí las yemas, el huevo, el queso y bastante pimienta en un bol.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Pasá los espaguetis escurridos a la sartén con la panceta, con el fuego apagado.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Volcá la mezcla de huevo y revolvé rápido, sumando agua de cocción hasta que quede cremosa.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Serví enseguida con más queso y pimienta.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "En sartén a fuego muy bajo con un chorrito de agua, hasta que esté bien caliente.",
+      "tip": "Mantené el fuego apagado al agregar el huevo para que no se haga revuelto."
+    }
+  },
+  {
+    "title": "Salsa de tomates cherry y ricota",
+    "description": "Tomates cherry salteados hasta que se deshacen, con ricota para dar cremosidad y albahaca fresca. Liviana y dulce.",
+    "servings": 3,
+    "prep_minutes": 5,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "pasta",
+      "salsa",
+      "rápido",
+      "vegetariano",
+      "verdura",
+      "mediterránea"
+    ],
+    "ingredients": [
+      "300 g de tomates cherry",
+      "2 dientes de ajo",
+      "2 cda de aceite de oliva",
+      "150 g de ricota",
+      "1 cdita de azúcar",
+      "6 hojas de albahaca",
+      "sal y pimienta a gusto",
+      "300 g de rigatoni secos"
+    ],
+    "steps": [
+      {
+        "instruction": "Hervi los rigatoni en agua con sal y reservá media taza del agua.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Cortá los cherry por la mitad y laminá los ajos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá el aceite y dorá el ajo apenas un minuto.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá los cherry, el azúcar, sal y pimienta, y cociná hasta que suelten el jugo.",
+        "minutes": 8,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá la ricota en cucharadas y mezclá con un poco de agua de cocción.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Mezclá con los rigatoni y terminá con la albahaca.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "En sartén a fuego bajo con un chorrito de agua.",
+      "tip": "Aplastá algunos cherry con la cuchara para que la salsa se espese."
+    }
+  }
+]

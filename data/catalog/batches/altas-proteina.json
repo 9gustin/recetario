@@ -1,0 +1,582 @@
+[
+  {
+    "title": "Supremas rellenas de jamón y queso a la sartén",
+    "description": "Pechugas abiertas, rellenas de jamón y queso, selladas y terminadas con tapa. Jugosas, simples y con un montón de proteína.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "alto en proteína",
+      "pollo",
+      "cena",
+      "almuerzo",
+      "sin gluten",
+      "una olla"
+    ],
+    "ingredients": [
+      "4 supremas de pollo (unos 700 g)",
+      "4 fetas de jamón cocido",
+      "4 fetas de queso tipo mozzarella o de sándwich",
+      "1 cdita de pimentón",
+      "1 cdita de ajo en polvo",
+      "1 cda de aceite de oliva",
+      "sal y pimienta a gusto",
+      "4 palillos de madera",
+      "1 limón"
+    ],
+    "steps": [
+      {
+        "instruction": "Abrí cada suprema al medio con un cuchillo filoso, como un libro, sin llegar a cortar del todo."
+      },
+      {
+        "instruction": "Condimentá el interior con sal, pimienta y un poco de ajo en polvo."
+      },
+      {
+        "instruction": "Rellená con una feta de jamón y una de queso, doblándolas para que entren."
+      },
+      {
+        "instruction": "Cerrá cada suprema con un palillo y condimentá por fuera con pimentón y sal."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén grande a fuego medio y sellá las supremas 5 minutos de cada lado.",
+        "minutes": 10,
+        "passive": false
+      },
+      {
+        "instruction": "Bajá el fuego, tapá y cociná 3 minutos más hasta que el centro no tenga nada rosado.",
+        "minutes": 3,
+        "passive": true
+      },
+      {
+        "instruction": "Sacá los palillos, dejá reposar 2 minutos y servilas con limón."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Al horno a 180 °C unos 10 minutos tapadas con papel aluminio, o al microondas con un chorrito de agua.",
+      "tip": "Si las pechugas son muy gruesas, aplastalas un poco antes de rellenar para que se cocinen parejo."
+    }
+  },
+  {
+    "title": "Milanesas de peceto en airfryer con rúcula y parmesano",
+    "description": "Milanesas finitas, crocantes sin freír, con una ensalada de rúcula, limón y lascas de parmesano arriba.",
+    "servings": 4,
+    "prep_minutes": 15,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "alto en proteína",
+      "milanesa",
+      "carne",
+      "airfryer",
+      "almuerzo",
+      "argentina"
+    ],
+    "ingredients": [
+      "600 g de peceto en bifes bien finitos",
+      "2 huevos",
+      "1 taza de pan rallado",
+      "2 cdas de queso parmesano rallado",
+      "1 cdita de ajo en polvo",
+      "1 cda de aceite de oliva",
+      "100 g de rúcula",
+      "30 g de queso parmesano en lascas",
+      "1 limón",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Aplastá los bifes con un palo de amasar hasta que queden bien finitos y salpimentalos."
+      },
+      {
+        "instruction": "Batí los huevos en un plato hondo con una pizca de sal."
+      },
+      {
+        "instruction": "Mezclá el pan rallado con el parmesano rallado y el ajo en polvo en otro plato."
+      },
+      {
+        "instruction": "Pasá cada bife por huevo y después por la mezcla de pan rallado, presionando bien."
+      },
+      {
+        "instruction": "Precalentá la airfryer a 200 °C y pincelá las milanesas con un poco de aceite.",
+        "minutes": 3,
+        "passive": true
+      },
+      {
+        "instruction": "Cociná las milanesas 5 minutos de un lado, date vuelta y cociná 5 minutos del otro, en tandas si hace falta.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Aliñá la rúcula con el resto del aceite, jugo de limón y sal, y serví las milanesas con la ensalada y las lascas de parmesano."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Airfryer a 180 °C por 4 minutos o sartén sin aceite a fuego medio.",
+      "tip": "Guardá la ensalada aparte para que no se humedezcan las milanesas."
+    }
+  },
+  {
+    "title": "Tacos de bife con cebolla dorada y lima",
+    "description": "Tiras de bife salteadas a fuego fuerte con comino y pimentón, cebolla dorada y un toque de lima, en tortillas de maíz calentitas.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "alto en proteína",
+      "carne",
+      "mexicana",
+      "cena",
+      "para compartir",
+      "rápido"
+    ],
+    "ingredients": [
+      "500 g de bife angosto o nalga",
+      "2 cebollas",
+      "8 tortillas de maíz chicas",
+      "1 cdita de comino",
+      "1 cdita de pimentón",
+      "2 cdas de aceite de girasol",
+      "1 lima",
+      "1/2 atado de cilantro o perejil",
+      "1 palta",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá la carne en tiras finas y mezclala con comino, pimentón, sal y pimienta."
+      },
+      {
+        "instruction": "Cortá las cebollas en pluma y la palta en cubos."
+      },
+      {
+        "instruction": "Calentá 1 cda de aceite en una sartén y dorá la cebolla 6 minutos a fuego medio-fuerte.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Pasá la cebolla a un plato y subí el fuego al máximo con el resto del aceite."
+      },
+      {
+        "instruction": "Salteá la carne en dos tandas 2 minutos por tanda, sin amontonar, para que se dore y no largue agua.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Devolvé la cebolla, exprimí media lima y apagá el fuego."
+      },
+      {
+        "instruction": "Calentá las tortillas 30 segundos de cada lado en otra sartén seca."
+      },
+      {
+        "instruction": "Armá los tacos con la carne, palta, cilantro picado y gajos de lima."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Recalentá la carne en sartén 2 minutos y armá los tacos al momento.",
+      "tip": "Guardá carne, palta y tortillas por separado."
+    }
+  },
+  {
+    "title": "Bifes de hígado encebollados",
+    "description": "Un clásico de casa: hígado vacuno cocinado rápido con mucha cebolla, ajo y un toque de vinagre. Muy rico en proteína y listo en minutos.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "alto en proteína",
+      "carne",
+      "almuerzo",
+      "cena",
+      "argentina",
+      "económico",
+      "rápido"
+    ],
+    "ingredients": [
+      "600 g de hígado vacuno en bifes",
+      "3 cebollas",
+      "2 dientes de ajo",
+      "2 cdas de harina",
+      "3 cdas de aceite de girasol",
+      "1 cda de vinagre de vino",
+      "1 cda de perejil picado",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá las cebollas en pluma y picá el ajo."
+      },
+      {
+        "instruction": "Calentá 1 cda de aceite en una sartén y cociná la cebolla con sal 7 minutos hasta que esté dorada.",
+        "minutes": 7,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el ajo 1 minuto, sumá el vinagre y pasá todo a un plato."
+      },
+      {
+        "instruction": "Secá los bifes con papel de cocina, salpimentalos y pasalos por harina sacudiendo el exceso."
+      },
+      {
+        "instruction": "Calentá el resto del aceite en la misma sartén a fuego fuerte."
+      },
+      {
+        "instruction": "Cociná los bifes 2 minutos de cada lado, sin pasarte para que no queden duros.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Volvé la cebolla a la sartén, calentá 30 segundos y espolvoreá con perejil."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Sartén a fuego bajo con un chorrito de agua, apenas para entibiar.",
+      "tip": "Se recalienta mal si se cocina de más, así que mejor comerlo el mismo día."
+    }
+  },
+  {
+    "title": "Tallarines con atún, limón y rúcula",
+    "description": "Pasta fresca de alacena: atún al natural, ajo, ralladura de limón y rúcula que se abre apenas con el calor de los fideos.",
+    "servings": 4,
+    "prep_minutes": 5,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "alto en proteína",
+      "pasta",
+      "pescado",
+      "rápido",
+      "almuerzo",
+      "italiana"
+    ],
+    "ingredients": [
+      "400 g de tallarines",
+      "3 latas de atún al natural",
+      "2 dientes de ajo",
+      "1 limón",
+      "100 g de rúcula",
+      "3 cdas de aceite de oliva",
+      "1 pizca de ají molido",
+      "30 g de queso parmesano rallado",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Hervilos tallarines en abundante agua con sal el tiempo del paquete.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Mientras tanto, picá el ajo y rallá la cáscara del limón sin llegar a lo blanco."
+      },
+      {
+        "instruction": "Escurrí el atún y desmenuzalo con un tenedor."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén grande a fuego bajo y cociná el ajo con el ají 1 minuto, sin que se queme."
+      },
+      {
+        "instruction": "Sumá el atún, la ralladura y el jugo de medio limón y mezclá 1 minuto."
+      },
+      {
+        "instruction": "Reservá media taza del agua de cocción, escurrí los fideos y pasalos a la sartén."
+      },
+      {
+        "instruction": "Mezclá con un chorrito del agua reservada, sumá la rúcula y el parmesano, y serví enseguida."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "En sartén con un chorrito de agua a fuego bajo.",
+      "tip": "Sumá la rúcula al final para que no se ponga oscura."
+    }
+  },
+  {
+    "title": "Bowl de yogur griego con frutas, nueces y semillas",
+    "description": "Un desayuno o merienda sin cocción, cremoso y con mucha proteína, con banana, frutillas, avena y nueces crocantes.",
+    "servings": 2,
+    "prep_minutes": 5,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "alto en proteína",
+      "desayuno",
+      "merienda",
+      "rápido",
+      "sin horno",
+      "vegetariano",
+      "fruta"
+    ],
+    "ingredients": [
+      "500 g de yogur griego natural",
+      "1 banana",
+      "1 taza de frutillas",
+      "4 cdas de avena",
+      "2 cdas de nueces",
+      "2 cdas de semillas de girasol",
+      "2 cdas de miel",
+      "1 pizca de canela"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá la banana en rodajas y las frutillas en cuartos."
+      },
+      {
+        "instruction": "Picá las nueces grueso con un cuchillo."
+      },
+      {
+        "instruction": "Repartí el yogur en dos bowls y alisalo con una cuchara."
+      },
+      {
+        "instruction": "Sumá la fruta, la avena, las nueces y las semillas por arriba."
+      },
+      {
+        "instruction": "Terminá con miel y una pizca de canela."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Se come frío, no se recalienta.",
+      "tip": "Armalo al momento para que la avena y las nueces queden crocantes."
+    }
+  },
+  {
+    "title": "Licuado de banana, yogur y avena con manteca de maní",
+    "description": "Una bebida espesa y saciante para el desayuno o después de entrenar, con yogur, avena y manteca de maní.",
+    "servings": 2,
+    "prep_minutes": 5,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "alto en proteína",
+      "bebida",
+      "desayuno",
+      "merienda",
+      "rápido",
+      "sin horno",
+      "vegetariano"
+    ],
+    "ingredients": [
+      "400 ml de leche",
+      "250 g de yogur natural",
+      "1 banana congelada",
+      "4 cdas de avena",
+      "2 cdas de manteca de maní",
+      "1 cdita de cacao amargo",
+      "4 cubos de hielo"
+    ],
+    "steps": [
+      {
+        "instruction": "Poné la leche, el yogur y la banana en la licuadora."
+      },
+      {
+        "instruction": "Agregá la avena, la manteca de maní, el cacao y el hielo."
+      },
+      {
+        "instruction": "Licuá 1 minuto hasta que quede bien liso."
+      },
+      {
+        "instruction": "Probá y, si querés más dulce, sumá una cucharada de miel."
+      },
+      {
+        "instruction": "Serví enseguida en dos vasos altos."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "No se recalienta; tomalo frío.",
+      "tip": "Si lo guardás, agitalo bien antes de tomarlo porque la avena espesa."
+    }
+  },
+  {
+    "title": "Brochetas de pollo al yogur y comino",
+    "description": "Cubos de pechuga marinados con yogur, ajo y especias, cocinados en sartén o plancha hasta quedar tiernos y dorados.",
+    "servings": 4,
+    "prep_minutes": 15,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "alto en proteína",
+      "pollo",
+      "árabe",
+      "cena",
+      "sin gluten",
+      "para compartir"
+    ],
+    "ingredients": [
+      "700 g de pechuga de pollo",
+      "200 g de yogur natural",
+      "2 dientes de ajo",
+      "1 cdita de comino",
+      "1 cdita de pimentón",
+      "1 limón",
+      "2 cdas de aceite de oliva",
+      "1 cdita de sal",
+      "8 palitos de brochette"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá la pechuga en cubos de 3 cm."
+      },
+      {
+        "instruction": "Mezclá el yogur con el ajo rallado, comino, pimentón, jugo de medio limón, 1 cda de aceite y sal."
+      },
+      {
+        "instruction": "Sumá el pollo y revolvé hasta cubrirlo todo."
+      },
+      {
+        "instruction": "Dejá marinar 10 minutos mientras armás el resto.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Ensartá el pollo en los palitos, sin apretar demasiado."
+      },
+      {
+        "instruction": "Calentá el resto del aceite en una sartén grande o plancha a fuego medio-fuerte."
+      },
+      {
+        "instruction": "Cociná las brochetas 3 minutos por lado, dándolas vuelta hasta dorar los cuatro lados.",
+        "minutes": 12,
+        "passive": false
+      },
+      {
+        "instruction": "Serví con gajos de limón."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Sartén a fuego medio 3 minutos o microondas con un chorrito de agua.",
+      "tip": "Remojá los palitos de madera 10 minutos en agua para que no se quemen."
+    }
+  },
+  {
+    "title": "Tostadas de ricota con jamón crudo, rúcula y miel",
+    "description": "Pan tostado con ricota cremosa, jamón crudo, rúcula y un hilo de miel. Una merienda o cena liviana con buena dosis de proteína.",
+    "servings": 2,
+    "prep_minutes": 10,
+    "cook_minutes": 5,
+    "difficulty": "facil",
+    "tags": [
+      "alto en proteína",
+      "merienda",
+      "snack",
+      "rápido",
+      "cena",
+      "sin horno"
+    ],
+    "ingredients": [
+      "4 rebanadas de pan de campo",
+      "300 g de ricota",
+      "8 fetas de jamón crudo",
+      "1 puñado de rúcula",
+      "2 cdas de miel",
+      "1 cdita de aceite de oliva",
+      "1 cdita de jugo de limón",
+      "pimienta a gusto",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Tostá las rebanadas de pan en la tostadora o en una sartén seca 2 minutos por lado.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Mezclá la ricota con pimienta, una pizca de sal y el jugo de limón."
+      },
+      {
+        "instruction": "Untá cada tostada con una capa gruesa de ricota."
+      },
+      {
+        "instruction": "Acomodá encima el jamón crudo en ondas."
+      },
+      {
+        "instruction": "Sumá la rúcula aliñada con el aceite."
+      },
+      {
+        "instruction": "Terminá con un hilo de miel y serví enseguida."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Se come frío o a temperatura ambiente.",
+      "tip": "Guardá la ricota mezclada aparte y armá las tostadas al momento."
+    }
+  },
+  {
+    "title": "Tofu crocante en airfryer con salsa de soja y lima",
+    "description": "Cubos de tofu firme con costra de maicena, dorados en la airfryer y bañados con una salsa rápida de soja, lima y jengibre.",
+    "servings": 3,
+    "prep_minutes": 15,
+    "cook_minutes": 12,
+    "difficulty": "media",
+    "tags": [
+      "alto en proteína",
+      "vegano",
+      "airfryer",
+      "asiática",
+      "sin lácteos",
+      "rápido",
+      "cena"
+    ],
+    "ingredients": [
+      "400 g de tofu firme",
+      "2 cdas de maicena",
+      "1 cda de aceite de girasol",
+      "1 cdita de pimentón ahumado",
+      "1 cdita de ajo en polvo",
+      "3 cdas de salsa de soja",
+      "1 cda de jugo de lima",
+      "1 cdita de azúcar",
+      "1 cdita de jengibre fresco rallado",
+      "1 pepino",
+      "1 cda de semillas de sésamo"
+    ],
+    "steps": [
+      {
+        "instruction": "Envolvé el tofu en papel de cocina, ponele un peso encima y dejalo escurrir 10 minutos.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Mientras tanto, mezclá la soja, la lima, el azúcar y el jengibre para la salsa."
+      },
+      {
+        "instruction": "Cortá el tofu en cubos de 2 cm."
+      },
+      {
+        "instruction": "Mezclalo en un bowl con maicena, aceite, pimentón y ajo en polvo hasta cubrirlo parejo."
+      },
+      {
+        "instruction": "Cociná en la airfryer a 200 °C por 12 minutos, sacudiendo la canasta a la mitad.",
+        "minutes": 12,
+        "passive": true
+      },
+      {
+        "instruction": "Cortá el pepino en bastones y serví el tofu encima con la salsa y el sésamo."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Airfryer a 190 °C por 4 minutos para recuperar lo crocante.",
+      "tip": "Guardá la salsa aparte para que el tofu no se ablande."
+    }
+  }
+]

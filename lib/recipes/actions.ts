@@ -1,5 +1,6 @@
 "use server";
 
+import { logEvent } from "@/lib/activity/log";
 import { revalidatePath } from "next/cache";
 import { z } from "zod";
 import { createClient } from "@/lib/supabase/server";
@@ -15,10 +16,15 @@ export async function saveRecipe(
 ): Promise<
   { ok: true; data: { id: string; current_version: number } } | { ok: false; error: string }
 > {
-  await requireUser();
+  const user = await requireUser();
   const result = await saveRecipeWith(await createClient(), raw);
   const groupId = (raw as { group_id?: unknown } | null)?.group_id;
   if (result.ok && typeof groupId === "string") revalidatePath(`/g/${groupId}/recetas`);
+  if (result.ok)
+    void logEvent(user.id, {
+      kind: "recipe_saved",
+      groupId: typeof groupId === "string" ? groupId : null,
+    });
   return result;
 }
 

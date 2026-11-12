@@ -1,4 +1,5 @@
 import "server-only";
+import { cache } from "react";
 import { createClient } from "@/lib/supabase/server";
 
 export type GroupSummary = {
@@ -11,7 +12,7 @@ export type GroupSummary = {
 };
 
 /** Grupos a los que pertenece el usuario, con cantidad de miembros y su rol. */
-export async function getMyGroups(userId: string): Promise<GroupSummary[]> {
+export const getMyGroups = cache(async (userId: string): Promise<GroupSummary[]> => {
   const supabase = await createClient();
 
   const { data: memberships, error } = await supabase
@@ -40,4 +41,4 @@ export async function getMyGroups(userId: string): Promise<GroupSummary[]> {
     role: m.role,
     member_count: countByGroup.get(m.group_id) ?? 1,
   }));
-}
+});

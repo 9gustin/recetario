@@ -1,0 +1,586 @@
+[
+  {
+    "title": "Picada criolla con pickles rápidos de pepino y zanahoria",
+    "description": "Una picada clásica de fiambres y quesos con pickles caseros que se hacen mientras armás la tabla. Fresca, salada y lista en 22 minutos.",
+    "servings": 6,
+    "prep_minutes": 22,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "para compartir",
+      "rápido",
+      "sin horno",
+      "argentina",
+      "cena"
+    ],
+    "ingredients": [
+      "1 pepino",
+      "2 zanahorias",
+      "150 ml de vinagre de manzana",
+      "150 ml de agua tibia",
+      "1 cda de azúcar",
+      "1 cdita de sal",
+      "1 cdita de semillas de mostaza o pimienta en grano",
+      "150 g de salame en rodajas",
+      "150 g de jamón crudo",
+      "200 g de queso pategrás en cubos",
+      "150 g de queso de campo en feta",
+      "100 g de aceitunas verdes",
+      "1 paquete de grisines o palitos salados"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá el pepino en rodajas finas y las zanahorias en bastones o cintas con el pelapapas."
+      },
+      {
+        "instruction": "Mezclá en un frasco el vinagre, el agua tibia, el azúcar, la sal y las semillas hasta que se disuelva todo."
+      },
+      {
+        "instruction": "Sumergí las verduras en el líquido y apretalas para que queden cubiertas.",
+        "minutes": 15,
+        "passive": true
+      },
+      {
+        "instruction": "Mientras tanto, enrollá o doblá las rodajas de salame y el jamón crudo."
+      },
+      {
+        "instruction": "Cortá los quesos en cubos y las fetas en triángulos."
+      },
+      {
+        "instruction": "Acomodá fiambres, quesos, aceitunas y grisines en una tabla grande."
+      },
+      {
+        "instruction": "Escurrí los pickles y sumalos a la tabla en un bol chico."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 0,
+      "reheat": "No se recalienta; sacala de la heladera 10 minutos antes de servir.",
+      "tip": "Guardá los pickles en su frasco con el líquido y armá la tabla justo antes de comer."
+    }
+  },
+  {
+    "title": "Bruschettas de ricota, tomates secos y rúcula",
+    "description": "Rodajas de pan tostado con una crema de ricota al limón, tomates secos y rúcula fresca. Un bocado liviano para picar entre varios.",
+    "servings": 4,
+    "prep_minutes": 12,
+    "cook_minutes": 8,
+    "difficulty": "facil",
+    "tags": [
+      "para compartir",
+      "horno",
+      "vegetariano",
+      "italiana",
+      "rápido",
+      "snack"
+    ],
+    "ingredients": [
+      "8 rodajas de pan de campo o baguette",
+      "250 g de ricota",
+      "1 cda de jugo de limón",
+      "1 diente de ajo",
+      "4 tomates secos hidratados en aceite",
+      "1 taza de rúcula",
+      "2 cdas de aceite de oliva",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá el horno a 200 °C."
+      },
+      {
+        "instruction": "Poné las rodajas de pan en una placa y pincelalas con una cucharada de aceite."
+      },
+      {
+        "instruction": "Frotá cada rodaja con medio diente de ajo."
+      },
+      {
+        "instruction": "Horneá el pan hasta que quede dorado y crocante.",
+        "minutes": 8,
+        "passive": true
+      },
+      {
+        "instruction": "Mezclá la ricota con el jugo de limón, sal y pimienta."
+      },
+      {
+        "instruction": "Cortá los tomates secos en tiritas."
+      },
+      {
+        "instruction": "Untá el pan tibio con la ricota y sumá tomates secos y rúcula."
+      },
+      {
+        "instruction": "Terminá con un chorrito del aceite restante y llevá a la mesa."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": 0,
+      "reheat": "Guardá la crema de ricota aparte y tostá pan nuevo al momento.",
+      "tip": "Armalas recién antes de servir para que el pan no se ablande."
+    }
+  },
+  {
+    "title": "Nachos gratinados con queso, morrón y verdeo",
+    "description": "Una fuente de nachos cubiertos de queso derretido, morrón y cebolla de verdeo, con crema fresca. Ideal para ver un partido o una juntada.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "para compartir",
+      "horno",
+      "mexicana",
+      "snack",
+      "rápido",
+      "para chicos",
+      "una bandeja"
+    ],
+    "ingredients": [
+      "1 paquete de nachos de maíz (200 g)",
+      "200 g de muzzarella rallada",
+      "100 g de queso cheddar rallado",
+      "1 morrón rojo",
+      "2 cebollas de verdeo",
+      "1 tomate",
+      "1 cdita de pimentón",
+      "4 cdas de crema de leche",
+      "1 lima",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá el horno a 200 °C."
+      },
+      {
+        "instruction": "Cortá el morrón y el tomate en cubitos chicos y picá el verdeo."
+      },
+      {
+        "instruction": "Esparcí la mitad de los nachos en una fuente y cubrilos con la mitad de los quesos."
+      },
+      {
+        "instruction": "Repetí con una segunda capa de nachos y el resto del queso."
+      },
+      {
+        "instruction": "Espolvoreá el pimentón y repartí el morrón por encima."
+      },
+      {
+        "instruction": "Gratiná hasta que el queso burbujee y se dore.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Sumá el tomate y el verdeo, y mezclá la crema con jugo de lima y una pizca de sal."
+      },
+      {
+        "instruction": "Servilos enseguida con la crema de lima al costado."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Recalentá en horno fuerte unos 5 minutos para recuperar el crocante.",
+      "tip": "Comelos calientes; con el tiempo los nachos se ablandan."
+    }
+  },
+  {
+    "title": "Tzatziki casero con pan pita tostado y crudités",
+    "description": "Dip fresco de yogur, pepino, ajo y menta para mojar pan pita crocante y bastones de verduras. Sin horno y listo en 20 minutos.",
+    "servings": 4,
+    "prep_minutes": 16,
+    "cook_minutes": 4,
+    "difficulty": "facil",
+    "tags": [
+      "para compartir",
+      "vegetariano",
+      "mediterránea",
+      "sin horno",
+      "rápido",
+      "verdura"
+    ],
+    "ingredients": [
+      "300 g de yogur natural firme",
+      "1 pepino",
+      "1 diente de ajo",
+      "1 cda de jugo de limón",
+      "1 cda de aceite de oliva",
+      "1 cda de menta fresca picada",
+      "4 panes pita",
+      "2 zanahorias",
+      "1 morrón rojo",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Rallá el pepino, salalo con una pizca de sal y dejalo reposar en un colador.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Mientras tanto, cortá las zanahorias y el morrón en bastones."
+      },
+      {
+        "instruction": "Cortá cada pita en 6 triángulos."
+      },
+      {
+        "instruction": "Tostá los triángulos en una sartén caliente, sin aceite, hasta que doren de ambos lados.",
+        "minutes": 4
+      },
+      {
+        "instruction": "Apretá el pepino con las manos para sacarle el agua."
+      },
+      {
+        "instruction": "Mezclá en un bol el yogur, el pepino, el ajo rallado, el limón, la menta y la mitad del aceite."
+      },
+      {
+        "instruction": "Servilo con un chorrito de aceite y rodeado de pita y crudités."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": 0,
+      "reheat": "Se come frío; revolvé antes de servir si soltó líquido.",
+      "tip": "Escurrí bien el pepino para que el dip no quede aguado."
+    }
+  },
+  {
+    "title": "Rolls de jamón cocido, queso crema y pepino",
+    "description": "Fetas de jamón enrolladas con queso crema, pepino y verdeo, cortadas en bocados. No necesitan cocción y salen en minutos.",
+    "servings": 4,
+    "prep_minutes": 20,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "para compartir",
+      "sin horno",
+      "rápido",
+      "sin gluten",
+      "snack"
+    ],
+    "ingredients": [
+      "12 fetas de jamón cocido",
+      "200 g de queso crema",
+      "1 pepino",
+      "1 cda de cebolla de verdeo picada",
+      "1 cdita de mostaza",
+      "pimienta a gusto",
+      "12 palillos"
+    ],
+    "steps": [
+      {
+        "instruction": "Mezclá el queso crema con la mostaza, el verdeo y la pimienta."
+      },
+      {
+        "instruction": "Cortá el pepino en bastones finos del largo de las fetas."
+      },
+      {
+        "instruction": "Estirá una feta de jamón sobre la mesada y untala con una capa fina de queso."
+      },
+      {
+        "instruction": "Poné un bastón de pepino en un borde y enrollá bien apretado."
+      },
+      {
+        "instruction": "Repetí con el resto de las fetas."
+      },
+      {
+        "instruction": "Llevá los rolls a la heladera para que se firmen.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Cortá cada roll en dos o tres y pinchalos con palillos."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": 0,
+      "reheat": "Se sirven fríos; sacalos de la heladera 5 minutos antes.",
+      "tip": "Secá bien el pepino con papel de cocina para que no humedezca el jamón."
+    }
+  },
+  {
+    "title": "Langostinos al ajillo para mojar pan",
+    "description": "Langostinos salteados en aceite de oliva con ajo, pimentón y perejil, servidos en la misma cazuelita con pan para mojar. Seis minutos de cocción.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 7,
+    "difficulty": "facil",
+    "tags": [
+      "para compartir",
+      "pescado",
+      "rápido",
+      "española",
+      "una olla",
+      "cena"
+    ],
+    "ingredients": [
+      "400 g de langostinos pelados y limpios",
+      "5 dientes de ajo",
+      "100 ml de aceite de oliva",
+      "1 cdita de pimentón",
+      "1 pizca de ají molido",
+      "2 cdas de perejil picado",
+      "1 limón",
+      "1 baguette o pan de campo",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Secá los langostinos con papel de cocina y salalos."
+      },
+      {
+        "instruction": "Laminá los ajos finitos."
+      },
+      {
+        "instruction": "Calentá el aceite a fuego bajo en una sartén o cazuela y sumá el ajo y el ají molido."
+      },
+      {
+        "instruction": "Cociná el ajo hasta que apenas empiece a dorarse.",
+        "minutes": 2
+      },
+      {
+        "instruction": "Subí el fuego, agregá los langostinos y cocinalos hasta que se pongan rosados.",
+        "minutes": 4
+      },
+      {
+        "instruction": "Apagá el fuego y sumá el pimentón, el perejil y un chorrito de limón."
+      },
+      {
+        "instruction": "Llevá la cazuela a la mesa con pan en rodajas para mojar."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Recalentá apenas unos segundos en sartén a fuego bajo para que no se pongan gomosos.",
+      "tip": "No los cocines de más: con el calor del aceite se terminan de hacer."
+    }
+  },
+  {
+    "title": "Pinchos caprese de cherry, bocconcini y albahaca",
+    "description": "Bocados de tomate cherry, bocconcini y albahaca en palillos, aderezados con aceite y vinagre balsámico. Fresquitos y sin cocción.",
+    "servings": 4,
+    "prep_minutes": 15,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "para compartir",
+      "vegetariano",
+      "sin gluten",
+      "italiana",
+      "sin horno",
+      "rápido",
+      "verano"
+    ],
+    "ingredients": [
+      "250 g de tomates cherry",
+      "200 g de bocconcini de muzzarella",
+      "20 hojas de albahaca",
+      "2 cdas de aceite de oliva",
+      "1 cda de vinagre balsámico",
+      "sal y pimienta a gusto",
+      "12 palillos largos"
+    ],
+    "steps": [
+      {
+        "instruction": "Lavá y secá los tomates cherry y las hojas de albahaca."
+      },
+      {
+        "instruction": "Escurrí bien los bocconcini y secalos con papel de cocina."
+      },
+      {
+        "instruction": "Ensartá en cada palillo un tomate, una hoja de albahaca y un bocconcini."
+      },
+      {
+        "instruction": "Repetí la secuencia una vez más hasta usar todo."
+      },
+      {
+        "instruction": "Acomodalos en una fuente."
+      },
+      {
+        "instruction": "Mezclá el aceite con el vinagre, sal y pimienta, y rociá los pinchos justo antes de servir."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": 0,
+      "reheat": "Se comen fríos; sacalos de la heladera 10 minutos antes.",
+      "tip": "Aderezalos recién al servir para que la albahaca no se oscurezca."
+    }
+  },
+  {
+    "title": "Dátiles envueltos en panceta con queso azul",
+    "description": "Dátiles rellenos con un trocito de queso azul y envueltos en panceta, horneados hasta quedar crocantes por fuera y cremosos por dentro.",
+    "servings": 6,
+    "prep_minutes": 10,
+    "cook_minutes": 14,
+    "difficulty": "facil",
+    "tags": [
+      "para compartir",
+      "horno",
+      "cerdo",
+      "española",
+      "snack",
+      "sin gluten",
+      "una bandeja"
+    ],
+    "ingredients": [
+      "16 dátiles sin carozo",
+      "8 fetas de panceta ahumada",
+      "80 g de queso azul",
+      "1 cdita de miel",
+      "16 palillos"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá el horno a 200 °C."
+      },
+      {
+        "instruction": "Abrí cada dátil con un corte a lo largo."
+      },
+      {
+        "instruction": "Rellená cada dátil con un trocito de queso azul."
+      },
+      {
+        "instruction": "Cortá las fetas de panceta por la mitad."
+      },
+      {
+        "instruction": "Envolvé cada dátil con media feta y fijala con un palillo."
+      },
+      {
+        "instruction": "Disponelos en una placa con el cierre hacia abajo."
+      },
+      {
+        "instruction": "Horneá hasta que la panceta esté dorada y crocante, dándolos vuelta a mitad de cocción.",
+        "minutes": 14,
+        "passive": true
+      },
+      {
+        "instruction": "Pintalos con un hilo de miel y serví tibios."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Calentalos 5 minutos en horno a 180 °C.",
+      "tip": "Usá panceta bien fina para que se dore en el mismo tiempo que el dátil."
+    }
+  },
+  {
+    "title": "Pizzetas de pan árabe con muzzarella y aceitunas",
+    "description": "Pizzetas express hechas sobre pan árabe, con salsa de tomate, muzzarella y aceitunas. Se cortan en triángulos y desaparecen de la bandeja.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "para compartir",
+      "horno",
+      "rápido",
+      "económico",
+      "para chicos",
+      "una bandeja",
+      "cena"
+    ],
+    "ingredients": [
+      "4 panes árabes",
+      "1 taza de puré de tomate",
+      "250 g de muzzarella en rodajas",
+      "4 fetas de jamón cocido",
+      "12 aceitunas verdes",
+      "1 cdita de orégano",
+      "1 cda de aceite de oliva",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá el horno a 220 °C."
+      },
+      {
+        "instruction": "Mezclá el puré de tomate con el orégano, el aceite y una pizca de sal."
+      },
+      {
+        "instruction": "Poné los panes en placas y cubrilos con la salsa."
+      },
+      {
+        "instruction": "Repartí la muzzarella sobre cada pan."
+      },
+      {
+        "instruction": "Cortá el jamón en tiras y las aceitunas en rodajas, y distribuilos por encima."
+      },
+      {
+        "instruction": "Horneá hasta que el queso se derrita y los bordes queden crocantes.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Cortá cada pizzeta en 6 triángulos y serví calientes."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": 60,
+      "reheat": "Calentalas en horno a 200 °C unos 6 minutos, sin tapar.",
+      "tip": "Para freezar, envolvelas de a dos con film una vez frías."
+    }
+  },
+  {
+    "title": "Tabla dulce de queso, dulce de batata, frutas y nueces caramelizadas",
+    "description": "Una tabla de postre con queso fresco, dulce de batata, frutas de estación y nueces caramelizadas en sartén. Vistosa y lista en 15 minutos.",
+    "servings": 6,
+    "prep_minutes": 12,
+    "cook_minutes": 3,
+    "difficulty": "facil",
+    "tags": [
+      "para compartir",
+      "postre",
+      "fruta",
+      "argentina",
+      "vegetariano",
+      "sin horno",
+      "rápido"
+    ],
+    "ingredients": [
+      "250 g de queso fresco o queso cremoso en barra",
+      "200 g de dulce de batata",
+      "1 manzana",
+      "1 pera",
+      "1 taza de uvas",
+      "1/2 taza de nueces",
+      "1 cda de miel",
+      "1 cda de azúcar",
+      "1 cda de jugo de limón",
+      "galletitas dulces o tostadas a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá la manzana y la pera en gajos y rociálos con el jugo de limón para que no se oxiden."
+      },
+      {
+        "instruction": "Cortá el queso y el dulce de batata en rectángulos."
+      },
+      {
+        "instruction": "Calentá una sartén con el azúcar, la miel y las nueces a fuego medio."
+      },
+      {
+        "instruction": "Revolvé las nueces hasta que queden brillantes y caramelizadas.",
+        "minutes": 3
+      },
+      {
+        "instruction": "Pasá las nueces a un plato y dejalas enfriar unos minutos."
+      },
+      {
+        "instruction": "Armá la tabla con queso, dulce, frutas, uvas y galletitas."
+      },
+      {
+        "instruction": "Sumá las nueces caramelizadas al final y llevá a la mesa."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": 0,
+      "reheat": "No se recalienta; serví a temperatura ambiente fresca.",
+      "tip": "Guardá las nueces en un frasco aparte para que mantengan el crocante."
+    }
+  }
+]

@@ -1,5 +1,6 @@
 "use server";
 
+import { logEvent } from "@/lib/activity/log";
 import { z } from "zod";
 import { revalidatePath } from "next/cache";
 import { requireUser } from "@/lib/auth";
@@ -196,6 +197,7 @@ export async function finishCookingSession(
 
   revalidatePath(`/g/${recipe.group_id}/recetas/${recipe.id}`);
   revalidatePath(`/g/${recipe.group_id}/recetas`);
+  void logEvent(user.id, { kind: "cooking_finished", meta: { savedVersion } });
   return { ok: true, data: { savedVersion } };
 }
 

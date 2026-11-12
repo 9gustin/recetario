@@ -1,0 +1,633 @@
+[
+  {
+    "title": "Hummus casero de garbanzos con comino y limón",
+    "description": "Pasta cremosa de garbanzos para untar tostadas, pan árabe o bastones de verdura. Sin cocción y lista en diez minutos.",
+    "servings": 6,
+    "prep_minutes": 10,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "legumbres",
+      "rápido",
+      "vegano",
+      "sin horno",
+      "snack",
+      "árabe"
+    ],
+    "ingredients": [
+      "2 latas de garbanzos cocidos (unos 480 g escurridos)",
+      "3 cda de pasta de sésamo (tahini)",
+      "1 limón grande (jugo)",
+      "1 diente de ajo",
+      "1/2 cdita de comino molido",
+      "4 cda de agua fría o del líquido de los garbanzos",
+      "3 cda de aceite de oliva",
+      "sal a gusto",
+      "1 cdita de pimentón dulce para servir"
+    ],
+    "steps": [
+      {
+        "instruction": "Escurrí los garbanzos y guardá un poco del líquido de la lata."
+      },
+      {
+        "instruction": "Pelá el ajo y ponelo en el vaso de la procesadora con el jugo de limón y el tahini."
+      },
+      {
+        "instruction": "Procesá un minuto hasta que espese y se aclare."
+      },
+      {
+        "instruction": "Agregá los garbanzos, el comino, la sal y 2 cucharadas de aceite."
+      },
+      {
+        "instruction": "Procesá 2 minutos y sumá agua de a poco hasta lograr una crema suave."
+      },
+      {
+        "instruction": "Probá y corregí con sal o limón."
+      },
+      {
+        "instruction": "Serví en un plato hondo, hacé un hueco con la cuchara y volcá el aceite restante y el pimentón."
+      }
+    ],
+    "storage": {
+      "fridge_days": 4,
+      "freezer_days": 60,
+      "reheat": "No hace falta recalentar: sacalo 10 minutos antes y revolvelo.",
+      "tip": "Una capa fina de aceite por arriba evita que se seque en la heladera."
+    }
+  },
+  {
+    "title": "Hamburguesas de lentejas y avena en sartén",
+    "description": "Medallones firmes y sabrosos hechos con lentejas de lata, avena y especias. Se arman en minutos y se doran en sartén.",
+    "servings": 4,
+    "prep_minutes": 15,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "legumbres",
+      "económico",
+      "para freezar",
+      "vegetariano",
+      "cena",
+      "para chicos"
+    ],
+    "ingredients": [
+      "2 latas de lentejas cocidas (unos 480 g escurridas)",
+      "1 cebolla chica",
+      "1 diente de ajo",
+      "4 cda de avena arrollada",
+      "1 huevo",
+      "1 cdita de pimentón dulce",
+      "1/2 cdita de comino molido",
+      "1 cda de perejil picado",
+      "3 cda de aceite de girasol",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Escurrí bien las lentejas y enjuagalas con agua fría."
+      },
+      {
+        "instruction": "Picá la cebolla y el ajo bien finitos."
+      },
+      {
+        "instruction": "Aplastá las lentejas con un tenedor, dejando algunos granos enteros."
+      },
+      {
+        "instruction": "Mezclá con la cebolla, el ajo, la avena, el huevo, las especias y el perejil."
+      },
+      {
+        "instruction": "Dejá reposar la mezcla para que la avena absorba la humedad.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Formá 8 medallones con las manos húmedas."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén y doralos a fuego medio 5 minutos de cada lado."
+      },
+      {
+        "instruction": "Serví en pan con tomate y hojas verdes, o con ensalada."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 90,
+      "reheat": "Calentalas en sartén con una gota de aceite 3 minutos por lado.",
+      "tip": "Para freezar, separalas con papel manteca."
+    }
+  },
+  {
+    "title": "Falafel de garbanzos en airfryer",
+    "description": "Bolitas aplastadas de garbanzos con mucho perejil y comino, crocantes por fuera y tiernas por dentro, con poco aceite.",
+    "servings": 4,
+    "prep_minutes": 15,
+    "cook_minutes": 15,
+    "difficulty": "media",
+    "tags": [
+      "legumbres",
+      "airfryer",
+      "vegano",
+      "almuerzo",
+      "árabe",
+      "para compartir"
+    ],
+    "ingredients": [
+      "2 latas de garbanzos cocidos (unos 480 g escurridos)",
+      "1 cebolla de verdeo o 1/2 cebolla",
+      "2 dientes de ajo",
+      "1 atado chico de perejil",
+      "1 cdita de comino molido",
+      "1/2 cdita de pimentón dulce",
+      "3 cda de harina de garbanzos o de trigo",
+      "1/2 cdita de polvo de hornear",
+      "2 cda de aceite de girasol",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Escurrí los garbanzos y secalos bien con un repasador."
+      },
+      {
+        "instruction": "Procesá el perejil, el ajo y la cebolla hasta picarlos fino."
+      },
+      {
+        "instruction": "Agregá los garbanzos, el comino, el pimentón y la sal."
+      },
+      {
+        "instruction": "Procesá con pulsos cortos: tiene que quedar granulado, no puré."
+      },
+      {
+        "instruction": "Mezclá con la harina y el polvo de hornear."
+      },
+      {
+        "instruction": "Formá 12 bolitas y aplastalas un poco."
+      },
+      {
+        "instruction": "Precalentá la airfryer a 190 °C y pincelá los falafel con aceite."
+      },
+      {
+        "instruction": "Cociná 12 minutos, dándolos vuelta a la mitad.",
+        "minutes": 12,
+        "passive": true
+      },
+      {
+        "instruction": "Serví en pan árabe con tomate, pepino y salsa de yogur."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Pasalos 4 minutos por la airfryer a 180 °C para que recuperen el crocante.",
+      "tip": "Si la mezcla se desarma, sumá una cucharada más de harina."
+    }
+  },
+  {
+    "title": "Pasta e ceci: fideos con garbanzos y romero",
+    "description": "Plato espeso de pasta corta y garbanzos en una salsa de tomate y romero, todo en una olla. Reconfortante y económico.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 25,
+    "difficulty": "facil",
+    "tags": [
+      "legumbres",
+      "pasta",
+      "una olla",
+      "italiana",
+      "económico",
+      "invierno",
+      "cena"
+    ],
+    "ingredients": [
+      "1 lata de garbanzos cocidos (unos 240 g escurridos)",
+      "200 g de fideos cortos (ditalini o coditos)",
+      "1 cebolla",
+      "2 dientes de ajo",
+      "1 zanahoria chica",
+      "1 rama de romero",
+      "1 lata de tomates triturados",
+      "700 ml de caldo de verduras caliente",
+      "3 cda de aceite de oliva",
+      "queso rallado para servir",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Picá la cebolla, la zanahoria y el ajo bien chiquitos."
+      },
+      {
+        "instruction": "Calentá el aceite en una olla y rehogá las verduras con el romero 5 minutos.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el tomate y cociná 5 minutos más.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá los garbanzos y el caldo caliente."
+      },
+      {
+        "instruction": "Aplastá unos pocos garbanzos contra la olla para espesar."
+      },
+      {
+        "instruction": "Cuando hierva, echá los fideos y cociná a fuego medio, revolviendo seguido.",
+        "minutes": 10,
+        "passive": false
+      },
+      {
+        "instruction": "Retirá el romero, sazoná y serví con queso rallado y un hilo de aceite."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Recalentá en olla con un chorrito de agua o caldo, porque los fideos absorben líquido.",
+      "tip": "Quedan mejor recién hechos; la pasta se hincha al reposar."
+    }
+  },
+  {
+    "title": "Sopa de porotos negros con comino y lima",
+    "description": "Sopa rústica y especiada de porotos negros, medio licuada para que quede cremosa y con trocitos. Se termina con lima y cilantro.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 20,
+    "difficulty": "facil",
+    "tags": [
+      "legumbres",
+      "sopa",
+      "una olla",
+      "mexicana",
+      "invierno",
+      "económico",
+      "vegano"
+    ],
+    "ingredients": [
+      "2 latas de porotos negros cocidos (unos 480 g escurridos)",
+      "1 cebolla",
+      "1 morrón rojo",
+      "2 dientes de ajo",
+      "1 cdita de comino molido",
+      "1 cdita de pimentón ahumado",
+      "700 ml de caldo de verduras",
+      "2 cda de aceite de girasol",
+      "1 lima (jugo)",
+      "cilantro o perejil picado",
+      "sal y aji molido a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Picá la cebolla, el morrón y el ajo."
+      },
+      {
+        "instruction": "Rehogá todo en el aceite 6 minutos, hasta que ablande.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el comino y el pimentón y mezclá 30 segundos."
+      },
+      {
+        "instruction": "Sumá los porotos escurridos y el caldo."
+      },
+      {
+        "instruction": "Hacé hervir y cociná a fuego bajo.",
+        "minutes": 12,
+        "passive": true
+      },
+      {
+        "instruction": "Licuá con minipimer unas pocas veces, dejando trozos."
+      },
+      {
+        "instruction": "Sazoná, sumá el jugo de lima y serví con cilantro."
+      }
+    ],
+    "storage": {
+      "fridge_days": 4,
+      "freezer_days": 90,
+      "reheat": "Calentá en olla a fuego bajo, agregando un poco de agua si espesó.",
+      "tip": "Sumá la lima recién al servir para que no pierda frescura."
+    }
+  },
+  {
+    "title": "Tostadas con crema de porotos blancos, ajo y limón",
+    "description": "Untable suave de porotos blancos con romero y limón sobre pan tostado. Va como cena liviana o picada.",
+    "servings": 4,
+    "prep_minutes": 12,
+    "cook_minutes": 8,
+    "difficulty": "facil",
+    "tags": [
+      "legumbres",
+      "rápido",
+      "vegetariano",
+      "cena",
+      "mediterránea",
+      "sin horno"
+    ],
+    "ingredients": [
+      "1 lata de porotos blancos cocidos (unos 240 g escurridos)",
+      "2 dientes de ajo",
+      "1 rama de romero",
+      "4 cda de aceite de oliva",
+      "1/2 limón (jugo y ralladura)",
+      "8 rebanadas de pan de campo",
+      "2 tomates",
+      "hojas de rúcula",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Escurrí y enjuagá los porotos."
+      },
+      {
+        "instruction": "Calentá 2 cucharadas de aceite con el ajo laminado y el romero a fuego bajo.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá los porotos y calentá 3 minutos.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Retirá el romero y pisá todo con un tenedor o minipimer hasta lograr una crema."
+      },
+      {
+        "instruction": "Agregá el jugo de limón, la ralladura, sal y pimienta."
+      },
+      {
+        "instruction": "Tostá el pan en tostadora o sartén seca."
+      },
+      {
+        "instruction": "Untá con la crema y cubrí con tomate en rodajas y rúcula."
+      },
+      {
+        "instruction": "Terminá con un hilo de aceite de oliva."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "La crema se come fría o tibia; las tostadas se arman al momento.",
+      "tip": "Guardá la crema aparte del pan para que no se ablande."
+    }
+  },
+  {
+    "title": "Chili sin carne con porotos rojos y choclo",
+    "description": "Guiso picantito de porotos rojos, tomate y choclo, con pimentón y comino. Rinde bien y se hace en una sola olla.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 22,
+    "difficulty": "facil",
+    "tags": [
+      "legumbres",
+      "vegano",
+      "una olla",
+      "mexicana",
+      "para freezar",
+      "cena"
+    ],
+    "ingredients": [
+      "2 latas de porotos rojos cocidos (unos 480 g escurridos)",
+      "1 lata de choclo en granos",
+      "1 cebolla",
+      "1 morrón verde",
+      "2 dientes de ajo",
+      "1 lata de tomates triturados",
+      "1 cdita de comino molido",
+      "1 cdita de pimentón ahumado",
+      "1/2 cdita de aji molido",
+      "200 ml de agua",
+      "2 cda de aceite de girasol",
+      "sal a gusto",
+      "cilantro o perejil para servir"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá la cebolla y el morrón en cubitos y picá el ajo."
+      },
+      {
+        "instruction": "Rehogá en el aceite 5 minutos.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá las especias y mezclá medio minuto."
+      },
+      {
+        "instruction": "Agregá el tomate, el agua y la sal."
+      },
+      {
+        "instruction": "Incorporá los porotos escurridos y el choclo."
+      },
+      {
+        "instruction": "Cociná a fuego medio-bajo, revolviendo de vez en cuando.",
+        "minutes": 15,
+        "passive": true
+      },
+      {
+        "instruction": "Serví con cilantro, y si querés, con arroz o nachos."
+      }
+    ],
+    "storage": {
+      "fridge_days": 4,
+      "freezer_days": 90,
+      "reheat": "Calentá en olla o microondas, con un chorrito de agua.",
+      "tip": "Al otro día queda todavía más sabroso."
+    }
+  },
+  {
+    "title": "Panqueques de harina de garbanzos con verduras",
+    "description": "Tortitas finas de harina de garbanzos con cebolla de verdeo y zucchini rallado, doradas en sartén. Sin gluten y sin huevo.",
+    "servings": 3,
+    "prep_minutes": 12,
+    "cook_minutes": 15,
+    "difficulty": "media",
+    "tags": [
+      "legumbres",
+      "sin gluten",
+      "vegano",
+      "sin horno",
+      "almuerzo",
+      "verdura"
+    ],
+    "ingredients": [
+      "200 g de harina de garbanzos",
+      "350 ml de agua",
+      "1 zapallito verde o zucchini chico",
+      "2 cebollas de verdeo",
+      "1/2 cdita de cúrcuma",
+      "1/2 cdita de comino molido",
+      "1 cdita de sal",
+      "4 cda de aceite de girasol",
+      "pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Mezclá la harina con el agua, la sal y las especias hasta que no queden grumos."
+      },
+      {
+        "instruction": "Dejá reposar la masa.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Rallá el zapallito, exprimilo y picá el verdeo."
+      },
+      {
+        "instruction": "Sumá las verduras a la masa y mezclá."
+      },
+      {
+        "instruction": "Calentá una sartén antiadherente con un poco de aceite a fuego medio."
+      },
+      {
+        "instruction": "Volcá un cucharón de masa y extendé en una capa fina."
+      },
+      {
+        "instruction": "Cociná 3 minutos por lado hasta que dore.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Repetí con el resto de la masa y serví con yogur o ensalada."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": 30,
+      "reheat": "Calentalos en sartén seca 1 minuto por lado.",
+      "tip": "El reposo hidrata la harina y evita el gusto crudo."
+    }
+  },
+  {
+    "title": "Mujaddara rápida: arroz, lentejas y cebolla dorada",
+    "description": "Clásico de Medio Oriente con arroz, lentejas y mucha cebolla dorada con comino y canela. Sencillo y muy rendidor.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 27,
+    "difficulty": "media",
+    "tags": [
+      "legumbres",
+      "arroz",
+      "árabe",
+      "vegano",
+      "económico",
+      "almuerzo"
+    ],
+    "ingredients": [
+      "1 taza de arroz largo fino",
+      "1 lata de lentejas cocidas (unos 240 g escurridas)",
+      "3 cebollas grandes",
+      "3 cda de aceite de girasol",
+      "1 cdita de comino molido",
+      "1/2 cdita de canela",
+      "2 tazas de agua",
+      "sal y pimienta a gusto",
+      "yogur natural para servir"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá las cebollas en medias lunas finas."
+      },
+      {
+        "instruction": "Doralas en una sartén con el aceite a fuego medio, revolviendo seguido.",
+        "minutes": 18,
+        "passive": false
+      },
+      {
+        "instruction": "Mientras tanto, enjuagá el arroz y ponelo en una olla con el agua, la sal, el comino y la canela."
+      },
+      {
+        "instruction": "Cociná tapado a fuego bajo desde que hierva.",
+        "minutes": 12,
+        "passive": true
+      },
+      {
+        "instruction": "Escurrí las lentejas y agregalas al arroz."
+      },
+      {
+        "instruction": "Tapá y dejá reposar con el fuego apagado.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Soltá con un tenedor, serví cubierto con la cebolla dorada y yogur al lado."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Calentá en sartén con una cucharada de agua o en microondas tapado.",
+      "tip": "Guardá la cebolla aparte para que se mantenga crocante."
+    }
+  },
+  {
+    "title": "Garbanzos con tomate, morrón y huevos pochados",
+    "description": "Sartén de garbanzos en salsa de tomate y morrón asado con comino, con huevos cocidos directamente encima. Va con pan para mojar.",
+    "servings": 3,
+    "prep_minutes": 8,
+    "cook_minutes": 20,
+    "difficulty": "media",
+    "tags": [
+      "legumbres",
+      "huevo",
+      "una olla",
+      "cena",
+      "mediterránea",
+      "alto en proteína"
+    ],
+    "ingredients": [
+      "1 lata de garbanzos cocidos (unos 240 g escurridos)",
+      "1 cebolla",
+      "1 morrón rojo",
+      "2 dientes de ajo",
+      "1 lata de tomates triturados",
+      "1 cdita de comino molido",
+      "1 cdita de pimentón dulce",
+      "3 huevos",
+      "2 cda de aceite de oliva",
+      "perejil picado",
+      "sal y aji molido a gusto",
+      "pan para acompañar"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá la cebolla y el morrón en tiritas y picá el ajo."
+      },
+      {
+        "instruction": "Rehogá en el aceite en una sartén profunda hasta que ablande.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el comino, el pimentón y el aji molido."
+      },
+      {
+        "instruction": "Sumá el tomate y cociná a fuego medio.",
+        "minutes": 6,
+        "passive": true
+      },
+      {
+        "instruction": "Incorporá los garbanzos escurridos y sazoná."
+      },
+      {
+        "instruction": "Hacé tres huecos en la salsa y rompé un huevo en cada uno."
+      },
+      {
+        "instruction": "Tapá y cociná a fuego bajo hasta que las claras cuajen.",
+        "minutes": 6,
+        "passive": true
+      },
+      {
+        "instruction": "Espolvoreá con perejil y serví con pan."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Recalentá suave en sartén tapada; los huevos quedan mejor si los hacés al momento.",
+      "tip": "Si vas a guardar, conservá la salsa sola y cociná huevos frescos al servir."
+    }
+  }
+]

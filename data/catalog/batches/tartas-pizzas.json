@@ -1,0 +1,617 @@
+[
+  {
+    "title": "Pizza de sartén con masa de yogur",
+    "description": "Una pizza sin horno ni levadura: la masa de yogur se hace en cinco minutos y se cocina tapada en sartén, con salsa de tomate y mucha muzzarella derretida.",
+    "servings": 3,
+    "prep_minutes": 12,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "tarta",
+      "sin horno",
+      "rápido",
+      "cena",
+      "para chicos",
+      "italiana",
+      "económico"
+    ],
+    "ingredients": [
+      "250 g de harina 000",
+      "1 cdita de polvo de hornear",
+      "1 pizca de sal",
+      "150 g de yogur natural sin azúcar",
+      "2 cdas de aceite de oliva",
+      "5 cdas de puré de tomate",
+      "1 cdita de orégano",
+      "150 g de muzzarella en fetas o rallada",
+      "Aceitunas verdes o negras a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Mezclá en un bowl la harina, el polvo de hornear y la sal."
+      },
+      {
+        "instruction": "Agregá el yogur y 1 cda de aceite, y uní hasta formar una masa blanda. Sumá una cucharada de harina si se pega."
+      },
+      {
+        "instruction": "Estirá la masa con las manos o un palote hasta que tenga el tamaño de tu sartén y 1 cm de espesor."
+      },
+      {
+        "instruction": "Calentá una sartén antiadherente con el resto del aceite y cociná la masa a fuego medio-bajo, tapada.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Dale vuelta a la masa y cubrila con el puré de tomate, el orégano, la muzzarella y las aceitunas."
+      },
+      {
+        "instruction": "Tapá y cociná a fuego bajo hasta que el queso se derrita y la base esté dorada.",
+        "minutes": 7,
+        "passive": true
+      },
+      {
+        "instruction": "Deslizá la pizza a una tabla, cortala en porciones y serví."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": 60,
+      "reheat": "En sartén tapada a fuego bajo unos 5 minutos, o en horno a 180 °C.",
+      "tip": "Congelá las porciones separadas con un papel manteca entre medio."
+    }
+  },
+  {
+    "title": "Fugazzeta rellena de masa rápida",
+    "description": "Fugazzeta rellena con masa sin leudar, abundante muzzarella adentro y cebolla dulce arriba. Sale del horno en menos de 40 minutos.",
+    "servings": 4,
+    "prep_minutes": 15,
+    "cook_minutes": 22,
+    "difficulty": "media",
+    "tags": [
+      "tarta",
+      "horno",
+      "cena",
+      "para compartir",
+      "argentina",
+      "vegetariano"
+    ],
+    "ingredients": [
+      "300 g de harina 0000",
+      "2 cditas de polvo de hornear",
+      "1/2 cdita de sal",
+      "3 cdas de aceite de oliva",
+      "150 ml de agua tibia",
+      "250 g de muzzarella en fetas",
+      "3 cebollas grandes",
+      "1 cdita de orégano",
+      "Aceitunas verdes a gusto",
+      "Sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá las cebollas en rodajas finas, ponelas en un bowl con una pizca de sal y dejalas que suelten el agua.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Precalentá el horno a 220 °C y aceitá un molde de pizza de unos 28 cm."
+      },
+      {
+        "instruction": "Mezclá la harina, el polvo de hornear y la sal. Agregá 2 cdas de aceite y el agua tibia, y amasá un minuto."
+      },
+      {
+        "instruction": "Dividí la masa en dos bollos, uno un poco más grande. Estirá el más grande y forrá el molde dejando que sobre un borde."
+      },
+      {
+        "instruction": "Cubrí la base con la muzzarella, dejando 1 cm libre en los bordes."
+      },
+      {
+        "instruction": "Estirá el otro bollo, tapá el relleno y sellá los bordes doblándolos hacia adentro."
+      },
+      {
+        "instruction": "Escurrí la cebolla, cubrí la superficie y sumá el orégano, las aceitunas, pimienta y el aceite restante."
+      },
+      {
+        "instruction": "Horneá en la parte baja del horno hasta que la masa esté dorada y la cebolla tierna.",
+        "minutes": 22,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "En horno a 180 °C unos 10 minutos para que la base quede crocante.",
+      "tip": "Dejala reposar 5 minutos antes de cortar para que el queso no se escape."
+    }
+  },
+  {
+    "title": "Tarta de zapallitos y ricota",
+    "description": "Tarta cerrada con tapas listas, relleno suave de zapallitos salteados, ricota y queso rallado. Una opción liviana y rendidora para la cena.",
+    "servings": 6,
+    "prep_minutes": 12,
+    "cook_minutes": 26,
+    "difficulty": "facil",
+    "tags": [
+      "tarta",
+      "horno",
+      "vegetariano",
+      "cena",
+      "almuerzo",
+      "económico",
+      "verdura"
+    ],
+    "ingredients": [
+      "2 tapas de tarta",
+      "3 zapallitos verdes",
+      "1 cebolla",
+      "1 cda de aceite de oliva",
+      "250 g de ricota",
+      "2 huevos",
+      "80 g de queso rallado",
+      "1 pizca de nuez moscada",
+      "Sal y pimienta a gusto",
+      "1 yema para pintar"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá el horno a 200 °C."
+      },
+      {
+        "instruction": "Cortá los zapallitos en cubos chicos y la cebolla en cubitos."
+      },
+      {
+        "instruction": "Salteá la cebolla y los zapallitos en el aceite hasta que se ablanden y largue el agua.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Mezclá en un bowl la ricota, los huevos, el queso rallado, la nuez moscada, sal y pimienta."
+      },
+      {
+        "instruction": "Sumá los zapallitos tibios y mezclá bien."
+      },
+      {
+        "instruction": "Forrá un molde con una tapa, volcá el relleno y cubrí con la otra tapa. Sellá los bordes con un tenedor."
+      },
+      {
+        "instruction": "Pintá con la yema, hacé unos cortes en la superficie y horneá hasta que esté bien dorada.",
+        "minutes": 20,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "En horno a 180 °C unos 10 minutos o en microondas por porción.",
+      "tip": "Salteá bien los zapallitos para que no suelten agua adentro de la tarta."
+    }
+  },
+  {
+    "title": "Tarta abierta de pera, queso azul y nueces",
+    "description": "Hojaldre crocante con peras en láminas, queso azul y nueces, terminada con un hilo de miel. Dulce y salada, ideal para compartir.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 22,
+    "difficulty": "facil",
+    "tags": [
+      "tarta",
+      "horno",
+      "rápido",
+      "para compartir",
+      "cena",
+      "vegetariano"
+    ],
+    "ingredients": [
+      "1 lámina de masa de hojaldre",
+      "2 peras maduras pero firmes",
+      "120 g de queso azul",
+      "40 g de nueces",
+      "1 cda de miel",
+      "1 cda de manteca derretida",
+      "1 pizca de pimienta",
+      "1 cda de jugo de limón"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá el horno a 200 °C y poné la lámina de hojaldre sobre una placa con papel manteca."
+      },
+      {
+        "instruction": "Marcá con un cuchillo un borde de 1,5 cm sin cortar del todo y pinchá el centro con un tenedor."
+      },
+      {
+        "instruction": "Cortá las peras en láminas finas y rociálas con el jugo de limón."
+      },
+      {
+        "instruction": "Acomodá las peras en el centro, pintá con la manteca y horneá hasta que el hojaldre se infle y dore.",
+        "minutes": 15,
+        "passive": true
+      },
+      {
+        "instruction": "Sacá la tarta, desmenuzá el queso azul y las nueces por arriba."
+      },
+      {
+        "instruction": "Llevá al horno unos minutos más hasta que el queso se ablande.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Terminá con la miel y la pimienta, y servila tibia."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "En horno a 180 °C unos 8 minutos para recuperar el crocante.",
+      "tip": "Comela el mismo día si podés: el hojaldre es más rico recién hecho."
+    }
+  },
+  {
+    "title": "Pizzetas de pan árabe en airfryer",
+    "description": "Pizzetas individuales con base de pan árabe, tomate, jamón, morrón y queso. Listas en 10 minutos y perfectas para los chicos.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "tarta",
+      "airfryer",
+      "rápido",
+      "para chicos",
+      "almuerzo",
+      "cena"
+    ],
+    "ingredients": [
+      "4 panes árabes chicos",
+      "6 cdas de puré de tomate",
+      "1 cdita de orégano",
+      "150 g de muzzarella rallada",
+      "4 fetas de jamón cocido",
+      "1/2 morrón rojo",
+      "1 cdita de aceite de oliva",
+      "Sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá el morrón en tiritas finas y el jamón en cuadraditos."
+      },
+      {
+        "instruction": "Mezclá el puré de tomate con el orégano, el aceite y una pizca de sal."
+      },
+      {
+        "instruction": "Precalentá la airfryer a 180 °C unos 3 minutos."
+      },
+      {
+        "instruction": "Untá cada pan árabe con la salsa y repartí el jamón, el morrón y la muzzarella."
+      },
+      {
+        "instruction": "Cociná las pizzetas de a una o dos, según el tamaño de tu canasto, hasta que el queso burbujee y los bordes se doren.",
+        "minutes": 4,
+        "passive": true
+      },
+      {
+        "instruction": "Repetí con el resto y serví enseguida."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "En airfryer a 170 °C unos 3 minutos.",
+      "tip": "Si usás panes grandes, cortalos a la mitad para que entren en el canasto."
+    }
+  },
+  {
+    "title": "Tarta cremosa de choclo y verdeo",
+    "description": "Tarta abierta con salsa blanca de choclo, cebolla de verdeo y queso cremoso, gratinada por arriba. Sabe a humita en versión tarta.",
+    "servings": 6,
+    "prep_minutes": 14,
+    "cook_minutes": 25,
+    "difficulty": "media",
+    "tags": [
+      "tarta",
+      "horno",
+      "vegetariano",
+      "cena",
+      "almuerzo",
+      "argentina",
+      "latinoamericana"
+    ],
+    "ingredients": [
+      "1 tapa de tarta",
+      "2 latas de choclo en granos",
+      "3 cebollas de verdeo",
+      "1 cda de manteca",
+      "1 cda de harina",
+      "250 ml de leche",
+      "2 huevos",
+      "150 g de queso cremoso",
+      "1 pizca de nuez moscada",
+      "Sal y pimienta a gusto",
+      "1 cdita de pimentón dulce"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá el horno a 200 °C y forrá un molde con la tapa de tarta. Pinchala con un tenedor."
+      },
+      {
+        "instruction": "Escurrí el choclo y picá finas las cebollas de verdeo, separando la parte blanca de la verde."
+      },
+      {
+        "instruction": "Derretí la manteca en una sartén y cociná la parte blanca del verdeo unos minutos.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá la harina, mezclá un minuto y volcá la leche de a poco revolviendo hasta que espese.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el choclo, la nuez moscada, sal y pimienta, y apagá el fuego. Dejá entibiar un momento."
+      },
+      {
+        "instruction": "Incorporá los huevos y la parte verde del verdeo, y volcá todo sobre la masa."
+      },
+      {
+        "instruction": "Cubrí con el queso cremoso en cubos y espolvoreá el pimentón."
+      },
+      {
+        "instruction": "Horneá hasta que el relleno esté cuajado y el queso dorado.",
+        "minutes": 22,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "En horno a 180 °C unos 10 minutos o en microondas por porción.",
+      "tip": "Dejala reposar 5 minutos antes de cortar para que se asiente el relleno."
+    }
+  },
+  {
+    "title": "Tarta de cebolla y panceta",
+    "description": "Una tarta tipo quiche con cebollas doradas, panceta ahumada y un relleno cremoso de huevos y crema. Rica caliente o tibia.",
+    "servings": 6,
+    "prep_minutes": 12,
+    "cook_minutes": 26,
+    "difficulty": "media",
+    "tags": [
+      "tarta",
+      "horno",
+      "cerdo",
+      "cena",
+      "almuerzo",
+      "invierno"
+    ],
+    "ingredients": [
+      "1 tapa de tarta",
+      "200 g de panceta ahumada",
+      "2 cebollas",
+      "3 huevos",
+      "200 ml de crema de leche",
+      "100 g de queso rallado tipo emmental o gruyère",
+      "1 pizca de nuez moscada",
+      "Pimienta a gusto",
+      "1 cdita de aceite"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá el horno a 200 °C y forrá un molde de 22 cm con la tapa. Pinchá la base con un tenedor."
+      },
+      {
+        "instruction": "Cortá la panceta en cubitos y las cebollas en plumas finas."
+      },
+      {
+        "instruction": "Doná la panceta en una sartén con el aceite hasta que suelte su grasa y se dore.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá la cebolla y cociná hasta que esté tierna y dorada.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Batí los huevos con la crema, la nuez moscada y pimienta. No hace falta más sal por la panceta."
+      },
+      {
+        "instruction": "Repartí la cebolla y la panceta sobre la masa, espolvoreá la mitad del queso y volcá la mezcla de huevos."
+      },
+      {
+        "instruction": "Cubrí con el queso restante y horneá hasta que esté cuajada y dorada.",
+        "minutes": 18,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 45,
+      "reheat": "En horno a 170 °C unos 10 minutos para que no se seque.",
+      "tip": "Probá la mezcla antes de salar: la panceta y el queso ya aportan bastante sal."
+    }
+  },
+  {
+    "title": "Pizza de polenta con tomate y muzzarella",
+    "description": "Base de polenta de cocción rápida que se estira en una placa y se gratina con tomate y queso. Sin harina de trigo y lista en media hora.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 20,
+    "difficulty": "facil",
+    "tags": [
+      "tarta",
+      "horno",
+      "sin gluten",
+      "vegetariano",
+      "cena",
+      "italiana",
+      "económico"
+    ],
+    "ingredients": [
+      "1 taza de polenta de cocción rápida",
+      "3 tazas de agua",
+      "40 g de queso rallado",
+      "1 cdita de sal",
+      "1 cda de aceite de oliva",
+      "5 cdas de salsa de tomate",
+      "150 g de muzzarella",
+      "1 tomate",
+      "1 cdita de orégano",
+      "Aceitunas a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá el horno a 220 °C y aceitá una placa o fuente grande."
+      },
+      {
+        "instruction": "Hervi el agua con la sal en una cacerola y volcá la polenta en lluvia, revolviendo."
+      },
+      {
+        "instruction": "Cociná sin dejar de revolver hasta que espese bien, según indique el paquete.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Apagá el fuego y mezclá con el queso rallado."
+      },
+      {
+        "instruction": "Extendé la polenta caliente sobre la placa con una espátula mojada, en una capa de 1,5 cm."
+      },
+      {
+        "instruction": "Cubrí con la salsa, la muzzarella, el tomate en rodajas finas, el orégano y las aceitunas."
+      },
+      {
+        "instruction": "Horneá hasta que el queso burbujee y se dore.",
+        "minutes": 15,
+        "passive": true
+      },
+      {
+        "instruction": "Dejá reposar 3 minutos antes de cortar en cuadrados."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 45,
+      "reheat": "En horno a 180 °C unos 10 minutos o en sartén tapada.",
+      "tip": "Mojá la espátula para que la polenta no se pegue al extenderla."
+    }
+  },
+  {
+    "title": "Pizza blanca de ricota, rúcula y jamón crudo",
+    "description": "Prepizza con base cremosa de ricota y ajo, muzzarella gratinada y un final fresco de rúcula, jamón crudo y limón.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "tarta",
+      "horno",
+      "rápido",
+      "cena",
+      "italiana",
+      "para compartir"
+    ],
+    "ingredients": [
+      "2 prepizzas",
+      "250 g de ricota",
+      "1 diente de ajo",
+      "1 cda de aceite de oliva",
+      "150 g de muzzarella rallada",
+      "8 fetas de jamón crudo",
+      "2 tazas de rúcula",
+      "1 cdita de jugo de limón",
+      "Sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá el horno a 220 °C."
+      },
+      {
+        "instruction": "Rallá o picá fino el ajo y mezclalo con la ricota, la mitad del aceite, sal y pimienta."
+      },
+      {
+        "instruction": "Untá las prepizzas con la mezcla de ricota y cubrí con la muzzarella."
+      },
+      {
+        "instruction": "Horneá hasta que el queso se derrita y los bordes se doren.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Aliñá la rúcula con el limón, el aceite restante y una pizca de sal."
+      },
+      {
+        "instruction": "Sacá las pizzas del horno y repartí el jamón crudo y la rúcula por arriba."
+      },
+      {
+        "instruction": "Cortá en porciones y serví al momento."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Sacale el jamón y la rúcula y recalentá en horno a 180 °C unos 6 minutos.",
+      "tip": "Agregá el jamón y la rúcula siempre al final para que no se cocinen."
+    }
+  },
+  {
+    "title": "Tarta de brócoli y queso sin masa",
+    "description": "Tarta sin tapa: brócoli, huevos, queso cremoso y un toque de ajo cocinados en molde. Liviana, económica y muy simple.",
+    "servings": 4,
+    "prep_minutes": 12,
+    "cook_minutes": 25,
+    "difficulty": "facil",
+    "tags": [
+      "tarta",
+      "horno",
+      "vegetariano",
+      "liviano",
+      "económico",
+      "verdura",
+      "almuerzo"
+    ],
+    "ingredients": [
+      "1 brócoli mediano (unos 400 g)",
+      "3 huevos",
+      "150 g de queso cremoso",
+      "40 g de queso rallado",
+      "3 cdas de harina",
+      "100 ml de leche",
+      "1 diente de ajo",
+      "1 cda de aceite de oliva",
+      "Sal y pimienta a gusto",
+      "2 cdas de pan rallado"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá el horno a 200 °C y aceitá un molde de 22 cm, espolvoreándolo con el pan rallado."
+      },
+      {
+        "instruction": "Cortá el brócoli en ramitos chicos y hervilos en agua con sal hasta que estén tiernos pero firmes.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Escurrí bien el brócoli y picalo grueso."
+      },
+      {
+        "instruction": "Batí en un bowl los huevos con la leche, la harina, el ajo picado, sal y pimienta."
+      },
+      {
+        "instruction": "Agregá el brócoli, el queso cremoso en cubos y la mitad del queso rallado, y mezclá."
+      },
+      {
+        "instruction": "Volcá en el molde y espolvoreá con el queso rallado restante."
+      },
+      {
+        "instruction": "Horneá hasta que esté firme y bien dorada.",
+        "minutes": 22,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 45,
+      "reheat": "En microondas por porción o en horno a 170 °C unos 8 minutos.",
+      "tip": "Escurrí muy bien el brócoli para que la tarta cuaje firme."
+    }
+  }
+]

@@ -93,3 +93,30 @@ select cron.schedule(
 ```
 
 3. En iPhone las notificaciones solo funcionan con la app instalada en la pantalla de inicio (la pantalla de Notificaciones lo explica).
+
+## Región y velocidad (T11.1)
+
+Las funciones de Vercel tienen que correr en la **misma región que Supabase**; si no, cada consulta cruza continentes y la navegación se siente lenta.
+1. Supabase → Project Settings → General → mirá la región (p. ej. `South America (São Paulo)`).
+2. Vercel → Project → Settings → Functions → *Function Region* → elegí la más cercana (São Paulo = `gru1`) y redeployá.
+3. La verificación de sesión usa `getClaims()` (local) y se cachea por request, así que cada pantalla hace menos viajes a la red.
+
+## Dónde ver los logs (T11.2)
+
+- **Lo que hace cada persona:** en la app, Perfil → Actividad (privado, 90 días). Para analizar todo junto, en Supabase → SQL editor: `select kind, count(*) from activity_events group by 1 order by 2 desc;` (el editor corre como administrador y ve todos).
+- **Errores y rendimiento del servidor:** Vercel → Project → Logs (filtrá por `Error`) y Observability.
+- **Llamadas a la IA (costo, errores, latencia):** tabla `ai_runs` en Supabase.
+
+## Catálogo público y sitio de exploración (Etapa 12)
+
+1. Variable en Vercel: `NEXT_PUBLIC_SITE_URL` = la URL pública (la usan el sitemap, robots y los links para compartir).
+2. Aplicar las migraciones (`pnpm exec supabase db push --remote`).
+3. Cargar el catálogo en producción (idempotente, se puede repetir; no duplica):
+
+```bash
+# .env.prod con NEXT_PUBLIC_SUPABASE_URL y SUPABASE_SERVICE_ROLE_KEY de producción
+CATALOG_ENV_FILE=.env.prod pnpm catalog:load
+```
+
+4. Generar más recetas (cuesta ~US$ 0,015 cada una): `pnpm catalog:generate` (sigue donde quedó; agregá pedidos nuevos en `scripts/catalog/briefs.ts`) y después `pnpm catalog:load`.
+5. Lo público se lee solo por RPC (`search_public_recipes`, `get_published_recipe`, `get_public_collection`, `get_public_plan`); las tablas siguen cerradas para usuarios sin sesión.

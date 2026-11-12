@@ -1,0 +1,652 @@
+[
+  {
+    "title": "Pollo teriyaki casero con arroz blanco",
+    "description": "Cubos de pollo dorados y bañados en una salsa brillante de soja, miel y jengibre. Se arma en una sartén mientras el arroz se cocina solo.",
+    "servings": 3,
+    "prep_minutes": 10,
+    "cook_minutes": 18,
+    "difficulty": "facil",
+    "tags": [
+      "asiática",
+      "pollo",
+      "arroz",
+      "almuerzo",
+      "cena",
+      "para chicos"
+    ],
+    "ingredients": [
+      "600 g de pechuga de pollo",
+      "1 taza de arroz blanco",
+      "2 tazas de agua",
+      "4 cda de salsa de soja",
+      "2 cda de miel",
+      "1 cda de vinagre de manzana",
+      "1 diente de ajo",
+      "1 cdita de jengibre rallado",
+      "1 cdita de maicena",
+      "3 cda de agua fría",
+      "1 cda de aceite",
+      "1 cda de semillas de sésamo",
+      "1 cebolla de verdeo"
+    ],
+    "steps": [
+      {
+        "instruction": "Poné el arroz con el agua y una pizca de sal en una olla, llevá a hervor, tapá y bajá el fuego al mínimo.",
+        "minutes": 15,
+        "passive": true
+      },
+      {
+        "instruction": "Cortá el pollo en cubos de 2 cm y secalo con papel de cocina."
+      },
+      {
+        "instruction": "Mezclá la soja, la miel, el vinagre, el ajo picado y el jengibre en un bowl."
+      },
+      {
+        "instruction": "Disolvé la maicena en el agua fría y sumala a la salsa."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén grande y dorá el pollo 6 minutos, dándolo vuelta a mitad de cocción.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Volcá la salsa sobre el pollo y cociná 2 minutos, revolviendo, hasta que espese y brille.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Servilo sobre el arroz con el sésamo y el verdeo picado fino."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Recalentá en sartén con un chorrito de agua o en microondas tapado, 2 minutos.",
+      "tip": "Guardá el arroz y el pollo en recipientes separados para que no se apelmace."
+    }
+  },
+  {
+    "title": "Bibimbap vegetariano con huevo frito",
+    "description": "Bowl coreano con arroz, verduras salteadas por separado, huevo frito y una salsa de soja, sésamo y ají. Colorido y se arma en 30 minutos.",
+    "servings": 3,
+    "prep_minutes": 12,
+    "cook_minutes": 18,
+    "difficulty": "media",
+    "tags": [
+      "asiática",
+      "vegetariano",
+      "arroz",
+      "huevo",
+      "verdura",
+      "almuerzo",
+      "cena"
+    ],
+    "ingredients": [
+      "1 taza de arroz blanco",
+      "2 tazas de agua",
+      "2 zanahorias",
+      "200 g de espinaca fresca",
+      "200 g de champiñones",
+      "3 huevos",
+      "3 cda de aceite",
+      "3 cda de salsa de soja",
+      "1 cda de aceite de sésamo",
+      "1 cdita de azúcar",
+      "1 cdita de ají molido",
+      "1 diente de ajo",
+      "1 cda de semillas de sésamo"
+    ],
+    "steps": [
+      {
+        "instruction": "Cociná el arroz con el agua y una pizca de sal, tapado y a fuego mínimo.",
+        "minutes": 15,
+        "passive": true
+      },
+      {
+        "instruction": "Mezclá la soja, el aceite de sésamo, el azúcar, el ají molido y el ajo rallado para la salsa."
+      },
+      {
+        "instruction": "Cortá las zanahorias en bastones finos y laminá los champiñones."
+      },
+      {
+        "instruction": "Salteá la zanahoria con 1 cda de aceite 3 minutos y reservala en un plato.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Salteá los champiñones con otra cucharada de aceite 4 minutos, con una pizca de sal, y reservalos.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Salteá la espinaca 1 minuto hasta que se achique y condimentala con unas gotas de salsa."
+      },
+      {
+        "instruction": "Freí los huevos con el aceite restante, dejando la yema blanda."
+      },
+      {
+        "instruction": "Armá cada bowl con arroz, las verduras en sectores, el huevo arriba, salsa y sésamo. Mezclá todo al comer."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Recalentá arroz y verduras en microondas 1 o 2 minutos y hacé el huevo fresco.",
+      "tip": "Guardá la salsa aparte y el huevo frito no lo guardes: hacelo al momento."
+    }
+  },
+  {
+    "title": "Mapo tofu casero con cerdo picado",
+    "description": "Tofu sedoso en una salsa picante de soja, ajo y jengibre con carne de cerdo picada. Un clásico chino que sale en una sartén y va con arroz.",
+    "servings": 3,
+    "prep_minutes": 10,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "asiática",
+      "cerdo",
+      "alto en proteína",
+      "almuerzo",
+      "cena"
+    ],
+    "ingredients": [
+      "300 g de tofu firme",
+      "250 g de carne de cerdo picada",
+      "2 dientes de ajo",
+      "1 cda de jengibre rallado",
+      "1 cda de pasta de ají picante o 1 cdita de ají molido",
+      "2 cda de salsa de soja",
+      "1 taza de caldo de verduras o de pollo",
+      "1 cda de maicena",
+      "3 cda de agua fría",
+      "2 cebollas de verdeo",
+      "1 cda de aceite",
+      "1 cdita de aceite de sésamo"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá el tofu en cubos de 2 cm y escurrilo sobre papel de cocina."
+      },
+      {
+        "instruction": "Picá el ajo y el verdeo, separando lo blanco de lo verde."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén y cociná el cerdo 5 minutos, desmenuzándolo, hasta que se dore.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el ajo, el jengibre, lo blanco del verdeo y el ají. Revolvé 1 minuto."
+      },
+      {
+        "instruction": "Agregá la soja y el caldo y llevá a hervor suave."
+      },
+      {
+        "instruction": "Incorporá el tofu con cuidado y cociná 4 minutos sin revolver mucho.",
+        "minutes": 4,
+        "passive": true
+      },
+      {
+        "instruction": "Disolvé la maicena en el agua fría, volcala a la sartén y cociná 1 minuto hasta que espese.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Terminá con el aceite de sésamo y el verde del verdeo. Servilo con arroz."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Recalentá en sartén a fuego bajo con un chorrito de caldo o agua.",
+      "tip": "Mové el tofu con cuchara, no con espátula, para que no se rompa."
+    }
+  },
+  {
+    "title": "Curry rojo tailandés de langostinos con leche de coco",
+    "description": "Langostinos y verduras en una salsa cremosa de coco y curry rojo, con un toque de lima. Se hace en una sola sartén en pocos minutos.",
+    "servings": 3,
+    "prep_minutes": 10,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "asiática",
+      "pescado",
+      "arroz",
+      "una olla",
+      "cena",
+      "sin lácteos"
+    ],
+    "ingredients": [
+      "400 g de langostinos pelados",
+      "2 cda de pasta de curry rojo",
+      "400 ml de leche de coco",
+      "1 morrón rojo",
+      "2 zapallitos verdes",
+      "1 cda de salsa de soja",
+      "1 cdita de azúcar",
+      "1/2 lima",
+      "1 cda de aceite",
+      "1 puñado de albahaca o cilantro",
+      "1 taza de arroz blanco",
+      "2 tazas de agua"
+    ],
+    "steps": [
+      {
+        "instruction": "Poné el arroz con el agua y una pizca de sal; cocinalo tapado a fuego mínimo.",
+        "minutes": 15,
+        "passive": true
+      },
+      {
+        "instruction": "Cortá el morrón en tiras y los zapallitos en medias lunas."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén honda y friccioná la pasta de curry 1 minuto.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Volcá la leche de coco, la soja y el azúcar y llevá a hervor suave."
+      },
+      {
+        "instruction": "Agregá el morrón y los zapallitos y cociná 5 minutos.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Sumá los langostinos y cociná 3 minutos, hasta que se pongan rosados.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Apagá el fuego, exprimí la lima y agregá las hierbas picadas. Servilo con el arroz."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Recalentá a fuego bajo 3 minutos, sin hervir fuerte para no pasar los langostinos.",
+      "tip": "Probá la salsa antes de sumar los langostinos y ajustá con más lima o soja."
+    }
+  },
+  {
+    "title": "Sopa de huevo y choclo estilo chino",
+    "description": "Caldo caliente con hilos de huevo, granos de choclo y jengibre. Reconfortante, económica y lista en 15 minutos.",
+    "servings": 3,
+    "prep_minutes": 5,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "asiática",
+      "sopa",
+      "huevo",
+      "rápido",
+      "económico",
+      "cena"
+    ],
+    "ingredients": [
+      "1 l de caldo de pollo o de verduras",
+      "1 lata de choclo en granos",
+      "3 huevos",
+      "1 cda de maicena",
+      "3 cda de agua fría",
+      "1 cda de salsa de soja",
+      "1 cdita de jengibre rallado",
+      "2 cebollas de verdeo",
+      "1 cdita de aceite de sésamo",
+      "pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Escurrí el choclo y picá el verdeo fino."
+      },
+      {
+        "instruction": "Llevá el caldo a hervor en una olla con el jengibre y la soja."
+      },
+      {
+        "instruction": "Sumá el choclo y cociná 4 minutos a fuego medio.",
+        "minutes": 4,
+        "passive": true
+      },
+      {
+        "instruction": "Disolvé la maicena en el agua fría y volcala al caldo, revolviendo 1 minuto hasta que espese un poco.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Batí los huevos en una taza con un tenedor."
+      },
+      {
+        "instruction": "Bajá el fuego y volcá el huevo en hilo fino mientras revolvés el caldo en un solo sentido."
+      },
+      {
+        "instruction": "Apagá, agregá el aceite de sésamo, el verdeo y pimienta. Serví bien caliente."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Recalentá en olla a fuego medio sin que hierva fuerte.",
+      "tip": "Para hilos más finos, volcá el huevo desde bien alto y con el caldo apenas moviéndose."
+    }
+  },
+  {
+    "title": "Berenjenas salteadas con ajo y soja al estilo sichuan",
+    "description": "Bastones de berenjena tiernos en una salsa agridulce de ajo, jengibre y soja, con un toque picante. Un plato vegano que va perfecto con arroz.",
+    "servings": 3,
+    "prep_minutes": 10,
+    "cook_minutes": 18,
+    "difficulty": "media",
+    "tags": [
+      "asiática",
+      "vegano",
+      "verdura",
+      "salteado",
+      "sin lácteos",
+      "cena",
+      "guarnición"
+    ],
+    "ingredients": [
+      "2 berenjenas medianas",
+      "3 dientes de ajo",
+      "1 cda de jengibre rallado",
+      "3 cda de salsa de soja",
+      "1 cda de azúcar",
+      "1 cda de vinagre de manzana",
+      "1 cdita de maicena",
+      "4 cda de agua",
+      "3 cda de aceite",
+      "1 cdita de ají molido",
+      "2 cebollas de verdeo",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá las berenjenas en bastones de 1 cm de grosor y 6 cm de largo."
+      },
+      {
+        "instruction": "Mezclá la soja, el azúcar, el vinagre, la maicena y el agua en un bowl."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén grande a fuego medio-alto y sumá las berenjenas con una pizca de sal."
+      },
+      {
+        "instruction": "Cociná las berenjenas 8 minutos, revolviendo seguido, hasta que estén doradas y blandas.",
+        "minutes": 8,
+        "passive": false
+      },
+      {
+        "instruction": "Hacé lugar en el centro y salteá el ajo, el jengibre y el ají 30 segundos."
+      },
+      {
+        "instruction": "Volcá la salsa, mezclá y cociná 2 minutos hasta que espese y cubra las berenjenas.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Serví con el verdeo picado por encima, acompañado con arroz."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Recalentá en sartén a fuego medio 3 minutos o en microondas tapado.",
+      "tip": "Si se te pegan las berenjenas, sumá 2 cucharadas de agua en vez de más aceite."
+    }
+  },
+  {
+    "title": "Salmón glaseado con soja y miel sobre arroz",
+    "description": "Filetes de salmón dorados en sartén con un glaseado de soja, miel, limón y jengibre. Se sirven sobre arroz con pepino fresco.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 18,
+    "difficulty": "facil",
+    "tags": [
+      "asiática",
+      "pescado",
+      "arroz",
+      "alto en proteína",
+      "cena",
+      "sin lácteos"
+    ],
+    "ingredients": [
+      "600 g de salmón en 4 filetes",
+      "1 taza de arroz blanco",
+      "2 tazas de agua",
+      "3 cda de salsa de soja",
+      "2 cda de miel",
+      "1 cda de jugo de limón",
+      "1 cdita de jengibre rallado",
+      "1 diente de ajo",
+      "1 cda de aceite",
+      "1 pepino",
+      "1 cda de semillas de sésamo"
+    ],
+    "steps": [
+      {
+        "instruction": "Cociná el arroz con el agua y una pizca de sal, tapado y a fuego mínimo.",
+        "minutes": 15,
+        "passive": true
+      },
+      {
+        "instruction": "Mezclá la soja, la miel, el limón, el jengibre y el ajo rallado en un bowl."
+      },
+      {
+        "instruction": "Secá bien el salmón con papel de cocina y salalo apenas."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén antiadherente y cociná el salmón 4 minutos del lado de la piel o de la cara más linda.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Dalo vuelta, volcá el glaseado y cociná 3 minutos, bañando el pescado con la salsa hasta que espese.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Cortá el pepino en rodajas finas."
+      },
+      {
+        "instruction": "Serví el arroz con el salmón, la salsa de la sartén, el pepino y el sésamo."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Recalentá en microondas a potencia media 1 o 2 minutos, tapado.",
+      "tip": "No lo cocines de más: el centro tiene que quedar apenas más claro y jugoso."
+    }
+  },
+  {
+    "title": "Bulgogi rápido de bife con cebolla en hojas de lechuga",
+    "description": "Tiras finas de carne marinadas con soja, ajo y pera, salteadas a fuego fuerte. Se comen envueltas en lechuga con arroz, como en Corea.",
+    "servings": 4,
+    "prep_minutes": 15,
+    "cook_minutes": 8,
+    "difficulty": "media",
+    "tags": [
+      "asiática",
+      "carne",
+      "alto en proteína",
+      "salteado",
+      "cena",
+      "almuerzo"
+    ],
+    "ingredients": [
+      "500 g de bife angosto o nalga",
+      "1/2 pera",
+      "3 cda de salsa de soja",
+      "1 cda de azúcar",
+      "1 cda de aceite de sésamo",
+      "2 dientes de ajo",
+      "1 cebolla",
+      "2 cebollas de verdeo",
+      "1 cda de aceite",
+      "1 lechuga criolla o mantecosa",
+      "2 tazas de arroz cocido",
+      "pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Llevá la carne al freezer 10 minutos para poder cortarla fina.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Rallá la pera y mezclala con la soja, el azúcar, el aceite de sésamo, el ajo rallado y pimienta."
+      },
+      {
+        "instruction": "Cortá la carne en láminas finas contra la fibra y mezclala con la marinada."
+      },
+      {
+        "instruction": "Dejá marinar 10 minutos mientras cortás la cebolla en plumas y el verdeo en trozos.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Calentá bien una sartén grande con el aceite y salteá la cebolla 2 minutos.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá la carne en tandas y cociná 3 minutos por tanda a fuego fuerte, sin amontonar.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el verdeo, apagá y serví con hojas de lechuga y arroz para armar los bocados."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Recalentá en sartén caliente 2 minutos para que no se seque.",
+      "tip": "Cocinala en tandas: si amontonás la carne, larga agua y se hierve en vez de dorarse."
+    }
+  },
+  {
+    "title": "Okonomiyaki de repollo a la sartén",
+    "description": "Panqueque japonés salado de repollo, huevo y jamón, con salsa dulce y mayonesa en zigzag. Barato, rendidor y sin horno.",
+    "servings": 2,
+    "prep_minutes": 10,
+    "cook_minutes": 15,
+    "difficulty": "media",
+    "tags": [
+      "asiática",
+      "huevo",
+      "verdura",
+      "económico",
+      "sin horno",
+      "almuerzo",
+      "cena"
+    ],
+    "ingredients": [
+      "300 g de repollo blanco",
+      "3 huevos",
+      "1/2 taza de harina 0000",
+      "1/4 taza de agua",
+      "2 cebollas de verdeo",
+      "4 fetas de jamón cocido",
+      "2 cda de aceite",
+      "2 cda de ketchup",
+      "1 cda de salsa de soja",
+      "1 cdita de azúcar",
+      "2 cda de mayonesa",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Picá el repollo bien fino y el verdeo en rodajas. Cortá el jamón en cuadraditos."
+      },
+      {
+        "instruction": "Mezclá la harina, el agua, los huevos y una pizca de sal hasta tener una masa lisa."
+      },
+      {
+        "instruction": "Sumá el repollo, el verdeo y el jamón y mezclá hasta que quede todo ligado."
+      },
+      {
+        "instruction": "Mezclá el ketchup, la soja y el azúcar para la salsa."
+      },
+      {
+        "instruction": "Calentá 1 cda de aceite en una sartén de 22 cm, volcá la mitad de la mezcla y formá un disco compacto."
+      },
+      {
+        "instruction": "Cociná tapado a fuego medio-bajo 6 minutos, dalo vuelta con ayuda de un plato y cociná 3 minutos más.",
+        "minutes": 9,
+        "passive": true
+      },
+      {
+        "instruction": "Repetí con el resto de la mezcla y el aceite que queda."
+      },
+      {
+        "instruction": "Pintá con la salsa y decorá con mayonesa en zigzag. Cortá en porciones."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Recalentá en sartén a fuego medio 2 minutos de cada lado.",
+      "tip": "Picá el repollo bien fino: si queda grueso, el panqueque se desarma al darlo vuelta."
+    }
+  },
+  {
+    "title": "Fideos soba fríos con pepino, zanahoria y salsa de sésamo",
+    "description": "Fideos de trigo sarraceno fríos con verduras crujientes y un aderezo de soja, vinagre y sésamo. Fresco, liviano y vegano, ideal para el calor.",
+    "servings": 3,
+    "prep_minutes": 10,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "asiática",
+      "vegano",
+      "liviano",
+      "pasta",
+      "verano",
+      "rápido",
+      "sin horno",
+      "almuerzo"
+    ],
+    "ingredients": [
+      "250 g de fideos soba o fideos de trigo finos",
+      "1 pepino",
+      "1 zanahoria",
+      "2 cebollas de verdeo",
+      "3 cda de salsa de soja",
+      "1 cda de vinagre de manzana",
+      "1 cda de aceite de sésamo",
+      "1 cdita de azúcar",
+      "1 cdita de jengibre rallado",
+      "2 cda de semillas de sésamo",
+      "1 cda de agua"
+    ],
+    "steps": [
+      {
+        "instruction": "Hervilos fideos en abundante agua según el paquete, unos 5 minutos.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Escurrilos y pasalos por agua bien fría, frotándolos con las manos para sacar el almidón."
+      },
+      {
+        "instruction": "Cortá el pepino y la zanahoria en tiras finas y picá el verdeo."
+      },
+      {
+        "instruction": "Mezclá la soja, el vinagre, el aceite de sésamo, el azúcar, el jengibre y el agua hasta que se disuelva el azúcar."
+      },
+      {
+        "instruction": "Escurrí bien los fideos y ponelos en un bowl con las verduras."
+      },
+      {
+        "instruction": "Aderezá, mezclá con cuidado y terminá con el sésamo. Serví frío."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "No hace falta recalentar: comelos fríos o a temperatura ambiente.",
+      "tip": "Guardá el aderezo aparte y mezclalo recién al servir para que los fideos no se peguen."
+    }
+  }
+]

@@ -1,5 +1,6 @@
 "use server";
 
+import { logEvent } from "@/lib/activity/log";
 import { after } from "next/server";
 import { revalidatePath } from "next/cache";
 import { z } from "zod";
@@ -25,6 +26,7 @@ export async function generateListForPlan(
   const supabase = await createClient();
   const result = await generateShoppingLists(supabase, parsed.data.planId);
   if (!result.ok) return result;
+  void logEvent(user.id, { kind: "shopping_list_generated", groupId: parsed.data.groupId });
   // La lista ya se ve; los consejos de compra y vida útil llegan después por realtime.
   after(async () => {
     try {
