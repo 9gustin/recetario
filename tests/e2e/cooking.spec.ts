@@ -152,3 +152,61 @@ test("modo cocinar: ajustar un paso se ve al instante y no toca la receta", asyn
   await expect(page.getByText("Paso 3 de 4")).toBeVisible();
   await expect(page.getByRole("heading", { name: "Dejá reposar 5 minutos." })).toBeVisible();
 });
+
+// 1x1 PNG transparente.
+const PNG = Buffer.from(
+  "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==",
+  "base64",
+);
+
+test("modo cocinar: terminar guardando los cambios crea una versión 'mientras cocinabas'", async ({
+  browser,
+}) => {
+  test.setTimeout(150_000);
+  const { page, groupId, recipeId } = await setup(browser);
+  const detailUrl = `/g/${groupId}/recetas/${recipeId}`;
+
+  await page.goto(`${detailUrl}/cocinar`);
+  await page.getByRole("button", { name: "Empezar" }).tap();
+
+  // Paso 1: avanza con "Listo". Paso 2: ajusta la duración (25 → 30 min).
+  await page.getByRole("button", { name: "Listo" }).tap();
+  await expect(page.getByText("Paso 2 de 3")).toBeVisible();
+  await page.getByRole("button", { name: "Ajustar este paso" }).tap();
+  await page.getByLabel(/Duración en minutos/).fill("30");
+  await page.getByRole("button", { name: "Guardar cambios" }).tap();
+  await expect(page.getByText("30:00")).toBeVisible();
+
+  // Pasa al paso 3 con "Listo" y al final con un tap en la zona derecha.
+  await page.getByRole("button", { name: "Listo" }).tap();
+  await expect(page.getByText("Paso 3 de 3")).toBeVisible();
+  await page.getByRole("button", { name: "Paso siguiente" }).tap();
+
+  // Pantalla final: resumen de cambios, puntaje, nota y foto.
+  await expect(page.getByRole("heading", { name: "¡Listo!" })).toBeVisible();
+  await expect(page.getByText("Cambiaste 1 cosa")).toBeVisible();
+  await expect(page.getByText("Paso 2: 25 min → 30 min")).toBeVisible();
+  await page.getByRole("button", { name: "4 estrellas" }).tap();
+  await page.getByLabel("Nota para la próxima").fill("menos sal");
+  await page
+    .getByLabel("Foto del plato")
+    .setInputFiles({ name: "plato.png", mimeType: "image/png", buffer: PNG });
+  await page.getByRole("radio", { name: "Guardar en la receta" }).tap();
+  await page.getByRole("button", { name: "Terminar" }).tap();
+
+  // Vuelve al detalle: "La última vez" con puntaje y la nota.
+  await page.waitForURL(detailUrl);
+  await expect(page.getByText(/La última vez:/)).toBeVisible();
+  await expect(page.getByText("menos sal")).toBeVisible();
+  await expect(page.getByText("30 min", { exact: false }).first()).toBeVisible();
+
+  // El cambio quedó como versión nueva con origen "mientras cocinabas".
+  await page.goto(`${detailUrl}/historial`);
+  await expect(page.getByText("Versión 2")).toBeVisible();
+  await expect(page.getByText(/Mientras cocinabas/).first()).toBeVisible();
+  await expect(page.getByText(/Ajustes mientras cocinabas/)).toBeVisible();
+
+  // La sesión terminada ya no ofrece retomar.
+  await page.goto(`${detailUrl}/cocinar`);
+  await expect(page.getByRole("heading", { name: /Seguís en el paso/ })).toHaveCount(0);
+});

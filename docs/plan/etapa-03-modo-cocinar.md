@@ -59,7 +59,7 @@
   3. `applyCookingEdits(recipeSnapshot, edits)`: función pura que devuelve la receta modificada. Tests con cada tipo de operación.
 - **Aceptación:** el cambio se ve de inmediato y no toca la receta hasta el final (T3.7).
 
-### T3.7 — Pantalla final
+### [x] T3.7 — Pantalla final
 - **Depende de:** T3.6
 - **Archivos:** `components/cooking/finish-screen.tsx`, `lib/cooking/actions.ts`.
 - **Pasos:**
@@ -92,3 +92,5 @@
 - T3.5: al tocar Empezar se crea la sesión (con `recipe_version`) y cada cambio de pantalla o porciones se guarda con debounce de 1 s (`useSessionSync`, reintenta cada 5 s y al volver la red). `current_step` guarda el índice de pantalla (0 = mise en place). Al abrir Cocinar con una sesión sin terminar de menos de 12 h, un diálogo ofrece "Continuar" o "Empezar de nuevo" (esto último borra la sesión). La decisión de si se puede retomar la toma el servidor (`getResumableSession`), no el cliente. `plan_entry_id` ya se acepta en la acción pero hasta la Etapa 7 nadie lo manda. e2e en `cooking.spec.ts`.
 
 - T3.6: los ajustes son una lista de operaciones (`CookingEdit`) que se aplican en orden con `applyCookingEdits` (15 tests); cada operación usa los índices de la receta ya modificada. Se guardan en `cooking_sessions.pending_edits` junto con el progreso y se retoman al volver. `SET_STEPS` en el reducer actualiza el total de pantallas. La cantidad se escribe para las porciones actuales y se guarda convertida a las de la receta; también se reescribe el número inicial de `raw_text`. Límite conocido: los timers se identifican por `recipeId:índice`, así que agregar o borrar un paso con un timer en marcha en un paso posterior puede desalinear ese chip. e2e de ajustes en `cooking.spec.ts`.
+
+- T3.7: la pantalla final junta todo en un solo paso: tiempo real, resumen de ajustes con "Guardar en la receta" o "Solo por esta vez", puntaje, nota y foto, y un botón "Terminar". `finishCookingSession` guarda los ajustes como versión nueva (`origin = 'cooking_session'`, nota automática "Ajustes mientras cocinabas: …") reutilizando `saveRecipe`, y cierra la sesión; los ajustes los manda el cliente (autoritativos, no depende del guardado con debounce). Si la receta no tiene foto, la del plato puede quedar como portada. La foto se sube al bucket `recipe-images` (máx. 8 MB, solo imágenes). El detalle muestra "La última vez" (por `recipe_last_cooked`) y las notas propias. Límite conocido: si otra persona edita la receta mientras se cocina, guardar los ajustes pisa esa edición (se guarda la receta completa).

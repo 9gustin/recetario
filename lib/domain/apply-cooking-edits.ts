@@ -1,3 +1,5 @@
+import { parseIngredientLine } from "./ingredient-line";
+
 /**
  * Ajustes hechos mientras se cocina. Se guardan como una lista de operaciones y se aplican, en
  * orden, sobre la receta original. Cada operación usa los índices de la receta **tal como estaba
@@ -121,4 +123,45 @@ function applyOne(recipe: EditableRecipe, edit: CookingEdit, seq: number): Edita
 /** Devuelve la receta con todos los ajustes aplicados (sin modificar la original). */
 export function applyCookingEdits(recipe: EditableRecipe, edits: CookingEdit[]): EditableRecipe {
   return edits.reduce((acc, edit, i) => applyOne(acc, edit, i), recipe);
+}
+
+const minutesLabel = (seconds: number | null) =>
+  seconds ? `${Math.round((seconds / 60) * 10) / 10} min`.replace(".", ",") : "sin timer";
+
+const qtyLabel = (qty: number | null, unit: string | null) =>
+  `${qty === null ? "—" : String(Math.round(qty * 100) / 100).replace(".", ",")}${unit && unit !== "unidad" ? ` ${unit}` : ""}`;
+
+function describeEdit(before: EditableRecipe, edit: CookingEdit): string {
+  switch (edit.op) {
+    case "edit_text":
+      return `Paso ${edit.step + 1}: texto cambiado`;
+    case "set_duration":
+      return `Paso ${edit.step + 1}: ${minutesLabel(before.steps[edit.step]?.duration_seconds ?? null)} → ${minutesLabel(edit.seconds)}`;
+    case "set_ingredient_qty": {
+      const ing = before.ingredients[edit.ingredient];
+      const name = parseIngredientLine(ing?.raw_text ?? "").name || ing?.raw_text || "Ingrediente";
+      return `${name}: ${qtyLabel(ing?.quantity ?? null, ing?.unit ?? null)} → ${qtyLabel(edit.quantity, ing?.unit ?? null)}`;
+    }
+    case "add_step_after":
+      return "+ 1 paso";
+    case "delete_step":
+      return "− 1 paso";
+  }
+}
+
+/** Una línea por ajuste que tuvo efecto ("Paso 2: 25 min → 30 min", "+ 1 paso"). */
+export function summarizeEdits(recipe: EditableRecipe, edits: CookingEdit[]): string[] {
+  const lines: string[] = [];
+  let current = recipe;
+  edits.forEach((edit, i) => {
+    const next = applyOne(current, edit, i);
+    if (next !== current) lines.push(describeEdit(current, edit));
+    current = next;
+  });
+  return lines;
+}
+
+/** Nota de la versión nueva cuando los ajustes se guardan en la receta (máx. 500 caracteres). */
+export function autoChangeNote(lines: string[]): string {
+  return `Ajustes mientras cocinabas: ${lines.join("; ")}`.slice(0, 500);
 }

@@ -100,6 +100,16 @@ export function useSessionSync({ recipeId, initialSessionId, index, servings, ed
     schedule(0);
   }, [schedule]);
 
+  /** Devuelve el id de la sesión (la crea si todavía no se pudo, por ejemplo por falta de red). */
+  const ensureSession = useCallback(async (): Promise<string | null> => {
+    if (sessionId.current) return sessionId.current;
+    const created = await startCookingSession({ recipeId, servings: latest.current.servings });
+    if (!created.ok) return null;
+    sessionId.current = created.data.id;
+    started.current = true;
+    return sessionId.current;
+  }, [recipeId]);
+
   /** "Empezar de nuevo": descarta la sesión a medias. */
   const discard = useCallback(() => {
     if (timer.current) clearTimeout(timer.current);
@@ -110,5 +120,5 @@ export function useSessionSync({ recipeId, initialSessionId, index, servings, ed
     if (id) void discardCookingSession({ sessionId: id });
   }, []);
 
-  return { begin, discard };
+  return { begin, discard, ensureSession };
 }

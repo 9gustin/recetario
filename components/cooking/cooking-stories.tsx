@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { AnimatePresence, motion, type PanInfo } from "framer-motion";
-import { Check, PartyPopper, Pencil, Play, X } from "lucide-react";
+import { Check, Pencil, Play, X } from "lucide-react";
 import { PillButton } from "@/components/shared/pill-button";
 import {
   Dialog,
@@ -14,12 +14,18 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { toast } from "sonner";
-import { applyCookingEdits, type CookingEdit } from "@/lib/domain/apply-cooking-edits";
+import {
+  applyCookingEdits,
+  summarizeEdits,
+  type CookingEdit,
+} from "@/lib/domain/apply-cooking-edits";
 import { estimatedMinutes, ingredientsForStep } from "@/lib/domain/cooking-display";
 import { resumeInit, type OpenSession } from "@/lib/domain/cooking-session";
 import { useWakeLock } from "@/lib/hooks/use-wake-lock";
 import type { RecipeDetail } from "@/lib/recipes/queries";
+import { finishCookingSession, uploadCookingPhoto } from "@/lib/cooking/actions";
 import { EditStepSheet } from "./edit-step-sheet";
+import { FinishScreen, type FinishPayload } from "./finish-screen";
 import { MiseEnPlace } from "./mise-en-place";
 import { ProgressSegments } from "./progress-segments";
 import { StepCard } from "./step-card";
@@ -73,6 +79,9 @@ export function CookingStories({ groupId, recipe, resume }: Props) {
     resume ? resumeInit(resume, steps.length) : { steps: steps.length, servings: recipe.servings },
   );
   const [editOpen, setEditOpen] = useState(false);
+  const [startedAt, setStartedAt] = useState<number | null>(() =>
+    resume ? new Date(resume.started_at).getTime() : null,
+  );
   const [askResume, setAskResume] = useState(resume !== null);
   const sync = useSessionSync({
     recipeId: recipe.id,
@@ -120,7 +129,42 @@ export function CookingStories({ groupId, recipe, resume }: Props) {
     });
   }
 
+  async function finish(payload: FinishPayload) {
+    const sessionId = await sync.ensureSession();
+    if (!sessionId) {
+      toast.error("No pudimos guardar la sesión. Revisá tu conexión y probá de nuevo.");
+      return;
+    }
+    let photoUrl: string | undefined;
+    if (payload.photo) {
+      const form = new FormData();
+      form.set("groupId", groupId);
+      form.set("recipeId", recipe.id);
+      form.set("file", payload.photo);
+      const uploaded = await uploadCookingPhoto(form);
+      if (uploaded.ok) photoUrl = uploaded.data.url;
+      else toast.error(uploaded.error);
+    }
+    const res = await finishCookingSession({
+      sessionId,
+      rating: payload.rating,
+      note: payload.note,
+      photoUrl,
+      useAsCover: payload.useAsCover,
+      saveToRecipe: payload.saveToRecipe,
+      edits,
+    });
+    if (!res.ok) {
+      toast.error(res.error);
+      return;
+    }
+    toast.success(res.data.savedVersion ? "Guardamos los cambios en la receta" : "¡Buen provecho!");
+    router.push(`/g/${groupId}/recetas/${recipe.id}`);
+    router.refresh();
+  }
+
   function start() {
+    setStartedAt(Date.now());
     sync.begin();
     advance();
   }
@@ -256,13 +300,16 @@ export function CookingStories({ groupId, recipe, resume }: Props) {
                 }
               />
             ) : (
-              <div className="flex h-full flex-col items-center justify-center gap-4 text-center">
-                <PartyPopper className="size-14 text-accent" aria-hidden="true" />
-                <h1 className="font-display text-[33px] leading-[1.1] font-normal">¡Listo!</h1>
-                <p className="max-w-[260px] text-sm text-muted">
-                  Terminaste todos los pasos de {recipe.title}.
-                </p>
-              </div>
+              <FinishScreen
+                recipeTitle={recipe.title}
+                startedAt={startedAt}
+                changes={summarizeEdits(
+                  { ingredients: recipe.ingredients, steps: recipe.steps },
+                  edits,
+                )}
+                recipeHasPhoto={Boolean(recipe.image_url)}
+                onFinish={finish}
+              />
             )}
           </motion.div>
         </AnimatePresence>
@@ -273,14 +320,7 @@ export function CookingStories({ groupId, recipe, resume }: Props) {
           <PillButton className="min-h-[60px] flex-1 text-lg" onClick={start}>
             <Play fill="currentColor" /> Empezar
           </PillButton>
-        ) : isFinal ? (
-          <PillButton
-            className="min-h-[60px] flex-1 text-lg"
-            onClick={() => router.push(`/g/${groupId}/recetas/${recipe.id}`)}
-          >
-            Volver a la receta
-          </PillButton>
-        ) : (
+        ) : isFinal ? null : (
           <PillButton className="min-h-[60px] flex-1 text-lg" onClick={advance}>
             Listo <Check />
           </PillButton>

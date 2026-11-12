@@ -1,7 +1,9 @@
 import { describe, expect, it } from "vitest";
 import {
   applyCookingEdits,
+  autoChangeNote,
   replaceLeadingNumber,
+  summarizeEdits,
   type CookingEdit,
   type EditableRecipe,
 } from "./apply-cooking-edits";
@@ -127,5 +129,24 @@ describe("replaceLeadingNumber", () => {
     ["200 g de harina", 1.25, "1,25 g de harina"],
   ])("%s → %d", (text, qty, expected) => {
     expect(replaceLeadingNumber(text, qty)).toBe(expected);
+  });
+});
+
+describe("summarizeEdits / autoChangeNote", () => {
+  it("resume solo los ajustes que tuvieron efecto", () => {
+    const lines = summarizeEdits(base, [
+      { op: "set_duration", step: 1, seconds: 1800 },
+      { op: "add_step_after", step: 1, text: "Serví.", seconds: null },
+      { op: "set_ingredient_qty", ingredient: 0, quantity: 300 },
+      { op: "edit_text", step: 9, text: "no existe" },
+    ]);
+    expect(lines).toEqual(["Paso 2: 25 min → 30 min", "+ 1 paso", "harina: 200 g → 300 g"]);
+  });
+
+  it("arma la nota automática de la versión", () => {
+    expect(autoChangeNote(["Paso 2: 25 min → 30 min", "+ 1 paso"])).toBe(
+      "Ajustes mientras cocinabas: Paso 2: 25 min → 30 min; + 1 paso",
+    );
+    expect(autoChangeNote(["x".repeat(600)]).length).toBe(500);
   });
 });

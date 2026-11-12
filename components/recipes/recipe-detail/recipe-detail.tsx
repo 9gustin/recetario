@@ -1,5 +1,7 @@
 "use client";
 
+import type { CookingSummary } from "@/lib/cooking/queries";
+import { CookingHistory } from "./cooking-history";
 import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
@@ -13,6 +15,7 @@ import { deleteRecipe, toggleFavorite } from "@/lib/recipes/actions";
 
 type Props = {
   groupId: string;
+  cooking?: CookingSummary;
   recipe: {
     id: string;
     title: string;
@@ -45,7 +48,7 @@ type Props = {
   };
 };
 
-export function RecipeDetail({ groupId, recipe }: Props) {
+export function RecipeDetail({ groupId, recipe, cooking }: Props) {
   const router = useRouter();
   const [servings, setServings] = useState(recipe.servings);
   const [favorite, setFavorite] = useState(recipe.is_favorite);
@@ -138,6 +141,7 @@ export function RecipeDetail({ groupId, recipe }: Props) {
         ) : null}
 
         {recipe.description ? <p className="text-sm text-muted">{recipe.description}</p> : null}
+        {cooking ? <CookingHistory summary={cooking} /> : null}
 
         {/* Porciones + ingredientes */}
         <div>
