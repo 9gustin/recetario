@@ -27,7 +27,7 @@ export function todayArgentina(now = new Date()): string {
   );
 }
 
-async function fileBlocks(
+export async function fileBlocks(
   supabase: SupabaseClient<Database>,
   userId: string,
   paths: string[],

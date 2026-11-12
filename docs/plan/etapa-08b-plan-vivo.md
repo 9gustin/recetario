@@ -26,7 +26,7 @@
   4. Tests: semana completa, permitidos al límite y excedidos, comidas sin registrar, días específicos.
 - **Aceptación:** 100% de ramas cubiertas.
 
-### T8B.3 — Digitalizar el plan (ingesta con IA)
+### [x] T8B.3 — Digitalizar el plan (ingesta con IA)
 - **Depende de:** T8B.1, T8B.2, T5.1, T5.2
 - **Archivos:** `app/api/ai/diet-plan/ingest/route.ts`, `lib/ai/prompts/diet-plan.ts`, `lib/ai/diet-plan/ingest.ts`.
 - **Pasos:**
@@ -93,3 +93,5 @@
 - T8B.1: Se agregó open_questions a diet_plans y activate_diet_plan (archiva el activo anterior). meal_logs.cooking_session_id sin FK por ahora.
 
 - T8B.2: Los permitidos se asignan en orden cronológico dentro del tope semanal; la semana cuenta solo comidas vencidas (≤ hoy) o registradas.
+
+- T8B.3: Las restricciones se proponen al perfil con ingestFoodProfile (borrador a confirmar). El eval con un PDF real de 10+ páginas queda para T8B.8 (se usarán planes en texto/dictado como fixtures; un PDF real lo aporta el usuario).
