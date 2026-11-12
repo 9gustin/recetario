@@ -30,7 +30,7 @@
   5. **Tests:** al menos 40 líneas reales de recetas argentinas en una tabla de casos.
 - **Aceptación:** `pnpm test` en verde, sin dependencias de DB.
 
-### T2.3 — Catálogo de ingredientes (seed) y matcher
+### [x] T2.3 — Catálogo de ingredientes (seed) y matcher
 - **Depende de:** T2.1, T2.2
 - **Archivos:** `supabase/seed/ingredients.json`, `supabase/seed.sql` (o script `scripts/seed-ingredients.ts`), `lib/domain/ingredient-match.ts` + test.
 - **Pasos:**
@@ -105,3 +105,5 @@
 - T2.1: búsqueda full-text con `spanish_unaccent` (copy de `pg_catalog.spanish` + `unaccent`). `search_tsv` se mantiene con dos triggers: uno BEFORE sobre `recipes` (título A, tags B, descripción C desde las propias columnas, porque al INSERT todavía no existen los ingredientes) y otro AFTER sobre `recipe_ingredients` que refresca el padre con el vector completo (incluye `raw_text` de ingredientes). `save_recipe(jsonb)` es un reemplazo completo (setea campos a NULL si no vienen), crea/actualiza receta, reemplaza ingredientes y pasos, incrementa `current_version` y escribe el snapshot. `search_ingredients` usa `extensions.similarity` (umbral 0.2) en vez del operador `%` para no lidiar con la calificación de operador del esquema `extensions`. Se agregó el helper `is_recipe_member(recipe_id)` (security definer) para el RLS de las tablas hijas. Favoritos en `recipe_favorites` (no `recipes.is_favorite`). Bucket `recipe-images` público de lectura y con escritura por miembro del grupo (primer segmento del path = group_id).
 
 - T2.2: se eliminó `lib/domain/example.test.ts` (placeholder de T0.6). El parser soporta enteros, decimales con coma/punto, fracciones (`1/2`, `½`, `1 y 1/2`), rangos (`2-3` → 2,5 + nota), "a gusto"/"c/n" y "(opcional)". La cantidad sin unidad explícita se interpreta como `unidad` (conteo). `roundQuantity` redondea gramos a 5/10, cucharadas a 1/2 y volúmenes chicos a cuartos; la pluralización es plural solo cuando la cantidad es mayor a 1 ("½ taza", "1 ½ tazas").
+
+- T2.3: el catálogo son **263 ingredientes** (cercano a los ~300 pedidos; quedan cubiertas verduras, frutas, carnes, lácteos, almacén, especias, legumbres y congelados) con `aliases` regionales (palta/aguacate, zapallito/calabacín, morrón/pimiento, choclo/maíz, frutilla/fresa, ananá/piña, porotos/frijoles, chaucha/judía). `unit_weight_g` y `shelf_life` solo para los más comunes; `nutrition_per_100g` se deja para la ficha que complete la IA. El dato vive en `supabase/seed/ingredients.json`; `supabase/seed.sql` se **genera** con un script (dollar-quote del JSON) para que `db:reset` lo cargue idempotente (`on conflict (name) do update`). El matcher (`matchLocal`/`normalizeName`) hace exacto→alias tras normalizar (minúsculas, sin acentos, singular simple, sin relleno); el fuzzy queda en el RPC `search_ingredients`.

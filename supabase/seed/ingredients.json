@@ -1,0 +1,2879 @@
+[
+  {
+    "name": "cebolla",
+    "aliases": [
+      "cebolla blanca",
+      "cebolla comun"
+    ],
+    "family": [
+      "allium"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 150,
+    "shelf_life": {
+      "pantry": [
+        21,
+        45
+      ]
+    }
+  },
+  {
+    "name": "cebolla morada",
+    "aliases": [
+      "cebolla colorada"
+    ],
+    "family": [
+      "allium"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 150
+  },
+  {
+    "name": "cebolla de verdeo",
+    "aliases": [
+      "verdeo"
+    ],
+    "family": [
+      "allium"
+    ],
+    "aisle": "verduleria",
+    "unit": "atado"
+  },
+  {
+    "name": "puerro",
+    "aliases": [],
+    "family": [
+      "allium"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 150
+  },
+  {
+    "name": "echalote",
+    "aliases": [
+      "chalota",
+      "shallot"
+    ],
+    "family": [
+      "allium"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 30
+  },
+  {
+    "name": "ajo",
+    "aliases": [
+      "ajo fresco"
+    ],
+    "family": [
+      "allium"
+    ],
+    "aisle": "verduleria",
+    "unit": "diente",
+    "weight": 5
+  },
+  {
+    "name": "ciboulette",
+    "aliases": [
+      "cebollin"
+    ],
+    "family": [
+      "allium"
+    ],
+    "aisle": "verduleria",
+    "unit": "atado"
+  },
+  {
+    "name": "tomate",
+    "aliases": [
+      "tomate redondo"
+    ],
+    "family": [
+      "solanacea"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 150,
+    "shelf_life": {
+      "fridge": [
+        5,
+        10
+      ]
+    }
+  },
+  {
+    "name": "tomate perita",
+    "aliases": [
+      "tomate alargado"
+    ],
+    "family": [
+      "solanacea"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 80
+  },
+  {
+    "name": "tomate cherry",
+    "aliases": [],
+    "family": [
+      "solanacea"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 15
+  },
+  {
+    "name": "papa",
+    "aliases": [
+      "papa blanca"
+    ],
+    "family": [
+      "tuberculo"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 180,
+    "shelf_life": {
+      "pantry": [
+        30,
+        60
+      ]
+    }
+  },
+  {
+    "name": "batata",
+    "aliases": [
+      "boniato",
+      "camote"
+    ],
+    "family": [
+      "tuberculo"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 250
+  },
+  {
+    "name": "zanahoria",
+    "aliases": [
+      "zanahorias"
+    ],
+    "family": [],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 70,
+    "shelf_life": {
+      "fridge": [
+        14,
+        30
+      ]
+    }
+  },
+  {
+    "name": "zapallo",
+    "aliases": [
+      "calabaza"
+    ],
+    "family": [],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 1500
+  },
+  {
+    "name": "zapallito",
+    "aliases": [
+      "calabacin",
+      "zapallito verde"
+    ],
+    "family": [],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 200
+  },
+  {
+    "name": "zapallo anco",
+    "aliases": [
+      "anco"
+    ],
+    "family": [],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 1200
+  },
+  {
+    "name": "zapallo cabutia",
+    "aliases": [
+      "cabutia"
+    ],
+    "family": [],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 1500
+  },
+  {
+    "name": "pimiento",
+    "aliases": [
+      "morrón"
+    ],
+    "family": [
+      "solanacea"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 180
+  },
+  {
+    "name": "morrón rojo",
+    "aliases": [
+      "pimiento rojo"
+    ],
+    "family": [
+      "solanacea"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 180
+  },
+  {
+    "name": "morrón verde",
+    "aliases": [
+      "pimiento verde"
+    ],
+    "family": [
+      "solanacea"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 180
+  },
+  {
+    "name": "berenjena",
+    "aliases": [],
+    "family": [
+      "solanacea"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 300
+  },
+  {
+    "name": "pepino",
+    "aliases": [
+      "pepinillo"
+    ],
+    "family": [],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 200
+  },
+  {
+    "name": "lechuga",
+    "aliases": [
+      "lechuga criolla"
+    ],
+    "family": [
+      "hoja_verde"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 250,
+    "shelf_life": {
+      "fridge": [
+        3,
+        7
+      ]
+    }
+  },
+  {
+    "name": "rúcula",
+    "aliases": [
+      "rucula",
+      "arugula"
+    ],
+    "family": [
+      "hoja_verde"
+    ],
+    "aisle": "verduleria",
+    "unit": "atado",
+    "shelf_life": {
+      "fridge": [
+        3,
+        5
+      ]
+    }
+  },
+  {
+    "name": "espinaca",
+    "aliases": [
+      "espinaca fresca"
+    ],
+    "family": [
+      "hoja_verde"
+    ],
+    "aisle": "verduleria",
+    "unit": "atado",
+    "shelf_life": {
+      "fridge": [
+        3,
+        5
+      ]
+    }
+  },
+  {
+    "name": "acelga",
+    "aliases": [],
+    "family": [
+      "hoja_verde"
+    ],
+    "aisle": "verduleria",
+    "unit": "atado",
+    "shelf_life": {
+      "fridge": [
+        3,
+        5
+      ]
+    }
+  },
+  {
+    "name": "repollo",
+    "aliases": [
+      "repollo blanco"
+    ],
+    "family": [
+      "crucifera"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 1000,
+    "shelf_life": {
+      "fridge": [
+        14,
+        30
+      ]
+    }
+  },
+  {
+    "name": "repollo colorado",
+    "aliases": [
+      "col morada"
+    ],
+    "family": [
+      "crucifera"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 800
+  },
+  {
+    "name": "brócoli",
+    "aliases": [
+      "brocoli"
+    ],
+    "family": [
+      "crucifera"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 400,
+    "shelf_life": {
+      "fridge": [
+        3,
+        7
+      ]
+    }
+  },
+  {
+    "name": "coliflor",
+    "aliases": [],
+    "family": [
+      "crucifera"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 500,
+    "shelf_life": {
+      "fridge": [
+        3,
+        7
+      ]
+    }
+  },
+  {
+    "name": "zapallito largo",
+    "aliases": [
+      "zucchini"
+    ],
+    "family": [],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 200
+  },
+  {
+    "name": "choclo",
+    "aliases": [
+      "maíz",
+      "maiz",
+      "elote"
+    ],
+    "family": [
+      "cereal"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 250
+  },
+  {
+    "name": "apio",
+    "aliases": [],
+    "family": [],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 300
+  },
+  {
+    "name": "remolacha",
+    "aliases": [
+      "betarraga"
+    ],
+    "family": [
+      "tuberculo"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 150
+  },
+  {
+    "name": "rabanito",
+    "aliases": [
+      "rabanito"
+    ],
+    "family": [
+      "crucifera"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 15
+  },
+  {
+    "name": "hinojo",
+    "aliases": [],
+    "family": [],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 300
+  },
+  {
+    "name": "champiñón",
+    "aliases": [
+      "champinon",
+      "hongos"
+    ],
+    "family": [
+      "hongo"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 15,
+    "shelf_life": {
+      "fridge": [
+        3,
+        7
+      ]
+    }
+  },
+  {
+    "name": "portobello",
+    "aliases": [],
+    "family": [
+      "hongo"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 40
+  },
+  {
+    "name": "palta",
+    "aliases": [
+      "aguacate"
+    ],
+    "family": [
+      "fruta"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 200,
+    "shelf_life": {
+      "pantry": [
+        2,
+        5
+      ]
+    }
+  },
+  {
+    "name": "limón",
+    "aliases": [
+      "limon"
+    ],
+    "family": [
+      "citrico"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 100,
+    "shelf_life": {
+      "fridge": [
+        14,
+        30
+      ]
+    }
+  },
+  {
+    "name": "lima",
+    "aliases": [
+      "lima"
+    ],
+    "family": [
+      "citrico"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 80
+  },
+  {
+    "name": "naranja",
+    "aliases": [],
+    "family": [
+      "citrico"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 150
+  },
+  {
+    "name": "mandarina",
+    "aliases": [],
+    "family": [
+      "citrico"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 100
+  },
+  {
+    "name": "pomelo",
+    "aliases": [
+      "toronja"
+    ],
+    "family": [
+      "citrico"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 250
+  },
+  {
+    "name": "manzana",
+    "aliases": [
+      "manzana roja",
+      "manzana verde"
+    ],
+    "family": [
+      "fruta"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 180,
+    "shelf_life": {
+      "fridge": [
+        21,
+        60
+      ]
+    }
+  },
+  {
+    "name": "banana",
+    "aliases": [
+      "banana",
+      "platano"
+    ],
+    "family": [
+      "fruta"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 120
+  },
+  {
+    "name": "pera",
+    "aliases": [],
+    "family": [
+      "fruta"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 180
+  },
+  {
+    "name": "durazno",
+    "aliases": [
+      "melocoton"
+    ],
+    "family": [
+      "fruta"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 150
+  },
+  {
+    "name": "ciruela",
+    "aliases": [],
+    "family": [
+      "fruta"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 60
+  },
+  {
+    "name": "damasco",
+    "aliases": [
+      "albaricoque"
+    ],
+    "family": [
+      "fruta"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 50
+  },
+  {
+    "name": "frutilla",
+    "aliases": [
+      "fresa"
+    ],
+    "family": [
+      "fruta"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 15,
+    "shelf_life": {
+      "fridge": [
+        2,
+        4
+      ]
+    }
+  },
+  {
+    "name": "arándano",
+    "aliases": [
+      "arandano",
+      "blueberry"
+    ],
+    "family": [
+      "fruta"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad"
+  },
+  {
+    "name": "frambuesa",
+    "aliases": [],
+    "family": [
+      "fruta"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad"
+  },
+  {
+    "name": "uva",
+    "aliases": [
+      "uvas"
+    ],
+    "family": [
+      "fruta"
+    ],
+    "aisle": "verduleria",
+    "unit": "atado"
+  },
+  {
+    "name": "sandía",
+    "aliases": [
+      "sandia"
+    ],
+    "family": [
+      "fruta"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad"
+  },
+  {
+    "name": "melón",
+    "aliases": [
+      "melon"
+    ],
+    "family": [
+      "fruta"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad"
+  },
+  {
+    "name": "ananá",
+    "aliases": [
+      "piña",
+      "pina",
+      "anana"
+    ],
+    "family": [
+      "fruta"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 1200
+  },
+  {
+    "name": "kiwi",
+    "aliases": [],
+    "family": [
+      "fruta"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 80
+  },
+  {
+    "name": "mango",
+    "aliases": [],
+    "family": [
+      "fruta"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 250
+  },
+  {
+    "name": "granada",
+    "aliases": [],
+    "family": [
+      "fruta"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad"
+  },
+  {
+    "name": "higo",
+    "aliases": [
+      "breva"
+    ],
+    "family": [
+      "fruta"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad",
+    "weight": 50
+  },
+  {
+    "name": "coco",
+    "aliases": [
+      "coco rallado"
+    ],
+    "family": [
+      "fruta"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad"
+  },
+  {
+    "name": "asado de tira",
+    "aliases": [
+      "asado"
+    ],
+    "family": [
+      "carne_roja"
+    ],
+    "aisle": "carniceria",
+    "unit": "g"
+  },
+  {
+    "name": "bife de chorizo",
+    "aliases": [],
+    "family": [
+      "carne_roja"
+    ],
+    "aisle": "carniceria",
+    "unit": "g"
+  },
+  {
+    "name": "bife ancho",
+    "aliases": [],
+    "family": [
+      "carne_roja"
+    ],
+    "aisle": "carniceria",
+    "unit": "g"
+  },
+  {
+    "name": "lomo",
+    "aliases": [
+      "lomo vacuno"
+    ],
+    "family": [
+      "carne_roja"
+    ],
+    "aisle": "carniceria",
+    "unit": "g"
+  },
+  {
+    "name": "cuadril",
+    "aliases": [],
+    "family": [
+      "carne_roja"
+    ],
+    "aisle": "carniceria",
+    "unit": "g"
+  },
+  {
+    "name": "nalga",
+    "aliases": [],
+    "family": [
+      "carne_roja"
+    ],
+    "aisle": "carniceria",
+    "unit": "g"
+  },
+  {
+    "name": "bola de lomo",
+    "aliases": [],
+    "family": [
+      "carne_roja"
+    ],
+    "aisle": "carniceria",
+    "unit": "g"
+  },
+  {
+    "name": "paleta",
+    "aliases": [
+      "paleta vacuna"
+    ],
+    "family": [
+      "carne_roja"
+    ],
+    "aisle": "carniceria",
+    "unit": "g"
+  },
+  {
+    "name": "roast beef",
+    "aliases": [
+      "rosbif"
+    ],
+    "family": [
+      "carne_roja"
+    ],
+    "aisle": "carniceria",
+    "unit": "g"
+  },
+  {
+    "name": "carne picada",
+    "aliases": [
+      "carne molida"
+    ],
+    "family": [
+      "carne_roja"
+    ],
+    "aisle": "carniceria",
+    "unit": "g",
+    "shelf_life": {
+      "fridge": [
+        1,
+        2
+      ],
+      "freezer": [
+        60,
+        90
+      ]
+    }
+  },
+  {
+    "name": "hígado",
+    "aliases": [
+      "higado"
+    ],
+    "family": [
+      "carne_roja"
+    ],
+    "aisle": "carniceria",
+    "unit": "g"
+  },
+  {
+    "name": "mondongo",
+    "aliases": [],
+    "family": [
+      "carne_roja"
+    ],
+    "aisle": "carniceria",
+    "unit": "g"
+  },
+  {
+    "name": "pollo",
+    "aliases": [
+      "pollo entero"
+    ],
+    "family": [
+      "ave"
+    ],
+    "aisle": "carniceria",
+    "unit": "unidad",
+    "weight": 2000,
+    "shelf_life": {
+      "fridge": [
+        1,
+        2
+      ],
+      "freezer": [
+        180,
+        270
+      ]
+    }
+  },
+  {
+    "name": "pechuga de pollo",
+    "aliases": [
+      "pechuga",
+      "suprema de pollo"
+    ],
+    "family": [
+      "ave"
+    ],
+    "aisle": "carniceria",
+    "unit": "unidad",
+    "weight": 250,
+    "shelf_life": {
+      "fridge": [
+        1,
+        2
+      ],
+      "freezer": [
+        180,
+        270
+      ]
+    }
+  },
+  {
+    "name": "pata muslo",
+    "aliases": [
+      "pata y muslo"
+    ],
+    "family": [
+      "ave"
+    ],
+    "aisle": "carniceria",
+    "unit": "unidad",
+    "weight": 300
+  },
+  {
+    "name": "milanesa de pollo",
+    "aliases": [],
+    "family": [
+      "ave"
+    ],
+    "aisle": "carniceria",
+    "unit": "unidad"
+  },
+  {
+    "name": "huevo",
+    "aliases": [
+      "huevos"
+    ],
+    "family": [
+      "huevo"
+    ],
+    "aisle": "lacteos",
+    "unit": "unidad",
+    "weight": 60,
+    "shelf_life": {
+      "fridge": [
+        21,
+        30
+      ]
+    }
+  },
+  {
+    "name": "bondiola",
+    "aliases": [
+      "bondiola de cerdo"
+    ],
+    "family": [
+      "cerdo"
+    ],
+    "aisle": "carniceria",
+    "unit": "g"
+  },
+  {
+    "name": "costilla de cerdo",
+    "aliases": [
+      "costeleta"
+    ],
+    "family": [
+      "cerdo"
+    ],
+    "aisle": "carniceria",
+    "unit": "g"
+  },
+  {
+    "name": "matambre",
+    "aliases": [
+      "matambre de cerdo",
+      "matambre vacuno"
+    ],
+    "family": [
+      "cerdo"
+    ],
+    "aisle": "carniceria",
+    "unit": "g"
+  },
+  {
+    "name": "panceta",
+    "aliases": [
+      "tocino",
+      "bacón"
+    ],
+    "family": [
+      "cerdo"
+    ],
+    "aisle": "carniceria",
+    "unit": "g"
+  },
+  {
+    "name": "chorizo",
+    "aliases": [
+      "chorizo parrillero"
+    ],
+    "family": [
+      "cerdo"
+    ],
+    "aisle": "carniceria",
+    "unit": "unidad",
+    "weight": 120
+  },
+  {
+    "name": "morcilla",
+    "aliases": [],
+    "family": [
+      "cerdo"
+    ],
+    "aisle": "carniceria",
+    "unit": "unidad",
+    "weight": 150
+  },
+  {
+    "name": "salchicha",
+    "aliases": [
+      "salchicha parrillera"
+    ],
+    "family": [
+      "cerdo"
+    ],
+    "aisle": "carniceria",
+    "unit": "unidad",
+    "weight": 70
+  },
+  {
+    "name": "jamón",
+    "aliases": [
+      "jamon cocido"
+    ],
+    "family": [
+      "cerdo"
+    ],
+    "aisle": "fiambres",
+    "unit": "feta",
+    "weight": 15
+  },
+  {
+    "name": "jamón crudo",
+    "aliases": [
+      "jamon crudo"
+    ],
+    "family": [
+      "cerdo"
+    ],
+    "aisle": "fiambres",
+    "unit": "feta",
+    "weight": 15
+  },
+  {
+    "name": "salame",
+    "aliases": [
+      "salamín"
+    ],
+    "family": [
+      "cerdo"
+    ],
+    "aisle": "fiambres",
+    "unit": "rodaja"
+  },
+  {
+    "name": "merluza",
+    "aliases": [],
+    "family": [
+      "pescado"
+    ],
+    "aisle": "pescaderia",
+    "unit": "g"
+  },
+  {
+    "name": "salmón",
+    "aliases": [
+      "salmon"
+    ],
+    "family": [
+      "pescado"
+    ],
+    "aisle": "pescaderia",
+    "unit": "g",
+    "shelf_life": {
+      "fridge": [
+        1,
+        2
+      ],
+      "freezer": [
+        60,
+        90
+      ]
+    }
+  },
+  {
+    "name": "atún",
+    "aliases": [
+      "atun"
+    ],
+    "family": [
+      "pescado"
+    ],
+    "aisle": "pescaderia",
+    "unit": "g"
+  },
+  {
+    "name": "langostino",
+    "aliases": [
+      "camarones"
+    ],
+    "family": [
+      "mariscos"
+    ],
+    "aisle": "pescaderia",
+    "unit": "g",
+    "shelf_life": {
+      "freezer": [
+        60,
+        90
+      ]
+    }
+  },
+  {
+    "name": "calamar",
+    "aliases": [],
+    "family": [
+      "mariscos"
+    ],
+    "aisle": "pescaderia",
+    "unit": "g"
+  },
+  {
+    "name": "mejillón",
+    "aliases": [
+      "mejillones"
+    ],
+    "family": [
+      "mariscos"
+    ],
+    "aisle": "pescaderia",
+    "unit": "g"
+  },
+  {
+    "name": "leche",
+    "aliases": [],
+    "family": [
+      "lacteo"
+    ],
+    "aisle": "lacteos",
+    "unit": "ml",
+    "shelf_life": {
+      "fridge": [
+        5,
+        7
+      ]
+    }
+  },
+  {
+    "name": "crema de leche",
+    "aliases": [
+      "crema"
+    ],
+    "family": [
+      "lacteo"
+    ],
+    "aisle": "lacteos",
+    "unit": "ml",
+    "shelf_life": {
+      "fridge": [
+        5,
+        10
+      ]
+    }
+  },
+  {
+    "name": "manteca",
+    "aliases": [
+      "mantequilla"
+    ],
+    "family": [
+      "lacteo"
+    ],
+    "aisle": "lacteos",
+    "unit": "g",
+    "shelf_life": {
+      "fridge": [
+        30,
+        60
+      ],
+      "freezer": [
+        180,
+        270
+      ]
+    }
+  },
+  {
+    "name": "queso crema",
+    "aliases": [
+      "queso untable"
+    ],
+    "family": [
+      "lacteo"
+    ],
+    "aisle": "lacteos",
+    "unit": "g",
+    "shelf_life": {
+      "fridge": [
+        7,
+        14
+      ]
+    }
+  },
+  {
+    "name": "queso rallado",
+    "aliases": [
+      "queso de rallar"
+    ],
+    "family": [
+      "lacteo"
+    ],
+    "aisle": "lacteos",
+    "unit": "g",
+    "shelf_life": {
+      "fridge": [
+        30,
+        60
+      ]
+    }
+  },
+  {
+    "name": "queso fresco",
+    "aliases": [
+      "queso blanco"
+    ],
+    "family": [
+      "lacteo"
+    ],
+    "aisle": "lacteos",
+    "unit": "g",
+    "shelf_life": {
+      "fridge": [
+        7,
+        14
+      ]
+    }
+  },
+  {
+    "name": "mozzarella",
+    "aliases": [
+      "muzzarella"
+    ],
+    "family": [
+      "lacteo"
+    ],
+    "aisle": "lacteos",
+    "unit": "g",
+    "shelf_life": {
+      "fridge": [
+        7,
+        14
+      ]
+    }
+  },
+  {
+    "name": "queso port salut",
+    "aliases": [
+      "port salut"
+    ],
+    "family": [
+      "lacteo"
+    ],
+    "aisle": "lacteos",
+    "unit": "g"
+  },
+  {
+    "name": "queso sardo",
+    "aliases": [
+      "sardo"
+    ],
+    "family": [
+      "lacteo"
+    ],
+    "aisle": "lacteos",
+    "unit": "g"
+  },
+  {
+    "name": "ricota",
+    "aliases": [
+      "ricotta"
+    ],
+    "family": [
+      "lacteo"
+    ],
+    "aisle": "lacteos",
+    "unit": "g",
+    "shelf_life": {
+      "fridge": [
+        5,
+        7
+      ]
+    }
+  },
+  {
+    "name": "yogur",
+    "aliases": [
+      "yogur natural"
+    ],
+    "family": [
+      "lacteo"
+    ],
+    "aisle": "lacteos",
+    "unit": "unidad",
+    "shelf_life": {
+      "fridge": [
+        7,
+        14
+      ]
+    }
+  },
+  {
+    "name": "dulce de leche",
+    "aliases": [],
+    "family": [
+      "lacteo"
+    ],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "harina",
+    "aliases": [
+      "harina de trigo"
+    ],
+    "family": [
+      "cereal_gluten"
+    ],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "harina 0000",
+    "aliases": [
+      "harina cuatro ceros"
+    ],
+    "family": [
+      "cereal_gluten"
+    ],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "harina leudante",
+    "aliases": [
+      "harina con leudante"
+    ],
+    "family": [
+      "cereal_gluten"
+    ],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "harina integral",
+    "aliases": [],
+    "family": [
+      "cereal_gluten"
+    ],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "harina de maíz",
+    "aliases": [
+      "polenta"
+    ],
+    "family": [
+      "cereal"
+    ],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "polenta",
+    "aliases": [
+      "harina de maíz",
+      "sémola de maíz"
+    ],
+    "family": [
+      "cereal"
+    ],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "arroz",
+    "aliases": [],
+    "family": [
+      "cereal_gluten"
+    ],
+    "aisle": "almacen",
+    "unit": "g",
+    "shelf_life": {
+      "pantry": [
+        180,
+        365
+      ]
+    }
+  },
+  {
+    "name": "arroz integral",
+    "aliases": [],
+    "family": [
+      "cereal"
+    ],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "fideos",
+    "aliases": [
+      "pasta",
+      "spaghetti",
+      "tallarines"
+    ],
+    "family": [
+      "cereal_gluten"
+    ],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "fideos moñito",
+    "aliases": [
+      "moñitos",
+      "lacitos"
+    ],
+    "family": [
+      "cereal_gluten"
+    ],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "ñoquis",
+    "aliases": [
+      "ñoquis de papa"
+    ],
+    "family": [
+      "cereal_gluten"
+    ],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "pan rallado",
+    "aliases": [
+      "rebozador"
+    ],
+    "family": [
+      "cereal_gluten"
+    ],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "pan",
+    "aliases": [],
+    "family": [
+      "cereal_gluten"
+    ],
+    "aisle": "almacen",
+    "unit": "unidad",
+    "shelf_life": {
+      "pantry": [
+        2,
+        5
+      ]
+    }
+  },
+  {
+    "name": "azúcar",
+    "aliases": [
+      "azucar"
+    ],
+    "family": [],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "azúcar impalpable",
+    "aliases": [
+      "azucar glass"
+    ],
+    "family": [],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "sal",
+    "aliases": [
+      "sal fina",
+      "sal gruesa"
+    ],
+    "family": [],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "pimienta",
+    "aliases": [
+      "pimienta negra"
+    ],
+    "family": [],
+    "aisle": "especias",
+    "unit": "g"
+  },
+  {
+    "name": "pimentón",
+    "aliases": [
+      "pimenton",
+      "paprika"
+    ],
+    "family": [],
+    "aisle": "especias",
+    "unit": "g"
+  },
+  {
+    "name": "comino",
+    "aliases": [],
+    "family": [],
+    "aisle": "especias",
+    "unit": "g"
+  },
+  {
+    "name": "orégano",
+    "aliases": [
+      "oregano"
+    ],
+    "family": [],
+    "aisle": "especias",
+    "unit": "g"
+  },
+  {
+    "name": "perejil",
+    "aliases": [],
+    "family": [],
+    "aisle": "verduleria",
+    "unit": "atado"
+  },
+  {
+    "name": "cilantro",
+    "aliases": [],
+    "family": [],
+    "aisle": "verduleria",
+    "unit": "atado"
+  },
+  {
+    "name": "albahaca",
+    "aliases": [],
+    "family": [],
+    "aisle": "verduleria",
+    "unit": "atado"
+  },
+  {
+    "name": "romero",
+    "aliases": [],
+    "family": [],
+    "aisle": "especias",
+    "unit": "g"
+  },
+  {
+    "name": "tomillo",
+    "aliases": [],
+    "family": [],
+    "aisle": "especias",
+    "unit": "g"
+  },
+  {
+    "name": "laurel",
+    "aliases": [
+      "hoja de laurel"
+    ],
+    "family": [],
+    "aisle": "especias",
+    "unit": "unidad"
+  },
+  {
+    "name": "ají molido",
+    "aliases": [
+      "aji molido"
+    ],
+    "family": [],
+    "aisle": "especias",
+    "unit": "g"
+  },
+  {
+    "name": "curry",
+    "aliases": [],
+    "family": [],
+    "aisle": "especias",
+    "unit": "g"
+  },
+  {
+    "name": "canela",
+    "aliases": [],
+    "family": [],
+    "aisle": "especias",
+    "unit": "g"
+  },
+  {
+    "name": "vainilla",
+    "aliases": [
+      "esencia de vainilla"
+    ],
+    "family": [],
+    "aisle": "especias",
+    "unit": "cdita"
+  },
+  {
+    "name": "nuez moscada",
+    "aliases": [],
+    "family": [],
+    "aisle": "especias",
+    "unit": "g"
+  },
+  {
+    "name": "clavo de olor",
+    "aliases": [
+      "clavo"
+    ],
+    "family": [],
+    "aisle": "especias",
+    "unit": "unidad"
+  },
+  {
+    "name": "jengibre",
+    "aliases": [],
+    "family": [],
+    "aisle": "verduleria",
+    "unit": "unidad"
+  },
+  {
+    "name": "aceite de oliva",
+    "aliases": [
+      "aceite"
+    ],
+    "family": [],
+    "aisle": "almacen",
+    "unit": "ml"
+  },
+  {
+    "name": "aceite de girasol",
+    "aliases": [],
+    "family": [],
+    "aisle": "almacen",
+    "unit": "ml"
+  },
+  {
+    "name": "vinagre",
+    "aliases": [
+      "vinagre de vino",
+      "vinagre de manzana"
+    ],
+    "family": [],
+    "aisle": "almacen",
+    "unit": "ml"
+  },
+  {
+    "name": "vinagre balsámico",
+    "aliases": [
+      "aceto"
+    ],
+    "family": [],
+    "aisle": "almacen",
+    "unit": "ml"
+  },
+  {
+    "name": "aceitunas",
+    "aliases": [
+      "aceituna",
+      "aceitunas verdes",
+      "aceitunas negras"
+    ],
+    "family": [],
+    "aisle": "almacen",
+    "unit": "unidad"
+  },
+  {
+    "name": "mayonesa",
+    "aliases": [
+      "mayonesa casera"
+    ],
+    "family": [
+      "lacteo"
+    ],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "mostaza",
+    "aliases": [],
+    "family": [],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "ketchup",
+    "aliases": [
+      "salsa de tomate"
+    ],
+    "family": [],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "salsa de soja",
+    "aliases": [
+      "salsa de soya"
+    ],
+    "family": [],
+    "aisle": "almacen",
+    "unit": "ml"
+  },
+  {
+    "name": "caldo de verduras",
+    "aliases": [
+      "caldo",
+      "caldo en cubos"
+    ],
+    "family": [],
+    "aisle": "almacen",
+    "unit": "unidad"
+  },
+  {
+    "name": "caldo de carne",
+    "aliases": [],
+    "family": [],
+    "aisle": "almacen",
+    "unit": "unidad"
+  },
+  {
+    "name": "puré de tomate",
+    "aliases": [
+      "pure de tomate",
+      "salsa de tomate"
+    ],
+    "family": [],
+    "aisle": "almacen",
+    "unit": "lata"
+  },
+  {
+    "name": "tomate triturado",
+    "aliases": [
+      "tomate cubeteado"
+    ],
+    "family": [],
+    "aisle": "almacen",
+    "unit": "lata"
+  },
+  {
+    "name": "lentejas",
+    "aliases": [
+      "lenteja"
+    ],
+    "family": [
+      "legumbre"
+    ],
+    "aisle": "almacen",
+    "unit": "g",
+    "shelf_life": {
+      "pantry": [
+        180,
+        365
+      ]
+    }
+  },
+  {
+    "name": "garbanzos",
+    "aliases": [
+      "garbanzo"
+    ],
+    "family": [
+      "legumbre"
+    ],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "porotos",
+    "aliases": [
+      "frijoles",
+      "porotos negros",
+      "porotos blancos"
+    ],
+    "family": [
+      "legumbre"
+    ],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "arvejas",
+    "aliases": [
+      "arveja",
+      "guisantes"
+    ],
+    "family": [
+      "legumbre"
+    ],
+    "aisle": "congelados",
+    "unit": "g"
+  },
+  {
+    "name": "soja texturizada",
+    "aliases": [
+      "soja"
+    ],
+    "family": [
+      "legumbre"
+    ],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "quinoa",
+    "aliases": [
+      "quinua"
+    ],
+    "family": [
+      "cereal"
+    ],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "avena",
+    "aliases": [
+      "copos de avena"
+    ],
+    "family": [
+      "cereal"
+    ],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "lino",
+    "aliases": [
+      "semillas de lino"
+    ],
+    "family": [
+      "semilla"
+    ],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "chía",
+    "aliases": [
+      "chia",
+      "semillas de chía"
+    ],
+    "family": [
+      "semilla"
+    ],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "sésamo",
+    "aliases": [
+      "sesamo",
+      "ajonjolí"
+    ],
+    "family": [
+      "semilla"
+    ],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "girasol",
+    "aliases": [
+      "semillas de girasol"
+    ],
+    "family": [
+      "semilla"
+    ],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "maní",
+    "aliases": [
+      "mani",
+      "cacahuate"
+    ],
+    "family": [
+      "frutos_secos"
+    ],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "nuez",
+    "aliases": [
+      "nueces"
+    ],
+    "family": [
+      "frutos_secos"
+    ],
+    "aisle": "almacen",
+    "unit": "unidad"
+  },
+  {
+    "name": "almendra",
+    "aliases": [
+      "almendras"
+    ],
+    "family": [
+      "frutos_secos"
+    ],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "castaña de cajú",
+    "aliases": [
+      "castañas de cajú",
+      "anacardo"
+    ],
+    "family": [
+      "frutos_secos"
+    ],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "avellana",
+    "aliases": [
+      "avellanas"
+    ],
+    "family": [
+      "frutos_secos"
+    ],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "pasas de uva",
+    "aliases": [
+      "pasas"
+    ],
+    "family": [
+      "fruta"
+    ],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "levadura",
+    "aliases": [
+      "levadura seca",
+      "levadura fresca"
+    ],
+    "family": [],
+    "aisle": "almacen",
+    "unit": "sobre"
+  },
+  {
+    "name": "polvo de hornear",
+    "aliases": [
+      "polvo leudante"
+    ],
+    "family": [],
+    "aisle": "almacen",
+    "unit": "cdita"
+  },
+  {
+    "name": "bicarbonato de sodio",
+    "aliases": [
+      "bicarbonato"
+    ],
+    "family": [],
+    "aisle": "almacen",
+    "unit": "cdita"
+  },
+  {
+    "name": "cacao en polvo",
+    "aliases": [
+      "cacao"
+    ],
+    "family": [],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "chocolate",
+    "aliases": [
+      "chocolate cobertura",
+      "chocolate semiamargo"
+    ],
+    "family": [],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "miel",
+    "aliases": [],
+    "family": [],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "café",
+    "aliases": [
+      "cafe"
+    ],
+    "family": [],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "té",
+    "aliases": [
+      "te"
+    ],
+    "family": [],
+    "aisle": "almacen",
+    "unit": "unidad"
+  },
+  {
+    "name": "yerba mate",
+    "aliases": [
+      "yerba"
+    ],
+    "family": [],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "agua",
+    "aliases": [],
+    "family": [],
+    "aisle": "almacen",
+    "unit": "ml"
+  },
+  {
+    "name": "leche de coco",
+    "aliases": [],
+    "family": [
+      "lacteo"
+    ],
+    "aisle": "almacen",
+    "unit": "ml"
+  },
+  {
+    "name": "salsa de tomate",
+    "aliases": [
+      "salsa lista"
+    ],
+    "family": [],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "tapas de empanadas",
+    "aliases": [
+      "tapas para empanadas"
+    ],
+    "family": [
+      "cereal_gluten"
+    ],
+    "aisle": "congelados",
+    "unit": "paquete"
+  },
+  {
+    "name": "tapas de tartas",
+    "aliases": [
+      "masa de tarta"
+    ],
+    "family": [
+      "cereal_gluten"
+    ],
+    "aisle": "congelados",
+    "unit": "paquete"
+  },
+  {
+    "name": "masa filo",
+    "aliases": [
+      "masa philo"
+    ],
+    "family": [
+      "cereal_gluten"
+    ],
+    "aisle": "congelados",
+    "unit": "paquete"
+  },
+  {
+    "name": "espinaca congelada",
+    "aliases": [],
+    "family": [
+      "hoja_verde"
+    ],
+    "aisle": "congelados",
+    "unit": "paquete"
+  },
+  {
+    "name": "arvejas congeladas",
+    "aliases": [],
+    "family": [
+      "legumbre"
+    ],
+    "aisle": "congelados",
+    "unit": "paquete"
+  },
+  {
+    "name": "papas noisette",
+    "aliases": [
+      "papas congeladas"
+    ],
+    "family": [
+      "tuberculo"
+    ],
+    "aisle": "congelados",
+    "unit": "paquete"
+  },
+  {
+    "name": "queso para gratinar",
+    "aliases": [
+      "queso gratinar"
+    ],
+    "family": [
+      "lacteo"
+    ],
+    "aisle": "lacteos",
+    "unit": "g"
+  },
+  {
+    "name": "provolone",
+    "aliases": [],
+    "family": [
+      "lacteo"
+    ],
+    "aisle": "lacteos",
+    "unit": "rodaja"
+  },
+  {
+    "name": "parmesano",
+    "aliases": [],
+    "family": [
+      "lacteo"
+    ],
+    "aisle": "lacteos",
+    "unit": "g"
+  },
+  {
+    "name": "queso azul",
+    "aliases": [
+      "roquefort"
+    ],
+    "family": [
+      "lacteo"
+    ],
+    "aisle": "lacteos",
+    "unit": "g"
+  },
+  {
+    "name": "queso de cabra",
+    "aliases": [],
+    "family": [
+      "lacteo"
+    ],
+    "aisle": "lacteos",
+    "unit": "g"
+  },
+  {
+    "name": "manteca de maní",
+    "aliases": [
+      "mantequilla de maní"
+    ],
+    "family": [
+      "frutos_secos"
+    ],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "crema pastelera",
+    "aliases": [],
+    "family": [
+      "lacteo"
+    ],
+    "aisle": "lacteos",
+    "unit": "g"
+  },
+  {
+    "name": "azafrán",
+    "aliases": [
+      "azafran"
+    ],
+    "family": [],
+    "aisle": "especias",
+    "unit": "g"
+  },
+  {
+    "name": "pimentón ahumado",
+    "aliases": [
+      "pimenton ahumado"
+    ],
+    "family": [],
+    "aisle": "especias",
+    "unit": "g"
+  },
+  {
+    "name": "guindilla",
+    "aliases": [
+      "aji picante"
+    ],
+    "family": [],
+    "aisle": "especias",
+    "unit": "unidad"
+  },
+  {
+    "name": "wasabi",
+    "aliases": [],
+    "family": [],
+    "aisle": "especias",
+    "unit": "g"
+  },
+  {
+    "name": "jengibre en polvo",
+    "aliases": [],
+    "family": [],
+    "aisle": "especias",
+    "unit": "g"
+  },
+  {
+    "name": "curcuma",
+    "aliases": [
+      "cúrcuma",
+      "turmeric"
+    ],
+    "family": [],
+    "aisle": "especias",
+    "unit": "g"
+  },
+  {
+    "name": "cardamomo",
+    "aliases": [],
+    "family": [],
+    "aisle": "especias",
+    "unit": "g"
+  },
+  {
+    "name": "anís estrellado",
+    "aliases": [
+      "anis"
+    ],
+    "family": [],
+    "aisle": "especias",
+    "unit": "unidad"
+  },
+  {
+    "name": "cilantro en semillas",
+    "aliases": [],
+    "family": [],
+    "aisle": "especias",
+    "unit": "g"
+  },
+  {
+    "name": "mostaza en grano",
+    "aliases": [],
+    "family": [],
+    "aisle": "especias",
+    "unit": "g"
+  },
+  {
+    "name": "harina de almendras",
+    "aliases": [],
+    "family": [
+      "frutos_secos"
+    ],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "harina de coco",
+    "aliases": [],
+    "family": [
+      "fruta"
+    ],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "harina de arroz",
+    "aliases": [],
+    "family": [
+      "cereal"
+    ],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "fécula de maíz",
+    "aliases": [
+      "maicena",
+      "fecula de maiz"
+    ],
+    "family": [
+      "cereal"
+    ],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "gelatina",
+    "aliases": [
+      "gelatina sin sabor"
+    ],
+    "family": [],
+    "aisle": "almacen",
+    "unit": "sobre"
+  },
+  {
+    "name": "leche en polvo",
+    "aliases": [],
+    "family": [
+      "lacteo"
+    ],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "crema chantilly",
+    "aliases": [
+      "crema batida"
+    ],
+    "family": [
+      "lacteo"
+    ],
+    "aisle": "lacteos",
+    "unit": "g"
+  },
+  {
+    "name": "queso para untar",
+    "aliases": [],
+    "family": [
+      "lacteo"
+    ],
+    "aisle": "lacteos",
+    "unit": "g"
+  },
+  {
+    "name": "salchicha tipo viena",
+    "aliases": [
+      "vienas",
+      "salchichas"
+    ],
+    "family": [
+      "cerdo"
+    ],
+    "aisle": "fiambres",
+    "unit": "unidad"
+  },
+  {
+    "name": "aceite de coco",
+    "aliases": [],
+    "family": [],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "sésamo tostado",
+    "aliases": [],
+    "family": [
+      "semilla"
+    ],
+    "aisle": "especias",
+    "unit": "g"
+  },
+  {
+    "name": "vinagre de arroz",
+    "aliases": [],
+    "family": [],
+    "aisle": "almacen",
+    "unit": "ml"
+  },
+  {
+    "name": "aceite de sésamo",
+    "aliases": [],
+    "family": [],
+    "aisle": "almacen",
+    "unit": "ml"
+  },
+  {
+    "name": "fideos de arroz",
+    "aliases": [
+      "pasta de arroz"
+    ],
+    "family": [
+      "cereal"
+    ],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "alga nori",
+    "aliases": [
+      "nori"
+    ],
+    "family": [],
+    "aisle": "almacen",
+    "unit": "unidad"
+  },
+  {
+    "name": "tofu",
+    "aliases": [
+      "queso de soja"
+    ],
+    "family": [
+      "legumbre"
+    ],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "seitán",
+    "aliases": [
+      "seitan"
+    ],
+    "family": [
+      "cereal_gluten"
+    ],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "tempeh",
+    "aliases": [],
+    "family": [
+      "legumbre"
+    ],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "mijo",
+    "aliases": [],
+    "family": [
+      "cereal"
+    ],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "trigo burgol",
+    "aliases": [
+      "burgol",
+      "bulgur"
+    ],
+    "family": [
+      "cereal_gluten"
+    ],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "cuscús",
+    "aliases": [
+      "cuscus"
+    ],
+    "family": [
+      "cereal_gluten"
+    ],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "sémola",
+    "aliases": [
+      "semola"
+    ],
+    "family": [
+      "cereal_gluten"
+    ],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "chaucha",
+    "aliases": [
+      "judía verde",
+      "vainitas",
+      "ejotes"
+    ],
+    "family": [
+      "legumbre"
+    ],
+    "aisle": "verduleria",
+    "unit": "g"
+  },
+  {
+    "name": "repollitos de bruselas",
+    "aliases": [
+      "bruselas"
+    ],
+    "family": [
+      "crucifera"
+    ],
+    "aisle": "verduleria",
+    "unit": "g"
+  },
+  {
+    "name": "nopal",
+    "aliases": [],
+    "family": [],
+    "aisle": "verduleria",
+    "unit": "unidad"
+  },
+  {
+    "name": "col rizada",
+    "aliases": [
+      "kale"
+    ],
+    "family": [
+      "crucifera"
+    ],
+    "aisle": "verduleria",
+    "unit": "atado"
+  },
+  {
+    "name": "batata morada",
+    "aliases": [],
+    "family": [
+      "tuberculo"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad"
+  },
+  {
+    "name": "mandioca",
+    "aliases": [
+      "yuca"
+    ],
+    "family": [
+      "tuberculo"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad"
+  },
+  {
+    "name": "nabo",
+    "aliases": [],
+    "family": [
+      "tuberculo"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad"
+  },
+  {
+    "name": "chirivía",
+    "aliases": [
+      "chirivia"
+    ],
+    "family": [
+      "tuberculo"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad"
+  },
+  {
+    "name": "berro",
+    "aliases": [],
+    "family": [
+      "hoja_verde"
+    ],
+    "aisle": "verduleria",
+    "unit": "atado"
+  },
+  {
+    "name": "radicchio",
+    "aliases": [
+      "achicoria roja"
+    ],
+    "family": [
+      "hoja_verde"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad"
+  },
+  {
+    "name": "escarola",
+    "aliases": [],
+    "family": [
+      "hoja_verde"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad"
+  },
+  {
+    "name": "endivia",
+    "aliases": [
+      "endibia"
+    ],
+    "family": [
+      "hoja_verde"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad"
+  },
+  {
+    "name": "nabiza",
+    "aliases": [],
+    "family": [
+      "crucifera"
+    ],
+    "aisle": "verduleria",
+    "unit": "atado"
+  },
+  {
+    "name": "grelos",
+    "aliases": [],
+    "family": [
+      "crucifera"
+    ],
+    "aisle": "verduleria",
+    "unit": "atado"
+  },
+  {
+    "name": "achicoria",
+    "aliases": [],
+    "family": [
+      "hoja_verde"
+    ],
+    "aisle": "verduleria",
+    "unit": "unidad"
+  },
+  {
+    "name": "diente de león",
+    "aliases": [],
+    "family": [
+      "hoja_verde"
+    ],
+    "aisle": "verduleria",
+    "unit": "atado"
+  },
+  {
+    "name": "fideos orientales",
+    "aliases": [
+      "ramen",
+      "udon"
+    ],
+    "family": [
+      "cereal_gluten"
+    ],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "salsa de ostras",
+    "aliases": [],
+    "family": [],
+    "aisle": "almacen",
+    "unit": "ml"
+  },
+  {
+    "name": "mirin",
+    "aliases": [],
+    "family": [],
+    "aisle": "almacen",
+    "unit": "ml"
+  },
+  {
+    "name": "sake",
+    "aliases": [],
+    "family": [],
+    "aisle": "almacen",
+    "unit": "ml"
+  },
+  {
+    "name": "pasta de miso",
+    "aliases": [
+      "miso"
+    ],
+    "family": [
+      "legumbre"
+    ],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "leche de almendras",
+    "aliases": [],
+    "family": [
+      "frutos_secos"
+    ],
+    "aisle": "almacen",
+    "unit": "ml"
+  },
+  {
+    "name": "bebida de avena",
+    "aliases": [],
+    "family": [
+      "cereal"
+    ],
+    "aisle": "almacen",
+    "unit": "ml"
+  },
+  {
+    "name": "ajo en polvo",
+    "aliases": [],
+    "family": [
+      "allium"
+    ],
+    "aisle": "especias",
+    "unit": "g"
+  },
+  {
+    "name": "cebolla en polvo",
+    "aliases": [],
+    "family": [
+      "allium"
+    ],
+    "aisle": "especias",
+    "unit": "g"
+  },
+  {
+    "name": "paprika dulce",
+    "aliases": [
+      "pimenton dulce"
+    ],
+    "family": [],
+    "aisle": "especias",
+    "unit": "g"
+  },
+  {
+    "name": "chile en polvo",
+    "aliases": [],
+    "family": [],
+    "aisle": "especias",
+    "unit": "g"
+  },
+  {
+    "name": "azúcar mascabo",
+    "aliases": [
+      "azucar mascabo"
+    ],
+    "family": [],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "stevia",
+    "aliases": [],
+    "family": [],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "edulcorante",
+    "aliases": [],
+    "family": [],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "pan integral",
+    "aliases": [],
+    "family": [
+      "cereal_gluten"
+    ],
+    "aisle": "almacen",
+    "unit": "unidad"
+  },
+  {
+    "name": "galletitas de agua",
+    "aliases": [],
+    "family": [
+      "cereal_gluten"
+    ],
+    "aisle": "almacen",
+    "unit": "unidad"
+  },
+  {
+    "name": "galletitas dulces",
+    "aliases": [],
+    "family": [
+      "cereal_gluten"
+    ],
+    "aisle": "almacen",
+    "unit": "unidad"
+  },
+  {
+    "name": "cereal",
+    "aliases": [
+      "copos de maíz"
+    ],
+    "family": [
+      "cereal"
+    ],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "granola",
+    "aliases": [],
+    "family": [
+      "cereal"
+    ],
+    "aisle": "almacen",
+    "unit": "g"
+  },
+  {
+    "name": "aceite de girasol alto oleico",
+    "aliases": [],
+    "family": [],
+    "aisle": "almacen",
+    "unit": "ml"
+  }
+]
