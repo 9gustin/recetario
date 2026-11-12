@@ -11,7 +11,7 @@
 - **Pasos:** `scripts/catalog/generate.ts` por lotes (categorías × tiempo × cocina: rápidas, desayunos, almuerzos, cenas, vegetarianas, sin gluten, de olla, airfryer, meriendas, salsas, postres simples…); salida validada con Zod y con `lib/domain` (unidades, ingredientes vinculados al catálogo); deduplicación por título/ingredientes; tags, tiempos y `storage_info`; carga idempotente al grupo Catálogo; informe de costo.
 - **Aceptación:** ≥ 500 recetas únicas cargadas, todas con ingredientes y pasos válidos.
 
-### [ ] T12.3 — Sitio público de exploración
+### [x] T12.3 — Sitio público de exploración
 - **Pasos:** rutas públicas sin login: `/explorar` (búsqueda de texto + filtros de tiempo, tags, ingrediente; paginada; sin IA), `/receta/[slug]` (SEO, JSON-LD, OG), `/coleccion/[slug]`, `/plan-publico/[slug]`; "Guardar en mi recetario" (pide login y copia); sitemap y robots.
 - **Aceptación:** e2e sin sesión: buscar, abrir una receta y ver que pide login solo para guardar.
 

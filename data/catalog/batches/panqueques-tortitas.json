@@ -1,0 +1,569 @@
+[
+  {
+    "title": "Panqueques finos con dulce de leche",
+    "description": "Los clásicos panqueques argentinos, finitos y flexibles, hechos con licuadora y rellenos con dulce de leche. Ideales para la merienda.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "merienda",
+      "desayuno",
+      "postre",
+      "argentina",
+      "sin horno",
+      "para chicos"
+    ],
+    "ingredients": [
+      "2 huevos",
+      "250 ml de leche",
+      "100 g de harina 0000",
+      "1 pizca de sal",
+      "1 cda de manteca derretida",
+      "1 cdita de esencia de vainilla",
+      "manteca o aceite para la sartén",
+      "4 cda de dulce de leche"
+    ],
+    "steps": [
+      {
+        "instruction": "Licuá los huevos, la leche, la harina, la sal, la manteca derretida y la vainilla hasta que no queden grumos."
+      },
+      {
+        "instruction": "Dejá reposar la mezcla unos minutos mientras calentás la sartén.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Untá apenas la sartén antialiadherente con manteca y calentala a fuego medio."
+      },
+      {
+        "instruction": "Volcá un cucharón de masa y girá la sartén para que se estire bien finita."
+      },
+      {
+        "instruction": "Cociná 1 minuto, dalo vuelta y cociná 30 segundos más. Repetí con el resto de la masa.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Untá cada panqueque con dulce de leche, enrollalo o doblalo en cuatro y servilo tibio."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": 60,
+      "reheat": "Calentalos 20 segundos en el microondas o un minuto en sartén tapada.",
+      "tip": "Para freezar, apilalos con un papel manteca entre cada uno y sin relleno."
+    }
+  },
+  {
+    "title": "Waffles de vainilla con frutillas",
+    "description": "Waffles dorados por fuera y livianos por dentro, con una masa de batir y listo. Se sirven con frutillas frescas y miel.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 14,
+    "difficulty": "facil",
+    "tags": [
+      "desayuno",
+      "merienda",
+      "para chicos",
+      "fruta",
+      "rápido",
+      "para freezar"
+    ],
+    "ingredients": [
+      "200 g de harina 0000",
+      "2 cdita de polvo de hornear",
+      "1 cda de azúcar",
+      "1 pizca de sal",
+      "2 huevos",
+      "250 ml de leche",
+      "3 cda de aceite neutro",
+      "1 cdita de esencia de vainilla",
+      "200 g de frutillas",
+      "2 cda de miel"
+    ],
+    "steps": [
+      {
+        "instruction": "Enchufá la wafflera y dejala precalentar mientras preparás la masa."
+      },
+      {
+        "instruction": "Mezclá en un bol la harina, el polvo de hornear, el azúcar y la sal."
+      },
+      {
+        "instruction": "Batí en otro bol los huevos con la leche, el aceite y la vainilla."
+      },
+      {
+        "instruction": "Uní los líquidos con los secos y revolvé apenas, sin buscar que quede lisa del todo."
+      },
+      {
+        "instruction": "Lavá las frutillas, sacales el cabito y cortalas en láminas."
+      },
+      {
+        "instruction": "Engrasá la wafflera, volcá masa hasta cubrir la base y cerrá. Cociná 3 o 4 minutos hasta que dore.",
+        "minutes": 4,
+        "passive": true
+      },
+      {
+        "instruction": "Repetí con la masa restante y serví con las frutillas y un hilo de miel."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": 45,
+      "reheat": "Recalentalos en tostadora o sartén seca hasta que vuelvan a quedar crocantes.",
+      "tip": "Dejalos enfriar sobre una rejilla antes de guardarlos para que no se humedezcan."
+    }
+  },
+  {
+    "title": "Waffles salados de queso y jamón",
+    "description": "Waffles con queso y jamón picado, perfectos para reemplazar el pan en un desayuno salado o una merienda contundente.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 14,
+    "difficulty": "facil",
+    "tags": [
+      "desayuno",
+      "merienda",
+      "sándwich",
+      "rápido",
+      "para chicos"
+    ],
+    "ingredients": [
+      "150 g de harina 0000",
+      "1 cdita de polvo de hornear",
+      "2 huevos",
+      "200 ml de leche",
+      "100 g de queso mozzarella rallado",
+      "3 fetas de jamón cocido",
+      "1 cebolla de verdeo",
+      "2 cda de aceite",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá la wafflera y engrasala con un poco de aceite."
+      },
+      {
+        "instruction": "Picá el jamón en cuadraditos y la cebolla de verdeo bien fina."
+      },
+      {
+        "instruction": "Mezclá la harina, el polvo de hornear, sal y pimienta en un bol."
+      },
+      {
+        "instruction": "Agregá los huevos, la leche y el aceite, y batí hasta integrar."
+      },
+      {
+        "instruction": "Sumá el queso, el jamón y la cebolla de verdeo y revolvé."
+      },
+      {
+        "instruction": "Volcá masa en la wafflera, cerrala y cociná 4 minutos hasta que estén dorados.",
+        "minutes": 4,
+        "passive": true
+      },
+      {
+        "instruction": "Repetí con el resto de la masa y serví calientes."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 45,
+      "reheat": "Calentalos en tostadora o en horno fuerte unos minutos para que recuperen lo crocante.",
+      "tip": "Quedan geniales armados como sándwich con tomate y queso."
+    }
+  },
+  {
+    "title": "Tortitas de ricota y limón",
+    "description": "Tortitas esponjosas y cremosas con ricota y ralladura de limón, doradas en sartén. Se sirven con miel o azúcar impalpable.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "desayuno",
+      "merienda",
+      "vegetariano",
+      "sin horno",
+      "rápido"
+    ],
+    "ingredients": [
+      "250 g de ricota",
+      "2 huevos",
+      "4 cda de harina",
+      "2 cda de azúcar",
+      "1 limón (la ralladura)",
+      "1 cdita de polvo de hornear",
+      "1 pizca de sal",
+      "aceite para la sartén",
+      "2 cda de miel"
+    ],
+    "steps": [
+      {
+        "instruction": "Rallá la cáscara del limón sin llegar a la parte blanca."
+      },
+      {
+        "instruction": "Mezclá en un bol la ricota, los huevos, el azúcar y la ralladura."
+      },
+      {
+        "instruction": "Agregá la harina, el polvo de hornear y la sal, y mezclá hasta integrar."
+      },
+      {
+        "instruction": "Calentá un chorrito de aceite en una sartén a fuego medio-bajo."
+      },
+      {
+        "instruction": "Poné cucharadas de masa y cociná 3 minutos por lado hasta que doren.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Repetí con el resto y serví con miel por encima."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": 30,
+      "reheat": "Calentalas en sartén a fuego bajo o 20 segundos en microondas.",
+      "tip": "Mantené el fuego bajo para que se cocinen por dentro sin quemarse."
+    }
+  },
+  {
+    "title": "Tortitas de zapallito y queso",
+    "description": "Tortitas salteadas de zapallito rallado con queso, jugosas por dentro y doradas por fuera. Van bien con un huevo frito o solas.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 14,
+    "difficulty": "facil",
+    "tags": [
+      "desayuno",
+      "merienda",
+      "vegetariano",
+      "verdura",
+      "sin horno",
+      "económico"
+    ],
+    "ingredients": [
+      "3 zapallitos redondos (400 g)",
+      "2 huevos",
+      "5 cda de harina",
+      "60 g de queso rallado",
+      "1 cdita de polvo de hornear",
+      "sal y pimienta a gusto",
+      "aceite para la sartén"
+    ],
+    "steps": [
+      {
+        "instruction": "Rallá los zapallitos con la parte gruesa del rallador."
+      },
+      {
+        "instruction": "Ponelos en un colador con una pizca de sal y apretalos con las manos para sacar el agua.",
+        "minutes": 3,
+        "passive": true
+      },
+      {
+        "instruction": "Mezclá el zapallito con los huevos, el queso, la harina, el polvo de hornear y pimienta."
+      },
+      {
+        "instruction": "Calentá aceite en una sartén a fuego medio."
+      },
+      {
+        "instruction": "Poné cucharadas de mezcla, aplastalas apenas y cociná 3 minutos por lado hasta que doren.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Escurrí sobre papel de cocina y serví calientes."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Recalentalas en sartén o en horno fuerte hasta que queden crocantes.",
+      "tip": "Si la mezcla queda muy líquida, sumá una cucharada más de harina."
+    }
+  },
+  {
+    "title": "Pancakes esponjosos de yogur y frutos rojos",
+    "description": "Pancakes altos y tiernos gracias al yogur, con frutos rojos y un toque de manteca. Una merienda rápida y simple.",
+    "servings": 3,
+    "prep_minutes": 7,
+    "cook_minutes": 14,
+    "difficulty": "facil",
+    "tags": [
+      "desayuno",
+      "merienda",
+      "fruta",
+      "para chicos",
+      "sin horno"
+    ],
+    "ingredients": [
+      "150 g de harina 0000",
+      "1 cda de azúcar",
+      "2 cdita de polvo de hornear",
+      "1 pizca de sal",
+      "150 g de yogur natural",
+      "100 ml de leche",
+      "1 huevo",
+      "1 cda de manteca derretida",
+      "150 g de frutos rojos",
+      "manteca para la sartén"
+    ],
+    "steps": [
+      {
+        "instruction": "Mezclá la harina, el azúcar, el polvo de hornear y la sal en un bol."
+      },
+      {
+        "instruction": "Agregá el yogur, la leche, el huevo y la manteca derretida."
+      },
+      {
+        "instruction": "Revolvé apenas hasta integrar; que queden unos grumitos chicos."
+      },
+      {
+        "instruction": "Calentá una sartén con un poquito de manteca a fuego medio-bajo."
+      },
+      {
+        "instruction": "Poné un cucharón de masa por pancake y cociná 2 o 3 minutos hasta ver burbujitas en la superficie.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Dalos vuelta y cociná 2 minutos más. Repetí con el resto."
+      },
+      {
+        "instruction": "Serví apilados con los frutos rojos por encima."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": 45,
+      "reheat": "Calentalos 20 segundos en microondas o en tostadora.",
+      "tip": "No batas de más la masa para que queden bien esponjosos."
+    }
+  },
+  {
+    "title": "Panqueques de espinaca con jamón y queso",
+    "description": "Panqueques verdes hechos en licuadora y rellenos con jamón y queso, que se doran en la sartén hasta que el queso se derrite.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 15,
+    "difficulty": "media",
+    "tags": [
+      "almuerzo",
+      "cena",
+      "merienda",
+      "verdura",
+      "sin horno",
+      "para chicos"
+    ],
+    "ingredients": [
+      "100 g de espinaca fresca",
+      "2 huevos",
+      "250 ml de leche",
+      "100 g de harina 0000",
+      "1 pizca de sal",
+      "1 pizca de nuez moscada",
+      "4 fetas de jamón cocido",
+      "4 fetas de queso de máquina",
+      "aceite para la sartén"
+    ],
+    "steps": [
+      {
+        "instruction": "Lavá la espinaca y sacale los tallos más gruesos."
+      },
+      {
+        "instruction": "Licuá la espinaca con los huevos, la leche, la harina, la sal y la nuez moscada hasta que quede verde y lisa."
+      },
+      {
+        "instruction": "Aceitá apenas una sartén antialiadherente y calentala a fuego medio."
+      },
+      {
+        "instruction": "Volcá un cucharón de masa, estirala girando la sartén y cociná 1 minuto por lado. Repetí hasta hacer 8 panqueques.",
+        "minutes": 8,
+        "passive": false
+      },
+      {
+        "instruction": "Poné jamón y queso sobre cada panqueque y doblalo en cuatro."
+      },
+      {
+        "instruction": "Llevá los rellenos a la sartén y calentalos 1 minuto por lado hasta que el queso se derrita.",
+        "minutes": 2,
+        "passive": false
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": 45,
+      "reheat": "Calentalos en sartén tapada a fuego bajo o en microondas 40 segundos.",
+      "tip": "Para freezarlos, guardalos sin rellenar y rellená al momento de comer."
+    }
+  },
+  {
+    "title": "Tortitas de manzana y canela",
+    "description": "Tortitas tiernas con manzana rallada y canela, doradas en manteca. Se comen tibias con un poco de azúcar o yogur.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "desayuno",
+      "merienda",
+      "fruta",
+      "vegetariano",
+      "sin horno",
+      "para chicos"
+    ],
+    "ingredients": [
+      "2 manzanas verdes",
+      "1 huevo",
+      "100 g de harina 0000",
+      "80 ml de leche",
+      "1 cda de azúcar",
+      "1 cdita de canela",
+      "1 cdita de polvo de hornear",
+      "1 pizca de sal",
+      "manteca para la sartén"
+    ],
+    "steps": [
+      {
+        "instruction": "Pelá las manzanas y rallalas con la parte gruesa del rallador."
+      },
+      {
+        "instruction": "Mezclá el huevo con la leche y el azúcar en un bol."
+      },
+      {
+        "instruction": "Sumá la harina, la canela, el polvo de hornear y la sal, y mezclá."
+      },
+      {
+        "instruction": "Agregá la manzana rallada y revolvé hasta que se integre."
+      },
+      {
+        "instruction": "Derretí un poco de manteca en una sartén a fuego medio-bajo."
+      },
+      {
+        "instruction": "Poné cucharadas de masa y cociná 3 minutos por lado hasta que doren.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Serví tibias espolvoreadas con un poco de canela."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": 30,
+      "reheat": "Calentalas en sartén a fuego bajo o 20 segundos en microondas.",
+      "tip": "Usá fuego bajo porque la manzana suelta humedad y se queman fácil."
+    }
+  },
+  {
+    "title": "Tortitas de papa y queso",
+    "description": "Tortitas crocantes de papa rallada con queso y cebolla de verdeo, doradas en sartén. Salen rápido y rinden bien.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 14,
+    "difficulty": "media",
+    "tags": [
+      "desayuno",
+      "merienda",
+      "vegetariano",
+      "económico",
+      "sin horno",
+      "sin lácteos"
+    ],
+    "ingredients": [
+      "3 papas medianas (500 g)",
+      "1 huevo",
+      "50 g de queso rallado",
+      "2 cda de harina",
+      "1 cebolla de verdeo",
+      "sal y pimienta a gusto",
+      "aceite para la sartén"
+    ],
+    "steps": [
+      {
+        "instruction": "Pelá las papas y rallalas con la parte gruesa del rallador."
+      },
+      {
+        "instruction": "Apretá la papa rallada con un repasador limpio para sacarle el líquido."
+      },
+      {
+        "instruction": "Picá la cebolla de verdeo bien fina."
+      },
+      {
+        "instruction": "Mezclá la papa con el huevo, el queso, la harina, la cebolla de verdeo, sal y pimienta."
+      },
+      {
+        "instruction": "Calentá aceite en una sartén grande a fuego medio."
+      },
+      {
+        "instruction": "Poné porciones de mezcla, aplastalas y cociná 3 o 4 minutos por lado hasta que queden doradas y crocantes.",
+        "minutes": 7,
+        "passive": false
+      },
+      {
+        "instruction": "Escurrí sobre papel de cocina y serví calientes."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 45,
+      "reheat": "Recalentalas en sartén o en horno fuerte hasta que vuelvan a quedar crocantes.",
+      "tip": "Escurrí bien la papa para que no queden blandas."
+    }
+  },
+  {
+    "title": "Tortitas de arroz con queso y perejil",
+    "description": "Una forma de aprovechar el arroz que sobró: tortitas doradas con queso cremoso adentro y perejil fresco.",
+    "servings": 3,
+    "prep_minutes": 7,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "almuerzo",
+      "cena",
+      "merienda",
+      "sobras",
+      "arroz",
+      "económico",
+      "sin horno"
+    ],
+    "ingredients": [
+      "2 taza de arroz cocido frío",
+      "2 huevos",
+      "80 g de queso cremoso",
+      "2 cda de harina",
+      "1 cda de perejil fresco picado",
+      "sal y pimienta a gusto",
+      "aceite para la sartén"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá el queso cremoso en cubitos chicos."
+      },
+      {
+        "instruction": "Mezclá en un bol el arroz con los huevos, la harina, el perejil, sal y pimienta."
+      },
+      {
+        "instruction": "Incorporá los cubitos de queso y mezclá con cuidado."
+      },
+      {
+        "instruction": "Calentá aceite en una sartén a fuego medio."
+      },
+      {
+        "instruction": "Poné cucharadas grandes de mezcla y aplastalas apenas con la cuchara."
+      },
+      {
+        "instruction": "Cociná 3 minutos por lado hasta que estén bien doradas.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Escurrí sobre papel de cocina y serví calientes."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Calentalas en sartén o en horno fuerte unos minutos hasta que doren de nuevo.",
+      "tip": "Usá arroz frío del día anterior: se arma mejor y no se deshace."
+    }
+  }
+]

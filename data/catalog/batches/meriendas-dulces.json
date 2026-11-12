@@ -1,0 +1,470 @@
+[
+  {
+    "title": "Mug cake de chocolate en taza",
+    "description": "Una tortita de chocolate esponjosa que se hace en la taza y en el microondas. Ideal para la merienda cuando te dan ganas de algo dulce ya.",
+    "servings": 1,
+    "prep_minutes": 5,
+    "cook_minutes": 2,
+    "difficulty": "facil",
+    "tags": [
+      "merienda",
+      "postre",
+      "rápido",
+      "sin horno",
+      "para chicos"
+    ],
+    "ingredients": [
+      "4 cda de harina leudante o común con 1/2 cdita de polvo de hornear",
+      "2 cda de cacao amargo",
+      "3 cda de azúcar",
+      "1 pizca de sal",
+      "4 cda de leche",
+      "2 cda de aceite neutro",
+      "1 cdita de esencia de vainilla",
+      "20 g de chocolate semiamargo picado"
+    ],
+    "steps": [
+      {
+        "instruction": "Mezclá en una taza grande la harina, el cacao, el azúcar y la sal."
+      },
+      {
+        "instruction": "Agregá la leche, el aceite y la vainilla, y revolvé con tenedor hasta que no queden grumos."
+      },
+      {
+        "instruction": "Sumá el chocolate picado y mezclá una vez más."
+      },
+      {
+        "instruction": "Cociná en el microondas a potencia máxima.",
+        "minutes": 2,
+        "passive": true
+      },
+      {
+        "instruction": "Dejá reposar un minuto antes de comer, que el centro termina de cocinarse.",
+        "minutes": 1,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "10 segundos en el microondas, sin pasarte para que no se seque.",
+      "tip": "Si lo comés recién hecho queda mucho más húmedo."
+    }
+  },
+  {
+    "title": "Galletitas de maní sin harina",
+    "description": "Galletitas con solo cinco ingredientes, crocantes por fuera y blanditas por dentro. No necesitás harina ni batidora.",
+    "servings": 10,
+    "prep_minutes": 10,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "merienda",
+      "sin gluten",
+      "horno",
+      "económico",
+      "para chicos",
+      "snack"
+    ],
+    "ingredients": [
+      "250 g de pasta de maní",
+      "100 g de azúcar",
+      "1 huevo",
+      "1 cdita de esencia de vainilla",
+      "1 pizca de sal"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá el horno a 180 °C y forrá una placa con papel manteca."
+      },
+      {
+        "instruction": "Mezclá en un bol la pasta de maní, el azúcar, el huevo, la vainilla y la sal hasta tener una masa pareja."
+      },
+      {
+        "instruction": "Armá bolitas del tamaño de una nuez y apoyalas en la placa, separadas entre sí."
+      },
+      {
+        "instruction": "Aplastalas con un tenedor para marcarlas en cruz."
+      },
+      {
+        "instruction": "Horneá hasta que los bordes estén dorados.",
+        "minutes": 12,
+        "passive": true
+      },
+      {
+        "instruction": "Dejalas enfriar 5 minutos en la placa antes de moverlas, porque salen muy tiernas.",
+        "minutes": 5,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 4,
+      "freezer_days": 60,
+      "reheat": "No hace falta; a temperatura ambiente o 5 minutos en horno suave para que vuelvan crocantes.",
+      "tip": "Guardalas en un frasco bien cerrado para que no se humedezcan."
+    }
+  },
+  {
+    "title": "Muffins de yogur y limón",
+    "description": "Muffins aireados y perfumados con limón, con una masa que se arma en un solo bol sin batidora. Salen en menos de media hora.",
+    "servings": 10,
+    "prep_minutes": 10,
+    "cook_minutes": 18,
+    "difficulty": "facil",
+    "tags": [
+      "merienda",
+      "horno",
+      "para freezar",
+      "para chicos"
+    ],
+    "ingredients": [
+      "250 g de harina 0000",
+      "150 g de azúcar",
+      "2 cdita de polvo de hornear",
+      "1 pizca de sal",
+      "170 g de yogur natural",
+      "2 huevos",
+      "80 ml de aceite neutro",
+      "1 limón (ralladura y jugo de la mitad)"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá el horno a 180 °C y poné pirotines en un molde para muffins."
+      },
+      {
+        "instruction": "Mezclá en un bol la harina, el azúcar, el polvo de hornear y la sal."
+      },
+      {
+        "instruction": "En otro bol batí con tenedor el yogur, los huevos, el aceite, la ralladura y el jugo de limón."
+      },
+      {
+        "instruction": "Volcá lo líquido sobre lo seco y mezclá apenas, sin batir de más."
+      },
+      {
+        "instruction": "Llená los pirotines hasta los dos tercios."
+      },
+      {
+        "instruction": "Horneá hasta que al pinchar con un palillo salga seco.",
+        "minutes": 18,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "20 segundos en el microondas o 5 minutos en horno suave.",
+      "tip": "No mezcles de más la masa o los muffins quedan gomosos."
+    }
+  },
+  {
+    "title": "Scones de naranja y pasas",
+    "description": "Scones tiernos con aroma a naranja y pasas de uva, para comer con manteca o dulce. Se amasan en un minuto y se hornean rápido.",
+    "servings": 8,
+    "prep_minutes": 12,
+    "cook_minutes": 15,
+    "difficulty": "media",
+    "tags": [
+      "merienda",
+      "horno",
+      "para compartir",
+      "para freezar"
+    ],
+    "ingredients": [
+      "300 g de harina 0000",
+      "3 cdita de polvo de hornear",
+      "2 cda de azúcar",
+      "1 pizca de sal",
+      "80 g de manteca fría",
+      "150 ml de leche",
+      "1 naranja (solo la ralladura)",
+      "50 g de pasas de uva",
+      "1 huevo para pintar"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá el horno a 200 °C y forrá una placa con papel manteca."
+      },
+      {
+        "instruction": "Mezclá la harina, el polvo de hornear, el azúcar y la sal en un bol."
+      },
+      {
+        "instruction": "Agregá la manteca fría en cubitos y desmenuzala con las yemas de los dedos hasta formar un arenado."
+      },
+      {
+        "instruction": "Sumá la ralladura, las pasas y la leche, y uní la masa sin amasar de más."
+      },
+      {
+        "instruction": "Estirala hasta 2 cm de alto y cortá ocho triángulos o círculos."
+      },
+      {
+        "instruction": "Acomodalos en la placa, pintalos con huevo batido y horneá hasta que estén dorados.",
+        "minutes": 15,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "8 minutos en horno a 160 °C o 20 segundos en microondas.",
+      "tip": "Usá la manteca bien fría para que queden hojaldrados por dentro."
+    }
+  },
+  {
+    "title": "Peras al horno con miel y yogur",
+    "description": "Mitades de pera bañadas en miel y canela, tiernas y caramelizadas, servidas con yogur y nueces. Un postre simple y de estación.",
+    "servings": 4,
+    "prep_minutes": 5,
+    "cook_minutes": 22,
+    "difficulty": "facil",
+    "tags": [
+      "merienda",
+      "postre",
+      "horno",
+      "fruta",
+      "una bandeja",
+      "sin gluten"
+    ],
+    "ingredients": [
+      "4 peras maduras pero firmes",
+      "2 cda de miel",
+      "1 cdita de canela molida",
+      "1 cda de manteca",
+      "2 cda de nueces picadas",
+      "150 g de yogur natural"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá el horno a 200 °C."
+      },
+      {
+        "instruction": "Cortá las peras al medio y sacales el centro con una cucharita."
+      },
+      {
+        "instruction": "Acomodalas con el corte hacia arriba en una fuente y poné un poco de manteca en cada hueco."
+      },
+      {
+        "instruction": "Rociá con la miel y espolvoreá la canela."
+      },
+      {
+        "instruction": "Horneá hasta que estén tiernas y doradas en los bordes.",
+        "minutes": 22,
+        "passive": true
+      },
+      {
+        "instruction": "Serví tibias con una cucharada de yogur y las nueces por encima."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "1 minuto en el microondas o 5 minutos en horno medio.",
+      "tip": "Guardá el yogur aparte y sumalo recién al servir."
+    }
+  },
+  {
+    "title": "Chocolatada caliente cremosa con malvaviscos",
+    "description": "Una taza espesa de chocolate caliente hecha con cacao y chocolate de verdad, lista en minutos. Perfecta para las tardes de frío.",
+    "servings": 2,
+    "prep_minutes": 3,
+    "cook_minutes": 8,
+    "difficulty": "facil",
+    "tags": [
+      "merienda",
+      "bebida",
+      "invierno",
+      "rápido",
+      "una olla",
+      "para chicos"
+    ],
+    "ingredients": [
+      "500 ml de leche",
+      "2 cda de cacao amargo",
+      "2 cda de azúcar",
+      "40 g de chocolate semiamargo picado",
+      "1 cdita de maicena",
+      "1 cdita de esencia de vainilla",
+      "8 unidades de malvaviscos"
+    ],
+    "steps": [
+      {
+        "instruction": "Disolvé la maicena en 3 cucharadas de leche fría y reservá."
+      },
+      {
+        "instruction": "Poné el resto de la leche en una olla con el cacao y el azúcar, y batí con batidor de mano."
+      },
+      {
+        "instruction": "Calentá a fuego medio sin dejar que hierva, revolviendo seguido.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá la maicena disuelta y el chocolate, y revolvé hasta que espese y se derrita.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Apagá, agregá la vainilla y serví en tazas con los malvaviscos por encima."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Calentá a fuego bajo o en microondas, revolviendo bien.",
+      "tip": "Si se forma nata al enfriar, batí con batidor antes de servir."
+    }
+  },
+  {
+    "title": "Pochoclos caramelizados",
+    "description": "Pochoclos hechos en olla y bañados con un caramelo rápido de manteca. Crocantes, dulces y re divertidos para compartir.",
+    "servings": 4,
+    "prep_minutes": 5,
+    "cook_minutes": 15,
+    "difficulty": "media",
+    "tags": [
+      "merienda",
+      "snack",
+      "sin horno",
+      "para chicos",
+      "para compartir",
+      "sin gluten"
+    ],
+    "ingredients": [
+      "100 g de maíz pisingallo",
+      "2 cda de aceite neutro",
+      "80 g de azúcar",
+      "2 cda de agua",
+      "1 cda de manteca",
+      "1 pizca de sal"
+    ],
+    "steps": [
+      {
+        "instruction": "Calentá el aceite en una olla grande con tapa y poné 3 granos de maíz hasta que exploten."
+      },
+      {
+        "instruction": "Agregá el resto del maíz, tapá y sacudí la olla a fuego medio hasta que dejen de sonar los estallidos.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Pasá los pochoclos a un bol grande, descartando los granos que no explotaron."
+      },
+      {
+        "instruction": "En una sartén poné el azúcar con el agua y cociná sin revolver hasta que tome color ámbar.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Apagá, sumá la manteca y la sal, y mezclá rápido."
+      },
+      {
+        "instruction": "Volcá el caramelo sobre los pochoclos y mezclá con cuchara de madera. Dejá enfriar unos minutos.",
+        "minutes": 5,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 0,
+      "freezer_days": null,
+      "reheat": "No hace falta recalentar.",
+      "tip": "Guardalos en un frasco hermético a temperatura ambiente hasta 2 días; la heladera los ablanda."
+    }
+  },
+  {
+    "title": "Sémola con leche, vainilla y pasas",
+    "description": "Un postre cremoso y calentito de sémola cocida en leche, con vainilla, canela y pasas. Se hace en una olla y en pocos minutos.",
+    "servings": 3,
+    "prep_minutes": 3,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "merienda",
+      "postre",
+      "una olla",
+      "económico",
+      "para chicos",
+      "invierno"
+    ],
+    "ingredients": [
+      "500 ml de leche",
+      "50 g de sémola fina",
+      "3 cda de azúcar",
+      "1 cdita de esencia de vainilla",
+      "1 rama de canela",
+      "30 g de pasas de uva",
+      "1 pizca de canela molida"
+    ],
+    "steps": [
+      {
+        "instruction": "Calentá la leche con la rama de canela y el azúcar hasta que largue vapor."
+      },
+      {
+        "instruction": "Agregá la sémola en forma de lluvia, revolviendo sin parar para evitar grumos."
+      },
+      {
+        "instruction": "Sumá las pasas y cociná a fuego bajo hasta que espese.",
+        "minutes": 8,
+        "passive": false
+      },
+      {
+        "instruction": "Retirá la rama de canela y agregá la vainilla."
+      },
+      {
+        "instruction": "Serví tibia en cuencos y espolvoreá con canela molida."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Calentala con un chorrito de leche, revolviendo, porque espesa al enfriarse.",
+      "tip": "También se come fría, como una natilla."
+    }
+  },
+  {
+    "title": "Vasitos de frutillas, crema y vainillas",
+    "description": "Capas de frutillas, crema batida y galletitas vainilla armadas en vasos. No lleva cocción y queda lindo para recibir visitas.",
+    "servings": 4,
+    "prep_minutes": 15,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "merienda",
+      "postre",
+      "sin horno",
+      "fruta",
+      "verano",
+      "para compartir",
+      "rápido"
+    ],
+    "ingredients": [
+      "200 ml de crema de leche bien fría",
+      "2 cda de azúcar impalpable",
+      "1 cdita de esencia de vainilla",
+      "250 g de frutillas",
+      "8 unidades de vainillas",
+      "2 cda de dulce de leche"
+    ],
+    "steps": [
+      {
+        "instruction": "Lavá las frutillas, sacales el cabito y cortalas en cubos."
+      },
+      {
+        "instruction": "Batí la crema fría con el azúcar impalpable y la vainilla hasta que forme picos suaves."
+      },
+      {
+        "instruction": "Quebrá las vainillas en trozos y poné una capa en el fondo de cada vaso."
+      },
+      {
+        "instruction": "Sumá una capa de frutillas, una cucharada de crema y un hilo de dulce de leche."
+      },
+      {
+        "instruction": "Repetí las capas hasta llenar los vasos y terminá con crema y una frutilla entera."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Se come frío, no se recalienta.",
+      "tip": "Armalos poco antes de servir para que las vainillas queden con algo de textura."
+    }
+  }
+]

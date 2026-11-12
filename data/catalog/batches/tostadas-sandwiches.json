@@ -1,0 +1,624 @@
+[
+  {
+    "title": "Tostadas de hummus, pepino y sésamo",
+    "description": "Tostadas crocantes con hummus cremoso, pepino fresco y un toque de limón. Un desayuno o merienda vegana y lista en minutos.",
+    "servings": 2,
+    "prep_minutes": 7,
+    "cook_minutes": 3,
+    "difficulty": "facil",
+    "tags": [
+      "desayuno",
+      "merienda",
+      "vegano",
+      "rápido",
+      "sin lácteos"
+    ],
+    "ingredients": [
+      "4 fetas de pan integral",
+      "6 cdas de hummus",
+      "1/2 pepino",
+      "1 cda de semillas de sésamo",
+      "1 cdita de jugo de limón",
+      "1 pizca de pimentón dulce",
+      "sal y pimienta a gusto",
+      "1 cdita de aceite de oliva"
+    ],
+    "steps": [
+      {
+        "instruction": "Tostá las fetas de pan en la tostadora o en una sartén seca hasta que estén doradas.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Cortá el pepino en rodajas finas y condimentalo con sal y limón.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Untá cada tostada con hummus, bien parejo hasta los bordes.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Repartí el pepino encima y espolvoreá con sésamo y pimentón.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Terminá con un hilo de aceite de oliva y pimienta, y comé enseguida.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 0,
+      "freezer_days": null,
+      "reheat": "No se recalienta: armala justo antes de comer.",
+      "tip": "Guardá el hummus aparte en la heladera hasta 3 días y armá las tostadas al momento."
+    }
+  },
+  {
+    "title": "Sándwich de atún, pickles y lechuga",
+    "description": "Relleno cremoso de atún con yogur y pickles picados, en pan de molde tostado. Ideal para llevar o para una merienda salada.",
+    "servings": 2,
+    "prep_minutes": 10,
+    "cook_minutes": 2,
+    "difficulty": "facil",
+    "tags": [
+      "merienda",
+      "almuerzo",
+      "rápido",
+      "pescado",
+      "sándwich",
+      "alto en proteína"
+    ],
+    "ingredients": [
+      "1 lata de atún al natural",
+      "2 cdas de yogur natural sin azúcar",
+      "1 cda de mayonesa",
+      "3 pepinillos en vinagre",
+      "1 cdita de mostaza",
+      "4 fetas de pan de molde",
+      "4 hojas de lechuga",
+      "1 tomate",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Escurrí bien el atún y desmenuzalo con un tenedor en un bowl.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Picá los pepinillos bien chiquitos y sumalos al atún.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Agregá yogur, mayonesa y mostaza, y mezclá hasta que quede cremoso.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Tostá el pan unos 2 minutos hasta que tome color.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Armá con lechuga, rodajas de tomate y el relleno de atún, y cerrá con la otra feta.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cortá en diagonal y serví.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Comelo frío; no lo recalientes.",
+      "tip": "Guardá el relleno aparte del pan para que no se ablande."
+    }
+  },
+  {
+    "title": "Tostado caprese con albahaca",
+    "description": "Tostado de mozzarella, tomate y albahaca fresca, dorado en la sartén hasta que el queso se derrite. Muy aromático y simple.",
+    "servings": 2,
+    "prep_minutes": 5,
+    "cook_minutes": 8,
+    "difficulty": "facil",
+    "tags": [
+      "merienda",
+      "almuerzo",
+      "rápido",
+      "vegetariano",
+      "italiana",
+      "sándwich"
+    ],
+    "ingredients": [
+      "4 fetas de pan de campo",
+      "200 g de mozzarella",
+      "1 tomate",
+      "8 hojas de albahaca",
+      "1 cda de manteca",
+      "1 pizca de orégano",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá la mozzarella y el tomate en rodajas finas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Armá dos sándwiches con mozzarella, tomate, albahaca, sal y pimienta.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Derretí la manteca en una sartén a fuego medio.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cociná los sándwiches 4 minutos de un lado, apretando con la espátula.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Dalos vuelta y cociná 3 minutos más, hasta que el queso se derrita.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Espolvoreá con orégano y cortá al medio.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Calentalo en sartén a fuego bajo 3 minutos para recuperar lo crocante.",
+      "tip": "Secá bien el tomate con papel de cocina para que no humedezca el pan."
+    }
+  },
+  {
+    "title": "Tostadas de champiñones y queso crema",
+    "description": "Champiñones salteados con ajo y perejil sobre una cama de queso crema. Salado, con mucho sabor y listo en 12 minutos.",
+    "servings": 2,
+    "prep_minutes": 4,
+    "cook_minutes": 8,
+    "difficulty": "facil",
+    "tags": [
+      "desayuno",
+      "merienda",
+      "vegetariano",
+      "rápido",
+      "salteado"
+    ],
+    "ingredients": [
+      "200 g de champiñones",
+      "1 diente de ajo",
+      "1 cda de aceite de oliva",
+      "4 fetas de pan de campo",
+      "4 cdas de queso crema",
+      "1 cda de perejil picado",
+      "1 cdita de jugo de limón",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Limpiá los champiñones con un paño y cortalos en laminas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén grande a fuego fuerte.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Salteá los champiñones 5 minutos sin mover mucho, hasta que se doren.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el ajo picado, sal y pimienta, y cociná 1 minuto más.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Mientras tanto, tostá el pan en la tostadora.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Untá el queso crema, poné los champiñones encima y terminá con perejil y limón.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Recalentá solo los champiñones en sartén 2 minutos y armá la tostada al momento.",
+      "tip": "No amontones los champiñones en la sartén: se cocinan al vapor y no se doran."
+    }
+  },
+  {
+    "title": "Sándwich de pollo desmenuzado y zanahoria",
+    "description": "Una forma rica de aprovechar pollo cocido: se mezcla con yogur y zanahoria rallada para un relleno fresco y jugoso.",
+    "servings": 2,
+    "prep_minutes": 10,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "almuerzo",
+      "merienda",
+      "rápido",
+      "pollo",
+      "sándwich",
+      "sobras",
+      "sin horno"
+    ],
+    "ingredients": [
+      "200 g de pollo cocido",
+      "1 zanahoria chica",
+      "3 cdas de yogur natural sin azúcar",
+      "1 cdita de mostaza",
+      "1 cdita de jugo de limón",
+      "4 fetas de pan integral",
+      "4 hojas de lechuga",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Desmenuzá el pollo cocido con dos tenedores.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Rallá la zanahoria con la parte fina del rallador.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclá pollo, zanahoria, yogur, mostaza, limón, sal y pimienta.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Poné lechuga sobre dos fetas de pan.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Repartí el relleno de pollo y tapá con las otras fetas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cortá al medio y serví.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Comelo frío; el relleno se guarda en un recipiente tapado.",
+      "tip": "Armá el sándwich recién antes de comer para que el pan no se humedezca."
+    }
+  },
+  {
+    "title": "Tostada de huevo frito y espinaca",
+    "description": "Tostada rústica con espinaca salteada al ajo y un huevo frito con yema líquida. Contundente y rápida para un desayuno salado.",
+    "servings": 2,
+    "prep_minutes": 4,
+    "cook_minutes": 9,
+    "difficulty": "facil",
+    "tags": [
+      "desayuno",
+      "rápido",
+      "huevo",
+      "vegetariano",
+      "alto en proteína"
+    ],
+    "ingredients": [
+      "2 huevos",
+      "2 fetas de pan de campo",
+      "100 g de espinaca fresca",
+      "1 diente de ajo",
+      "1 cda de aceite de oliva",
+      "2 cdas de queso crema",
+      "1 pizca de pimentón dulce",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Calentá la mitad del aceite en una sartén y salteá la espinaca con el ajo picado 2 minutos.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Salpimentá, sacá la espinaca y reservala en un plato.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Tostá el pan mientras seguís con los huevos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "En la misma sartén sumá el resto del aceite y freí los huevos 3 minutos a fuego medio.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Untá las tostadas con queso crema y poné la espinaca encima.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Apoyá un huevo sobre cada tostada y espolvoreá con pimentón.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 0,
+      "freezer_days": null,
+      "reheat": "Mejor comerla al momento; no se recalienta bien con el huevo.",
+      "tip": "Si te gusta la yema firme, tapá la sartén 1 minuto."
+    }
+  },
+  {
+    "title": "Tostadas de banana, dulce de leche y coco",
+    "description": "Merienda dulce con pan tostado, dulce de leche, rodajas de banana y coco rallado. Se arma en 5 minutos.",
+    "servings": 2,
+    "prep_minutes": 5,
+    "cook_minutes": 3,
+    "difficulty": "facil",
+    "tags": [
+      "merienda",
+      "desayuno",
+      "rápido",
+      "fruta",
+      "para chicos",
+      "argentina"
+    ],
+    "ingredients": [
+      "4 fetas de pan lactal",
+      "4 cdas de dulce de leche",
+      "1 banana",
+      "2 cdas de coco rallado",
+      "1 pizca de canela",
+      "1 cdita de jugo de limón"
+    ],
+    "steps": [
+      {
+        "instruction": "Tostá el pan hasta que quede crocante y dorado.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Cortá la banana en rodajas y rociala con unas gotas de limón.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Untá cada tostada con dulce de leche en una capa generosa.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Acomodá las rodajas de banana encima.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Espolvoreá con coco rallado y canela, y serví enseguida.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 0,
+      "freezer_days": null,
+      "reheat": "No se recalienta: armala al momento.",
+      "tip": "Tostá un poco el coco en seco en la sartén para más sabor."
+    }
+  },
+  {
+    "title": "Pan árabe tostado con queso y espinaca",
+    "description": "Pan árabe relleno con queso y espinaca, dorado en la sartén hasta quedar crocante. Parecido a una empanada plana, pero sin amasar.",
+    "servings": 2,
+    "prep_minutes": 5,
+    "cook_minutes": 8,
+    "difficulty": "facil",
+    "tags": [
+      "almuerzo",
+      "merienda",
+      "rápido",
+      "vegetariano",
+      "árabe",
+      "sándwich"
+    ],
+    "ingredients": [
+      "2 panes árabes",
+      "150 g de queso cremoso",
+      "80 g de espinaca fresca",
+      "1 cdita de comino",
+      "1 cda de aceite de oliva",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Picá la espinaca y cortá el queso en cubos chicos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclá espinaca, queso, comino, sal y pimienta.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Abrí los panes al medio y repartí el relleno sobre una mitad.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cerrá los panes y pincelá la superficie con un poco de aceite.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Doralos en una sartén a fuego medio 3 o 4 minutos de cada lado.",
+        "minutes": 7,
+        "passive": false
+      },
+      {
+        "instruction": "Cortá en triángulos y serví caliente.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Calentalo en sartén o tostadora 3 minutos.",
+      "tip": "No lo rellenes de más o el queso se escapa al darlo vuelta."
+    }
+  },
+  {
+    "title": "Tostadas de queso crema, salmón ahumado y pepino",
+    "description": "Tostadas frescas con queso crema, salmón ahumado, pepino y eneldo. Se ven elegantes y no requieren cocción.",
+    "servings": 2,
+    "prep_minutes": 8,
+    "cook_minutes": 3,
+    "difficulty": "facil",
+    "tags": [
+      "desayuno",
+      "merienda",
+      "rápido",
+      "pescado",
+      "liviano",
+      "alto en proteína"
+    ],
+    "ingredients": [
+      "4 fetas de pan negro",
+      "4 cdas de queso crema",
+      "100 g de salmón ahumado",
+      "1/2 pepino",
+      "1 cda de eneldo fresco",
+      "1 cdita de jugo de limón",
+      "pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Tostá el pan hasta que esté firme y crocante.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Mezclá el queso crema con el eneldo picado y unas gotas de limón.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cortá el pepino en rodajas finas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Untá cada tostada con el queso crema.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Sumá el pepino y el salmón ahumado en capas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Terminá con pimienta recién molida y un poco más de eneldo.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Comelas frías; no se recalientan.",
+      "tip": "Armalas justo antes de servir para que el pan no se ablande."
+    }
+  },
+  {
+    "title": "Tostadas francesas con manzana y canela",
+    "description": "Pan mojado en huevo, leche y canela, dorado en manteca y servido con manzana salteada. Un desayuno dulce y reconfortante.",
+    "servings": 2,
+    "prep_minutes": 5,
+    "cook_minutes": 10,
+    "difficulty": "media",
+    "tags": [
+      "desayuno",
+      "merienda",
+      "fruta",
+      "para chicos",
+      "huevo"
+    ],
+    "ingredients": [
+      "4 fetas de pan lactal",
+      "2 huevos",
+      "100 ml de leche",
+      "1/2 cdita de canela",
+      "1 cdita de azúcar",
+      "1 manzana",
+      "2 cdas de manteca",
+      "1 cda de miel"
+    ],
+    "steps": [
+      {
+        "instruction": "Batí los huevos con la leche, la canela y el azúcar en un plato hondo.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cortá la manzana en gajos finos, sin el centro.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Derretí 1 cda de manteca y salteá la manzana 3 minutos; reservala.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Mojá cada feta de pan en la mezcla 10 segundos de cada lado.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Derretí el resto de la manteca y doralas 2 o 3 minutos de cada lado.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Serví con la manzana y un chorrito de miel.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": 30,
+      "reheat": "Calentalas en tostadora o sartén 2 minutos por lado.",
+      "tip": "Usá pan de unos días: absorbe mejor la mezcla sin deshacerse."
+    }
+  }
+]
