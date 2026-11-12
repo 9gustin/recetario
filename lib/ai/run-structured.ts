@@ -52,7 +52,8 @@ export type RunStructuredArgs<T> = {
 export type RunResult<T> =
   { ok: true; data: T; runId: string | null } | { ok: false; error: string; runId: string | null };
 
-async function defaultRecord(row: AiRunRow): Promise<string | null> {
+/** Guarda un run de IA en `ai_runs` (service role). Lo usan runStructured y el asistente. */
+export async function recordAiRun(row: AiRunRow): Promise<string | null> {
   const { createAdminClient } = await import("@/lib/supabase/admin");
   const { data } = await createAdminClient().from("ai_runs").insert(row).select("id").single();
   return data?.id ?? null;
@@ -71,7 +72,7 @@ export async function runStructured<T>(
   deps: AiDeps = {},
 ): Promise<RunResult<T>> {
   const client = deps.client ?? getAnthropic();
-  const record = deps.record ?? defaultRecord;
+  const record = deps.record ?? recordAiRun;
   const now = deps.now ?? Date.now;
   const toolName = args.toolName ?? "responder";
   const forced = SUPPORTS_FORCED_TOOL[args.model] ?? false;

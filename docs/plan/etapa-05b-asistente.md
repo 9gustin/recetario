@@ -15,7 +15,7 @@
   2. RLS: conversaciones con `purpose = 'assistant'` visibles y escribibles solo por su `user_id`.
 - **Aceptación:** pgTAP: un miembro del mismo grupo no ve las conversaciones de otro.
 
-### T5B.2 — Motor del asistente (endpoint con tools)
+### [x] T5B.2 — Motor del asistente (endpoint con tools)
 - **Depende de:** T5B.1, T2.4, T6.5 si existe (si no, `check_compatibility` devuelve "sin perfil")
 - **Archivos:** `app/api/ai/assistant/chat/route.ts`, `lib/ai/assistant/{agent,tools,prompt,context,events}.ts` + tests.
 - **Pasos:**
@@ -73,3 +73,5 @@
 ## Notas de ejecución
 
 - T5B.1: las columnas `context`, `title`, `last_message_at` y `mentions` ya estaban desde la migración de IA (T5.1). Acá se agregaron las policies de escritura propia (insert exige ser el dueño y miembro del grupo; update/delete del dueño; `ai_messages` solo en conversaciones propias) para que el endpoint use el cliente del usuario y respete RLS en vez del service role, y el índice GIN de `mentions`. 7 tests pgTAP en `05b_assistant.test.sql`: un miembro del mismo grupo no ve ni escribe las conversaciones de otro.
+
+- T5B.2: `POST /api/ai/assistant/chat` (SSE: `text_delta`, `tool_started`, `proposal`, `done`, `error`). Valida sesión, membresía del grupo, que cada receta citada sea del grupo (403 si no) y cuota `assistant`; la conversación y los mensajes se guardan con el cliente del usuario (RLS). Tools de consulta (`get_recipe`, `search_recipes`, `get_ingredient_info`, `check_compatibility`) y de propuesta (`propose_recipe_change` con las mismas operaciones de `apply-cooking-edits`, `propose_note`); loop de máx. 6 vueltas. `check_compatibility` es un stub ("sin_perfil") hasta T6.5, y `get_today`/`get_my_diet_plan`/`propose_add_to_*` se suman en T5B.6. Modelo: Haiku; Sonnet si se citan ≥ 2 recetas (con `tool_choice` automático, ver T5.4). En modo cocinar el cliente manda `step`, `servings` y `timers` (viven en localStorage, el servidor no los conoce). Verificado con la IA real: pregunta de brócoli con receta citada (llama a `check_compatibility`, indica paso y cantidad), propuesta de nota y de cambio, modo cocinar en 2 oraciones, "pollo cocido de hace 5 días → ante la duda, no" y 403 al citar una receta ajena. Se pide texto plano (sin markdown) porque el chat no lo renderiza. 6 tests del agente con cliente simulado.
