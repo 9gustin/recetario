@@ -1,3 +1,4 @@
+import { getNow } from "@/lib/now";
 import type { Metadata, Viewport } from "next";
 import { DM_Serif_Display, Inter } from "next/font/google";
 import { SerwistProvider } from "@serwist/turbopack/react";
@@ -35,7 +36,7 @@ export const metadata: Metadata = {
 async function getTheme() {
   const store = await cookies();
   const preference = parseDayPartPreference(store.get(DAY_PART_COOKIE)?.value);
-  return { preference, dayPart: resolveDayPart(preference) };
+  return { preference, dayPart: resolveDayPart(preference, await getNow()) };
 }
 
 export async function generateViewport(): Promise<Viewport> {

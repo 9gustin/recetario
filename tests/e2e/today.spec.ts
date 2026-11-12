@@ -181,3 +181,76 @@ test("Ideas para hoy: 3 ideas aptas con su motivo, 'Otras 3' no repite y elegir 
   await expect(page).toHaveURL(new RegExp(`/g/${groupId}/hoy$`));
   await expect(page.getByRole("link", { name: /Empezar a cocinar/ })).toBeVisible();
 });
+
+test("home por hora: almuerzo a las 12:40 (mediodía), arranques a las 18:10 (tarde), cena elegida y noche a las 21:00", async ({
+  browser,
+}) => {
+  test.setTimeout(150_000);
+  const email = `hora-${Date.now()}@test.com`;
+  const userId = await createTestUser(email, password, "Ana");
+  const groupId = await createGroupAs(email, password, "Casa");
+  const lunchId = await seedRecipe(email, password, groupId, {
+    title: "Fideos con tuco",
+    ingredients: ["400 g de fideos", "4 tomates"],
+    steps: [{ instruction: "Cociná." }],
+  });
+  await seedRecipe(email, password, groupId, {
+    title: "Sopa de calabaza",
+    ingredients: ["1 kg de calabaza"],
+    steps: [{ instruction: "Cociná." }],
+    totalMinutes: 20,
+  });
+
+  const context = await mobileContext(browser);
+  const page = await context.newPage();
+  await signIn(page, email, password);
+
+  // Hoy en Argentina (UTC-3) a distintas horas; el servidor lee la cookie e2e-now.
+  const today = todayString();
+  const at = async (hhmm: string) => {
+    const iso = `${today}T${hhmm}:00-03:00`;
+    await context.addCookies([{ name: "e2e-now", value: iso, url: "http://localhost:3000" }]);
+    await page.clock.setFixedTime(new Date(iso));
+  };
+
+  // Almuerzo planeado a las 12:40.
+  const admin = adminClient();
+  const { data: plan } = await admin
+    .from("meal_plans")
+    .insert({ group_id: groupId, week_start: weekStartOf(today, 1), created_by: userId })
+    .select("id")
+    .single();
+  const { data: entry } = await admin
+    .from("meal_plan_entries")
+    .insert({ plan_id: plan!.id, date: today, slot: "lunch", recipe_id: lunchId })
+    .select("id")
+    .single();
+  await at("12:40");
+  await page.goto(`/g/${groupId}/hoy`);
+  await expect(page.getByText("AL MEDIODÍA")).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Fideos con tuco" })).toBeVisible();
+  await expect(page.locator("html")).toHaveAttribute("data-daypart", "mediodia");
+
+  // Sin nada planeado a las 18:10: arranques y tema tarde.
+  await admin.from("meal_plan_entries").delete().eq("id", entry!.id);
+  await at("18:10");
+  await page.goto(`/g/${groupId}/hoy`);
+  await expect(page.getByRole("heading", { name: "¿Qué comemos hoy?" })).toBeVisible();
+  await expect(page.locator("html")).toHaveAttribute("data-daypart", "tarde");
+
+  // Elegir una idea: la home muestra la cena.
+  await page.getByRole("link", { name: /Elegí/ }).tap();
+  await page.waitForLoadState("networkidle");
+  await expect(
+    page.getByRole("list", { name: "Sugerencias" }).getByRole("listitem").first(),
+  ).toBeVisible();
+  await page.getByRole("button", { name: "Elegir para hoy" }).first().tap();
+  await expect(page).toHaveURL(new RegExp(`/g/${groupId}/hoy$`));
+  await expect(page.getByText("ESTA NOCHE")).toBeVisible();
+  await expect(page.getByRole("link", { name: /Empezar a cocinar/ })).toBeVisible();
+
+  // A las 21:00, tema noche.
+  await at("21:00");
+  await page.reload();
+  await expect(page.locator("html")).toHaveAttribute("data-daypart", "noche");
+});

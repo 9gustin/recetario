@@ -141,7 +141,7 @@ Parte **7a** (manual, T7.1–T7.6), parte **7b** (IA, T7.7–T7.11) y parte **7c
   3. "Elegir para hoy" igual que T7.12; la home pasa a `planned`.
 - **Aceptación:** las 3 ideas son aptas para todos los comensales y cada una explica por qué aparece.
 
-### T7.14 — E2E de la home
+### [x] T7.14 — E2E de la home
 - **Archivos:** `tests/e2e/today.spec.ts`.
 - **Escenario:** con `page.clock` a las 12:40 y almuerzo planeado → hero de almuerzo y tema `mediodia`; a las 18:10 sin cena → arranques y tema `tarde`; elegir una idea → la home muestra la cena y "Empezar a cocinar"; a las 21:00 → tema `noche`.
 
@@ -176,3 +176,5 @@ Parte **7a** (manual, T7.1–T7.6), parte **7b** (IA, T7.7–T7.11) y parte **7c
 - T7.12: 'Elegir para hoy' crea el plan de la semana si falta y activa la receta si era borrador. La cuota usa la feature 'ideas'. Falta filtrar por el plan vivo (Etapa 8b). Eval: pnpm eval:suggest (5 opciones en 5.5 s).
 
 - T7.13: Pestaña 'Con lo que compraste' queda como mensaje hasta la Etapa 8 (lista de compras). Las ideas del recetario no usan IA (señales por código); 'Nuevas' sí (borradores).
+
+- T7.14: El servidor lee la cookie e2e-now solo si E2E_TIME_OVERRIDE=1 (definida únicamente por playwright.config); también la usa el tema del layout.
