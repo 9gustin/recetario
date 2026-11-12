@@ -5,7 +5,7 @@
 
 ---
 
-### T6.1 — Migración: perfiles alimentarios
+### [x] T6.1 — Migración: perfiles alimentarios
 - **Depende de:** T5.1
 - **Archivos:** `supabase/migrations/<ts>_food_profiles.sql`, `supabase/tests/06_food_profiles.test.sql`.
 - **Pasos:**
@@ -82,3 +82,5 @@
 - [ ] Prueba real: los dos cargan su perfil y revisan los indicadores de las recetas.
 
 ## Notas de ejecución
+
+- T6.1: `food_profiles`, `food_profile_inputs` (con `kind` extra `'answer'` para las respuestas a preguntas abiertas) y `food_profile_drafts`: todo con RLS solo del propio usuario; bucket privado `profile-inputs` (carpeta por usuario, 15 MB). `get_group_diet(group)` es `security definer`, exige ser miembro y devuelve únicamente `restrictions` y `goals` de los miembros con perfil vigente (respeta `valid_until`); el resumen, las fuentes y los archivos nunca salen. 10 tests pgTAP, entre ellos que B lee las restricciones de A por la RPC pero no `food_profiles`/inputs/drafts, que C no obtiene nada, y que la RPC devuelve solo esas cuatro columnas.

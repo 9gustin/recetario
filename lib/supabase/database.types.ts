@@ -141,6 +141,72 @@ isOneToOne: false
       referencedColumns: ["id"]
     }
                   ]
+                },"food_profile_drafts": {
+                  Row: {
+                    "changes": NonNullable<Json>,"created_at": string,"id": string,"input_ids": (string)[],"open_questions": NonNullable<Json>,"proposed": NonNullable<Json>,"status": string,"summary": string | null,"user_id": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "changes"?: NonNullable<Json>,"created_at"?: string,"id"?: string,"input_ids"?: (string)[],"open_questions"?: NonNullable<Json>,"proposed": NonNullable<Json>,"status"?: string,"summary"?: string | null,"user_id"?: string
+                  }
+                  Update: {
+                    "changes"?: NonNullable<Json>,"created_at"?: string,"id"?: string,"input_ids"?: (string)[],"open_questions"?: NonNullable<Json>,"proposed"?: NonNullable<Json>,"status"?: string,"summary"?: string | null,"user_id"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "food_profile_drafts_user_id_fkey"
+      columns: ["user_id"]
+isOneToOne: false
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"food_profile_inputs": {
+                  Row: {
+                    "ai_run_id": string | null,"created_at": string,"id": string,"kind": string,"processed_at": string | null,"storage_path": string | null,"transcript": string | null,"user_id": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "ai_run_id"?: string | null,"created_at"?: string,"id"?: string,"kind": string,"processed_at"?: string | null,"storage_path"?: string | null,"transcript"?: string | null,"user_id"?: string
+                  }
+                  Update: {
+                    "ai_run_id"?: string | null,"created_at"?: string,"id"?: string,"kind"?: string,"processed_at"?: string | null,"storage_path"?: string | null,"transcript"?: string | null,"user_id"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "food_profile_inputs_ai_run_id_fkey"
+      columns: ["ai_run_id"]
+isOneToOne: false
+      referencedRelation: "ai_runs"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "food_profile_inputs_user_id_fkey"
+      columns: ["user_id"]
+isOneToOne: false
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"food_profiles": {
+                  Row: {
+                    "data": NonNullable<Json>,"summary": string | null,"updated_at": string,"user_id": string,"valid_until": string | null,"version": number
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "data"?: NonNullable<Json>,"summary"?: string | null,"updated_at"?: string,"user_id": string,"valid_until"?: string | null,"version"?: number
+                  }
+                  Update: {
+                    "data"?: NonNullable<Json>,"summary"?: string | null,"updated_at"?: string,"user_id"?: string,"valid_until"?: string | null,"version"?: number
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "food_profiles_user_id_fkey"
+      columns: ["user_id"]
+isOneToOne: true
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    }
+                  ]
                 },"group_invites": {
                   Row: {
                     "created_at": string,"created_by": string | null,"expires_at": string | null,"group_id": string,"id": string,"max_uses": number | null,"revoked_at": string | null,"token": string,"updated_at": string,"uses": number
@@ -458,6 +524,11 @@ isOneToOne: false
                            },
 "fork_recipe":
 { Args: { "p_source_recipe_id": string,"p_target_group_id": string }; Returns: string
+                           },
+"get_group_diet":
+{ Args: { "p_group_id": string }; Returns: {
+              "display_name": string,"goals": Json,"restrictions": Json,"user_id": string
+            }[]
                            },
 "get_invite_preview":
 { Args: { "p_token": string }; Returns: {
