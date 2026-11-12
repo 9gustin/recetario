@@ -5,7 +5,7 @@
 
 ---
 
-### T2.1 — Migración: recetas e ingredientes
+### [x] T2.1 — Migración: recetas e ingredientes
 - **Depende de:** T1.1
 - **Archivos:** `supabase/migrations/<ts>_recipes.sql`.
 - **Pasos:**
@@ -101,3 +101,5 @@
 - [ ] Prueba real: cargar 10 recetas de la casa.
 
 ## Notas de ejecución
+
+- T2.1: búsqueda full-text con `spanish_unaccent` (copy de `pg_catalog.spanish` + `unaccent`). `search_tsv` se mantiene con dos triggers: uno BEFORE sobre `recipes` (título A, tags B, descripción C desde las propias columnas, porque al INSERT todavía no existen los ingredientes) y otro AFTER sobre `recipe_ingredients` que refresca el padre con el vector completo (incluye `raw_text` de ingredientes). `save_recipe(jsonb)` es un reemplazo completo (setea campos a NULL si no vienen), crea/actualiza receta, reemplaza ingredientes y pasos, incrementa `current_version` y escribe el snapshot. `search_ingredients` usa `extensions.similarity` (umbral 0.2) en vez del operador `%` para no lidiar con la calificación de operador del esquema `extensions`. Se agregó el helper `is_recipe_member(recipe_id)` (security definer) para el RLS de las tablas hijas. Favoritos en `recipe_favorites` (no `recipes.is_favorite`). Bucket `recipe-images` público de lectura y con escritura por miembro del grupo (primer segmento del path = group_id).
