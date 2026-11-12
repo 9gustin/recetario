@@ -69,3 +69,7 @@ No se usa Inngest ni workers (decisión de simplicidad). La IA corre en Route Ha
 ## Email de las cuentas
 
 El login es con email y contraseña y **Confirm email está desactivado**, así que hoy no se manda ningún mail. Si más adelante se agrega recuperar contraseña o confirmar emails, conviene configurar un SMTP propio en Supabase (el de por defecto manda muy pocos mails por hora).
+
+## Notificaciones push (VAPID)
+
+Las claves VAPID ya están generadas en `.env.local` (`NEXT_PUBLIC_VAPID_PUBLIC_KEY`, `VAPID_PRIVATE_KEY`, `VAPID_SUBJECT`). **Pendiente:** cargarlas en Vercel (Production y Preview) antes de implementar la Etapa 10 (T10.1), que es la primera que las usa. Si hace falta regenerarlas: `pnpm dlx web-push generate-vapid-keys` (los usuarios ya suscriptos tendrían que volver a suscribirse).
