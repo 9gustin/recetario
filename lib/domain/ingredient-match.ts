@@ -21,7 +21,7 @@ function singularize(word: string): string {
 }
 
 /** Clave de comparación: normalizado + singularizado. */
-function key(raw: string): string {
+export function nameKey(raw: string): string {
   return singularize(normalizeName(raw));
 }
 
@@ -30,12 +30,12 @@ function key(raw: string): string {
  * Devuelve null si no encuentra; el fuzzy (trigram) se resuelve en el servidor.
  */
 export function matchLocal(name: string, catalog: CatalogIngredient[]): CatalogIngredient | null {
-  const k = key(name);
+  const k = nameKey(name);
   if (!k) return null;
 
   for (const ing of catalog) {
-    if (key(ing.name) === k) return ing;
-    if (ing.aliases.some((alias) => key(alias) === k)) return ing;
+    if (nameKey(ing.name) === k) return ing;
+    if (ing.aliases.some((alias) => nameKey(alias) === k)) return ing;
   }
   return null;
 }

@@ -1,0 +1,8 @@
+{
+  "id": "08-voz-empanadas",
+  "kind": "voice",
+  "expected_ingredients": 8,
+  "key_ingredients": ["carne", "cebolla", "huevo", "aceituna"],
+  "has_timed_passive_step": true,
+  "transcript": "las empanadas de carne llevan medio kilo de carne picada, tres cebollas, dos huevos duros, aceitunas, comino, pimentón y ají molido, primero se rehogan las cebollas, después se agrega la carne y los condimentos, se deja enfriar, se rellenan las tapas con eso más huevo y aceituna y se cierran con el repulgue, al horno bien fuerte unos veinte minutos"
+}

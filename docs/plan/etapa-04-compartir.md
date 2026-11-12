@@ -5,7 +5,7 @@
 
 ---
 
-### T4.1 — Migración y RPCs de compartir
+### [x] T4.1 — Migración y RPCs de compartir
 - **Depende de:** T2.1
 - **Archivos:** `supabase/migrations/<ts>_sharing.sql`, `supabase/tests/04_sharing.test.sql`.
 - **Pasos:**
@@ -18,7 +18,7 @@
   7. `accept_inbox_recipe(p_inbox_id, p_target_group_id)`: hace el fork y marca `resolved_at`.
 - **Aceptación:** pgTAP: anon lee una receta por token válido y no por token revocado; no se puede forkear a un grupo ajeno; no se puede enviar a alguien sin grupo en común.
 
-### T4.2 — Sheet de compartir
+### [x] T4.2 — Sheet de compartir
 - **Depende de:** T4.1, T2.6
 - **Archivos:** `components/recipes/share-sheet.tsx`, `lib/recipes/share-actions.ts`.
 - **Pasos:**
@@ -28,7 +28,7 @@
      - **Mandar a una persona** → lista de personas con las que comparto grupos (avatar + nombre, sin duplicados) → toast "Le llegó a Sofi".
 - **Aceptación:** las tres opciones funcionan desde el celular.
 
-### T4.3 — Página pública de receta
+### [x] T4.3 — Página pública de receta
 - **Depende de:** T4.1
 - **Archivos:** `app/r/[token]/page.tsx`, `app/r/[token]/opengraph-image.tsx`, `app/r/[token]/cocinar/page.tsx`, `app/r/[token]/guardar/page.tsx`.
 - **Pasos:**
@@ -40,7 +40,7 @@
   6. `robots: noindex`.
 - **Aceptación:** abrir el link en una ventana de incógnito muestra la receta; el preview en WhatsApp muestra foto y título.
 
-### T4.4 — Bandeja de entrada
+### [x] T4.4 — Bandeja de entrada
 - **Depende de:** T4.1
 - **Archivos:** `app/(app)/perfil/bandeja/page.tsx`, `components/inbox/*`, badge en la tab Perfil.
 - **Pasos:**
@@ -49,13 +49,13 @@
   3. Diseño genérico por `kind` para sumar tipos en la Etapa 10.
 - **Aceptación:** B recibe la receta de A, la guarda en su grupo y el badge desaparece.
 
-### T4.5 — Origen de las copias
+### [x] T4.5 — Origen de las copias
 - **Depende de:** T4.1
 - **Archivos:** ajustes en `components/recipes/recipe-detail/*`.
 - **Pasos:** en recetas forkeadas, mostrar "Basada en *Pollo al limón* de *Casa*" (si el usuario tiene acceso al original, con link; si no, solo el texto guardado en el fork). Guardar `forked_from_title` y `forked_from_group_name` en la copia para no depender de permisos.
 - **Fuera de alcance:** sincronizar cambios del original (Etapa 11+).
 
-### T4.6 — E2E de compartir
+### [x] T4.6 — E2E de compartir
 - **Archivos:** `tests/e2e/sharing.spec.ts`.
 - **Escenario:** A crea link → contexto anónimo lo abre y ve la receta → se loguea como C y la guarda en su grupo personal → A revoca → el link muestra "no disponible" · A copia la receta a otro grupo · A manda a B → B la acepta desde la bandeja.
 
@@ -67,3 +67,15 @@
 - [ ] Usar la app una semana en casa y anotar lo que molesta antes de seguir.
 
 ## Notas de ejecución
+
+- T4.1: se agregaron `forked_from_title` y `forked_from_group_name` a `recipes` en esta migración (T4.5 pedía guardarlos en la copia: así los RPC de copia los escriben desde el principio). La copia reutiliza `save_recipe` (que valida membresía del grupo destino y deja la versión 1) desde un núcleo interno `_fork_recipe_core`, no invocable por clientes; los pasos de la copia pierden `ingredient_ids` (apuntaban a filas del original) y el modo cocinar los resuelve por texto. `get_public_recipe` es accesible por anon, devuelve solo contenido y el nombre/avatar de quien comparte, y cuenta visitas. Riesgo aceptado para la revisión de seguridad: la `image_url` de la receta es una URL pública del bucket cuyo path incluye el id del grupo y de la receta (los UUID no dan acceso, RLS lo impide). `send_recipe_to_user` exige un grupo en común; el destinatario puede aceptar aunque no sea miembro del grupo origen porque el fork corre como definer y valida que el ítem de bandeja sea suyo. 20 tests pgTAP en `04_sharing.test.sql`.
+
+- T4.2: botón Compartir en el detalle con tres opciones. "Mandar link" crea o reutiliza el link y abre el share nativo (`navigator.share`); si no hay, queda a la vista con "Copiar link"; debajo "Cualquiera con el link la puede ver" y "Dejar de compartir" (revoca). "Copiar a otro grupo" lista mis grupos menos el actual, pide confirmar y avisa "Copiada a X" con acción Ver. "Mandar a una persona" lista a quienes comparten algún grupo conmigo (lo resuelve la RLS de `profiles`, sin duplicados). Los grupos, contactos y el link activo se cargan en la página del detalle. Se verifica de punta a punta en el e2e de T4.6.
+
+- T4.3: `/r/[token]`: vista SSR liviana con `get_public_recipe` (cliente anon, resultado validado con Zod, dedupe por request), ingredientes escalables, "Cocinar" y "Guardala en tu recetario"; `noindex, nofollow`. `opengraph-image.tsx` genera el preview 1200×630 (foto + título + "Compartida por") con los colores del tema noche repetidos a mano porque una imagen no usa tokens. `/r/[token]/cocinar` reutiliza `CookingStories` con `persist={false}` (sin sesión, sin ✏️, final con "Guardar en mi recetario"); `CookShell` es el layout compartido con el modo privado. `/r/[token]/guardar` manda a `/login?next=…` si no hay sesión y, con sesión, deja elegir el grupo (`fork_public_recipe`). Un link inválido o revocado muestra "Este link ya no está disponible". `view_count` es aproximado: el preview de WhatsApp pide la página y la imagen y cada una cuenta.
+
+- T4.4: la bandeja (`/perfil/bandeja`) lista los ítems sin resolver con una tarjeta por `kind` (`recipe_shared` tiene diseño; el resto cae a una tarjeta genérica con "Descartar", para sumar tipos en la Etapa 10). "Guardar" pide el grupo y llama a `accept_inbox_recipe`; "Descartar" marca `resolved_at`. El badge de la tab Perfil sale de un `count` liviano (`head: true`) en el layout de `(app)`; también se muestra en la fila "Bandeja" del Perfil.
+
+- T4.5: las columnas `forked_from_title` y `forked_from_group_name` ya se agregaron en T4.1; acá solo se muestran: "Basada en X de Y", con link al original únicamente si la RLS todavía devuelve esa receta (si ya no hay acceso o se borró, queda el texto guardado en la copia).
+
+- T4.6: un solo escenario en `tests/e2e/sharing.spec.ts` cubre: link público abierto por una persona sin cuenta (con `og:image` y la imagen PNG generada), login con `next` y guardado en el grupo propio, revocar, copiar a otro grupo, y mandar a una persona con su bandeja y badge. Bug que encontró: Satori (imagen OG) exige `display: flex` en un div con más de un hijo, por eso "Compartida por {nombre}" va en un solo string. Helpers nuevos: `createGroupAs`, `addMemberToGroup`.

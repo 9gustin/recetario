@@ -9,7 +9,7 @@ Parte **7a** (manual, T7.1–T7.6), parte **7b** (IA, T7.7–T7.11) y parte **7c
 
 ## 7a — Plan manual
 
-### T7.1 — Migración: planes
+### [x] T7.1 — Migración: planes
 - **Depende de:** T2.1
 - **Archivos:** `supabase/migrations/<ts>_meal_plans.sql`, `supabase/tests/07_plans.test.sql`.
 - **Pasos:**
@@ -19,11 +19,11 @@ Parte **7a** (manual, T7.1–T7.6), parte **7b** (IA, T7.7–T7.11) y parte **7c
   4. RPCs: `approve_plan(p_plan_id)` (pasa a `approved`, promueve recetas `draft` usadas en el plan a `active` y borra las `draft` que quedaron fuera; graba `approved_by/at`), `duplicate_plan(p_plan_id, p_week_start)`.
 - **Aceptación:** pgTAP de RLS y de `approve_plan` con recetas draft.
 
-### T7.2 — Dominio: semanas y momentos
+### [x] T7.2 — Dominio: semanas y momentos
 - **Archivos:** `lib/domain/week.ts` + test, `lib/domain/meal-slots.ts`.
 - **Pasos:** `weekStartOf(date, weekStartsOn)`, `weekDays(weekStart)`, `formatWeekLabel` ("Semana del 17 al 23 de noviembre"), zona horaria `America/Argentina/Buenos_Aires`. `MEAL_SLOTS` con etiqueta y orden: Desayuno, Almuerzo, Merienda, Cena, Snacks.
 
-### T7.3 — Pantalla del plan (grilla)
+### [x] T7.3 — Pantalla del plan (grilla)
 - **Depende de:** T7.1, T7.2
 - **Archivos:** `app/(app)/g/[groupId]/plan/page.tsx` (redirige a la semana actual), `.../plan/[weekStart]/page.tsx`, `components/plan/*`, `lib/plan/{queries,actions}.ts`.
 - **Pasos:**
@@ -35,7 +35,7 @@ Parte **7a** (manual, T7.1–T7.6), parte **7b** (IA, T7.7–T7.11) y parte **7c
   6. Si no hay plan para la semana: estado vacío con "Armar a mano" / "Armar con IA" (deshabilitado hasta T7.9) / "Repetir una semana anterior".
 - **Aceptación:** armar una semana de almuerzos y cenas a mano en < 5 minutos.
 
-### T7.4 — Aprobar, historial y duplicar
+### [x] T7.4 — Aprobar, historial y duplicar
 - **Depende de:** T7.3
 - **Pasos:**
   1. Botón fijo "Aprobar plan" → `approve_plan` → toast. (La lista de compras se engancha en la Etapa 8.)
@@ -43,7 +43,7 @@ Parte **7a** (manual, T7.1–T7.6), parte **7b** (IA, T7.7–T7.11) y parte **7c
   3. Historial: lista de semanas anteriores con miniaturas; abrir una en solo lectura; "Repetir esta semana" → `duplicate_plan` a la semana elegida.
 - **Aceptación:** duplicar mantiene recetas, momentos, comensales y sobras (con fechas corridas).
 
-### T7.5 — Home "Hoy" con estados
+### [x] T7.5 — Home "Hoy" con estados
 - **Depende de:** T7.3, T0.2 (temas por momento del día)
 - **Spec:** §3 F6b · §8.1 · canvas de diseño (pantallas "Inicio · Mediodía · con plan", "Inicio · Tarde · sin plan", "Inicio · Noche · con plan").
 - **Archivos:** `app/(app)/g/[groupId]/hoy/page.tsx`, `components/today/*`, `lib/domain/today.ts` + test.
@@ -56,7 +56,7 @@ Parte **7a** (manual, T7.1–T7.6), parte **7b** (IA, T7.7–T7.11) y parte **7c
   6. Lugar reservado para tareas de meal prep (Etapa 9).
 - **Aceptación:** abrir la app a la noche con cena planeada muestra la cena y "Empezar a cocinar" sin scroll; sin plan, muestra los arranques; el tono cambia según la hora.
 
-### T7.6 — Tiempo real en el plan
+### [x] T7.6 — Tiempo real en el plan
 - **Depende de:** T7.3
 - **Archivos:** `lib/hooks/use-realtime-plan.ts`.
 - **Pasos:** suscripción a cambios de `meal_plan_entries` del plan abierto; aplicar cambios al estado local; indicador "Sofi está editando" con Presence.
@@ -64,7 +64,7 @@ Parte **7a** (manual, T7.1–T7.6), parte **7b** (IA, T7.7–T7.11) y parte **7c
 
 ## 7b — Plan con IA
 
-### T7.7 — Dominio: `validatePlan` 🧠
+### [x] T7.7 — Dominio: `validatePlan` 🧠
 - **Depende de:** T6.5, T7.2
 - **Archivos:** `lib/domain/validate-plan.ts` + test, `lib/domain/perishability.ts` + test.
 - **Pasos:**
@@ -79,7 +79,7 @@ Parte **7a** (manual, T7.1–T7.6), parte **7b** (IA, T7.7–T7.11) y parte **7c
   3. Tests para cada código.
 - **Aceptación:** tests en verde; función pura sin DB.
 
-### T7.8 — Agente del plan (chat con tools) 🧠
+### [x] T7.8 — Agente del plan (chat con tools) 🧠
 - **Depende de:** T7.7, T5.1
 - **Archivos:** `app/api/ai/plans/[id]/chat/route.ts`, `lib/ai/plan-agent/{agent,tools,prompt,events}.ts`.
 - **Pasos:**
@@ -97,7 +97,7 @@ Parte **7a** (manual, T7.1–T7.6), parte **7b** (IA, T7.7–T7.11) y parte **7c
   6. Tests del loop con el cliente mockeado: tool de escritura rechazada por cebolla → el modelo recibe el error.
 - **Aceptación:** con un recetario de prueba de 20 recetas, "armame almuerzos y cenas de lunes a viernes" produce un plan sin errores en < 60 s.
 
-### T7.9 — UI del chat del plan
+### [x] T7.9 — UI del chat del plan
 - **Depende de:** T7.8
 - **Archivos:** `components/plan/plan-chat-sheet.tsx`, `lib/hooks/use-plan-chat.ts`.
 - **Pasos:**
@@ -108,19 +108,19 @@ Parte **7a** (manual, T7.1–T7.6), parte **7b** (IA, T7.7–T7.11) y parte **7c
   5. Recetas nuevas propuestas por la IA con badge "Nueva" → tocar abre el borrador para revisarlo/editarlo.
 - **Aceptación:** pedir "cambiá el miércoles por algo con carne" cambia solo esa celda.
 
-### T7.10 — Recetas nuevas de la IA
+### [x] T7.10 — Recetas nuevas de la IA
 - **Depende de:** T7.8
 - **Pasos:** `meal_plan_entries.is_new_recipe` y `recipes.status = 'draft'` se muestran claros en el plan; las recetas `draft` no aparecen en el recetario hasta aprobar el plan (filtrar `status = 'active'` en `listRecipes`). Al aprobar, `approve_plan` las activa. Al descartar el borrador del plan, se borran.
 - **Aceptación:** una receta inventada por la IA aparece en el recetario solo después de aprobar el plan.
 
-### T7.11 — Evals del plan
+### [x] T7.11 — Evals del plan
 - **Archivos:** `tests/evals/plan/*`.
 - **Pasos:** recetario de prueba (25 recetas, 6 con cebolla) + 2 perfiles (uno sin cebolla y bajo en carbohidratos). 8 pedidos distintos. Chequeos: 0 errores de `validatePlan`, ≤ 2 warnings de monotonía, ≥ 70% recetas del recetario, ninguna receta repetida sin ser sobra. Imprime costo y tiempo.
 - **Aceptación:** 8/8 sin errores.
 
 ## 7c — Arranques sin plan
 
-### T7.12 — ¿Qué tenés?
+### [x] T7.12 — ¿Qué tenés?
 - **Depende de:** T7.5, T6.5, T5.2
 - **Spec:** §3 F15 · §6.8 · canvas ("¿Qué tenés?").
 - **Archivos:** `app/(app)/g/[groupId]/hoy/que-tenes/page.tsx`, `components/suggest/*`, `lib/domain/coverage.ts` + test, `app/api/ai/suggest/route.ts`, `lib/ai/suggest/*`.
@@ -131,7 +131,7 @@ Parte **7a** (manual, T7.1–T7.6), parte **7b** (IA, T7.7–T7.11) y parte **7c
   4. Resultados: "Tenés todo · 20 min" o "Te falta: jengibre (opcional)", con botón para cocinar o "Elegir para hoy" (crea la entrada en el plan de hoy, creando el plan de la semana si no existe).
 - **Aceptación:** con "pollo, zapallitos, huevos, limón" devuelve al menos 2 opciones aptas para los dos en < 6 s.
 
-### T7.13 — Ideas para hoy
+### [x] T7.13 — Ideas para hoy
 - **Depende de:** T7.12
 - **Spec:** §3 F15 · §6.8 · canvas ("Ideas para hoy").
 - **Archivos:** `app/(app)/g/[groupId]/hoy/ideas/page.tsx`, `lib/suggest/signals.ts` + test.
@@ -141,7 +141,7 @@ Parte **7a** (manual, T7.1–T7.6), parte **7b** (IA, T7.7–T7.11) y parte **7c
   3. "Elegir para hoy" igual que T7.12; la home pasa a `planned`.
 - **Aceptación:** las 3 ideas son aptas para todos los comensales y cada una explica por qué aparece.
 
-### T7.14 — E2E de la home
+### [x] T7.14 — E2E de la home
 - **Archivos:** `tests/e2e/today.spec.ts`.
 - **Escenario:** con `page.clock` a las 12:40 y almuerzo planeado → hero de almuerzo y tema `mediodia`; a las 18:10 sin cena → arranques y tema `tarde`; elegir una idea → la home muestra la cena y "Empezar a cocinar"; a las 21:00 → tema `noche`.
 
@@ -152,3 +152,29 @@ Parte **7a** (manual, T7.1–T7.6), parte **7b** (IA, T7.7–T7.11) y parte **7c
 - [ ] Revisar costo promedio por plan en `ai_runs`.
 
 ## Notas de ejecución
+
+- T7.1: tablas `meal_plans` (índice único parcial por grupo y semana, sin contar archivados), `meal_plan_entries` (`slot` validado contra `groups.meal_slots` con trigger; exige receta o texto libre; `replica identity full` para que el realtime traiga la fila borrada) y `prep_tasks`; RLS por grupo a través del plan (`plan_group_id`); `meal_plans` y `meal_plan_entries` agregadas a `supabase_realtime`. Se agregó `recipes.draft_for_plan_id` (no estaba en el plan): ata cada receta que propone la IA al plan que la pidió, para que `approve_plan` active las usadas y borre **solo** las que ese plan propuso y quedaron fuera (sin tocar otros borradores). `duplicate_plan` corre fechas y `cook_date` y reenlaza las sobras a la entrada nueva equivalente. 13 tests pgTAP.
+
+- T7.3: Plan board keyed by plan id so router.refresh remounts it; 'Armar con IA' stays disabled until T7.9; history link target /plan/historial is built in T7.4.
+
+- T7.4: Historial repite en la próxima semana libre; el banner de plan aprobado ya existía desde T7.3.
+
+- T7.5: Cards 1/2 (Ideas, ¿Qué tenés?) hidden until T7.12/T7.13; storage warnings (paso 5) and prep tasks slot arrive with Etapa 9; 'cocinado' not tracked yet so doneIds is empty; cook link passes ?entry=<id> (not consumed yet).
+
+- T7.6: Realtime requires realtime.setAuth(access_token) before subscribing (otherwise RLS filters all changes). Entries are re-read through a server action after a debounced change instead of merging payloads (recipes join is not in the payload).
+
+- T7.7: Familias de proteína (ave, pescado, huevo) dependen del catálogo; si faltan, PROTEIN_MONOTONY no dispara. LIMIT_EXCEEDED solo evalúa un tope diario único de carbohidratos con datos completos.
+
+- T7.8: Plan agent writes go through validateCandidates; errors return is_error and nothing is saved. propose_recipe saves via saveRecipe then marks status=draft + draft_for_plan_id. Real-model behaviour (20-recipe acceptance) is checked in the plan evals (T7.11); not run against the API yet.
+
+- T7.9: Chat is a non-modal fixed bottom panel with three heights (grid stays visible); voice via VoiceRecorder; PlanBoard syncs state from server props with derived-state pattern (lint forbids setState in effect). E2E mocks the SSE endpoint.
+
+- T7.10: Listados (búsqueda, tags, menciones, Apta para) filtran status=active; discardPlan borra el plan y solo los borradores atados a él.
+
+- T7.11: `pnpm eval:plan` (8 pedidos, IA real + DB local, no corre en CI): 8/8 sin errores, ~US$ 0.83 en total (≈ US$ 0.10 por plan, 15–40 s). Se refactorizó `saveRecipeWith`/`loadIngredientsForCheck`/`getPlanEntries` para aceptar un cliente de Supabase y poder correr fuera de Next.
+
+- T7.12: 'Elegir para hoy' crea el plan de la semana si falta y activa la receta si era borrador. La cuota usa la feature 'ideas'. Falta filtrar por el plan vivo (Etapa 8b). Eval: pnpm eval:suggest (5 opciones en 5.5 s).
+
+- T7.13: Pestaña 'Con lo que compraste' queda como mensaje hasta la Etapa 8 (lista de compras). Las ideas del recetario no usan IA (señales por código); 'Nuevas' sí (borradores).
+
+- T7.14: El servidor lee la cookie e2e-now solo si E2E_TIME_OVERRIDE=1 (definida únicamente por playwright.config); también la usa el tema del layout.

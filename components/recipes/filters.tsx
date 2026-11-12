@@ -10,6 +10,8 @@ export type RecipeFilterState = {
   max30: boolean;
   tag: string | null;
   ingredient: IngredientSuggestion | null;
+  /** "Apta para…": ids de las personas elegidas. */
+  aptFor: string[];
 };
 
 export const EMPTY_FILTERS: RecipeFilterState = {
@@ -17,10 +19,13 @@ export const EMPTY_FILTERS: RecipeFilterState = {
   max30: false,
   tag: null,
   ingredient: null,
+  aptFor: [],
 };
 
 export function hasActiveFilters(f: RecipeFilterState) {
-  return f.favoriteOnly || f.max30 || f.tag !== null || f.ingredient !== null;
+  return (
+    f.favoriteOnly || f.max30 || f.tag !== null || f.ingredient !== null || f.aptFor.length > 0
+  );
 }
 
 function chipClass(active: boolean) {
@@ -34,10 +39,13 @@ type Props = {
   value: RecipeFilterState;
   onChange: (next: RecipeFilterState) => void;
   topTags: string[];
+  /** Personas del grupo con perfil alimentario (para el filtro "Apta para…"). */
+  members?: { id: string; name: string }[];
 };
 
 /** Chips de filtro: Favoritas, ≤ 30 min, etiquetas más usadas y "Tiene ingrediente…". */
-export function RecipeFilters({ value, onChange, topTags }: Props) {
+export function RecipeFilters({ value, onChange, topTags, members = [] }: Props) {
+  const [aptOpen, setAptOpen] = useState(false);
   const [pickingIngredient, setPickingIngredient] = useState(false);
   const [ingredientQuery, setIngredientQuery] = useState("");
   const [suggestions, setSuggestions] = useState<IngredientSuggestion[]>([]);
@@ -88,6 +96,17 @@ export function RecipeFilters({ value, onChange, topTags }: Props) {
             {tag}
           </button>
         ))}
+        {members.length > 0 ? (
+          <button
+            type="button"
+            aria-expanded={aptOpen}
+            aria-pressed={value.aptFor.length > 0}
+            onClick={() => setAptOpen((v) => !v)}
+            className={chipClass(value.aptFor.length > 0)}
+          >
+            Apta para…
+          </button>
+        ) : null}
         {value.ingredient ? (
           <button
             type="button"
@@ -109,6 +128,34 @@ export function RecipeFilters({ value, onChange, topTags }: Props) {
           </button>
         )}
       </div>
+
+      {aptOpen && members.length > 0 ? (
+        <div
+          className="flex flex-wrap gap-2 rounded-2xl border border-border bg-surface p-2"
+          role="group"
+          aria-label="Apta para"
+        >
+          {members.map((m) => {
+            const on = value.aptFor.includes(m.id);
+            return (
+              <button
+                key={m.id}
+                type="button"
+                aria-pressed={on}
+                onClick={() =>
+                  onChange({
+                    ...value,
+                    aptFor: on ? value.aptFor.filter((x) => x !== m.id) : [...value.aptFor, m.id],
+                  })
+                }
+                className={chipClass(on)}
+              >
+                {m.name}
+              </button>
+            );
+          })}
+        </div>
+      ) : null}
 
       {pickingIngredient && !value.ingredient ? (
         <div className="flex flex-col gap-1 rounded-2xl border border-border bg-surface p-2">

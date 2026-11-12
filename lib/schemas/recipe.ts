@@ -63,6 +63,8 @@ export type StepInput = z.infer<typeof stepInputSchema>;
 export const recipeDraftSchema = z.object({
   title: z.string().trim().max(120).optional(),
   description: z.string().max(2000).optional(),
+  image_url: z.string().max(1000).nullable().optional(),
+  source_url: z.string().max(1000).nullable().optional(),
   servings: z.number().positive().optional(),
   prep_minutes: z.number().int().positive().nullable().optional(),
   cook_minutes: z.number().int().positive().nullable().optional(),

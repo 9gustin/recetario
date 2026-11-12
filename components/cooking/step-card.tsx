@@ -13,8 +13,8 @@ type Props = {
   ingredients: CookingIngredient[];
   baseServings: number;
   servings: number;
-  /** Aquí van los controles del timer (T3.3). */
-  timerSlot?: ReactNode;
+  /** Timer interactivo del paso; si no se pasa, solo se muestra la duración. */
+  timerCard?: ReactNode;
 };
 
 /** Contenido de un paso: instrucción grande, ingredientes escalados, tip y duración. */
@@ -25,7 +25,7 @@ export function StepCard({
   ingredients,
   baseServings,
   servings,
-  timerSlot,
+  timerCard,
 }: Props) {
   return (
     <div className="flex h-full flex-col gap-5">
@@ -52,15 +52,13 @@ export function StepCard({
         </p>
       ) : null}
 
-      {durationSeconds ? (
-        <div className="flex items-center gap-4 rounded-[22px] bg-surface p-4">
-          <div className="flex-1">
+      {timerCard ??
+        (durationSeconds ? (
+          <div className="rounded-[22px] bg-surface p-4">
             <p className="font-display text-[40px] leading-none">{formatClock(durationSeconds)}</p>
             <p className="mt-1 text-[13px] text-muted">Tiempo del paso</p>
           </div>
-          {timerSlot}
-        </div>
-      ) : null}
+        ) : null)}
     </div>
   );
 }

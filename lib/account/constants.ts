@@ -1,0 +1,1 @@
+export const DELETE_PHRASE = "BORRAR MI CUENTA";

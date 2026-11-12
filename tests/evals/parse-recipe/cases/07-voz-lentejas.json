@@ -1,0 +1,8 @@
+{
+  "id": "07-voz-lentejas",
+  "kind": "voice",
+  "expected_ingredients": 7,
+  "key_ingredients": ["lenteja", "cebolla", "zanahoria", "morrón", "chorizo"],
+  "has_timed_passive_step": false,
+  "transcript": "bueno eh para el guiso de lentejas va como un kilo no medio kilo de lentejas, una cebolla, dos zanahorias, un morrón, ah y chorizo colorado, se pone todo en la olla con agua y se deja como cuarenta minutos, al final se le pone sal y pimentón"
+}

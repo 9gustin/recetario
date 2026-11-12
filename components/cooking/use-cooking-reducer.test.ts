@@ -46,4 +46,22 @@ describe("cookingReducer", () => {
     expect(s.index).toBe(3);
     expect(s.completed.size).toBe(3);
   });
+
+  it("RESET vuelve a la mise en place sin pasos completados", () => {
+    let s = initCookingState({ steps: 3, servings: 2, index: 3, completed: [0, 1, 2] });
+    s = cookingReducer(s, { type: "RESET", servings: 2 });
+    expect(s.index).toBe(0);
+    expect(s.completed.size).toBe(0);
+    expect(s.total).toBe(5);
+  });
+
+  it("SET_STEPS actualiza el total y acota el índice", () => {
+    let s = initCookingState({ steps: 3, servings: 2, index: 4 });
+    s = cookingReducer(s, { type: "SET_STEPS", steps: 2 });
+    expect(s.total).toBe(4);
+    expect(s.index).toBe(3);
+    s = cookingReducer(s, { type: "SET_STEPS", steps: 5 });
+    expect(s.total).toBe(7);
+    expect(s.index).toBe(3);
+  });
 });

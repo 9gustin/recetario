@@ -1,0 +1,8 @@
+{
+  "id": "02-texto-torta-ricota",
+  "kind": "text",
+  "expected_ingredients": 6,
+  "key_ingredients": ["ricota", "huevo", "azúcar", "maicena"],
+  "has_timed_passive_step": true,
+  "text": "TORTA DE RICOTA\nIngredientes: 500 g de ricota, 3 huevos, 150 g de azúcar, 2 cdas de maicena, ralladura de limón, 1 cdita de esencia de vainilla.\nPreparación: Procesar la ricota con el azúcar. Agregar los huevos de a uno, la maicena, la ralladura y la vainilla. Volcar en un molde enmantecado y hornear a 180 grados durante 45 minutos. Dejar enfriar antes de desmoldar."
+}

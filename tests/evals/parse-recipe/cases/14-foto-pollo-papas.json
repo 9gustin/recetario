@@ -1,0 +1,8 @@
+{
+  "id": "14-foto-pollo-papas",
+  "kind": "image",
+  "image": "tests/evals/fixtures/pollo-papas.png",
+  "expected_ingredients": 9,
+  "key_ingredients": ["pollo", "papa", "cebolla", "ajo"],
+  "has_timed_passive_step": true
+}

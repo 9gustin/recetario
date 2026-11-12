@@ -1,0 +1,8 @@
+{
+  "id": "15-foto-ensalada-lentejas",
+  "kind": "image",
+  "image": "tests/evals/fixtures/ensalada-lentejas.png",
+  "expected_ingredients": 6,
+  "key_ingredients": ["lenteja", "tomate", "cebolla", "limón"],
+  "has_timed_passive_step": false
+}

@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { displayName, notifyGroup } from "@/lib/inbox/notify";
 import { createClient } from "@/lib/supabase/server";
 
 /** Acepta la invitación (POST) y redirige al grupo con un toast de bienvenida. */
@@ -25,6 +26,16 @@ export async function POST(request: Request, { params }: { params: Promise<{ tok
     .select("name")
     .eq("id", groupId)
     .maybeSingle();
+
+  void displayName(user.id).then((name) =>
+    notifyGroup({
+      groupId,
+      fromUserId: user.id,
+      kind: "member_joined",
+      message: `${name} se sumó a ${group?.name ?? "el grupo"}`,
+      url: `/g/${groupId}/hoy`,
+    }),
+  );
 
   const url = new URL(`/g/${groupId}/hoy`, request.url);
   url.searchParams.set("joined", group?.name ?? "el grupo");

@@ -12,6 +12,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { PillButton } from "@/components/shared/pill-button";
 import { cn } from "@/lib/utils";
 import { parseIngredientLine } from "@/lib/domain/ingredient-line";
+import { compressImage } from "@/lib/image/compress";
+import { normalizeName } from "@/lib/domain/ingredient-match";
 import { saveRecipe, uploadRecipeImage } from "@/lib/recipes/actions";
 
 const DURATIONS = [1, 5, 10, 15, 20, 30] as const;
@@ -41,8 +43,9 @@ type FormValues = z.infer<typeof formSchema>;
 
 type Props = {
   groupId: string;
+  /** Receta a editar o, sin `id`, borrador importado que se va a crear. */
   recipe?: {
-    id: string;
+    id?: string;
     title: string;
     description: string | null;
     servings: number;
@@ -59,9 +62,15 @@ type Props = {
       tip: string | null;
     }[];
   };
+  /** De dónde viene el borrador (importación): se guarda como origen de la receta. */
+  source?: { type: "text" | "url" | "photo" | "voice"; url?: string | null };
+  /** Aviso arriba del formulario (ej. "Revisá que esté todo bien"). */
+  notice?: string;
+  /** Ingredientes que la IA no reconocía y creó nuevos: se resaltan para revisarlos. */
+  highlightNames?: string[];
 };
 
-export function RecipeForm({ groupId, recipe }: Props) {
+export function RecipeForm({ groupId, recipe, source, notice, highlightNames = [] }: Props) {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
   const [error, setError] = useState<string | null>(null);
@@ -114,6 +123,12 @@ export function RecipeForm({ groupId, recipe }: Props) {
     .map(parseIngredientLine);
 
   const totalMinutes = (prep ?? 0) + (cook ?? 0);
+  const highlighted = highlightNames.map(normalizeName).filter(Boolean);
+  // Coincide si el nombre parseado contiene el nombre nuevo ("puñado de couve" ⊃ "couve") o al revés.
+  const isHighlighted = (name: string) => {
+    const n = normalizeName(name);
+    return n !== "" && highlighted.some((h) => n.includes(h) || h.includes(n));
+  };
 
   function toggleTag(tag: string) {
     const current = tags ?? [];
@@ -184,6 +199,7 @@ export function RecipeForm({ groupId, recipe }: Props) {
           ingredient_ids: [],
         })),
         change_note: changeNote || null,
+        ...(source ? { source_type: source.type, source_url: source.url ?? null } : {}),
       });
 
       if (res.ok) router.push(`/g/${groupId}/recetas/${res.data.id}`);
@@ -193,6 +209,14 @@ export function RecipeForm({ groupId, recipe }: Props) {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-6">
+      {notice ? (
+        <p
+          role="note"
+          className="rounded-2xl bg-hero px-4 py-3 text-sm font-medium text-foreground"
+        >
+          {notice}
+        </p>
+      ) : null}
       <div className="flex flex-col gap-1.5">
         <Label htmlFor="title">Título</Label>
         <Input
@@ -338,7 +362,10 @@ export function RecipeForm({ groupId, recipe }: Props) {
             {parsedIngredients.map((p, i) => (
               <div
                 key={i}
-                className="flex flex-wrap items-center gap-1.5 rounded-xl bg-surface-2 px-3 py-2 text-[13px]"
+                className={cn(
+                  "flex flex-wrap items-center gap-1.5 rounded-xl bg-surface-2 px-3 py-2 text-[13px]",
+                  isHighlighted(p.name) && "ring-2 ring-accent",
+                )}
               >
                 {p.quantity !== null ? (
                   <span className="font-semibold">
@@ -348,6 +375,9 @@ export function RecipeForm({ groupId, recipe }: Props) {
                 <span>{p.name}</span>
                 {p.preparation ? <span className="text-muted">· {p.preparation}</span> : null}
                 {p.optional ? <span className="text-muted">· opcional</span> : null}
+                {isHighlighted(p.name) ? (
+                  <span className="font-semibold text-accent">· ingrediente nuevo, revisalo</span>
+                ) : null}
               </div>
             ))}
           </div>
@@ -481,17 +511,4 @@ export function RecipeForm({ groupId, recipe }: Props) {
       </div>
     </form>
   );
-}
-
-/** Comprime a webp con máx. 1600 px antes de subir. */
-async function compressImage(file: File): Promise<Blob> {
-  const bitmap = await createImageBitmap(file);
-  const scale = Math.min(1, 1600 / Math.max(bitmap.width, bitmap.height));
-  const canvas = document.createElement("canvas");
-  canvas.width = Math.round(bitmap.width * scale);
-  canvas.height = Math.round(bitmap.height * scale);
-  const ctx = canvas.getContext("2d");
-  if (!ctx) return file;
-  ctx.drawImage(bitmap, 0, 0, canvas.width, canvas.height);
-  return new Promise((resolve) => canvas.toBlob((b) => resolve(b ?? file), "image/webp", 0.82));
 }

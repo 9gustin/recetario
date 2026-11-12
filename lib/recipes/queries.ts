@@ -36,6 +36,8 @@ export type RecipeDetail = {
   difficulty: string | null;
   tags: string[];
   source_type: string;
+  /** Si es una copia: de qué receta y grupo viene (el texto se guarda en la copia, no depende de permisos). */
+  forked_from: { title: string; group_name: string | null; href: string | null } | null;
   source_url: string | null;
   current_version: number;
   status: string;
@@ -51,7 +53,7 @@ export async function getRecipe(id: string, userId: string): Promise<RecipeDetai
   const { data, error } = await supabase
     .from("recipes")
     .select(
-      "id, group_id, title, description, image_url, servings, prep_minutes, cook_minutes, total_minutes, difficulty, tags, source_type, source_url, current_version, status, recipe_ingredients(id, ingredient_id, raw_text, quantity, unit, preparation, section, optional, position), recipe_steps(id, position, instruction, duration_seconds, timer_kind, tip, ingredient_ids)",
+      "id, group_id, title, description, image_url, servings, prep_minutes, cook_minutes, total_minutes, difficulty, tags, source_type, source_url, forked_from_recipe_id, forked_from_title, forked_from_group_name, current_version, status, recipe_ingredients(id, ingredient_id, raw_text, quantity, unit, preparation, section, optional, position), recipe_steps(id, position, instruction, duration_seconds, timer_kind, tip, ingredient_ids)",
     )
     .eq("id", id)
     .is("deleted_at", null)
@@ -64,6 +66,22 @@ export async function getRecipe(id: string, userId: string): Promise<RecipeDetai
     .eq("recipe_id", id)
     .eq("user_id", userId)
     .maybeSingle();
+
+  // El link al original solo aparece si todavía tengo acceso (RLS devuelve null si no).
+  let forkedFrom: RecipeDetail["forked_from"] = null;
+  if (data.forked_from_title) {
+    let href: string | null = null;
+    if (data.forked_from_recipe_id) {
+      const { data: original } = await supabase
+        .from("recipes")
+        .select("id, group_id")
+        .eq("id", data.forked_from_recipe_id)
+        .is("deleted_at", null)
+        .maybeSingle();
+      if (original) href = `/g/${original.group_id}/recetas/${original.id}`;
+    }
+    forkedFrom = { title: data.forked_from_title, group_name: data.forked_from_group_name, href };
+  }
 
   return {
     id: data.id,
@@ -78,6 +96,7 @@ export async function getRecipe(id: string, userId: string): Promise<RecipeDetai
     difficulty: data.difficulty,
     tags: data.tags ?? [],
     source_type: data.source_type,
+    forked_from: forkedFrom,
     source_url: data.source_url,
     current_version: data.current_version,
     status: data.status,
@@ -121,6 +140,7 @@ export async function listRecipes(groupId: string, filters: RecipeFilters = {}) 
       { count: "exact" },
     )
     .eq("group_id", groupId)
+    .eq("status", "active")
     .is("deleted_at", null);
 
   if (filters.q?.trim()) {
@@ -190,6 +210,7 @@ export async function getRecipeFacets(groupId: string, topN = 5) {
     .from("recipes")
     .select("tags")
     .eq("group_id", groupId)
+    .eq("status", "active")
     .is("deleted_at", null);
   const counts = new Map<string, number>();
   for (const row of data ?? []) {

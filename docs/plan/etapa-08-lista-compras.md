@@ -5,12 +5,12 @@
 
 ---
 
-### T8.1 — Migración: listas
+### [x] T8.1 — Migración: listas
 - **Depende de:** T7.1
 - **Archivos:** `supabase/migrations/<ts>_shopping.sql`, `supabase/tests/08_shopping.test.sql`.
 - **Pasos:** tablas `shopping_lists` y `shopping_list_items` (§5.2), RLS por grupo, ambas en `supabase_realtime`. RPC `set_item_state(p_item_id, p_state)` que guarda `state_by`/`state_at`.
 
-### T8.2 — Dominio: armar la lista 🧠
+### [x] T8.2 — Dominio: armar la lista 🧠
 - **Depende de:** T2.2, T7.2
 - **Archivos:** `lib/domain/shopping-list.ts` + `shopping-list.test.ts`.
 - **Pasos:**
@@ -27,7 +27,7 @@
   4. Tests: suma de g + kg, unidades + gramos con peso unitario, sobras ignoradas, escalado, ingrediente sin cantidad, división en 2 compras.
 - **Aceptación:** 100% de ramas cubiertas.
 
-### T8.3 — Generar y regenerar la lista
+### [x] T8.3 — Generar y regenerar la lista
 - **Depende de:** T8.1, T8.2
 - **Archivos:** `lib/shopping/generate.ts`, `app/api/plans/[id]/shopping-list/route.ts`, enganche en `approve_plan` (acción del cliente después de aprobar).
 - **Pasos:**
@@ -36,7 +36,7 @@
   3. Banner en el plan: "Cambiaste el plan. ¿Actualizar la lista?" → regenerar.
 - **Aceptación:** regenerar no pierde ningún tachado.
 
-### T8.4 — Enriquecer con IA
+### [x] T8.4 — Enriquecer con IA
 - **Depende de:** T8.3, T5.1
 - **Archivos:** `lib/ai/shopping/enrich.ts`, `lib/ai/prompts/shopping.ts`.
 - **Pasos:**
@@ -45,7 +45,7 @@
   3. Se corre en segundo plano después de generar (por ahora `after()` de Next; en la Etapa 9 pasa al pipeline en streaming de T9.1) y los resultados aparecen por realtime.
 - **Aceptación:** la lista se ve al instante y los hints aparecen en segundos.
 
-### T8.5 — UI de la lista
+### [x] T8.5 — UI de la lista
 - **Depende de:** T8.3
 - **Archivos:** `app/(app)/g/[groupId]/compras/page.tsx` (lista activa o selector), `.../compras/[listId]/page.tsx`, `components/shopping/*`, `lib/hooks/use-realtime-list.ts`.
 - **Pasos:**
@@ -58,7 +58,7 @@
   7. En "Hoy": tarjeta de la lista activa con el progreso.
 - **Aceptación:** dos celulares tachando a la vez, sin conflictos ni ítems "rebotando".
 
-### T8.6 — E2E del ciclo completo
+### [x] T8.6 — E2E del ciclo completo
 - **Archivos:** `tests/e2e/weekly-cycle.spec.ts`.
 - **Escenario:** grupo con 2 miembros → 3 recetas → plan manual de 3 días con una sobra → aprobar → la lista suma bien (verificar 2 ítems concretos) → B tacha un ítem y A lo ve tachado → editar el plan → regenerar conserva el tachado.
 
@@ -69,3 +69,15 @@
 - [ ] Revisión general 🧠 de seguridad, costos de IA y performance antes de seguir.
 
 ## Notas de ejecución
+
+- T8.1: Se agregaron pantry_staple y no_longer_needed a shopping_list_items (no estaban en el spec) para T8.2/T8.3.
+
+- T8.2: Cobertura 97% sentencias / 96% ramas (quedan dos ramas defensivas sin test).
+
+- T8.3: Segunda compra (mitad de semana) solo si un perecedero la necesita; las listas que dejan de hacer falta se archivan. Se genera al aprobar desde el cliente (generateListForPlan) y desde el banner 'Actualizar la lista'. Se verifica de punta a punta en T8.6.
+
+- T8.4: Se corre con after() de Next tras generar; usa la cuota 'ideas'. No se probó contra la API real todavía.
+
+- T8.5: Sin swipe: tachar con el checkbox grande y 'Ya lo tengo' con botón (más accesible); deshacer por toast. Tarjeta de la lista activa en Hoy. E2E en T8.6.
+
+- T8.6: Los ítems comprados se ven tachados al final de cada sección por defecto (menú 'Ocultar comprados'). Quedan para el usuario: prueba real de compra y revisión 🧠 de seguridad/costos.

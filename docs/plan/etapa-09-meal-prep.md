@@ -5,7 +5,7 @@
 
 ---
 
-### T9.1 — Pipeline post-aprobación en streaming (sin cola)
+### [x] T9.1 — Pipeline post-aprobación en streaming (sin cola)
 - **Depende de:** T8.3 · decisión de la persona: **sin servicio de colas** (ni Inngest ni workers); todo es backend en streaming.
 - **Archivos:** `lib/ai/stream.ts` (helper SSE), `app/api/plans/[id]/finalize/route.ts`, `lib/plans/finalize.ts`.
 - **Pasos:**
@@ -16,7 +16,7 @@
   5. Estado visible en el plan ("Armando tu lista y tus preparaciones…").
 - **Aceptación:** aprobar un plan muestra el avance en vivo; si la IA falla en un paso, lo ya guardado queda y se puede reintentar sin duplicar.
 
-### T9.2 — Generar tareas de meal prep
+### [x] T9.2 — Generar tareas de meal prep
 - **Depende de:** T9.1, T7.7
 - **Archivos:** `lib/ai/prep/generate.ts`, `lib/ai/prompts/meal-prep.ts`, `lib/schemas/prep.ts`, `lib/domain/validate-prep.ts` + test.
 - **Pasos:**
@@ -27,7 +27,7 @@
   5. Guardar en `prep_tasks` reemplazando las anteriores no completadas del plan.
 - **Aceptación:** para un plan con pollo 3 veces, sugiere cortar y porcionar el día de la compra y freezar lo del final de la semana.
 
-### T9.3 — UI de preparaciones
+### [x] T9.3 — UI de preparaciones
 - **Depende de:** T9.2
 - **Archivos:** `components/prep/*`, pestaña "Preparación" en la pantalla del plan, sección en "Hoy".
 - **Pasos:**
@@ -37,7 +37,7 @@
   4. Tips de la semana en una tarjeta plegable.
 - **Aceptación:** las tareas aparecen el día que corresponde y se pueden tildar.
 
-### T9.4 — Variedad y conservación
+### [x] T9.4 — Variedad y conservación
 - **Depende de:** T9.2
 - **Pasos:**
   1. En el detalle de cada ingrediente de la lista: tips de conservación del catálogo ("guardá las hojas secas con papel en un táper").
@@ -51,3 +51,11 @@
 - [ ] Prueba real: hacer el meal prep del domingo con las sugerencias.
 
 ## Notas de ejecución
+
+- T9.1: Pasos shopping-list → enrich-list (el de preparaciones se suma en T9.2); fallo no crítico no corta, reintento por paso con {only}. Si el cliente se va, el trabajo sigue (emit tolerante).
+
+- T9.2: kind no incluye 'freezar': se usa portion con 'freezar' en el título. Tips en meal_plans.prep_tips (migración nueva). Eval pnpm eval:prep: 5 tareas (porcionar/freezar el día de la compra, descongelar el día anterior). No se consideran equipamiento ni tiempo disponible del perfil todavía.
+
+- T9.3: Pestaña 'Preparación' dentro del plan. Descongelar destacado arriba. Recordatorios (remind_at) se usan recién en la Etapa 10.
+
+- T9.4: storage_info se genera una vez con Haiku como paso del pipeline (storage-info) y se muestra en la ficha; consejo por ingrediente sale de ingredients.storage_tips o de shelf_life. Los avisos de monotonía/repetición alimentan los tips de la semana.

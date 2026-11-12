@@ -1,14 +1,14 @@
-import { Calendar } from "lucide-react";
-import { EmptyState } from "@/components/shell/empty-state";
+import { redirect } from "next/navigation";
+import { requireUser } from "@/lib/auth";
+import { weekStartOf } from "@/lib/domain/week";
+import { getGroupPlanSettings } from "@/lib/plan/queries";
 
 export const metadata = { title: "Plan" };
 
-export default function Page() {
-  return (
-    <EmptyState
-      icon={Calendar}
-      title="Todavía no hay plan"
-      description="Armá la semana a mano o con ayuda de la IA."
-    />
-  );
+/** Lleva a la semana actual (según el día en que empieza la semana del grupo). */
+export default async function Page({ params }: { params: Promise<{ groupId: string }> }) {
+  await requireUser();
+  const { groupId } = await params;
+  const settings = await getGroupPlanSettings(groupId);
+  redirect(`/g/${groupId}/plan/${weekStartOf(new Date(), settings.weekStartsOn)}`);
 }

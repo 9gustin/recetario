@@ -15,7 +15,11 @@ export type CookingAction =
   | { type: "PREV" }
   | { type: "GOTO"; index: number }
   | { type: "COMPLETE" }
-  | { type: "SET_SERVINGS"; servings: number };
+  | { type: "SET_SERVINGS"; servings: number }
+  /** Cambió la cantidad de pasos (se agregó o borró uno): actualiza el total y acota el índice. */
+  | { type: "SET_STEPS"; steps: number }
+  /** "Empezar de nuevo": vuelve a la mise en place con las porciones indicadas. */
+  | { type: "RESET"; servings: number };
 
 export function initCookingState(opts: {
   steps: number;
@@ -53,6 +57,14 @@ export function cookingReducer(state: CookingState, action: CookingAction): Cook
     }
     case "SET_SERVINGS":
       return action.servings > 0 ? { ...state, servings: action.servings } : state;
+    case "SET_STEPS": {
+      const total = Math.max(1, action.steps) + 2;
+      return total === state.total
+        ? state
+        : { ...state, total, index: Math.min(state.index, total - 1) };
+    }
+    case "RESET":
+      return initCookingState({ steps: state.total - 2, servings: action.servings });
   }
 }
 

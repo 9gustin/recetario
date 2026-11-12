@@ -1,5 +1,8 @@
 import { requireUser } from "@/lib/auth";
 import { createClient } from "@/lib/supabase/server";
+import Link from "next/link";
+import { Bell, ClipboardList, ShieldCheck, Inbox, Salad } from "lucide-react";
+import { getUnresolvedInboxCount } from "@/lib/inbox/queries";
 import { EditNameForm } from "@/components/profile/edit-name-form";
 import { PillButton } from "@/components/shared/pill-button";
 
@@ -14,6 +17,7 @@ export default async function Page() {
     .eq("id", user.id)
     .single();
 
+  const inboxCount = await getUnresolvedInboxCount();
   const name = profile?.display_name ?? user.email ?? "";
   const initial = name.trim().charAt(0).toUpperCase() || "?";
 
@@ -30,6 +34,51 @@ export default async function Page() {
       </header>
 
       <EditNameForm currentName={name} />
+
+      <Link
+        href="/perfil/alimentacion"
+        className="flex min-h-14 items-center gap-3 rounded-2xl border border-border bg-surface px-4"
+      >
+        <Salad className="size-5" aria-hidden="true" />
+        <span className="flex-1 text-[15px] font-semibold">Mi alimentación</span>
+      </Link>
+
+      <Link
+        href="/perfil/plan"
+        className="flex min-h-14 items-center gap-3 rounded-2xl border border-border bg-surface px-4"
+      >
+        <ClipboardList className="size-5" aria-hidden="true" />
+        <span className="flex-1 text-[15px] font-semibold">Mi plan</span>
+      </Link>
+
+      <Link
+        href="/perfil/notificaciones"
+        className="flex min-h-14 items-center gap-3 rounded-2xl border border-border bg-surface px-4"
+      >
+        <Bell className="size-5" aria-hidden="true" />
+        <span className="flex-1 text-[15px] font-semibold">Notificaciones</span>
+      </Link>
+
+      <Link
+        href="/perfil/datos"
+        className="flex min-h-14 items-center gap-3 rounded-2xl border border-border bg-surface px-4"
+      >
+        <ShieldCheck className="size-5" aria-hidden="true" />
+        <span className="flex-1 text-[15px] font-semibold">Mis datos</span>
+      </Link>
+
+      <Link
+        href="/perfil/bandeja"
+        className="flex min-h-14 items-center gap-3 rounded-2xl border border-border bg-surface px-4"
+      >
+        <Inbox className="size-5" aria-hidden="true" />
+        <span className="flex-1 text-[15px] font-semibold">Bandeja</span>
+        {inboxCount > 0 ? (
+          <span className="rounded-full bg-accent px-2 py-0.5 text-xs font-bold text-accent-foreground">
+            {inboxCount}
+          </span>
+        ) : null}
+      </Link>
 
       <form action="/auth/signout" method="post" className="mt-auto">
         <PillButton type="submit" variant="outline" fullWidth>

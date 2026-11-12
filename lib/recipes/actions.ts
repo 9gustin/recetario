@@ -4,10 +4,9 @@ import { revalidatePath } from "next/cache";
 import { z } from "zod";
 import { createClient } from "@/lib/supabase/server";
 import { requireUser } from "@/lib/auth";
-import { recipeInputSchema } from "@/lib/schemas/recipe";
-import { matchLocal } from "@/lib/domain/ingredient-match";
-import { parseIngredientLine } from "@/lib/domain/ingredient-line";
 import { parseSnapshot } from "@/lib/domain/recipe-diff";
+import { saveRecipeWith } from "./save";
+import { compatForRecipes, forbiddenRecipeIds, getGroupDiets } from "./compatibility";
 import type { RecipeListItem } from "./queries";
 import { ingredientSearchSchema, recipeSearchSchema } from "@/lib/schemas/recipe-search";
 
@@ -16,54 +15,11 @@ export async function saveRecipe(
 ): Promise<
   { ok: true; data: { id: string; current_version: number } } | { ok: false; error: string }
 > {
-  const parsed = recipeInputSchema.safeParse(raw);
-  if (!parsed.success) return { ok: false, error: "Revisá los datos de la receta." };
-
   await requireUser();
-  const supabase = await createClient();
-
-  // Resolver ingredient_id contra el catálogo (exacto/alias); el fuzzy queda para el RPC.
-  const { data: catalog } = await supabase.from("ingredients").select("id, name, aliases");
-  const catalogList = (catalog ?? []).map((c) => ({
-    id: c.id,
-    name: c.name,
-    aliases: c.aliases ?? [],
-  }));
-
-  const ingredients = parsed.data.ingredients.map((ing) => {
-    if (ing.ingredient_id) return ing;
-    const name = parseIngredientLine(ing.raw_text ?? "").name;
-    const match = name ? matchLocal(name, catalogList) : null;
-    return { ...ing, ingredient_id: match?.id ?? null };
-  });
-
-  const { data, error } = await supabase.rpc("save_recipe", {
-    p_recipe: {
-      id: parsed.data.id ?? null,
-      group_id: parsed.data.group_id,
-      title: parsed.data.title,
-      description: parsed.data.description,
-      servings: parsed.data.servings,
-      prep_minutes: parsed.data.prep_minutes,
-      cook_minutes: parsed.data.cook_minutes,
-      total_minutes: parsed.data.total_minutes,
-      difficulty: parsed.data.difficulty,
-      tags: parsed.data.tags,
-      source_type: parsed.data.source_type,
-      source_url: parsed.data.source_url,
-      image_url: parsed.data.image_url,
-      ingredients,
-      steps: parsed.data.steps.map((s) => ({ ...s, ingredient_ids: s.ingredient_ids ?? [] })),
-      change_note: parsed.data.change_note ?? null,
-      origin: parsed.data.origin,
-    },
-  });
-
-  if (error || !data) return { ok: false, error: "No se pudo guardar la receta." };
-
-  const saved = data as { id: string; current_version: number };
-  revalidatePath(`/g/${parsed.data.group_id}/recetas`);
-  return { ok: true, data: { id: saved.id, current_version: saved.current_version } };
+  const result = await saveRecipeWith(await createClient(), raw);
+  const groupId = (raw as { group_id?: unknown } | null)?.group_id;
+  if (result.ok && typeof groupId === "string") revalidatePath(`/g/${groupId}/recetas`);
+  return result;
 }
 
 export async function deleteRecipe(
@@ -141,7 +97,15 @@ export async function uploadRecipeImage(
   return { ok: true, data: { imageUrl: pub.publicUrl } };
 }
 
-export type RecipeSearchResult = { recipes: RecipeListItem[]; hasMore: boolean };
+export type RecipeCompat = {
+  userId: string;
+  name: string | null;
+  status: "ok" | "limit" | "forbidden" | "unknown";
+};
+export type RecipeSearchResult = {
+  recipes: (RecipeListItem & { compat: RecipeCompat[] })[];
+  hasMore: boolean;
+};
 
 /** Busca y filtra recetas del grupo (RLS limita a los grupos del usuario). Paginado de a 24. */
 export async function searchRecipes(
@@ -165,6 +129,7 @@ export async function searchRecipes(
     .from("recipes")
     .select([columns, ...joins].join(", "))
     .eq("group_id", input.groupId)
+    .eq("status", "active")
     .is("deleted_at", null);
 
   if (input.q) {
@@ -176,6 +141,13 @@ export async function searchRecipes(
   if (input.favoriteOnly) query = query.eq("recipe_favorites.user_id", user.id);
   if (input.ingredientId) query = query.eq("recipe_ingredients.ingredient_id", input.ingredientId);
   if (input.tag) query = query.contains("tags", [input.tag]);
+
+  // Compatibilidad con el perfil de los miembros del grupo (solo restricciones, vía RPC).
+  const diets = await getGroupDiets(input.groupId);
+  if (input.aptFor?.length) {
+    const blocked = await forbiddenRecipeIds(input.groupId, input.aptFor, diets);
+    if (blocked.length) query = query.not("id", "in", `(${blocked.join(",")})`);
+  }
   if (input.maxMinutes) query = query.lte("total_minutes", input.maxMinutes);
 
   // Pedimos una fila de más para saber si hay otra página.
@@ -191,7 +163,24 @@ export async function searchRecipes(
     delete item.recipe_ingredients;
     return item as RecipeListItem;
   });
-  return { ok: true, data: { recipes, hasMore: rows.length > input.limit } };
+  const compat = await compatForRecipes(
+    recipes.map((r) => r.id),
+    diets,
+  );
+  return {
+    ok: true,
+    data: {
+      recipes: recipes.map((r) => ({
+        ...r,
+        compat: (compat.get(r.id) ?? []).map((m) => ({
+          userId: m.userId,
+          name: m.displayName,
+          status: m.status,
+        })),
+      })),
+      hasMore: rows.length > input.limit,
+    },
+  };
 }
 
 export type IngredientSuggestion = { id: string; name: string };
@@ -261,4 +250,26 @@ export async function restoreRecipeVersion(
   });
   if (result.ok) revalidatePath(`/g/${recipe.group_id}/recetas/${recipe.id}`);
   return result;
+}
+
+export type MentionRecipe = { id: string; title: string; image_url: string | null };
+
+/** Títulos de las recetas del grupo para el autocompletado de "@" (se filtra en el cliente, sin acentos). */
+export async function listRecipesForMention(
+  raw: unknown,
+): Promise<{ ok: true; data: MentionRecipe[] } | { ok: false; error: string }> {
+  const parsed = z.object({ groupId: z.string().uuid() }).safeParse(raw);
+  if (!parsed.success) return { ok: false, error: "Grupo inválido." };
+  await requireUser();
+  const supabase = await createClient();
+  const { data, error } = await supabase
+    .from("recipes")
+    .select("id, title, image_url")
+    .eq("group_id", parsed.data.groupId)
+    .eq("status", "active")
+    .is("deleted_at", null)
+    .order("updated_at", { ascending: false })
+    .limit(300);
+  if (error) return { ok: false, error: "No se pudieron cargar las recetas." };
+  return { ok: true, data: data ?? [] };
 }

@@ -5,7 +5,7 @@
 
 ---
 
-### T8B.1 — Migración: plan vivo y registro
+### [x] T8B.1 — Migración: plan vivo y registro
 - **Depende de:** T6.1, T7.1
 - **Archivos:** `supabase/migrations/<ts>_diet_plans.sql`, `supabase/tests/08b_diet_plans.test.sql`.
 - **Pasos:**
@@ -16,7 +16,7 @@
   5. RPC `log_meal(p_date, p_slot, p_status, p_note)` → upsert por `(user_id, date, slot)`.
 - **Aceptación:** pgTAP: B (mismo grupo) obtiene las fórmulas de A vía RPC pero no puede leer `meal_logs` ni `diet_plans` de A.
 
-### T8B.2 — Dominio: adherencia y permitidos
+### [x] T8B.2 — Dominio: adherencia y permitidos
 - **Depende de:** T7.2
 - **Archivos:** `lib/domain/adherence.ts` + test, `lib/schemas/diet-plan.ts`.
 - **Pasos:**
@@ -26,7 +26,7 @@
   4. Tests: semana completa, permitidos al límite y excedidos, comidas sin registrar, días específicos.
 - **Aceptación:** 100% de ramas cubiertas.
 
-### T8B.3 — Digitalizar el plan (ingesta con IA)
+### [x] T8B.3 — Digitalizar el plan (ingesta con IA)
 - **Depende de:** T8B.1, T8B.2, T5.1, T5.2
 - **Archivos:** `app/api/ai/diet-plan/ingest/route.ts`, `lib/ai/prompts/diet-plan.ts`, `lib/ai/diet-plan/ingest.ts`.
 - **Pasos:**
@@ -36,7 +36,7 @@
   4. Las `restrictions` se proponen al perfil (F5) como un draft de perfil, para confirmar ahí.
 - **Aceptación:** con un PDF de ejemplo de 10+ páginas (fixture en `tests/evals/fixtures/`) devuelve 4–5 comidas con fórmula, reglas y permitidos, en < 40 s.
 
-### T8B.4 — Ajustar el plan charlando
+### [x] T8B.4 — Ajustar el plan charlando
 - **Depende de:** T8B.3
 - **Archivos:** `app/api/ai/diet-plan/[id]/chat/route.ts`, `lib/ai/diet-plan/{agent,tools}.ts`, `app/(app)/perfil/plan/digitalizar/page.tsx`, `components/diet-plan/*`.
 - **Pasos:**
@@ -46,7 +46,7 @@
   4. "Ver cómo quedó mi plan" → confirma (`status = 'active'`, archiva el anterior).
 - **Aceptación:** "no me gusta el yogur del desayuno" propone 3 reemplazos con proteína + lácteo y ninguno con prohibidos.
 
-### T8B.5 — Pantalla "Mi plan"
+### [x] T8B.5 — Pantalla "Mi plan"
 - **Depende de:** T8B.4
 - **Archivos:** `app/(app)/perfil/plan/page.tsx`, `components/diet-plan/today-plan.tsx`, `components/diet-plan/allowances.tsx`, tarjeta en `app/(app)/perfil/page.tsx`.
 - **Pasos:**
@@ -57,7 +57,7 @@
   5. Botón principal "Registrar lo que comí". En Perfil, tarjeta "Mi plan · semana 3" con anillo de progreso.
 - **Aceptación:** coincide con el diseño del canvas a 375 px en los tres temas.
 
-### T8B.6 — Registrar y seguimiento
+### [x] T8B.6 — Registrar y seguimiento
 - **Depende de:** T8B.5
 - **Archivos:** `app/(app)/perfil/plan/registrar/page.tsx`, `components/diet-plan/log-meal.tsx`, `components/diet-plan/week-grid.tsx`, `app/api/ai/meal-logs/classify/route.ts`.
 - **Pasos:**
@@ -68,7 +68,7 @@
   5. Al terminar una sesión de modo cocinar con `plan_entry_id`, registrar automáticamente "Cumplí" para cada comensal con plan vivo (con toast "Registrado · deshacer").
 - **Aceptación:** registrar una comida lleva un toque; la grilla y los permitidos se actualizan al instante.
 
-### T8B.7 — Integración con plan semanal e ideas
+### [x] T8B.7 — Integración con plan semanal e ideas
 - **Depende de:** T8B.1, T7.8, T7.12
 - **Archivos:** ajustes en `lib/domain/validate-plan.ts`, `lib/ai/plan-agent/tools.ts`, `lib/ai/suggest/*`.
 - **Pasos:**
@@ -77,7 +77,7 @@
   3. ¿Qué tenés? e Ideas filtran/ordenan por encaje con la fórmula del momento.
 - **Aceptación:** con un plan vivo "cena sin harinas", el plan con IA no propone pastas a la noche y las ideas de la cena tampoco.
 
-### T8B.8 — Evals y E2E
+### [x] T8B.8 — Evals y E2E
 - **Archivos:** `tests/evals/diet-plan/*`, `tests/e2e/diet-plan.spec.ts`.
 - **Pasos:** evals con 3 planes de ejemplo (PDF, foto, audio transcripto): comidas y permitidos detectados, reemplazos válidos. E2E: subir PDF de prueba (IA mockeada) → ajustar con un reemplazo → activar → registrar 3 comidas y un permitido → grilla y contador correctos.
 - **Aceptación:** evals ≥ 90%; e2e en verde.
@@ -89,3 +89,19 @@
 - [ ] Prueba real: cargar el plan de la nutricionista y registrarlo durante una semana.
 
 ## Notas de ejecución
+
+- T8B.1: Se agregó open_questions a diet_plans y activate_diet_plan (archiva el activo anterior). meal_logs.cooking_session_id sin FK por ahora.
+
+- T8B.2: Los permitidos se asignan en orden cronológico dentro del tope semanal; la semana cuenta solo comidas vencidas (≤ hoy) o registradas.
+
+- T8B.3: Las restricciones se proponen al perfil con ingestFoodProfile (borrador a confirmar). El eval con un PDF real de 10+ páginas queda para T8B.8 (se usarán planes en texto/dictado como fixtures; un PDF real lo aporta el usuario).
+
+- T8B.4: propose_swaps recibe candidatos del modelo y el servidor descarta los prohibidos por el perfil (checkRecipe); apply_swap vuelve a validar. runPlanAgent se generalizó (tools/feature/ctx). Falta probar con la API real en T8B.8.
+
+- T8B.5: No hay diseño canvas a mano para verificar a 375 px en los tres temas; usa tokens de color.
+
+- T8B.6: Pendiente dentro de T8B.6: registrar automático 'Cumplí' al terminar una sesión de cocinar con plan_entry_id (paso 5) y el historial de semanas anteriores; se retoman después de T8B.8 si hay tiempo.
+
+- T8B.7: MEAL_RULE_MISMATCH solo avisa. Clasificación por familia→grupo de alimentos en lib/domain/meal-rules.ts. Ideas y ¿Qué tenés? filtran (duro) lo que no encaja con la fórmula del momento; falta verificarlo con la API real.
+
+- T8B.8: Evals: 3 planes (texto, dictado, tabla) + ajuste por chat, 4/4 con la API real. Sin fixture PDF/foto: se prueba a mano. E2E con ingesta simulada.

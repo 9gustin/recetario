@@ -1,9 +1,15 @@
 "use client";
 
+import type { CookingSummary } from "@/lib/cooking/queries";
+import type { RecipeQuestion } from "@/lib/ai/assistant/queries";
+import { CookingHistory } from "./cooking-history";
+import { AdaptSheet } from "../adapt/adapt-sheet";
+import { ForWhom, type ForWhomMember } from "./for-whom";
+import { ShareSheet, type ShareContactItem, type ShareGroup } from "../share-sheet";
 import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { ChevronLeft, Heart, Pencil, Trash2, History } from "lucide-react";
+import { ChevronLeft, Heart, History, MessageSquare, Pencil, Trash2 } from "lucide-react";
 import { PillButton } from "@/components/shared/pill-button";
 import { cn } from "@/lib/utils";
 import { formatQuantity } from "@/lib/domain/format";
@@ -13,6 +19,17 @@ import { deleteRecipe, toggleFavorite } from "@/lib/recipes/actions";
 
 type Props = {
   groupId: string;
+  cooking?: CookingSummary;
+  questions?: RecipeQuestion[];
+  forWhom?: ForWhomMember[];
+  adaptMembers?: { id: string; name: string }[];
+  /** Fila de ingrediente → el peor estado entre las personas del grupo. */
+  ingredientProblems?: Record<string, "forbidden" | "limit" | "unknown">;
+  share?: {
+    groups: ShareGroup[];
+    contacts: ShareContactItem[];
+    initialShareUrl: string | null;
+  };
   recipe: {
     id: string;
     title: string;
@@ -24,6 +41,7 @@ type Props = {
     total_minutes: number | null;
     difficulty: string | null;
     tags: string[];
+    forked_from?: { title: string; group_name: string | null; href: string | null } | null;
     current_version: number;
     is_favorite: boolean;
     ingredients: {
@@ -45,7 +63,16 @@ type Props = {
   };
 };
 
-export function RecipeDetail({ groupId, recipe }: Props) {
+export function RecipeDetail({
+  groupId,
+  recipe,
+  cooking,
+  questions = [],
+  forWhom = [],
+  adaptMembers = [],
+  ingredientProblems = {},
+  share,
+}: Props) {
   const router = useRouter();
   const [servings, setServings] = useState(recipe.servings);
   const [favorite, setFavorite] = useState(recipe.is_favorite);
@@ -118,6 +145,20 @@ export function RecipeDetail({ groupId, recipe }: Props) {
       </section>
 
       <div className="flex flex-col gap-5 px-5 pt-4 pb-8">
+        {recipe.forked_from ? (
+          <p className="text-[13px] text-muted">
+            Basada en{" "}
+            {recipe.forked_from.href ? (
+              <Link href={recipe.forked_from.href} className="font-semibold text-accent underline">
+                {recipe.forked_from.title}
+              </Link>
+            ) : (
+              <strong className="font-semibold text-foreground">{recipe.forked_from.title}</strong>
+            )}
+            {recipe.forked_from.group_name ? ` de ${recipe.forked_from.group_name}` : ""}
+          </p>
+        ) : null}
+
         {recipe.tags.length > 0 || recipe.difficulty ? (
           <div className="flex flex-wrap gap-2">
             {recipe.difficulty ? (
@@ -138,6 +179,8 @@ export function RecipeDetail({ groupId, recipe }: Props) {
         ) : null}
 
         {recipe.description ? <p className="text-sm text-muted">{recipe.description}</p> : null}
+        {forWhom.length > 0 ? <ForWhom members={forWhom} /> : null}
+        {cooking ? <CookingHistory summary={cooking} /> : null}
 
         {/* Porciones + ingredientes */}
         <div>
@@ -198,7 +241,13 @@ export function RecipeDetail({ groupId, recipe }: Props) {
                       {checked.has(ing.id) ? "✓" : ""}
                     </span>
                     <span
-                      className={cn("truncate", checked.has(ing.id) && "text-muted line-through")}
+                      className={cn(
+                        "truncate",
+                        checked.has(ing.id) && "text-muted line-through",
+                        ingredientProblems[ing.id] === "forbidden" &&
+                          "font-semibold text-danger-soft",
+                        ingredientProblems[ing.id] === "limit" && "font-semibold text-accent",
+                      )}
                     >
                       {name}
                       {ing.preparation ? (
@@ -236,10 +285,44 @@ export function RecipeDetail({ groupId, recipe }: Props) {
           ))}
         </div>
 
+        {questions.length > 0 ? (
+          <section className="flex flex-col gap-2" aria-label="Preguntas sobre esta receta">
+            <h2 className="font-display text-[22px] font-normal">Preguntas sobre esta receta</h2>
+            <ul className="flex flex-col gap-2">
+              {questions.map((q) => (
+                <li key={q.conversationId}>
+                  <Link
+                    href={`/g/${groupId}/preguntar?c=${q.conversationId}`}
+                    className="flex min-h-12 items-center rounded-2xl border border-border bg-surface px-4 text-sm"
+                  >
+                    <span className="truncate">{q.title}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ) : null}
+
         {/* Acciones */}
         <div className="flex flex-col gap-2">
           <PillButton asChild fullWidth>
             <Link href={`/g/${groupId}/recetas/${recipe.id}/cocinar`}>Cocinar</Link>
+          </PillButton>
+          {share ? (
+            <ShareSheet
+              recipeId={recipe.id}
+              recipeTitle={recipe.title}
+              currentGroupId={groupId}
+              groups={share.groups}
+              contacts={share.contacts}
+              initialShareUrl={share.initialShareUrl}
+            />
+          ) : null}
+          {adaptMembers.length > 0 ? <AdaptSheet recipe={recipe} members={adaptMembers} /> : null}
+          <PillButton asChild variant="outline" fullWidth size="md">
+            <Link href={`/g/${groupId}/preguntar?receta=${recipe.id}`}>
+              <MessageSquare className="size-4" /> Preguntar por esta receta
+            </Link>
           </PillButton>
           <div className="grid grid-cols-3 gap-2">
             <PillButton asChild variant="outline" size="md">

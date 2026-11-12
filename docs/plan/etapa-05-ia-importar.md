@@ -5,7 +5,7 @@
 
 ---
 
-### T5.1 — Infraestructura de IA
+### [x] T5.1 — Infraestructura de IA
 - **Depende de:** T2.4 · 👤 `ANTHROPIC_API_KEY` en `.env.local` y en Vercel.
 - **Archivos:** `lib/ai/client.ts`, `lib/ai/models.ts`, `lib/ai/run-structured.ts`, `lib/ai/rate-limit.ts`, `supabase/migrations/<ts>_ai.sql`, `lib/ai/run-structured.test.ts`.
 - **Pasos:**
@@ -22,7 +22,7 @@
   6. Test con el cliente mockeado: salida válida, salida inválida → reintento, segunda falla → error.
 - **Aceptación:** un script `scripts/ai-smoke.ts` (`pnpm tsx`) llama a `runStructured` con un esquema simple y queda registrado en `ai_runs`.
 
-### T5.2 — Voz: grabar y transcribir
+### [x] T5.2 — Voz: grabar y transcribir
 - **Depende de:** T5.1 · 👤 decidir proveedor y cargar su API key (`TRANSCRIPTION_PROVIDER`, `OPENAI_API_KEY` o `DEEPGRAM_API_KEY`).
 - **Archivos:** `lib/transcription/index.ts`, `lib/transcription/{openai,deepgram}.ts`, `app/api/transcribe/route.ts`, `components/voice/voice-recorder.tsx`, `lib/hooks/use-recorder.ts`, migración del bucket `audio`.
 - **Pasos:**
@@ -34,7 +34,7 @@
   6. 👤 **Prueba de calidad:** grabar 3 audios reales y comparar proveedores; anotar la elección en "Notas de ejecución".
 - **Aceptación:** dictar 30 segundos en el celular (iOS y Android) devuelve un texto correcto.
 
-### T5.3 — Importar desde URL
+### [x] T5.3 — Importar desde URL
 - **Depende de:** T5.1
 - **Archivos:** `lib/import/fetch-url.ts`, `lib/import/json-ld.ts` + tests con fixtures HTML en `tests/fixtures/recipes/`.
 - **Pasos:**
@@ -43,7 +43,7 @@
   3. Si no hay JSON-LD: extraer texto principal (quitar scripts, nav, footer) y truncarlo a ~15k caracteres para la IA.
 - **Aceptación:** tests con 3 fixtures (una con JSON-LD simple, otra con `@graph`, otra sin JSON-LD).
 
-### T5.4 — Endpoint de parseo de recetas
+### [x] T5.4 — Endpoint de parseo de recetas
 - **Depende de:** T5.1, T5.3, T2.3
 - **Archivos:** `app/api/ai/recipes/parse/route.ts`, `lib/ai/prompts/parse-recipe.ts`, `lib/ai/recipes/parse.ts`, `lib/ai/ingredients/create-entry.ts`.
 - **Pasos:**
@@ -55,7 +55,7 @@
   6. Devuelve el borrador (no guarda la receta).
 - **Aceptación:** 5 entradas de ejemplo (una de cada tipo + una "desprolija") devuelven borradores válidos.
 
-### T5.5 — UI de importación
+### [x] T5.5 — UI de importación
 - **Depende de:** T5.2, T5.4
 - **Archivos:** `components/recipes/new-recipe-menu.tsx`, `app/(app)/g/[groupId]/recetas/importar/page.tsx`, `components/recipes/import/*`, ajustes en `recipe-form`.
 - **Pasos:**
@@ -65,7 +65,7 @@
   4. Errores: cuota agotada, foto ilegible, link sin receta → mensajes claros con opción de reintentar o cargarla a mano.
 - **Aceptación:** de foto a receta guardada en < 1 minuto.
 
-### T5.6 — Evals de parseo
+### [x] T5.6 — Evals de parseo
 - **Archivos:** `tests/evals/parse-recipe/cases/*.json`, `tests/evals/parse-recipe/run.ts`, script `eval:parse`.
 - **Pasos:** 15 casos (texto, voz transcripta, 3 imágenes en `tests/evals/fixtures/`) con chequeos automáticos: JSON válido, cantidad de ingredientes esperada ±1, ingredientes clave presentes, ningún paso sin verbo, pasos de horno con `timer_kind = passive` y duración. Imprime una tabla de resultados y costo total. **No corre en CI.**
 - **Aceptación:** ≥ 90% de casos pasan; resultado anotado en "Notas de ejecución".
@@ -79,3 +79,15 @@
 
 ## Notas de ejecución
 - Proveedor de transcripción (decisión de la persona, 2026-11-12): **OpenAI `gpt-4o-transcribe`** con `language=es`. Es el único proveedor; se salteó la comparación con Deepgram para simplificar. Esto deja hecho el paso 6 de T5.2 (la prueba de calidad con audios reales queda para validar al implementar la dictada en el celular). `TRANSCRIPTION_PROVIDER=openai`, key en `OPENAI_API_KEY`. La interfaz `Transcriber` sigue siendo intercambiable por si más adelante se quiere otro.
+
+- T5.1: se instaló `@anthropic-ai/sdk` y `tsx` (el plan pide `pnpm tsx` para el script de humo; el script corre con `--conditions=react-server` para poder importar módulos `server-only`). `runStructured` recibe además `userId`/`groupId` (necesarios para `ai_runs`) y acepta un cliente y un registrador inyectables para los tests; suma los tokens de los dos intentos y guarda también `cache_read_tokens`. Las tablas de IA solo tienen policies de lectura propia: escribe el servidor con service role. `consume_ai_quota` cuenta por día de Argentina y no es invocable por clientes. Verificado contra la API real (`pnpm ai:smoke`): salida válida en 1,5 s y fila en `ai_runs`.
+
+- T5.2: solo se implementó el proveedor OpenAI (`gpt-4o-transcribe`, `language=es` + vocabulario de cocina) porque es el elegido; la interfaz `Transcriber` sigue siendo intercambiable. Decisión: el audio se **borra del bucket apenas se transcribe** (la spec hablaba de 30 días): ya no hace falta y es más privado. `/api/transcribe` valida sesión, que el path sea `<user_id>/<archivo>`, cuota (`transcribe`: 40/día) y tamaño (≤ 20 MB). `useRecorder` elige webm/opus o mp4 (iOS), limita a 5 min, mide el volumen para animar el botón y permite cancelar; `VoiceRecorder` deja editar el texto antes de usarlo. Verificado con la API real usando audio generado por TTS: transcribió bien "zapallitos", "morrón" y "cebolla de verdeo" en 1,7 s. **Pendiente:** la prueba con el micrófono real en iOS y Android (no se puede automatizar acá).
+
+- T5.3: `fetchUrl` usa `node:http/https` con un `lookup` propio que valida la IP a la que realmente se conecta (cierra el DNS rebinding que dejaría abierto resolver y después hacer `fetch`), vuelve a validar en cada redirección (máx. 3), y corta por timeout (10 s), por tamaño (3 MB) y por tipo de contenido. `isPrivateAddress` cubre loopback, privadas, link-local (metadata de la nube), CGNAT, multicast e IPv6 (incluye IPv4 mapeado). `extractJsonLdRecipe` entiende `@graph`, `@type` múltiple, `HowToSection`, duraciones ISO 8601 y un bloque de pasos numerados en una sola cadena. Se agregaron `image_url` y `source_url` a `recipeDraftSchema`. 3 fixtures HTML en `tests/fixtures/recipes/` y 39 tests.
+
+- T5.4: `POST /api/ai/recipes/parse` devuelve un borrador (no guarda). Texto/dictado → Haiku; foto → Sonnet con bloques de imagen (subidas antes a `<grupo>/imports/`, solo JPG/PNG/WEBP/GIF ≤ 5 MB, hasta 4); link → si tiene JSON-LD y la página está en español, sin IA salvo un paso Haiku que estima duración y tipo de cada paso; si la página está en otro idioma, la IA la traduce y convierte medidas; sin JSON-LD, texto principal a la IA. Después vincula ingredientes (exacto → alias → `search_ingredients` con similitud ≥ 0,5 → ficha nueva por IA, máx. 15 por importación, solo con nombres razonables). **Hallazgo importante:** `claude-sonnet-5-5` no acepta `tool_choice` forzado (error 400); `SUPPORTS_FORCED_TOOL` en `lib/ai/models.ts` hace que `runStructured` use `auto` con ese modelo, refuerce la instrucción y reintente si contesta con texto. Verificado con la API real sobre 6 entradas (texto, dictado desprolijo, link en inglés, foto generada, mensaje de chat desprolijo, texto que no es receta): 5 borradores válidos y la que no es receta da 422.
+
+- T5.5: el FAB "+" abre un menú (Escribirla, Pegar texto o link, Sacarle foto, Dictarla). `/recetas/importar?modo=…` tiene el flujo: entrada → "Procesando…" con mensajes rotativos → `RecipeForm` precargado (con aviso "Revisá que esté todo bien", `source_type` según el origen y los ingredientes nuevos resaltados con "ingrediente nuevo, revisalo"; el resaltado compara por inclusión porque "1 puñado de couve" se parsea como "puñado de couve"). Si falla: mensaje claro, "Reintentar" (excepto fotos) y "Cargarla a mano". Las fotos se comprimen a webp (máx. 1600 px, `lib/image/compress.ts`, extraída del formulario) y se suben a `<grupo>/imports/`. Los e2e mockean `/api/ai/recipes/parse` (CI no tiene clave y costaría plata); la prueba contra la IA real se hizo a mano en T5.4. El dictado no tiene e2e (requiere micrófono).
+
+- T5.6: 15 casos (6 de texto, 4 dictados desprolijos, 2 mensajes de chat, 3 fotos generadas en `tests/evals/fixtures/`) con chequeos automáticos: JSON válido, cantidad de ingredientes ±1, ingredientes clave presentes, cada paso con verbo y el paso de horno como pasivo con duración. `pnpm eval:parse [prefijo…]` imprime la tabla, el tiempo y el costo estimado; no corre en CI. **Resultado: 15/15 (100%), ~USD 0,115 por los 15 casos (≈ 0,8 centavos por receta), 3–6 s cada uno.** La heurística de "paso con verbo" tuvo que afinarse dos veces (falsos negativos con locuciones al inicio, pronombres enclíticos como "Hervílos", voseo indicativo "Rellenás" e irregulares como "Dale"): los pasos de la IA eran correctos, no se tocó el prompt.

@@ -10,6 +10,11 @@ try {
 const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
+/** Cliente con service role para preparar datos en los tests (ignora RLS). */
+export function adminClient() {
+  return admin();
+}
+
 function admin() {
   if (!url || !serviceRoleKey) {
     throw new Error(
@@ -22,13 +27,34 @@ function admin() {
 }
 
 /** Crea un usuario (email + contraseña) con la API admin; dispara perfil + grupo personal. */
-export async function createTestUser(email: string, password: string, name: string) {
-  const { error } = await admin().auth.admin.createUser({
+export async function createTestUser(
+  email: string,
+  password: string,
+  name: string,
+  opts: { onboarded?: boolean } = {},
+): Promise<string> {
+  const { data, error } = await admin().auth.admin.createUser({
     email,
     password,
     email_confirm: true,
     user_metadata: { display_name: name },
   });
+  if (error) throw error;
+  // Los tests saltean el onboarding salvo que lo prueben a propósito.
+  if (opts.onboarded !== false) {
+    await admin()
+      .from("profiles")
+      .update({ onboarded_at: new Date().toISOString() })
+      .eq("id", data.user.id);
+  }
+  return data.user.id;
+}
+
+/** Suma a alguien a un grupo (como si hubiera aceptado una invitación). */
+export async function addMemberToGroup(groupId: string, userId: string) {
+  const { error } = await admin()
+    .from("group_members")
+    .insert({ group_id: groupId, user_id: userId, role: "member" });
   if (error) throw error;
 }
 

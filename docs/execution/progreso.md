@@ -22,22 +22,22 @@ Archivo compartido entre los tres agentes. Cada uno lo lee al empezar y lo actua
 
 ## 2 · Código (DeepSeek) — [instrucciones](02-codigo-deepseek.md)
 
-**Próxima tarea:** T3.3
+**Próxima tarea:** —(plan completo)
 
 | Etapa | Estado |
 |---|---|
 | 1 · Auth y grupos | lista para revisión |
 | 2 · Recetario | lista para revisión |
-| 3 · Modo cocinar | pendiente |
-| 4 · Compartir | pendiente |
-| 5 · IA: importar | pendiente |
-| 5b · Preguntale | pendiente |
-| 6 · Perfil alimentario | pendiente |
-| 7 · Plan semanal + Hoy | pendiente |
-| 8 · Lista de compras | pendiente |
-| 8b · Plan vivo (+ T5B.6) | pendiente |
-| 9 · Meal prep | pendiente |
-| 10 · Notificaciones y pulido | pendiente |
+| 3 · Modo cocinar | lista para revisión |
+| 4 · Compartir | lista para revisión |
+| 5 · IA: importar | lista para revisión |
+| 5b · Preguntale | lista para revisión |
+| 6 · Perfil alimentario | lista para revisión |
+| 7 · Plan semanal + Hoy | lista para revisión |
+| 8 · Lista de compras | lista para revisión |
+| 8b · Plan vivo (+ T5B.6) | lista para revisión |
+| 9 · Meal prep | lista para revisión |
+| 10 · Notificaciones y pulido | lista para revisión |
 
 Estados: `pendiente` → `en curso` → `lista para revisión` → `revisada (fecha, informe)` o `bloqueada (motivo)`.
 
