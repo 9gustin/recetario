@@ -13,12 +13,18 @@ function sectionTitle(pathname: string): string {
 }
 
 /** Barra superior: título de la sección y selector de grupo. */
-export function TopBar({ groups }: { groups: GroupSummary[] }) {
+export function TopBar({
+  groups,
+  defaultGroupId,
+}: {
+  groups: GroupSummary[];
+  defaultGroupId?: string;
+}) {
   const title = sectionTitle(usePathname());
   return (
     <header className="sticky top-0 z-10 flex min-h-14 items-center justify-between gap-3 bg-background px-5 pt-[env(safe-area-inset-top)]">
       <h1 className="font-display text-[28px] leading-none font-normal">{title}</h1>
-      <GroupSwitcher groups={groups} />
+      <GroupSwitcher groups={groups} defaultGroupId={defaultGroupId} />
     </header>
   );
 }
