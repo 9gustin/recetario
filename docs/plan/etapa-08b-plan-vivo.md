@@ -16,7 +16,7 @@
   5. RPC `log_meal(p_date, p_slot, p_status, p_note)` → upsert por `(user_id, date, slot)`.
 - **Aceptación:** pgTAP: B (mismo grupo) obtiene las fórmulas de A vía RPC pero no puede leer `meal_logs` ni `diet_plans` de A.
 
-### T8B.2 — Dominio: adherencia y permitidos
+### [x] T8B.2 — Dominio: adherencia y permitidos
 - **Depende de:** T7.2
 - **Archivos:** `lib/domain/adherence.ts` + test, `lib/schemas/diet-plan.ts`.
 - **Pasos:**
@@ -91,3 +91,5 @@
 ## Notas de ejecución
 
 - T8B.1: Se agregó open_questions a diet_plans y activate_diet_plan (archiva el activo anterior). meal_logs.cooking_session_id sin FK por ahora.
+
+- T8B.2: Los permitidos se asignan en orden cronológico dentro del tope semanal; la semana cuenta solo comidas vencidas (≤ hoy) o registradas.
