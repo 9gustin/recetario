@@ -48,6 +48,7 @@ Los nombres están en `.env.example`. Local: `.env.local` (nunca se commitea). P
 | `ANTHROPIC_API_KEY` | Claude (IA). Solo servidor | `.env.local` · Vercel |
 | `TRANSCRIPTION_PROVIDER` | Proveedor de voz → texto (`openai`) | `.env.local` · Vercel |
 | `OPENAI_API_KEY` | Transcripción con `gpt-4o-transcribe`. Solo servidor | `.env.local` · Vercel |
+| `INNGEST_EVENT_KEY`, `INNGEST_SIGNING_KEY` | Jobs en segundo plano (Inngest). Los carga la integración de Inngest en Vercel | Vercel |
 | `NEXT_PUBLIC_POSTHOG_KEY`, `NEXT_PUBLIC_POSTHOG_HOST` | Analytics (opcional) | Vercel |
 
 Las variables de los demás servicios (Anthropic, transcripción, Inngest, Web Push) se agregan en las secciones siguientes a medida que se configuran.
@@ -57,3 +58,18 @@ Las variables de los demás servicios (Anthropic, transcripción, Inngest, Web P
 1. El deploy de Vercel está en verde.
 2. `https://<dominio>/api/health` responde `{"ok":true,"db":true}`.
 3. La URL abre en el celular y se puede instalar como app (Android: "Instalar app"; iOS: Compartir → "Agregar a inicio").
+
+## Jobs en segundo plano (Inngest)
+
+- **Producción:** cuenta en inngest.com con la integración de Vercel instalada para este proyecto; carga `INNGEST_EVENT_KEY` e `INNGEST_SIGNING_KEY` en Vercel.
+- **Local:** no hace falta cuenta ni claves. Con la app corriendo (`pnpm dev`), en otra terminal:
+
+```bash
+pnpm dlx inngest-cli@latest dev
+```
+
+La UI queda en http://localhost:8288 y detecta las funciones de la app automáticamente.
+
+## Email de las cuentas
+
+El login es con email y contraseña y **Confirm email está desactivado**, así que hoy no se manda ningún mail. Si más adelante se agrega recuperar contraseña o confirmar emails, conviene configurar un SMTP propio en Supabase (el de por defecto manda muy pocos mails por hora).
