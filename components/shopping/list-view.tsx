@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState, useTransition } from "react";
+import { useEffect, useMemo, useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import { Check, ChevronDown, MoreVertical, Plus, Undo2 } from "lucide-react";
 import { toast } from "sonner";
@@ -13,7 +13,8 @@ import {
 import { useRealtimeList } from "@/lib/hooks/use-realtime-list";
 import { AISLE_ORDER } from "@/lib/domain/shopping-list";
 import { aisleLabel, shareAsText } from "@/lib/domain/shopping-share";
-import { addManualItem, archiveList, setItemState } from "@/lib/shopping/actions";
+import { enqueue, flush, readQueue } from "@/lib/offline/queue";
+import { addManualItem, archiveList, fetchListItems, setItemState } from "@/lib/shopping/actions";
 import type { ListItem, ListRow } from "@/lib/shopping/types";
 import { cn } from "@/lib/utils";
 
@@ -39,8 +40,30 @@ export function ListView({
   const [collapsed, setCollapsed] = useState<Set<string>>(new Set());
   const [showDone, setShowDone] = useState(true);
   const [draft, setDraft] = useState("");
+  const [queued, setQueued] = useState(0);
+  const [online, setOnline] = useState(true);
   const [, start] = useTransition();
   useRealtimeList(list.id, setItems);
+
+  // Al volver la red, se sincroniza lo que se tachó sin conexión.
+  useEffect(() => {
+    const sync = async () => {
+      setOnline(navigator.onLine);
+      if (!navigator.onLine) return;
+      const left = await flush(async (c) => (await setItemState({ id: c.id, state: c.state })).ok);
+      setQueued(left);
+      if (left === 0) setItems(await fetchListItems(list.id));
+    };
+    const offline = () => setOnline(false);
+    void readQueue().then((q) => setQueued(q.length));
+    window.addEventListener("online", sync);
+    window.addEventListener("offline", offline);
+    void sync();
+    return () => {
+      window.removeEventListener("online", sync);
+      window.removeEventListener("offline", offline);
+    };
+  }, [list.id]);
 
   const visible = items.filter((i) => !i.no_longer_needed);
   const done = visible.filter((i) => i.state !== "pending").length;
@@ -62,7 +85,14 @@ export function ListView({
     const previous = item.state;
     setItems((prev) => prev.map((i) => (i.id === item.id ? { ...i, state } : i)));
     start(async () => {
-      const res = await setItemState({ id: item.id, state });
+      let res: Awaited<ReturnType<typeof setItemState>>;
+      try {
+        res = await setItemState({ id: item.id, state });
+      } catch {
+        // Sin conexión: se guarda en el dispositivo y se manda cuando vuelva la señal.
+        setQueued((await enqueue({ id: item.id, state })).length);
+        return;
+      }
       if (!res.ok) {
         setItems((prev) => prev.map((i) => (i.id === item.id ? { ...i, state: previous } : i)));
         return void toast.error(res.error);
@@ -140,6 +170,13 @@ export function ListView({
           </DropdownMenuContent>
         </DropdownMenu>
       </header>
+
+      {!online || queued > 0 ? (
+        <p role="status" className="mx-5 rounded-2xl bg-hero px-4 py-2.5 text-sm font-medium">
+          Sin conexión: se guarda y se manda cuando vuelva la señal
+          {queued > 0 ? ` (${queued} cambios)` : ""}.
+        </p>
+      ) : null}
 
       <form
         className="mx-5 flex items-center gap-2"

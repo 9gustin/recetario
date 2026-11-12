@@ -170,3 +170,47 @@ test("bandeja: aprobar el plan avisa a los demás miembros y se puede marcar tod
     .toBe(0);
   expect(unread).toBeTruthy();
 });
+
+test("offline: se tacha la lista sin conexión y al volver la red se sincroniza", async ({
+  browser,
+}) => {
+  test.setTimeout(150_000);
+  const email = `offline-${Date.now()}@test.com`;
+  const userId = await createTestUser(email, password, "Ana");
+  const groupId = await createGroupAs(email, password, "Casa");
+  const admin = adminClient();
+  const { data: list } = await admin
+    .from("shopping_lists")
+    .insert({ group_id: groupId, name: "Compra offline", created_by: userId })
+    .select("id")
+    .single();
+  const { data: item } = await admin
+    .from("shopping_list_items")
+    .insert([
+      { list_id: list!.id, display_name: "Zanahorias", aisle: "verduleria" },
+      { list_id: list!.id, display_name: "Leche", aisle: "lacteos" },
+    ])
+    .select("id, display_name");
+
+  const context = await mobileContext(browser);
+  const page = await context.newPage();
+  await signIn(page, email, password);
+  await page.goto(`/g/${groupId}/compras/${list!.id}`);
+  await page.waitForLoadState("networkidle");
+  await expect(page.getByRole("checkbox", { name: "Comprado: Zanahorias" })).toBeVisible();
+
+  await context.setOffline(true);
+  await page.getByRole("checkbox", { name: "Comprado: Zanahorias" }).tap();
+  await expect(page.getByText(/Sin conexión/)).toBeVisible();
+
+  await context.setOffline(false);
+  const zanahorias = item!.find((i) => i.display_name === "Zanahorias")!.id;
+  await expect
+    .poll(
+      async () =>
+        (await admin.from("shopping_list_items").select("state").eq("id", zanahorias).single()).data
+          ?.state,
+      { timeout: 20_000 },
+    )
+    .toBe("bought");
+});

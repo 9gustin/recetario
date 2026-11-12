@@ -20,7 +20,7 @@
 - **Depende de:** T10.1, T4.4
 - **Pasos:** nuevos tipos en `inbox_items`: `plan_approved` ("Sofi aprobó el plan de la semana"), `member_joined`, `list_done`. Push opcional para cada tipo. Marcar todo como leído.
 
-### T10.3 — Offline
+### [x] T10.3 — Offline
 - **Depende de:** T8.5
 - **Pasos:**
   1. Serwist runtime caching: páginas de recetas visitadas, la lista activa y el plan de la semana (stale-while-revalidate); imágenes con cache-first y límite.
@@ -51,3 +51,5 @@
 - T10.1: 👤 Falta cargar en Vercel NEXT_PUBLIC_VAPID_PUBLIC_KEY, VAPID_PRIVATE_KEY, VAPID_SUBJECT y CRON_SECRET, y dar de alta el pg_cron (SQL en docs/deploy.md); la entrega real en Android/iOS con la app cerrada solo se puede probar con un dispositivo. web-push agregado (justificado: es la librería estándar para VAPID).
 
 - T10.2: Los avisos se crean con el cliente admin (lib/inbox/notify.ts). Una lista pasa a 'done' cuando no queda nada pendiente y vuelve a 'active' si se destilda algo.
+
+- T10.3: idb-keyval agregado (cola offline). Caché: páginas de /g/*/(recetas|compras|plan|hoy) network-first 4 s, RSC stale-while-revalidate, imágenes cache-first (80). 👤 Falta probar en un celular real en modo avión (SW solo corre en build de producción) y confirmar que el modo cocinar abre una receta ya visitada sin red.
