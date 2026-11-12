@@ -19,7 +19,7 @@
 - **Aceptación:** `pnpm db:reset` ok; `save_recipe` dos veces deja 2 versiones.
 - **Verificación:** test pgTAP `supabase/tests/02_recipes.test.sql` (RLS cruzado entre grupos + versiones).
 
-### T2.2 — Dominio: unidades, parser de ingredientes y escalado
+### [x] T2.2 — Dominio: unidades, parser de ingredientes y escalado
 - **Depende de:** T0.6
 - **Archivos:** `lib/domain/units.ts`, `lib/domain/ingredient-line.ts`, `lib/domain/scale.ts`, `lib/domain/format.ts` + tests `*.test.ts`.
 - **Pasos:**
@@ -103,3 +103,5 @@
 ## Notas de ejecución
 
 - T2.1: búsqueda full-text con `spanish_unaccent` (copy de `pg_catalog.spanish` + `unaccent`). `search_tsv` se mantiene con dos triggers: uno BEFORE sobre `recipes` (título A, tags B, descripción C desde las propias columnas, porque al INSERT todavía no existen los ingredientes) y otro AFTER sobre `recipe_ingredients` que refresca el padre con el vector completo (incluye `raw_text` de ingredientes). `save_recipe(jsonb)` es un reemplazo completo (setea campos a NULL si no vienen), crea/actualiza receta, reemplaza ingredientes y pasos, incrementa `current_version` y escribe el snapshot. `search_ingredients` usa `extensions.similarity` (umbral 0.2) en vez del operador `%` para no lidiar con la calificación de operador del esquema `extensions`. Se agregó el helper `is_recipe_member(recipe_id)` (security definer) para el RLS de las tablas hijas. Favoritos en `recipe_favorites` (no `recipes.is_favorite`). Bucket `recipe-images` público de lectura y con escritura por miembro del grupo (primer segmento del path = group_id).
+
+- T2.2: se eliminó `lib/domain/example.test.ts` (placeholder de T0.6). El parser soporta enteros, decimales con coma/punto, fracciones (`1/2`, `½`, `1 y 1/2`), rangos (`2-3` → 2,5 + nota), "a gusto"/"c/n" y "(opcional)". La cantidad sin unidad explícita se interpreta como `unidad` (conteo). `roundQuantity` redondea gramos a 5/10, cucharadas a 1/2 y volúmenes chicos a cuartos; la pluralización es plural solo cuando la cantidad es mayor a 1 ("½ taza", "1 ½ tazas").
