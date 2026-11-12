@@ -59,7 +59,7 @@ export default async function Image({ params }: { params: Promise<{ token: strin
           {BRAND.name.toUpperCase()}
         </div>
         <div style={{ fontSize: 78, fontWeight: 700, lineHeight: 1.05 }}>{title}</div>
-        {by ? <div style={{ fontSize: 32 }}>Compartida por {by}</div> : null}
+        {by ? <div style={{ fontSize: 32 }}>{`Compartida por ${by}`}</div> : null}
       </div>
     </div>,
     size,

@@ -55,7 +55,7 @@
 - **Pasos:** en recetas forkeadas, mostrar "Basada en *Pollo al limón* de *Casa*" (si el usuario tiene acceso al original, con link; si no, solo el texto guardado en el fork). Guardar `forked_from_title` y `forked_from_group_name` en la copia para no depender de permisos.
 - **Fuera de alcance:** sincronizar cambios del original (Etapa 11+).
 
-### T4.6 — E2E de compartir
+### [x] T4.6 — E2E de compartir
 - **Archivos:** `tests/e2e/sharing.spec.ts`.
 - **Escenario:** A crea link → contexto anónimo lo abre y ve la receta → se loguea como C y la guarda en su grupo personal → A revoca → el link muestra "no disponible" · A copia la receta a otro grupo · A manda a B → B la acepta desde la bandeja.
 
@@ -77,3 +77,5 @@
 - T4.4: la bandeja (`/perfil/bandeja`) lista los ítems sin resolver con una tarjeta por `kind` (`recipe_shared` tiene diseño; el resto cae a una tarjeta genérica con "Descartar", para sumar tipos en la Etapa 10). "Guardar" pide el grupo y llama a `accept_inbox_recipe`; "Descartar" marca `resolved_at`. El badge de la tab Perfil sale de un `count` liviano (`head: true`) en el layout de `(app)`; también se muestra en la fila "Bandeja" del Perfil.
 
 - T4.5: las columnas `forked_from_title` y `forked_from_group_name` ya se agregaron en T4.1; acá solo se muestran: "Basada en X de Y", con link al original únicamente si la RLS todavía devuelve esa receta (si ya no hay acceso o se borró, queda el texto guardado en la copia).
+
+- T4.6: un solo escenario en `tests/e2e/sharing.spec.ts` cubre: link público abierto por una persona sin cuenta (con `og:image` y la imagen PNG generada), login con `next` y guardado en el grupo propio, revocar, copiar a otro grupo, y mandar a una persona con su bandeja y badge. Bug que encontró: Satori (imagen OG) exige `display: flex` en un div con más de un hijo, por eso "Compartida por {nombre}" va en un solo string. Helpers nuevos: `createGroupAs`, `addMemberToGroup`.

@@ -64,3 +64,22 @@ export async function seedRecipe(
   if (error) throw error;
   return (data as { id: string }).id;
 }
+
+/** Crea un grupo como el usuario indicado (RPC `create_group`). Devuelve su id. */
+export async function createGroupAs(
+  email: string,
+  password: string,
+  name: string,
+  emoji = "🏠",
+): Promise<string> {
+  const supabase = createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    { auth: { persistSession: false, autoRefreshToken: false } },
+  );
+  const { error: authError } = await supabase.auth.signInWithPassword({ email, password });
+  if (authError) throw authError;
+  const { data, error } = await supabase.rpc("create_group", { p_name: name, p_emoji: emoji });
+  if (error) throw error;
+  return data as string;
+}

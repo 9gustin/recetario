@@ -22,13 +22,26 @@ function admin() {
 }
 
 /** Crea un usuario (email + contraseña) con la API admin; dispara perfil + grupo personal. */
-export async function createTestUser(email: string, password: string, name: string) {
-  const { error } = await admin().auth.admin.createUser({
+export async function createTestUser(
+  email: string,
+  password: string,
+  name: string,
+): Promise<string> {
+  const { data, error } = await admin().auth.admin.createUser({
     email,
     password,
     email_confirm: true,
     user_metadata: { display_name: name },
   });
+  if (error) throw error;
+  return data.user.id;
+}
+
+/** Suma a alguien a un grupo (como si hubiera aceptado una invitación). */
+export async function addMemberToGroup(groupId: string, userId: string) {
+  const { error } = await admin()
+    .from("group_members")
+    .insert({ group_id: groupId, user_id: userId, role: "member" });
   if (error) throw error;
 }
 
