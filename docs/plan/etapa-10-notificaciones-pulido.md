@@ -32,7 +32,7 @@
 - **Pasos:** primera vez después del login, 3 pantallas salteables: (1) "¿Con quién cocinás?" → crear grupo + invitar; (2) "Cargá 3 recetas que hacen siempre" → atajos a dictar/foto/escribir; (3) "Contanos cómo comen" → perfil alimentario. Checklist en "Hoy" hasta completarlo.
 - **Aceptación:** una cuenta nueva llega a tener grupo, receta y perfil sin explicación externa.
 
-### T10.5 — Accesibilidad y performance
+### [x] T10.5 — Accesibilidad y performance
 - **Pasos:** Lighthouse mobile ≥ 90 en Performance, Accesibilidad y Best Practices en Hoy, Recetas y detalle; contraste AA en ambos temas; navegación por teclado y labels en formularios; `next/image` con tamaños correctos; revisar bundle (stories y dnd-kit cargados con `dynamic`).
 - **Aceptación:** reporte de Lighthouse guardado en `docs/perf/`.
 
@@ -55,3 +55,5 @@
 - T10.3: idb-keyval agregado (cola offline). Caché: páginas de /g/*/(recetas|compras|plan|hoy) network-first 4 s, RSC stale-while-revalidate, imágenes cache-first (80). 👤 Falta probar en un celular real en modo avión (SW solo corre en build de producción) y confirmar que el modo cocinar abre una receta ya visitada sin red.
 
 - T10.4: Nueva columna profiles.onboarded_at (las cuentas existentes quedan como ya vistas). Los e2e crean usuarios ya 'onboarded' salvo el de onboarding.
+
+- T10.5: Accent del tema mediodía oscurecido (#b34a1c) para AA con texto blanco; switcher de grupo incluye el nombre visible en su aria-label. Auditoría axe (WCAG 2.1 AA) en tests/e2e/a11y.spec.ts. Lighthouse de performance: ver docs/perf.

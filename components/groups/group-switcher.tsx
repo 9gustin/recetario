@@ -31,7 +31,7 @@ export function GroupSwitcher({ groups }: { groups: GroupSummary[] }) {
       <SheetTrigger asChild>
         <button
           type="button"
-          aria-label="Cambiar de grupo"
+          aria-label={`${active?.name ?? "Grupos"}: cambiar de grupo`}
           className="flex min-h-11 items-center gap-1.5 rounded-full border border-border px-3.5 text-sm font-semibold"
         >
           {active?.emoji ? <span aria-hidden="true">{active.emoji}</span> : null}
