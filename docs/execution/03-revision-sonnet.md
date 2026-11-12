@@ -85,7 +85,7 @@ Escribí `docs/reviews/etapa-XX.md` con la plantilla del §C.
 
 1. **Desde cero:** cloná el repo en `/tmp/recetario-check`, `pnpm install`, `pnpm db:start`, `pnpm db:reset`, `pnpm check`, `pnpm db:test`, `pnpm test:e2e`, `pnpm build`. Todo tiene que funcionar siguiendo solo `README.md` y `docs/deploy.md`; si falta un paso, corregí la documentación. Al terminar, `pnpm db:stop` en esa copia y borrala.
 2. **Flujos de punta a punta** (viewport 390 × 844, dos usuarios):
-   1. Alta con magic link → crear grupo "Casa" → invitar → el segundo usuario se une.
+   1. Alta con email y contraseña → crear grupo "Casa" → invitar → el segundo usuario se une.
    2. Cargar recetas: manual, pegando un link, con foto y dictando.
    3. Perfil alimentario por voz y plan vivo desde un PDF de ejemplo → indicadores de compatibilidad.
    4. Home sin plan → ¿Qué tenés? → elegir → home con plan.

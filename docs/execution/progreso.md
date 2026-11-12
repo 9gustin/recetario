@@ -13,7 +13,7 @@ Archivo compartido entre los tres agentes. Cada uno lo lee al empezar y lo actua
 - [x] Paso 7 — T0.6 Pruebas
 - [x] Paso 8 — T0.7 CI
 - [x] Paso 9 — T0.8 Producción
-- [ ] Paso 10 — Google OAuth
+- [ ] Paso 10 — Login email + contraseña (sin Google)
 - [ ] Paso 11 — Anthropic
 - [ ] Paso 12 — Transcripción (proveedor elegido: ___)
 - [ ] Paso 13 — Inngest

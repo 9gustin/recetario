@@ -51,7 +51,7 @@ Las tareas están detalladas (pasos, archivos, aceptación) en `docs/plan/<archi
 ### Etapa 1 — Auth y grupos · `docs/plan/etapa-01-auth-grupos.md`
 - T1.1 Migración: perfiles, grupos, miembros, invitaciones
 - T1.2 Tests de RLS (pgTAP)
-- T1.3 Login (Google + magic link) — diseño: `P/Perfil.html` (cabecera) + `§3` (login). Google ya está configurado.
+- T1.3 Login (email + contraseña) — diseño: `P/Perfil.html` (cabecera) + `§3` (login). Sin Google ni magic link (decisión de simplicidad).
 - T1.4 Grupo activo y selector
 - T1.5 Administrar grupos — diseño: `P/Perfil.html` (lista de grupos)
 - T1.6 Invitaciones por link — diseño: `§3` (unirse por invitación)

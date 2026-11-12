@@ -56,7 +56,6 @@ Ejecutá la tarea T1.3 del plan.
 | Supabase CLI (`pnpm dlx supabase` alcanza) | Migraciones, DB local | T0.5 |
 | Cuenta Supabase (proyecto `prod` en **São Paulo**) | DB en producción | T0.8 |
 | Cuenta Vercel conectada a GitHub | Hosting | T0.8 |
-| Google Cloud: OAuth Client (web) | Login con Google | T1.3 |
 | API key de Anthropic | IA | T5.1 |
 | API key de transcripción (OpenAI o Deepgram) | Voz | T5.2 |
 | Cuenta Inngest | Jobs en segundo plano | T9.1 |

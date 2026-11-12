@@ -60,11 +60,11 @@ Cada feature tiene: descripción, historias de usuario y criterios de aceptació
 
 ### F1. Cuenta y autenticación [MVP]
 
-- Login con **Google** y con **magic link** por email (sin contraseñas).
+- Login con **email y contraseña** (Supabase Auth). Decisión de simplicidad: sin Google ni magic link por ahora; se pueden sumar después.
 - Al registrarse: se crea el perfil (`profiles`) y el **grupo personal**.
 - Perfil básico: nombre, foto, idioma (es-AR por defecto), unidades (métrico).
 
-**Aceptación:** puedo entrar con Google desde el celular, cerrar la app y volver sin re-loguearme.
+**Aceptación:** puedo registrarme y entrar con email y contraseña desde el celular, cerrar la app y volver sin re-loguearme.
 
 ### F2. Grupos e invitaciones [MVP]
 
@@ -301,7 +301,7 @@ Conteo calórico detallado, integración con supermercados online, app nativa en
 | Formato de app | **PWA instalable** (no app nativa todavía) | Se instala en el home del celular, push notifications, wake lock, sin pasar por stores. Si después hace falta nativa: Expo reutilizando la API. |
 | Base de datos | **Supabase Postgres** | Postgres real + Auth + Storage + Realtime + Row Level Security en un solo servicio. |
 | Acceso a datos / migraciones | **Migraciones SQL** (Supabase CLI) + `supabase-js` con **tipos generados**. Sin ORM. | Una sola fuente de verdad del esquema; RLS, triggers y funciones se escriben naturalmente en SQL; menos piezas para un agente que ejecuta el plan. |
-| Auth | **Supabase Auth** (Google OAuth + magic link) | Integrado con RLS. |
+| Auth | **Supabase Auth** (email + contraseña) | Integrado con RLS. |
 | Archivos | **Supabase Storage** (buckets: `recipe-images`, `profile-inputs`, `audio`) | Mismo proveedor, URLs firmadas. |
 | Tiempo real | **Supabase Realtime** | Lista de compras y plan sincronizados entre la pareja. |
 | IA (LLM) | **Claude API** — `claude-sonnet-5-5` para plan semanal/chat y perfil; `claude-haiku-5-5` para tareas chicas (normalizar ingredientes, etiquetar). Salidas estructuradas vía *tool use* con JSON Schema. | Lee PDFs e imágenes nativamente (plan del nutricionista, foto de receta). |
@@ -884,7 +884,7 @@ Cada etapa termina con algo **usable en producción** (deploy en Vercel) y crite
 
 ### Etapa 1 — Auth y grupos (≈ 1 semana)
 
-- Login Google + magic link; `profiles` + grupo personal automático (trigger).
+- Login con email y contraseña; `profiles` + grupo personal automático (trigger).
 - CRUD de grupos, selector de grupo activo.
 - Invitaciones por link (crear, compartir con Web Share, aceptar, revocar, vencimiento).
 - Roles y RLS + tests de RLS (un usuario de otro grupo no puede leer nada).

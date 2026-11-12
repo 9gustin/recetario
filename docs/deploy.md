@@ -47,7 +47,7 @@ Los nombres están en `.env.example`. Local: `.env.local` (nunca se commitea). P
 | `SENTRY_DSN`, `NEXT_PUBLIC_SENTRY_DSN` | Errores (opcional: sin ellas queda desactivado) | Vercel |
 | `NEXT_PUBLIC_POSTHOG_KEY`, `NEXT_PUBLIC_POSTHOG_HOST` | Analytics (opcional) | Vercel |
 
-Las variables de los demás servicios (Google OAuth, Anthropic, transcripción, Inngest, Web Push) se agregan en las secciones siguientes a medida que se configuran.
+Las variables de los demás servicios (Anthropic, transcripción, Inngest, Web Push) se agregan en las secciones siguientes a medida que se configuran.
 
 ## Verificación de producción
 

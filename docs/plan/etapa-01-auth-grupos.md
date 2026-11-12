@@ -1,6 +1,6 @@
 # Etapa 1 — Auth y grupos
 
-**Resultado:** me logueo con Google o con un link por email, creo el grupo "Casa", le paso el link de invitación a mi pareja y ella se une con su cuenta.
+**Resultado:** me registro y entro con email y contraseña, creo el grupo "Casa", le paso el link de invitación a mi pareja y ella se une con su cuenta.
 **Spec:** §3 F1, F2 · §5.2 (Identidad y grupos) · §5.3 (RLS).
 
 ---
@@ -37,17 +37,17 @@
   2. Casos: A no ve grupos de B · A no puede insertar en `group_members` directo · `accept_invite` con token vencido/revocado falla · con token válido une a B · B ve el perfil de A después de unirse · un member no puede crear invitaciones · `leave_group` transfiere ownership · no se puede salir del grupo personal.
 - **Aceptación:** `pnpm db:test` en verde con todos los casos.
 
-### T1.3 — Login (Google + magic link)
-- **Depende de:** T1.1 · 👤 OAuth Client en Google Cloud (orígenes: localhost y dominio de Vercel; redirect: `https://<proyecto>.supabase.co/auth/v1/callback` y el local) y habilitar el provider Google en Supabase (local en `config.toml` y prod en el dashboard).
+### T1.3 — Login (email + contraseña)
+- **Depende de:** T1.1. Auth por email + contraseña (decisión de simplicidad: sin Google ni magic link). En prod, "Confirm email" está desactivado en Supabase para no depender de SMTP.
 - **Archivos:** `app/(auth)/login/page.tsx`, `app/auth/callback/route.ts`, `app/auth/signout/route.ts`, `lib/auth.ts`, `middleware.ts`.
 - **Pasos:**
-  1. Pantalla de login cálida: logo, tagline, botón "Seguir con Google", input de email + "Mandame un link".
+  1. Pantalla de login cálida: logo, tagline, formulario de email + contraseña con dos modos ("Entrar" y "Crear cuenta"; en el alta, también nombre). Errores claros en español (contraseña corta, email ya registrado, datos incorrectos). Sin recuperar contraseña por ahora.
   2. `auth/callback`: intercambia el código por sesión y redirige a `next` (validar que sea una ruta interna) o a `/`.
   3. `middleware.ts`: rutas bajo `(app)` requieren sesión → redirige a `/login?next=…`. Públicas: `/login`, `/auth/*`, `/join/*`, `/r/*`, `/api/health`, assets.
   4. `lib/auth.ts`: `requireUser()` para Server Components/Actions.
   5. Perfil: en `/perfil`, mostrar nombre/foto, editar nombre y "Cerrar sesión".
-  6. En local, el magic link llega a Mailpit/Inbucket (http://localhost:54324).
-- **Aceptación:** login con ambos métodos en local; al cerrar y reabrir la PWA sigue logueado.
+  6. Local: las cuentas se crean sin confirmar el email (`enable_confirmations = false`).
+- **Aceptación:** alta y login con email y contraseña en local y en producción; al cerrar y reabrir la PWA sigue logueado.
 - **Verificación:** prueba manual + `pnpm check`.
 
 ### T1.4 — Grupo activo y selector
@@ -85,14 +85,14 @@
 - **Depende de:** T1.6
 - **Archivos:** `tests/e2e/helpers/auth.ts`, `tests/e2e/groups.spec.ts`.
 - **Pasos:**
-  1. Helper de login para tests: crear usuario con el cliente admin y generar sesión con `auth.admin.generateLink` (tipo magiclink) o con usuario/contraseña solo en local.
+  1. Helper de login para tests: crear usuario con el cliente admin y generar sesión con `auth.admin.generateLink` o con usuario/contraseña.
   2. Escenario: A crea "Casa" → genera invitación → B abre el link, se loguea, se une → B ve "Casa" en el selector → A ve a B en miembros → A revoca la invitación → C no puede unirse.
 - **Aceptación:** `pnpm test:e2e` en verde.
 
 ---
 
 ## Cierre de la Etapa 1
-- [ ] Deploy en prod con Google OAuth configurado 👤.
+- [ ] Deploy en prod con auth por email y contraseña 👤.
 - [ ] Prueba real: mi pareja se une desde su celular.
 - [ ] Revisión de RLS (🧠 recomendado con Opus): leer todas las policies y buscar huecos.
 

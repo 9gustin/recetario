@@ -7,7 +7,7 @@
 Dejar el proyecto **listo para que otro agente (DeepSeek, un modelo más básico) escriba todo el código de las Etapas 1 a 10 sin tener que configurar nada**. Al terminar tiene que ser verdad que:
 
 1. La **Etapa 0** del plan está completa (T0.1 a T0.8): proyecto Next.js, sistema de diseño con los tres temas, estructura de la app, PWA, Supabase local, pruebas, CI y producción en Vercel + Supabase.
-2. **Todos los servicios externos** que va a necesitar la app están configurados, local y en producción: Google OAuth, Anthropic, transcripción de voz (con el proveedor ya elegido por una prueba de calidad), Inngest y Web Push.
+2. **Todos los servicios externos** que va a necesitar la app están configurados, local y en producción: Auth por email y contraseña, Anthropic, transcripción de voz (con el proveedor ya elegido por una prueba de calidad), Inngest y Web Push.
 3. Existe la rama **`dev`** (donde va a trabajar DeepSeek) y el archivo **`docs/execution/progreso.md`** con todo lo de configuración tildado.
 4. `pnpm check`, `pnpm test:e2e` y `pnpm db:test` pasan, el CI está en verde y la URL de producción abre y responde en `/api/health`.
 
@@ -77,7 +77,9 @@ Ejecutá **T0.8**, guiando a la persona:
 6. Escribí `docs/deploy.md`.
 7. Verificá: deploy en verde, la URL abre en el celular, `/api/health` responde `db: true`.
 
-## Paso 10 — Login con Google 👤
+## Paso 10 — Login (email + contraseña) 👤
+
+> **Decisión de la persona:** se usa email + contraseña en vez de Google (más simple). Qué se hizo: `[auth.external.google]` queda con `enabled = false`; en Supabase prod, Authentication → Sign In / Providers → Email habilitado con **Confirm email desactivado**; Site URL y Redirect URLs configuradas. Lo de abajo (Google) quedó descartado.
 
 Lo necesita la Etapa 1.
 
