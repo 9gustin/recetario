@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { AnimatePresence, motion, type PanInfo } from "framer-motion";
-import { Check, Pencil, Play, X } from "lucide-react";
+import { Check, PartyPopper, Pencil, Play, X } from "lucide-react";
 import { PillButton } from "@/components/shared/pill-button";
 import {
   Dialog,
@@ -22,6 +22,7 @@ import {
 import { estimatedMinutes, ingredientsForStep } from "@/lib/domain/cooking-display";
 import { resumeInit, type OpenSession } from "@/lib/domain/cooking-session";
 import { useWakeLock } from "@/lib/hooks/use-wake-lock";
+import Link from "next/link";
 import type { RecipeDetail } from "@/lib/recipes/queries";
 import { finishCookingSession, uploadCookingPhoto } from "@/lib/cooking/actions";
 import { EditStepSheet } from "./edit-step-sheet";
@@ -58,15 +59,39 @@ function noticeWakeLockUnsupported() {
   });
 }
 
+/** Lo que necesita el modo cocinar de una receta (sirve para la privada y para la pública). */
+export type CookingRecipe = Pick<
+  RecipeDetail,
+  "id" | "title" | "servings" | "total_minutes" | "image_url" | "ingredients" | "steps"
+>;
+
 type Props = {
+  /** Grupo de la receta; no se usa en modo público. */
   groupId: string;
-  recipe: RecipeDetail;
+  recipe: CookingRecipe;
+  /**
+   * Modo privado (default): crea sesión, guarda el progreso, permite ajustar y terminar con nota.
+   * Modo público (`/r/[token]/cocinar`): sin sesión ni edición; al terminar invita a guardar la receta.
+   */
+  persist?: boolean;
+  /** A dónde vuelve ✕ y "Volver a la receta" (default: el detalle de la receta en el grupo). */
+  exitHref?: string;
+  /** Solo modo público: link para guardar la receta en el recetario propio. */
+  saveHref?: string;
   /** Sesión a medias de esta persona (ya validada: reciente y sin terminar). */
-  resume: OpenSession | null;
+  resume?: OpenSession | null;
 };
 
 /** Modo cocinar tipo historias: un paso por pantalla, con tap y swipe para navegar. */
-export function CookingStories({ groupId, recipe, resume }: Props) {
+export function CookingStories({
+  groupId,
+  recipe,
+  resume = null,
+  persist = true,
+  exitHref,
+  saveHref,
+}: Props) {
+  const leaveHref = exitHref ?? `/g/${groupId}/recetas/${recipe.id}`;
   const router = useRouter();
   const [edits, setEdits] = useState<CookingEdit[]>(resume?.pending_edits ?? []);
   // La receta con los ajustes de esta sesión ya aplicados (la original no se toca hasta el final).
@@ -165,7 +190,7 @@ export function CookingStories({ groupId, recipe, resume }: Props) {
 
   function start() {
     setStartedAt(Date.now());
-    sync.begin();
+    if (persist) sync.begin();
     advance();
   }
 
@@ -203,7 +228,7 @@ export function CookingStories({ groupId, recipe, resume }: Props) {
           </p>
         </div>
         <div className="flex flex-none gap-2">
-          {step ? (
+          {step && persist ? (
             <button
               type="button"
               aria-label="Ajustar este paso"
@@ -299,7 +324,7 @@ export function CookingStories({ groupId, recipe, resume }: Props) {
                   ) : undefined
                 }
               />
-            ) : (
+            ) : persist ? (
               <FinishScreen
                 recipeTitle={recipe.title}
                 startedAt={startedAt}
@@ -310,6 +335,23 @@ export function CookingStories({ groupId, recipe, resume }: Props) {
                 recipeHasPhoto={Boolean(recipe.image_url)}
                 onFinish={finish}
               />
+            ) : (
+              <div className="flex h-full flex-col items-center justify-center gap-4 text-center">
+                <PartyPopper className="size-14 text-accent" aria-hidden="true" />
+                <h1 className="font-display text-[33px] leading-[1.1] font-normal">¡Listo!</h1>
+                <p className="max-w-[260px] text-sm text-muted">
+                  Terminaste {recipe.title}. ¿Te gustó? Guardala en tu recetario para tenerla
+                  siempre.
+                </p>
+                {saveHref ? (
+                  <PillButton asChild>
+                    <Link href={saveHref}>Guardar en mi recetario</Link>
+                  </PillButton>
+                ) : null}
+                <PillButton variant="outline" size="md" onClick={() => router.push(leaveHref)}>
+                  Volver a la receta
+                </PillButton>
+              </div>
             )}
           </motion.div>
         </AnimatePresence>
@@ -327,7 +369,7 @@ export function CookingStories({ groupId, recipe, resume }: Props) {
         )}
       </div>
 
-      {step ? (
+      {step && persist ? (
         <EditStepSheet
           open={editOpen}
           onOpenChange={setEditOpen}
@@ -373,7 +415,7 @@ export function CookingStories({ groupId, recipe, resume }: Props) {
             <PillButton variant="outline" size="md" onClick={() => setExitOpen(false)}>
               Seguir cocinando
             </PillButton>
-            <PillButton size="md" onClick={() => router.push(`/g/${groupId}/recetas/${recipe.id}`)}>
+            <PillButton size="md" onClick={() => router.push(leaveHref)}>
               Salir
             </PillButton>
           </DialogFooter>
