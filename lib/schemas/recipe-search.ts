@@ -9,6 +9,8 @@ export const recipeSearchSchema = z.object({
   maxMinutes: z.number().int().positive().max(1440).optional(),
   tag: z.string().trim().min(1).max(40).optional(),
   ingredientId: z.string().uuid().optional(),
+  /** "Apta para…": oculta las recetas prohibidas para estas personas. */
+  aptFor: z.array(z.string().uuid()).max(10).optional(),
   offset: z.number().int().min(0).default(0),
   limit: z.number().int().min(1).max(48).default(RECIPES_PAGE_SIZE),
 });

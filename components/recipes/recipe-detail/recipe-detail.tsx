@@ -3,6 +3,7 @@
 import type { CookingSummary } from "@/lib/cooking/queries";
 import type { RecipeQuestion } from "@/lib/ai/assistant/queries";
 import { CookingHistory } from "./cooking-history";
+import { ForWhom, type ForWhomMember } from "./for-whom";
 import { ShareSheet, type ShareContactItem, type ShareGroup } from "../share-sheet";
 import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
@@ -19,6 +20,9 @@ type Props = {
   groupId: string;
   cooking?: CookingSummary;
   questions?: RecipeQuestion[];
+  forWhom?: ForWhomMember[];
+  /** Fila de ingrediente → el peor estado entre las personas del grupo. */
+  ingredientProblems?: Record<string, "forbidden" | "limit" | "unknown">;
   share?: {
     groups: ShareGroup[];
     contacts: ShareContactItem[];
@@ -57,7 +61,15 @@ type Props = {
   };
 };
 
-export function RecipeDetail({ groupId, recipe, cooking, questions = [], share }: Props) {
+export function RecipeDetail({
+  groupId,
+  recipe,
+  cooking,
+  questions = [],
+  forWhom = [],
+  ingredientProblems = {},
+  share,
+}: Props) {
   const router = useRouter();
   const [servings, setServings] = useState(recipe.servings);
   const [favorite, setFavorite] = useState(recipe.is_favorite);
@@ -164,6 +176,7 @@ export function RecipeDetail({ groupId, recipe, cooking, questions = [], share }
         ) : null}
 
         {recipe.description ? <p className="text-sm text-muted">{recipe.description}</p> : null}
+        {forWhom.length > 0 ? <ForWhom members={forWhom} /> : null}
         {cooking ? <CookingHistory summary={cooking} /> : null}
 
         {/* Porciones + ingredientes */}
@@ -225,7 +238,13 @@ export function RecipeDetail({ groupId, recipe, cooking, questions = [], share }
                       {checked.has(ing.id) ? "✓" : ""}
                     </span>
                     <span
-                      className={cn("truncate", checked.has(ing.id) && "text-muted line-through")}
+                      className={cn(
+                        "truncate",
+                        checked.has(ing.id) && "text-muted line-through",
+                        ingredientProblems[ing.id] === "forbidden" &&
+                          "font-semibold text-danger-soft",
+                        ingredientProblems[ing.id] === "limit" && "font-semibold text-accent",
+                      )}
                     >
                       {name}
                       {ing.preparation ? (

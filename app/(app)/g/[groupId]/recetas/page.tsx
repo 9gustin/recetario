@@ -1,4 +1,5 @@
 import { requireUser } from "@/lib/auth";
+import { getGroupDiets } from "@/lib/recipes/compatibility";
 import { getRecipeFacets } from "@/lib/recipes/queries";
 import { RecipeList } from "@/components/recipes/recipe-list";
 
@@ -7,10 +8,14 @@ export const metadata = { title: "Recetas" };
 export default async function Page({ params }: { params: Promise<{ groupId: string }> }) {
   await requireUser();
   const { groupId } = await params;
-  const { topTags, total } = await getRecipeFacets(groupId);
+  const [{ topTags, total }, diets] = await Promise.all([
+    getRecipeFacets(groupId),
+    getGroupDiets(groupId),
+  ]);
+  const members = diets.map((d) => ({ id: d.userId, name: d.displayName?.trim() || "Alguien" }));
   return (
     <div className="flex flex-col px-5 pt-2">
-      <RecipeList groupId={groupId} topTags={topTags} total={total} />
+      <RecipeList groupId={groupId} topTags={topTags} total={total} members={members} />
     </div>
   );
 }

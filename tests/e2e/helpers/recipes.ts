@@ -1,4 +1,6 @@
 import { createClient } from "@supabase/supabase-js";
+import { matchLocal } from "../../../lib/domain/ingredient-match";
+import { parseIngredientLine } from "../../../lib/domain/ingredient-line";
 
 try {
   process.loadEnvFile(".env.local");
@@ -38,6 +40,14 @@ export async function seedRecipe(
   const { error: authError } = await supabase.auth.signInWithPassword({ email, password });
   if (authError) throw authError;
 
+  // Igual que la app: cada ingrediente se vincula al catálogo cuando coincide.
+  const { data: catalogRows } = await supabase.from("ingredients").select("id, name, aliases");
+  const catalog = (catalogRows ?? []).map((c) => ({
+    id: c.id,
+    name: c.name,
+    aliases: c.aliases ?? [],
+  }));
+
   const { data, error } = await supabase.rpc("save_recipe", {
     p_recipe: {
       group_id: groupId,
@@ -50,6 +60,7 @@ export async function seedRecipe(
           quantity: m ? Number(m[1]!.replace(",", ".")) : null,
           unit: m?.[2]?.toLowerCase() ?? null,
           position,
+          ingredient_id: matchLocal(parseIngredientLine(raw).name, catalog)?.id ?? null,
         };
       }),
       steps: recipe.steps.map((s, position) => ({

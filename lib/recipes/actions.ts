@@ -8,6 +8,7 @@ import { recipeInputSchema } from "@/lib/schemas/recipe";
 import { matchLocal } from "@/lib/domain/ingredient-match";
 import { parseIngredientLine } from "@/lib/domain/ingredient-line";
 import { parseSnapshot } from "@/lib/domain/recipe-diff";
+import { compatForRecipes, forbiddenRecipeIds, getGroupDiets } from "./compatibility";
 import type { RecipeListItem } from "./queries";
 import { ingredientSearchSchema, recipeSearchSchema } from "@/lib/schemas/recipe-search";
 
@@ -141,7 +142,15 @@ export async function uploadRecipeImage(
   return { ok: true, data: { imageUrl: pub.publicUrl } };
 }
 
-export type RecipeSearchResult = { recipes: RecipeListItem[]; hasMore: boolean };
+export type RecipeCompat = {
+  userId: string;
+  name: string | null;
+  status: "ok" | "limit" | "forbidden" | "unknown";
+};
+export type RecipeSearchResult = {
+  recipes: (RecipeListItem & { compat: RecipeCompat[] })[];
+  hasMore: boolean;
+};
 
 /** Busca y filtra recetas del grupo (RLS limita a los grupos del usuario). Paginado de a 24. */
 export async function searchRecipes(
@@ -176,6 +185,13 @@ export async function searchRecipes(
   if (input.favoriteOnly) query = query.eq("recipe_favorites.user_id", user.id);
   if (input.ingredientId) query = query.eq("recipe_ingredients.ingredient_id", input.ingredientId);
   if (input.tag) query = query.contains("tags", [input.tag]);
+
+  // Compatibilidad con el perfil de los miembros del grupo (solo restricciones, vía RPC).
+  const diets = await getGroupDiets(input.groupId);
+  if (input.aptFor?.length) {
+    const blocked = await forbiddenRecipeIds(input.groupId, input.aptFor, diets);
+    if (blocked.length) query = query.not("id", "in", `(${blocked.join(",")})`);
+  }
   if (input.maxMinutes) query = query.lte("total_minutes", input.maxMinutes);
 
   // Pedimos una fila de más para saber si hay otra página.
@@ -191,7 +207,24 @@ export async function searchRecipes(
     delete item.recipe_ingredients;
     return item as RecipeListItem;
   });
-  return { ok: true, data: { recipes, hasMore: rows.length > input.limit } };
+  const compat = await compatForRecipes(
+    recipes.map((r) => r.id),
+    diets,
+  );
+  return {
+    ok: true,
+    data: {
+      recipes: recipes.map((r) => ({
+        ...r,
+        compat: (compat.get(r.id) ?? []).map((m) => ({
+          userId: m.userId,
+          name: m.displayName,
+          status: m.status,
+        })),
+      })),
+      hasMore: rows.length > input.limit,
+    },
+  };
 }
 
 export type IngredientSuggestion = { id: string; name: string };

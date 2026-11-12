@@ -1,8 +1,15 @@
 import Link from "next/link";
 import type { RecipeListItem } from "@/lib/recipes/queries";
+import { CompatBadges, type CompatMember } from "./compat-badges";
 
 /** Tarjeta de la grilla: foto (o bloque --hero con emoji), título y tiempo. */
-export function RecipeCard({ recipe, groupId }: { recipe: RecipeListItem; groupId: string }) {
+export function RecipeCard({
+  recipe,
+  groupId,
+}: {
+  recipe: RecipeListItem & { compat?: CompatMember[] };
+  groupId: string;
+}) {
   return (
     <Link
       href={`/g/${groupId}/recetas/${recipe.id}`}
@@ -21,6 +28,7 @@ export function RecipeCard({ recipe, groupId }: { recipe: RecipeListItem; groupI
         <p className="text-xs text-muted">
           {recipe.total_minutes ? `${recipe.total_minutes} min` : "Sin tiempo"}
         </p>
+        {recipe.compat?.length ? <CompatBadges compat={recipe.compat} /> : null}
       </div>
     </Link>
   );

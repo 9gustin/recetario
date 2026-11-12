@@ -10,9 +10,14 @@ import { EMPTY_FILTERS, RecipeFilters, hasActiveFilters, type RecipeFilterState 
 import { NewRecipeMenu } from "./new-recipe-menu";
 import { RecipeCard } from "./recipe-card";
 
-type Props = { groupId: string; topTags: string[]; total: number };
+type Props = {
+  groupId: string;
+  topTags: string[];
+  total: number;
+  members?: { id: string; name: string }[];
+};
 
-export function RecipeList({ groupId, topTags, total }: Props) {
+export function RecipeList({ groupId, topTags, total, members = [] }: Props) {
   const [q, setQ] = useState("");
   const [filters, setFilters] = useState<RecipeFilterState>(EMPTY_FILTERS);
   const [recipes, setRecipes] = useState<RecipeListItem[]>([]);
@@ -30,6 +35,7 @@ export function RecipeList({ groupId, topTags, total }: Props) {
       maxMinutes: filters.max30 ? 30 : undefined,
       tag: filters.tag ?? undefined,
       ingredientId: filters.ingredient?.id,
+      aptFor: filters.aptFor.length ? filters.aptFor : undefined,
       offset,
       limit: RECIPES_PAGE_SIZE,
     }),
@@ -99,7 +105,7 @@ export function RecipeList({ groupId, topTags, total }: Props) {
         />
       </label>
 
-      <RecipeFilters value={filters} onChange={setFilters} topTags={topTags} />
+      <RecipeFilters value={filters} onChange={setFilters} topTags={topTags} members={members} />
 
       {status === "loading" && recipes.length === 0 ? (
         <div className="grid grid-cols-2 gap-3" aria-busy="true">
