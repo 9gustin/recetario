@@ -15,3 +15,5 @@
 ### [ ] T11.3 — Chat general
 - **Pasos:** botón de chat visible en todas las pantallas del grupo (arriba, junto al selector); el asistente gana `navigate_to` (tarjeta con link a Hoy, Recetas, Plan, Compras, Mi plan, Perfil, Explorar…) y respuestas sobre alimentación usando `get_my_diet_plan` y el perfil; saludo y sugerencias ("¿Qué ceno hoy?", "Llevame a la lista de compras").
 - **Aceptación:** "llevame a mi plan de alimentación" devuelve una tarjeta que abre `/perfil/plan`; "¿qué ceno que encaje en mi plan?" usa el plan vivo.
+
+- T11.1: Auth con cache() + getClaims, getMyGroups cacheada, loading.tsx, default al último grupo; región de Vercel documentada (👤 elegir la misma región que Supabase).

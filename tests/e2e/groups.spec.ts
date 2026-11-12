@@ -85,6 +85,9 @@ test("contexto: desde Perfil, la barra inferior vuelve al último grupo y no al 
   await page.goto(`/g/${groupId}/recetas`);
   await page.goto("/perfil");
   await expect(page.getByRole("button", { name: /Familia: cambiar de grupo/ })).toBeVisible();
-  await page.getByRole("link", { name: "Plan" }).tap();
+  await page
+    .getByRole("navigation", { name: "Principal" })
+    .getByRole("link", { name: "Plan" })
+    .tap();
   await expect(page).toHaveURL(new RegExp(`/g/${groupId}/plan`));
 });

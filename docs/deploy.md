@@ -93,3 +93,10 @@ select cron.schedule(
 ```
 
 3. En iPhone las notificaciones solo funcionan con la app instalada en la pantalla de inicio (la pantalla de Notificaciones lo explica).
+
+## Región y velocidad (T11.1)
+
+Las funciones de Vercel tienen que correr en la **misma región que Supabase**; si no, cada consulta cruza continentes y la navegación se siente lenta.
+1. Supabase → Project Settings → General → mirá la región (p. ej. `South America (São Paulo)`).
+2. Vercel → Project → Settings → Functions → *Function Region* → elegí la más cercana (São Paulo = `gru1`) y redeployá.
+3. La verificación de sesión usa `getClaims()` (local) y se cachea por request, así que cada pantalla hace menos viajes a la red.
