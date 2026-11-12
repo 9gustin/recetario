@@ -36,7 +36,7 @@
 - **Pasos:** Lighthouse mobile ≥ 90 en Performance, Accesibilidad y Best Practices en Hoy, Recetas y detalle; contraste AA en ambos temas; navegación por teclado y labels en formularios; `next/image` con tamaños correctos; revisar bundle (stories y dnd-kit cargados con `dynamic`).
 - **Aceptación:** reporte de Lighthouse guardado en `docs/perf/`.
 
-### T10.6 — Privacidad: exportar y borrar cuenta
+### [x] T10.6 — Privacidad: exportar y borrar cuenta
 - **Pasos:** en Perfil → "Mis datos": exportar todo (recetas propias, perfil, planes) en JSON; "Borrar mi cuenta" con confirmación escrita → borra perfil alimentario, inputs y archivos, sale de todos los grupos (transferencia de ownership), y elimina el usuario de Auth (service role). Las recetas de grupos compartidos quedan en el grupo.
 - **Aceptación:** pgTAP/e2e: después de borrar, no queda nada del usuario salvo recetas en grupos compartidos.
 
@@ -57,3 +57,5 @@
 - T10.4: Nueva columna profiles.onboarded_at (las cuentas existentes quedan como ya vistas). Los e2e crean usuarios ya 'onboarded' salvo el de onboarding.
 
 - T10.5: Accent del tema mediodía oscurecido (#b34a1c) para AA con texto blanco; switcher de grupo incluye el nombre visible en su aria-label. Auditoría axe (WCAG 2.1 AA) en tests/e2e/a11y.spec.ts. Lighthouse de performance: ver docs/perf.
+
+- T10.6: prepare_account_deletion (service_role) transfiere la propiedad al admin/miembro más antiguo o borra el grupo si queda vacío; los archivos de profile-inputs y audio se borran desde la app. Las recetas de grupos compartidos quedan (created_by pasa a null).

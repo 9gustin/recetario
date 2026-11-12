@@ -934,6 +934,9 @@ isOneToOne: false
 "plan_group_id":
 { Args: { "p_plan_id": string }; Returns: string
                            },
+"prepare_account_deletion":
+{ Args: { "p_user_id": string }; Returns: undefined
+                           },
 "recipe_last_cooked":
 { Args: { "p_recipe_id": string }; Returns: {
               "cooked_by": string,"finished_at": string,"rating": number
