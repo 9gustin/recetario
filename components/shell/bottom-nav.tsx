@@ -3,13 +3,19 @@
 import Link from "next/link";
 import { useParams, usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { DEMO_GROUP_ID, NAV_ITEMS } from "./nav-items";
+import { NAV_ITEMS } from "./nav-items";
 
 /** Barra inferior fija: 5 tabs, 76 px de alto, respeta el safe-area de iOS. */
-export function BottomNav({ className }: { className?: string }) {
+export function BottomNav({
+  className,
+  defaultGroupId,
+}: {
+  className?: string;
+  defaultGroupId?: string;
+}) {
   const pathname = usePathname();
   const params = useParams<{ groupId?: string }>();
-  const groupId = params.groupId ?? DEMO_GROUP_ID;
+  const groupId = params.groupId ?? defaultGroupId;
 
   return (
     <nav
@@ -20,7 +26,7 @@ export function BottomNav({ className }: { className?: string }) {
       )}
     >
       {NAV_ITEMS.map(({ key, label, icon: Icon, href }) => {
-        const to = href(groupId);
+        const to = href(groupId ?? "");
         const active = pathname === to || pathname.startsWith(`${to}/`);
         return (
           <Link

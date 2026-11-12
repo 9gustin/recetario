@@ -50,7 +50,7 @@
 - **Aceptación:** alta y login con email y contraseña en local y en producción; al cerrar y reabrir la PWA sigue logueado.
 - **Verificación:** prueba manual + `pnpm check`.
 
-### T1.4 — Grupo activo y selector
+### [x] T1.4 — Grupo activo y selector
 - **Depende de:** T1.3
 - **Archivos:** `app/page.tsx`, `app/(app)/g/[groupId]/layout.tsx`, `components/groups/group-switcher.tsx`, `lib/groups/queries.ts`.
 - **Pasos:**
@@ -103,3 +103,5 @@
 - T1.2: `supabase/tests/00_helpers.sql` (sin `BEGIN/ROLLBACK`) crea el helper `tests.create_user(id, email, name)` con `security definer`, que inserta en `auth.users` y dispara el alta de perfil + grupo personal; emite un test trivial para que pg_prove vea un plan válido (pg_prove descubre **todos** los `**/*.sql` de `supabase/tests`). La sesión se simula con `set local role authenticated;` + `select set_config('request.jwt.claims', …)`. Se usan UUIDs fijos para evitar interpolación de psql. El caso de transferencia de ownership usa un tercer usuario C (admin), para no ensuciar el caso "B se une por invitación". `\set QUIET 1` evita que los command tags de psql ensucien el TAP.
 
 - T1.3: **`zod` no estaba instalado** (lo declaran CLAUDE.md y SPEC §4.1, pero no se agregó en la Etapa 0); se instaló `zod@4.6.7` para validar el Server Action de perfil. El "middleware" de la tarea es en realidad `proxy.ts` (Next 16 renombró `middleware`→`proxy`; ver nota T0.5): la lógica vive en `lib/supabase/middleware.ts` (`updateSession`), que ahora protege `/g/*`, `/perfil` y `/grupos` y devuelve los logueados en `/login` a la home. El login se dividió en `app/(auth)/login/page.tsx` (server, lee `searchParams`) + `components/auth/login-form.tsx` (client) para evitar el `Suspense` de `useSearchParams()`. No hay recuperación de contraseña (fuera de alcance). Alta y login con email+contraseña; al registrarse se pasa `display_name` a `raw_user_meta_data`.
+
+- T1.4: la cookie `last_group_id` se escribe en el `proxy.ts`/`updateSession` (los Server Components no pueden escribir cookies). `BottomNav` recibe `defaultGroupId` (grupo personal) para resolver los tabs en `/perfil`, que no tiene `groupId` en la URL. La membresía se valida en `app/(app)/g/[groupId]/layout.tsx` (404 si no es miembro o el grupo no existe). Los botones "Crear grupo"/"Administrar grupos" del selector apuntan a `/grupos/nuevo` y `/grupos`, que se implementan en T1.5 (dan 404 hasta entonces, por diseño incremental). Se quitó `DEMO_GROUP_ID` de T0.3.

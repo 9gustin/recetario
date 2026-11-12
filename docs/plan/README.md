@@ -100,7 +100,7 @@ Ejecutá la tarea T1.3 del plan.
 Marcar `[x]` al terminar cada tarea (lo hace el agente).
 
 **Etapa 0** — [x] T0.1 · [x] T0.2 · [x] T0.3 · [x] T0.4 · [x] T0.5 · [x] T0.6 · [x] T0.7 · [x] T0.8
-**Etapa 1** — [x] T1.1 · [x] T1.2 · [x] T1.3 · [ ] T1.4 · [ ] T1.5 · [ ] T1.6 · [ ] T1.7
+**Etapa 1** — [x] T1.1 · [x] T1.2 · [x] T1.3 · [x] T1.4 · [ ] T1.5 · [ ] T1.6 · [ ] T1.7
 **Etapa 2** — [ ] T2.1 · [ ] T2.2 · [ ] T2.3 · [ ] T2.4 · [ ] T2.5 · [ ] T2.6 · [ ] T2.7 · [ ] T2.8 · [ ] T2.9
 **Etapa 3** — [ ] T3.1 · [ ] T3.2 · [ ] T3.3 · [ ] T3.4 · [ ] T3.5 · [ ] T3.6 · [ ] T3.7 · [ ] T3.8
 **Etapa 4** — [ ] T4.1 · [ ] T4.2 · [ ] T4.3 · [ ] T4.4 · [ ] T4.5 · [ ] T4.6

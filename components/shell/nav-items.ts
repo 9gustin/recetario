@@ -1,7 +1,5 @@
 import { Book, Calendar, ShoppingBag, Sun, User, type LucideIcon } from "lucide-react";
 
-export const DEMO_GROUP_ID = "demo";
-
 export type NavItem = {
   key: "hoy" | "recetas" | "plan" | "compras" | "perfil";
   label: string;

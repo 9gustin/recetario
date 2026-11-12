@@ -53,5 +53,15 @@ export async function updateSession(request: NextRequest) {
     return NextResponse.redirect(homeUrl);
   }
 
+  // Recordar el último grupo visitado (preferencia; la membresía la valida el layout).
+  const groupMatch = pathname.match(/^\/g\/([^/]+)/);
+  if (groupMatch?.[1]) {
+    response.cookies.set("last_group_id", groupMatch[1], {
+      path: "/",
+      sameSite: "lax",
+      maxAge: 60 * 60 * 24 * 365,
+    });
+  }
+
   return response;
 }
