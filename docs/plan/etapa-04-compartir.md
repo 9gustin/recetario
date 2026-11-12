@@ -5,7 +5,7 @@
 
 ---
 
-### T4.1 — Migración y RPCs de compartir
+### [x] T4.1 — Migración y RPCs de compartir
 - **Depende de:** T2.1
 - **Archivos:** `supabase/migrations/<ts>_sharing.sql`, `supabase/tests/04_sharing.test.sql`.
 - **Pasos:**
@@ -67,3 +67,5 @@
 - [ ] Usar la app una semana en casa y anotar lo que molesta antes de seguir.
 
 ## Notas de ejecución
+
+- T4.1: se agregaron `forked_from_title` y `forked_from_group_name` a `recipes` en esta migración (T4.5 pedía guardarlos en la copia: así los RPC de copia los escriben desde el principio). La copia reutiliza `save_recipe` (que valida membresía del grupo destino y deja la versión 1) desde un núcleo interno `_fork_recipe_core`, no invocable por clientes; los pasos de la copia pierden `ingredient_ids` (apuntaban a filas del original) y el modo cocinar los resuelve por texto. `get_public_recipe` es accesible por anon, devuelve solo contenido y el nombre/avatar de quien comparte, y cuenta visitas. Riesgo aceptado para la revisión de seguridad: la `image_url` de la receta es una URL pública del bucket cuyo path incluye el id del grupo y de la receta (los UUID no dan acceso, RLS lo impide). `send_recipe_to_user` exige un grupo en común; el destinatario puede aceptar aunque no sea miembro del grupo origen porque el fork corre como definer y valida que el ítem de bandeja sea suyo. 20 tests pgTAP en `04_sharing.test.sql`.

@@ -121,6 +121,32 @@ isOneToOne: false
       referencedColumns: ["id"]
     }
                   ]
+                },"inbox_items": {
+                  Row: {
+                    "created_at": string,"from_user_id": string | null,"id": string,"kind": string,"payload": NonNullable<Json>,"read_at": string | null,"resolved_at": string | null,"user_id": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "created_at"?: string,"from_user_id"?: string | null,"id"?: string,"kind": string,"payload"?: NonNullable<Json>,"read_at"?: string | null,"resolved_at"?: string | null,"user_id": string
+                  }
+                  Update: {
+                    "created_at"?: string,"from_user_id"?: string | null,"id"?: string,"kind"?: string,"payload"?: NonNullable<Json>,"read_at"?: string | null,"resolved_at"?: string | null,"user_id"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "inbox_items_from_user_id_fkey"
+      columns: ["from_user_id"]
+isOneToOne: false
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "inbox_items_user_id_fkey"
+      columns: ["user_id"]
+isOneToOne: false
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    }
+                  ]
                 },"ingredients": {
                   Row: {
                     "aisle": string | null,"aliases": (string)[],"created_at": string,"created_by_ai": boolean,"default_unit": string | null,"family": (string)[],"id": string,"name": string,"nutrition_per_100g": Json | null,"reviewed": boolean,"shelf_life": Json | null,"storage_tips": string | null,"unit_weight_g": number | null,"updated_at": string
@@ -207,6 +233,32 @@ isOneToOne: false
       referencedColumns: ["id"]
     }
                   ]
+                },"recipe_share_links": {
+                  Row: {
+                    "created_at": string,"created_by": string | null,"id": string,"recipe_id": string,"revoked_at": string | null,"token": string,"view_count": number
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "created_at"?: string,"created_by"?: string | null,"id"?: string,"recipe_id": string,"revoked_at"?: string | null,"token": string,"view_count"?: number
+                  }
+                  Update: {
+                    "created_at"?: string,"created_by"?: string | null,"id"?: string,"recipe_id"?: string,"revoked_at"?: string | null,"token"?: string,"view_count"?: number
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "recipe_share_links_created_by_fkey"
+      columns: ["created_by"]
+isOneToOne: false
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "recipe_share_links_recipe_id_fkey"
+      columns: ["recipe_id"]
+isOneToOne: false
+      referencedRelation: "recipes"
+      referencedColumns: ["id"]
+    }
+                  ]
                 },"recipe_steps": {
                   Row: {
                     "duration_seconds": number | null,"id": string,"image_url": string | null,"ingredient_ids": (string)[] | null,"instruction": string,"position": number,"recipe_id": string,"timer_kind": string | null,"tip": string | null
@@ -255,14 +307,14 @@ isOneToOne: false
                   ]
                 },"recipes": {
                   Row: {
-                    "cook_minutes": number | null,"created_at": string,"created_by": string | null,"current_version": number,"deleted_at": string | null,"description": string | null,"difficulty": string | null,"forked_from_recipe_id": string | null,"forked_from_version": number | null,"group_id": string,"id": string,"image_url": string | null,"prep_minutes": number | null,"search_tsv": unknown,"servings": number,"source_type": string,"source_url": string | null,"status": string,"storage_info": Json | null,"tags": (string)[],"title": string,"total_minutes": number | null,"updated_at": string
+                    "cook_minutes": number | null,"created_at": string,"created_by": string | null,"current_version": number,"deleted_at": string | null,"description": string | null,"difficulty": string | null,"forked_from_group_name": string | null,"forked_from_recipe_id": string | null,"forked_from_title": string | null,"forked_from_version": number | null,"group_id": string,"id": string,"image_url": string | null,"prep_minutes": number | null,"search_tsv": unknown,"servings": number,"source_type": string,"source_url": string | null,"status": string,"storage_info": Json | null,"tags": (string)[],"title": string,"total_minutes": number | null,"updated_at": string
                   }
                   ComputedFields: never
                   Insert: {
-                    "cook_minutes"?: number | null,"created_at"?: string,"created_by"?: string | null,"current_version"?: number,"deleted_at"?: string | null,"description"?: string | null,"difficulty"?: string | null,"forked_from_recipe_id"?: string | null,"forked_from_version"?: number | null,"group_id": string,"id"?: string,"image_url"?: string | null,"prep_minutes"?: number | null,"search_tsv"?: unknown,"servings"?: number,"source_type"?: string,"source_url"?: string | null,"status"?: string,"storage_info"?: Json | null,"tags"?: (string)[],"title": string,"total_minutes"?: number | null,"updated_at"?: string
+                    "cook_minutes"?: number | null,"created_at"?: string,"created_by"?: string | null,"current_version"?: number,"deleted_at"?: string | null,"description"?: string | null,"difficulty"?: string | null,"forked_from_group_name"?: string | null,"forked_from_recipe_id"?: string | null,"forked_from_title"?: string | null,"forked_from_version"?: number | null,"group_id": string,"id"?: string,"image_url"?: string | null,"prep_minutes"?: number | null,"search_tsv"?: unknown,"servings"?: number,"source_type"?: string,"source_url"?: string | null,"status"?: string,"storage_info"?: Json | null,"tags"?: (string)[],"title": string,"total_minutes"?: number | null,"updated_at"?: string
                   }
                   Update: {
-                    "cook_minutes"?: number | null,"created_at"?: string,"created_by"?: string | null,"current_version"?: number,"deleted_at"?: string | null,"description"?: string | null,"difficulty"?: string | null,"forked_from_recipe_id"?: string | null,"forked_from_version"?: number | null,"group_id"?: string,"id"?: string,"image_url"?: string | null,"prep_minutes"?: number | null,"search_tsv"?: unknown,"servings"?: number,"source_type"?: string,"source_url"?: string | null,"status"?: string,"storage_info"?: Json | null,"tags"?: (string)[],"title"?: string,"total_minutes"?: number | null,"updated_at"?: string
+                    "cook_minutes"?: number | null,"created_at"?: string,"created_by"?: string | null,"current_version"?: number,"deleted_at"?: string | null,"description"?: string | null,"difficulty"?: string | null,"forked_from_group_name"?: string | null,"forked_from_recipe_id"?: string | null,"forked_from_title"?: string | null,"forked_from_version"?: number | null,"group_id"?: string,"id"?: string,"image_url"?: string | null,"prep_minutes"?: number | null,"search_tsv"?: unknown,"servings"?: number,"source_type"?: string,"source_url"?: string | null,"status"?: string,"storage_info"?: Json | null,"tags"?: (string)[],"title"?: string,"total_minutes"?: number | null,"updated_at"?: string
                   }
                   Relationships: [
                     {
@@ -291,16 +343,34 @@ isOneToOne: false
             [_ in never]: never
           }
           Functions: {
-            "accept_invite":
+            "_fork_recipe_core":
+{ Args: { "p_source_id": string,"p_target_group_id": string }; Returns: string
+                           },
+"accept_inbox_recipe":
+{ Args: { "p_inbox_id": string,"p_target_group_id": string }; Returns: string
+                           },
+"accept_invite":
 { Args: { "p_token": string }; Returns: string
                            },
 "create_group":
 { Args: { "p_emoji": string,"p_name": string }; Returns: string
                            },
+"create_share_link":
+{ Args: { "p_recipe_id": string }; Returns: string
+                           },
+"fork_public_recipe":
+{ Args: { "p_target_group_id": string,"p_token": string }; Returns: string
+                           },
+"fork_recipe":
+{ Args: { "p_source_recipe_id": string,"p_target_group_id": string }; Returns: string
+                           },
 "get_invite_preview":
 { Args: { "p_token": string }; Returns: {
               "group_emoji": string,"group_id": string,"group_name": string,"inviter_name": string,"is_expired": boolean,"is_revoked": boolean,"is_valid": boolean,"member_count": number
             }[]
+                           },
+"get_public_recipe":
+{ Args: { "p_token": string }; Returns: Json
                            },
 "group_role":
 { Args: { "gid": string }; Returns: string
@@ -328,6 +398,9 @@ isOneToOne: false
 "remove_member":
 { Args: { "gid": string,"p_user_id": string }; Returns: undefined
                            },
+"revoke_share_link":
+{ Args: { "p_recipe_id": string }; Returns: undefined
+                           },
 "save_recipe":
 { Args: { "p_recipe": Json }; Returns: Json
                            },
@@ -335,6 +408,9 @@ isOneToOne: false
 { Args: { "lim"?: number,"q": string }; Returns: {
               "aliases": (string)[],"id": string,"name": string,"similarity": number
             }[]
+                           },
+"send_recipe_to_user":
+{ Args: { "p_recipe_id": string,"p_user_id": string }; Returns: string
                            },
 "set_member_role":
 { Args: { "gid": string,"p_role": string,"p_user_id": string }; Returns: undefined
