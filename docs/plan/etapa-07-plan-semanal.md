@@ -19,11 +19,11 @@ Parte **7a** (manual, T7.1–T7.6), parte **7b** (IA, T7.7–T7.11) y parte **7c
   4. RPCs: `approve_plan(p_plan_id)` (pasa a `approved`, promueve recetas `draft` usadas en el plan a `active` y borra las `draft` que quedaron fuera; graba `approved_by/at`), `duplicate_plan(p_plan_id, p_week_start)`.
 - **Aceptación:** pgTAP de RLS y de `approve_plan` con recetas draft.
 
-### T7.2 — Dominio: semanas y momentos
+### [x] T7.2 — Dominio: semanas y momentos
 - **Archivos:** `lib/domain/week.ts` + test, `lib/domain/meal-slots.ts`.
 - **Pasos:** `weekStartOf(date, weekStartsOn)`, `weekDays(weekStart)`, `formatWeekLabel` ("Semana del 17 al 23 de noviembre"), zona horaria `America/Argentina/Buenos_Aires`. `MEAL_SLOTS` con etiqueta y orden: Desayuno, Almuerzo, Merienda, Cena, Snacks.
 
-### T7.3 — Pantalla del plan (grilla)
+### [x] T7.3 — Pantalla del plan (grilla)
 - **Depende de:** T7.1, T7.2
 - **Archivos:** `app/(app)/g/[groupId]/plan/page.tsx` (redirige a la semana actual), `.../plan/[weekStart]/page.tsx`, `components/plan/*`, `lib/plan/{queries,actions}.ts`.
 - **Pasos:**
@@ -154,3 +154,5 @@ Parte **7a** (manual, T7.1–T7.6), parte **7b** (IA, T7.7–T7.11) y parte **7c
 ## Notas de ejecución
 
 - T7.1: tablas `meal_plans` (índice único parcial por grupo y semana, sin contar archivados), `meal_plan_entries` (`slot` validado contra `groups.meal_slots` con trigger; exige receta o texto libre; `replica identity full` para que el realtime traiga la fila borrada) y `prep_tasks`; RLS por grupo a través del plan (`plan_group_id`); `meal_plans` y `meal_plan_entries` agregadas a `supabase_realtime`. Se agregó `recipes.draft_for_plan_id` (no estaba en el plan): ata cada receta que propone la IA al plan que la pidió, para que `approve_plan` active las usadas y borre **solo** las que ese plan propuso y quedaron fuera (sin tocar otros borradores). `duplicate_plan` corre fechas y `cook_date` y reenlaza las sobras a la entrada nueva equivalente. 13 tests pgTAP.
+
+- T7.3: Plan board keyed by plan id so router.refresh remounts it; 'Armar con IA' stays disabled until T7.9; history link target /plan/historial is built in T7.4.
