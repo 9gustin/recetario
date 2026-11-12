@@ -7,7 +7,7 @@
 Dejar el proyecto **listo para que otro agente (DeepSeek, un modelo más básico) escriba todo el código de las Etapas 1 a 10 sin tener que configurar nada**. Al terminar tiene que ser verdad que:
 
 1. La **Etapa 0** del plan está completa (T0.1 a T0.8): proyecto Next.js, sistema de diseño con los tres temas, estructura de la app, PWA, Supabase local, pruebas, CI y producción en Vercel + Supabase.
-2. **Todos los servicios externos** que va a necesitar la app están configurados, local y en producción: Auth por email y contraseña, Anthropic, transcripción de voz (con el proveedor ya elegido por una prueba de calidad), Inngest y Web Push.
+2. **Todos los servicios externos** que va a necesitar la app están configurados, local y en producción: Auth por email y contraseña, Anthropic, transcripción de voz (con el proveedor ya elegido por una prueba de calidad), el secreto de cron y Web Push.
 3. Existe la rama **`dev`** (donde va a trabajar DeepSeek) y el archivo **`docs/execution/progreso.md`** con todo lo de configuración tildado.
 4. `pnpm check`, `pnpm test:e2e` y `pnpm db:test` pasan, el CI está en verde y la URL de producción abre y responde en `/api/health`.
 
@@ -105,11 +105,12 @@ Lo necesita la Etapa 1.
 4. Anotá la elección y el motivo en "Notas de ejecución" de `docs/plan/etapa-05-ia-importar.md` (eso hace que el paso 6 de T5.2 quede hecho).
 5. `TRANSCRIPTION_PROVIDER=openai|deepgram` y la key elegida en `.env.local` y Vercel. Nombres en `.env.example`.
 
-## Paso 13 — Jobs: Inngest 👤
+## Paso 13 — Jobs: sin Inngest 👤
 
-1. La persona crea la cuenta en inngest.com e instala la integración de Vercel para este proyecto (eso carga `INNGEST_EVENT_KEY` e `INNGEST_SIGNING_KEY` en Vercel). Si no usa la integración, que las cargue a mano.
-2. Para local, documentá en `docs/deploy.md`: `pnpm dlx inngest-cli@latest dev` (UI en `http://localhost:8288`).
-3. Nombres en `.env.example`.
+> **Decisión de la persona (2026-11-12):** no se usa Inngest ni colas. La IA va en Route Handlers con streaming (SSE) y lo programado en `pg_cron` de Supabase. Lo único a configurar: `CRON_SECRET` (cadena aleatoria larga) en `.env.local` y Vercel. Lo de abajo (Inngest) quedó descartado.
+
+1. Generá `CRON_SECRET` (`openssl rand -hex 32`), cargalo en `.env.local` sin imprimirlo y pedile a la persona que lo agregue en Vercel (Production y Preview).
+2. Nombre en `.env.example` y en `docs/deploy.md` (sección de tareas programadas).
 
 ## Paso 14 — Notificaciones: Web Push
 

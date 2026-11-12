@@ -4,7 +4,7 @@ Tres archivos de instrucciones, uno por rol. Cada agente lee su archivo y hace t
 
 | Paso | Modelo | Instrucciones | Qué deja hecho |
 |---|---|---|---|
-| 1 | Claude Sonnet (Claude Code) | [01-configuracion-sonnet.md](01-configuracion-sonnet.md) | Etapa 0 completa y todos los servicios configurados (Supabase, Vercel, CI, Google, Anthropic, voz, Inngest, Web Push). Rama `dev` lista. |
+| 1 | Claude Sonnet (Claude Code) | [01-configuracion-sonnet.md](01-configuracion-sonnet.md) | Etapa 0 completa y todos los servicios configurados (Supabase, Vercel, CI, Google, Anthropic, voz, `CRON_SECRET`, Web Push). Rama `dev` lista. |
 | 2 | DeepSeek (local) | [02-codigo-deepseek.md](02-codigo-deepseek.md) | El código de las Etapas 1 a 10, tarea por tarea. Frena al terminar cada etapa. |
 | 3 | Claude Sonnet (Claude Code) | [03-revision-sonnet.md](03-revision-sonnet.md) | Revisa y prueba cada etapa terminada, arregla, mergea a `main` y despliega. Al final, revisión general. |
 

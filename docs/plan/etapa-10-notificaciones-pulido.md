@@ -7,11 +7,11 @@
 
 ### T10.1 — Web Push
 - **Depende de:** T9.3 · 👤 generar claves VAPID (`pnpm dlx web-push generate-vapid-keys`) y cargarlas en Vercel.
-- **Archivos:** migración `push_subscriptions (id, user_id, endpoint unique, keys jsonb, user_agent, created_at)`, `lib/push/{send,subscribe}.ts`, handlers `push` y `notificationclick` en `app/sw.ts`, `app/api/push/subscribe/route.ts`, `inngest/functions/reminders.ts`.
+- **Archivos:** migración `push_subscriptions (id, user_id, endpoint unique, keys jsonb, user_agent, created_at)`, `lib/push/{send,subscribe}.ts`, handlers `push` y `notificationclick` en `app/sw.ts`, `app/api/push/subscribe/route.ts`, `app/api/cron/tick/route.ts`.
 - **Pasos:**
   1. Pedido de permiso con explicación previa, desde un lugar con sentido (al crear la primera tarea de meal prep o en Perfil → Notificaciones). En iOS, explicar que hay que instalar la app primero.
   2. Envío con `web-push`; borrar suscripciones con 404/410.
-  3. Recordatorios con Inngest (cron cada 15 min): `prep_tasks.remind_at` vencidos y avisos de descongelar ("Pasá el pescado a la heladera").
+  3. Recordatorios con `pg_cron` de Supabase (cada 15 min, extensión `pg_net`) que llama a `POST /api/cron/tick`, ruta protegida con el header `Authorization: Bearer $CRON_SECRET`: envía los `prep_tasks.remind_at` vencidos y avisos de descongelar ("Pasá el pescado a la heladera"). Documentar el alta del cron en `docs/deploy.md`.
   4. Preferencias por usuario: tipos de aviso on/off, horario silencioso.
   5. Timers de cocina con la app en segundo plano: programar el push al iniciar un timer pasivo de más de 5 min.
 - **Aceptación:** con la app instalada y cerrada, llega el recordatorio en Android e iOS.

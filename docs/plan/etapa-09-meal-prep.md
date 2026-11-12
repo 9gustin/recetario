@@ -5,16 +5,16 @@
 
 ---
 
-### T9.1 — Jobs en segundo plano (Inngest)
-- **Depende de:** T8.3 · 👤 cuenta de Inngest e integración con Vercel (`INNGEST_EVENT_KEY`, `INNGEST_SIGNING_KEY`).
-- **Archivos:** `inngest/client.ts`, `inngest/functions/plan-approved.ts`, `app/api/inngest/route.ts`.
+### T9.1 — Pipeline post-aprobación en streaming (sin cola)
+- **Depende de:** T8.3 · decisión de la persona: **sin servicio de colas** (ni Inngest ni workers); todo es backend en streaming.
+- **Archivos:** `lib/ai/stream.ts` (helper SSE), `app/api/plans/[id]/finalize/route.ts`, `lib/plans/finalize.ts`.
 - **Pasos:**
-  1. `pnpm add inngest`. Dev server local con `pnpm dlx inngest-cli dev` (documentarlo en el README).
-  2. Al aprobar un plan se emite `plan/approved { planId }`.
-  3. Función `plan-approved` con steps idempotentes: `generate-shopping-list` → `enrich-shopping-list` → `generate-prep-tasks`. Reintentos automáticos por step.
-  4. Mover la generación y el enriquecimiento de la Etapa 8 a estos steps (la UI ya escucha por realtime).
-  5. Estado del job visible en el plan ("Armando tu lista y tus preparaciones…").
-- **Aceptación:** aprobar un plan dispara el job; si la IA falla, la lista existe igual y el step se reintenta.
+  1. Helper `lib/ai/stream.ts`: convierte el stream de `@anthropic-ai/sdk` (`messages.stream`) en una respuesta SSE con eventos tipados (`delta`, `step`, `done`, `error`). Reutilizable por el chat del plan, Preguntale y este pipeline.
+  2. Al aprobar un plan, el cliente abre `POST /api/plans/{id}/finalize` (Route Handler, `export const maxDuration` según el plan de Vercel). El handler corre pasos secuenciales: `generate-shopping-list` → `enrich-shopping-list` → `generate-prep-tasks`, emitiendo un evento por paso y por cada resultado parcial.
+  3. Cada paso es idempotente y guarda su resultado en la base apenas termina (borrador). Si se corta la conexión, la UI lo ve por realtime y un botón "Reintentar" reanuda desde el último paso sin duplicar.
+  4. Mover la generación y el enriquecimiento de la Etapa 8 a estos pasos.
+  5. Estado visible en el plan ("Armando tu lista y tus preparaciones…").
+- **Aceptación:** aprobar un plan muestra el avance en vivo; si la IA falla en un paso, lo ya guardado queda y se puede reintentar sin duplicar.
 
 ### T9.2 — Generar tareas de meal prep
 - **Depende de:** T9.1, T7.7

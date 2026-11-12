@@ -48,10 +48,10 @@ Los nombres están en `.env.example`. Local: `.env.local` (nunca se commitea). P
 | `ANTHROPIC_API_KEY` | Claude (IA). Solo servidor | `.env.local` · Vercel |
 | `TRANSCRIPTION_PROVIDER` | Proveedor de voz → texto (`openai`) | `.env.local` · Vercel |
 | `OPENAI_API_KEY` | Transcripción con `gpt-4o-transcribe`. Solo servidor | `.env.local` · Vercel |
-| `INNGEST_EVENT_KEY`, `INNGEST_SIGNING_KEY` | Jobs en segundo plano (Inngest). Los carga la integración de Inngest en Vercel | Vercel |
+| `CRON_SECRET` | Protege `/api/cron/tick`, que dispara `pg_cron` de Supabase (recordatorios) | `.env.local` · Vercel · en el cron de Supabase |
 | `NEXT_PUBLIC_POSTHOG_KEY`, `NEXT_PUBLIC_POSTHOG_HOST` | Analytics (opcional) | Vercel |
 
-Las variables de los demás servicios (Anthropic, transcripción, Inngest, Web Push) se agregan en las secciones siguientes a medida que se configuran.
+Las variables de los demás servicios (Web Push) se agregan en las secciones siguientes a medida que se configuran.
 
 ## Verificación de producción
 
@@ -59,16 +59,9 @@ Las variables de los demás servicios (Anthropic, transcripción, Inngest, Web P
 2. `https://<dominio>/api/health` responde `{"ok":true,"db":true}`.
 3. La URL abre en el celular y se puede instalar como app (Android: "Instalar app"; iOS: Compartir → "Agregar a inicio").
 
-## Jobs en segundo plano (Inngest)
+## Tareas largas y programadas (sin cola)
 
-- **Producción:** cuenta en inngest.com con la integración de Vercel instalada para este proyecto; carga `INNGEST_EVENT_KEY` e `INNGEST_SIGNING_KEY` en Vercel.
-- **Local:** no hace falta cuenta ni claves. Con la app corriendo (`pnpm dev`), en otra terminal:
-
-```bash
-pnpm dlx inngest-cli@latest dev
-```
-
-La UI queda en http://localhost:8288 y detecta las funciones de la app automáticamente.
+No se usa Inngest ni workers (decisión de simplicidad). La IA corre en Route Handlers con **streaming (SSE)** y guarda cada paso como borrador. Lo programado (recordatorios push, Etapa 10) lo dispara `pg_cron` de Supabase llamando a `POST /api/cron/tick` con `Authorization: Bearer $CRON_SECRET`. El alta del cron se documenta acá en la Etapa 10.
 
 ## Email de las cuentas
 

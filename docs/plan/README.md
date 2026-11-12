@@ -58,7 +58,6 @@ Ejecutá la tarea T1.3 del plan.
 | Cuenta Vercel conectada a GitHub | Hosting | T0.8 |
 | API key de Anthropic | IA | T5.1 |
 | API key de transcripción (OpenAI o Deepgram) | Voz | T5.2 |
-| Cuenta Inngest | Jobs en segundo plano | T9.1 |
 | Sentry y PostHog (opcionales) | Errores y analytics | T0.8 |
 
 ---

@@ -147,7 +147,7 @@ Las tareas están detalladas (pasos, archivos, aceptación) en `docs/plan/<archi
 - **T5B.6** Sumar contexto de etapas posteriores — está en `docs/plan/etapa-05b-asistente.md`; tildala ahí.
 
 ### Etapa 9 — Meal prep · `docs/plan/etapa-09-meal-prep.md`
-- T9.1 Jobs en segundo plano (Inngest) — Inngest ya está configurado.
+- T9.1 Pipeline post-aprobación en streaming — sin cola ni Inngest (decisión de simplicidad). Variable `CRON_SECRET` ya configurada.
 - T9.2 Generar tareas de meal prep
 - T9.3 UI de preparaciones — diseño: `P/Mediodia.html` (agenda del día)
 - T9.4 Variedad y conservación

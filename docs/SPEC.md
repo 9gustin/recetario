@@ -306,7 +306,7 @@ Conteo calórico detallado, integración con supermercados online, app nativa en
 | Tiempo real | **Supabase Realtime** | Lista de compras y plan sincronizados entre la pareja. |
 | IA (LLM) | **Claude API** — `claude-sonnet-5-5` para plan semanal/chat y perfil; `claude-haiku-5-5` para tareas chicas (normalizar ingredientes, etiquetar). Salidas estructuradas vía *tool use* con JSON Schema. | Lee PDFs e imágenes nativamente (plan del nutricionista, foto de receta). |
 | Voz → texto | API de transcripción (ej. OpenAI `gpt-4o-transcribe` o Deepgram), detrás de una interfaz `Transcriber` intercambiable | Claude no transcribe audio. Web Speech API del navegador como fallback gratis (inconsistente en iOS). |
-| Jobs largos | **Inngest** (o Vercel Queues) | Generar plan + lista + meal prep puede tardar > 30 s; jobs con reintentos y progreso. |
+| Tareas largas | **Route Handlers con streaming (SSE)**, `after()` de Next, y `pg_cron` de Supabase para lo programado. Sin servicio de colas | La IA se ve generando en tiempo real; cada paso se guarda como borrador y se puede reintentar. Decisión de simplicidad (2026-11-12): sin Inngest ni workers. |
 | Hosting | **Vercel** (app) + **Supabase región São Paulo** (`sa-east-1`) | Baja latencia desde Argentina; free tiers suficientes para empezar. |
 | Observabilidad | Sentry (errores) + PostHog (analytics de producto) + tabla `ai_runs` (costos/latencia IA) | |
 | Validación | **Zod** compartido entre forms, API y salidas de IA | Un solo esquema por entidad. |
@@ -325,7 +325,7 @@ Conteo calórico detallado, integración con supermercados online, app nativa en
  │ Next.js Server Components / Route Handlers / Server Actions        │
  │  ├─ /api/ai/*  ──► Claude API (Sonnet / Haiku)                     │
  │  │             ──► Transcripción (voz)                             │
- │  ├─ Inngest functions (plan → lista → meal prep)                   │
+ │  ├─ Streaming SSE (plan → lista → meal prep) + /api/cron/tick      │
  │  └─ /r/[token] (receta pública, SSR + OpenGraph image)             │
  └───────────────┬────────────────────────────────────────────────────┘
                  │
@@ -356,7 +356,6 @@ La estructura detallada está en [`CLAUDE.md`](../CLAUDE.md). Rutas principales:
   /ai (cliente, modelos, prompts, runStructured, agente del plan)
   /domain (escalado, unidades, compatibilidad receta↔perfil, validatePlan, armado de lista)
   /transcription
-/inngest
 /supabase/migrations, /supabase/tests
 /tests (e2e, evals)
 ```
@@ -979,7 +978,7 @@ Cada etapa termina con algo **usable en producción** (deploy en Vercel) y crite
 
 ### Etapa 9 — Meal prep y tips (≈ 1 semana)
 
-- Job post-aprobación (Inngest): `prep_tasks` + tips de la semana.
+- Pipeline post-aprobación en streaming: `prep_tasks` + tips de la semana.
 - Tareas en "Hoy", marcar hechas, recordatorios.
 - Sugerencias de variedad (ensaladas, guarniciones) usando el catálogo.
 

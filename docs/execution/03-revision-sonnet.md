@@ -96,7 +96,7 @@ Escribí `docs/reviews/etapa-XX.md` con la plantilla del §C.
    9. Offline: tachar la lista sin red y sincronizar.
    Cada flujo: OK / falla, con capturas.
 3. **Diseño:** todas las pantallas de `docs/design/pantallas/` contra la app, en los tres temas.
-4. **Seguridad:** todas las policies RLS y funciones `security definer`; endpoints públicos (`/r`, `/join`, `/api/inngest`, `/api/push`); cuotas de IA; datos de salud; cabeceras de seguridad; `pnpm audit`.
+4. **Seguridad:** todas las policies RLS y funciones `security definer`; endpoints públicos (`/r`, `/join`, `/api/cron/tick`, `/api/push`); cuotas de IA; datos de salud; cabeceras de seguridad; `pnpm audit`.
 5. **IA:** corré todos los evals (`pnpm eval:*`) y reportá resultados, costo y latencia promedio desde `ai_runs`.
 6. **Performance y accesibilidad:** Lighthouse mobile en Hoy, Recetas, Receta y Compras (objetivo ≥ 90); contraste en los tres temas; navegación por teclado.
 7. **Producción:** deploy en verde, migraciones al día, variables completas, Sentry recibiendo errores (si está activo), backups de Supabase activos.

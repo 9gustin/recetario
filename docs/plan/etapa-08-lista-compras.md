@@ -42,7 +42,7 @@
 - **Pasos:**
   1. Una llamada `MODELS.fast` con todos los ítems (nombre, cantidad total, unidad, `needed_by`, vida útil del catálogo) → por ítem: `purchase_hint` ("2 pechugas (~800 g)", "1 atado", "1 docena") y `shelf_life_warning` opcional ("La rúcula dura 3–4 días: la del jueves comprala a mitad de semana").
   2. Si falla la IA, la lista funciona igual con lo determinístico (sin bloquear).
-  3. Se corre en segundo plano después de generar (por ahora `after()` de Next; en la Etapa 9 pasa a Inngest) y los resultados aparecen por realtime.
+  3. Se corre en segundo plano después de generar (por ahora `after()` de Next; en la Etapa 9 pasa al pipeline en streaming de T9.1) y los resultados aparecen por realtime.
 - **Aceptación:** la lista se ve al instante y los hints aparecen en segundos.
 
 ### T8.5 — UI de la lista
