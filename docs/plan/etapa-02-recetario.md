@@ -60,7 +60,7 @@
   5. Botón fijo abajo "Guardar". Al editar, campo opcional "¿Qué cambiaste?" (`change_note`).
 - **Aceptación:** cargar una receta de 8 ingredientes y 6 pasos desde el celular en menos de 3 minutos.
 
-### T2.6 — Detalle de receta
+### [x] T2.6 — Detalle de receta
 - **Depende de:** T2.5
 - **Archivos:** `app/(app)/g/[groupId]/recetas/[id]/page.tsx`, `components/recipes/recipe-detail/*`.
 - **Pasos:**
@@ -111,3 +111,5 @@
 - T2.4: `saveRecipe` resuelve el `ingredient_id` con `matchLocal` (parsea el `raw_text` con `parseIngredientLine` para sacar el nombre) y llama al RPC `save_recipe`. `save_recipe` devuelve `jsonb`, así que el resultado se castea a `{ id, current_version }`. `uploadRecipeImage` sube a Storage (bucket `recipe-images`, path `<group>/<recipe>/<uuid>.<ext>`) y actualiza `image_url` con la URL pública. `last_cooked_at` queda `null` hasta la Etapa 3.
 
 - T2.5: se instalaron `react-hook-form` + `@hookform/resolvers` (el plan los nombra). Los ingredientes van en un `textarea` (una línea por ingrediente) con parseo en vivo (`parseIngredientLine`) mostrando chips; pegar varias líneas crea varios. Los pasos usan `useFieldArray` con reordenar por **botones ↑/↓** en vez de `@dnd-kit` (drag-and-drop táctil es menos fiable; se deja fuera para simplificar). La foto se comprime en el cliente (canvas → webp, máx 1600 px) y sube vía `uploadRecipeImage`. El total de tiempo se calcula (prep + cocción).
+
+- T2.6: el detalle escala ingredientes en vivo con `scaleQuantity` + `formatQuantity` al cambiar porciones. El botón "Cocinar" queda deshabilitado (Etapa 3); Compartir y "Agregar al plan" llegan en Etapas 4 y 7. "la hicieron X veces" se omite hasta tener sesiones de cocina (Etapa 3). El header usa `bg-hero` con foto (`image_url`) si existe.
