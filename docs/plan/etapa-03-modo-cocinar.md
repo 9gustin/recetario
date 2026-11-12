@@ -11,7 +11,7 @@
 - **Pasos:** tabla `cooking_sessions` (§5.2) con RLS por grupo de la receta; select/update solo de las sesiones propias (`user_id = auth.uid()`), salvo lectura de `finished_at` y `rating` para miembros del grupo (para mostrar "la última vez la hicieron el…"). Vista o RPC `recipe_last_cooked(recipe_id)`.
 - **Aceptación:** `pnpm db:test` en verde.
 
-### T3.2 — Motor de stories
+### [x] T3.2 — Motor de stories
 - **Depende de:** T2.6
 - **Archivos:** `app/(app)/g/[groupId]/recetas/[id]/cocinar/page.tsx`, `components/cooking/cooking-stories.tsx`, `components/cooking/use-cooking-reducer.ts` + test, `components/cooking/progress-segments.tsx`, `components/cooking/step-card.tsx`, `components/cooking/mise-en-place.tsx`.
 - **Pasos:**
@@ -82,3 +82,5 @@
 ## Notas de ejecución
 
 - T3.1: las sesiones solo las lee su dueño (la tabla tiene notas y fotos); el resto del grupo ve solo fecha, puntaje y quién cocinó vía `recipe_last_cooked` (security definer, valida membresía). `user_id` toma `auth.uid()` por defecto. `pending_edits` es `jsonb not null default '[]'`. 8 tests pgTAP en `03_cooking.test.sql`.
+
+- T3.2: la ruta vive en el grupo `app/(cook)/…/cocinar` (mismo URL, layout propio sin barras y con `DayPartProvider force="noche"` + `data-daypart="noche"` en el contenedor para que el tema salga bien desde el servidor). Se instaló `framer-motion` y `zustand` (nombrados en el plan). Los pasos creados por el formulario no traen `ingredient_ids`, así que `ingredientsForStep` (lib/domain/cooking-display.ts) usa los ids si existen y, si no, los ingredientes nombrados en el texto del paso. Zonas de tap (tercios izquierdo/derecho) solo en pantallas de paso; la mise en place y la final son interactivas y no las tienen. El botón Cocinar del detalle ya está habilitado. Helper de e2e `seedRecipe` en `tests/e2e/helpers/recipes.ts` (crea recetas por la API como el usuario).

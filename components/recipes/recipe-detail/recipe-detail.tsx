@@ -238,8 +238,8 @@ export function RecipeDetail({ groupId, recipe }: Props) {
 
         {/* Acciones */}
         <div className="flex flex-col gap-2">
-          <PillButton type="button" fullWidth disabled title="Disponible en la Etapa 3">
-            Cocinar
+          <PillButton asChild fullWidth>
+            <Link href={`/g/${groupId}/recetas/${recipe.id}/cocinar`}>Cocinar</Link>
           </PillButton>
           <div className="grid grid-cols-3 gap-2">
             <PillButton asChild variant="outline" size="md">
