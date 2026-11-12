@@ -10,7 +10,7 @@
 - **Archivos:** `supabase/migrations/<ts>_shopping.sql`, `supabase/tests/08_shopping.test.sql`.
 - **Pasos:** tablas `shopping_lists` y `shopping_list_items` (§5.2), RLS por grupo, ambas en `supabase_realtime`. RPC `set_item_state(p_item_id, p_state)` que guarda `state_by`/`state_at`.
 
-### T8.2 — Dominio: armar la lista 🧠
+### [x] T8.2 — Dominio: armar la lista 🧠
 - **Depende de:** T2.2, T7.2
 - **Archivos:** `lib/domain/shopping-list.ts` + `shopping-list.test.ts`.
 - **Pasos:**
@@ -71,3 +71,5 @@
 ## Notas de ejecución
 
 - T8.1: Se agregaron pantry_staple y no_longer_needed a shopping_list_items (no estaban en el spec) para T8.2/T8.3.
+
+- T8.2: Cobertura 97% sentencias / 96% ramas (quedan dos ramas defensivas sin test).
