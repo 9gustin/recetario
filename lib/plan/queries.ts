@@ -53,7 +53,7 @@ export async function getPlanByWeek(
   const supabase = await createClient();
   const { data: plan } = await supabase
     .from("meal_plans")
-    .select("id, group_id, week_start, status, title, notes, approved_at")
+    .select("id, group_id, week_start, end_date, status, title, notes, approved_at")
     .eq("group_id", groupId)
     .eq("week_start", weekStart)
     .neq("status", "archived")
@@ -87,6 +87,7 @@ export async function getPlanMembers(groupId: string): Promise<PlanMember[]> {
 export type PlanHistoryItem = {
   id: string;
   week_start: string;
+  end_date: string;
   status: string;
   entryCount: number;
   thumbs: string[];
@@ -97,7 +98,7 @@ export async function getPlanHistory(groupId: string): Promise<PlanHistoryItem[]
   const supabase = await createClient();
   const { data: plans } = await supabase
     .from("meal_plans")
-    .select("id, week_start, status")
+    .select("id, week_start, end_date, status")
     .eq("group_id", groupId)
     .neq("status", "archived")
     .order("week_start", { ascending: false })
@@ -119,6 +120,7 @@ export async function getPlanHistory(groupId: string): Promise<PlanHistoryItem[]
   return (plans ?? []).map((p) => ({
     id: p.id,
     week_start: p.week_start,
+    end_date: p.end_date,
     status: p.status,
     entryCount: byPlan.get(p.id)?.count ?? 0,
     thumbs: byPlan.get(p.id)?.thumbs ?? [],
@@ -151,4 +153,20 @@ export async function getPlanEntries(
     .order("date")
     .order("position");
   return (data ?? []).map((r) => toPlanEntry(r as unknown as RawEntry));
+}
+
+/** Inicio del plan vigente que cubre `today` que arrancó, si hay. */
+export async function getCurrentPlanStart(groupId: string, today: string): Promise<string | null> {
+  const supabase = await createClient();
+  const { data } = await supabase
+    .from("meal_plans")
+    .select("week_start")
+    .eq("group_id", groupId)
+    .neq("status", "archived")
+    .gte("end_date", today)
+    .lte("week_start", today)
+    .order("week_start", { ascending: false })
+    .limit(1)
+    .maybeSingle();
+  return data?.week_start ?? null;
 }

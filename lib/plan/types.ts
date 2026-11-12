@@ -6,6 +6,7 @@ export type PlanRow = {
   id: string;
   group_id: string;
   week_start: string;
+  end_date: string;
   status: PlanStatus;
   title: string | null;
   notes: string | null;

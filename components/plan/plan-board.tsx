@@ -30,8 +30,14 @@ import {
   SheetHeader,
   SheetTitle,
 } from "@/components/ui/sheet";
-import { MEAL_SLOTS, slotLabel, type MealSlot } from "@/lib/domain/meal-slots";
-import { addDays, dayLabel, formatWeekLabel, weekDays } from "@/lib/domain/week";
+import { MEAL_SLOTS, type MealSlot } from "@/lib/domain/meal-slots";
+import {
+  addDays,
+  dayLabel,
+  formatRangeLabel,
+  rangeDays,
+  rangeLength,
+} from "@/lib/domain/week";
 import {
   addEntry,
   approvePlan,
@@ -94,6 +100,7 @@ export function PlanBoard({
   const [changedAfterApproval, setChangedAfterApproval] = useState(false);
   const [pending, start] = useTransition();
   const [chatOpen, setChatOpen] = useState(false);
+  const [length, setLength] = useState(7);
   const [tab, setTab] = useState<"meals" | "prep">("meals");
   const finalize = useFinalize(plan?.id ?? null);
   // Tras un router.refresh() el servidor puede traer el plan recién creado o cambios propios.
@@ -112,7 +119,9 @@ export function PlanBoard({
     onEntries: setEntries,
   });
 
-  const days = weekDays(weekStart);
+  const endDate = plan?.end_date ?? addDays(weekStart, length - 1);
+  const span = plan ? rangeLength(plan.week_start, plan.end_date) : length;
+  const days = rangeDays(weekStart, endDate);
   const inWeek = days.includes(today);
   // En la semana actual, hoy va primero y los días que ya pasaron quedan al final.
   const ordered = inWeek
@@ -120,7 +129,7 @@ export function PlanBoard({
     : days;
   const editing = entries.find((e) => e.id === editingId) ?? null;
   const byId = useMemo(() => new Map(entries.map((e) => [e.id, e])), [entries]);
-  const prev = history.find((h) => h.week_start === addDays(weekStart, -7));
+  const prev = history.find((h) => h.week_start === addDays(weekStart, -span));
   const approved = plan?.status === "approved";
 
   function onAiUpdate(u: {
@@ -139,7 +148,7 @@ export function PlanBoard({
   function openAi() {
     if (plan) return setChatOpen(true);
     start(async () => {
-      const res = await createPlan({ groupId, weekStart });
+      const res = await createPlan({ groupId, weekStart, days: length });
       if (!res.ok) return void toast.error(res.error);
       router.refresh();
       setChatOpen(true);
@@ -150,7 +159,7 @@ export function PlanBoard({
 
   function createManual() {
     start(async () => {
-      const res = await createPlan({ groupId, weekStart });
+      const res = await createPlan({ groupId, weekStart, days: length });
       if (!res.ok) return void toast.error(res.error);
       router.refresh();
     });
@@ -165,14 +174,15 @@ export function PlanBoard({
     });
   }
 
-  function pick(choice: { recipeId?: string; freeText?: string }) {
+  function pick(choice: { recipeId?: string; freeText?: string; slot: MealSlot }) {
     if (!plan || !adding) return;
     start(async () => {
       const res = await addEntry({
         planId: plan.id,
         date: adding.date,
-        slot: adding.slot,
-        ...choice,
+        recipeId: choice.recipeId,
+        freeText: choice.freeText,
+        slot: choice.slot,
       });
       if (!res.ok) return void toast.error(res.error);
       setEntries((prevEntries) => [...prevEntries, res.data]);
@@ -279,15 +289,15 @@ export function PlanBoard({
         </span>
         <div className="flex items-center gap-1">
           <Link
-            href={`/g/${groupId}/plan/${addDays(weekStart, -7)}`}
-            aria-label="Semana anterior"
+            href={`/g/${groupId}/plan/${addDays(weekStart, -span)}`}
+            aria-label="Anterior"
             className="flex size-11 items-center justify-center rounded-full"
           >
             <ChevronLeft className="size-5" aria-hidden="true" />
           </Link>
           <Link
-            href={`/g/${groupId}/plan/${addDays(weekStart, 7)}`}
-            aria-label="Semana siguiente"
+            href={`/g/${groupId}/plan/${addDays(weekStart, span)}`}
+            aria-label="Siguiente"
             className="flex size-11 items-center justify-center rounded-full"
           >
             <ChevronRight className="size-5" aria-hidden="true" />
@@ -304,10 +314,10 @@ export function PlanBoard({
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
               {prev && plan ? (
-                <DropdownMenuItem disabled>La semana ya tiene plan</DropdownMenuItem>
+                <DropdownMenuItem disabled>Ya hay un plan acá</DropdownMenuItem>
               ) : prev ? (
                 <DropdownMenuItem onSelect={() => repeat(prev.id)}>
-                  Duplicar semana anterior
+                  Repetir el plan anterior
                 </DropdownMenuItem>
               ) : null}
               <DropdownMenuItem onSelect={openAi}>
@@ -345,7 +355,7 @@ export function PlanBoard({
         </p>
       ) : null}
       <h2 className="font-display text-[30px] leading-[1.05] font-normal">
-        {formatWeekLabel(weekStart)}
+        {formatRangeLabel(weekStart, endDate)}
       </h2>
     </header>
   );
@@ -357,8 +367,33 @@ export function PlanBoard({
         <EmptyState
           icon={CalendarDays}
           title="Todavía no hay plan"
-          description="Armá la semana a mano, repetí una anterior o dejá que la IA te ayude."
+          description="Anotá lo que vas a comer, sea un día, unos días o la semana. Armalo a mano o dejá que la IA te ayude."
         />
+        <div role="radiogroup" aria-label="Cuántos días" className="mx-5 mb-4 flex flex-wrap gap-2">
+          {(
+            [
+              [1, "Un día"],
+              [3, "3 días"],
+              [7, "Una semana"],
+            ] as const
+          ).map(([n, label]) => (
+            <button
+              key={n}
+              type="button"
+              role="radio"
+              aria-checked={length === n}
+              onClick={() => setLength(n)}
+              className={cn(
+                "min-h-11 rounded-full border px-4 text-[13px] font-semibold",
+                length === n
+                  ? "border-foreground bg-foreground text-background"
+                  : "border-border bg-surface",
+              )}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
         <div className="flex flex-col gap-2 px-5 pb-8">
           <PillButton fullWidth disabled={pending} onClick={createManual}>
             <Plus /> Armar a mano
@@ -390,7 +425,7 @@ export function PlanBoard({
                     className="flex min-h-14 w-full items-center justify-between rounded-2xl border border-border bg-surface px-4 text-left"
                   >
                     <span className="text-[15px] font-semibold">
-                      {formatWeekLabel(h.week_start)}
+                      {formatRangeLabel(h.week_start, h.end_date)}
                     </span>
                     <span className="text-xs text-muted">{h.entryCount} comidas</span>
                   </button>
@@ -503,23 +538,14 @@ export function PlanBoard({
                   )),
               )}
               {emptySlots.length > 0 ? (
-                <div
-                  className="flex flex-wrap items-center gap-1.5 rounded-2xl border border-dashed border-border px-3 py-1.5"
-                  role="group"
+                <button
+                  type="button"
                   aria-label={`Agregar comida el ${dayLabel(date)}`}
+                  onClick={() => setAdding({ date, slot: emptySlots[0]! })}
+                  className="flex min-h-11 items-center gap-1.5 rounded-2xl border border-dashed border-border px-3 text-sm text-muted"
                 >
-                  <Plus className="size-4 text-muted" aria-hidden="true" />
-                  {emptySlots.map((s) => (
-                    <button
-                      key={s}
-                      type="button"
-                      onClick={() => setAdding({ date, slot: s })}
-                      className="min-h-11 rounded-full px-2.5 text-sm text-muted"
-                    >
-                      Agregar {slotLabel(s).toLowerCase()}
-                    </button>
-                  ))}
-                </div>
+                  <Plus className="size-4" aria-hidden="true" /> Agregar comida
+                </button>
               ) : null}
             </li>
           );
@@ -553,6 +579,7 @@ export function PlanBoard({
         groupId={groupId}
         date={adding?.date ?? weekStart}
         slot={adding?.slot ?? "lunch"}
+        slots={mealSlots}
         busy={pending}
         onPick={pick}
       />

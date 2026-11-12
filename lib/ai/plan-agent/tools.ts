@@ -5,7 +5,7 @@ import { z } from "zod";
 import { nameKey } from "@/lib/domain/ingredient-match";
 import { slotLabel, type MealSlot } from "@/lib/domain/meal-slots";
 import type { PlanIssue } from "@/lib/domain/validate-plan";
-import { addDays, dayLabel, weekDays } from "@/lib/domain/week";
+import { addDays, dayLabel, rangeDays } from "@/lib/domain/week";
 import { checkRecipe } from "@/lib/domain/compatibility";
 import { searchCatalog } from "@/lib/public/catalog";
 import { saveRecipeWith } from "@/lib/recipes/save";
@@ -28,6 +28,7 @@ export type PlanToolCtx = {
   groupId: string;
   planId: string;
   weekStart: string;
+  endDate: string;
   slots: MealSlot[];
   emit: (event: PlanAgentEvent) => void;
 };
@@ -76,10 +77,10 @@ async function currentCandidates(ctx: PlanToolCtx): Promise<Candidate[]> {
 }
 
 const checkWindow = (ctx: PlanToolCtx, candidates: Candidate[]): string | null => {
-  const days = new Set(weekDays(ctx.weekStart));
+  const days = new Set(rangeDays(ctx.weekStart, ctx.endDate));
   for (const c of candidates) {
     if (!days.has(c.date))
-      return `La fecha ${c.date} no está en la semana del plan (${ctx.weekStart}).`;
+      return `La fecha ${c.date} no está en el rango del plan (${ctx.weekStart} a ${ctx.endDate}).`;
     if (!ctx.slots.includes(c.slot))
       return `El momento "${slotLabel(c.slot)}" no está habilitado en este grupo.`;
     if (!c.recipe_id && !c.free_text) return "Cada comida necesita una receta o un texto libre.";

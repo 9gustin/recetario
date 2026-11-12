@@ -1,14 +1,18 @@
 import { redirect } from "next/navigation";
 import { requireUser } from "@/lib/auth";
-import { weekStartOf } from "@/lib/domain/week";
-import { getGroupPlanSettings } from "@/lib/plan/queries";
+import { todayString, weekStartOf } from "@/lib/domain/week";
+import { getCurrentPlanStart, getGroupPlanSettings } from "@/lib/plan/queries";
 
 export const metadata = { title: "Plan" };
 
-/** Lleva a la semana actual (según el día en que empieza la semana del grupo). */
+/** Lleva al plan vigente (el que cubre hoy); si no hay, a la semana actual vacía. */
 export default async function Page({ params }: { params: Promise<{ groupId: string }> }) {
   await requireUser();
   const { groupId } = await params;
-  const settings = await getGroupPlanSettings(groupId);
-  redirect(`/g/${groupId}/plan/${weekStartOf(new Date(), settings.weekStartsOn)}`);
+  const today = todayString();
+  const [current, settings] = await Promise.all([
+    getCurrentPlanStart(groupId, today),
+    getGroupPlanSettings(groupId),
+  ]);
+  redirect(`/g/${groupId}/plan/${current ?? weekStartOf(new Date(), settings.weekStartsOn)}`);
 }

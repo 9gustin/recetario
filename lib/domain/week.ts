@@ -72,3 +72,26 @@ export function dayLabel(dateStr: string): string {
 export function daysBetween(a: string, b: string): number {
   return Math.round((toUtc(b).getTime() - toUtc(a).getTime()) / 86_400_000);
 }
+
+/** Los días de un rango (ambos extremos incluidos). */
+export function rangeDays(start: string, end: string): string[] {
+  const n = Math.max(0, daysBetween(start, end)) + 1;
+  return Array.from({ length: n }, (_, i) => addDays(start, i));
+}
+
+/** Cantidad de días de un rango (ambos extremos incluidos). */
+export function rangeLength(start: string, end: string): number {
+  return daysBetween(start, end) + 1;
+}
+
+/** "Semana del 17 al 23 de noviembre", "Martes 18 de noviembre" o "18 al 20 de noviembre". */
+export function formatRangeLabel(start: string, end: string): string {
+  const len = rangeLength(start, end);
+  if (len === 7) return formatWeekLabel(start);
+  const [, sm, sd] = start.split("-").map(Number);
+  const [, em, ed] = end.split("-").map(Number);
+  if (len === 1) return `${dayLabel(start)} de ${MONTHS[sm! - 1]}`;
+  return sm === em
+    ? `${sd} al ${ed} de ${MONTHS[em! - 1]}`
+    : `${sd} de ${MONTHS[sm! - 1]} al ${ed} de ${MONTHS[em! - 1]}`;
+}

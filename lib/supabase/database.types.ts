@@ -497,14 +497,14 @@ isOneToOne: false
                   ]
                 },"meal_plans": {
                   Row: {
-                    "approved_at": string | null,"approved_by": string | null,"created_at": string,"created_by": string | null,"generation_context": Json | null,"group_id": string,"id": string,"notes": string | null,"prep_tips": NonNullable<Json>,"status": string,"title": string | null,"updated_at": string,"week_start": string
+                    "approved_at": string | null,"approved_by": string | null,"created_at": string,"created_by": string | null,"end_date": string,"generation_context": Json | null,"group_id": string,"id": string,"notes": string | null,"prep_tips": NonNullable<Json>,"status": string,"title": string | null,"updated_at": string,"week_start": string
                   }
                   ComputedFields: never
                   Insert: {
-                    "approved_at"?: string | null,"approved_by"?: string | null,"created_at"?: string,"created_by"?: string | null,"generation_context"?: Json | null,"group_id": string,"id"?: string,"notes"?: string | null,"prep_tips"?: NonNullable<Json>,"status"?: string,"title"?: string | null,"updated_at"?: string,"week_start": string
+                    "approved_at"?: string | null,"approved_by"?: string | null,"created_at"?: string,"created_by"?: string | null,"end_date": string,"generation_context"?: Json | null,"group_id": string,"id"?: string,"notes"?: string | null,"prep_tips"?: NonNullable<Json>,"status"?: string,"title"?: string | null,"updated_at"?: string,"week_start": string
                   }
                   Update: {
-                    "approved_at"?: string | null,"approved_by"?: string | null,"created_at"?: string,"created_by"?: string | null,"generation_context"?: Json | null,"group_id"?: string,"id"?: string,"notes"?: string | null,"prep_tips"?: NonNullable<Json>,"status"?: string,"title"?: string | null,"updated_at"?: string,"week_start"?: string
+                    "approved_at"?: string | null,"approved_by"?: string | null,"created_at"?: string,"created_by"?: string | null,"end_date"?: string,"generation_context"?: Json | null,"group_id"?: string,"id"?: string,"notes"?: string | null,"prep_tips"?: NonNullable<Json>,"status"?: string,"title"?: string | null,"updated_at"?: string,"week_start"?: string
                   }
                   Relationships: [
                     {

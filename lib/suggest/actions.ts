@@ -5,7 +5,7 @@ import { z } from "zod";
 import { requireUser } from "@/lib/auth";
 import { getNow } from "@/lib/now";
 import { hourIn } from "@/lib/domain/today";
-import { todayString, weekStartOf } from "@/lib/domain/week";
+import { addDays, todayString, weekStartOf } from "@/lib/domain/week";
 import { createClient } from "@/lib/supabase/server";
 
 const schema = z.object({
@@ -67,7 +67,7 @@ export async function chooseForToday(
   if (!plan) {
     const created = await supabase
       .from("meal_plans")
-      .insert({ group_id: groupId, week_start: weekStart, created_by: user.id })
+      .insert({ group_id: groupId, week_start: weekStart, end_date: addDays(weekStart, 6), created_by: user.id })
       .select("id")
       .single();
     if (created.error || !created.data) return { ok: false, error: "No se pudo crear el plan." };
