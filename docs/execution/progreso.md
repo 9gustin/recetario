@@ -16,7 +16,7 @@ Archivo compartido entre los tres agentes. Cada uno lo lee al empezar y lo actua
 - [x] Paso 10 — Login email + contraseña (sin Google)
 - [x] Paso 11 — Anthropic
 - [x] Paso 12 — Transcripción (proveedor elegido: OpenAI gpt-4o-transcribe)
-- [ ] Paso 13 — Jobs: sin Inngest (streaming + pg_cron), `CRON_SECRET` (falta cargarlo en Vercel)
+- [x] Paso 13 — Jobs: sin Inngest (streaming + pg_cron), `CRON_SECRET`
 - [ ] Paso 14 — Web Push (VAPID)
 - [ ] Paso 15 — Todo listo, rama `dev` creada
 

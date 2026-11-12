@@ -49,9 +49,12 @@ Los nombres están en `.env.example`. Local: `.env.local` (nunca se commitea). P
 | `TRANSCRIPTION_PROVIDER` | Proveedor de voz → texto (`openai`) | `.env.local` · Vercel |
 | `OPENAI_API_KEY` | Transcripción con `gpt-4o-transcribe`. Solo servidor | `.env.local` · Vercel |
 | `CRON_SECRET` | Protege `/api/cron/tick`, que dispara `pg_cron` de Supabase (recordatorios) | `.env.local` · Vercel · en el cron de Supabase |
+| `NEXT_PUBLIC_VAPID_PUBLIC_KEY` | Clave pública de Web Push (el navegador la usa para suscribirse) | `.env.local` · Vercel |
+| `VAPID_PRIVATE_KEY` | Clave privada de Web Push. Solo servidor | `.env.local` · Vercel |
+| `VAPID_SUBJECT` | Identifica al remitente ante los servicios de push (URL del sitio o `mailto:`) | `.env.local` · Vercel |
 | `NEXT_PUBLIC_POSTHOG_KEY`, `NEXT_PUBLIC_POSTHOG_HOST` | Analytics (opcional) | Vercel |
 
-Las variables de los demás servicios (Web Push) se agregan en las secciones siguientes a medida que se configuran.
+Las variables de los demás servicios (Web Push) están en esta tabla.
 
 ## Verificación de producción
 
