@@ -49,7 +49,7 @@
   3. Diseño genérico por `kind` para sumar tipos en la Etapa 10.
 - **Aceptación:** B recibe la receta de A, la guarda en su grupo y el badge desaparece.
 
-### T4.5 — Origen de las copias
+### [x] T4.5 — Origen de las copias
 - **Depende de:** T4.1
 - **Archivos:** ajustes en `components/recipes/recipe-detail/*`.
 - **Pasos:** en recetas forkeadas, mostrar "Basada en *Pollo al limón* de *Casa*" (si el usuario tiene acceso al original, con link; si no, solo el texto guardado en el fork). Guardar `forked_from_title` y `forked_from_group_name` en la copia para no depender de permisos.
@@ -75,3 +75,5 @@
 - T4.3: `/r/[token]`: vista SSR liviana con `get_public_recipe` (cliente anon, resultado validado con Zod, dedupe por request), ingredientes escalables, "Cocinar" y "Guardala en tu recetario"; `noindex, nofollow`. `opengraph-image.tsx` genera el preview 1200×630 (foto + título + "Compartida por") con los colores del tema noche repetidos a mano porque una imagen no usa tokens. `/r/[token]/cocinar` reutiliza `CookingStories` con `persist={false}` (sin sesión, sin ✏️, final con "Guardar en mi recetario"); `CookShell` es el layout compartido con el modo privado. `/r/[token]/guardar` manda a `/login?next=…` si no hay sesión y, con sesión, deja elegir el grupo (`fork_public_recipe`). Un link inválido o revocado muestra "Este link ya no está disponible". `view_count` es aproximado: el preview de WhatsApp pide la página y la imagen y cada una cuenta.
 
 - T4.4: la bandeja (`/perfil/bandeja`) lista los ítems sin resolver con una tarjeta por `kind` (`recipe_shared` tiene diseño; el resto cae a una tarjeta genérica con "Descartar", para sumar tipos en la Etapa 10). "Guardar" pide el grupo y llama a `accept_inbox_recipe`; "Descartar" marca `resolved_at`. El badge de la tab Perfil sale de un `count` liviano (`head: true`) en el layout de `(app)`; también se muestra en la fila "Bandeja" del Perfil.
+
+- T4.5: las columnas `forked_from_title` y `forked_from_group_name` ya se agregaron en T4.1; acá solo se muestran: "Basada en X de Y", con link al original únicamente si la RLS todavía devuelve esa receta (si ya no hay acceso o se borró, queda el texto guardado en la copia).

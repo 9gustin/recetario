@@ -33,6 +33,7 @@ type Props = {
     total_minutes: number | null;
     difficulty: string | null;
     tags: string[];
+    forked_from?: { title: string; group_name: string | null; href: string | null } | null;
     current_version: number;
     is_favorite: boolean;
     ingredients: {
@@ -127,6 +128,20 @@ export function RecipeDetail({ groupId, recipe, cooking, share }: Props) {
       </section>
 
       <div className="flex flex-col gap-5 px-5 pt-4 pb-8">
+        {recipe.forked_from ? (
+          <p className="text-[13px] text-muted">
+            Basada en{" "}
+            {recipe.forked_from.href ? (
+              <Link href={recipe.forked_from.href} className="font-semibold text-accent underline">
+                {recipe.forked_from.title}
+              </Link>
+            ) : (
+              <strong className="font-semibold text-foreground">{recipe.forked_from.title}</strong>
+            )}
+            {recipe.forked_from.group_name ? ` de ${recipe.forked_from.group_name}` : ""}
+          </p>
+        ) : null}
+
         {recipe.tags.length > 0 || recipe.difficulty ? (
           <div className="flex flex-wrap gap-2">
             {recipe.difficulty ? (
