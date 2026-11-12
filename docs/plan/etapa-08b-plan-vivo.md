@@ -46,7 +46,7 @@
   4. "Ver cómo quedó mi plan" → confirma (`status = 'active'`, archiva el anterior).
 - **Aceptación:** "no me gusta el yogur del desayuno" propone 3 reemplazos con proteína + lácteo y ninguno con prohibidos.
 
-### T8B.5 — Pantalla "Mi plan"
+### [x] T8B.5 — Pantalla "Mi plan"
 - **Depende de:** T8B.4
 - **Archivos:** `app/(app)/perfil/plan/page.tsx`, `components/diet-plan/today-plan.tsx`, `components/diet-plan/allowances.tsx`, tarjeta en `app/(app)/perfil/page.tsx`.
 - **Pasos:**
@@ -97,3 +97,5 @@
 - T8B.3: Las restricciones se proponen al perfil con ingestFoodProfile (borrador a confirmar). El eval con un PDF real de 10+ páginas queda para T8B.8 (se usarán planes en texto/dictado como fixtures; un PDF real lo aporta el usuario).
 
 - T8B.4: propose_swaps recibe candidatos del modelo y el servidor descarta los prohibidos por el perfil (checkRecipe); apply_swap vuelve a validar. runPlanAgent se generalizó (tools/feature/ctx). Falta probar con la API real en T8B.8.
+
+- T8B.5: No hay diseño canvas a mano para verificar a 375 px en los tres temas; usa tokens de color.
