@@ -72,6 +72,10 @@ test("ciclo semanal: plan con sobra → aprobar → lista → tachado compartido
   await pageA.goto(`/g/${groupId}/plan`);
   await pageA.getByRole("button", { name: "Aprobar plan" }).tap();
   await expect(pageA.getByText("Aprobado", { exact: true })).toBeVisible();
+  // El pipeline post-aprobación muestra su avance y termina.
+  await expect(pageA.getByText(/Armando la lista|Sumando consejos|Preparando/)).toHaveCount(0, {
+    timeout: 60_000,
+  });
 
   // La lista suma bien: pollo 500 + 300 = 800 g (la sobra no cuenta) y papas 4 u + 600 g.
   await pageA.goto(`/g/${groupId}/compras`);

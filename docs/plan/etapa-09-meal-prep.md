@@ -5,7 +5,7 @@
 
 ---
 
-### T9.1 — Pipeline post-aprobación en streaming (sin cola)
+### [x] T9.1 — Pipeline post-aprobación en streaming (sin cola)
 - **Depende de:** T8.3 · decisión de la persona: **sin servicio de colas** (ni Inngest ni workers); todo es backend en streaming.
 - **Archivos:** `lib/ai/stream.ts` (helper SSE), `app/api/plans/[id]/finalize/route.ts`, `lib/plans/finalize.ts`.
 - **Pasos:**
@@ -51,3 +51,5 @@
 - [ ] Prueba real: hacer el meal prep del domingo con las sugerencias.
 
 ## Notas de ejecución
+
+- T9.1: Pasos shopping-list → enrich-list (el de preparaciones se suma en T9.2); fallo no crítico no corta, reintento por paso con {only}. Si el cliente se va, el trabajo sigue (emit tolerante).

@@ -13,6 +13,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { toast } from "sonner";
+import { useFinalize } from "@/lib/hooks/use-finalize";
 import { useRealtimePlan } from "@/lib/hooks/use-realtime-plan";
 import { PillButton } from "@/components/shared/pill-button";
 import { EmptyState } from "@/components/shell/empty-state";
@@ -84,6 +85,7 @@ export function PlanBoard({
   const [changedAfterApproval, setChangedAfterApproval] = useState(false);
   const [pending, start] = useTransition();
   const [chatOpen, setChatOpen] = useState(false);
+  const finalize = useFinalize(plan?.id ?? null);
   // Tras un router.refresh() el servidor puede traer el plan recién creado o cambios propios.
   const [seen, setSeen] = useState({ plan: initialPlan, entries: initialEntries });
   if (seen.plan !== initialPlan || seen.entries !== initialEntries) {
@@ -220,8 +222,8 @@ export function PlanBoard({
     start(async () => {
       const res = await approvePlan({ planId: plan.id, groupId });
       if (!res.ok) return void toast.error(res.error);
-      // La lista de compras se arma sola al aprobar; si falla, se puede generar después.
-      await generateListForPlan({ planId: plan.id, groupId });
+      // Lista de compras, consejos y preparaciones se arman solos, con el avance a la vista.
+      void finalize.run();
       setPlan({ ...plan, status: "approved", approved_at: new Date().toISOString() });
       setChangedAfterApproval(false);
       toast.success("¡Plan aprobado!");
@@ -357,6 +359,23 @@ export function PlanBoard({
   return (
     <div className="flex flex-1 flex-col pb-28">
       {header}
+      {finalize.state.running ? (
+        <p role="status" className="mx-5 mb-2 rounded-2xl bg-hero px-4 py-2.5 text-sm font-medium">
+          {finalize.state.label ?? "Armando tu lista y tus preparaciones…"}
+        </p>
+      ) : null}
+      {!finalize.state.running && finalize.state.failed.length > 0 ? (
+        <p role="alert" className="mx-5 mb-2 rounded-2xl bg-hero px-4 py-2.5 text-sm font-medium">
+          No pudimos terminar todo.{" "}
+          <button
+            type="button"
+            className="min-h-11 font-bold underline"
+            onClick={() => void finalize.retry()}
+          >
+            Reintentar
+          </button>
+        </p>
+      ) : null}
       {changedAfterApproval ? (
         <p role="status" className="mx-5 mb-2 rounded-2xl bg-hero px-4 py-2.5 text-sm font-medium">
           Cambiaste el plan aprobado.{" "}
