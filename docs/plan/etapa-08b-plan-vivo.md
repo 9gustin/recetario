@@ -5,7 +5,7 @@
 
 ---
 
-### T8B.1 — Migración: plan vivo y registro
+### [x] T8B.1 — Migración: plan vivo y registro
 - **Depende de:** T6.1, T7.1
 - **Archivos:** `supabase/migrations/<ts>_diet_plans.sql`, `supabase/tests/08b_diet_plans.test.sql`.
 - **Pasos:**
@@ -89,3 +89,5 @@
 - [ ] Prueba real: cargar el plan de la nutricionista y registrarlo durante una semana.
 
 ## Notas de ejecución
+
+- T8B.1: Se agregó open_questions a diet_plans y activate_diet_plan (archiva el activo anterior). meal_logs.cooking_session_id sin FK por ahora.

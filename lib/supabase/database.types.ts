@@ -141,6 +141,92 @@ isOneToOne: false
       referencedColumns: ["id"]
     }
                   ]
+                },"diet_plan_meals": {
+                  Row: {
+                    "components": NonNullable<Json>,"days": (number)[] | null,"formula": string | null,"id": string,"options": NonNullable<Json>,"plan_id": string,"position": number,"slot": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "components"?: NonNullable<Json>,"days"?: (number)[] | null,"formula"?: string | null,"id"?: string,"options"?: NonNullable<Json>,"plan_id": string,"position"?: number,"slot": string
+                  }
+                  Update: {
+                    "components"?: NonNullable<Json>,"days"?: (number)[] | null,"formula"?: string | null,"id"?: string,"options"?: NonNullable<Json>,"plan_id"?: string,"position"?: number,"slot"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "diet_plan_meals_plan_id_fkey"
+      columns: ["plan_id"]
+isOneToOne: false
+      referencedRelation: "diet_plans"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"diet_plan_swaps": {
+                  Row: {
+                    "created_at": string,"id": string,"meal_id": string | null,"original": string,"plan_id": string,"reason": string | null,"replacement": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "created_at"?: string,"id"?: string,"meal_id"?: string | null,"original": string,"plan_id": string,"reason"?: string | null,"replacement": string
+                  }
+                  Update: {
+                    "created_at"?: string,"id"?: string,"meal_id"?: string | null,"original"?: string,"plan_id"?: string,"reason"?: string | null,"replacement"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "diet_plan_swaps_meal_id_fkey"
+      columns: ["meal_id"]
+isOneToOne: false
+      referencedRelation: "diet_plan_meals"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "diet_plan_swaps_plan_id_fkey"
+      columns: ["plan_id"]
+isOneToOne: false
+      referencedRelation: "diet_plans"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"diet_plan_versions": {
+                  Row: {
+                    "change_note": string | null,"created_at": string,"id": string,"plan_id": string,"snapshot": NonNullable<Json>,"version": number
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "change_note"?: string | null,"created_at"?: string,"id"?: string,"plan_id": string,"snapshot": NonNullable<Json>,"version": number
+                  }
+                  Update: {
+                    "change_note"?: string | null,"created_at"?: string,"id"?: string,"plan_id"?: string,"snapshot"?: NonNullable<Json>,"version"?: number
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "diet_plan_versions_plan_id_fkey"
+      columns: ["plan_id"]
+isOneToOne: false
+      referencedRelation: "diet_plans"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"diet_plans": {
+                  Row: {
+                    "allowances": NonNullable<Json>,"created_at": string,"ends_on": string | null,"id": string,"next_checkup": string | null,"open_questions": NonNullable<Json>,"rules": NonNullable<Json>,"source_input_ids": (string)[],"starts_on": string | null,"status": string,"summary": string | null,"title": string,"updated_at": string,"user_id": string,"version": number
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "allowances"?: NonNullable<Json>,"created_at"?: string,"ends_on"?: string | null,"id"?: string,"next_checkup"?: string | null,"open_questions"?: NonNullable<Json>,"rules"?: NonNullable<Json>,"source_input_ids"?: (string)[],"starts_on"?: string | null,"status"?: string,"summary"?: string | null,"title"?: string,"updated_at"?: string,"user_id"?: string,"version"?: number
+                  }
+                  Update: {
+                    "allowances"?: NonNullable<Json>,"created_at"?: string,"ends_on"?: string | null,"id"?: string,"next_checkup"?: string | null,"open_questions"?: NonNullable<Json>,"rules"?: NonNullable<Json>,"source_input_ids"?: (string)[],"starts_on"?: string | null,"status"?: string,"summary"?: string | null,"title"?: string,"updated_at"?: string,"user_id"?: string,"version"?: number
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "diet_plans_user_id_fkey"
+      columns: ["user_id"]
+isOneToOne: false
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    }
+                  ]
                 },"food_profile_drafts": {
                   Row: {
                     "changes": NonNullable<Json>,"created_at": string,"id": string,"input_ids": (string)[],"open_questions": NonNullable<Json>,"proposed": NonNullable<Json>,"status": string,"summary": string | null,"user_id": string
@@ -318,6 +404,38 @@ isOneToOne: false
                   }
                   Relationships: [
                     
+                  ]
+                },"meal_logs": {
+                  Row: {
+                    "ai_suggested_status": string | null,"cooking_session_id": string | null,"created_at": string,"date": string,"id": string,"note": string | null,"plan_entry_id": string | null,"plan_id": string | null,"slot": string,"status": string,"user_id": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "ai_suggested_status"?: string | null,"cooking_session_id"?: string | null,"created_at"?: string,"date": string,"id"?: string,"note"?: string | null,"plan_entry_id"?: string | null,"plan_id"?: string | null,"slot": string,"status": string,"user_id"?: string
+                  }
+                  Update: {
+                    "ai_suggested_status"?: string | null,"cooking_session_id"?: string | null,"created_at"?: string,"date"?: string,"id"?: string,"note"?: string | null,"plan_entry_id"?: string | null,"plan_id"?: string | null,"slot"?: string,"status"?: string,"user_id"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "meal_logs_plan_entry_id_fkey"
+      columns: ["plan_entry_id"]
+isOneToOne: false
+      referencedRelation: "meal_plan_entries"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "meal_logs_plan_id_fkey"
+      columns: ["plan_id"]
+isOneToOne: false
+      referencedRelation: "diet_plans"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "meal_logs_user_id_fkey"
+      columns: ["user_id"]
+isOneToOne: false
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    }
                   ]
                 },"meal_plan_entries": {
                   Row: {
@@ -670,6 +788,9 @@ isOneToOne: false
 "accept_invite":
 { Args: { "p_token": string }; Returns: string
                            },
+"activate_diet_plan":
+{ Args: { "p_plan_id": string }; Returns: undefined
+                           },
 "approve_plan":
 { Args: { "p_plan_id": string }; Returns: undefined
                            },
@@ -681,6 +802,9 @@ isOneToOne: false
                            },
 "create_share_link":
 { Args: { "p_recipe_id": string }; Returns: string
+                           },
+"diet_plan_owner":
+{ Args: { "p_plan_id": string }; Returns: string
                            },
 "duplicate_plan":
 { Args: { "p_plan_id": string,"p_week_start": string }; Returns: string
@@ -694,6 +818,11 @@ isOneToOne: false
 "get_group_diet":
 { Args: { "p_group_id": string }; Returns: {
               "display_name": string,"goals": Json,"restrictions": Json,"user_id": string
+            }[]
+                           },
+"get_group_meal_rules":
+{ Args: { "p_group_id": string }; Returns: {
+              "components": Json,"days": (number)[],"display_name": string,"formula": string,"slot": string,"user_id": string
             }[]
                            },
 "get_invite_preview":
@@ -722,6 +851,26 @@ isOneToOne: false
 "list_group_id":
 { Args: { "p_list_id": string }; Returns: string
                            },
+"log_meal":
+{ Args: { "p_ai_suggested"?: string,"p_date": string,"p_note"?: string,"p_plan_entry_id"?: string,"p_slot": string,"p_status": string }; Returns: {
+              "ai_suggested_status": string | null,
+"cooking_session_id": string | null,
+"created_at": string,
+"date": string,
+"id": string,
+"note": string | null,
+"plan_entry_id": string | null,
+"plan_id": string | null,
+"slot": string,
+"status": string,
+"user_id": string
+            }
+                          SetofOptions: {
+        from: "*"
+        to: "meal_logs"
+        isOneToOne: true
+        isSetofReturn: false
+      } },
 "plan_group_id":
 { Args: { "p_plan_id": string }; Returns: string
                            },
@@ -738,6 +887,9 @@ isOneToOne: false
                            },
 "revoke_share_link":
 { Args: { "p_recipe_id": string }; Returns: undefined
+                           },
+"save_diet_plan":
+{ Args: { "p_change_note"?: string,"p_plan": Json }; Returns: Json
                            },
 "save_recipe":
 { Args: { "p_recipe": Json }; Returns: Json
