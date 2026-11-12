@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { AnimatePresence, motion, type PanInfo } from "framer-motion";
-import { Check, PartyPopper, Pencil, Play, X } from "lucide-react";
+import { Check, MessageSquare, PartyPopper, Pencil, Play, X } from "lucide-react";
 import { PillButton } from "@/components/shared/pill-button";
 import {
   Dialog,
@@ -22,15 +22,18 @@ import {
 import { estimatedMinutes, ingredientsForStep } from "@/lib/domain/cooking-display";
 import { resumeInit, type OpenSession } from "@/lib/domain/cooking-session";
 import { useWakeLock } from "@/lib/hooks/use-wake-lock";
+import type { ChatContext } from "@/lib/hooks/use-assistant-chat";
 import Link from "next/link";
 import type { RecipeDetail } from "@/lib/recipes/queries";
 import { finishCookingSession, uploadCookingPhoto } from "@/lib/cooking/actions";
+import { AskSheet } from "./ask-sheet";
 import { EditStepSheet } from "./edit-step-sheet";
 import { FinishScreen, type FinishPayload } from "./finish-screen";
 import { MiseEnPlace } from "./mise-en-place";
 import { ProgressSegments } from "./progress-segments";
 import { StepCard } from "./step-card";
 import { FloatingTimers } from "./timers/floating-timers";
+import { remainingMs, useTimerStore } from "./timers/timer-store";
 import { StepTimer } from "./timers/step-timer";
 import { TimerEngine } from "./timers/timer-engine";
 import { useCookingReducer } from "./use-cooking-reducer";
@@ -104,6 +107,7 @@ export function CookingStories({
     resume ? resumeInit(resume, steps.length) : { steps: steps.length, servings: recipe.servings },
   );
   const [editOpen, setEditOpen] = useState(false);
+  const [askOpen, setAskOpen] = useState(false);
   const [startedAt, setStartedAt] = useState<number | null>(() =>
     resume ? new Date(resume.started_at).getTime() : null,
   );
@@ -142,6 +146,21 @@ export function CookingStories({
   function advance() {
     dispatch({ type: "COMPLETE" });
     dispatch({ type: "NEXT" });
+  }
+
+  /** Estado de la sesión para el asistente: receta, pantalla actual, porciones y timers de esta receta. */
+  function assistantContext(): ChatContext {
+    const now = Date.now();
+    const timers = Object.values(useTimerStore.getState().timers)
+      .filter((t) => t.recipeId === recipe.id && t.status !== "done")
+      .map((t) => ({ label: t.label, remaining_seconds: Math.ceil(remainingMs(t, now) / 1000) }));
+    return {
+      origin: "cooking",
+      recipeId: recipe.id,
+      step: state.index,
+      servings: state.servings,
+      timers,
+    };
   }
 
   function applyEdits(ops: CookingEdit[]) {
@@ -228,6 +247,16 @@ export function CookingStories({
           </p>
         </div>
         <div className="flex flex-none gap-2">
+          {step && persist ? (
+            <button
+              type="button"
+              aria-label="Preguntar sobre este paso"
+              onClick={() => setAskOpen(true)}
+              className="flex size-11 items-center justify-center rounded-full bg-surface"
+            >
+              <MessageSquare className="size-5" aria-hidden="true" />
+            </button>
+          ) : null}
           {step && persist ? (
             <button
               type="button"
@@ -368,6 +397,21 @@ export function CookingStories({
           </PillButton>
         )}
       </div>
+
+      {persist ? (
+        <AskSheet
+          open={askOpen && Boolean(step)}
+          onOpenChange={setAskOpen}
+          groupId={groupId}
+          stepLabel={
+            step
+              ? `Paso ${stepIndex + 1} · ${step.instruction.split(/\s+/).slice(0, 4).join(" ")}…`
+              : "Receta"
+          }
+          getContext={assistantContext}
+          onApplyInSession={(proposal) => applyEdits(proposal.ops)}
+        />
+      ) : null}
 
       {step && persist ? (
         <EditStepSheet

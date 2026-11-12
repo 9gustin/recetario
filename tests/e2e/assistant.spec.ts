@@ -158,3 +158,77 @@ test("preguntale: no se puede citar la receta de otro grupo (403 real, sin llega
   });
   expect(sinSesion.status()).toBe(401);
 });
+
+test("preguntar mientras cocinás: contexto del paso, timer corriendo y 'Aplicar en esta sesión'", async ({
+  browser,
+}) => {
+  test.setTimeout(150_000);
+  const { page, groupId, pollo } = await setup(browser);
+  let sent: Record<string, unknown> | null = null;
+  await mockChat(
+    page,
+    [
+      { type: "text_delta", text: "Dejalo 2 minutos más." },
+      {
+        type: "proposal",
+        proposal: {
+          kind: "recipe_change",
+          recipeId: pollo,
+          recipeTitle: "Pollo al limón",
+          changeNote: "Más cocción",
+          ops: [{ op: "set_duration", step: 1, seconds: 720 }],
+          summary: ["Paso 2: 10 min → 12 min"],
+        },
+      },
+      { type: "done", conversationId: "00000000-0000-4000-8000-000000000003" },
+    ],
+    (body) => (sent = body),
+  );
+
+  await page.goto(`/g/${groupId}/recetas/${pollo}/cocinar`);
+  await page.getByRole("button", { name: "Empezar" }).tap();
+  await page.getByRole("button", { name: "Listo" }).tap();
+  await expect(page.getByText("Paso 2 de 2")).toBeVisible();
+
+  // Arranca el timer del paso (10 min) y pregunta con el timer corriendo.
+  await page.getByRole("button", { name: "Iniciar" }).tap();
+  const later = page.getByRole("button", { name: "Ahora no" });
+  if (await later.isVisible().catch(() => false)) await later.tap();
+  await expect(page.getByText("En marcha")).toBeVisible();
+
+  await page.getByRole("button", { name: "Preguntar sobre este paso" }).tap();
+  await expect(page.getByText(/^Paso 2 · Cociná el pollo/)).toBeVisible();
+  await page.getByLabel(/Escribí tu pregunta/).fill("¿Le doy más tiempo?");
+  await page.getByRole("button", { name: "Enviar pregunta" }).tap();
+
+  // El mensaje viaja con el contexto de la sesión: paso, porciones y el timer en marcha.
+  await expect.poll(() => sent).not.toBeNull();
+  const body = sent as unknown as {
+    context: {
+      origin: string;
+      recipeId: string;
+      step: number;
+      servings: number;
+      timers: { label: string; remaining_seconds: number }[];
+    };
+  };
+  expect(body.context).toMatchObject({ origin: "cooking", recipeId: pollo, step: 2, servings: 2 });
+  expect(body.context.timers).toHaveLength(1);
+  expect(body.context.timers[0]!.remaining_seconds).toBeGreaterThan(540);
+  expect(body.context.timers[0]!.remaining_seconds).toBeLessThanOrEqual(600);
+
+  // La respuesta ofrece aplicar en la sesión (no en la receta).
+  await expect(page.getByText("Dejalo 2 minutos más.")).toBeVisible();
+  await expect(page.getByRole("button", { name: "Sumarlo a la receta" })).toHaveCount(0);
+  await page.getByRole("button", { name: "Aplicar en esta sesión" }).tap();
+  await expect(page.getByText("Aplicado en esta sesión")).toBeVisible();
+
+  // Cerrar el panel vuelve al mismo paso, con el cambio aplicado y el timer sin interrumpirse.
+  await page.keyboard.press("Escape");
+  await expect(page.getByText("Paso 2 de 2")).toBeVisible();
+  await expect(page.getByText("En marcha")).toBeVisible();
+
+  // La receta original no cambió (los ajustes viven en la sesión).
+  await page.goto(`/g/${groupId}/recetas/${pollo}`);
+  await expect(page.getByText("10 min").first()).toBeVisible();
+});

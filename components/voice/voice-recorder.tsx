@@ -14,6 +14,8 @@ type Props = {
   onTranscript: (text: string) => void;
   confirmLabel?: string;
   idleLabel?: string;
+  /** Manda el texto apenas se transcribe, sin pedir revisarlo (modo cocinar: manos ocupadas). */
+  autoSend?: boolean;
 };
 
 type Phase = "record" | "working" | "review";
@@ -23,6 +25,7 @@ export function VoiceRecorder({
   onTranscript,
   confirmLabel = "Usar este texto",
   idleLabel = "Tocá para hablar",
+  autoSend = false,
 }: Props) {
   const recorder = useRecorder();
   const [phase, setPhase] = useState<Phase>("record");
@@ -55,6 +58,11 @@ export function VoiceRecorder({
       if (!res.ok) throw new Error(body.error ?? "No pudimos transcribir el audio.");
       if (!body.text)
         throw new Error("No escuchamos nada. Probá de nuevo, más cerca del micrófono.");
+      if (autoSend) {
+        setPhase("record");
+        onTranscript(body.text);
+        return;
+      }
       setText(body.text);
       setPhase("review");
     } catch (e) {
