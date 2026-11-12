@@ -77,7 +77,7 @@
   3. ¿Qué tenés? e Ideas filtran/ordenan por encaje con la fórmula del momento.
 - **Aceptación:** con un plan vivo "cena sin harinas", el plan con IA no propone pastas a la noche y las ideas de la cena tampoco.
 
-### T8B.8 — Evals y E2E
+### [x] T8B.8 — Evals y E2E
 - **Archivos:** `tests/evals/diet-plan/*`, `tests/e2e/diet-plan.spec.ts`.
 - **Pasos:** evals con 3 planes de ejemplo (PDF, foto, audio transcripto): comidas y permitidos detectados, reemplazos válidos. E2E: subir PDF de prueba (IA mockeada) → ajustar con un reemplazo → activar → registrar 3 comidas y un permitido → grilla y contador correctos.
 - **Aceptación:** evals ≥ 90%; e2e en verde.
@@ -103,3 +103,5 @@
 - T8B.6: Pendiente dentro de T8B.6: registrar automático 'Cumplí' al terminar una sesión de cocinar con plan_entry_id (paso 5) y el historial de semanas anteriores; se retoman después de T8B.8 si hay tiempo.
 
 - T8B.7: MEAL_RULE_MISMATCH solo avisa. Clasificación por familia→grupo de alimentos en lib/domain/meal-rules.ts. Ideas y ¿Qué tenés? filtran (duro) lo que no encaja con la fórmula del momento; falta verificarlo con la API real.
+
+- T8B.8: Evals: 3 planes (texto, dictado, tabla) + ajuste por chat, 4/4 con la API real. Sin fixture PDF/foto: se prueba a mano. E2E con ingesta simulada.

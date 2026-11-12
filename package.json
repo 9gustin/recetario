@@ -22,7 +22,8 @@
     "eval:parse": "tsx --conditions=react-server tests/evals/parse-recipe/run.ts",
     "eval:assistant": "tsx --conditions=react-server tests/evals/assistant/run.ts",
     "eval:plan": "tsx --conditions=react-server tests/evals/plan/run.ts",
-    "eval:suggest": "tsx --conditions=react-server tests/evals/plan/suggest.ts"
+    "eval:suggest": "tsx --conditions=react-server tests/evals/plan/suggest.ts",
+    "eval:diet": "tsx --conditions=react-server tests/evals/diet-plan/run.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.8.0",
