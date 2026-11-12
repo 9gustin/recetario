@@ -67,6 +67,9 @@ export default async function Page({
       cooking={cooking}
       questions={questions}
       forWhom={members}
+      adaptMembers={diets
+        .filter((d) => d.restrictions.length > 0)
+        .map((d) => ({ id: d.userId, name: d.displayName?.trim() || "Alguien" }))}
       ingredientProblems={ingredientProblems}
       share={{
         groups: groups.map((g) => ({ id: g.id, name: g.name, emoji: g.emoji })),

@@ -5,6 +5,7 @@ import { pickAssistantModel, runAssistant } from "@/lib/ai/assistant/agent";
 import { loadPromptRecipes } from "@/lib/ai/assistant/context";
 import { encodeSse, type AssistantEvent, type Proposal } from "@/lib/ai/assistant/events";
 import { buildContextText } from "@/lib/ai/assistant/format";
+import { describeRestrictions, loadOwnRestrictions } from "@/lib/ai/assistant/profile";
 import { buildSystemPrompt } from "@/lib/ai/assistant/prompt";
 import { assistantChatSchema } from "@/lib/schemas/assistant";
 import { createClient } from "@/lib/supabase/server";
@@ -123,9 +124,10 @@ export async function POST(request: Request) {
         }
       : null,
   });
-  const userContent = contextText
-    ? `${contextText}\n\n---\nPregunta de la persona: ${message}`
-    : message;
+  // Las restricciones de quien pregunta viajan siempre (el chequeo real lo hace check_compatibility por código).
+  const restrictionsText = describeRestrictions(await loadOwnRestrictions(supabase, user.id));
+  const preface = [restrictionsText, contextText].filter(Boolean).join("\n\n");
+  const userContent = preface ? `${preface}\n\n---\nPregunta de la persona: ${message}` : message;
 
   const encoder = new TextEncoder();
   const body = new ReadableStream({

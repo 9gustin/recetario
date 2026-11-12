@@ -3,6 +3,8 @@ import type Anthropic from "@anthropic-ai/sdk";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { z } from "zod";
 import { applyCookingEdits, summarizeEdits } from "@/lib/domain/apply-cooking-edits";
+import { checkRecipe } from "@/lib/domain/compatibility";
+import { loadOwnRestrictions } from "./profile";
 import { matchLocal, normalizeName, type CatalogIngredient } from "@/lib/domain/ingredient-match";
 import { cookingEditsSchema } from "@/lib/schemas/cooking-edits";
 import type { Database } from "@/lib/supabase/database.types";
@@ -119,21 +121,65 @@ const getIngredientInfo = {
 const checkCompatibility = {
   name: "check_compatibility",
   description:
-    "Chequea si agregar o cambiar ingredientes en una receta es compatible con las restricciones alimentarias de la persona. Llamala SIEMPRE antes de recomendar sumar un ingrediente.",
+    "Chequea si agregar o cambiar ingredientes en una receta es compatible con las restricciones alimentarias de la persona que pregunta. Llamala SIEMPRE antes de recomendar sumar un ingrediente.",
   schema: z.object({
     recipe_id: uuid,
     changes: z.array(z.string().min(1).max(100)).min(1).max(10),
   }),
-  async run({ changes }) {
-    // El perfil alimentario llega en la Etapa 6 (T6.5); hasta entonces no hay restricciones cargadas.
-    return {
-      result: {
-        status: "sin_perfil",
-        message:
-          "La persona todavía no cargó su perfil alimentario: no hay restricciones registradas.",
-        checked: changes,
-      },
-    };
+  async run({ changes }, ctx) {
+    const restrictions = await loadOwnRestrictions(ctx.supabase, ctx.userId);
+    if (restrictions.length === 0) {
+      return {
+        result: {
+          status: "sin_perfil",
+          message: "La persona no tiene restricciones cargadas en su perfil alimentario.",
+          checked: changes,
+        },
+      };
+    }
+    const { data } = await ctx.supabase.from("ingredients").select("id, name, aliases, family");
+    const catalog = data ?? [];
+    const items = changes.map((change) => {
+      const match = matchLocal(
+        change,
+        catalog.map((c) => ({ id: c.id, name: c.name, aliases: c.aliases ?? [] })),
+      );
+      const row = match ? catalog.find((c) => c.id === match.id) : undefined;
+      const check = checkRecipe(
+        [
+          {
+            ingredientId: row?.id ?? null,
+            name: row?.name ?? change,
+            aliases: row?.aliases ?? [],
+            families: row?.family ?? [],
+            optional: false,
+          },
+        ],
+        restrictions,
+      );
+      // Un ingrediente suelto que no está en el catálogo y no choca por nombre con ninguna restricción se informa
+      // como ok (con una nota): "revisar" solo tiene sentido para recetas completas.
+      const status = check.status === "unknown" ? "ok" : check.status;
+      return {
+        item: change,
+        status,
+        note:
+          check.status === "unknown"
+            ? "No figura en el catálogo, pero por nombre no choca con ninguna restricción."
+            : undefined,
+        reasons: check.reasons
+          .filter((r) => r.severity !== "unknown")
+          .map((r) => ({ restriction: r.restriction, severity: r.severity, note: r.note })),
+      };
+    });
+    const worst = items.some((i) => i.status === "forbidden")
+      ? "prohibido"
+      : items.some((i) => i.status === "limit")
+        ? "limitado"
+        : items.some((i) => i.status === "unknown")
+          ? "revisar"
+          : "ok";
+    return { result: { status: worst, items } };
   },
 } satisfies ToolDef<z.ZodObject<{ recipe_id: z.ZodString; changes: z.ZodArray<z.ZodString> }>>;
 

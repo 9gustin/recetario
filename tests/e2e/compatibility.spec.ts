@@ -95,3 +95,124 @@ test("compatibilidad: indicadores por persona, 'Para quién va' y filtro 'Apta p
   );
   await expect(pageB.getByText("información médica")).toHaveCount(0);
 });
+
+test("adaptar una receta: elegir persona, ver qué cambió y guardar la variante vinculada a la original", async ({
+  browser,
+}) => {
+  test.setTimeout(150_000);
+  const email = `adapt-ui-${Date.now()}@test.com`;
+  const userId = await createTestUser(email, password, "Ana");
+  const page = await (await mobileContext(browser)).newPage();
+  await signIn(page, email, password);
+  const groupId = page.url().split("/g/")[1]!.split("/")[0]!;
+  await adminClient()
+    .from("food_profiles")
+    .insert({
+      user_id: userId,
+      data: {
+        restrictions: [{ target: "cebolla", type: "ingredient", severity: "forbidden" }],
+        goals: [],
+        likes: [],
+        dislikes: [],
+        cuisines: [],
+        schedule: {},
+        equipment: [],
+        skill: null,
+        valid_until: null,
+      },
+    } as never);
+  const original = await seedRecipe(email, password, groupId, {
+    title: "Guiso con cebolla",
+    ingredients: ["400 g de lentejas", "2 cebollas", "2 zanahorias"],
+    steps: [
+      { instruction: "Rehogá las cebollas.", minutes: 5 },
+      { instruction: "Sumá las lentejas y cociná." },
+    ],
+  });
+
+  await page.route("**/api/ai/recipes/*/adapt", (route) =>
+    route.fulfill({
+      status: 200,
+      contentType: "application/json",
+      body: JSON.stringify({
+        titleSuffix: "sin cebolla",
+        changes: ["Reemplacé las cebollas por hinojo y apio."],
+        compat: [{ userId, name: "Ana", status: "ok" }],
+        draft: {
+          title: "Guiso con cebolla",
+          servings: 2,
+          tags: [],
+          ingredients: [
+            {
+              raw_text: "400 g de lentejas",
+              quantity: 400,
+              unit: "g",
+              name_canonical: "lenteja",
+              position: 0,
+              optional: false,
+            },
+            {
+              raw_text: "1 bulbo de hinojo",
+              quantity: 1,
+              unit: "unidad",
+              name_canonical: "hinojo",
+              position: 1,
+              optional: false,
+            },
+            {
+              raw_text: "2 zanahorias",
+              quantity: 2,
+              unit: "unidad",
+              name_canonical: "zanahoria",
+              position: 2,
+              optional: false,
+            },
+          ],
+          steps: [
+            {
+              position: 0,
+              instruction: "Rehogá el hinojo.",
+              duration_seconds: 300,
+              timer_kind: "active",
+              tip: null,
+            },
+            {
+              position: 1,
+              instruction: "Sumá las lentejas y cociná.",
+              duration_seconds: null,
+              timer_kind: null,
+              tip: null,
+            },
+          ],
+        },
+      }),
+    }),
+  );
+
+  await page.goto(`/g/${groupId}/recetas/${original}`);
+  await page.getByRole("button", { name: "Adaptar para…" }).tap();
+  await expect(page.getByRole("button", { name: "Adaptar", exact: true })).toBeDisabled();
+  await page.getByRole("group", { name: "Personas" }).getByRole("button", { name: "Ana" }).tap();
+  await page.getByRole("button", { name: "Adaptar", exact: true }).tap();
+
+  // Comparación: qué cambió y el diff original ↔ adaptada.
+  await expect(page.getByText("Reemplacé las cebollas por hinojo y apio.")).toBeVisible();
+  await expect(page.getByLabel("Ana: apta")).toBeVisible();
+  await expect(page.getByText("1 bulbo de hinojo")).toBeVisible();
+  await expect(page.getByLabel("Nombre de la variante")).toHaveValue(
+    "Guiso con cebolla (sin cebolla)",
+  );
+
+  await page.getByRole("button", { name: "Guardar como variante" }).tap();
+  await page.waitForURL(
+    (url) => /\/recetas\/[0-9a-f-]{36}$/.test(url.pathname) && !url.pathname.endsWith(original),
+  );
+  await expect(
+    page.getByRole("heading", { name: "Guiso con cebolla (sin cebolla)" }),
+  ).toBeVisible();
+  await expect(page.getByText(/Basada en/)).toContainText("Guiso con cebolla");
+
+  // La original quedó intacta.
+  await page.goto(`/g/${groupId}/recetas/${original}`);
+  await expect(page.getByText("cebollas", { exact: true })).toBeVisible();
+});

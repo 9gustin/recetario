@@ -125,7 +125,7 @@ async function imageBlocks(
 }
 
 /** Vincula cada ingrediente con el catálogo (exacto → alias → trigram → ficha nueva por IA). */
-async function linkIngredients(
+export async function linkIngredients(
   draft: RecipeDraft,
   ctx: Ctx,
 ): Promise<{ draft: RecipeDraft; newIngredients: string[] }> {

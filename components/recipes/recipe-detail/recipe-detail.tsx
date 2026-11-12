@@ -3,6 +3,7 @@
 import type { CookingSummary } from "@/lib/cooking/queries";
 import type { RecipeQuestion } from "@/lib/ai/assistant/queries";
 import { CookingHistory } from "./cooking-history";
+import { AdaptSheet } from "../adapt/adapt-sheet";
 import { ForWhom, type ForWhomMember } from "./for-whom";
 import { ShareSheet, type ShareContactItem, type ShareGroup } from "../share-sheet";
 import { useState, useTransition } from "react";
@@ -21,6 +22,7 @@ type Props = {
   cooking?: CookingSummary;
   questions?: RecipeQuestion[];
   forWhom?: ForWhomMember[];
+  adaptMembers?: { id: string; name: string }[];
   /** Fila de ingrediente → el peor estado entre las personas del grupo. */
   ingredientProblems?: Record<string, "forbidden" | "limit" | "unknown">;
   share?: {
@@ -67,6 +69,7 @@ export function RecipeDetail({
   cooking,
   questions = [],
   forWhom = [],
+  adaptMembers = [],
   ingredientProblems = {},
   share,
 }: Props) {
@@ -315,6 +318,7 @@ export function RecipeDetail({
               initialShareUrl={share.initialShareUrl}
             />
           ) : null}
+          {adaptMembers.length > 0 ? <AdaptSheet recipe={recipe} members={adaptMembers} /> : null}
           <PillButton asChild variant="outline" fullWidth size="md">
             <Link href={`/g/${groupId}/preguntar?receta=${recipe.id}`}>
               <MessageSquare className="size-4" /> Preguntar por esta receta
