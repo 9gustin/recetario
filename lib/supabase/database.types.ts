@@ -23,7 +23,33 @@ export type Database = {
           }
         },"public": {
           Tables: {
-            "ai_conversations": {
+            "activity_events": {
+                  Row: {
+                    "created_at": string,"group_id": string | null,"id": string,"kind": string,"meta": NonNullable<Json>,"path": string | null,"user_id": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "created_at"?: string,"group_id"?: string | null,"id"?: string,"kind": string,"meta"?: NonNullable<Json>,"path"?: string | null,"user_id"?: string
+                  }
+                  Update: {
+                    "created_at"?: string,"group_id"?: string | null,"id"?: string,"kind"?: string,"meta"?: NonNullable<Json>,"path"?: string | null,"user_id"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "activity_events_group_id_fkey"
+      columns: ["group_id"]
+isOneToOne: false
+      referencedRelation: "groups"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "activity_events_user_id_fkey"
+      columns: ["user_id"]
+isOneToOne: false
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"ai_conversations": {
                   Row: {
                     "context": NonNullable<Json>,"created_at": string,"group_id": string,"id": string,"last_message_at": string,"plan_id": string | null,"purpose": string,"title": string | null,"user_id": string
                   }
@@ -936,6 +962,9 @@ isOneToOne: false
                            },
 "prepare_account_deletion":
 { Args: { "p_user_id": string }; Returns: undefined
+                           },
+"purge_old_activity":
+{ Args: Record<PropertyKey, never>; Returns: undefined
                            },
 "recipe_last_cooked":
 { Args: { "p_recipe_id": string }; Returns: {

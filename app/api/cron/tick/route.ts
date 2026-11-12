@@ -72,5 +72,7 @@ export async function POST(request: Request) {
       sent += r.sent;
     }
   }
+  // Limpieza diaria: la actividad se guarda 90 días.
+  if (now.getUTCMinutes() < 15 && hourAR(now) === 4) await admin.rpc("purge_old_activity");
   return NextResponse.json({ ok: true, sent });
 }

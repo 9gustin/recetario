@@ -100,3 +100,9 @@ Las funciones de Vercel tienen que correr en la **misma región que Supabase**; 
 1. Supabase → Project Settings → General → mirá la región (p. ej. `South America (São Paulo)`).
 2. Vercel → Project → Settings → Functions → *Function Region* → elegí la más cercana (São Paulo = `gru1`) y redeployá.
 3. La verificación de sesión usa `getClaims()` (local) y se cachea por request, así que cada pantalla hace menos viajes a la red.
+
+## Dónde ver los logs (T11.2)
+
+- **Lo que hace cada persona:** en la app, Perfil → Actividad (privado, 90 días). Para analizar todo junto, en Supabase → SQL editor: `select kind, count(*) from activity_events group by 1 order by 2 desc;` (el editor corre como administrador y ve todos).
+- **Errores y rendimiento del servidor:** Vercel → Project → Logs (filtrá por `Error`) y Observability.
+- **Llamadas a la IA (costo, errores, latencia):** tabla `ai_runs` en Supabase.

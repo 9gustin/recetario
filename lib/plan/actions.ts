@@ -1,5 +1,6 @@
 "use server";
 
+import { logEvent } from "@/lib/activity/log";
 import { revalidatePath } from "next/cache";
 import { z } from "zod";
 import { requireUser } from "@/lib/auth";
@@ -171,6 +172,7 @@ export async function approvePlan(raw: unknown): Promise<Result> {
   const supabase = await createClient();
   const { error } = await supabase.rpc("approve_plan", { p_plan_id: parsed.data.planId });
   if (error) return { ok: false, error: "No se pudo aprobar el plan." };
+  void logEvent(user.id, { kind: "plan_approved", groupId: parsed.data.groupId });
   void displayName(user.id).then((name) =>
     notifyGroup({
       groupId: parsed.data.groupId,

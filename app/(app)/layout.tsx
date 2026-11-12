@@ -2,6 +2,7 @@ import { cookies } from "next/headers";
 import { requireUser } from "@/lib/auth";
 import { getMyGroups } from "@/lib/groups/queries";
 import { getUnresolvedInboxCount } from "@/lib/inbox/queries";
+import { ActivityBeacon } from "@/components/shell/activity-beacon";
 import { BottomNav } from "@/components/shell/bottom-nav";
 import { TopBar } from "@/components/shell/top-bar";
 
@@ -17,6 +18,7 @@ export default async function AppLayout({ children }: LayoutProps<"/">) {
 
   return (
     <div className="mx-auto flex min-h-dvh w-full max-w-md flex-col bg-background">
+      <ActivityBeacon />
       <TopBar groups={groups} defaultGroupId={defaultGroupId} />
       <main className="flex flex-1 flex-col pb-[calc(76px+env(safe-area-inset-bottom))]">
         {children}

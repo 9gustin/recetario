@@ -1,7 +1,7 @@
 import { requireUser } from "@/lib/auth";
 import { createClient } from "@/lib/supabase/server";
 import Link from "next/link";
-import { Bell, ClipboardList, ShieldCheck, Inbox, Salad } from "lucide-react";
+import { Bell, ClipboardList, History, ShieldCheck, Inbox, Salad } from "lucide-react";
 import { getUnresolvedInboxCount } from "@/lib/inbox/queries";
 import { EditNameForm } from "@/components/profile/edit-name-form";
 import { PillButton } from "@/components/shared/pill-button";
@@ -57,6 +57,14 @@ export default async function Page() {
       >
         <Bell className="size-5" aria-hidden="true" />
         <span className="flex-1 text-[15px] font-semibold">Notificaciones</span>
+      </Link>
+
+      <Link
+        href="/perfil/actividad"
+        className="flex min-h-14 items-center gap-3 rounded-2xl border border-border bg-surface px-4"
+      >
+        <History className="size-5" aria-hidden="true" />
+        <span className="flex-1 text-[15px] font-semibold">Actividad</span>
       </Link>
 
       <Link
