@@ -1,0 +1,219 @@
+[
+  {
+    "id": "01-reemplazo-limon",
+    "question": "No tengo limón, ¿con qué lo reemplazo?",
+    "mentions": ["11111111-1111-4111-8111-111111111111"],
+    "origin": "recipe",
+    "checks": {
+      "no_markdown": true
+    }
+  },
+  {
+    "id": "02-reemplazo-aceite",
+    "question": "¿Puedo usar manteca en vez de aceite de oliva?",
+    "mentions": ["11111111-1111-4111-8111-111111111111"],
+    "origin": "recipe",
+    "checks": {
+      "no_markdown": true
+    }
+  },
+  {
+    "id": "03-reemplazo-pollo",
+    "question": "¿Qué otra proteína le va bien en lugar del pollo?",
+    "mentions": ["11111111-1111-4111-8111-111111111111"],
+    "origin": "recipe",
+    "checks": {
+      "no_markdown": true
+    }
+  },
+  {
+    "id": "04-sin-huevo",
+    "question": "No tengo huevos para la tarta, ¿qué hago?",
+    "mentions": ["55555555-5555-4555-8555-555555555555"],
+    "origin": "recipe",
+    "checks": {
+      "must_include_any": ["huevo"],
+      "forbidden_absent": true
+    }
+  },
+  {
+    "id": "05-agrega-brocoli",
+    "question": "¿Le puedo poner brócoli?",
+    "mentions": ["11111111-1111-4111-8111-111111111111"],
+    "origin": "recipe",
+    "checks": {
+      "expect_tools": ["check_compatibility"],
+      "mentions_step": 3,
+      "no_markdown": true
+    }
+  },
+  {
+    "id": "06-agrega-cebolla",
+    "question": "¿Le puedo agregar cebolla para que quede más rico?",
+    "mentions": ["11111111-1111-4111-8111-111111111111"],
+    "origin": "recipe",
+    "checks": {
+      "expect_tools": ["check_compatibility"],
+      "refuses": ["cebolla"]
+    }
+  },
+  {
+    "id": "07-agrega-mani",
+    "question": "Quiero sumarle maní picado a la ensalada de repollo, ¿va?",
+    "mentions": ["33333333-3333-4333-8333-333333333333"],
+    "origin": "recipe",
+    "checks": {
+      "expect_tools": ["check_compatibility"],
+      "refuses": ["maní"]
+    }
+  },
+  {
+    "id": "08-agrega-pan-rallado",
+    "question": "¿Le puedo hacer una costra de pan rallado al salmón? Es para la cena.",
+    "mentions": ["22222222-2222-4222-8222-222222222222"],
+    "origin": "recipe",
+    "checks": {
+      "expect_tools": ["check_compatibility"],
+      "must_include_any": ["harina", "pan rallado", "cena"]
+    }
+  },
+  {
+    "id": "09-freezar-pollo",
+    "question": "¿Se puede freezar esta receta?",
+    "mentions": ["11111111-1111-4111-8111-111111111111"],
+    "origin": "recipe",
+    "checks": {
+      "must_include_any": ["freez", "congel"],
+      "no_markdown": true
+    }
+  },
+  {
+    "id": "10-freezar-pure",
+    "question": "¿El puré de calabaza se puede congelar? ¿Cuánto dura?",
+    "mentions": ["44444444-4444-4444-8444-444444444444"],
+    "origin": "recipe",
+    "checks": {
+      "must_include_any": ["congel", "freez"]
+    }
+  },
+  {
+    "id": "11-heladera-ensalada",
+    "question": "¿Cuánto dura la ensalada de repollo en la heladera?",
+    "mentions": ["33333333-3333-4333-8333-333333333333"],
+    "origin": "recipe",
+    "checks": {
+      "must_include_any": ["días", "día", "horas"]
+    }
+  },
+  {
+    "id": "12-vence-pollo-5-dias",
+    "question": "Tengo pollo cocido de hace 5 días en la heladera, ¿lo como?",
+    "mentions": [],
+    "origin": "home",
+    "checks": {
+      "conservative": true
+    }
+  },
+  {
+    "id": "13-vence-arroz",
+    "question": "Hice arroz el lunes y estamos a viernes, ¿está bien todavía?",
+    "mentions": [],
+    "origin": "home",
+    "checks": {
+      "conservative": true
+    }
+  },
+  {
+    "id": "14-vence-huevos-duros",
+    "question": "Hace 10 días hice huevos duros y los dejé pelados en la heladera, ¿los puedo comer?",
+    "mentions": [],
+    "origin": "home",
+    "checks": {
+      "conservative": true
+    }
+  },
+  {
+    "id": "15-vence-salsa",
+    "question": "Abrí un frasco de salsa de tomate hace 2 semanas, tiene un poco de moho arriba, ¿le saco lo de arriba y la uso?",
+    "mentions": [],
+    "origin": "home",
+    "checks": {
+      "conservative": true
+    }
+  },
+  {
+    "id": "16-combina-salmon",
+    "question": "¿Qué combina mejor con el salmón: la ensalada de repollo o el puré de calabaza?",
+    "mentions": [
+      "22222222-2222-4222-8222-222222222222",
+      "33333333-3333-4333-8333-333333333333",
+      "44444444-4444-4444-8444-444444444444"
+    ],
+    "origin": "home",
+    "checks": {
+      "must_include_any": ["repollo", "puré", "calabaza"],
+      "no_markdown": true
+    }
+  },
+  {
+    "id": "17-escalar",
+    "question": "Quiero hacer el pollo al limón para 8 personas, ¿cómo lo escalo?",
+    "mentions": ["11111111-1111-4111-8111-111111111111"],
+    "origin": "recipe",
+    "checks": {
+      "must_include_any": ["800", "doble", "duplic", "8"],
+      "no_markdown": true
+    }
+  },
+  {
+    "id": "18-cocinar-cuanto",
+    "question": "¿Cuánto lo dejo ahora?",
+    "mentions": [],
+    "origin": "cooking",
+    "cooking": {
+      "recipe": "11111111-1111-4111-8111-111111111111",
+      "step": 2,
+      "servings": 4,
+      "timers": []
+    },
+    "checks": {
+      "max_sentences": 3
+    }
+  },
+  {
+    "id": "19-cocinar-quemo",
+    "question": "Se me pegó un poco el pollo en la sartén, ¿sigo o empiezo de nuevo?",
+    "mentions": [],
+    "origin": "cooking",
+    "cooking": {
+      "recipe": "11111111-1111-4111-8111-111111111111",
+      "step": 2,
+      "servings": 4,
+      "timers": []
+    },
+    "checks": {
+      "max_sentences": 3
+    }
+  },
+  {
+    "id": "20-cocinar-timer",
+    "question": "¿Cuánto falta para pasar al siguiente paso?",
+    "mentions": [],
+    "origin": "cooking",
+    "cooking": {
+      "recipe": "11111111-1111-4111-8111-111111111111",
+      "step": 3,
+      "servings": 4,
+      "timers": [
+        {
+          "label": "Paso 3",
+          "remaining_seconds": 270
+        }
+      ]
+    },
+    "checks": {
+      "max_sentences": 3,
+      "must_include_any": ["4", "5", "minuto"]
+    }
+  }
+]

@@ -19,7 +19,8 @@
     "db:types": "supabase gen types typescript --local > lib/supabase/database.types.ts",
     "test:e2e": "playwright test",
     "ai:smoke": "tsx --conditions=react-server scripts/ai-smoke.ts",
-    "eval:parse": "tsx --conditions=react-server tests/evals/parse-recipe/run.ts"
+    "eval:parse": "tsx --conditions=react-server tests/evals/parse-recipe/run.ts",
+    "eval:assistant": "tsx --conditions=react-server tests/evals/assistant/run.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.8.0",
