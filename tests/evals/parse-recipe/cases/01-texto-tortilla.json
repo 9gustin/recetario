@@ -1,0 +1,8 @@
+{
+  "id": "01-texto-tortilla",
+  "kind": "text",
+  "expected_ingredients": 5,
+  "key_ingredients": ["papa", "huevo", "cebolla"],
+  "has_timed_passive_step": false,
+  "text": "Tortilla de papas: 4 papas, 5 huevos, 1 cebolla, sal, aceite. Pelar y cortar las papas en rodajas finas, freírlas 15 minutos. Batir los huevos, mezclar con las papas, cocinar en sartén 5 minutos de cada lado."
+}

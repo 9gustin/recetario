@@ -1,0 +1,8 @@
+{
+  "id": "09-voz-milanesas",
+  "kind": "voice",
+  "expected_ingredients": 6,
+  "key_ingredients": ["nalga", "huevo", "pan rallado", "ajo", "perejil"],
+  "has_timed_passive_step": true,
+  "transcript": "milanesas al horno: un kilo de nalga cortada fina, tres huevos, pan rallado, ajo y perejil picado, se pasan por huevo batido con el ajo y el perejil, después por pan rallado, se ponen en una placa con un poco de aceite y se hornean media hora dándolas vuelta a la mitad"
+}

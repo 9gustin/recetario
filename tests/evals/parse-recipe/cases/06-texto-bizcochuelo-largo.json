@@ -1,0 +1,8 @@
+{
+  "id": "06-texto-bizcochuelo-largo",
+  "kind": "text",
+  "expected_ingredients": 5,
+  "key_ingredients": ["huevo", "azúcar", "harina", "vainilla"],
+  "has_timed_passive_step": true,
+  "text": "BIZCOCHUELO DE VAINILLA (molde de 22 cm)\n\n4 huevos\n120 g de azúcar\n120 g de harina 0000\n1 cdita de esencia de vainilla\nmanteca para el molde\n\n1. Precalentar el horno a 180°C y enmantecar el molde.\n2. Batir los huevos con el azúcar a punto letra, unos 8 minutos.\n3. Incorporar la vainilla y luego la harina tamizada en tres veces, con movimientos envolventes.\n4. Volcar en el molde y hornear 30 minutos, sin abrir el horno los primeros 20.\n5. Desmoldar tibio sobre una rejilla."
+}

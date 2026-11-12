@@ -1,0 +1,8 @@
+{
+  "id": "05-texto-ensalada",
+  "kind": "text",
+  "expected_ingredients": 6,
+  "key_ingredients": ["lechuga", "tomate", "zanahoria"],
+  "has_timed_passive_step": false,
+  "text": "Ensalada rápida: lechuga, 2 tomates, 1 zanahoria rallada, aceite, limón y sal. Lavar todo, cortar los tomates, mezclar y condimentar al momento de servir."
+}

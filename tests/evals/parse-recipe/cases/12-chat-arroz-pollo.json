@@ -1,0 +1,8 @@
+{
+  "id": "12-chat-arroz-pollo",
+  "kind": "text",
+  "expected_ingredients": 7,
+  "key_ingredients": ["muslo", "arroz", "morrón", "cebolla", "caldo"],
+  "has_timed_passive_step": false,
+  "text": "arroz con pollo para 4 !!! 4 muslos, 2 tazas de arroz, 1 morron, 1 cebolla, caldo, azafran o color, sal. dorar el pollo, sacar, rehogar morron y cebolla, poner el arroz y el caldo (4 tazas) y el pollo arriba, tapar y cocinar 25 min a fuego bajo."
+}

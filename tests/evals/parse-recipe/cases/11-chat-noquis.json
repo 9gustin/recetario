@@ -1,0 +1,8 @@
+{
+  "id": "11-chat-noquis",
+  "kind": "text",
+  "expected_ingredients": 4,
+  "key_ingredients": ["papa", "harina", "huevo"],
+  "has_timed_passive_step": false,
+  "text": "che te paso la receta de la nona: ñoquis 1kg papa, 300 gr harina, 1 huevo. hervir las papas c/cascara, pisar, mezclar todo, armar, hervir hasta q floten. salsa a gusto!!"
+}

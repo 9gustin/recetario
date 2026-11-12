@@ -1,0 +1,8 @@
+{
+  "id": "10-voz-tarta",
+  "kind": "voice",
+  "expected_ingredients": 7,
+  "key_ingredients": ["tapa", "acelga", "cebolla", "huevo", "queso"],
+  "has_timed_passive_step": true,
+  "transcript": "una tarta de verdura, dos tapas de tarta, un atado de acelga o espinaca, una cebolla, tres huevos, queso cremoso doscientos gramos, sal y nuez moscada, se saltea la cebolla con la acelga picada, se mezcla con los huevos y el queso, se rellena la tarta y al horno cuarenta minutos a fuego medio"
+}

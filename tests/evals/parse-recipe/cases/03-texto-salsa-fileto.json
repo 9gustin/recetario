@@ -1,0 +1,8 @@
+{
+  "id": "03-texto-salsa-fileto",
+  "kind": "text",
+  "expected_ingredients": 7,
+  "key_ingredients": ["tomate", "cebolla", "ajo", "aceite", "albahaca"],
+  "has_timed_passive_step": false,
+  "text": "Salsa fileto casera para 4: 800 g de tomates perita (o una lata grande), 1 cebolla, 2 dientes de ajo, 3 cdas de aceite de oliva, albahaca, sal y azúcar a gusto. Rehogar la cebolla y el ajo en el aceite 5 minutos. Sumar los tomates picados, la sal y una pizca de azúcar. Cocinar a fuego bajo 40 minutos. Al final agregar la albahaca."
+}

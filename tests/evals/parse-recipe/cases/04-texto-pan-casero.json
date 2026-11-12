@@ -1,0 +1,8 @@
+{
+  "id": "04-texto-pan-casero",
+  "kind": "text",
+  "expected_ingredients": 5,
+  "key_ingredients": ["harina", "levadura", "sal", "agua"],
+  "has_timed_passive_step": true,
+  "text": "Pan casero. 500 g de harina 000, 10 g de levadura seca, 10 g de sal, 330 ml de agua tibia, 1 cda de aceite. Mezclar todos los ingredientes y amasar 10 minutos. Dejar levar tapado en un bowl 1 hora y media. Desgasar, dar forma de bollo y dejar levar 30 minutos más. Hornear a 220 grados por 35 minutos."
+}
