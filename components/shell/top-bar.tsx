@@ -7,6 +7,7 @@ import type { GroupSummary } from "@/lib/groups/queries";
 
 function sectionTitle(pathname: string): string {
   const segment = pathname.split("/").filter(Boolean);
+  if (segment[0] === "grupos") return "Grupos";
   const key = segment[0] === "g" ? segment[2] : segment[0];
   return NAV_ITEMS.find((item) => item.key === key)?.label ?? "Recetario";
 }

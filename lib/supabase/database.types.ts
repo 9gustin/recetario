@@ -144,6 +144,9 @@ isOneToOne: false
 "remove_member":
 { Args: { "gid": string,"p_user_id": string }; Returns: undefined
                            },
+"set_member_role":
+{ Args: { "gid": string,"p_role": string,"p_user_id": string }; Returns: undefined
+                           },
 "shares_group_with":
 { Args: { "p_user_id": string }; Returns: boolean
                            }

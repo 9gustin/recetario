@@ -60,7 +60,7 @@
   4. Reemplazar la ruta `demo` de T0.3.
 - **Aceptación:** cambio de grupo en dos toques; la URL refleja el grupo activo.
 
-### T1.5 — Administrar grupos
+### [x] T1.5 — Administrar grupos
 - **Depende de:** T1.4
 - **Archivos:** `app/(app)/grupos/page.tsx`, `app/(app)/grupos/nuevo/page.tsx`, `app/(app)/grupos/[id]/page.tsx`, `lib/groups/actions.ts`, `lib/schemas/group.ts`.
 - **Pasos:**
@@ -105,3 +105,5 @@
 - T1.3: **`zod` no estaba instalado** (lo declaran CLAUDE.md y SPEC §4.1, pero no se agregó en la Etapa 0); se instaló `zod@4.6.7` para validar el Server Action de perfil. El "middleware" de la tarea es en realidad `proxy.ts` (Next 16 renombró `middleware`→`proxy`; ver nota T0.5): la lógica vive en `lib/supabase/middleware.ts` (`updateSession`), que ahora protege `/g/*`, `/perfil` y `/grupos` y devuelve los logueados en `/login` a la home. El login se dividió en `app/(auth)/login/page.tsx` (server, lee `searchParams`) + `components/auth/login-form.tsx` (client) para evitar el `Suspense` de `useSearchParams()`. No hay recuperación de contraseña (fuera de alcance). Alta y login con email+contraseña; al registrarse se pasa `display_name` a `raw_user_meta_data`.
 
 - T1.4: la cookie `last_group_id` se escribe en el `proxy.ts`/`updateSession` (los Server Components no pueden escribir cookies). `BottomNav` recibe `defaultGroupId` (grupo personal) para resolver los tabs en `/perfil`, que no tiene `groupId` en la URL. La membresía se valida en `app/(app)/g/[groupId]/layout.tsx` (404 si no es miembro o el grupo no existe). Los botones "Crear grupo"/"Administrar grupos" del selector apuntan a `/grupos/nuevo` y `/grupos`, que se implementan en T1.5 (dan 404 hasta entonces, por diseño incremental). Se quitó `DEMO_GROUP_ID` de T0.3.
+
+- T1.5: para "cambiar rol" hizo falta una migración nueva (`20261112013000_set_member_role.sql`) con el RPC `set_member_role(gid, uid, role)` (`security definer`): solo un `owner` puede cambiar roles, no puede cambiarse a sí mismo, y se revoca a `anon`. Renombrar/emoji usan `update` directo sobre `groups` (la policy `groups_update_owner_admin` de T1.1 ya lo restringe a owner/admin); sacar miembro usa `remove_member` y salir usa `leave_group` (T1.1). El tipo generado marca `p_emoji` de `create_group` como `string` aunque el parámetro SQL es nullable: se castea al llamar al RPC.
