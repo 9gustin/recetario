@@ -31,11 +31,11 @@ Archivo compartido entre los tres agentes. Cada uno lo lee al empezar y lo actua
 | 3 · Modo cocinar | lista para revisión |
 | 4 · Compartir | lista para revisión |
 | 5 · IA: importar | lista para revisión |
-| 5b · Preguntale | lista para revisión (falta T5B.6, después de la 8b) |
+| 5b · Preguntale | lista para revisión |
 | 6 · Perfil alimentario | lista para revisión |
 | 7 · Plan semanal + Hoy | lista para revisión |
 | 8 · Lista de compras | lista para revisión |
-| 8b · Plan vivo (+ T5B.6) | pendiente |
+| 8b · Plan vivo (+ T5B.6) | lista para revisión |
 | 9 · Meal prep | pendiente |
 | 10 · Notificaciones y pulido | pendiente |
 
