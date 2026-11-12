@@ -1,11 +1,12 @@
 import { requireUser } from "@/lib/auth";
 import { getMyGroups } from "@/lib/groups/queries";
+import { getUnresolvedInboxCount } from "@/lib/inbox/queries";
 import { BottomNav } from "@/components/shell/bottom-nav";
 import { TopBar } from "@/components/shell/top-bar";
 
 export default async function AppLayout({ children }: LayoutProps<"/">) {
   const user = await requireUser();
-  const groups = await getMyGroups(user.id);
+  const [groups, inboxCount] = await Promise.all([getMyGroups(user.id), getUnresolvedInboxCount()]);
   const defaultGroupId = groups.find((g) => g.is_personal)?.id ?? groups[0]?.id;
 
   return (
@@ -16,6 +17,7 @@ export default async function AppLayout({ children }: LayoutProps<"/">) {
       </main>
       <BottomNav
         defaultGroupId={defaultGroupId}
+        inboxCount={inboxCount}
         className="fixed inset-x-0 bottom-0 z-20 mx-auto max-w-md"
       />
     </div>

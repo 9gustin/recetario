@@ -103,7 +103,7 @@ Marcar `[x]` al terminar cada tarea (lo hace el agente).
 **Etapa 1** — [x] T1.1 · [x] T1.2 · [x] T1.3 · [x] T1.4 · [x] T1.5 · [x] T1.6 · [x] T1.7
 **Etapa 2** — [x] T2.1 · [x] T2.2 · [x] T2.3 · [x] T2.4 · [x] T2.5 · [x] T2.6 · [x] T2.7 · [x] T2.8 · [x] T2.9
 **Etapa 3** — [x] T3.1 · [x] T3.2 · [x] T3.3 · [x] T3.4 · [x] T3.5 · [x] T3.6 · [x] T3.7 · [x] T3.8
-**Etapa 4** — [x] T4.1 · [x] T4.2 · [x] T4.3 · [ ] T4.4 · [ ] T4.5 · [ ] T4.6
+**Etapa 4** — [x] T4.1 · [x] T4.2 · [x] T4.3 · [x] T4.4 · [ ] T4.5 · [ ] T4.6
 **Etapa 5** — [ ] T5.1 · [ ] T5.2 · [ ] T5.3 · [ ] T5.4 · [ ] T5.5 · [ ] T5.6
 **Etapa 5b** — [ ] T5B.1 · [ ] T5B.2 · [ ] T5B.3 · [ ] T5B.4 · [ ] T5B.5 · [ ] T5B.6 (después de 8b)
 **Etapa 6** — [ ] T6.1 · [ ] T6.2 · [ ] T6.3 · [ ] T6.4 · [ ] T6.5 · [ ] T6.6 · [ ] T6.7

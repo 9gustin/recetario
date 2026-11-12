@@ -9,9 +9,12 @@ import { NAV_ITEMS } from "./nav-items";
 export function BottomNav({
   className,
   defaultGroupId,
+  inboxCount = 0,
 }: {
   className?: string;
   defaultGroupId?: string;
+  /** Ítems sin resolver de la bandeja: se muestran como un globito en la tab Perfil. */
+  inboxCount?: number;
 }) {
   const pathname = usePathname();
   const params = useParams<{ groupId?: string }>();
@@ -38,7 +41,18 @@ export function BottomNav({
               active ? "font-bold text-accent" : "font-medium text-muted",
             )}
           >
-            <Icon className="size-[22px]" strokeWidth={2} aria-hidden="true" />
+            <span className="relative">
+              <Icon className="size-[22px]" strokeWidth={2} aria-hidden="true" />
+              {key === "perfil" && inboxCount > 0 ? (
+                <span
+                  role="status"
+                  aria-label={`${inboxCount} ${inboxCount === 1 ? "novedad" : "novedades"} en la bandeja`}
+                  className="absolute -top-1 -right-2.5 flex min-w-4 items-center justify-center rounded-full bg-accent px-1 text-[10px] leading-4 font-bold text-accent-foreground"
+                >
+                  {inboxCount > 9 ? "9+" : inboxCount}
+                </span>
+              ) : null}
+            </span>
             {label}
           </Link>
         );

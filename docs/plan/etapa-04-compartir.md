@@ -40,7 +40,7 @@
   6. `robots: noindex`.
 - **Aceptación:** abrir el link en una ventana de incógnito muestra la receta; el preview en WhatsApp muestra foto y título.
 
-### T4.4 — Bandeja de entrada
+### [x] T4.4 — Bandeja de entrada
 - **Depende de:** T4.1
 - **Archivos:** `app/(app)/perfil/bandeja/page.tsx`, `components/inbox/*`, badge en la tab Perfil.
 - **Pasos:**
@@ -73,3 +73,5 @@
 - T4.2: botón Compartir en el detalle con tres opciones. "Mandar link" crea o reutiliza el link y abre el share nativo (`navigator.share`); si no hay, queda a la vista con "Copiar link"; debajo "Cualquiera con el link la puede ver" y "Dejar de compartir" (revoca). "Copiar a otro grupo" lista mis grupos menos el actual, pide confirmar y avisa "Copiada a X" con acción Ver. "Mandar a una persona" lista a quienes comparten algún grupo conmigo (lo resuelve la RLS de `profiles`, sin duplicados). Los grupos, contactos y el link activo se cargan en la página del detalle. Se verifica de punta a punta en el e2e de T4.6.
 
 - T4.3: `/r/[token]`: vista SSR liviana con `get_public_recipe` (cliente anon, resultado validado con Zod, dedupe por request), ingredientes escalables, "Cocinar" y "Guardala en tu recetario"; `noindex, nofollow`. `opengraph-image.tsx` genera el preview 1200×630 (foto + título + "Compartida por") con los colores del tema noche repetidos a mano porque una imagen no usa tokens. `/r/[token]/cocinar` reutiliza `CookingStories` con `persist={false}` (sin sesión, sin ✏️, final con "Guardar en mi recetario"); `CookShell` es el layout compartido con el modo privado. `/r/[token]/guardar` manda a `/login?next=…` si no hay sesión y, con sesión, deja elegir el grupo (`fork_public_recipe`). Un link inválido o revocado muestra "Este link ya no está disponible". `view_count` es aproximado: el preview de WhatsApp pide la página y la imagen y cada una cuenta.
+
+- T4.4: la bandeja (`/perfil/bandeja`) lista los ítems sin resolver con una tarjeta por `kind` (`recipe_shared` tiene diseño; el resto cae a una tarjeta genérica con "Descartar", para sumar tipos en la Etapa 10). "Guardar" pide el grupo y llama a `accept_inbox_recipe`; "Descartar" marca `resolved_at`. El badge de la tab Perfil sale de un `count` liviano (`head: true`) en el layout de `(app)`; también se muestra en la fila "Bandeja" del Perfil.
