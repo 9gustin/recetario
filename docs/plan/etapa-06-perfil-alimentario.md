@@ -15,7 +15,7 @@
   4. RPC `get_group_diet(p_group_id) returns table(user_id, display_name, restrictions jsonb, goals jsonb)` (security definer): exige que quien llama sea miembro; devuelve **solo** `restrictions` y `goals` de los miembros. Nunca `summary`, inputs ni archivos.
 - **Aceptación:** pgTAP: B (mismo grupo) obtiene las restricciones de A vía RPC pero no puede leer `food_profiles` ni `food_profile_inputs` de A; C (otro grupo) no obtiene nada.
 
-### T6.2 — Esquema del perfil
+### [x] T6.2 — Esquema del perfil
 - **Depende de:** T6.1
 - **Archivos:** `lib/schemas/food-profile.ts` + test.
 - **Pasos:** Zod de `FoodProfileData` exactamente como §6.2 (`restrictions[]` con `target`, `type: ingredient|family|category`, `severity: forbidden|limit`, `reason?`, `limit?`, `includes?`; `goals[]`; `likes`; `dislikes`; `cuisines`; `schedule`; `equipment`; `skill`; `valid_until`). Más `FoodProfileProposal = { profile, summary, changes[], open_questions[] }`. Helpers `emptyProfile()`, `mergeProfiles()` (para aplicar ediciones manuales).
@@ -84,3 +84,5 @@
 ## Notas de ejecución
 
 - T6.1: `food_profiles`, `food_profile_inputs` (con `kind` extra `'answer'` para las respuestas a preguntas abiertas) y `food_profile_drafts`: todo con RLS solo del propio usuario; bucket privado `profile-inputs` (carpeta por usuario, 15 MB). `get_group_diet(group)` es `security definer`, exige ser miembro y devuelve únicamente `restrictions` y `goals` de los miembros con perfil vigente (respeta `valid_until`); el resumen, las fuentes y los archivos nunca salen. 10 tests pgTAP, entre ellos que B lee las restricciones de A por la RPC pero no `food_profiles`/inputs/drafts, que C no obtiene nada, y que la RPC devuelve solo esas cuatro columnas.
+
+- T6.2: esquema exacto de SPEC §6.2. `meals_at_home` usa `z.partialRecord` (en Zod 4 un `record` con claves de enum las exige todas). `mergeProfiles` reemplaza las listas que vienen en el parche, combina el horario y deduplica restricciones por tipo + objetivo (gana la más estricta). `foodProfileProposalSchema` (perfil + resumen + cambios + preguntas abiertas) es lo que se le pide a la IA en T6.3.
