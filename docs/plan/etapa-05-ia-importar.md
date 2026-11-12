@@ -22,7 +22,7 @@
   6. Test con el cliente mockeado: salida válida, salida inválida → reintento, segunda falla → error.
 - **Aceptación:** un script `scripts/ai-smoke.ts` (`pnpm tsx`) llama a `runStructured` con un esquema simple y queda registrado en `ai_runs`.
 
-### T5.2 — Voz: grabar y transcribir
+### [x] T5.2 — Voz: grabar y transcribir
 - **Depende de:** T5.1 · 👤 decidir proveedor y cargar su API key (`TRANSCRIPTION_PROVIDER`, `OPENAI_API_KEY` o `DEEPGRAM_API_KEY`).
 - **Archivos:** `lib/transcription/index.ts`, `lib/transcription/{openai,deepgram}.ts`, `app/api/transcribe/route.ts`, `components/voice/voice-recorder.tsx`, `lib/hooks/use-recorder.ts`, migración del bucket `audio`.
 - **Pasos:**
@@ -81,3 +81,5 @@
 - Proveedor de transcripción (decisión de la persona, 2026-11-12): **OpenAI `gpt-4o-transcribe`** con `language=es`. Es el único proveedor; se salteó la comparación con Deepgram para simplificar. Esto deja hecho el paso 6 de T5.2 (la prueba de calidad con audios reales queda para validar al implementar la dictada en el celular). `TRANSCRIPTION_PROVIDER=openai`, key en `OPENAI_API_KEY`. La interfaz `Transcriber` sigue siendo intercambiable por si más adelante se quiere otro.
 
 - T5.1: se instaló `@anthropic-ai/sdk` y `tsx` (el plan pide `pnpm tsx` para el script de humo; el script corre con `--conditions=react-server` para poder importar módulos `server-only`). `runStructured` recibe además `userId`/`groupId` (necesarios para `ai_runs`) y acepta un cliente y un registrador inyectables para los tests; suma los tokens de los dos intentos y guarda también `cache_read_tokens`. Las tablas de IA solo tienen policies de lectura propia: escribe el servidor con service role. `consume_ai_quota` cuenta por día de Argentina y no es invocable por clientes. Verificado contra la API real (`pnpm ai:smoke`): salida válida en 1,5 s y fila en `ai_runs`.
+
+- T5.2: solo se implementó el proveedor OpenAI (`gpt-4o-transcribe`, `language=es` + vocabulario de cocina) porque es el elegido; la interfaz `Transcriber` sigue siendo intercambiable. Decisión: el audio se **borra del bucket apenas se transcribe** (la spec hablaba de 30 días): ya no hace falta y es más privado. `/api/transcribe` valida sesión, que el path sea `<user_id>/<archivo>`, cuota (`transcribe`: 40/día) y tamaño (≤ 20 MB). `useRecorder` elige webm/opus o mp4 (iOS), limita a 5 min, mide el volumen para animar el botón y permite cancelar; `VoiceRecorder` deja editar el texto antes de usarlo. Verificado con la API real usando audio generado por TTS: transcribió bien "zapallitos", "morrón" y "cebolla de verdeo" en 1,7 s. **Pendiente:** la prueba con el micrófono real en iOS y Android (no se puede automatizar acá).
