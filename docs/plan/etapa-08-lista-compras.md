@@ -45,7 +45,7 @@
   3. Se corre en segundo plano después de generar (por ahora `after()` de Next; en la Etapa 9 pasa al pipeline en streaming de T9.1) y los resultados aparecen por realtime.
 - **Aceptación:** la lista se ve al instante y los hints aparecen en segundos.
 
-### T8.5 — UI de la lista
+### [x] T8.5 — UI de la lista
 - **Depende de:** T8.3
 - **Archivos:** `app/(app)/g/[groupId]/compras/page.tsx` (lista activa o selector), `.../compras/[listId]/page.tsx`, `components/shopping/*`, `lib/hooks/use-realtime-list.ts`.
 - **Pasos:**
@@ -77,3 +77,5 @@
 - T8.3: Segunda compra (mitad de semana) solo si un perecedero la necesita; las listas que dejan de hacer falta se archivan. Se genera al aprobar desde el cliente (generateListForPlan) y desde el banner 'Actualizar la lista'. Se verifica de punta a punta en T8.6.
 
 - T8.4: Se corre con after() de Next tras generar; usa la cuota 'ideas'. No se probó contra la API real todavía.
+
+- T8.5: Sin swipe: tachar con el checkbox grande y 'Ya lo tengo' con botón (más accesible); deshacer por toast. Tarjeta de la lista activa en Hoy. E2E en T8.6.

@@ -35,12 +35,14 @@ export function TodayView({
   groupName,
   resolution,
   warnings,
+  shopping,
 }: {
   groupId: string;
   today: string;
   groupName: string;
   resolution: TodayResolution;
   warnings: string[];
+  shopping?: { listId: string; name: string; done: number; total: number } | null;
 }) {
   const { state, nextMeal, agenda, tomorrow } = resolution;
   const ask = (
@@ -195,6 +197,21 @@ export function TodayView({
             </li>
           ))}
         </ul>
+      ) : null}
+
+      {shopping && shopping.total > 0 ? (
+        <Link
+          href={`/g/${groupId}/compras/${shopping.listId}`}
+          className="mx-5 flex min-h-14 items-center justify-between rounded-2xl bg-surface px-4 py-3"
+        >
+          <span>
+            <span className="block text-[15px] font-semibold">{shopping.name}</span>
+            <span className="text-sm text-muted">
+              {shopping.done}/{shopping.total} listos
+            </span>
+          </span>
+          <span aria-hidden="true">›</span>
+        </Link>
       ) : null}
 
       {agenda.length > 0 ? (

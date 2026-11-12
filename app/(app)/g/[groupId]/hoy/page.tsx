@@ -4,6 +4,7 @@ import { getNow } from "@/lib/now";
 import { resolveToday, hourIn, type TodayEntry } from "@/lib/domain/today";
 import { addDays, todayString } from "@/lib/domain/week";
 import { getGroupPlanSettings, getTodayEntries } from "@/lib/plan/queries";
+import { getActiveListProgress } from "@/lib/shopping/queries";
 
 export const metadata = { title: "Hoy" };
 
@@ -14,9 +15,10 @@ export default async function Page({ params }: { params: Promise<{ groupId: stri
   const today = todayString(now);
   const tomorrow = addDays(today, 1);
 
-  const [settings, rows] = await Promise.all([
+  const [settings, rows, progress] = await Promise.all([
     getGroupPlanSettings(groupId),
     getTodayEntries(groupId, today, tomorrow),
+    getActiveListProgress(groupId),
   ]);
 
   const byId = new Map(rows.map((r) => [r.id, r]));
@@ -39,6 +41,16 @@ export default async function Page({ params }: { params: Promise<{ groupId: stri
       groupName={settings.name}
       resolution={resolution}
       warnings={[]}
+      shopping={
+        progress
+          ? {
+              listId: progress.list.id,
+              name: progress.list.name,
+              done: progress.done,
+              total: progress.total,
+            }
+          : null
+      }
     />
   );
 }
