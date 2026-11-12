@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 import { adminClient, createTestUser, mobileContext, signIn } from "./helpers/auth";
-import { dayLabel, todayString } from "../../lib/domain/week";
+import { dayLabel, todayString, weekStartOf } from "../../lib/domain/week";
 
 const password = "password123";
 
@@ -109,4 +109,64 @@ test("plan vivo: Mi plan muestra la fórmula del plan activo", async ({ browser 
   await page.goto("/perfil/plan");
   await expect(page.getByRole("heading", { name: "Mi plan" })).toBeVisible();
   await expect(page.getByText("Sin harinas")).toBeVisible();
+});
+
+test("plan vivo: al terminar de cocinar una comida del plan se registra 'Cumplí' (con deshacer) y hay historial", async ({
+  browser,
+}) => {
+  test.setTimeout(150_000);
+  const { createGroupAs, seedRecipe } = await import("./helpers/recipes");
+  const email = `dieta-cocinar-${Date.now()}@test.com`;
+  const userId = await createTestUser(email, password, "Ana");
+  const groupId = await createGroupAs(email, password, "Casa");
+  const recipeId = await seedRecipe(email, password, groupId, {
+    title: "Pollo con ensalada",
+    ingredients: ["1 pechuga"],
+    steps: [{ instruction: "Cociná." }],
+  });
+  const admin = adminClient();
+  const today = todayString();
+  const { data: dplan } = await admin
+    .from("diet_plans")
+    .insert({ user_id: userId, title: "Plan", status: "active", allowances: { per_week: 2 } })
+    .select("id")
+    .single();
+  await admin
+    .from("diet_plan_meals")
+    .insert({ plan_id: dplan!.id, slot: "dinner", formula: "Proteína + verduras", position: 0 });
+  const { data: mplan } = await admin
+    .from("meal_plans")
+    .insert({
+      group_id: groupId,
+      week_start: weekStartOf(today, 1),
+      status: "approved",
+      created_by: userId,
+    })
+    .select("id")
+    .single();
+  const { data: entry } = await admin
+    .from("meal_plan_entries")
+    .insert({ plan_id: mplan!.id, date: today, slot: "dinner", recipe_id: recipeId })
+    .select("id")
+    .single();
+
+  const page = await (await mobileContext(browser)).newPage();
+  await signIn(page, email, password);
+  await page.goto(`/g/${groupId}/recetas/${recipeId}/cocinar?entry=${entry!.id}`);
+  await page.waitForLoadState("networkidle");
+  await page.getByRole("button", { name: "Empezar" }).tap();
+  await page.getByRole("button", { name: "Listo" }).tap();
+  await page.getByRole("button", { name: "Terminar" }).tap();
+
+  await expect
+    .poll(
+      async () =>
+        (await admin.from("meal_logs").select("status").eq("user_id", userId).eq("slot", "dinner"))
+          .data?.[0]?.status,
+      { timeout: 30_000 },
+    )
+    .toBe("followed");
+
+  await page.goto("/perfil/plan/registrar");
+  await expect(page.getByRole("heading", { name: "Semanas anteriores" })).toBeVisible();
 });

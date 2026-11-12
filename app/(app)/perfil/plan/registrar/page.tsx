@@ -3,11 +3,11 @@ import { LogMeal } from "@/components/diet-plan/log-meal";
 import { ShareSummary } from "@/components/diet-plan/share-summary";
 import { WeekGrid } from "@/components/diet-plan/week-grid";
 import { requireUser } from "@/lib/auth";
-import { weekAdherence, todayPlan, type PlanMeal } from "@/lib/domain/adherence";
+import { recentWeeks, weekAdherence, todayPlan, type PlanMeal } from "@/lib/domain/adherence";
 import { encouragement, summarizeWeek } from "@/lib/domain/diet-summary";
 import type { MealSlot } from "@/lib/domain/meal-slots";
 import { hourIn } from "@/lib/domain/today";
-import { addDays, todayString, weekDays, weekStartOf } from "@/lib/domain/week";
+import { addDays, formatWeekLabel, todayString, weekDays, weekStartOf } from "@/lib/domain/week";
 import { getActiveDietPlan, getMealLogs } from "@/lib/diet-plan/queries";
 import { getNow } from "@/lib/now";
 
@@ -21,7 +21,9 @@ export default async function Page() {
   const now = await getNow();
   const today = todayString(now);
   const weekStart = weekStartOf(today, 1);
-  const logs = await getMealLogs(weekStart, addDays(weekStart, 6));
+  const weeks = recentWeeks(weekStart, 5);
+  const allLogs = await getMealLogs(weeks[weeks.length - 1]!, addDays(weekStart, 6));
+  const logs = allLogs.filter((l) => l.date >= weekStart);
   const meals: PlanMeal[] = plan.meals.map((m) => ({
     id: m.id,
     slot: m.slot as MealSlot,
@@ -62,6 +64,31 @@ export default async function Page() {
         <div>
           <ShareSummary text={summarizeWeek(plan.title, weekStart, adherence)} />
         </div>
+      </section>
+
+      <section className="flex flex-col gap-2" aria-labelledby="historial">
+        <h2 id="historial" className="font-display text-xl font-normal">
+          Semanas anteriores
+        </h2>
+        <ul className="flex flex-col gap-1.5">
+          {weeks.slice(1).map((w) => {
+            const a = weekAdherence(
+              allLogs.filter((l) => l.date >= w && l.date <= addDays(w, 6)),
+              { meals, allowancesPerWeek: plan.allowances.per_week ?? 0 },
+              w,
+              addDays(w, 6),
+            );
+            return (
+              <li
+                key={w}
+                className="flex items-center justify-between rounded-2xl bg-surface px-4 py-3 text-[15px]"
+              >
+                <span>{formatWeekLabel(w)}</span>
+                <span className="font-semibold">{a.percent}%</span>
+              </li>
+            );
+          })}
+        </ul>
       </section>
     </main>
   );
