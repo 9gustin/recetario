@@ -27,7 +27,7 @@
   5. Guardar en `prep_tasks` reemplazando las anteriores no completadas del plan.
 - **Aceptación:** para un plan con pollo 3 veces, sugiere cortar y porcionar el día de la compra y freezar lo del final de la semana.
 
-### T9.3 — UI de preparaciones
+### [x] T9.3 — UI de preparaciones
 - **Depende de:** T9.2
 - **Archivos:** `components/prep/*`, pestaña "Preparación" en la pantalla del plan, sección en "Hoy".
 - **Pasos:**
@@ -55,3 +55,5 @@
 - T9.1: Pasos shopping-list → enrich-list (el de preparaciones se suma en T9.2); fallo no crítico no corta, reintento por paso con {only}. Si el cliente se va, el trabajo sigue (emit tolerante).
 
 - T9.2: kind no incluye 'freezar': se usa portion con 'freezar' en el título. Tips en meal_plans.prep_tips (migración nueva). Eval pnpm eval:prep: 5 tareas (porcionar/freezar el día de la compra, descongelar el día anterior). No se consideran equipamiento ni tiempo disponible del perfil todavía.
+
+- T9.3: Pestaña 'Preparación' dentro del plan. Descongelar destacado arriba. Recordatorios (remind_at) se usan recién en la Etapa 10.

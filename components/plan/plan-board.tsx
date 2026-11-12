@@ -48,6 +48,8 @@ import { cn } from "@/lib/utils";
 import { AddEntrySheet } from "./add-entry-sheet";
 import { EditEntrySheet, type Patch } from "./edit-entry-sheet";
 import { EntryRow } from "./entry-row";
+import { PrepList } from "@/components/prep/prep-list";
+import type { PrepTaskRow } from "@/lib/prep/actions";
 import { PlanChatSheet } from "./plan-chat-sheet";
 
 type Props = {
@@ -58,6 +60,8 @@ type Props = {
   initialEntries: PlanEntry[];
   members: PlanMember[];
   currentUserId: string;
+  prepTasks: PrepTaskRow[];
+  prepTips: string[];
   mealSlots: MealSlot[];
   history: PlanHistoryItem[];
 };
@@ -73,6 +77,8 @@ export function PlanBoard({
   initialEntries,
   members,
   currentUserId,
+  prepTasks,
+  prepTips,
   mealSlots,
   history,
 }: Props) {
@@ -85,6 +91,7 @@ export function PlanBoard({
   const [changedAfterApproval, setChangedAfterApproval] = useState(false);
   const [pending, start] = useTransition();
   const [chatOpen, setChatOpen] = useState(false);
+  const [tab, setTab] = useState<"meals" | "prep">("meals");
   const finalize = useFinalize(plan?.id ?? null);
   // Tras un router.refresh() el servidor puede traer el plan recién creado o cambios propios.
   const [seen, setSeen] = useState({ plan: initialPlan, entries: initialEntries });
@@ -385,7 +392,42 @@ export function PlanBoard({
         </p>
       ) : null}
 
-      <ol className="flex flex-col gap-3 px-4">
+      <div role="tablist" aria-label="Vista del plan" className="mx-5 mb-3 flex gap-2">
+        {(
+          [
+            ["meals", "Comidas"],
+            ["prep", "Preparación"],
+          ] as const
+        ).map(([key, label]) => (
+          <button
+            key={key}
+            type="button"
+            role="tab"
+            aria-selected={tab === key}
+            onClick={() => setTab(key)}
+            className={cn(
+              "min-h-11 rounded-full border px-4 text-[13px] font-semibold",
+              tab === key
+                ? "border-foreground bg-foreground text-background"
+                : "border-border bg-surface",
+            )}
+          >
+            {label}
+          </button>
+        ))}
+      </div>
+
+      {tab === "prep" ? (
+        <PrepList
+          key={prepTasks.length}
+          planId={plan.id}
+          weekStart={weekStart}
+          initialTasks={prepTasks}
+          tips={prepTips}
+        />
+      ) : null}
+
+      <ol className={cn("flex flex-col gap-3 px-4", tab === "prep" && "hidden")}>
         {ordered.map((date) => {
           const dayEntries = entries.filter((e) => e.date === date);
           const emptySlots = mealSlots.filter((s) => !dayEntries.some((e) => e.slot === s));

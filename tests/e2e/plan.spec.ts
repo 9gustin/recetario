@@ -234,3 +234,59 @@ test("recetas nuevas de la IA: invisibles en el recetario hasta aprobar el plan"
   await page.goto(`/g/${groupId}/recetas`);
   await expect(page.getByText("Budín inventado por la IA")).toBeVisible();
 });
+
+test("preparaciones: se ven por día en la pestaña del plan y en Hoy, y se tildan", async ({
+  browser,
+}) => {
+  test.setTimeout(120_000);
+  const email = `prep-${Date.now()}@test.com`;
+  const userId = await createTestUser(email, password, "Ana");
+  const groupId = await createGroupAs(email, password, "Casa");
+  const admin = adminClient();
+  const today = todayString();
+  const { data: plan } = await admin
+    .from("meal_plans")
+    .insert({
+      group_id: groupId,
+      week_start: weekStartOf(today, 1),
+      status: "approved",
+      created_by: userId,
+      prep_tips: ["Rotulá las bolsas del freezer."],
+    })
+    .select("id")
+    .single();
+  await admin.from("prep_tasks").insert([
+    {
+      plan_id: plan!.id,
+      title: "Descongelar el pollo",
+      suggested_date: today,
+      duration_minutes: 5,
+      kind: "thaw",
+    },
+    {
+      plan_id: plan!.id,
+      title: "Cortar verduras",
+      suggested_date: today,
+      duration_minutes: 20,
+      kind: "cut",
+    },
+  ]);
+
+  const page = await (await mobileContext(browser)).newPage();
+  await signIn(page, email, password);
+  await page.goto(`/g/${groupId}/hoy`);
+  await expect(page.getByRole("heading", { name: "Para preparar hoy" })).toBeVisible();
+  await page.waitForLoadState("networkidle");
+  await page.getByRole("checkbox", { name: "Hecho: Cortar verduras" }).tap();
+  await expect(page.getByRole("checkbox", { name: "Hecho: Cortar verduras" })).toHaveAttribute(
+    "aria-checked",
+    "true",
+  );
+
+  await page.goto(`/g/${groupId}/plan`);
+  await page.getByRole("tab", { name: "Preparación" }).tap();
+  await expect(page.getByText("· 5 min").first()).toBeVisible();
+  await expect(page.getByText("Descongelar el pollo")).toBeVisible();
+  await page.getByText("Tips de la semana").tap();
+  await expect(page.getByText("Rotulá las bolsas del freezer.")).toBeVisible();
+});

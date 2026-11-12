@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, ChefHat, Flame, MessageSquare, Moon, Sparkles } from "lucide-react";
+import { PrepToday } from "@/components/prep/prep-today";
+import type { PrepTaskRow } from "@/lib/prep/actions";
 import { Hero } from "@/components/shared/hero";
 import { PillButton } from "@/components/shared/pill-button";
 import type { TodayResolution, TodayEntry } from "@/lib/domain/today";
@@ -36,12 +38,14 @@ export function TodayView({
   resolution,
   warnings,
   shopping,
+  prep = [],
 }: {
   groupId: string;
   today: string;
   groupName: string;
   resolution: TodayResolution;
   warnings: string[];
+  prep?: PrepTaskRow[];
   shopping?: { listId: string; name: string; done: number; total: number } | null;
 }) {
   const { state, nextMeal, agenda, tomorrow } = resolution;
@@ -198,6 +202,8 @@ export function TodayView({
           ))}
         </ul>
       ) : null}
+
+      {prep.length > 0 ? <PrepToday tasks={prep} /> : null}
 
       {shopping && shopping.total > 0 ? (
         <Link

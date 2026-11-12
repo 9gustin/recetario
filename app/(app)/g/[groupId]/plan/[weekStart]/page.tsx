@@ -1,3 +1,4 @@
+import { getPrepTasks } from "@/lib/prep/queries";
 import { notFound, redirect } from "next/navigation";
 import { PlanBoard } from "@/components/plan/plan-board";
 import { requireUser } from "@/lib/auth";
@@ -31,6 +32,8 @@ export default async function Page({
     getPlanHistory(groupId),
   ]);
 
+  const prep = plan ? await getPrepTasks(plan.id) : { tasks: [], tips: [] };
+
   return (
     <PlanBoard
       key={weekStart}
@@ -41,6 +44,8 @@ export default async function Page({
       initialEntries={entries}
       members={members}
       currentUserId={user.id}
+      prepTasks={prep.tasks}
+      prepTips={prep.tips}
       mealSlots={settings.mealSlots}
       history={history.filter((h) => h.week_start !== weekStart)}
     />
