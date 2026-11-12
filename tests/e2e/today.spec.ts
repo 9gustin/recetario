@@ -109,3 +109,75 @@ test("¿Qué tenés?: sugiere recetas, elegir una la deja en hoy con 'Empezar a 
   await expect(page.getByRole("heading", { name: "Pollo con zapallitos" })).toBeVisible();
   await expect(page.getByRole("link", { name: /Empezar a cocinar/ })).toBeVisible();
 });
+
+test("Ideas para hoy: 3 ideas aptas con su motivo, 'Otras 3' no repite y elegir deja la cena en hoy", async ({
+  browser,
+}) => {
+  test.setTimeout(120_000);
+  const email = `ideas-${Date.now()}@test.com`;
+  const userId = await createTestUser(email, password, "Ana");
+  const groupId = await createGroupAs(email, password, "Casa");
+  await adminClient()
+    .from("food_profiles")
+    .insert({
+      user_id: userId,
+      summary: "Sin cebolla",
+      data: {
+        restrictions: [{ target: "cebolla", type: "ingredient", severity: "forbidden" }],
+        goals: [],
+        likes: [],
+        dislikes: [],
+        cuisines: [],
+        schedule: {},
+      },
+    });
+  const titles = [
+    "Fideos con manteca",
+    "Tarta de zapallitos",
+    "Milanesas con puré",
+    "Ensalada rusa",
+    "Revuelto gramajo",
+  ];
+  for (const title of titles) {
+    await seedRecipe(email, password, groupId, {
+      title,
+      ingredients: ["2 papas", "1 huevo"],
+      steps: [{ instruction: "Cociná." }],
+      totalMinutes: 20,
+      servings: 4,
+    });
+  }
+  await seedRecipe(email, password, groupId, {
+    title: "Tortilla con cebolla",
+    ingredients: ["4 papas", "1 cebolla"],
+    steps: [{ instruction: "Cociná." }],
+    totalMinutes: 20,
+  });
+
+  const page = await (await mobileContext(browser)).newPage();
+  await signIn(page, email, password);
+  await page.goto(`/g/${groupId}/hoy`);
+  await page.getByRole("link", { name: /Elegí/ }).tap();
+  await expect(page).toHaveURL(/\/hoy\/ideas$/);
+
+  const list = page.getByRole("list", { name: "Sugerencias" });
+  await expect(list.getByRole("listitem")).toHaveCount(3);
+  await expect(page.getByText("Tortilla con cebolla")).toHaveCount(0);
+  // Cada idea explica por qué aparece.
+  await expect(
+    list.getByText(/Todavía no la cocinaste|Rinde para sobras|lista en/).first(),
+  ).toBeVisible();
+  const first = await list.getByRole("heading", { level: 3 }).allTextContents();
+
+  await page.waitForLoadState("networkidle");
+  await page.getByRole("button", { name: "Otras 3 ideas" }).tap();
+  await expect(async () => {
+    const second = await list.getByRole("heading", { level: 3 }).allTextContents();
+    expect(second.length).toBeGreaterThan(0);
+    expect(second.some((t) => first.includes(t))).toBe(false);
+  }).toPass({ timeout: 15_000 });
+
+  await list.getByRole("button", { name: "Elegir para hoy" }).first().tap();
+  await expect(page).toHaveURL(new RegExp(`/g/${groupId}/hoy$`));
+  await expect(page.getByRole("link", { name: /Empezar a cocinar/ })).toBeVisible();
+});

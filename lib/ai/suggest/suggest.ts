@@ -7,6 +7,8 @@ import { runStructured } from "@/lib/ai/run-structured";
 import { checkRecipe, type RecipeIngredientForCheck } from "@/lib/domain/compatibility";
 import { computeCoverage, coverageLabel, type Coverage } from "@/lib/domain/coverage";
 import { parseIngredientLine } from "@/lib/domain/ingredient-line";
+import { daysBetween } from "@/lib/domain/week";
+import { pickIdeas, type RecipeSignal } from "@/lib/suggest/signals";
 import { loadIngredientsForCheck } from "@/lib/recipes/compatibility";
 import { saveRecipeWith } from "@/lib/recipes/save";
 import {
@@ -24,6 +26,7 @@ export type Candidate = {
   title: string;
   imageUrl: string | null;
   totalMinutes: number | null;
+  servings: number;
   tags: string[];
   usesOven: boolean;
   ingredients: (RecipeIngredientForCheck & { optional: boolean })[];
@@ -34,7 +37,7 @@ export async function loadCandidates(supabase: Client, groupId: string): Promise
   const { data } = await supabase
     .from("recipes")
     .select(
-      "id, title, image_url, total_minutes, tags, recipe_ingredients(raw_text, ingredient_id, optional, position, ingredients(name, aliases, family)), recipe_steps(instruction)",
+      "id, title, image_url, total_minutes, servings, tags, recipe_ingredients(raw_text, ingredient_id, optional, position, ingredients(name, aliases, family)), recipe_steps(instruction)",
     )
     .eq("group_id", groupId)
     .eq("status", "active")
@@ -45,6 +48,7 @@ export async function loadCandidates(supabase: Client, groupId: string): Promise
     title: r.title,
     imageUrl: r.image_url,
     totalMinutes: r.total_minutes,
+    servings: Number(r.servings),
     tags: r.tags ?? [],
     usesOven:
       (r.recipe_steps ?? []).some((s) => /\bhorno\b/i.test(s.instruction)) ||
@@ -185,7 +189,7 @@ export async function suggestFromPantry(
 
 const scoreOf = (scored: Scored[], id: string) => scored.find((s) => s.c.id === id)?.cov.score ?? 0;
 
-async function proposeNew(
+export async function proposeNew(
   input: PantryInput,
   diets: Awaited<ReturnType<typeof loadDiets>>,
   count: number,
@@ -195,7 +199,7 @@ async function proposeNew(
     feature: "ideas",
     model: MODELS.fast,
     system: NEW_SYSTEM,
-    content: `Tiene en casa: ${input.have.join(", ")}.\nAntojo: ${input.craving || "(ninguno)"}.\nRestricciones:\n${describeDiets(diets)}\nProponé ${count} receta${count > 1 ? "s" : ""}.`,
+    content: `Tiene en casa: ${input.have.join(", ") || "(no dijo: proponé algo rico y simple para hoy)"}.\nAntojo: ${input.craving || "(ninguno)"}.\nRestricciones:\n${describeDiets(diets)}\nProponé ${count} receta${count > 1 ? "s" : ""}.`,
     schema: newRecipesSchema,
     userId: input.userId,
     groupId,
@@ -251,4 +255,96 @@ async function proposeNew(
     });
   }
   return out;
+}
+
+export type IdeasInput = {
+  supabase: Client;
+  userId: string;
+  groupId: string;
+  tab: "library" | "new";
+  exclude: string[];
+  hour: number;
+  today: string;
+};
+
+/** Hasta 3 ideas para hoy, cada una con su motivo. "Del recetario" usa señales por código; "Nuevas" las inventa la IA. */
+export async function suggestIdeas(
+  input: IdeasInput,
+): Promise<{ ok: true; cards: SuggestCard[] } | { ok: false; error: string }> {
+  const { supabase, groupId } = input;
+  const diets = await loadDiets(supabase, groupId);
+
+  if (input.tab === "new") {
+    const cards = await proposeNew(
+      {
+        supabase,
+        userId: input.userId,
+        groupId,
+        have: [],
+        filters: { quick: false, noOven: false, light: false },
+      },
+      diets,
+      3,
+    );
+    return { ok: true, cards: cards.map((c) => ({ ...c, reason: c.line })) };
+  }
+
+  const all = await loadCandidates(supabase, groupId);
+  const allowed = all.filter(
+    (c) => !diets.some((d) => checkRecipe(c.ingredients, d.restrictions).status === "forbidden"),
+  );
+
+  // Última vez que se cocinó cada receta (según los planes del grupo).
+  const { data: past } = await supabase
+    .from("meal_plan_entries")
+    .select("recipe_id, date, meal_plans!inner(group_id)")
+    .eq("meal_plans.group_id", groupId)
+    .not("recipe_id", "is", null)
+    .lte("date", input.today);
+  const last = new Map<string, string>();
+  for (const e of past ?? []) {
+    if (!e.recipe_id) continue;
+    const prev = last.get(e.recipe_id);
+    if (!prev || e.date > prev) last.set(e.recipe_id, e.date);
+  }
+  const { count } = await supabase
+    .from("group_members")
+    .select("user_id", { count: "exact", head: true })
+    .eq("group_id", groupId);
+
+  const signals: RecipeSignal[] = allowed.map((c) => {
+    const date = last.get(c.id);
+    return {
+      recipeId: c.id,
+      daysSinceCooked: date ? daysBetween(date, input.today) : null,
+      servings: c.servings,
+      totalMinutes: c.totalMinutes,
+    };
+  });
+  const picked = pickIdeas(
+    signals,
+    { hour: input.hour, diners: count ?? diets.length },
+    input.exclude,
+    3,
+  );
+  const byId = new Map(allowed.map((c) => [c.id, c]));
+  const cards: SuggestCard[] = picked.flatMap((p) => {
+    const c = byId.get(p.recipeId);
+    return c
+      ? [
+          {
+            recipeId: c.id,
+            title: c.title,
+            imageUrl: c.imageUrl,
+            totalMinutes: c.totalMinutes,
+            line: p.reason,
+            reason: p.reason,
+            label: "De tu recetario",
+            missing: [],
+            isNew: false,
+          },
+        ]
+      : [];
+  });
+  return { ok: true, cards };
 }

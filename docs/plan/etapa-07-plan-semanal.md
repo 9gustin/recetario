@@ -131,7 +131,7 @@ Parte **7a** (manual, T7.1–T7.6), parte **7b** (IA, T7.7–T7.11) y parte **7c
   4. Resultados: "Tenés todo · 20 min" o "Te falta: jengibre (opcional)", con botón para cocinar o "Elegir para hoy" (crea la entrada en el plan de hoy, creando el plan de la semana si no existe).
 - **Aceptación:** con "pollo, zapallitos, huevos, limón" devuelve al menos 2 opciones aptas para los dos en < 6 s.
 
-### T7.13 — Ideas para hoy
+### [x] T7.13 — Ideas para hoy
 - **Depende de:** T7.12
 - **Spec:** §3 F15 · §6.8 · canvas ("Ideas para hoy").
 - **Archivos:** `app/(app)/g/[groupId]/hoy/ideas/page.tsx`, `lib/suggest/signals.ts` + test.
@@ -174,3 +174,5 @@ Parte **7a** (manual, T7.1–T7.6), parte **7b** (IA, T7.7–T7.11) y parte **7c
 - T7.11: `pnpm eval:plan` (8 pedidos, IA real + DB local, no corre en CI): 8/8 sin errores, ~US$ 0.83 en total (≈ US$ 0.10 por plan, 15–40 s). Se refactorizó `saveRecipeWith`/`loadIngredientsForCheck`/`getPlanEntries` para aceptar un cliente de Supabase y poder correr fuera de Next.
 
 - T7.12: 'Elegir para hoy' crea el plan de la semana si falta y activa la receta si era borrador. La cuota usa la feature 'ideas'. Falta filtrar por el plan vivo (Etapa 8b). Eval: pnpm eval:suggest (5 opciones en 5.5 s).
+
+- T7.13: Pestaña 'Con lo que compraste' queda como mensaje hasta la Etapa 8 (lista de compras). Las ideas del recetario no usan IA (señales por código); 'Nuevas' sí (borradores).

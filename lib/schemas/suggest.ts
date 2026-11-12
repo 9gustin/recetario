@@ -13,6 +13,8 @@ export const suggestRequestSchema = z.object({
   have: z.array(z.string().trim().min(1).max(60)).max(40).default([]),
   craving: z.string().trim().max(200).optional(),
   filters: suggestFilters.default({ quick: false, noOven: false, light: false }),
+  /** Pestaña de las ideas: del recetario o recetas nuevas. */
+  tab: z.enum(["library", "new"]).default("library"),
   /** Ideas ya mostradas, para "otras 3 ideas". */
   exclude: z.array(z.string().uuid()).max(60).default([]),
 });

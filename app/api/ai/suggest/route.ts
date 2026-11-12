@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { checkQuota } from "@/lib/ai/rate-limit";
-import { suggestFromPantry } from "@/lib/ai/suggest/suggest";
+import { suggestFromPantry, suggestIdeas } from "@/lib/ai/suggest/suggest";
+import { hourIn } from "@/lib/domain/today";
+import { todayString } from "@/lib/domain/week";
 import { suggestRequestSchema } from "@/lib/schemas/suggest";
 import { createClient } from "@/lib/supabase/server";
 
@@ -34,14 +36,26 @@ export async function POST(request: Request) {
     );
   }
 
-  const result = await suggestFromPantry({
-    supabase,
-    userId: user.id,
-    groupId: body.groupId,
-    have: body.have,
-    craving: body.craving,
-    filters: body.filters,
-  });
+  const now = new Date();
+  const result =
+    body.mode === "ideas"
+      ? await suggestIdeas({
+          supabase,
+          userId: user.id,
+          groupId: body.groupId,
+          tab: body.tab,
+          exclude: body.exclude,
+          hour: hourIn(now),
+          today: todayString(now),
+        })
+      : await suggestFromPantry({
+          supabase,
+          userId: user.id,
+          groupId: body.groupId,
+          have: body.have,
+          craving: body.craving,
+          filters: body.filters,
+        });
   if (!result.ok) return NextResponse.json({ error: result.error }, { status: 500 });
   return NextResponse.json({ cards: result.cards });
 }

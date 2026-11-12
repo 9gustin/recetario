@@ -126,11 +126,27 @@ export function TodayView({
           <ol className="flex flex-col gap-2 px-5" aria-label="Cómo arrancar">
             <li>
               <Link
-                href={`/g/${groupId}/hoy/que-tenes`}
+                href={`/g/${groupId}/hoy/ideas`}
                 className="flex min-h-14 items-center gap-3 rounded-2xl bg-surface px-4 py-3"
               >
                 <span className="flex size-8 flex-none items-center justify-center rounded-full bg-hero text-sm font-bold">
                   1
+                </span>
+                <span>
+                  <span className="block text-[15px] font-semibold">Elegí</span>
+                  <span className="text-sm text-muted">
+                    Ideas para hoy, con el motivo de cada una.
+                  </span>
+                </span>
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={`/g/${groupId}/hoy/que-tenes`}
+                className="flex min-h-14 items-center gap-3 rounded-2xl bg-surface px-4 py-3"
+              >
+                <span className="flex size-8 flex-none items-center justify-center rounded-full bg-hero text-sm font-bold">
+                  2
                 </span>
                 <span>
                   <span className="block text-[15px] font-semibold">Contame</span>
@@ -146,7 +162,7 @@ export function TodayView({
                 className="flex min-h-14 items-center gap-3 rounded-2xl bg-surface px-4 py-3"
               >
                 <span className="flex size-8 flex-none items-center justify-center rounded-full bg-hero text-sm font-bold">
-                  2
+                  3
                 </span>
                 <span>
                   <span className="block text-[15px] font-semibold">Planificá</span>
