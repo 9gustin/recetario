@@ -22,12 +22,12 @@ Archivo compartido entre los tres agentes. Cada uno lo lee al empezar y lo actua
 
 ## 2 · Código (DeepSeek) — [instrucciones](02-codigo-deepseek.md)
 
-**Próxima tarea:** T1.1
+**Próxima tarea:** T3.3
 
 | Etapa | Estado |
 |---|---|
-| 1 · Auth y grupos | pendiente |
-| 2 · Recetario | pendiente |
+| 1 · Auth y grupos | lista para revisión |
+| 2 · Recetario | lista para revisión |
 | 3 · Modo cocinar | pendiente |
 | 4 · Compartir | pendiente |
 | 5 · IA: importar | pendiente |

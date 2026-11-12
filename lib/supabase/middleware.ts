@@ -2,7 +2,12 @@ import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 import type { Database } from "./database.types";
 
-/** Refresca la sesión de Supabase en cada request (patrón oficial de @supabase/ssr). */
+/** Rutas que requieren sesión (grupo (app)). */
+function isProtectedPath(pathname: string) {
+  return pathname === "/perfil" || pathname === "/grupos" || pathname.startsWith("/g/");
+}
+
+/** Refresca la sesión de Supabase en cada request (patrón oficial de @supabase/ssr) y protege las rutas de la app. */
 export async function updateSession(request: NextRequest) {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
@@ -27,7 +32,36 @@ export async function updateSession(request: NextRequest) {
   });
 
   // No ejecutar código entre createServerClient y getClaims: refresca el token si hace falta.
-  await supabase.auth.getClaims();
+  const { data } = await supabase.auth.getClaims();
+  const isAuthenticated = Boolean(data?.claims?.sub);
+
+  const { pathname } = request.nextUrl;
+
+  if (isProtectedPath(pathname) && !isAuthenticated) {
+    const loginUrl = request.nextUrl.clone();
+    loginUrl.pathname = "/login";
+    loginUrl.search = "";
+    loginUrl.searchParams.set("next", pathname + request.nextUrl.search);
+    return NextResponse.redirect(loginUrl);
+  }
+
+  // Ya logueado en /login: va a la home (evita el loop).
+  if (pathname === "/login" && isAuthenticated) {
+    const homeUrl = request.nextUrl.clone();
+    homeUrl.pathname = "/";
+    homeUrl.search = "";
+    return NextResponse.redirect(homeUrl);
+  }
+
+  // Recordar el último grupo visitado (preferencia; la membresía la valida el layout).
+  const groupMatch = pathname.match(/^\/g\/([^/]+)/);
+  if (groupMatch?.[1]) {
+    response.cookies.set("last_group_id", groupMatch[1], {
+      path: "/",
+      sameSite: "lax",
+      maxAge: 60 * 60 * 24 * 365,
+    });
+  }
 
   return response;
 }
