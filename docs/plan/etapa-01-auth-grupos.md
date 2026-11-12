@@ -81,7 +81,7 @@
   5. Si ya es miembro → redirige directo.
 - **Aceptación:** flujo completo con dos cuentas (dos navegadores).
 
-### T1.7 — E2E de grupos
+### [x] T1.7 — E2E de grupos
 - **Depende de:** T1.6
 - **Archivos:** `tests/e2e/helpers/auth.ts`, `tests/e2e/groups.spec.ts`.
 - **Pasos:**
@@ -109,3 +109,5 @@
 - T1.5: para "cambiar rol" hizo falta una migración nueva (`20261112013000_set_member_role.sql`) con el RPC `set_member_role(gid, uid, role)` (`security definer`): solo un `owner` puede cambiar roles, no puede cambiarse a sí mismo, y se revoca a `anon`. Renombrar/emoji usan `update` directo sobre `groups` (la policy `groups_update_owner_admin` de T1.1 ya lo restringe a owner/admin); sacar miembro usa `remove_member` y salir usa `leave_group` (T1.1). El tipo generado marca `p_emoji` de `create_group` como `string` aunque el parámetro SQL es nullable: se castea al llamar al RPC.
 
 - T1.6: el token se genera con `crypto.randomBytes(24).toString("base64url")` (7 días, `max_uses` nulo = usos ilimitados) en un Server Action (`lib/groups/invites.ts`). Crear/revocar invitaciones usan el cliente normal: la RLS de `group_invites` (owner/admin) ya lo restringe. La página `/join/[token]` usa `get_invite_preview` (accesible a `anon`) y chequea la sesión sin redirigir; si el usuario ya es miembro redirige directo. El toast "¡Te uniste a X!" se pasa por query `?joined=` y lo muestra `JoinToast` (envuelto en `Suspense`) desde el layout de grupo. Un `member` que abre ajustes no ve invitaciones: la RLS le devuelve lista vacía (no error).
+
+- T1.7: se actualizó `tests/e2e/smoke.spec.ts` (quedó roto al sacar el grupo `demo` de T0.3). El helper `tests/e2e/helpers/auth.ts` carga `.env.local` con `process.loadEnvFile()`, crea usuarios con la API admin (`email_confirm: true`, dispara perfil + grupo personal) y lee el token de invitación directo de la DB. El e2e usa tres contextos mobile independientes (A, B, C). Emails con sufijo `Date.now()` para evitar colisiones entre corridas.
