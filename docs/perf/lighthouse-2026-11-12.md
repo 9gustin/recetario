@@ -5,13 +5,18 @@ Medido con `lighthouse` (emulación mobile, throttling por defecto) contra `pnpm
 | Pantalla | Performance | Accesibilidad | Best practices |
 |---|---|---|---|
 | Hoy | 94 | 100 | 100 |
-| Recetas (lista) | 83 | 100 | 96 |
+| Recetas (lista) | 79–83 (ruidoso) | 100 | 100 |
 | Detalle de receta | 95 | 100 | 100 |
 
-## Pendiente (Recetas)
+## Cambios después de la primera medición
 
-- Performance 83: TBT ≈ 510 ms. El chunk compartido más grande (~264 KiB) tarda ~1,1 s de CPU con el throttling de Lighthouse. Candidatos: separar lo que no se usa en la lista (filtros, "Apta para…") con `dynamic()` y revisar `@supabase/supabase-js` en el bundle del cliente.
-- Best practices 96: hay un error en consola ("An unexpected response was received from the server") en la carga de la lista; se reproduce solo bajo Lighthouse (con cookies inyectadas). Conviene revisarlo en un celular real.
+- Recetas: la primera página ahora se resuelve en el servidor (antes se pedía con una server action después de montar). Eso eliminó el error de consola ("An unexpected response was received from the server") y llevó Best practices a 100.
+- Se sacó del service worker el caché de datos RSC (se cacheaban por URL sin mirar los headers, lo que puede servir una respuesta equivocada). Quedan páginas (network-first), fotos (cache-first) y los defaults de Serwist.
+- Los títulos de las tarjetas de receta pasaron a `h2` (orden de encabezados).
+
+## Pendiente
+
+- Performance de Recetas queda entre 79 y 83 por TBT (≈ 0,9 s): el chunk base de Next/React (~812 KB, ~264 KiB gzip) pesa ~1,5 s de CPU con el throttling de Lighthouse. No es código propio; se puede revisar si hace falta con un analizador de bundle.
 - Medir también en un dispositivo real: Lighthouse local no refleja la red de producción.
 
 ## Accesibilidad

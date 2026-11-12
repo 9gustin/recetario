@@ -10,6 +10,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { motion } from "framer-motion";
 import { useRealtimeList } from "@/lib/hooks/use-realtime-list";
 import { AISLE_ORDER } from "@/lib/domain/shopping-list";
 import { aisleLabel, shareAsText } from "@/lib/domain/shopping-share";
@@ -252,6 +253,8 @@ export function ListView({
   );
 }
 
+const SWIPE = 90;
+
 function Row({
   item,
   who,
@@ -265,9 +268,20 @@ function Row({
   const have = item.state === "have_it";
   const detail = item.purchase_hint || (item.is_manual ? "" : "");
   return (
-    <li
+    <motion.li
+      // Gestos: arrastrar a la derecha = comprado; a la izquierda = "ya lo tengo". Los botones siguen ahí (teclado, lector).
+      drag="x"
+      dragDirectionLock
+      dragConstraints={{ left: 0, right: 0 }}
+      dragElastic={0.5}
+      dragSnapToOrigin
+      onDragEnd={(_, info) => {
+        if (item.state !== "pending") return;
+        if (info.offset.x > SWIPE) onMark(item, "bought");
+        else if (info.offset.x < -SWIPE) onMark(item, "have_it");
+      }}
       className={cn(
-        "flex items-center gap-3 rounded-2xl bg-surface px-3 py-2",
+        "flex touch-pan-y items-center gap-3 rounded-2xl bg-surface px-3 py-2",
         (bought || have) && "opacity-60",
       )}
     >
@@ -330,6 +344,6 @@ function Row({
           Ya lo tengo
         </button>
       ) : null}
-    </li>
+    </motion.li>
   );
 }

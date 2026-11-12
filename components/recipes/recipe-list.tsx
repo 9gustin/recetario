@@ -15,14 +15,19 @@ type Props = {
   topTags: string[];
   total: number;
   members?: { id: string; name: string }[];
+  /** Primera página ya resuelta en el servidor (evita pedirla de nuevo al montar). */
+  initial?: { recipes: RecipeListItem[]; hasMore: boolean };
 };
 
-export function RecipeList({ groupId, topTags, total, members = [] }: Props) {
+export function RecipeList({ groupId, topTags, total, members = [], initial }: Props) {
   const [q, setQ] = useState("");
   const [filters, setFilters] = useState<RecipeFilterState>(EMPTY_FILTERS);
-  const [recipes, setRecipes] = useState<RecipeListItem[]>([]);
-  const [hasMore, setHasMore] = useState(false);
-  const [status, setStatus] = useState<"loading" | "ready" | "error">("loading");
+  const [recipes, setRecipes] = useState<RecipeListItem[]>(initial?.recipes ?? []);
+  const [hasMore, setHasMore] = useState(initial?.hasMore ?? false);
+  const [status, setStatus] = useState<"loading" | "ready" | "error">(
+    initial ? "ready" : "loading",
+  );
+  const skipFirst = useRef(Boolean(initial));
   const [loadingMore, setLoadingMore] = useState(false);
   const requestId = useRef(0);
   const sentinel = useRef<HTMLDivElement | null>(null);
@@ -44,6 +49,11 @@ export function RecipeList({ groupId, topTags, total, members = [] }: Props) {
 
   // Primera página (y cada vez que cambia la búsqueda o un filtro), con debounce al escribir.
   useEffect(() => {
+    // La primera página llega del servidor: no se vuelve a pedir hasta que cambie la búsqueda o un filtro.
+    if (skipFirst.current) {
+      skipFirst.current = false;
+      return;
+    }
     const id = ++requestId.current;
     const t = setTimeout(
       () => {

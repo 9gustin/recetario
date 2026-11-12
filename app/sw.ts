@@ -2,7 +2,7 @@
 /// <reference lib="webworker" />
 import { defaultCache } from "@serwist/turbopack/worker";
 import type { PrecacheEntry, SerwistGlobalConfig } from "serwist";
-import { CacheFirst, ExpirationPlugin, NetworkFirst, Serwist, StaleWhileRevalidate } from "serwist";
+import { CacheFirst, ExpirationPlugin, NetworkFirst, Serwist } from "serwist";
 
 declare global {
   interface WorkerGlobalScope extends SerwistGlobalConfig {
@@ -27,16 +27,6 @@ const serwist = new Serwist({
         cacheName: "app-pages",
         networkTimeoutSeconds: 4,
         plugins: [new ExpirationPlugin({ maxEntries: 60, maxAgeSeconds: 7 * 24 * 60 * 60 })],
-      }),
-    },
-    // Datos de Next (RSC) de esas mismas pantallas.
-    {
-      matcher: ({ url, request }) =>
-        request.headers.get("RSC") === "1" &&
-        /^\/g\/[^/]+\/(recetas|compras|plan)/.test(url.pathname),
-      handler: new StaleWhileRevalidate({
-        cacheName: "app-rsc",
-        plugins: [new ExpirationPlugin({ maxEntries: 60, maxAgeSeconds: 24 * 60 * 60 })],
       }),
     },
     // Fotos de recetas: primero la copia local, con tope de cantidad.

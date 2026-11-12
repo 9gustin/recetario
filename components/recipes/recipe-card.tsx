@@ -24,7 +24,7 @@ export function RecipeCard({
         )}
       </div>
       <div className="flex flex-col gap-1 px-3 py-2.5">
-        <h3 className="line-clamp-2 text-[15px] leading-tight font-semibold">{recipe.title}</h3>
+        <h2 className="line-clamp-2 text-[15px] leading-tight font-semibold">{recipe.title}</h2>
         <p className="text-xs text-muted">
           {recipe.total_minutes ? `${recipe.total_minutes} min` : "Sin tiempo"}
         </p>

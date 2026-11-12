@@ -25,6 +25,7 @@ import { useWakeLock } from "@/lib/hooks/use-wake-lock";
 import type { ChatContext } from "@/lib/hooks/use-assistant-chat";
 import Link from "next/link";
 import type { RecipeDetail } from "@/lib/recipes/queries";
+import { autoLogFromEntry, undoLog } from "@/lib/diet-plan/actions";
 import { finishCookingSession, uploadCookingPhoto } from "@/lib/cooking/actions";
 import { AskSheet } from "./ask-sheet";
 import { EditStepSheet } from "./edit-step-sheet";
@@ -81,6 +82,8 @@ type Props = {
   exitHref?: string;
   /** Solo modo público: link para guardar la receta en el recetario propio. */
   saveHref?: string;
+  /** Comida del plan semanal que se está cocinando (para registrar el plan vivo al terminar). */
+  planEntryId?: string;
   /** Sesión a medias de esta persona (ya validada: reciente y sin terminar). */
   resume?: OpenSession | null;
 };
@@ -93,6 +96,7 @@ export function CookingStories({
   persist = true,
   exitHref,
   saveHref,
+  planEntryId,
 }: Props) {
   const leaveHref = exitHref ?? `/g/${groupId}/recetas/${recipe.id}`;
   const router = useRouter();
@@ -203,6 +207,15 @@ export function CookingStories({
       return;
     }
     toast.success(res.data.savedVersion ? "Guardamos los cambios en la receta" : "¡Buen provecho!");
+    if (planEntryId) {
+      const logged = await autoLogFromEntry({ entryId: planEntryId });
+      if (logged.ok && logged.data.logged && logged.data.date && logged.data.slot) {
+        const { date, slot } = logged.data;
+        toast("Registrado en tu plan · Cumplí", {
+          action: { label: "Deshacer", onClick: () => void undoLog({ date, slot }) },
+        });
+      }
+    }
     router.push(`/g/${groupId}/recetas/${recipe.id}`);
     router.refresh();
   }

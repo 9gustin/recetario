@@ -214,3 +214,51 @@ test("offline: se tacha la lista sin conexión y al volver la red se sincroniza"
     )
     .toBe("bought");
 });
+
+test("compras: deslizar a la derecha marca comprado y a la izquierda 'ya lo tengo'", async ({
+  browser,
+}) => {
+  test.setTimeout(120_000);
+  const email = `swipe-${Date.now()}@test.com`;
+  const userId = await createTestUser(email, password, "Ana");
+  const groupId = await createGroupAs(email, password, "Casa");
+  const admin = adminClient();
+  const { data: list } = await admin
+    .from("shopping_lists")
+    .insert({ group_id: groupId, name: "Compra swipe", created_by: userId })
+    .select("id")
+    .single();
+  await admin.from("shopping_list_items").insert([
+    { list_id: list!.id, display_name: "Manzanas", aisle: "verduleria", position: 0 },
+    { list_id: list!.id, display_name: "Arroz", aisle: "almacen", position: 0 },
+  ]);
+  const page = await (await mobileContext(browser)).newPage();
+  await signIn(page, email, password);
+  await page.goto(`/g/${groupId}/compras/${list!.id}`);
+  await page.waitForLoadState("networkidle");
+
+  const drag = async (name: string, dx: number) => {
+    const box = (await page.getByRole("checkbox", { name: `Comprado: ${name}` }).boundingBox())!;
+    const y = box.y + box.height / 2;
+    const x = box.x + box.width + 40;
+    await page.mouse.move(x, y);
+    await page.mouse.down();
+    await page.mouse.move(x + dx / 2, y, { steps: 5 });
+    await page.mouse.move(x + dx, y, { steps: 5 });
+    await page.mouse.up();
+  };
+  await expect(async () => {
+    await drag("Manzanas", 200);
+    await expect(page.getByRole("checkbox", { name: "Comprado: Manzanas" })).toHaveAttribute(
+      "aria-checked",
+      "true",
+      { timeout: 2000 },
+    );
+  }).toPass({ timeout: 20_000 });
+  await expect(async () => {
+    await drag("Arroz", -200);
+    await expect(page.getByRole("button", { name: /Volver a pendiente: Arroz/ })).toBeVisible({
+      timeout: 2000,
+    });
+  }).toPass({ timeout: 20_000 });
+});

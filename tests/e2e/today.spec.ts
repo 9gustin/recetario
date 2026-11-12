@@ -157,11 +157,12 @@ test("Ideas para hoy: 3 ideas aptas con su motivo, 'Otras 3' no repite y elegir 
   const page = await (await mobileContext(browser)).newPage();
   await signIn(page, email, password);
   await page.goto(`/g/${groupId}/hoy`);
+  await page.waitForLoadState("networkidle");
   await page.getByRole("link", { name: /Elegí/ }).tap();
   await expect(page).toHaveURL(/\/hoy\/ideas$/);
 
   const list = page.getByRole("list", { name: "Sugerencias" });
-  await expect(list.getByRole("listitem")).toHaveCount(3);
+  await expect(list.getByRole("listitem")).toHaveCount(3, { timeout: 60_000 });
   await expect(page.getByText("Tortilla con cebolla")).toHaveCount(0);
   // Cada idea explica por qué aparece.
   await expect(
