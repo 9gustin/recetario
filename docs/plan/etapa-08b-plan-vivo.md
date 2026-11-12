@@ -105,3 +105,5 @@
 - T8B.7: MEAL_RULE_MISMATCH solo avisa. Clasificación por familia→grupo de alimentos en lib/domain/meal-rules.ts. Ideas y ¿Qué tenés? filtran (duro) lo que no encaja con la fórmula del momento; falta verificarlo con la API real.
 
 - T8B.8: Evals: 3 planes (texto, dictado, tabla) + ajuste por chat, 4/4 con la API real. Sin fixture PDF/foto: se prueba a mano. E2E con ingesta simulada.
+
+- Cierre: el registro automático de "Cumplí" al terminar de cocinar (solo para quien cocinó, con deshacer) y el historial de semanas quedaron hechos; se agregó swipe en la lista de compras.

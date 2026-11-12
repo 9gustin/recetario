@@ -158,8 +158,10 @@ test("Ideas para hoy: 3 ideas aptas con su motivo, 'Otras 3' no repite y elegir 
   await signIn(page, email, password);
   await page.goto(`/g/${groupId}/hoy`);
   await page.waitForLoadState("networkidle");
-  await page.getByRole("link", { name: /Elegí/ }).tap();
-  await expect(page).toHaveURL(/\/hoy\/ideas$/);
+  await expect(async () => {
+    await page.getByRole("link", { name: /Elegí/ }).tap({ timeout: 3000 });
+    await expect(page).toHaveURL(/\/hoy\/ideas$/, { timeout: 5000 });
+  }).toPass({ timeout: 30_000 });
 
   const list = page.getByRole("list", { name: "Sugerencias" });
   await expect(list.getByRole("listitem")).toHaveCount(3, { timeout: 60_000 });
@@ -244,7 +246,10 @@ test("home por hora: almuerzo a las 12:40 (mediodía), arranques a las 18:10 (ta
   await expect(page.locator("html")).toHaveAttribute("data-daypart", "tarde");
 
   // Elegir una idea: la home muestra la cena.
-  await page.getByRole("link", { name: /Elegí/ }).tap();
+  await expect(async () => {
+    await page.getByRole("link", { name: /Elegí/ }).tap({ timeout: 3000 });
+    await expect(page).toHaveURL(/\/hoy\/ideas$/, { timeout: 5000 });
+  }).toPass({ timeout: 30_000 });
   await page.waitForLoadState("networkidle");
   await expect(
     page.getByRole("list", { name: "Sugerencias" }).getByRole("listitem").first(),
