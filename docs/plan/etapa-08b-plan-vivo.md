@@ -68,7 +68,7 @@
   5. Al terminar una sesión de modo cocinar con `plan_entry_id`, registrar automáticamente "Cumplí" para cada comensal con plan vivo (con toast "Registrado · deshacer").
 - **Aceptación:** registrar una comida lleva un toque; la grilla y los permitidos se actualizan al instante.
 
-### T8B.7 — Integración con plan semanal e ideas
+### [x] T8B.7 — Integración con plan semanal e ideas
 - **Depende de:** T8B.1, T7.8, T7.12
 - **Archivos:** ajustes en `lib/domain/validate-plan.ts`, `lib/ai/plan-agent/tools.ts`, `lib/ai/suggest/*`.
 - **Pasos:**
@@ -101,3 +101,5 @@
 - T8B.5: No hay diseño canvas a mano para verificar a 375 px en los tres temas; usa tokens de color.
 
 - T8B.6: Pendiente dentro de T8B.6: registrar automático 'Cumplí' al terminar una sesión de cocinar con plan_entry_id (paso 5) y el historial de semanas anteriores; se retoman después de T8B.8 si hay tiempo.
+
+- T8B.7: MEAL_RULE_MISMATCH solo avisa. Clasificación por familia→grupo de alimentos en lib/domain/meal-rules.ts. Ideas y ¿Qué tenés? filtran (duro) lo que no encaja con la fórmula del momento; falta verificarlo con la API real.

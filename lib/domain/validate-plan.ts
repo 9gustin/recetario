@@ -1,8 +1,9 @@
 /** Validación del plan semanal. Lógica pura: sin DB ni IA. Los mensajes van al modelo y a la UI. */
 import { checkRecipe, type MemberDiet, type RecipeIngredientForCheck } from "./compatibility";
 import { LEFTOVER_MAX_DAYS, isPerishableLate, leftoversExpired } from "./perishability";
+import { mismatchedGroups, rulesFor, type MealRule } from "./meal-rules";
 import { slotLabel } from "./meal-slots";
-import { daysBetween, dayLabel } from "./week";
+import { daysBetween, dayLabel, dayOfWeek } from "./week";
 
 export const PROTEIN_FAMILIES = [
   "ave",
@@ -44,13 +45,16 @@ export type PlanIssueCode =
   | "REPEATED_RECIPE"
   | "PROTEIN_MONOTONY"
   | "PERISHABLE_LATE"
-  | "LEFTOVERS_EXPIRED";
+  | "LEFTOVERS_EXPIRED"
+  | "MEAL_RULE_MISMATCH";
 
 export type PlanIssue = { entryId: string; code: PlanIssueCode; message: string };
 
 export type ValidatePlanInput = {
   entries: ValidateEntry[];
   diets: MemberDiet[];
+  /** Fórmulas por momento del plan vivo de cada persona (solo avisan; no bloquean). */
+  mealRules?: MealRule[];
   /** Día previsto de la compra (default: la fecha más temprana del plan). */
   purchaseDate?: string;
   /** Tope diario de carbohidratos (g); solo se evalúa si hay datos de todas las comidas del día. */
@@ -149,6 +153,26 @@ export function validatePlan(input: ValidatePlanInput): {
         code: "LEFTOVERS_EXPIRED",
         message: `Las sobras de ${where(e)} se cocinaron hace más de ${LEFTOVER_MAX_DAYS} días. Pasalas antes o congelalas.`,
       });
+    }
+  }
+
+  // 7. Fórmulas del plan vivo: la receta no encaja con el momento para algún comensal.
+  if (input.mealRules?.length) {
+    for (const e of entries) {
+      if (!e.recipe) continue;
+      const diners =
+        e.dinerIds.length > 0 ? e.dinerIds : [...new Set(input.mealRules.map((r) => r.userId))];
+      for (const userId of diners) {
+        for (const rule of rulesFor(input.mealRules, e.slot, e.date, dayOfWeek, userId)) {
+          const bad = mismatchedGroups(rule, e.recipe.ingredients);
+          if (bad.length === 0) continue;
+          warnings.push({
+            entryId: e.id,
+            code: "MEAL_RULE_MISMATCH",
+            message: `"${e.recipe.title}" (${where(e)}) no encaja con el plan de ${rule.displayName ?? "una persona"} ("${rule.formula}"): tiene ${bad.join(", ")}.`,
+          });
+        }
+      }
     }
   }
 

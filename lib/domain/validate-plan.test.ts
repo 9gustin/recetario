@@ -198,3 +198,46 @@ describe("perishability", () => {
     expect(leftoversExpired("2026-11-09", "2026-11-13", daysBetween)).toBe(true);
   });
 });
+
+describe("validatePlan · fórmulas del plan vivo", () => {
+  const rule = {
+    userId: "ana",
+    displayName: "Ana",
+    slot: "dinner",
+    days: null,
+    formula: "Proteína + verduras, sin harinas",
+    components: [],
+  };
+  const pasta = recipe("p", [ing("fideos", ["cereal_gluten"])]);
+  const ensalada = recipe("e", [ing("lechuga", ["hoja_verde"])]);
+
+  it("avisa cuando la receta no encaja con la fórmula de un comensal", () => {
+    const { warnings, errors } = validatePlan({
+      entries: [entry("a", "2026-11-09", pasta)],
+      diets: [],
+      mealRules: [rule],
+    });
+    expect(errors).toEqual([]);
+    expect(warnings).toHaveLength(1);
+    expect(warnings[0]).toMatchObject({ entryId: "a", code: "MEAL_RULE_MISMATCH" });
+    expect(warnings[0]?.message).toContain("Ana");
+  });
+
+  it("no avisa si encaja, si la persona no come ahí, ni para texto libre", () => {
+    expect(
+      validatePlan({ entries: [entry("a", "2026-11-09", ensalada)], diets: [], mealRules: [rule] })
+        .warnings,
+    ).toEqual([]);
+    expect(
+      validatePlan({
+        entries: [entry("a", "2026-11-09", pasta, { dinerIds: ["beto"] })],
+        diets: [],
+        mealRules: [rule],
+      }).warnings,
+    ).toEqual([]);
+    expect(
+      validatePlan({ entries: [entry("a", "2026-11-09", null)], diets: [], mealRules: [rule] })
+        .warnings,
+    ).toEqual([]);
+  });
+});

@@ -1,13 +1,14 @@
 import "server-only";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { MODELS } from "@/lib/ai/models";
-import { loadDiets } from "@/lib/ai/plan-agent/validation";
+import { loadDiets, loadMealRules } from "@/lib/ai/plan-agent/validation";
 import { describeDiets } from "@/lib/ai/recipes/adapt";
 import { runStructured } from "@/lib/ai/run-structured";
 import { checkRecipe, type RecipeIngredientForCheck } from "@/lib/domain/compatibility";
 import { computeCoverage, coverageLabel, type Coverage } from "@/lib/domain/coverage";
 import { parseIngredientLine } from "@/lib/domain/ingredient-line";
-import { daysBetween } from "@/lib/domain/week";
+import { mismatchedGroups, rulesFor } from "@/lib/domain/meal-rules";
+import { dayOfWeek, daysBetween } from "@/lib/domain/week";
 import { pickIdeas, type RecipeSignal } from "@/lib/suggest/signals";
 import { loadIngredientsForCheck } from "@/lib/recipes/compatibility";
 import { saveRecipeWith } from "@/lib/recipes/save";
@@ -110,6 +111,18 @@ const RANK_SYSTEM = `Sos el asistente de cocina de una app familiar argentina. T
 
 const NEW_SYSTEM = `Sos un cocinero argentino creativo. Proponé recetas NUEVAS, simples y rápidas, usando sobre todo lo que la persona tiene en casa (podés sumar básicos de alacena: sal, aceite, pimienta). Cada ingrediente en una línea con cantidad ("2 zapallitos", "300 g de pollo"). Respetá estrictamente las restricciones alimentarias que te paso: nunca uses un ingrediente prohibido. Pasos claros, en voseo. Una línea final corta de por qué conviene hoy.`;
 
+/** ¿La receta encaja con la fórmula del momento para todas las personas con plan vivo? */
+export function fitsMealRules(
+  c: Candidate,
+  rules: Awaited<ReturnType<typeof loadMealRules>>,
+  slot: string,
+  date: string,
+): boolean {
+  return rulesFor(rules, slot, date, dayOfWeek).every(
+    (rule) => mismatchedGroups(rule, c.ingredients).length === 0,
+  );
+}
+
 export type PantryInput = {
   supabase: Client;
   userId: string;
@@ -117,6 +130,9 @@ export type PantryInput = {
   have: string[];
   craving?: string;
   filters: SuggestFilters;
+  /** Momento y fecha de la comida, para respetar la fórmula del plan vivo. */
+  slot?: string;
+  date?: string;
 };
 
 /** "¿Qué tenés?": recetas del recetario por cobertura (aptas para todos) y, si no alcanzan, 1–2 nuevas en borrador. */
@@ -129,8 +145,11 @@ export async function suggestFromPantry(
     loadDiets(supabase, groupId),
   ]);
 
+  const rules = input.slot && input.date ? await loadMealRules(supabase, groupId) : [];
   const allowed = applyFilters(all, input.filters).filter(
-    (c) => !diets.some((d) => checkRecipe(c.ingredients, d.restrictions).status === "forbidden"),
+    (c) =>
+      !diets.some((d) => checkRecipe(c.ingredients, d.restrictions).status === "forbidden") &&
+      (!input.slot || !input.date || fitsMealRules(c, rules, input.slot, input.date)),
   );
   const scored = rank(allowed, have, input.craving)
     .filter((s) => s.cov.score >= 0.4)
@@ -265,6 +284,7 @@ export type IdeasInput = {
   exclude: string[];
   hour: number;
   today: string;
+  slot?: string;
 };
 
 /** Hasta 3 ideas para hoy, cada una con su motivo. "Del recetario" usa señales por código; "Nuevas" las inventa la IA. */
@@ -290,8 +310,12 @@ export async function suggestIdeas(
   }
 
   const all = await loadCandidates(supabase, groupId);
+  const slot = input.slot ?? (input.hour < 15 ? "lunch" : "dinner");
+  const rules = await loadMealRules(supabase, groupId);
   const allowed = all.filter(
-    (c) => !diets.some((d) => checkRecipe(c.ingredients, d.restrictions).status === "forbidden"),
+    (c) =>
+      !diets.some((d) => checkRecipe(c.ingredients, d.restrictions).status === "forbidden") &&
+      fitsMealRules(c, rules, slot, input.today),
   );
 
   // Última vez que se cocinó cada receta (según los planes del grupo).

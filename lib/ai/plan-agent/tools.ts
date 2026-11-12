@@ -13,7 +13,13 @@ import { getPlanEntries } from "@/lib/plan/queries";
 import type { PlanEntry } from "@/lib/plan/types";
 import type { Database } from "@/lib/supabase/database.types";
 import type { PlanAgentEvent } from "./events";
-import { loadDiets, validateCandidates, type Candidate, type Client } from "./validation";
+import {
+  loadDiets,
+  loadMealRules,
+  validateCandidates,
+  type Candidate,
+  type Client,
+} from "./validation";
 
 export type PlanToolCtx = {
   supabase: Client;
@@ -224,6 +230,7 @@ const getParticipants = defineTool({
   schema: z.object({}),
   async run(_input, ctx) {
     const diets = await loadDiets(ctx.supabase, ctx.groupId);
+    const mealRules = await loadMealRules(ctx.supabase, ctx.groupId);
     const { data: members } = await ctx.supabase
       .from("group_members")
       .select("user_id, profiles(display_name)")
@@ -235,6 +242,9 @@ const getParticipants = defineTool({
           return {
             id: m.user_id,
             name: m.profiles?.display_name ?? "Alguien",
+            meal_rules: mealRules
+              .filter((r) => r.userId === m.user_id)
+              .map((r) => ({ slot: r.slot, days: r.days, formula: r.formula })),
             restrictions: (diet?.restrictions ?? []).map((r) => ({
               target: r.target,
               type: r.type,

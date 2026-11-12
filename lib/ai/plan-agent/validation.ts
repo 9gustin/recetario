@@ -3,6 +3,7 @@ import type { SupabaseClient } from "@supabase/supabase-js";
 import { z } from "zod";
 import type { CheckRestriction, MemberDiet } from "@/lib/domain/compatibility";
 import { parseIngredientLine } from "@/lib/domain/ingredient-line";
+import type { MealRule } from "@/lib/domain/meal-rules";
 import type { MealSlot } from "@/lib/domain/meal-slots";
 import {
   validatePlan,
@@ -29,6 +30,19 @@ export type Candidate = {
   leftovers_of_entry_id: string | null;
   is_new_recipe: boolean;
 };
+
+/** Fórmulas por momento del plan vivo de los miembros (solo slot, fórmula y componentes). */
+export async function loadMealRules(supabase: Client, groupId: string): Promise<MealRule[]> {
+  const { data } = await supabase.rpc("get_group_meal_rules", { p_group_id: groupId });
+  return (data ?? []).map((r) => ({
+    userId: r.user_id,
+    displayName: r.display_name,
+    slot: r.slot,
+    days: r.days && r.days.length ? r.days.map(Number) : null,
+    formula: r.formula ?? "",
+    components: (r.components as MealRule["components"]) ?? [],
+  }));
+}
 
 export async function loadDiets(supabase: Client, groupId: string): Promise<MemberDiet[]> {
   const { data } = await supabase.rpc("get_group_diet", { p_group_id: groupId });
@@ -91,9 +105,10 @@ export async function validateCandidates(
   purchaseDate?: string,
 ): Promise<CandidateValidation> {
   const ids = [...new Set(candidates.flatMap((c) => (c.recipe_id ? [c.recipe_id] : [])))];
-  const [recipes, diets] = await Promise.all([
+  const [recipes, diets, mealRules] = await Promise.all([
     loadPlanRecipes(supabase, groupId, ids),
     loadDiets(supabase, groupId),
+    loadMealRules(supabase, groupId),
   ]);
   const missingRecipeIds = ids.filter((id) => !recipes.has(id));
   const entries: ValidateEntry[] = candidates.map((c) => ({
@@ -105,5 +120,5 @@ export async function validateCandidates(
     cookDate: c.cook_date,
     leftoversOfEntryId: c.leftovers_of_entry_id,
   }));
-  return { ...validatePlan({ entries, diets, purchaseDate }), missingRecipeIds };
+  return { ...validatePlan({ entries, diets, mealRules, purchaseDate }), missingRecipeIds };
 }

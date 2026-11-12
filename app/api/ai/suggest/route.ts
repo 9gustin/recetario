@@ -56,6 +56,8 @@ export async function POST(request: Request) {
           have: body.have,
           craving: body.craving,
           filters: body.filters,
+          slot: hourIn(now) < 15 ? "lunch" : "dinner",
+          date: todayString(now),
         });
   if (!result.ok) return NextResponse.json({ error: result.error }, { status: 500 });
   return NextResponse.json({ cards: result.cards });
