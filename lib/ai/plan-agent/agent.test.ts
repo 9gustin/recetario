@@ -2,7 +2,7 @@ import type Anthropic from "@anthropic-ai/sdk";
 import { describe, expect, it, vi } from "vitest";
 
 vi.mock("server-only", () => ({}));
-vi.mock("@/lib/recipes/actions", () => ({ saveRecipe: vi.fn() }));
+vi.mock("@/lib/recipes/save", () => ({ saveRecipeWith: vi.fn() }));
 vi.mock("@/lib/recipes/compatibility", () => ({ loadIngredientsForCheck: vi.fn() }));
 vi.mock("@/lib/plan/queries", () => ({ getPlanEntries: vi.fn() }));
 

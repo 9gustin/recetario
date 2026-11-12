@@ -20,6 +20,8 @@ export type SeedRecipe = {
   servings?: number;
   ingredients: string[];
   steps: SeedStep[];
+  totalMinutes?: number;
+  tags?: string[];
 };
 
 /**
@@ -53,6 +55,8 @@ export async function seedRecipe(
       group_id: groupId,
       title: recipe.title,
       servings: recipe.servings ?? 2,
+      total_minutes: recipe.totalMinutes ?? null,
+      tags: recipe.tags ?? [],
       ingredients: recipe.ingredients.map((raw, position) => {
         const m = raw.match(/^(\d+(?:[.,]\d+)?)\s*(g|kg|ml|l|cda|cdita|taza)?\s+(?:de\s+)?(.+)$/i);
         return {

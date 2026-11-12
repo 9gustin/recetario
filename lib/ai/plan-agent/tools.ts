@@ -7,7 +7,7 @@ import { slotLabel, type MealSlot } from "@/lib/domain/meal-slots";
 import type { PlanIssue } from "@/lib/domain/validate-plan";
 import { addDays, dayLabel, weekDays } from "@/lib/domain/week";
 import { checkRecipe } from "@/lib/domain/compatibility";
-import { saveRecipe } from "@/lib/recipes/actions";
+import { saveRecipeWith } from "@/lib/recipes/save";
 import { loadIngredientsForCheck } from "@/lib/recipes/compatibility";
 import { getPlanEntries } from "@/lib/plan/queries";
 import type { PlanEntry } from "@/lib/plan/types";
@@ -112,7 +112,7 @@ async function validateAndWrite(
   }
   const failure = await write();
   if (failure) return { result: { error: failure }, isError: true };
-  const entries = await getPlanEntries(ctx.planId);
+  const entries = await getPlanEntries(ctx.planId, ctx.supabase);
   ctx.emit({ type: "plan_updated", entries, warnings: v.warnings, changedIds });
   return {
     result: { applied: true, entries: summarize(entries), warnings: issueLines(v.warnings) },
@@ -162,7 +162,10 @@ const searchRecipes = defineTool({
     const diets = (await loadDiets(ctx.supabase, ctx.groupId)).filter(
       (d) => !input.for_user_ids?.length || input.for_user_ids.includes(d.userId),
     );
-    const ingredients = await loadIngredientsForCheck(rows.map((r) => r.id));
+    const ingredients = await loadIngredientsForCheck(
+      rows.map((r) => r.id),
+      ctx.supabase,
+    );
     const results = rows
       .map((r) => {
         const checks = (ingredients.get(r.id) ?? []).map((i) => i.check);
@@ -290,7 +293,7 @@ const proposeRecipe = defineTool({
     }),
   }),
   async run({ recipe }, ctx) {
-    const saved = await saveRecipe({
+    const saved = await saveRecipeWith(ctx.supabase, {
       group_id: ctx.groupId,
       title: recipe.title,
       description: recipe.description ?? null,

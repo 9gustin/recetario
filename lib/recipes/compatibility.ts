@@ -8,6 +8,8 @@ import {
   type RecipeIngredientForCheck,
 } from "@/lib/domain/compatibility";
 import { restrictionSchema } from "@/lib/schemas/food-profile";
+import type { SupabaseClient } from "@supabase/supabase-js";
+import type { Database } from "@/lib/supabase/database.types";
 import { createClient } from "@/lib/supabase/server";
 import { z } from "zod";
 
@@ -28,10 +30,11 @@ export type CheckedIngredient = { id: string; check: RecipeIngredientForCheck };
 /** Ingredientes de cada receta con los datos del catálogo que necesita el chequeo. */
 export async function loadIngredientsForCheck(
   recipeIds: string[],
+  client?: SupabaseClient<Database>,
 ): Promise<Map<string, CheckedIngredient[]>> {
   const out = new Map<string, CheckedIngredient[]>();
   if (recipeIds.length === 0) return out;
-  const supabase = await createClient();
+  const supabase = client ?? (await createClient());
   const { data } = await supabase
     .from("recipe_ingredients")
     .select(

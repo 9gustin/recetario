@@ -113,14 +113,14 @@ Parte **7a** (manual, T7.1–T7.6), parte **7b** (IA, T7.7–T7.11) y parte **7c
 - **Pasos:** `meal_plan_entries.is_new_recipe` y `recipes.status = 'draft'` se muestran claros en el plan; las recetas `draft` no aparecen en el recetario hasta aprobar el plan (filtrar `status = 'active'` en `listRecipes`). Al aprobar, `approve_plan` las activa. Al descartar el borrador del plan, se borran.
 - **Aceptación:** una receta inventada por la IA aparece en el recetario solo después de aprobar el plan.
 
-### T7.11 — Evals del plan
+### [x] T7.11 — Evals del plan
 - **Archivos:** `tests/evals/plan/*`.
 - **Pasos:** recetario de prueba (25 recetas, 6 con cebolla) + 2 perfiles (uno sin cebolla y bajo en carbohidratos). 8 pedidos distintos. Chequeos: 0 errores de `validatePlan`, ≤ 2 warnings de monotonía, ≥ 70% recetas del recetario, ninguna receta repetida sin ser sobra. Imprime costo y tiempo.
 - **Aceptación:** 8/8 sin errores.
 
 ## 7c — Arranques sin plan
 
-### T7.12 — ¿Qué tenés?
+### [x] T7.12 — ¿Qué tenés?
 - **Depende de:** T7.5, T6.5, T5.2
 - **Spec:** §3 F15 · §6.8 · canvas ("¿Qué tenés?").
 - **Archivos:** `app/(app)/g/[groupId]/hoy/que-tenes/page.tsx`, `components/suggest/*`, `lib/domain/coverage.ts` + test, `app/api/ai/suggest/route.ts`, `lib/ai/suggest/*`.
@@ -170,3 +170,7 @@ Parte **7a** (manual, T7.1–T7.6), parte **7b** (IA, T7.7–T7.11) y parte **7c
 - T7.9: Chat is a non-modal fixed bottom panel with three heights (grid stays visible); voice via VoiceRecorder; PlanBoard syncs state from server props with derived-state pattern (lint forbids setState in effect). E2E mocks the SSE endpoint.
 
 - T7.10: Listados (búsqueda, tags, menciones, Apta para) filtran status=active; discardPlan borra el plan y solo los borradores atados a él.
+
+- T7.11: `pnpm eval:plan` (8 pedidos, IA real + DB local, no corre en CI): 8/8 sin errores, ~US$ 0.83 en total (≈ US$ 0.10 por plan, 15–40 s). Se refactorizó `saveRecipeWith`/`loadIngredientsForCheck`/`getPlanEntries` para aceptar un cliente de Supabase y poder correr fuera de Next.
+
+- T7.12: 'Elegir para hoy' crea el plan de la semana si falta y activa la receta si era borrador. La cuota usa la feature 'ideas'. Falta filtrar por el plan vivo (Etapa 8b). Eval: pnpm eval:suggest (5 opciones en 5.5 s).

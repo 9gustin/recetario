@@ -211,15 +211,13 @@ test("recetas nuevas de la IA: invisibles en el recetario hasta aprobar el plan"
     })
     .select("id")
     .single();
-  await admin
-    .from("meal_plan_entries")
-    .insert({
-      plan_id: plan!.id,
-      date: today,
-      slot: "dinner",
-      recipe_id: recipe!.id,
-      is_new_recipe: true,
-    });
+  await admin.from("meal_plan_entries").insert({
+    plan_id: plan!.id,
+    date: today,
+    slot: "dinner",
+    recipe_id: recipe!.id,
+    is_new_recipe: true,
+  });
 
   const page = await (await mobileContext(browser)).newPage();
   await signIn(page, email, password);

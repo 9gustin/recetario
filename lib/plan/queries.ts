@@ -1,5 +1,7 @@
 import "server-only";
 import { sortSlots, type MealSlot } from "@/lib/domain/meal-slots";
+import type { SupabaseClient } from "@supabase/supabase-js";
+import type { Database } from "@/lib/supabase/database.types";
 import { createClient } from "@/lib/supabase/server";
 import type { PlanEntry, PlanMember, PlanRow } from "./types";
 
@@ -137,8 +139,11 @@ export async function getTodayEntries(groupId: string, today: string, tomorrow: 
 }
 
 /** Entradas de un plan, ordenadas (para refrescar el tablero ante cambios en vivo). */
-export async function getPlanEntries(planId: string): Promise<PlanEntry[]> {
-  const supabase = await createClient();
+export async function getPlanEntries(
+  planId: string,
+  client?: SupabaseClient<Database>,
+): Promise<PlanEntry[]> {
+  const supabase = client ?? (await createClient());
   const { data } = await supabase
     .from("meal_plan_entries")
     .select(ENTRY_COLUMNS)

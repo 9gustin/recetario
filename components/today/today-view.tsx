@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ChefHat, Flame, MessageSquare, Moon, Sparkles } from "lucide-react";
+import { ArrowRight, ChefHat, Flame, MessageSquare, Moon, Sparkles } from "lucide-react";
 import { Hero } from "@/components/shared/hero";
 import { PillButton } from "@/components/shared/pill-button";
 import type { TodayResolution, TodayEntry } from "@/lib/domain/today";
@@ -99,11 +99,60 @@ export function TodayView({
                 </Link>
               </PillButton>
             }
-          />
-          <ol className="flex flex-col gap-2 px-5">
-            <li className="rounded-2xl bg-surface p-4">
-              <p className="text-[15px] font-semibold">Planificá</p>
-              <p className="text-sm text-muted">Armá la semana a mano o con ayuda de la IA.</p>
+          >
+            <form
+              action={`/g/${groupId}/hoy/que-tenes`}
+              method="get"
+              className="flex items-center gap-2 rounded-full bg-background/80 pr-1.5 pl-4"
+            >
+              <label htmlFor="craving-q" className="sr-only">
+                Qué tenés ganas de comer
+              </label>
+              <input
+                id="craving-q"
+                name="q"
+                placeholder="Tengo ganas de algo con pollo…"
+                className="min-h-12 min-w-0 flex-1 bg-transparent text-[15px] outline-none placeholder:text-muted"
+              />
+              <button
+                type="submit"
+                aria-label="Buscar ideas"
+                className="flex size-11 flex-none items-center justify-center rounded-full bg-accent text-accent-foreground"
+              >
+                <ArrowRight className="size-5" />
+              </button>
+            </form>
+          </Hero>
+          <ol className="flex flex-col gap-2 px-5" aria-label="Cómo arrancar">
+            <li>
+              <Link
+                href={`/g/${groupId}/hoy/que-tenes`}
+                className="flex min-h-14 items-center gap-3 rounded-2xl bg-surface px-4 py-3"
+              >
+                <span className="flex size-8 flex-none items-center justify-center rounded-full bg-hero text-sm font-bold">
+                  1
+                </span>
+                <span>
+                  <span className="block text-[15px] font-semibold">Contame</span>
+                  <span className="text-sm text-muted">
+                    Decime qué tenés y te digo qué cocinar.
+                  </span>
+                </span>
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={`/g/${groupId}/plan`}
+                className="flex min-h-14 items-center gap-3 rounded-2xl bg-surface px-4 py-3"
+              >
+                <span className="flex size-8 flex-none items-center justify-center rounded-full bg-hero text-sm font-bold">
+                  2
+                </span>
+                <span>
+                  <span className="block text-[15px] font-semibold">Planificá</span>
+                  <span className="text-sm text-muted">Armá la semana a mano o con la IA.</span>
+                </span>
+              </Link>
             </li>
           </ol>
         </>
