@@ -3,7 +3,7 @@
 **Resultado:** una base grande de recetas rápidas (generadas con IA, originales) disponible para todos; un sitio público sin login para buscar (sin IA, para que sea barato) y ver recetas, colecciones y planes que la gente decide hacer públicos; la IA del plan sugiere desde tus recetas primero y después desde el catálogo.
 **Decisiones (12/11/2026):** fuente = generación con IA (sin copiar recetarios con copyright); se puede hacer público: recetas, colecciones, planes semanales; buscador público.
 
-### [ ] T12.1 — Modelo de datos público
+### [x] T12.1 — Modelo de datos público
 - **Pasos:** `recipes.visibility ('private'|'public')`, `recipes.slug` único, `recipes.is_catalog`; grupo del sistema "Catálogo" (solo lectura para usuarios); `recipe_collections` + `recipe_collection_items` (visibility, slug); `plan_shares` (plan publicado como plantilla: comidas sin datos personales); RLS con lectura anónima solo de lo público; índices de búsqueda; pgTAP.
 - **Aceptación:** `anon` lee recetas/colecciones/planes públicos y nada privado.
 
@@ -25,3 +25,5 @@
 
 ### [ ] T12.6 — E2E y cierre
 - **Pasos:** e2e del sitio público y de publicar/despublicar; `pnpm check`, `db:test`, `test:e2e`, build; marcar la etapa en `progreso.md`.
+
+- T12.1: La lectura pública es solo por RPC (security definer); las tablas siguen cerradas para anon. Publicar una colección o un plan publica sus recetas. Orden de búsqueda: comunidad primero, catálogo después.
