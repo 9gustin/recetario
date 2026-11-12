@@ -10,7 +10,7 @@ Producción: **Vercel** (app) + **Supabase** `recetario-prod` (región São Paul
 ## Cómo se despliega
 
 - **App:** cada push a `main` despliega a producción en Vercel; cada PR/rama genera un preview.
-- **Base de datos:** al hacer push a `main` con cambios en `supabase/migrations/**`, el workflow `.github/workflows/migrate.yml` corre `supabase link` y `supabase db push --remote`. También se puede lanzar a mano (Actions → "Migrar producción" → Run workflow).
+- **Base de datos:** al hacer push a `main` con cambios en `supabase/migrations/**`, el workflow `.github/workflows/migrate.yml` corre `supabase link` y `supabase db push --remote --yes` (la CLI 3.x exige `--yes` cuando no hay terminal). También se puede lanzar a mano (Actions → "Migrar producción" → Run workflow).
 - **CI:** `.github/workflows/ci.yml` corre lint, tipos, tests, build, migraciones + pgTAP y (en `main`) el e2e.
 
 ## Vincular y migrar a mano
