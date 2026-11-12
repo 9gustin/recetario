@@ -26,7 +26,7 @@ Archivo compartido entre los tres agentes. Cada uno lo lee al empezar y lo actua
 
 | Etapa | Estado |
 |---|---|
-| 1 · Auth y grupos | pendiente |
+| 1 · Auth y grupos | lista para revisión |
 | 2 · Recetario | pendiente |
 | 3 · Modo cocinar | pendiente |
 | 4 · Compartir | pendiente |
