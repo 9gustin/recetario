@@ -1,3 +1,4 @@
+import { PublishToggle } from "@/components/public/publish-toggle";
 import { StorageInfoCard } from "@/components/recipes/storage-info";
 import type { StorageInfo } from "@/lib/ai/storage/generate";
 import { createClient } from "@/lib/supabase/server";
@@ -64,7 +65,11 @@ export default async function Page({
   }
 
   const { data: stored } = await createClient().then((c) =>
-    c.from("recipes").select("storage_info").eq("id", recipe.id).maybeSingle(),
+    c
+      .from("recipes")
+      .select("storage_info, slug, visibility, status")
+      .eq("id", recipe.id)
+      .maybeSingle(),
   );
 
   return (
@@ -85,7 +90,13 @@ export default async function Page({
           initialShareUrl,
         }}
       />
-      <div className="px-5 pb-8">
+      <div className="flex flex-col gap-4 px-5 pb-8">
+        <PublishToggle
+          recipeId={recipe.id}
+          groupId={groupId}
+          initialSlug={stored?.visibility === "public" ? (stored.slug ?? null) : null}
+          confirmed={stored?.status === "active"}
+        />
         <StorageInfoCard info={stored?.storage_info as Partial<StorageInfo> | null} />
       </div>
     </>

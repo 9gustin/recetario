@@ -1,3 +1,4 @@
+import { createClient } from "@/lib/supabase/server";
 import { getPrepTasks } from "@/lib/prep/queries";
 import { notFound, redirect } from "next/navigation";
 import { PlanBoard } from "@/components/plan/plan-board";
@@ -33,6 +34,15 @@ export default async function Page({
   ]);
 
   const prep = plan ? await getPrepTasks(plan.id) : { tasks: [], tips: [] };
+  const { data: share } = plan
+    ? await (
+        await createClient()
+      )
+        .from("plan_shares")
+        .select("slug, title")
+        .eq("plan_id", plan.id)
+        .maybeSingle()
+    : { data: null };
 
   return (
     <PlanBoard
@@ -44,6 +54,7 @@ export default async function Page({
       initialEntries={entries}
       members={members}
       currentUserId={user.id}
+      shareSlug={share?.slug ?? null}
       prepTasks={prep.tasks}
       prepTips={prep.tips}
       mealSlots={settings.mealSlots}

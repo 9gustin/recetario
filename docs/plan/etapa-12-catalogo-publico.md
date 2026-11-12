@@ -15,7 +15,7 @@
 - **Pasos:** rutas públicas sin login: `/explorar` (búsqueda de texto + filtros de tiempo, tags, ingrediente; paginada; sin IA), `/receta/[slug]` (SEO, JSON-LD, OG), `/coleccion/[slug]`, `/plan-publico/[slug]`; "Guardar en mi recetario" (pide login y copia); sitemap y robots.
 - **Aceptación:** e2e sin sesión: buscar, abrir una receta y ver que pide login solo para guardar.
 
-### [ ] T12.4 — Hacer público
+### [x] T12.4 — Hacer público
 - **Pasos:** switch "Hacer pública" en cada receta; colecciones (crear, agregar recetas, hacer pública); publicar un plan semanal como plantilla; copiar un plan público a mi grupo; revocar.
 - **Aceptación:** una receta pública aparece en `/explorar`; al despublicarla desaparece.
 

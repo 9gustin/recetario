@@ -1,0 +1,593 @@
+[
+  {
+    "title": "Revuelto gramajo express",
+    "description": "Clásico argentino hecho en un ratito: huevos revueltos cremosos con cebolla, jamón y papas al hilo crocantes por encima.",
+    "servings": 2,
+    "prep_minutes": 8,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "huevo",
+      "rápido",
+      "argentina",
+      "cena",
+      "una olla"
+    ],
+    "ingredients": [
+      "4 huevos",
+      "1 cebolla",
+      "100 g de jamón cocido en una feta gruesa",
+      "80 g de papas fritas al hilo",
+      "1 cda de aceite",
+      "1 cda de perejil picado",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá la cebolla en plumas finas y el jamón en cubitos."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén y rehogá la cebolla con una pizca de sal hasta que se ablande.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el jamón y salteá un minuto más.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Batí los huevos con sal y pimienta, y volcalos en la sartén a fuego bajo."
+      },
+      {
+        "instruction": "Revolvé de a poco con una cuchara de madera hasta que cuajen pero sigan húmedos.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Apagá el fuego, agregá las papas al hilo y el perejil, mezclá y serví enseguida."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Recalentá en sartén a fuego bajo un minuto, sin dejar que se seque.",
+      "tip": "Agregá las papas al hilo recién al servir para que no se ablanden."
+    }
+  },
+  {
+    "title": "Tortilla de papa y cebolla con papa al microondas",
+    "description": "Tortilla jugosa de papa y cebolla en menos de 20 minutos: la papa se precocina en el microondas y después todo va a la sartén.",
+    "servings": 3,
+    "prep_minutes": 10,
+    "cook_minutes": 10,
+    "difficulty": "media",
+    "tags": [
+      "huevo",
+      "rápido",
+      "española",
+      "almuerzo",
+      "para compartir"
+    ],
+    "ingredients": [
+      "3 papas medianas",
+      "1/2 cebolla",
+      "5 huevos",
+      "2 cda de aceite de oliva",
+      "2 cda de agua",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Pelá las papas y cortalas en cubitos de 1 cm; picá la cebolla bien chica."
+      },
+      {
+        "instruction": "Poné la papa en un bowl con el agua y una pizca de sal, tapá con un plato y cocinala en el microondas.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Mientras tanto, batí los huevos con sal y pimienta en un bowl grande."
+      },
+      {
+        "instruction": "Rehogá la cebolla en una sartén antianderente con el aceite hasta que esté transparente.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Escurrí la papa, mezclala con los huevos y la cebolla, y volcá todo en la sartén caliente."
+      },
+      {
+        "instruction": "Cociná a fuego medio-bajo hasta que el borde se dore y el centro esté casi firme.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Dala vuelta con ayuda de un plato y dorá el otro lado un minuto más.",
+        "minutes": 1,
+        "passive": false
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Comela tibia o a temperatura ambiente; si querés, calentala en sartén tapada.",
+      "tip": "Cortá la papa bien chiquita para que se cocine rápido y la tortilla quede pareja."
+    }
+  },
+  {
+    "title": "Frittata de zapallitos y parmesano",
+    "description": "Frittata de sartén con zapallitos salteados, ajo y orégano, cocida tapada para que quede alta y tierna sin horno.",
+    "servings": 3,
+    "prep_minutes": 7,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "huevo",
+      "rápido",
+      "vegetariano",
+      "verdura",
+      "cena",
+      "una olla"
+    ],
+    "ingredients": [
+      "6 huevos",
+      "2 zapallitos verdes",
+      "1 diente de ajo",
+      "50 g de queso parmesano rallado",
+      "1 cda de aceite de oliva",
+      "1 cdita de orégano",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá los zapallitos en rodajas finas y picá el ajo."
+      },
+      {
+        "instruction": "Salteá los zapallitos con el aceite en una sartén de 24 cm hasta que se doren apenas.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el ajo y el orégano y cociná 30 segundos."
+      },
+      {
+        "instruction": "Batí los huevos con el queso, sal y pimienta."
+      },
+      {
+        "instruction": "Volcá los huevos sobre los zapallitos, bajá el fuego al mínimo y tapá la sartén.",
+        "minutes": 7,
+        "passive": true
+      },
+      {
+        "instruction": "Cuando el centro esté firme, deslizá la frittata a una tabla y cortala en porciones."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Calentala unos segundos en microondas o en sartén tapada a fuego bajo.",
+      "tip": "Sacale el exceso de agua a los zapallitos salteándolos a fuego fuerte."
+    }
+  },
+  {
+    "title": "Huevos turcos con yogur, ajo y manteca de pimentón",
+    "description": "Huevos pochados sobre yogur fresco con ajo, bañados con manteca dorada y pimentón. Se comen con pan tostado para mojar.",
+    "servings": 2,
+    "prep_minutes": 5,
+    "cook_minutes": 10,
+    "difficulty": "media",
+    "tags": [
+      "huevo",
+      "rápido",
+      "árabe",
+      "cena"
+    ],
+    "ingredients": [
+      "4 huevos",
+      "300 g de yogur natural sin azúcar",
+      "1 diente de ajo",
+      "2 cda de manteca",
+      "1 cdita de pimentón dulce",
+      "1 pizca de ají molido",
+      "1 cda de vinagre blanco",
+      "2 panes árabes",
+      "1 cda de perejil picado",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Rallá el ajo, mezclalo con el yogur y una pizca de sal, y repartilo en dos platos hondos para que tome temperatura ambiente."
+      },
+      {
+        "instruction": "Poné a hervir agua en una cacerola con el vinagre y bajá el fuego a hervor muy suave."
+      },
+      {
+        "instruction": "Quebrá cada huevo en una taza y deslizalo con cuidado en el agua; pochalos de a dos.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Sacá los huevos con espumadera y apoyalos sobre papel de cocina.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Tostá el pan árabe en una sartén o tostadora."
+      },
+      {
+        "instruction": "Derretí la manteca hasta que espume, sumá el pimentón y el ají y apagá enseguida."
+      },
+      {
+        "instruction": "Poné los huevos sobre el yogur, bañalos con la manteca y espolvoreá perejil. Serví con el pan."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Conviene comerlos al momento; si sobra, guardá el yogur aparte de los huevos.",
+      "tip": "Cociná el pimentón apenas unos segundos para que no amargue."
+    }
+  },
+  {
+    "title": "Tamagoyaki con arroz y pepino",
+    "description": "Omelette japonesa enrollada, dulce y salada a la vez, con cebolla de verdeo. Se sirve con arroz cocido y pepino fresco.",
+    "servings": 2,
+    "prep_minutes": 7,
+    "cook_minutes": 10,
+    "difficulty": "media",
+    "tags": [
+      "huevo",
+      "rápido",
+      "asiática",
+      "almuerzo"
+    ],
+    "ingredients": [
+      "4 huevos",
+      "1 cda de salsa de soja",
+      "1 cdita de azúcar",
+      "1 cebolla de verdeo",
+      "1 cdita de aceite",
+      "2 tazas de arroz blanco cocido",
+      "1/2 pepino",
+      "1 cdita de semillas de sésamo"
+    ],
+    "steps": [
+      {
+        "instruction": "Picá la parte verde de la cebolla de verdeo bien fina y cortá el pepino en rodajas."
+      },
+      {
+        "instruction": "Batí los huevos con la soja, el azúcar y la cebolla de verdeo."
+      },
+      {
+        "instruction": "Calentá el arroz en el microondas con una cucharada de agua.",
+        "minutes": 2,
+        "passive": true
+      },
+      {
+        "instruction": "Aceitá una sartén chica antiadherente a fuego medio-bajo y volcá un tercio de la mezcla."
+      },
+      {
+        "instruction": "Cuando cuaje por abajo pero esté húmedo arriba, enrollala hacia un costado con una espátula.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Volcá otro tercio de mezcla, levantá el rollo para que corra por debajo y volvé a enrollar. Repetí con el resto.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Cortá el rollo en rodajas y serví sobre el arroz con el pepino y el sésamo."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Comelo frío o tibio; calentá apenas en microondas 20 segundos.",
+      "tip": "Mantené el fuego bajo para que el huevo no se dore ni se rompa al enrollar."
+    }
+  },
+  {
+    "title": "Huevos nube con parmesano y tostadas",
+    "description": "Claras batidas a punto nieve con queso, con la yema en el centro, horneadas pocos minutos. Livianos, vistosos y listos rápido.",
+    "servings": 2,
+    "prep_minutes": 10,
+    "cook_minutes": 8,
+    "difficulty": "media",
+    "tags": [
+      "huevo",
+      "rápido",
+      "horno",
+      "una bandeja",
+      "desayuno"
+    ],
+    "ingredients": [
+      "4 huevos",
+      "4 cda de queso parmesano rallado",
+      "1 cda de ciboulette picada",
+      "4 rebanadas de pan de molde o pan lactal",
+      "1 cda de manteca",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá el horno a 220 °C y cubrí una bandeja con papel manteca."
+      },
+      {
+        "instruction": "Separá las claras de las yemas, cada yema en una taza aparte."
+      },
+      {
+        "instruction": "Batí las claras con una pizca de sal hasta punto nieve firme.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Mezclá con suavidad el queso, la ciboulette y pimienta con las claras."
+      },
+      {
+        "instruction": "Armá 4 montoncitos sobre la bandeja y hacé un hueco en el centro de cada uno."
+      },
+      {
+        "instruction": "Horneá las nubes hasta que se doren apenas.",
+        "minutes": 3,
+        "passive": true
+      },
+      {
+        "instruction": "Poné una yema en cada hueco y horneá 2 minutos más.",
+        "minutes": 2,
+        "passive": true
+      },
+      {
+        "instruction": "Tostá el pan, untalo con manteca y servilo con las nubes."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Mejor comerlos recién hechos; no se recalientan bien.",
+      "tip": "Usá un bowl bien limpio y seco: cualquier resto de yema impide que las claras suban."
+    }
+  },
+  {
+    "title": "Revuelto indio de huevos con cebolla, tomate y cúrcuma",
+    "description": "Huevos revueltos especiados al estilo egg bhurji: cebolla, tomate, jengibre y cúrcuma, para comer con pan tostado.",
+    "servings": 2,
+    "prep_minutes": 7,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "huevo",
+      "rápido",
+      "india",
+      "cena",
+      "una olla"
+    ],
+    "ingredients": [
+      "4 huevos",
+      "1 cebolla",
+      "1 tomate",
+      "1 diente de ajo",
+      "1 cdita de jengibre rallado",
+      "1/2 cdita de cúrcuma",
+      "1/2 cdita de comino",
+      "1 pizca de ají molido",
+      "1 cda de aceite",
+      "2 cda de cilantro o perejil picado",
+      "2 panes árabes o 4 tostadas",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Picá la cebolla y el tomate en cubitos; picá el ajo bien fino."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén y cociná la cebolla hasta que esté dorada.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el ajo, el jengibre, la cúrcuma, el comino y el ají; mezclá 30 segundos."
+      },
+      {
+        "instruction": "Agregá el tomate con una pizca de sal y cociná hasta que largue el jugo y se espese.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Quebrá los huevos directo en la sartén y revolvé a fuego medio hasta que cuajen.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Espolvoreá con el cilantro y serví con el pan calentito."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Calentá en sartén a fuego bajo con una cucharada de agua.",
+      "tip": "Si te gusta más picante, sumá medio ají verde picado junto con la cebolla."
+    }
+  },
+  {
+    "title": "Sopa de huevo con jengibre, fideos de arroz y verdeo",
+    "description": "Caldo caliente con hilos de huevo, jengibre y soja, con fideos de arroz para que sea una comida completa y liviana.",
+    "servings": 2,
+    "prep_minutes": 6,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "huevo",
+      "rápido",
+      "sopa",
+      "asiática",
+      "liviano",
+      "una olla"
+    ],
+    "ingredients": [
+      "1 l de caldo de verduras",
+      "2 cda de salsa de soja",
+      "1 cdita de jengibre rallado",
+      "80 g de fideos de arroz",
+      "1 zanahoria",
+      "3 huevos",
+      "2 cebollas de verdeo",
+      "1 cdita de maicena",
+      "pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Rallá la zanahoria, cortá el verdeo en rodajitas y batí los huevos en una taza."
+      },
+      {
+        "instruction": "Poné el caldo a hervir con la soja y el jengibre.",
+        "minutes": 4,
+        "passive": true
+      },
+      {
+        "instruction": "Sumá la zanahoria y los fideos de arroz, y cociná según el tiempo del paquete.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Disolvé la maicena en 2 cucharadas de agua fría y agregala al caldo; revolvé hasta que espese apenas.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Con el caldo hirviendo suave, volcá el huevo en hilo fino mientras revolvés en un solo sentido.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Apagá, sumá el verdeo y pimienta, y serví bien caliente."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Calentá en olla a fuego medio sin hervir fuerte; agregá un chorrito de agua si los fideos absorbieron el caldo.",
+      "tip": "Si vas a guardar la sopa, separá los fideos para que no se pasen."
+    }
+  },
+  {
+    "title": "Huevos pochados sobre puré de arvejas y menta",
+    "description": "Puré cremoso de arvejas con limón y menta, tostadas crocantes y huevos pochados con la yema líquida por encima.",
+    "servings": 2,
+    "prep_minutes": 7,
+    "cook_minutes": 12,
+    "difficulty": "media",
+    "tags": [
+      "huevo",
+      "rápido",
+      "vegetariano",
+      "verdura",
+      "almuerzo"
+    ],
+    "ingredients": [
+      "300 g de arvejas congeladas",
+      "1 diente de ajo",
+      "1 cda de jugo de limón",
+      "8 hojas de menta",
+      "2 cda de aceite de oliva",
+      "4 huevos",
+      "1 cda de vinagre blanco",
+      "4 rebanadas de pan",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Hervé las arvejas con el ajo pelado en agua con sal hasta que estén tiernas.",
+        "minutes": 4,
+        "passive": true
+      },
+      {
+        "instruction": "Escurrilas y procesalas con el limón, la menta, el aceite, sal y pimienta hasta lograr un puré rústico."
+      },
+      {
+        "instruction": "Poné agua con el vinagre a hervor muy suave en una cacerola."
+      },
+      {
+        "instruction": "Deslizá los huevos de a uno en el agua y pochalos hasta que la clara cuaje.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Mientras tanto, tostá el pan."
+      },
+      {
+        "instruction": "Untá las tostadas con el puré, apoyá los huevos escurridos y terminá con pimienta y un hilo de aceite."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Guardá el puré aparte y comelo frío o tibio; hacé los huevos al momento.",
+      "tip": "Para pochar, quebrá cada huevo primero en una taza: se deslizan sin romperse."
+    }
+  },
+  {
+    "title": "Huevos a la flamenca con chorizo colorado y arvejas",
+    "description": "Sartén española con morrón, cebolla, chorizo colorado y arvejas, donde se cocinan los huevos tapados hasta que la clara cuaja.",
+    "servings": 2,
+    "prep_minutes": 7,
+    "cook_minutes": 13,
+    "difficulty": "facil",
+    "tags": [
+      "huevo",
+      "rápido",
+      "española",
+      "cena",
+      "una olla"
+    ],
+    "ingredients": [
+      "4 huevos",
+      "60 g de chorizo colorado",
+      "1 morrón rojo",
+      "1 cebolla",
+      "1 taza de arvejas congeladas",
+      "1/2 lata de tomate triturado",
+      "1 diente de ajo",
+      "1 cdita de pimentón ahumado",
+      "1 cda de aceite de oliva",
+      "pan para acompañar",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá la cebolla y el morrón en tiras finas, el chorizo en rodajas y picá el ajo."
+      },
+      {
+        "instruction": "Dorá el chorizo con el aceite en una sartén; sumá la cebolla y el morrón.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el ajo y el pimentón, mezclá y sumá el tomate triturado y las arvejas.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Salpimentá y dejá que el tomate se espese a fuego medio."
+      },
+      {
+        "instruction": "Hacé 4 huecos en la salsa y quebrá un huevo en cada uno."
+      },
+      {
+        "instruction": "Tapá y cociná a fuego bajo hasta que las claras cuajen y las yemas queden tiernas.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Serví directo de la sartén con pan para mojar."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Recalentá en sartén tapada a fuego bajo unos minutos.",
+      "tip": "Si querés las yemas bien líquidas, retirá la sartén del fuego un minuto antes."
+    }
+  }
+]

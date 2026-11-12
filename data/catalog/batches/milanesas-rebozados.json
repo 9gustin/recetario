@@ -1,0 +1,546 @@
+[
+  {
+    "title": "Milanesas de nalga clásicas a la sartén con limón",
+    "description": "La milanesa de todos los días: bifes finos, rebozado crocante con ajo y perejil, y un chorrito de limón al final.",
+    "servings": 4,
+    "prep_minutes": 15,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "milanesa",
+      "carne",
+      "almuerzo",
+      "cena",
+      "argentina",
+      "económico"
+    ],
+    "ingredients": [
+      "600 g de nalga en 4 bifes finos",
+      "2 huevos",
+      "1 diente de ajo picado fino",
+      "1 cda de perejil picado",
+      "150 g de pan rallado",
+      "200 ml de aceite de girasol para freír",
+      "1 limón",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Aplastá los bifes con la palma o un palo de amasar hasta que queden bien finitos y salpimentalos."
+      },
+      {
+        "instruction": "Batí los huevos en un plato hondo con el ajo y el perejil."
+      },
+      {
+        "instruction": "Pasá cada bife por el huevo y después por el pan rallado, presionando para que se pegue bien."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén grande a fuego medio-fuerte, hasta que un poquito de pan rallado burbujee.",
+        "minutes": 3,
+        "passive": true
+      },
+      {
+        "instruction": "Cociná las milanesas de a una o dos, unos 3 minutos por lado, hasta que estén doradas.",
+        "minutes": 6
+      },
+      {
+        "instruction": "Escurrilas sobre papel de cocina y servilas con limón."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "En horno fuerte 10 minutos o en sartén sin aceite, para que no se ablanden.",
+      "tip": "Podés freezarlas crudas y rebozadas, separadas con papel manteca."
+    }
+  },
+  {
+    "title": "Milanesas de pollo al horno con parmesano y orégano",
+    "description": "Supremas finitas con rebozado de pan rallado, queso rallado y orégano, doradas al horno con poquito aceite.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 18,
+    "difficulty": "facil",
+    "tags": [
+      "milanesa",
+      "pollo",
+      "horno",
+      "una bandeja",
+      "almuerzo",
+      "cena",
+      "liviano"
+    ],
+    "ingredients": [
+      "2 pechugas de pollo (600 g) fileteadas finas",
+      "2 huevos",
+      "100 g de pan rallado",
+      "40 g de queso rallado tipo parmesano",
+      "1 cda de orégano",
+      "2 cda de aceite de oliva",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Prendé el horno a 220 °C y poné una placa con papel manteca adentro.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Mezclá el pan rallado con el queso, el orégano y una pizca de sal en un plato."
+      },
+      {
+        "instruction": "Batí los huevos con sal y pimienta en otro plato."
+      },
+      {
+        "instruction": "Pasá los filetes por el huevo y luego por la mezcla de pan rallado, presionando."
+      },
+      {
+        "instruction": "Ubicalos en la placa caliente y rociales el aceite de oliva por encima."
+      },
+      {
+        "instruction": "Horneá 8 minutos, dalos vuelta y horneá 8 minutos más hasta que estén dorados.",
+        "minutes": 16,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Horno a 200 °C unos 8 minutos.",
+      "tip": "Precalentar la placa ayuda a que el fondo quede crocante."
+    }
+  },
+  {
+    "title": "Napolitanas de pollo rápidas",
+    "description": "Milanesas de pollo fritas y gratinadas con jamón, salsa de tomate y mozzarella. Un clásico de bodegón en versión express.",
+    "servings": 4,
+    "prep_minutes": 12,
+    "cook_minutes": 16,
+    "difficulty": "media",
+    "tags": [
+      "milanesa",
+      "pollo",
+      "almuerzo",
+      "cena",
+      "para compartir",
+      "argentina"
+    ],
+    "ingredients": [
+      "600 g de pechuga de pollo en 4 filetes finos",
+      "2 huevos",
+      "100 g de pan rallado",
+      "200 ml de aceite para freír",
+      "150 ml de salsa de tomate",
+      "4 fetas de jamón cocido",
+      "200 g de mozzarella en fetas",
+      "1 cdita de orégano",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Prendé el grill del horno al máximo para que se caliente."
+      },
+      {
+        "instruction": "Salá los filetes, pasalos por huevo batido y por pan rallado."
+      },
+      {
+        "instruction": "Doralos en la sartén con aceite caliente, unos 3 minutos por lado, y pasalos a una placa.",
+        "minutes": 8
+      },
+      {
+        "instruction": "Cubrí cada milanesa con una feta de jamón, una cucharada de salsa y la mozzarella."
+      },
+      {
+        "instruction": "Espolvoreá con orégano y gratiná hasta que el queso burbujee y se dore.",
+        "minutes": 5,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Horno a 180 °C unos 10 minutos, tapadas con papel aluminio al principio.",
+      "tip": "Si las freezás, hacelo antes de ponerles salsa y queso."
+    }
+  },
+  {
+    "title": "Milanesas de berenjena al horno",
+    "description": "Rodajas gruesas de berenjena con rebozado crocante y pimentón, horneadas sin freír. Quedan tiernas por dentro.",
+    "servings": 4,
+    "prep_minutes": 15,
+    "cook_minutes": 14,
+    "difficulty": "facil",
+    "tags": [
+      "milanesa",
+      "vegetariano",
+      "horno",
+      "una bandeja",
+      "almuerzo",
+      "cena"
+    ],
+    "ingredients": [
+      "2 berenjenas grandes",
+      "2 huevos",
+      "100 g de pan rallado",
+      "1 cdita de pimentón dulce",
+      "2 cda de aceite de oliva",
+      "1 cdita de sal gruesa",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Prendé el horno a 220 °C.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Cortá las berenjenas en rodajas de 1 cm y espolvoreá con sal gruesa.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Secá las rodajas con papel de cocina para sacar el agua."
+      },
+      {
+        "instruction": "Mezclá el pan rallado con el pimentón y batí los huevos con pimienta."
+      },
+      {
+        "instruction": "Pasá cada rodaja por huevo y por pan rallado, y ubicalas en una placa aceitada."
+      },
+      {
+        "instruction": "Rociá con aceite de oliva y horneá 12 minutos, dándolas vuelta a la mitad.",
+        "minutes": 12,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 45,
+      "reheat": "Horno a 200 °C unos 8 minutos.",
+      "tip": "Secarlas bien después de salar evita que queden aguadas."
+    }
+  },
+  {
+    "title": "Milanesas de merluza con rebozado de polenta y limón",
+    "description": "Filetes de merluza con un rebozado crocante de pan rallado y harina de maíz. Rápidas, livianas y bien doradas.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "milanesa",
+      "pescado",
+      "rápido",
+      "almuerzo",
+      "cena",
+      "sin horno"
+    ],
+    "ingredients": [
+      "600 g de filetes de merluza (4 o 5 filetes)",
+      "2 huevos",
+      "60 g de harina de maíz",
+      "60 g de pan rallado",
+      "1 cdita de pimentón dulce",
+      "1 cda de perejil picado",
+      "150 ml de aceite para freír",
+      "1 limón",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Secá los filetes con papel de cocina y salpimentalos."
+      },
+      {
+        "instruction": "Mezclá la harina de maíz, el pan rallado, el pimentón y el perejil en un plato."
+      },
+      {
+        "instruction": "Batí los huevos en otro plato."
+      },
+      {
+        "instruction": "Pasá los filetes por huevo y luego por la mezcla, presionando suave."
+      },
+      {
+        "instruction": "Calentá el aceite a fuego medio y cociná los filetes 2 o 3 minutos por lado hasta dorar.",
+        "minutes": 6
+      },
+      {
+        "instruction": "Escurrilos sobre papel y servilos enseguida con limón."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Sartén antiadherente a fuego medio 2 minutos por lado.",
+      "tip": "Dalos vuelta una sola vez: el pescado fresco se rompe fácil."
+    }
+  },
+  {
+    "title": "Milanesas de cerdo a la mostaza con sésamo",
+    "description": "Medallones finos de lomo de cerdo con una capa de mostaza y rebozado crocante con semillas de sésamo.",
+    "servings": 4,
+    "prep_minutes": 15,
+    "cook_minutes": 12,
+    "difficulty": "media",
+    "tags": [
+      "milanesa",
+      "cerdo",
+      "almuerzo",
+      "cena",
+      "sin horno"
+    ],
+    "ingredients": [
+      "600 g de lomo de cerdo en 8 medallones finos",
+      "2 huevos",
+      "2 cda de mostaza",
+      "100 g de pan rallado",
+      "2 cda de semillas de sésamo",
+      "150 ml de aceite para freír",
+      "1 limón",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Aplastá los medallones entre dos hojas de film hasta que tengan medio centímetro."
+      },
+      {
+        "instruction": "Batí los huevos con la mostaza, sal y pimienta."
+      },
+      {
+        "instruction": "Mezclá el pan rallado con el sésamo en un plato."
+      },
+      {
+        "instruction": "Pasá los medallones por el huevo y por el pan rallado con sésamo."
+      },
+      {
+        "instruction": "Cociná en aceite a fuego medio, 3 minutos por lado, hasta que estén dorados y bien cocidos por dentro.",
+        "minutes": 12
+      },
+      {
+        "instruction": "Escurrilos sobre papel de cocina y servilos con limón."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Horno a 200 °C unos 8 minutos.",
+      "tip": "Con fuego medio y no fuerte, el cerdo se cocina bien sin quemar el sésamo."
+    }
+  },
+  {
+    "title": "Nuggets de pollo con copos de maíz al horno",
+    "description": "Cubitos de pollo rebozados con copos de maíz triturados, bien crocantes y sin fritura. Ideales para los chicos.",
+    "servings": 4,
+    "prep_minutes": 15,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "milanesa",
+      "pollo",
+      "horno",
+      "para chicos",
+      "para freezar",
+      "una bandeja",
+      "snack"
+    ],
+    "ingredients": [
+      "500 g de pechuga de pollo en cubos de 3 cm",
+      "2 huevos",
+      "2 cda de harina",
+      "60 g de copos de maíz sin azúcar",
+      "40 g de pan rallado",
+      "1 cdita de ajo en polvo",
+      "1 cda de aceite",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Prendé el horno a 200 °C y forrá una placa con papel manteca.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Triturá los copos con las manos en una bolsa y mezclalos con el pan rallado y el ajo en polvo."
+      },
+      {
+        "instruction": "Salá el pollo y pasalo por harina, luego por huevo batido y por la mezcla de copos."
+      },
+      {
+        "instruction": "Acomodá los nuggets en la placa sin que se toquen y rociales el aceite."
+      },
+      {
+        "instruction": "Horneá 15 minutos, dándolos vuelta a mitad de cocción, hasta que estén dorados.",
+        "minutes": 15,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 90,
+      "reheat": "Horno a 200 °C 8 minutos, desde heladera o freezer.",
+      "tip": "Freezalos ya cocidos en una sola capa y después pasalos a una bolsa."
+    }
+  },
+  {
+    "title": "Bastones de mozzarella rebozados a la sartén",
+    "description": "Bastones de mozzarella con doble rebozado, crocantes por fuera y fundidos por dentro. Se comen con salsa de tomate tibia.",
+    "servings": 4,
+    "prep_minutes": 15,
+    "cook_minutes": 8,
+    "difficulty": "media",
+    "tags": [
+      "milanesa",
+      "vegetariano",
+      "snack",
+      "para compartir",
+      "sin horno",
+      "cena"
+    ],
+    "ingredients": [
+      "300 g de mozzarella en bloque firme",
+      "4 cda de harina",
+      "2 huevos",
+      "100 g de pan rallado",
+      "1 cdita de orégano",
+      "300 ml de aceite para freír",
+      "150 ml de salsa de tomate",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá la mozzarella en bastones de 1,5 cm de ancho y secalos con papel de cocina."
+      },
+      {
+        "instruction": "Pasalos por harina, luego por huevo batido y por pan rallado con orégano."
+      },
+      {
+        "instruction": "Repetí el paso por huevo y pan rallado para el doble rebozado."
+      },
+      {
+        "instruction": "Llevalos al freezer en una bandeja para que se enfríen bien.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Calentá el aceite a fuego medio-fuerte y freí los bastones 1 o 2 minutos por tanda hasta dorar.",
+        "minutes": 6
+      },
+      {
+        "instruction": "Entibiá la salsa de tomate y servila para mojar."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Horno a 200 °C 5 minutos; no los recalientes en microondas.",
+      "tip": "El frío previo evita que el queso se escape del rebozado."
+    }
+  },
+  {
+    "title": "Milanesas de garbanzos con comino",
+    "description": "Milanesitas de garbanzos pisados con ajo y comino, rebozadas y doradas en sartén. Económicas y bien llenadoras.",
+    "servings": 4,
+    "prep_minutes": 12,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "milanesa",
+      "legumbres",
+      "vegetariano",
+      "económico",
+      "sin horno",
+      "almuerzo",
+      "cena"
+    ],
+    "ingredients": [
+      "2 latas de garbanzos (480 g escurridos)",
+      "1 huevo",
+      "1 diente de ajo picado",
+      "1 cdita de comino",
+      "1 cda de perejil picado",
+      "4 cda de pan rallado para la masa",
+      "60 g de pan rallado para rebozar",
+      "4 cda de aceite",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Escurrí y enjuagá los garbanzos, y pisalos con un tenedor dejando algunos trozos."
+      },
+      {
+        "instruction": "Sumá el huevo, el ajo, el comino, el perejil, el pan rallado de la masa, sal y pimienta, y mezclá."
+      },
+      {
+        "instruction": "Formá 8 medallones chatos con las manos húmedas."
+      },
+      {
+        "instruction": "Pasalos por el pan rallado para rebozar, presionando."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén y cociná los medallones 4 o 5 minutos por lado hasta dorar.",
+        "minutes": 9
+      },
+      {
+        "instruction": "Servilos con ensalada de hojas verdes y limón."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Sartén con un hilo de aceite 3 minutos por lado.",
+      "tip": "Si la masa queda blanda, sumá una cucharada más de pan rallado."
+    }
+  },
+  {
+    "title": "Cordón bleu de pollo a la sartén",
+    "description": "Filetes de pollo rellenos con jamón y queso, rebozados y dorados a fuego medio para que el queso se derrita adentro.",
+    "servings": 4,
+    "prep_minutes": 15,
+    "cook_minutes": 12,
+    "difficulty": "media",
+    "tags": [
+      "milanesa",
+      "pollo",
+      "almuerzo",
+      "cena",
+      "sin horno",
+      "para compartir"
+    ],
+    "ingredients": [
+      "600 g de pechuga de pollo en 4 filetes finos y anchos",
+      "4 fetas de jamón cocido",
+      "4 fetas de queso de sándwich",
+      "3 cda de harina",
+      "2 huevos",
+      "100 g de pan rallado",
+      "200 ml de aceite para freír",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Salpimentá los filetes y poné en una mitad de cada uno una feta de jamón y una de queso."
+      },
+      {
+        "instruction": "Doblá el filete al medio y presioná bien los bordes para cerrar el relleno."
+      },
+      {
+        "instruction": "Pasalos por harina, huevo batido y pan rallado, y repetí el huevo y el pan rallado en los bordes."
+      },
+      {
+        "instruction": "Calentá el aceite a fuego medio, sin que humee."
+      },
+      {
+        "instruction": "Cociná los cordón bleu 5 o 6 minutos por lado, hasta que estén dorados y el pollo cocido.",
+        "minutes": 12
+      },
+      {
+        "instruction": "Escurrilos sobre papel de cocina y dejalos reposar 2 minutos antes de cortar."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Horno a 190 °C unos 12 minutos.",
+      "tip": "Fuego medio: si está muy fuerte, se dora afuera y queda crudo adentro."
+    }
+  }
+]

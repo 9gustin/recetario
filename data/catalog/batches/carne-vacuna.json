@@ -1,0 +1,605 @@
+[
+  {
+    "title": "Bife de chorizo a la sartén con chimichurri rápido",
+    "description": "Un bife jugoso sellado a fuego fuerte y un chimichurri fresco que se arma mientras la carne descansa. Simple y clásico de todos los días.",
+    "servings": 2,
+    "prep_minutes": 10,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "carne",
+      "rápido",
+      "argentina",
+      "sin gluten",
+      "sin lácteos"
+    ],
+    "ingredients": [
+      "2 bifes de chorizo de 2 cm de alto (unos 300 g cada uno)",
+      "1 cda de aceite",
+      "sal gruesa a gusto",
+      "3 cda de perejil fresco picado",
+      "2 dientes de ajo",
+      "1 cdita de orégano seco",
+      "1 cdita de ají molido",
+      "4 cda de aceite de oliva",
+      "2 cda de vinagre de vino"
+    ],
+    "steps": [
+      {
+        "instruction": "Sacá los bifes de la heladera y secalos bien con papel de cocina. Salalos de los dos lados."
+      },
+      {
+        "instruction": "Picá el ajo bien fino y mezclalo con el perejil, el orégano, el ají molido, el aceite de oliva y el vinagre. Salá a gusto."
+      },
+      {
+        "instruction": "Calentá la sartén con el aceite hasta que largue un poco de humo.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Sellá los bifes 4 minutos de un lado sin moverlos y 3 minutos del otro para punto medio.",
+        "minutes": 7,
+        "passive": false
+      },
+      {
+        "instruction": "Pasá los bifes a una tabla y dejalos descansar tapados.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Cortá la carne en tiras y servila con el chimichurri por encima."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Calentá las tiras unos segundos en sartén caliente para que no se resequen.",
+      "tip": "Guardá el chimichurri aparte, en un frasco, y sumale un chorrito de aceite antes de usarlo."
+    }
+  },
+  {
+    "title": "Lomo saltado con papas y morrón",
+    "description": "Tiras de carne salteadas a fuego fuerte con cebolla, tomate y morrón, con un toque de soja y vinagre, y papas fritas por encima. Inspirado en el clásico peruano.",
+    "servings": 3,
+    "prep_minutes": 10,
+    "cook_minutes": 18,
+    "difficulty": "media",
+    "tags": [
+      "carne",
+      "salteado",
+      "latinoamericana",
+      "sin lácteos"
+    ],
+    "ingredients": [
+      "400 g de cuadril o lomo en tiras finas",
+      "2 papas medianas",
+      "200 ml de aceite para freír",
+      "1 cebolla grande",
+      "1 morrón rojo",
+      "1 tomate firme",
+      "2 dientes de ajo",
+      "3 cda de salsa de soja",
+      "1 cda de vinagre",
+      "1 cda de aceite",
+      "2 cda de cilantro o perejil picado",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá las papas en bastones finos y secalas con un paño."
+      },
+      {
+        "instruction": "Freí las papas en el aceite caliente hasta que estén doradas. Escurrilas sobre papel y salalas.",
+        "minutes": 10,
+        "passive": false
+      },
+      {
+        "instruction": "Cortá la cebolla y el morrón en tiras gruesas y el tomate en gajos. Picá el ajo."
+      },
+      {
+        "instruction": "Calentá una sartén grande con 1 cda de aceite a fuego bien fuerte. Salteá la carne salpimentada en dos tandas, 2 minutos cada una, y reservala.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "En la misma sartén salteá cebolla, morrón y ajo por 3 minutos.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá la carne, el tomate, la soja y el vinagre. Mezclá 1 minuto.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Apagá el fuego, agregá las papas y el cilantro, y serví enseguida."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Recalentá la carne con las verduras en sartén; sumá las papas recién al final o recuperalas en el horno.",
+      "tip": "Secá bien la carne y no llenes la sartén para que se dore en lugar de hervir."
+    }
+  },
+  {
+    "title": "Hamburguesas caseras con cebolla dorada y queso",
+    "description": "Hamburguesas jugosas de carne picada con cebolla salteada y queso derretido. Se arman en minutos y quedan mejores que las comprada.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "carne",
+      "rápido",
+      "para chicos",
+      "sándwich",
+      "para freezar"
+    ],
+    "ingredients": [
+      "500 g de carne picada común",
+      "1 cdita de sal",
+      "1/2 cdita de pimienta",
+      "1 cdita de pimentón dulce",
+      "2 cebollas",
+      "1 cda de aceite",
+      "4 fetas de queso cremoso o de queso tipo cheddar",
+      "4 panes de hamburguesa",
+      "hojas de lechuga",
+      "1 tomate"
+    ],
+    "steps": [
+      {
+        "instruction": "Mezclá la carne con sal, pimienta y pimentón sin amasar de más. Armá 4 bolas y aplastalas hasta formar discos de 1,5 cm."
+      },
+      {
+        "instruction": "Cortá las cebollas en medias lunas finas."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén y cociná la cebolla con una pizca de sal hasta que se dore.",
+        "minutes": 8,
+        "passive": false
+      },
+      {
+        "instruction": "Pasá la cebolla a un plato. Subí el fuego y cociná las hamburguesas 3 minutos de un lado.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Dalas vuelta, poné el queso encima y cociná 3 minutos más con la sartén tapada.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Tostá los panes en la misma sartén y armá con lechuga, tomate, la hamburguesa y la cebolla."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 90,
+      "reheat": "Calentá las hamburguesas en sartén tapada a fuego bajo 4 minutos.",
+      "tip": "Para freezar, dejá las hamburguesas crudas separadas con papel manteca."
+    }
+  },
+  {
+    "title": "Stroganoff de bife con champiñones y fideos",
+    "description": "Tiras de bife tiernas en una salsa cremosa de champiñones con mostaza y un toque de pimentón. Va sobre fideos y sale en media hora.",
+    "servings": 3,
+    "prep_minutes": 10,
+    "cook_minutes": 18,
+    "difficulty": "media",
+    "tags": [
+      "carne",
+      "pasta",
+      "rápido",
+      "almuerzo"
+    ],
+    "ingredients": [
+      "400 g de bife angosto o cuadril en tiras finas",
+      "250 g de champiñones",
+      "1 cebolla",
+      "2 dientes de ajo",
+      "1 cda de manteca",
+      "1 cda de aceite",
+      "1 cdita de pimentón dulce",
+      "1 cda de mostaza",
+      "200 ml de crema de leche",
+      "100 ml de caldo",
+      "250 g de fideos tirabuzón",
+      "perejil picado",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Poné a hervir agua con sal y cociná los fideos según el paquete.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Laminá los champiñones, picá la cebolla fina y el ajo."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén grande. Salteá la carne salpimentada 2 minutos y reservala.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Con la manteca, salteá cebolla, ajo y champiñones hasta que se doren.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá pimentón, mostaza, caldo y crema. Cociná a fuego medio hasta que espese un poco.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Volvé a poner la carne en la sartén, mezclá 1 minuto y servila sobre los fideos con perejil."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Calentá en sartén con un chorrito de leche o caldo a fuego suave.",
+      "tip": "No hiervas la crema a fuego fuerte para que no se corte."
+    }
+  },
+  {
+    "title": "Milanesitas de nalga finas a la sartén con limón",
+    "description": "Milanesas bien finas, rebozadas con ajo y perejil y doradas en poco aceite. Se hacen rápido y no necesitan horno.",
+    "servings": 4,
+    "prep_minutes": 12,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "carne",
+      "milanesa",
+      "para chicos",
+      "rápido",
+      "argentina"
+    ],
+    "ingredients": [
+      "600 g de bifes de nalga finos (4 a 6 unidades)",
+      "2 huevos",
+      "1 diente de ajo",
+      "2 cda de perejil picado",
+      "200 g de pan rallado",
+      "100 ml de aceite",
+      "sal y pimienta a gusto",
+      "2 limones"
+    ],
+    "steps": [
+      {
+        "instruction": "Si los bifes son gruesos, aplanalos con un palo de amasar entre dos films."
+      },
+      {
+        "instruction": "Batí los huevos con el ajo rallado, el perejil, sal y pimienta."
+      },
+      {
+        "instruction": "Pasá cada bife por el huevo y después por el pan rallado, presionando bien."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén grande a fuego medio-fuerte."
+      },
+      {
+        "instruction": "Freí las milanesas 2 minutos de cada lado, de a dos o tres por vez.",
+        "minutes": 8,
+        "passive": false
+      },
+      {
+        "instruction": "Escurrilas sobre papel de cocina y servilas con limón."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 90,
+      "reheat": "Calentalas en horno o airfryer a 180 °C unos 6 minutos para que queden crocantes.",
+      "tip": "Freezalas rebozadas y crudas, separadas con papel, y cocinalas sin descongelar."
+    }
+  },
+  {
+    "title": "Kofta de carne picada con salsa de yogur y menta",
+    "description": "Bastoncitos de carne picada con comino, canela y perejil, dorados en sartén y servidos con una salsa fresca de yogur. Van bien con pan árabe.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "carne",
+      "árabe",
+      "rápido",
+      "alto en proteína"
+    ],
+    "ingredients": [
+      "500 g de carne picada",
+      "1/2 cebolla rallada",
+      "2 cda de perejil picado",
+      "1 diente de ajo rallado",
+      "1 cdita de comino",
+      "1/2 cdita de canela",
+      "1 cdita de sal",
+      "1/2 cdita de pimienta",
+      "1 cda de aceite",
+      "200 g de yogur natural",
+      "1 cda de menta fresca picada",
+      "1 cda de jugo de limón",
+      "4 panes árabes"
+    ],
+    "steps": [
+      {
+        "instruction": "Mezclá la carne con cebolla, perejil, ajo, comino, canela, sal y pimienta."
+      },
+      {
+        "instruction": "Formá 12 bastoncitos alargados con las manos húmedas."
+      },
+      {
+        "instruction": "Mezclá el yogur con la menta, el limón y una pizca de sal."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén antiadherente a fuego medio-fuerte."
+      },
+      {
+        "instruction": "Cociná las kofta 10 minutos, dándolas vuelta cada tanto hasta que estén doradas.",
+        "minutes": 10,
+        "passive": false
+      },
+      {
+        "instruction": "Calentá el pan árabe y serví las kofta con la salsa."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Calentalas en sartén tapada a fuego bajo o 2 minutos en microondas.",
+      "tip": "Guardá la salsa de yogur aparte y sumale la menta recién al servir."
+    }
+  },
+  {
+    "title": "Chili exprés de carne picada y porotos",
+    "description": "Un chili rápido con carne picada, porotos negros, tomate y especias. Queda espeso y sabroso sin cocción larga.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 20,
+    "difficulty": "facil",
+    "tags": [
+      "carne",
+      "una olla",
+      "mexicana",
+      "guiso",
+      "para freezar"
+    ],
+    "ingredients": [
+      "400 g de carne picada",
+      "1 cebolla",
+      "1 morrón rojo",
+      "2 dientes de ajo",
+      "1 cda de aceite",
+      "1 cda de pimentón dulce",
+      "1 cdita de comino",
+      "1/2 cdita de ají molido",
+      "1 lata de tomate triturado",
+      "1 lata de porotos negros",
+      "100 ml de agua",
+      "sal a gusto",
+      "cilantro o perejil para servir"
+    ],
+    "steps": [
+      {
+        "instruction": "Picá la cebolla, el morrón y el ajo en cubitos chicos."
+      },
+      {
+        "instruction": "Calentá el aceite en una olla y rehogá la cebolla y el morrón.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá la carne y desmenuzala con una cuchara hasta que cambie de color.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá ajo, pimentón, comino y ají molido y mezclá 1 minuto."
+      },
+      {
+        "instruction": "Volcá el tomate, los porotos escurridos y enjuagados, el agua y sal.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Cociná a fuego medio-bajo hasta que espese.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Serví con cilantro o perejil picado."
+      }
+    ],
+    "storage": {
+      "fridge_days": 4,
+      "freezer_days": 90,
+      "reheat": "Calentá en olla a fuego bajo con un chorrito de agua.",
+      "tip": "Al otro día queda todavía más rico porque se asientan las especias."
+    }
+  },
+  {
+    "title": "Arroz con carne picada y verduras en una olla",
+    "description": "Arroz que se cocina junto con carne picada, zanahoria y arvejas en una sola olla. Una comida completa y fácil de lavar después.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 20,
+    "difficulty": "facil",
+    "tags": [
+      "carne",
+      "arroz",
+      "una olla",
+      "económico",
+      "para chicos"
+    ],
+    "ingredients": [
+      "300 g de carne picada",
+      "1 taza de arroz largo fino",
+      "1 cebolla",
+      "1 zanahoria",
+      "1 diente de ajo",
+      "1 cda de aceite",
+      "1 cdita de pimentón dulce",
+      "2 tazas de caldo caliente",
+      "1/2 taza de arvejas",
+      "sal y pimienta a gusto",
+      "perejil picado"
+    ],
+    "steps": [
+      {
+        "instruction": "Picá la cebolla fina, rallá la zanahoria y picá el ajo."
+      },
+      {
+        "instruction": "Calentá el aceite en una olla y rehogá cebolla, zanahoria y ajo.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá la carne y cociná desmenuzándola hasta que se dore.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el arroz, el pimentón, sal y pimienta y mezclá 1 minuto.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Volcá el caldo caliente y las arvejas. Cuando hierva, bajá el fuego y tapá.",
+        "minutes": 12,
+        "passive": true
+      },
+      {
+        "instruction": "Apagá, dejá reposar tapado 3 minutos, soltá con un tenedor y espolvoreá perejil.",
+        "minutes": 3,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Calentá en sartén o microondas con una cucharada de agua.",
+      "tip": "Enfriá el arroz rápido y guardalo en la heladera dentro de las 2 horas."
+    }
+  },
+  {
+    "title": "Carne salteada estilo coreano con morrón y sésamo",
+    "description": "Tiras finas de carne marinadas con soja, ajo y un poco de azúcar y salteadas a fuego fuerte. Se sirven con arroz y semillas de sésamo.",
+    "servings": 3,
+    "prep_minutes": 15,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "carne",
+      "salteado",
+      "asiática",
+      "sin lácteos",
+      "rápido"
+    ],
+    "ingredients": [
+      "400 g de peceto o cuadril en tiras muy finas",
+      "4 cda de salsa de soja",
+      "1 cda de azúcar",
+      "2 dientes de ajo rallados",
+      "1 cda de jengibre rallado",
+      "1 cdita de aceite de sésamo",
+      "1 morrón rojo",
+      "1 cebolla de verdeo",
+      "1 cda de aceite",
+      "1 cda de semillas de sésamo",
+      "arroz cocido para acompañar"
+    ],
+    "steps": [
+      {
+        "instruction": "Mezclá la soja, el azúcar, el ajo, el jengibre y el aceite de sésamo. Sumá la carne y mezclá."
+      },
+      {
+        "instruction": "Dejá marinar mientras cortás las verduras.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Cortá el morrón en tiras finas y el verdeo en rodajas."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén grande a fuego fuerte. Salteá la carne en dos tandas, 2 minutos cada una.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el morrón y salteá 2 minutos más.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Serví sobre arroz con verdeo y sésamo por encima."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Calentá en sartén 2 minutos a fuego medio.",
+      "tip": "Cortá la carne apenas congelada, así sale en tiras bien finas."
+    }
+  },
+  {
+    "title": "Bife a caballo con arroz y tomate",
+    "description": "Un bife fino a la plancha con huevo frito encima y arroz blanco, con tomate fresco al costado. Un plato de bodegón que sale en media hora.",
+    "servings": 2,
+    "prep_minutes": 5,
+    "cook_minutes": 22,
+    "difficulty": "facil",
+    "tags": [
+      "carne",
+      "huevo",
+      "argentina",
+      "almuerzo",
+      "arroz"
+    ],
+    "ingredients": [
+      "2 bifes de bola de lomo o cuadril finos (unos 200 g cada uno)",
+      "2 huevos",
+      "1 taza de arroz largo fino",
+      "2 tazas de agua",
+      "2 cdas de aceite",
+      "2 tomates",
+      "sal y pimienta a gusto",
+      "orégano a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Poné el agua con una pizca de sal a hervir. Agregá el arroz, tapá y cociná a fuego bajo.",
+        "minutes": 15,
+        "passive": true
+      },
+      {
+        "instruction": "Cortá los tomates en rodajas y condimentalos con sal y orégano."
+      },
+      {
+        "instruction": "Salpimentá los bifes. Calentá 1 cda de aceite en una sartén bien caliente."
+      },
+      {
+        "instruction": "Cociná los bifes 3 minutos de cada lado y reservalos tapados.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "En la misma sartén, con el resto del aceite, freí los huevos hasta que la clara cuaje.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Serví cada bife con un huevo encima, arroz y los tomates."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Recalentá el bife y el arroz por separado; hacé el huevo recién.",
+      "tip": "Cociná el huevo al momento de servir, no se recalienta bien."
+    }
+  }
+]
