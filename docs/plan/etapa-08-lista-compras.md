@@ -27,7 +27,7 @@
   4. Tests: suma de g + kg, unidades + gramos con peso unitario, sobras ignoradas, escalado, ingrediente sin cantidad, división en 2 compras.
 - **Aceptación:** 100% de ramas cubiertas.
 
-### T8.3 — Generar y regenerar la lista
+### [x] T8.3 — Generar y regenerar la lista
 - **Depende de:** T8.1, T8.2
 - **Archivos:** `lib/shopping/generate.ts`, `app/api/plans/[id]/shopping-list/route.ts`, enganche en `approve_plan` (acción del cliente después de aprobar).
 - **Pasos:**
@@ -73,3 +73,5 @@
 - T8.1: Se agregaron pantry_staple y no_longer_needed a shopping_list_items (no estaban en el spec) para T8.2/T8.3.
 
 - T8.2: Cobertura 97% sentencias / 96% ramas (quedan dos ramas defensivas sin test).
+
+- T8.3: Segunda compra (mitad de semana) solo si un perecedero la necesita; las listas que dejan de hacer falta se archivan. Se genera al aprobar desde el cliente (generateListForPlan) y desde el banner 'Actualizar la lista'. Se verifica de punta a punta en T8.6.

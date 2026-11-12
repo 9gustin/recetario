@@ -40,6 +40,7 @@ import {
   removeEntry,
   updateEntry,
 } from "@/lib/plan/actions";
+import { generateListForPlan } from "@/lib/shopping/actions";
 import type { PlanHistoryItem } from "@/lib/plan/queries";
 import type { PlanEntry, PlanMember, PlanRow } from "@/lib/plan/types";
 import { cn } from "@/lib/utils";
@@ -204,11 +205,23 @@ export function PlanBoard({
     });
   }
 
+  function updateList() {
+    if (!plan) return;
+    start(async () => {
+      const res = await generateListForPlan({ planId: plan.id, groupId });
+      if (!res.ok) return void toast.error(res.error);
+      setChangedAfterApproval(false);
+      toast.success("Lista de compras actualizada.");
+    });
+  }
+
   function approve() {
     if (!plan) return;
     start(async () => {
       const res = await approvePlan({ planId: plan.id, groupId });
       if (!res.ok) return void toast.error(res.error);
+      // La lista de compras se arma sola al aprobar; si falla, se puede generar después.
+      await generateListForPlan({ planId: plan.id, groupId });
       setPlan({ ...plan, status: "approved", approved_at: new Date().toISOString() });
       setChangedAfterApproval(false);
       toast.success("¡Plan aprobado!");
@@ -346,7 +359,10 @@ export function PlanBoard({
       {header}
       {changedAfterApproval ? (
         <p role="status" className="mx-5 mb-2 rounded-2xl bg-hero px-4 py-2.5 text-sm font-medium">
-          Cambiaste el plan aprobado.
+          Cambiaste el plan aprobado.{" "}
+          <button type="button" className="min-h-11 font-bold underline" onClick={updateList}>
+            Actualizar la lista de compras
+          </button>
         </p>
       ) : null}
 
