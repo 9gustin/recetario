@@ -31,6 +31,7 @@ export async function createTestUser(
   email: string,
   password: string,
   name: string,
+  opts: { onboarded?: boolean } = {},
 ): Promise<string> {
   const { data, error } = await admin().auth.admin.createUser({
     email,
@@ -39,6 +40,13 @@ export async function createTestUser(
     user_metadata: { display_name: name },
   });
   if (error) throw error;
+  // Los tests saltean el onboarding salvo que lo prueben a propósito.
+  if (opts.onboarded !== false) {
+    await admin()
+      .from("profiles")
+      .update({ onboarded_at: new Date().toISOString() })
+      .eq("id", data.user.id);
+  }
   return data.user.id;
 }
 

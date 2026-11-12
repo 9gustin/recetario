@@ -549,14 +549,14 @@ isOneToOne: false
                   ]
                 },"profiles": {
                   Row: {
-                    "avatar_url": string | null,"created_at": string,"display_name": string | null,"id": string,"locale": string,"personal_group_id": string | null,"updated_at": string
+                    "avatar_url": string | null,"created_at": string,"display_name": string | null,"id": string,"locale": string,"onboarded_at": string | null,"personal_group_id": string | null,"updated_at": string
                   }
                   ComputedFields: never
                   Insert: {
-                    "avatar_url"?: string | null,"created_at"?: string,"display_name"?: string | null,"id": string,"locale"?: string,"personal_group_id"?: string | null,"updated_at"?: string
+                    "avatar_url"?: string | null,"created_at"?: string,"display_name"?: string | null,"id": string,"locale"?: string,"onboarded_at"?: string | null,"personal_group_id"?: string | null,"updated_at"?: string
                   }
                   Update: {
-                    "avatar_url"?: string | null,"created_at"?: string,"display_name"?: string | null,"id"?: string,"locale"?: string,"personal_group_id"?: string | null,"updated_at"?: string
+                    "avatar_url"?: string | null,"created_at"?: string,"display_name"?: string | null,"id"?: string,"locale"?: string,"onboarded_at"?: string | null,"personal_group_id"?: string | null,"updated_at"?: string
                   }
                   Relationships: [
                     {

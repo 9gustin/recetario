@@ -1,3 +1,6 @@
+import { redirect } from "next/navigation";
+import { Checklist } from "@/components/onboarding/checklist";
+import { getOnboardingState } from "@/lib/onboarding/queries";
 import { TodayView } from "@/components/today/today-view";
 import { requireUser } from "@/lib/auth";
 import { getNow } from "@/lib/now";
@@ -10,7 +13,9 @@ import { getActiveListProgress } from "@/lib/shopping/queries";
 export const metadata = { title: "Hoy" };
 
 export default async function Page({ params }: { params: Promise<{ groupId: string }> }) {
-  await requireUser();
+  const user = await requireUser();
+  const onboarding = await getOnboardingState(user.id);
+  if (!onboarding.onboarded) redirect("/bienvenida");
   const { groupId } = await params;
   const now = await getNow();
   const today = todayString(now);
@@ -37,23 +42,26 @@ export default async function Page({ params }: { params: Promise<{ groupId: stri
 
   const resolution = resolveToday({ hour: hourIn(now), today, tomorrow, entries });
   return (
-    <TodayView
-      groupId={groupId}
-      today={today}
-      groupName={settings.name}
-      resolution={resolution}
-      warnings={[]}
-      prep={prep}
-      shopping={
-        progress
-          ? {
-              listId: progress.list.id,
-              name: progress.list.name,
-              done: progress.done,
-              total: progress.total,
-            }
-          : null
-      }
-    />
+    <>
+      <Checklist groupId={groupId} state={onboarding} />
+      <TodayView
+        groupId={groupId}
+        today={today}
+        groupName={settings.name}
+        resolution={resolution}
+        warnings={[]}
+        prep={prep}
+        shopping={
+          progress
+            ? {
+                listId: progress.list.id,
+                name: progress.list.name,
+                done: progress.done,
+                total: progress.total,
+              }
+            : null
+        }
+      />
+    </>
   );
 }

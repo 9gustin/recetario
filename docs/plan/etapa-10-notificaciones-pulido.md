@@ -28,7 +28,7 @@
   3. Modo cocinar 100% offline para recetas ya abiertas.
 - **Aceptación:** en modo avión se puede tachar la lista y cocinar una receta; al volver la red, la pareja ve los cambios.
 
-### T10.4 — Onboarding
+### [x] T10.4 — Onboarding
 - **Pasos:** primera vez después del login, 3 pantallas salteables: (1) "¿Con quién cocinás?" → crear grupo + invitar; (2) "Cargá 3 recetas que hacen siempre" → atajos a dictar/foto/escribir; (3) "Contanos cómo comen" → perfil alimentario. Checklist en "Hoy" hasta completarlo.
 - **Aceptación:** una cuenta nueva llega a tener grupo, receta y perfil sin explicación externa.
 
@@ -53,3 +53,5 @@
 - T10.2: Los avisos se crean con el cliente admin (lib/inbox/notify.ts). Una lista pasa a 'done' cuando no queda nada pendiente y vuelve a 'active' si se destilda algo.
 
 - T10.3: idb-keyval agregado (cola offline). Caché: páginas de /g/*/(recetas|compras|plan|hoy) network-first 4 s, RSC stale-while-revalidate, imágenes cache-first (80). 👤 Falta probar en un celular real en modo avión (SW solo corre en build de producción) y confirmar que el modo cocinar abre una receta ya visitada sin red.
+
+- T10.4: Nueva columna profiles.onboarded_at (las cuentas existentes quedan como ya vistas). Los e2e crean usuarios ya 'onboarded' salvo el de onboarding.
