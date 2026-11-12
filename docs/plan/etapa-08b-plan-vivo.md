@@ -36,7 +36,7 @@
   4. Las `restrictions` se proponen al perfil (F5) como un draft de perfil, para confirmar ahí.
 - **Aceptación:** con un PDF de ejemplo de 10+ páginas (fixture en `tests/evals/fixtures/`) devuelve 4–5 comidas con fórmula, reglas y permitidos, en < 40 s.
 
-### T8B.4 — Ajustar el plan charlando
+### [x] T8B.4 — Ajustar el plan charlando
 - **Depende de:** T8B.3
 - **Archivos:** `app/api/ai/diet-plan/[id]/chat/route.ts`, `lib/ai/diet-plan/{agent,tools}.ts`, `app/(app)/perfil/plan/digitalizar/page.tsx`, `components/diet-plan/*`.
 - **Pasos:**
@@ -95,3 +95,5 @@
 - T8B.2: Los permitidos se asignan en orden cronológico dentro del tope semanal; la semana cuenta solo comidas vencidas (≤ hoy) o registradas.
 
 - T8B.3: Las restricciones se proponen al perfil con ingestFoodProfile (borrador a confirmar). El eval con un PDF real de 10+ páginas queda para T8B.8 (se usarán planes en texto/dictado como fixtures; un PDF real lo aporta el usuario).
+
+- T8B.4: propose_swaps recibe candidatos del modelo y el servidor descarta los prohibidos por el perfil (checkRecipe); apply_swap vuelve a validar. runPlanAgent se generalizó (tools/feature/ctx). Falta probar con la API real en T8B.8.

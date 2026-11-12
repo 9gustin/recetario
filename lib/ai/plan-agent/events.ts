@@ -6,6 +6,7 @@ export type PlanAgentEvent =
   | { type: "text_delta"; text: string }
   | { type: "tool_started"; name: string }
   | { type: "plan_updated"; entries: PlanEntry[]; warnings: PlanIssue[]; changedIds: string[] }
+  | { type: "diet_updated"; version: number }
   | { type: "done"; conversationId: string }
   | { type: "error"; message: string };
 
@@ -36,4 +37,9 @@ export const TOOL_LABELS: Record<string, string> = {
   propose_recipe: "Inventando una receta nueva…",
   set_plan: "Armando el plan…",
   update_entries: "Ajustando el plan…",
+  propose_swaps: "Buscando reemplazos…",
+  apply_swap: "Aplicando el cambio…",
+  update_meal: "Ajustando la comida…",
+  update_rule: "Ajustando la regla…",
+  answer_question: "Anotando tu respuesta…",
 };

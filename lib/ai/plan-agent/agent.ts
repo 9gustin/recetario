@@ -17,19 +17,26 @@ export type PlanStreamingClient = {
   };
 };
 
-export type PlanAgentDeps = {
+export type PlanAgentDeps<C extends AgentToolCtx = PlanToolCtx> = {
   client?: PlanStreamingClient;
-  executeTool?: (name: string, input: unknown, ctx: PlanToolCtx) => Promise<PlanToolOutput>;
+  executeTool?: (name: string, input: unknown, ctx: C) => Promise<PlanToolOutput>;
   record?: (row: AiRunRow) => Promise<string | null>;
   now?: () => number;
 };
 
-export type PlanAgentArgs = {
+/** Lo mínimo que el loop necesita del contexto de las herramientas (para registrar el run). */
+export type AgentToolCtx = { userId: string; groupId: string | null };
+
+export type PlanAgentArgs<C extends AgentToolCtx = PlanToolCtx> = {
   model: ModelId;
   system: string;
   history: MessageParam[];
   userContent: string;
-  toolCtx: PlanToolCtx;
+  toolCtx: C;
+  /** Herramientas del agente (por defecto, las del plan semanal). */
+  tools?: Anthropic.Messages.Tool[];
+  /** Nombre de la función para `ai_runs` (por defecto, plan_chat). */
+  feature?: string;
   emit: (event: PlanAgentEvent) => void;
   maxIterations?: number;
 };
@@ -43,12 +50,13 @@ export const PLAN_MAX_ITERATIONS = 12;
  * Loop del agente del plan: llama al modelo, ejecuta sus herramientas (las de escritura validan por
  * código y devuelven `is_error` si rompen una restricción) y repite hasta la respuesta final.
  */
-export async function runPlanAgent(
-  args: PlanAgentArgs,
-  deps: PlanAgentDeps = {},
+export async function runPlanAgent<C extends AgentToolCtx = PlanToolCtx>(
+  args: PlanAgentArgs<C>,
+  deps: PlanAgentDeps<C> = {},
 ): Promise<PlanAgentResult> {
   const client = deps.client ?? (getAnthropic() as unknown as PlanStreamingClient);
-  const execute = deps.executeTool ?? runPlanTool;
+  const execute =
+    deps.executeTool ?? (runPlanTool as unknown as NonNullable<PlanAgentDeps<C>["executeTool"]>);
   const record = deps.record ?? recordAiRun;
   const now = deps.now ?? Date.now;
   const limit = args.maxIterations ?? PLAN_MAX_ITERATIONS;
@@ -59,13 +67,13 @@ export async function runPlanAgent(
   let cacheRead = 0;
   let text = "";
   const messages: MessageParam[] = [...args.history, { role: "user", content: args.userContent }];
-  const tools = planToolDefinitions();
+  const tools = args.tools ?? planToolDefinitions();
 
   const finish = (status: "ok" | "error", error: string | null) =>
     record({
       user_id: args.toolCtx.userId,
       group_id: args.toolCtx.groupId,
-      feature: "plan_chat",
+      feature: args.feature ?? "plan_chat",
       model: args.model,
       input_tokens: inputTokens,
       output_tokens: outputTokens,

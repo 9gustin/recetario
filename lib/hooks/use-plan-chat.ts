@@ -20,9 +20,14 @@ const nextId = () => `p${Date.now()}-${counter++}`;
 export function usePlanChat({
   planId,
   onPlanUpdated,
+  endpoint,
+  onDietUpdated,
 }: {
   planId: string | null;
-  onPlanUpdated: (update: PlanUpdate) => void;
+  onPlanUpdated?: (update: PlanUpdate) => void;
+  /** Por defecto, el chat del plan semanal; el plan de alimentación usa el suyo. */
+  endpoint?: string;
+  onDietUpdated?: (version: number) => void;
 }) {
   const [messages, setMessages] = useState<PlanChatMessage[]>([]);
   const [conversationId, setConversationId] = useState<string | null>(null);
@@ -48,7 +53,7 @@ export function usePlanChat({
       const controller = new AbortController();
       abort.current = controller;
       try {
-        const res = await fetch(`/api/ai/plans/${planId}/chat`, {
+        const res = await fetch(endpoint ?? `/api/ai/plans/${planId}/chat`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ message, conversationId: conversationId ?? undefined }),
@@ -80,7 +85,8 @@ export function usePlanChat({
               patchLast((m) => ({ ...m, text: m.text + event.text, working: null }));
             else if (event.type === "tool_started")
               patchLast((m) => ({ ...m, working: TOOL_LABELS[event.name] ?? "Pensando…" }));
-            else if (event.type === "plan_updated") onPlanUpdated(event);
+            else if (event.type === "plan_updated") onPlanUpdated?.(event);
+            else if (event.type === "diet_updated") onDietUpdated?.(event.version);
             else if (event.type === "done") setConversationId(event.conversationId);
             else if (event.type === "error")
               patchLast((m) => ({
@@ -106,7 +112,7 @@ export function usePlanChat({
         abort.current = null;
       }
     },
-    [busy, conversationId, onPlanUpdated, patchLast, planId],
+    [busy, conversationId, endpoint, onDietUpdated, onPlanUpdated, patchLast, planId],
   );
 
   return { messages, busy, send };
