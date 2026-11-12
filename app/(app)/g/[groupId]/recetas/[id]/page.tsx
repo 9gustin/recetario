@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { requireUser } from "@/lib/auth";
+import { getRecipeQuestions } from "@/lib/ai/assistant/queries";
 import { getCookingSummary } from "@/lib/cooking/queries";
 import { getMyGroups } from "@/lib/groups/queries";
 import { getActiveShareUrl, getShareContacts } from "@/lib/recipes/share-queries";
@@ -18,11 +19,12 @@ export default async function Page({
   const recipe = await getRecipe(id, user.id);
   if (!recipe || recipe.group_id !== groupId) notFound();
 
-  const [cooking, groups, contacts, initialShareUrl] = await Promise.all([
+  const [cooking, groups, contacts, initialShareUrl, questions] = await Promise.all([
     getCookingSummary(recipe.id, user.id),
     getMyGroups(user.id),
     getShareContacts(user.id),
     getActiveShareUrl(recipe.id),
+    getRecipeQuestions(recipe.id),
   ]);
 
   return (
@@ -30,6 +32,7 @@ export default async function Page({
       groupId={groupId}
       recipe={recipe}
       cooking={cooking}
+      questions={questions}
       share={{
         groups: groups.map((g) => ({ id: g.id, name: g.name, emoji: g.emoji })),
         contacts,

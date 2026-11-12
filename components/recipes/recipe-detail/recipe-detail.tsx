@@ -1,12 +1,13 @@
 "use client";
 
 import type { CookingSummary } from "@/lib/cooking/queries";
+import type { RecipeQuestion } from "@/lib/ai/assistant/queries";
 import { CookingHistory } from "./cooking-history";
 import { ShareSheet, type ShareContactItem, type ShareGroup } from "../share-sheet";
 import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { ChevronLeft, Heart, Pencil, Trash2, History } from "lucide-react";
+import { ChevronLeft, Heart, History, MessageSquare, Pencil, Trash2 } from "lucide-react";
 import { PillButton } from "@/components/shared/pill-button";
 import { cn } from "@/lib/utils";
 import { formatQuantity } from "@/lib/domain/format";
@@ -17,6 +18,7 @@ import { deleteRecipe, toggleFavorite } from "@/lib/recipes/actions";
 type Props = {
   groupId: string;
   cooking?: CookingSummary;
+  questions?: RecipeQuestion[];
   share?: {
     groups: ShareGroup[];
     contacts: ShareContactItem[];
@@ -55,7 +57,7 @@ type Props = {
   };
 };
 
-export function RecipeDetail({ groupId, recipe, cooking, share }: Props) {
+export function RecipeDetail({ groupId, recipe, cooking, questions = [], share }: Props) {
   const router = useRouter();
   const [servings, setServings] = useState(recipe.servings);
   const [favorite, setFavorite] = useState(recipe.is_favorite);
@@ -261,6 +263,24 @@ export function RecipeDetail({ groupId, recipe, cooking, share }: Props) {
           ))}
         </div>
 
+        {questions.length > 0 ? (
+          <section className="flex flex-col gap-2" aria-label="Preguntas sobre esta receta">
+            <h2 className="font-display text-[22px] font-normal">Preguntas sobre esta receta</h2>
+            <ul className="flex flex-col gap-2">
+              {questions.map((q) => (
+                <li key={q.conversationId}>
+                  <Link
+                    href={`/g/${groupId}/preguntar?c=${q.conversationId}`}
+                    className="flex min-h-12 items-center rounded-2xl border border-border bg-surface px-4 text-sm"
+                  >
+                    <span className="truncate">{q.title}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ) : null}
+
         {/* Acciones */}
         <div className="flex flex-col gap-2">
           <PillButton asChild fullWidth>
@@ -276,6 +296,11 @@ export function RecipeDetail({ groupId, recipe, cooking, share }: Props) {
               initialShareUrl={share.initialShareUrl}
             />
           ) : null}
+          <PillButton asChild variant="outline" fullWidth size="md">
+            <Link href={`/g/${groupId}/preguntar?receta=${recipe.id}`}>
+              <MessageSquare className="size-4" /> Preguntar por esta receta
+            </Link>
+          </PillButton>
           <div className="grid grid-cols-3 gap-2">
             <PillButton asChild variant="outline" size="md">
               <Link href={`/g/${groupId}/recetas/${recipe.id}/editar`}>

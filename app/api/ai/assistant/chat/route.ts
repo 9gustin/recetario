@@ -101,14 +101,12 @@ export async function POST(request: Request) {
       : [];
   });
 
-  await supabase
-    .from("ai_messages")
-    .insert({
-      conversation_id: convId,
-      role: "user",
-      content: { text: message },
-      mentions: mentionIds,
-    });
+  await supabase.from("ai_messages").insert({
+    conversation_id: convId,
+    role: "user",
+    content: { text: message },
+    mentions: mentionIds,
+  });
 
   const cookingRecipe =
     context.origin === "cooking"

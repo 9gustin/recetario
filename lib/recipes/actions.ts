@@ -262,3 +262,24 @@ export async function restoreRecipeVersion(
   if (result.ok) revalidatePath(`/g/${recipe.group_id}/recetas/${recipe.id}`);
   return result;
 }
+
+export type MentionRecipe = { id: string; title: string; image_url: string | null };
+
+/** Títulos de las recetas del grupo para el autocompletado de "@" (se filtra en el cliente, sin acentos). */
+export async function listRecipesForMention(
+  raw: unknown,
+): Promise<{ ok: true; data: MentionRecipe[] } | { ok: false; error: string }> {
+  const parsed = z.object({ groupId: z.string().uuid() }).safeParse(raw);
+  if (!parsed.success) return { ok: false, error: "Grupo inválido." };
+  await requireUser();
+  const supabase = await createClient();
+  const { data, error } = await supabase
+    .from("recipes")
+    .select("id, title, image_url")
+    .eq("group_id", parsed.data.groupId)
+    .is("deleted_at", null)
+    .order("updated_at", { ascending: false })
+    .limit(300);
+  if (error) return { ok: false, error: "No se pudieron cargar las recetas." };
+  return { ok: true, data: data ?? [] };
+}
