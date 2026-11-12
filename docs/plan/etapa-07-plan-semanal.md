@@ -97,7 +97,7 @@ Parte **7a** (manual, T7.1–T7.6), parte **7b** (IA, T7.7–T7.11) y parte **7c
   6. Tests del loop con el cliente mockeado: tool de escritura rechazada por cebolla → el modelo recibe el error.
 - **Aceptación:** con un recetario de prueba de 20 recetas, "armame almuerzos y cenas de lunes a viernes" produce un plan sin errores en < 60 s.
 
-### T7.9 — UI del chat del plan
+### [x] T7.9 — UI del chat del plan
 - **Depende de:** T7.8
 - **Archivos:** `components/plan/plan-chat-sheet.tsx`, `lib/hooks/use-plan-chat.ts`.
 - **Pasos:**
@@ -166,3 +166,5 @@ Parte **7a** (manual, T7.1–T7.6), parte **7b** (IA, T7.7–T7.11) y parte **7c
 - T7.7: Familias de proteína (ave, pescado, huevo) dependen del catálogo; si faltan, PROTEIN_MONOTONY no dispara. LIMIT_EXCEEDED solo evalúa un tope diario único de carbohidratos con datos completos.
 
 - T7.8: Plan agent writes go through validateCandidates; errors return is_error and nothing is saved. propose_recipe saves via saveRecipe then marks status=draft + draft_for_plan_id. Real-model behaviour (20-recipe acceptance) is checked in the plan evals (T7.11); not run against the API yet.
+
+- T7.9: Chat is a non-modal fixed bottom panel with three heights (grid stays visible); voice via VoiceRecorder; PlanBoard syncs state from server props with derived-state pattern (lint forbids setState in effect). E2E mocks the SSE endpoint.

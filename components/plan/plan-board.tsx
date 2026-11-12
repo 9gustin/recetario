@@ -45,6 +45,7 @@ import { cn } from "@/lib/utils";
 import { AddEntrySheet } from "./add-entry-sheet";
 import { EditEntrySheet, type Patch } from "./edit-entry-sheet";
 import { EntryRow } from "./entry-row";
+import { PlanChatSheet } from "./plan-chat-sheet";
 
 type Props = {
   groupId: string;
@@ -80,6 +81,16 @@ export function PlanBoard({
   const [repeatOpen, setRepeatOpen] = useState(false);
   const [changedAfterApproval, setChangedAfterApproval] = useState(false);
   const [pending, start] = useTransition();
+  const [chatOpen, setChatOpen] = useState(false);
+  // Tras un router.refresh() el servidor puede traer el plan recién creado o cambios propios.
+  const [seen, setSeen] = useState({ plan: initialPlan, entries: initialEntries });
+  if (seen.plan !== initialPlan || seen.entries !== initialEntries) {
+    setSeen({ plan: initialPlan, entries: initialEntries });
+    setPlan(initialPlan);
+    setEntries(initialEntries);
+  }
+  const [warnings, setWarnings] = useState<Record<string, string[]>>({});
+  const [fresh, setFresh] = useState<Set<string>>(new Set());
   const { others } = useRealtimePlan({
     planId: plan?.id ?? null,
     userId: currentUserId,
@@ -97,6 +108,29 @@ export function PlanBoard({
   const byId = useMemo(() => new Map(entries.map((e) => [e.id, e])), [entries]);
   const prev = history.find((h) => h.week_start === addDays(weekStart, -7));
   const approved = plan?.status === "approved";
+
+  function onAiUpdate(u: {
+    entries: PlanEntry[];
+    warnings: { entryId: string; message: string }[];
+    changedIds: string[];
+  }) {
+    setEntries(u.entries);
+    const byEntry: Record<string, string[]> = {};
+    for (const w of u.warnings) (byEntry[w.entryId] ??= []).push(w.message);
+    setWarnings(byEntry);
+    setFresh(new Set(u.changedIds));
+    setTimeout(() => setFresh(new Set()), 4000);
+  }
+
+  function openAi() {
+    if (plan) return setChatOpen(true);
+    start(async () => {
+      const res = await createPlan({ groupId, weekStart });
+      if (!res.ok) return void toast.error(res.error);
+      router.refresh();
+      setChatOpen(true);
+    });
+  }
 
   const touch = () => approved && setChangedAfterApproval(true);
 
@@ -209,6 +243,9 @@ export function PlanBoard({
                   Duplicar semana anterior
                 </DropdownMenuItem>
               ) : null}
+              <DropdownMenuItem onSelect={openAi}>
+                <Sparkles className="size-4" /> Armar con IA
+              </DropdownMenuItem>
               <DropdownMenuItem asChild>
                 <Link href={`/g/${groupId}/plan/historial`}>
                   <History className="size-4" /> Historial
@@ -244,7 +281,7 @@ export function PlanBoard({
           <PillButton fullWidth disabled={pending} onClick={createManual}>
             <Plus /> Armar a mano
           </PillButton>
-          <PillButton fullWidth variant="outline" size="md" disabled title="Disponible pronto">
+          <PillButton fullWidth variant="outline" size="md" disabled={pending} onClick={openAi}>
             <Sparkles /> Armar con IA
           </PillButton>
           {history.length > 0 ? (
@@ -322,6 +359,8 @@ export function PlanBoard({
                       leftoverOf={
                         e.leftovers_of_entry_id ? byId.get(e.leftovers_of_entry_id) : undefined
                       }
+                      highlighted={fresh.has(e.id)}
+                      warnings={warnings[e.id]}
                       onOpen={() => setEditingId(e.id)}
                     />
                   )),
@@ -363,6 +402,14 @@ export function PlanBoard({
         </div>
       ) : null}
 
+      {plan ? (
+        <PlanChatSheet
+          planId={plan.id}
+          open={chatOpen}
+          onClose={() => setChatOpen(false)}
+          onPlanUpdated={onAiUpdate}
+        />
+      ) : null}
       <AddEntrySheet
         open={adding !== null}
         onOpenChange={(open) => !open && setAdding(null)}
@@ -385,6 +432,11 @@ export function PlanBoard({
             : []
         }
         busy={pending}
+        reviewHref={
+          editing?.recipe?.status === "draft" && editing.recipe_id
+            ? `/g/${groupId}/recetas/${editing.recipe_id}`
+            : undefined
+        }
         onOpenChange={(open) => !open && setEditingId(null)}
         onSave={save}
         onRemove={remove}

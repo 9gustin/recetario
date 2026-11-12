@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { Minus, Plus, Trash2 } from "lucide-react";
 import { PillButton } from "@/components/shared/pill-button";
@@ -30,6 +31,8 @@ type Props = {
   /** Entradas anteriores de la semana, para marcar "es sobra de…". */
   earlier: PlanEntry[];
   busy: boolean;
+  /** Receta nueva propuesta por la IA: enlace para revisarla antes de aceptarla. */
+  reviewHref?: string;
   onOpenChange: (open: boolean) => void;
   onSave: (id: string, patch: Patch) => void;
   onRemove: (id: string) => void;
@@ -40,6 +43,7 @@ function Form({
   members,
   earlier,
   busy,
+  reviewHref,
   onSave,
   onRemove,
 }: Omit<Props, "onOpenChange"> & { entry: PlanEntry }) {
@@ -55,6 +59,14 @@ function Form({
 
   return (
     <div className="flex max-h-[72dvh] flex-col gap-4 overflow-y-auto px-4 pb-6">
+      {reviewHref ? (
+        <Link
+          href={reviewHref}
+          className="flex min-h-12 items-center justify-between rounded-2xl bg-hero px-4 text-sm font-semibold"
+        >
+          Receta nueva: revisala antes de aprobar <span aria-hidden="true">›</span>
+        </Link>
+      ) : null}
       <div className="flex items-center justify-between gap-3">
         <span className="text-sm font-medium">Porciones</span>
         <div

@@ -33,7 +33,7 @@ export default async function Page({
 
   return (
     <PlanBoard
-      key={`${weekStart}-${plan?.id ?? "none"}`}
+      key={weekStart}
       groupId={groupId}
       weekStart={weekStart}
       today={todayString()}

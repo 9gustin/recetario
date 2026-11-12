@@ -21,7 +21,7 @@ test("plan: armar la semana a mano, editar una comida y aprobar", async ({ brows
 
   // Sin plan: estado vacío con las tres opciones.
   await expect(page.getByText("Todavía no hay plan")).toBeVisible();
-  await expect(page.getByRole("button", { name: /Armar con IA/ })).toBeDisabled();
+  await expect(page.getByRole("button", { name: /Armar con IA/ })).toBeEnabled();
   await page.getByRole("button", { name: /Armar a mano/ }).tap();
   await expect(page.getByText("Borrador", { exact: true })).toBeVisible();
 
@@ -114,4 +114,66 @@ test("plan: los cambios de otra persona aparecen en vivo", async ({ browser }) =
     .tap();
   await pageA.getByRole("button", { name: /Tarta de zapallitos/ }).tap();
   await expect(pageB.getByText("Tarta de zapallitos").first()).toBeVisible();
+});
+
+test("plan con IA: el chat aplica cambios del plan en vivo y marca advertencias", async ({
+  browser,
+}) => {
+  test.setTimeout(120_000);
+  const email = `plan-ia-${Date.now()}@test.com`;
+  await createTestUser(email, password, "Ana");
+  const groupId = await createGroupAs(email, password, "Casa");
+
+  const page = await (await mobileContext(browser)).newPage();
+  await signIn(page, email, password);
+
+  // El endpoint de IA se simula (los e2e no llaman a la API real).
+  await page.route("**/api/ai/plans/*/chat", async (route) => {
+    const planId = route.request().url().split("/plans/")[1]!.split("/")[0]!;
+    const date = new Date().toISOString().slice(0, 10);
+    const entry = {
+      id: "00000000-0000-4000-8000-000000000001",
+      plan_id: planId,
+      date,
+      slot: "dinner",
+      recipe_id: null,
+      free_text: "Pizza casera",
+      servings: null,
+      diner_ids: [],
+      cook_date: null,
+      leftovers_of_entry_id: null,
+      is_new_recipe: false,
+      position: 0,
+      recipe: null,
+    };
+    const sse = (type: string, data: object) =>
+      `event: ${type}\ndata: ${JSON.stringify({ type, ...data })}\n\n`;
+    await route.fulfill({
+      status: 200,
+      headers: { "Content-Type": "text/event-stream" },
+      body: [
+        sse("tool_started", { name: "search_recipes" }),
+        sse("plan_updated", {
+          entries: [entry],
+          warnings: [
+            { entryId: entry.id, code: "REPEATED_RECIPE", message: "Se repite la pizza." },
+          ],
+          changedIds: [entry.id],
+        }),
+        sse("text_delta", { text: "Armé la cena de hoy." }),
+        sse("done", { conversationId: "00000000-0000-4000-8000-0000000000aa" }),
+      ].join(""),
+    });
+  });
+
+  await page.goto(`/g/${groupId}/plan`);
+  await page.getByRole("button", { name: /Armar con IA/ }).tap();
+  const panel = page.getByRole("dialog", { name: "Armar el plan con IA" });
+  await expect(panel).toBeVisible();
+  await panel.getByRole("button", { name: "Solo cenas" }).tap();
+  await panel.getByRole("button", { name: "Enviar" }).tap();
+
+  await expect(panel.getByText("Armé la cena de hoy.")).toBeVisible();
+  await expect(page.getByText("Pizza casera")).toBeVisible();
+  await expect(page.getByText("Se repite la pizza.")).toBeVisible();
 });
