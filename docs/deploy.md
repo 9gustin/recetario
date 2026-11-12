@@ -73,3 +73,23 @@ El login es con email y contraseña y **Confirm email está desactivado**, así 
 ## Notificaciones push (VAPID)
 
 Las claves VAPID ya están generadas en `.env.local` (`NEXT_PUBLIC_VAPID_PUBLIC_KEY`, `VAPID_PRIVATE_KEY`, `VAPID_SUBJECT`). Ya están cargadas en Vercel (Production y Preview). Si hace falta regenerarlas: `pnpm dlx web-push generate-vapid-keys` (los usuarios ya suscriptos tendrían que volver a suscribirse).
+
+## Notificaciones push y recordatorios (T10.1)
+
+1. Variables en Vercel (Production y Preview): `NEXT_PUBLIC_VAPID_PUBLIC_KEY`, `VAPID_PRIVATE_KEY`, `VAPID_SUBJECT` (un `mailto:` tuyo) y `CRON_SECRET` (un string largo al azar). Las claves salen de `pnpm dlx web-push generate-vapid-keys`.
+2. Cron: en Supabase → SQL editor, con las extensiones `pg_cron` y `pg_net` habilitadas (Database → Extensions):
+
+```sql
+select cron.schedule(
+  'recetario-tick',
+  '*/15 * * * *',
+  $$
+  select net.http_post(
+    url := 'https://TU-DOMINIO.vercel.app/api/cron/tick',
+    headers := jsonb_build_object('Authorization', 'Bearer TU_CRON_SECRET', 'Content-Type', 'application/json')
+  );
+  $$
+);
+```
+
+3. En iPhone las notificaciones solo funcionan con la app instalada en la pantalla de inicio (la pantalla de Notificaciones lo explica).

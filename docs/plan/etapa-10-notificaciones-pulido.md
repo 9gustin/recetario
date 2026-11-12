@@ -5,7 +5,7 @@
 
 ---
 
-### T10.1 — Web Push
+### [x] T10.1 — Web Push
 - **Depende de:** T9.3 · 👤 generar claves VAPID (`pnpm dlx web-push generate-vapid-keys`) y cargarlas en Vercel.
 - **Archivos:** migración `push_subscriptions (id, user_id, endpoint unique, keys jsonb, user_agent, created_at)`, `lib/push/{send,subscribe}.ts`, handlers `push` y `notificationclick` en `app/sw.ts`, `app/api/push/subscribe/route.ts`, `app/api/cron/tick/route.ts`.
 - **Pasos:**
@@ -47,3 +47,5 @@
 - [ ] Probar la app con otra familia o amigos.
 
 ## Notas de ejecución
+
+- T10.1: 👤 Falta cargar en Vercel NEXT_PUBLIC_VAPID_PUBLIC_KEY, VAPID_PRIVATE_KEY, VAPID_SUBJECT y CRON_SECRET, y dar de alta el pg_cron (SQL en docs/deploy.md); la entrega real en Android/iOS con la app cerrada solo se puede probar con un dispositivo. web-push agregado (justificado: es la librería estándar para VAPID).

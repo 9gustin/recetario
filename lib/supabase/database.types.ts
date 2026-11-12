@@ -501,16 +501,36 @@ isOneToOne: false
       referencedColumns: ["id"]
     }
                   ]
-                },"prep_tasks": {
+                },"notification_prefs": {
                   Row: {
-                    "created_at": string,"details": string | null,"done_at": string | null,"done_by": string | null,"duration_minutes": number | null,"id": string,"kind": string,"plan_id": string,"related_entry_ids": (string)[],"remind_at": string | null,"suggested_date": string | null,"title": string
+                    "inbox": boolean,"prep": boolean,"quiet_end": number | null,"quiet_start": number | null,"thaw": boolean,"timers": boolean,"updated_at": string,"user_id": string
                   }
                   ComputedFields: never
                   Insert: {
-                    "created_at"?: string,"details"?: string | null,"done_at"?: string | null,"done_by"?: string | null,"duration_minutes"?: number | null,"id"?: string,"kind": string,"plan_id": string,"related_entry_ids"?: (string)[],"remind_at"?: string | null,"suggested_date"?: string | null,"title": string
+                    "inbox"?: boolean,"prep"?: boolean,"quiet_end"?: number | null,"quiet_start"?: number | null,"thaw"?: boolean,"timers"?: boolean,"updated_at"?: string,"user_id"?: string
                   }
                   Update: {
-                    "created_at"?: string,"details"?: string | null,"done_at"?: string | null,"done_by"?: string | null,"duration_minutes"?: number | null,"id"?: string,"kind"?: string,"plan_id"?: string,"related_entry_ids"?: (string)[],"remind_at"?: string | null,"suggested_date"?: string | null,"title"?: string
+                    "inbox"?: boolean,"prep"?: boolean,"quiet_end"?: number | null,"quiet_start"?: number | null,"thaw"?: boolean,"timers"?: boolean,"updated_at"?: string,"user_id"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "notification_prefs_user_id_fkey"
+      columns: ["user_id"]
+isOneToOne: true
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"prep_tasks": {
+                  Row: {
+                    "created_at": string,"details": string | null,"done_at": string | null,"done_by": string | null,"duration_minutes": number | null,"id": string,"kind": string,"plan_id": string,"related_entry_ids": (string)[],"remind_at": string | null,"reminded_at": string | null,"suggested_date": string | null,"title": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "created_at"?: string,"details"?: string | null,"done_at"?: string | null,"done_by"?: string | null,"duration_minutes"?: number | null,"id"?: string,"kind": string,"plan_id": string,"related_entry_ids"?: (string)[],"remind_at"?: string | null,"reminded_at"?: string | null,"suggested_date"?: string | null,"title": string
+                  }
+                  Update: {
+                    "created_at"?: string,"details"?: string | null,"done_at"?: string | null,"done_by"?: string | null,"duration_minutes"?: number | null,"id"?: string,"kind"?: string,"plan_id"?: string,"related_entry_ids"?: (string)[],"remind_at"?: string | null,"reminded_at"?: string | null,"suggested_date"?: string | null,"title"?: string
                   }
                   Relationships: [
                     {
@@ -544,6 +564,26 @@ isOneToOne: false
       columns: ["personal_group_id"]
 isOneToOne: false
       referencedRelation: "groups"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"push_subscriptions": {
+                  Row: {
+                    "created_at": string,"endpoint": string,"id": string,"keys": NonNullable<Json>,"user_agent": string | null,"user_id": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "created_at"?: string,"endpoint": string,"id"?: string,"keys": NonNullable<Json>,"user_agent"?: string | null,"user_id"?: string
+                  }
+                  Update: {
+                    "created_at"?: string,"endpoint"?: string,"id"?: string,"keys"?: NonNullable<Json>,"user_agent"?: string | null,"user_id"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "push_subscriptions_user_id_fkey"
+      columns: ["user_id"]
+isOneToOne: false
+      referencedRelation: "profiles"
       referencedColumns: ["id"]
     }
                   ]
@@ -706,6 +746,26 @@ isOneToOne: false
       columns: ["group_id"]
 isOneToOne: false
       referencedRelation: "groups"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"scheduled_pushes": {
+                  Row: {
+                    "body": string | null,"fire_at": string,"id": string,"key": string,"kind": string,"sent_at": string | null,"title": string,"url": string | null,"user_id": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "body"?: string | null,"fire_at": string,"id"?: string,"key": string,"kind": string,"sent_at"?: string | null,"title": string,"url"?: string | null,"user_id"?: string
+                  }
+                  Update: {
+                    "body"?: string | null,"fire_at"?: string,"id"?: string,"key"?: string,"kind"?: string,"sent_at"?: string | null,"title"?: string,"url"?: string | null,"user_id"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "scheduled_pushes_user_id_fkey"
+      columns: ["user_id"]
+isOneToOne: false
+      referencedRelation: "profiles"
       referencedColumns: ["id"]
     }
                   ]
