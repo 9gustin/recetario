@@ -23,7 +23,7 @@
 - **Pasos:** en Recetas y al agregar al plan, primero "Tus recetas" y después "Del catálogo" (con botón "Guardar"); tool `search_catalog` para el agente del plan, "¿Qué tenés?" e Ideas (siempre priorizando las del grupo); partir de una receta del catálogo ("Usar como base" la copia para editar).
 - **Aceptación:** "armame la semana" en un grupo sin recetas propias usa recetas del catálogo.
 
-### [ ] T12.6 — E2E y cierre
+### [x] T12.6 — E2E y cierre
 - **Pasos:** e2e del sitio público y de publicar/despublicar; `pnpm check`, `db:test`, `test:e2e`, build; marcar la etapa en `progreso.md`.
 
 - T12.1: La lectura pública es solo por RPC (security definer); las tablas siguen cerradas para anon. Publicar una colección o un plan publica sus recetas. Orden de búsqueda: comunidad primero, catálogo después.

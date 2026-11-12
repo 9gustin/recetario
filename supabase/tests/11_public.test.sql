@@ -16,14 +16,14 @@ select personal_group_id as id from public.profiles where id = 'bbbbbbbb-bbbb-bb
 set local role authenticated;
 select set_config('request.jwt.claims', '{"sub":"aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa","role":"authenticated"}', true);
 
-select (public.save_recipe(jsonb_build_object('group_id', :'a_pg_id', 'title', 'Tarta de zapallitos', 'servings', 4, 'total_minutes', 30,
+select (public.save_recipe(jsonb_build_object('group_id', :'a_pg_id', 'title', 'Tarta Zq9xk única', 'servings', 4, 'total_minutes', 30,
   'ingredients', jsonb_build_array(jsonb_build_object('raw_text', '3 zapallitos', 'position', 0)),
   'steps', jsonb_build_array(jsonb_build_object('position', 0, 'instruction', 'Horneá.')))) ->> 'id') as id \gset pub_
 select (public.save_recipe(jsonb_build_object('group_id', :'a_pg_id', 'title', 'Receta privada', 'servings', 2,
   'ingredients', jsonb_build_array(jsonb_build_object('raw_text', 'papa', 'position', 0)),
   'steps', jsonb_build_array(jsonb_build_object('position', 0, 'instruction', 'Hervir.')))) ->> 'id') as id \gset priv_
 
-select ok(public.set_recipe_visibility(:'pub_id', true) ~ '^tarta-de-zapallitos-', 'publicar devuelve un slug legible');
+select ok(public.set_recipe_visibility(:'pub_id', true) ~ '^tarta-zq9xk-unica-', 'publicar devuelve un slug legible');
 
 -- Colección y plan.
 insert into public.recipe_collections (group_id, title) values (:'a_pg_id', 'Rápidas') returning id as id \gset col_
@@ -38,8 +38,8 @@ select public.publish_plan(:'plan_id', 'Semana rápida', 'Cenas fáciles') as sl
 -- Anónimo: lee por RPC, no por tabla.
 set local role anon;
 select set_config('request.jwt.claims', '{"role":"anon"}', true);
-select is((select count(*)::int from public.search_public_recipes('zapallitos')), 1, 'anon busca recetas públicas');
-select is((public.get_published_recipe((select slug from public.search_public_recipes('zapallitos') limit 1)) ->> 'title'), 'Tarta de zapallitos', 'anon abre la ficha con ingredientes y pasos');
+select is((select count(*)::int from public.search_public_recipes('zq9xk')), 1, 'anon busca recetas públicas');
+select is((public.get_published_recipe((select slug from public.search_public_recipes('zq9xk') limit 1)) ->> 'title'), 'Tarta Zq9xk única', 'anon abre la ficha con ingredientes y pasos');
 select is(jsonb_array_length(public.get_public_plan(:'plan_slug') -> 'entries'), 1, 'anon ve el plan compartido');
 select is((public.get_public_plan(:'plan_slug') -> 'entries' -> 0 ? 'diner_ids'), false, 'el plan público no expone comensales');
 select is((select count(*)::int from public.recipes), 0, 'anon no lee la tabla de recetas (solo las RPC)');
