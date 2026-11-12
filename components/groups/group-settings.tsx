@@ -103,7 +103,7 @@ export function GroupSettings({ group, members, myRole, myUserId, invites }: Pro
             />
           </div>
           <div className="flex flex-col gap-2">
-            <span className="text-sm font-medium leading-none">Emoji</span>
+            <span className="text-sm leading-none font-medium">Emoji</span>
             <EmojiGrid value={emoji} onSelect={setEmoji} />
           </div>
           <PillButton type="submit" disabled={isPending || !name.trim()}>
@@ -198,9 +198,7 @@ export function GroupSettings({ group, members, myRole, myUserId, invites }: Pro
       ) : null}
 
       {group.is_personal ? (
-        <p className="text-sm text-muted">
-          Para compartir con otras personas, creá un grupo.
-        </p>
+        <p className="text-sm text-muted">Para compartir con otras personas, creá un grupo.</p>
       ) : confirmLeave ? (
         <div className="flex items-center gap-2">
           <PillButton type="button" variant="outline" onClick={() => setConfirmLeave(false)}>

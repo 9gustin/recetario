@@ -6,10 +6,14 @@ import { requireUser } from "@/lib/auth";
 import { recipeInputSchema } from "@/lib/schemas/recipe";
 import { matchLocal } from "@/lib/domain/ingredient-match";
 import { parseIngredientLine } from "@/lib/domain/ingredient-line";
+import type { RecipeListItem } from "./queries";
+import { ingredientSearchSchema, recipeSearchSchema } from "@/lib/schemas/recipe-search";
 
 export async function saveRecipe(
   raw: unknown,
-): Promise<{ ok: true; data: { id: string; current_version: number } } | { ok: false; error: string }> {
+): Promise<
+  { ok: true; data: { id: string; current_version: number } } | { ok: false; error: string }
+> {
   const parsed = recipeInputSchema.safeParse(raw);
   if (!parsed.success) return { ok: false, error: "Revisá los datos de la receta." };
 
@@ -18,7 +22,11 @@ export async function saveRecipe(
 
   // Resolver ingredient_id contra el catálogo (exacto/alias); el fuzzy queda para el RPC.
   const { data: catalog } = await supabase.from("ingredients").select("id, name, aliases");
-  const catalogList = (catalog ?? []).map((c) => ({ id: c.id, name: c.name, aliases: c.aliases ?? [] }));
+  const catalogList = (catalog ?? []).map((c) => ({
+    id: c.id,
+    name: c.name,
+    aliases: c.aliases ?? [],
+  }));
 
   const ingredients = parsed.data.ingredients.map((ing) => {
     if (ing.ingredient_id) return ing;
@@ -72,7 +80,9 @@ export async function deleteRecipe(
   return { ok: true };
 }
 
-export async function toggleFavorite(raw: unknown): Promise<{ ok: true; data: { favorite: boolean } } | { ok: false; error: string }> {
+export async function toggleFavorite(
+  raw: unknown,
+): Promise<{ ok: true; data: { favorite: boolean } } | { ok: false; error: string }> {
   const recipeId = (raw as { recipeId?: string } | null)?.recipeId;
   if (!recipeId) return { ok: false, error: "Falta la receta." };
 
@@ -87,11 +97,17 @@ export async function toggleFavorite(raw: unknown): Promise<{ ok: true; data: { 
     .maybeSingle();
 
   if (existing) {
-    await supabase.from("recipe_favorites").delete().eq("recipe_id", recipeId).eq("user_id", user.id);
+    await supabase
+      .from("recipe_favorites")
+      .delete()
+      .eq("recipe_id", recipeId)
+      .eq("user_id", user.id);
     return { ok: true, data: { favorite: false } };
   }
 
-  const { error } = await supabase.from("recipe_favorites").insert({ recipe_id: recipeId, user_id: user.id });
+  const { error } = await supabase
+    .from("recipe_favorites")
+    .insert({ recipe_id: recipeId, user_id: user.id });
   if (error) return { ok: false, error: "No se pudo marcar como favorita." };
   return { ok: true, data: { favorite: true } };
 }
@@ -121,4 +137,72 @@ export async function uploadRecipeImage(
 
   revalidatePath(`/g/${groupId}/recetas`);
   return { ok: true, data: { imageUrl: pub.publicUrl } };
+}
+
+export type RecipeSearchResult = { recipes: RecipeListItem[]; hasMore: boolean };
+
+/** Busca y filtra recetas del grupo (RLS limita a los grupos del usuario). Paginado de a 24. */
+export async function searchRecipes(
+  raw: unknown,
+): Promise<{ ok: true; data: RecipeSearchResult } | { ok: false; error: string }> {
+  const parsed = recipeSearchSchema.safeParse(raw);
+  if (!parsed.success) return { ok: false, error: "Revisá la búsqueda." };
+  const input = parsed.data;
+
+  const user = await requireUser();
+  const supabase = await createClient();
+
+  const joins = [
+    input.favoriteOnly ? "recipe_favorites!inner(user_id)" : null,
+    input.ingredientId ? "recipe_ingredients!inner(ingredient_id)" : null,
+  ].filter(Boolean);
+  const columns =
+    "id, group_id, title, description, image_url, servings, total_minutes, difficulty, tags, created_at";
+
+  let query = supabase
+    .from("recipes")
+    .select([columns, ...joins].join(", "))
+    .eq("group_id", input.groupId)
+    .is("deleted_at", null);
+
+  if (input.q) {
+    query = query.textSearch("search_tsv", input.q, {
+      config: "spanish_unaccent",
+      type: "websearch",
+    });
+  }
+  if (input.favoriteOnly) query = query.eq("recipe_favorites.user_id", user.id);
+  if (input.ingredientId) query = query.eq("recipe_ingredients.ingredient_id", input.ingredientId);
+  if (input.tag) query = query.contains("tags", [input.tag]);
+  if (input.maxMinutes) query = query.lte("total_minutes", input.maxMinutes);
+
+  // Pedimos una fila de más para saber si hay otra página.
+  const { data, error } = await query
+    .order("updated_at", { ascending: false })
+    .range(input.offset, input.offset + input.limit);
+  if (error) return { ok: false, error: "No se pudo buscar." };
+
+  const rows = (data ?? []) as unknown as RecipeListItem[];
+  const recipes = rows.slice(0, input.limit).map((r) => {
+    const { ...item } = r as RecipeListItem & Record<string, unknown>;
+    delete item.recipe_favorites;
+    delete item.recipe_ingredients;
+    return item as RecipeListItem;
+  });
+  return { ok: true, data: { recipes, hasMore: rows.length > input.limit } };
+}
+
+export type IngredientSuggestion = { id: string; name: string };
+
+/** Autocompletado de ingredientes para el filtro "Tiene ingrediente…". */
+export async function searchIngredientSuggestions(
+  raw: unknown,
+): Promise<{ ok: true; data: IngredientSuggestion[] } | { ok: false; error: string }> {
+  const parsed = ingredientSearchSchema.safeParse(raw);
+  if (!parsed.success) return { ok: true, data: [] };
+  await requireUser();
+  const supabase = await createClient();
+  const { data, error } = await supabase.rpc("search_ingredients", { q: parsed.data.q, lim: 6 });
+  if (error) return { ok: false, error: "No se pudo buscar ingredientes." };
+  return { ok: true, data: (data ?? []).map((i) => ({ id: i.id, name: i.name })) };
 }

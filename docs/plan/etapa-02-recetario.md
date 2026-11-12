@@ -70,7 +70,7 @@
   4. Acciones: **Cocinar** (deshabilitado hasta la Etapa 3), **Compartir** (Etapa 4), **Agregar al plan** (Etapa 7), Editar, Historial, Eliminar.
 - **Aceptación:** escalar de 2 a 5 porciones da cantidades razonables y legibles.
 
-### T2.7 — Lista, búsqueda y filtros
+### [x] T2.7 — Lista, búsqueda y filtros
 - **Depende de:** T2.6
 - **Archivos:** `app/(app)/g/[groupId]/recetas/page.tsx`, `components/recipes/recipe-card.tsx`, `components/recipes/filters.tsx`.
 - **Pasos:**
@@ -113,3 +113,5 @@
 - T2.5: se instalaron `react-hook-form` + `@hookform/resolvers` (el plan los nombra). Los ingredientes van en un `textarea` (una línea por ingrediente) con parseo en vivo (`parseIngredientLine`) mostrando chips; pegar varias líneas crea varios. Los pasos usan `useFieldArray` con reordenar por **botones ↑/↓** en vez de `@dnd-kit` (drag-and-drop táctil es menos fiable; se deja fuera para simplificar). La foto se comprime en el cliente (canvas → webp, máx 1600 px) y sube vía `uploadRecipeImage`. El total de tiempo se calcula (prep + cocción).
 
 - T2.6: el detalle escala ingredientes en vivo con `scaleQuantity` + `formatQuantity` al cambiar porciones. El botón "Cocinar" queda deshabilitado (Etapa 3); Compartir y "Agregar al plan" llegan en Etapas 4 y 7. "la hicieron X veces" se omite hasta tener sesiones de cocina (Etapa 3). El header usa `bg-hero` con foto (`image_url`) si existe.
+
+- T2.7: búsqueda con debounce (250 ms) sobre `search_tsv`; chips Favoritas, Menos de 30 min, las 5 etiquetas más usadas del grupo y "Tiene ingrediente…" (autocompleta con `search_ingredients`, filtra por `recipe_ingredients.ingredient_id`). Paginación de a 24 con IntersectionObserver (la acción pide una fila de más para saber si hay otra página). Validación Zod en `lib/schemas/recipe-search.ts`. Medido: 'pollo' sobre 50 recetas, 16 resultados en 0,1 ms. El título 'Recetas' lo da la barra superior, por eso la pantalla no repite el h1; el FAB se ancla al contenedor max-w-md. Las advertencias de lint de `recipe-form.tsx` son de T2.5 y quedan para la revisión.

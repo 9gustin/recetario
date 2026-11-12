@@ -36,7 +36,12 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
   return (
     <main className="flex flex-col gap-6 px-5 pt-5">
       <GroupSettings
-        group={{ id: group.id, name: group.name, emoji: group.emoji, is_personal: group.is_personal }}
+        group={{
+          id: group.id,
+          name: group.name,
+          emoji: group.emoji,
+          is_personal: group.is_personal,
+        }}
         members={(members ?? []).map((m) => ({
           user_id: m.user_id,
           role: m.role,

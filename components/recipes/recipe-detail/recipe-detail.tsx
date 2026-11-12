@@ -87,17 +87,32 @@ export function RecipeDetail({ groupId, recipe }: Props) {
           <img src={recipe.image_url} alt="" className="absolute inset-0 size-full object-cover" />
         ) : null}
         <div className="relative flex items-center justify-between">
-          <Link href={`/g/${groupId}/recetas`} aria-label="Volver" className="flex size-11 items-center justify-center rounded-full bg-black/30 text-foreground">
+          <Link
+            href={`/g/${groupId}/recetas`}
+            aria-label="Volver"
+            className="flex size-11 items-center justify-center rounded-full bg-black/30 text-foreground"
+          >
             <ChevronLeft className="size-5" />
           </Link>
-          <button type="button" onClick={onFavorite} aria-label="Guardar en favoritas" className={cn("flex size-11 items-center justify-center rounded-full bg-black/30", favorite ? "text-accent" : "text-foreground")}>
+          <button
+            type="button"
+            onClick={onFavorite}
+            aria-label="Guardar en favoritas"
+            className={cn(
+              "flex size-11 items-center justify-center rounded-full bg-black/30",
+              favorite ? "text-accent" : "text-foreground",
+            )}
+          >
             <Heart className={cn("size-5", favorite && "fill-current")} />
           </button>
         </div>
         <div className="relative">
-          <h1 className="max-w-[300px] font-display text-[34px] leading-[1.04] font-normal">{recipe.title}</h1>
+          <h1 className="max-w-[300px] font-display text-[34px] leading-[1.04] font-normal">
+            {recipe.title}
+          </h1>
           <p className="mt-2 text-[13px] text-foreground/80">
-            {total > 0 ? `${total} min` : "—"} · {recipe.steps.length} pasos · v{recipe.current_version}
+            {total > 0 ? `${total} min` : "—"} · {recipe.steps.length} pasos · v
+            {recipe.current_version}
           </p>
         </div>
       </section>
@@ -105,9 +120,19 @@ export function RecipeDetail({ groupId, recipe }: Props) {
       <div className="flex flex-col gap-5 px-5 pt-4 pb-8">
         {recipe.tags.length > 0 || recipe.difficulty ? (
           <div className="flex flex-wrap gap-2">
-            {recipe.difficulty ? <span className="rounded-full bg-surface px-3 py-1.5 text-xs font-semibold">{(recipe.difficulty === "facil" ? "Fácil" : recipe.difficulty === "media" ? "Media" : "Difícil")}</span> : null}
+            {recipe.difficulty ? (
+              <span className="rounded-full bg-surface px-3 py-1.5 text-xs font-semibold">
+                {recipe.difficulty === "facil"
+                  ? "Fácil"
+                  : recipe.difficulty === "media"
+                    ? "Media"
+                    : "Difícil"}
+              </span>
+            ) : null}
             {recipe.tags.map((tag) => (
-              <span key={tag} className="rounded-full bg-surface px-3 py-1.5 text-xs font-semibold">{tag}</span>
+              <span key={tag} className="rounded-full bg-surface px-3 py-1.5 text-xs font-semibold">
+                {tag}
+              </span>
             ))}
           </div>
         ) : null}
@@ -118,26 +143,67 @@ export function RecipeDetail({ groupId, recipe }: Props) {
         <div>
           <div className="flex items-center justify-between">
             <h2 className="font-display text-[22px] font-normal">Ingredientes</h2>
-            <div role="group" aria-label="Porciones" className="flex items-center gap-1 rounded-full bg-surface p-1">
-              <button type="button" aria-label="Menos porciones" onClick={() => setServings((s) => Math.max(1, s - 1))} className="flex size-9 items-center justify-center rounded-full bg-surface-2 text-lg">−</button>
-              <span className="min-w-[70px] text-center text-[13px] font-semibold">{servings} {servings === 1 ? "porción" : "porciones"}</span>
-              <button type="button" aria-label="Más porciones" onClick={() => setServings((s) => s + 1)} className="flex size-9 items-center justify-center rounded-full bg-surface-2 text-lg">+</button>
+            <div
+              role="group"
+              aria-label="Porciones"
+              className="flex items-center gap-1 rounded-full bg-surface p-1"
+            >
+              <button
+                type="button"
+                aria-label="Menos porciones"
+                onClick={() => setServings((s) => Math.max(1, s - 1))}
+                className="flex size-9 items-center justify-center rounded-full bg-surface-2 text-lg"
+              >
+                −
+              </button>
+              <span className="min-w-[70px] text-center text-[13px] font-semibold">
+                {servings} {servings === 1 ? "porción" : "porciones"}
+              </span>
+              <button
+                type="button"
+                aria-label="Más porciones"
+                onClick={() => setServings((s) => s + 1)}
+                className="flex size-9 items-center justify-center rounded-full bg-surface-2 text-lg"
+              >
+                +
+              </button>
             </div>
           </div>
           <ul className="mt-1 flex flex-col">
             {recipe.ingredients.map((ing) => {
               const parsed = parseIngredientLine(ing.raw_text ?? "");
               const name = parsed.name || ing.raw_text || "";
-              const scaled = ing.quantity !== null ? formatQuantity(scaleQuantity(ing.quantity, recipe.servings, servings), ing.unit) : null;
+              const scaled =
+                ing.quantity !== null
+                  ? formatQuantity(scaleQuantity(ing.quantity, recipe.servings, servings), ing.unit)
+                  : null;
               return (
-                <li key={ing.id} className="flex items-center justify-between gap-3 border-b border-border py-2.5 text-[15px]">
-                  <button type="button" onClick={() => toggleIngredient(ing.id)} className="flex min-w-0 flex-1 items-center gap-2 text-left">
-                    <span className={cn("flex size-5 flex-none items-center justify-center rounded-md border", checked.has(ing.id) ? "border-accent bg-accent text-accent-foreground" : "border-border")}>
+                <li
+                  key={ing.id}
+                  className="flex items-center justify-between gap-3 border-b border-border py-2.5 text-[15px]"
+                >
+                  <button
+                    type="button"
+                    onClick={() => toggleIngredient(ing.id)}
+                    className="flex min-w-0 flex-1 items-center gap-2 text-left"
+                  >
+                    <span
+                      className={cn(
+                        "flex size-5 flex-none items-center justify-center rounded-md border",
+                        checked.has(ing.id)
+                          ? "border-accent bg-accent text-accent-foreground"
+                          : "border-border",
+                      )}
+                    >
                       {checked.has(ing.id) ? "✓" : ""}
                     </span>
-                    <span className={cn("truncate", checked.has(ing.id) && "text-muted line-through")}>
+                    <span
+                      className={cn("truncate", checked.has(ing.id) && "text-muted line-through")}
+                    >
                       {name}
-                      {ing.preparation ? <span className="text-muted">, {ing.preparation}</span> : null}
+                      {ing.preparation ? (
+                        <span className="text-muted">, {ing.preparation}</span>
+                      ) : null}
                       {ing.optional ? <span className="text-muted"> (opcional)</span> : null}
                     </span>
                   </button>
@@ -153,12 +219,15 @@ export function RecipeDetail({ groupId, recipe }: Props) {
           <h2 className="font-display text-[22px] font-normal">Pasos</h2>
           {recipe.steps.map((step) => (
             <div key={step.id} className="flex gap-3 rounded-2xl bg-surface p-3">
-              <span className="flex size-7 flex-none items-center justify-center rounded-full bg-accent text-sm font-bold text-accent-foreground">{step.position + 1}</span>
+              <span className="flex size-7 flex-none items-center justify-center rounded-full bg-accent text-sm font-bold text-accent-foreground">
+                {step.position + 1}
+              </span>
               <div className="min-w-0">
                 <p className="text-[15px]">{step.instruction}</p>
                 {step.duration_seconds ? (
                   <p className="mt-1 text-[13px] text-muted">
-                    {Math.round(step.duration_seconds / 60)} min{step.timer_kind === "passive" ? " · esperar" : ""}
+                    {Math.round(step.duration_seconds / 60)} min
+                    {step.timer_kind === "passive" ? " · esperar" : ""}
                   </p>
                 ) : null}
                 {step.tip ? <p className="mt-1 text-[13px] text-muted">Tip: {step.tip}</p> : null}
@@ -173,12 +242,36 @@ export function RecipeDetail({ groupId, recipe }: Props) {
             Cocinar
           </PillButton>
           <div className="grid grid-cols-3 gap-2">
-            <PillButton asChild variant="outline" size="md"><Link href={`/g/${groupId}/recetas/${recipe.id}/editar`}><Pencil className="size-4" /> Editar</Link></PillButton>
-            <PillButton asChild variant="outline" size="md"><Link href={`/g/${groupId}/recetas/${recipe.id}/historial`}><History className="size-4" /> Historial</Link></PillButton>
+            <PillButton asChild variant="outline" size="md">
+              <Link href={`/g/${groupId}/recetas/${recipe.id}/editar`}>
+                <Pencil className="size-4" /> Editar
+              </Link>
+            </PillButton>
+            <PillButton asChild variant="outline" size="md">
+              <Link href={`/g/${groupId}/recetas/${recipe.id}/historial`}>
+                <History className="size-4" /> Historial
+              </Link>
+            </PillButton>
             {confirmDelete ? (
-              <PillButton type="button" variant="soft" size="md" onClick={onDelete} disabled={isPending}>¿Borrar?</PillButton>
+              <PillButton
+                type="button"
+                variant="soft"
+                size="md"
+                onClick={onDelete}
+                disabled={isPending}
+              >
+                ¿Borrar?
+              </PillButton>
             ) : (
-              <PillButton type="button" variant="outline" size="md" onClick={() => setConfirmDelete(true)} className="text-danger-soft"><Trash2 className="size-4" /> Borrar</PillButton>
+              <PillButton
+                type="button"
+                variant="outline"
+                size="md"
+                onClick={() => setConfirmDelete(true)}
+                className="text-danger-soft"
+              >
+                <Trash2 className="size-4" /> Borrar
+              </PillButton>
             )}
           </div>
         </div>

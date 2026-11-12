@@ -3,13 +3,7 @@
 import { useState, useTransition } from "react";
 import { Copy, Share2, Trash2 } from "lucide-react";
 import { toast } from "sonner";
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { PillButton } from "@/components/shared/pill-button";
 import { createInvite, revokeInvite } from "@/lib/groups/invites";
 
@@ -107,7 +101,9 @@ export function InviteSheet({
                 >
                   <div className="min-w-0 flex-1">
                     <p className="text-[15px] font-semibold">Link de invitación</p>
-                    <p className="truncate text-[13px] text-muted">{expiresLabel(invite.expires_at)}</p>
+                    <p className="truncate text-[13px] text-muted">
+                      {expiresLabel(invite.expires_at)}
+                    </p>
                   </div>
                   <button
                     type="button"

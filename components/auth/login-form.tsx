@@ -79,7 +79,7 @@ export function LoginForm({ next }: { next: string }) {
   return (
     <div className="mx-auto flex min-h-dvh w-full max-w-md flex-col bg-background">
       <section className="bg-hero px-5 pt-[calc(env(safe-area-inset-top)+28px)] pb-6 text-foreground">
-        <p className="text-[13px] font-bold tracking-[0.1em] uppercase text-foreground/80">
+        <p className="text-[13px] font-bold tracking-[0.1em] text-foreground/80 uppercase">
           {BRAND.name}
         </p>
         <h1 className="mt-2 font-display text-[40px] leading-[1.02] font-normal">

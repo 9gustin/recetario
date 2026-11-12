@@ -13,9 +13,7 @@ export default async function Home() {
   if (groups.length === 0) redirect("/perfil");
 
   const target =
-    groups.find((g) => g.id === lastGroupId) ??
-    groups.find((g) => g.is_personal) ??
-    groups[0]!;
+    groups.find((g) => g.id === lastGroupId) ?? groups.find((g) => g.is_personal) ?? groups[0]!;
 
   redirect(`/g/${target.id}/hoy`);
 }

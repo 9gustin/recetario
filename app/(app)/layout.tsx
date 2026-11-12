@@ -14,7 +14,10 @@ export default async function AppLayout({ children }: LayoutProps<"/">) {
       <main className="flex flex-1 flex-col pb-[calc(76px+env(safe-area-inset-bottom))]">
         {children}
       </main>
-      <BottomNav defaultGroupId={defaultGroupId} className="fixed inset-x-0 bottom-0 z-20 mx-auto max-w-md" />
+      <BottomNav
+        defaultGroupId={defaultGroupId}
+        className="fixed inset-x-0 bottom-0 z-20 mx-auto max-w-md"
+      />
     </div>
   );
 }

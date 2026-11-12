@@ -23,7 +23,10 @@ describe("parseIngredientLine — recetas argentinas reales", () => {
     ["1 atado de rúcula", { quantity: 1, unit: "atado", name: "rúcula" }],
     ["4 fetas de jamón cocido", { quantity: 4, unit: "feta", name: "jamón cocido" }],
     ["6 rodajas de tomate", { quantity: 6, unit: "rodaja", name: "tomate" }],
-    ["1 paquete de tapas de empanadas", { quantity: 1, unit: "paquete", name: "tapas de empanadas" }],
+    [
+      "1 paquete de tapas de empanadas",
+      { quantity: 1, unit: "paquete", name: "tapas de empanadas" },
+    ],
     ["2 huevos", { quantity: 2, unit: "unidad", name: "huevos" }],
     ["200 g de pechuga de pollo, en cubos", { quantity: 200, unit: "g", name: "pechuga de pollo" }],
     ["1 cebolla, picada", { quantity: 1, unit: "unidad", name: "cebolla" }],
@@ -37,7 +40,10 @@ describe("parseIngredientLine — recetas argentinas reales", () => {
     ["1 taza de polenta", { quantity: 1, unit: "taza", name: "polenta" }],
     ["2 choclos", { quantity: 2, unit: "unidad", name: "choclos" }],
     ["1 palta", { quantity: 1, unit: "unidad", name: "palta" }],
-    ["1 frasco de salsa de tomate", { quantity: 1, unit: "unidad", name: "frasco de salsa de tomate" }],
+    [
+      "1 frasco de salsa de tomate",
+      { quantity: 1, unit: "unidad", name: "frasco de salsa de tomate" },
+    ],
     ["200 g de espinaca", { quantity: 200, unit: "g", name: "espinaca" }],
     ["1 atado de verdeo", { quantity: 1, unit: "atado", name: "verdeo" }],
     ["4 huevos duros", { quantity: 4, unit: "unidad", name: "huevos duros" }],

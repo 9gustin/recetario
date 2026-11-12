@@ -81,9 +81,7 @@ export async function getRecipe(id: string, userId: string): Promise<RecipeDetai
     source_url: data.source_url,
     current_version: data.current_version,
     status: data.status,
-    ingredients: (data.recipe_ingredients ?? [])
-      .slice()
-      .sort((a, b) => a.position - b.position),
+    ingredients: (data.recipe_ingredients ?? []).slice().sort((a, b) => a.position - b.position),
     steps: (data.recipe_steps ?? []).slice().sort((a, b) => a.position - b.position),
     is_favorite: Boolean(fav),
     last_cooked_at: null,
@@ -163,4 +161,23 @@ export async function getVersions(recipeId: string) {
     .eq("recipe_id", recipeId)
     .order("version", { ascending: false });
   return { data: (data ?? []) as RecipeVersion[], error };
+}
+
+/** Etiquetas más usadas del grupo (para los chips de filtro) y cantidad total de recetas. */
+export async function getRecipeFacets(groupId: string, topN = 5) {
+  const supabase = await createClient();
+  const { data } = await supabase
+    .from("recipes")
+    .select("tags")
+    .eq("group_id", groupId)
+    .is("deleted_at", null);
+  const counts = new Map<string, number>();
+  for (const row of data ?? []) {
+    for (const tag of row.tags ?? []) counts.set(tag, (counts.get(tag) ?? 0) + 1);
+  }
+  const topTags = [...counts.entries()]
+    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+    .slice(0, topN)
+    .map(([tag]) => tag);
+  return { topTags, total: data?.length ?? 0 };
 }

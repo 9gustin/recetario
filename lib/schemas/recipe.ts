@@ -1,7 +1,15 @@
 import { z } from "zod";
 
 const difficultySchema = z.enum(["facil", "media", "dificil"]);
-const sourceTypeSchema = z.enum(["manual", "text", "url", "photo", "voice", "ai_generated", "fork"]);
+const sourceTypeSchema = z.enum([
+  "manual",
+  "text",
+  "url",
+  "photo",
+  "voice",
+  "ai_generated",
+  "fork",
+]);
 const timerKindSchema = z.enum(["active", "passive"]);
 
 export const ingredientInputSchema = z.object({

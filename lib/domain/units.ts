@@ -45,7 +45,7 @@ const SYNONYMS: Record<string, string> = {
   "cucharada sopera": "cda",
   "cucharadas soperas": "cda",
   "cuch.": "cda",
-  "cuch": "cda",
+  cuch: "cda",
   cucharadita: "cdita",
   cucharaditas: "cdita",
   cditas: "cdita",

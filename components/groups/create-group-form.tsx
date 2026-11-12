@@ -40,7 +40,7 @@ export function CreateGroupForm() {
       </div>
 
       <div className="flex flex-col gap-2">
-        <span className="text-sm font-medium leading-none">Elegí un emoji</span>
+        <span className="text-sm leading-none font-medium">Elegí un emoji</span>
         <EmojiGrid value={emoji} onSelect={setEmoji} />
       </div>
 

@@ -1,10 +1,6 @@
 import { z } from "zod";
 
-export const groupNameSchema = z
-  .string()
-  .trim()
-  .min(1, "Poné un nombre")
-  .max(60, "Muy largo");
+export const groupNameSchema = z.string().trim().min(1, "Poné un nombre").max(60, "Muy largo");
 
 export const groupEmojiSchema = z.string().trim().max(8).nullable();
 

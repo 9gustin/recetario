@@ -17,7 +17,8 @@ type Result = { ok: true } | { ok: false; error: string };
 function rpcError(error: { message?: string } | null, fallback: string): string {
   const msg = error?.message ?? "";
   if (msg.includes("Not authenticated")) return "Tu sesión venció. Volvé a entrar.";
-  if (msg.includes("Forbidden") || msg.includes("permission")) return "No tenés permiso para hacer eso.";
+  if (msg.includes("Forbidden") || msg.includes("permission"))
+    return "No tenés permiso para hacer eso.";
   if (msg.includes("Cannot remove an owner")) return "No podés sacar a un dueño.";
   if (msg.includes("Cannot leave personal group")) return "No podés salir de tu grupo personal.";
   if (msg.includes("Cannot change own role")) return "No podés cambiarte el rol a vos mismo.";

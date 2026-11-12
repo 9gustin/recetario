@@ -23,7 +23,7 @@ export default async function Page({ params }: { params: Promise<{ token: string
     return (
       <main className="mx-auto flex min-h-dvh w-full max-w-md flex-col bg-background">
         <section className="bg-hero px-5 pt-[calc(env(safe-area-inset-top)+28px)] pb-6 text-foreground">
-          <p className="text-[13px] font-bold tracking-[0.1em] uppercase text-foreground/80">
+          <p className="text-[13px] font-bold tracking-[0.1em] text-foreground/80 uppercase">
             Te invitaron a
           </p>
           <h1 className="mt-2 font-display text-[40px] leading-[1.02] font-normal">
@@ -38,7 +38,9 @@ export default async function Page({ params }: { params: Promise<{ token: string
         </section>
         <div className="flex flex-col gap-4 px-5 py-6">
           <PillButton asChild fullWidth>
-            <Link href={`/login?next=${encodeURIComponent(`/join/${token}`)}`}>Entrá para unirte</Link>
+            <Link href={`/login?next=${encodeURIComponent(`/join/${token}`)}`}>
+              Entrá para unirte
+            </Link>
           </PillButton>
         </div>
       </main>
@@ -59,7 +61,7 @@ export default async function Page({ params }: { params: Promise<{ token: string
     return (
       <main className="mx-auto flex min-h-dvh w-full max-w-md flex-col bg-background">
         <section className="bg-hero px-5 pt-[calc(env(safe-area-inset-top)+28px)] pb-6 text-foreground">
-          <p className="text-[13px] font-bold tracking-[0.1em] uppercase text-foreground/80">
+          <p className="text-[13px] font-bold tracking-[0.1em] text-foreground/80 uppercase">
             Te invitaron a
           </p>
           <h1 className="mt-2 font-display text-[40px] leading-[1.02] font-normal">
@@ -86,15 +88,15 @@ export default async function Page({ params }: { params: Promise<{ token: string
   return (
     <main className="mx-auto flex min-h-dvh w-full max-w-md flex-col bg-background">
       <section className="bg-hero px-5 pt-[calc(env(safe-area-inset-top)+28px)] pb-6 text-foreground">
-        <p className="text-[13px] font-bold tracking-[0.1em] uppercase text-foreground/80">
+        <p className="text-[13px] font-bold tracking-[0.1em] text-foreground/80 uppercase">
           Invitación
         </p>
         <h1 className="mt-2 font-display text-[40px] leading-[1.02] font-normal">
           Este link ya no está disponible
         </h1>
         <p className="mt-2 max-w-[280px] text-sm text-foreground/80">
-          Puede que haya vencido o que lo hayan revocado. Pedile a quien te invitó que te mande
-          uno nuevo.
+          Puede que haya vencido o que lo hayan revocado. Pedile a quien te invitó que te mande uno
+          nuevo.
         </p>
       </section>
       <div className="flex flex-col gap-4 px-5 py-6">

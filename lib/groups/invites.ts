@@ -8,7 +8,6 @@ import { requireUser } from "@/lib/auth";
 
 type Invite = { id: string; token: string; expires_at: string | null };
 
-
 function days(n: number) {
   return new Date(Date.now() + n * 24 * 60 * 60 * 1000).toISOString();
 }
@@ -43,7 +42,9 @@ export async function createInvite(
   return { ok: true, invite: data };
 }
 
-export async function revokeInvite(raw: unknown): Promise<{ ok: true } | { ok: false; error: string }> {
+export async function revokeInvite(
+  raw: unknown,
+): Promise<{ ok: true } | { ok: false; error: string }> {
   const parsed = revokeSchema.safeParse(raw);
   if (!parsed.success) return { ok: false, error: "Datos inválidos." };
 
