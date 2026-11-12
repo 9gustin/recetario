@@ -2,6 +2,7 @@
 
 import type { CookingSummary } from "@/lib/cooking/queries";
 import { CookingHistory } from "./cooking-history";
+import { ShareSheet, type ShareContactItem, type ShareGroup } from "../share-sheet";
 import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
@@ -16,6 +17,11 @@ import { deleteRecipe, toggleFavorite } from "@/lib/recipes/actions";
 type Props = {
   groupId: string;
   cooking?: CookingSummary;
+  share?: {
+    groups: ShareGroup[];
+    contacts: ShareContactItem[];
+    initialShareUrl: string | null;
+  };
   recipe: {
     id: string;
     title: string;
@@ -48,7 +54,7 @@ type Props = {
   };
 };
 
-export function RecipeDetail({ groupId, recipe, cooking }: Props) {
+export function RecipeDetail({ groupId, recipe, cooking, share }: Props) {
   const router = useRouter();
   const [servings, setServings] = useState(recipe.servings);
   const [favorite, setFavorite] = useState(recipe.is_favorite);
@@ -245,6 +251,16 @@ export function RecipeDetail({ groupId, recipe, cooking }: Props) {
           <PillButton asChild fullWidth>
             <Link href={`/g/${groupId}/recetas/${recipe.id}/cocinar`}>Cocinar</Link>
           </PillButton>
+          {share ? (
+            <ShareSheet
+              recipeId={recipe.id}
+              recipeTitle={recipe.title}
+              currentGroupId={groupId}
+              groups={share.groups}
+              contacts={share.contacts}
+              initialShareUrl={share.initialShareUrl}
+            />
+          ) : null}
           <div className="grid grid-cols-3 gap-2">
             <PillButton asChild variant="outline" size="md">
               <Link href={`/g/${groupId}/recetas/${recipe.id}/editar`}>

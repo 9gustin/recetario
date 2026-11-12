@@ -18,7 +18,7 @@
   7. `accept_inbox_recipe(p_inbox_id, p_target_group_id)`: hace el fork y marca `resolved_at`.
 - **Aceptación:** pgTAP: anon lee una receta por token válido y no por token revocado; no se puede forkear a un grupo ajeno; no se puede enviar a alguien sin grupo en común.
 
-### T4.2 — Sheet de compartir
+### [x] T4.2 — Sheet de compartir
 - **Depende de:** T4.1, T2.6
 - **Archivos:** `components/recipes/share-sheet.tsx`, `lib/recipes/share-actions.ts`.
 - **Pasos:**
@@ -69,3 +69,5 @@
 ## Notas de ejecución
 
 - T4.1: se agregaron `forked_from_title` y `forked_from_group_name` a `recipes` en esta migración (T4.5 pedía guardarlos en la copia: así los RPC de copia los escriben desde el principio). La copia reutiliza `save_recipe` (que valida membresía del grupo destino y deja la versión 1) desde un núcleo interno `_fork_recipe_core`, no invocable por clientes; los pasos de la copia pierden `ingredient_ids` (apuntaban a filas del original) y el modo cocinar los resuelve por texto. `get_public_recipe` es accesible por anon, devuelve solo contenido y el nombre/avatar de quien comparte, y cuenta visitas. Riesgo aceptado para la revisión de seguridad: la `image_url` de la receta es una URL pública del bucket cuyo path incluye el id del grupo y de la receta (los UUID no dan acceso, RLS lo impide). `send_recipe_to_user` exige un grupo en común; el destinatario puede aceptar aunque no sea miembro del grupo origen porque el fork corre como definer y valida que el ítem de bandeja sea suyo. 20 tests pgTAP en `04_sharing.test.sql`.
+
+- T4.2: botón Compartir en el detalle con tres opciones. "Mandar link" crea o reutiliza el link y abre el share nativo (`navigator.share`); si no hay, queda a la vista con "Copiar link"; debajo "Cualquiera con el link la puede ver" y "Dejar de compartir" (revoca). "Copiar a otro grupo" lista mis grupos menos el actual, pide confirmar y avisa "Copiada a X" con acción Ver. "Mandar a una persona" lista a quienes comparten algún grupo conmigo (lo resuelve la RLS de `profiles`, sin duplicados). Los grupos, contactos y el link activo se cargan en la página del detalle. Se verifica de punta a punta en el e2e de T4.6.
