@@ -10,6 +10,11 @@ try {
 const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
+/** Cliente con service role para preparar datos en los tests (ignora RLS). */
+export function adminClient() {
+  return admin();
+}
+
 function admin() {
   if (!url || !serviceRoleKey) {
     throw new Error(

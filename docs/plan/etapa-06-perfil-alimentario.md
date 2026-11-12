@@ -32,7 +32,7 @@
   6. `POST /api/food-profile/apply { draftId, edits? }` → valida, guarda `food_profiles` (versión + 1) y marca el draft como `applied`.
 - **Aceptación:** con un audio tipo "no puedo comer cebolla y trato de comer pocas harinas" el draft trae la restricción `forbidden` de cebolla, un `limit` de harinas y una pregunta sobre el resto de la familia.
 
-### T6.4 — UI "Mi alimentación"
+### [x] T6.4 — UI "Mi alimentación"
 - **Depende de:** T6.3
 - **Archivos:** `app/(app)/perfil/alimentacion/page.tsx`, `components/food-profile/*`.
 - **Pasos:**
@@ -88,3 +88,5 @@
 - T6.2: esquema exacto de SPEC §6.2. `meals_at_home` usa `z.partialRecord` (en Zod 4 un `record` con claves de enum las exige todas). `mergeProfiles` reemplaza las listas que vienen en el parche, combina el horario y deduplica restricciones por tipo + objetivo (gana la más estricta). `foodProfileProposalSchema` (perfil + resumen + cambios + preguntas abiertas) es lo que se le pide a la IA en T6.3.
 
 - T6.3: `POST /api/ai/food-profile/ingest` guarda las fuentes (texto, dictado, archivos, respuestas) en `food_profile_inputs`, arma el mensaje con el perfil actual + novedades (PDF como bloque `document`, fotos como `image`, solo del propio bucket `<user_id>/…`, máx. 3 archivos de 10 MB) y llama a Sonnet con `foodProfileProposalSchema`; guarda un único borrador pendiente (descarta los anteriores) y lo devuelve. `POST /api/food-profile/apply` valida el borrador, aplica las ediciones con `mergeProfiles`, sube la versión y marca fuentes y borrador como procesados. El prompt no asume la familia `allium`: guarda solo lo dicho y pregunta por el resto. Verificado con la IA real: dictado → cebolla `forbidden` + harinas `limit` + pregunta de la familia; la respuesta "sí el verdeo y el puerro" los suma a `includes`; foto de un plan → `carbs_g_per_day_max: 50`, `protein_g_per_day_min: 100` y `valid_until` a 3 meses; un archivo ajeno da 400.
+
+- T6.4: `/perfil/alimentacion` (enlazada desde Perfil): sin perfil muestra la intro con el botón de voz grande, "Prefiero escribir" y "Subir archivo" (PDF/foto a `profile-inputs/<user_id>/…`); procesa y muestra la revisión del borrador (resumen editable, cambios con +/~/−, perfil propuesto y preguntas abiertas con Sí/No/otra respuesta por texto o voz). Al contestar, la ingesta recibe `baseDraftId` para partir del borrador pendiente y no perder lo ya revisado (cambio respecto del plan original de T6.3). Con perfil: resumen editable, chips "NO COMÉS" (rosado) y "LIMITÁS" (ámbar) con ✕, "+ agregar" que busca en el catálogo de ingredientes y en las familias (`lib/domain/food-families.ts`), objetivos, gustos y equipamiento; "Contame algo más"; "Mis fuentes" con borrado (también del archivo en Storage) y el aviso fijo de que no reemplaza al médico o nutricionista. Si hay un borrador pendiente al entrar, se retoma. e2e con la ingesta mockeada creando borradores reales (Guardar usa el endpoint verdadero).

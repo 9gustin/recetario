@@ -1,7 +1,7 @@
 import { requireUser } from "@/lib/auth";
 import { createClient } from "@/lib/supabase/server";
 import Link from "next/link";
-import { Inbox } from "lucide-react";
+import { Inbox, Salad } from "lucide-react";
 import { getUnresolvedInboxCount } from "@/lib/inbox/queries";
 import { EditNameForm } from "@/components/profile/edit-name-form";
 import { PillButton } from "@/components/shared/pill-button";
@@ -34,6 +34,14 @@ export default async function Page() {
       </header>
 
       <EditNameForm currentName={name} />
+
+      <Link
+        href="/perfil/alimentacion"
+        className="flex min-h-14 items-center gap-3 rounded-2xl border border-border bg-surface px-4"
+      >
+        <Salad className="size-5" aria-hidden="true" />
+        <span className="flex-1 text-[15px] font-semibold">Mi alimentación</span>
+      </Link>
 
       <Link
         href="/perfil/bandeja"
