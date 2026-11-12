@@ -102,7 +102,7 @@
 - **Aceptación:** un PR muestra los checks en verde.
 - **Fuera de alcance:** deploy (lo hace Vercel).
 
-### T0.8 — Producción: Supabase + Vercel + monitoreo
+### [x] T0.8 — Producción: Supabase + Vercel + monitoreo
 - **Depende de:** T0.7
 - **Pasos 👤:**
   1. Crear proyecto Supabase `recetario-prod` en **South America (São Paulo)**. Copiar URL, anon key y service role key.
@@ -119,9 +119,9 @@
 ---
 
 ## Cierre de la Etapa 0
-- [ ] App en producción, instalable.
-- [ ] CI en verde.
-- [ ] `docs/deploy.md` escrito.
+- [x] App en producción (https://recetario-lime-kappa.vercel.app). Falta probar la instalación en el celular.
+- [x] CI en verde.
+- [x] `docs/deploy.md` escrito.
 
 ## Notas de ejecución
 <!-- El agente anota acá decisiones tomadas que no estaban en el spec. -->
@@ -143,3 +143,4 @@
 - T0.5: `pnpm db:types` avisa que el archivo generado no está formateado (sugiere oxfmt); se ignora: `database.types.ts` está en `.prettierignore` y en el ignore de ESLint.
 - T0.6: Vitest usa dos `projects` (`node` para `*.test.ts(x)` y `dom` con jsdom para `*.dom.test.tsx`). `pnpm db:test` baja la imagen `pg_prove` la primera vez. En CI el e2e corre contra `pnpm start` (requiere `pnpm build` antes); en local usa `pnpm dev`. `lib/domain/example.test.ts` es un placeholder: borrarlo al agregar los primeros tests de dominio. Se excluyó `docs/` y `README.md` de Prettier para no reformatear los documentos.
 - T0.7: el job `e2e` corre solo en `main` y a mano (`workflow_dispatch`), arranca Supabase local sin los servicios que no usa (`-x studio,imgproxy,edge-runtime,logflare,vector,mailpit`) y usa `pnpm start`. `check` y `db` corren en cada push/PR. Los cambios nuevos en el mismo ref cancelan la corrida anterior (`concurrency`).
+- T0.8: Sentry y PostHog quedan desactivados por decisión de la persona (se activan cargando sus variables en Vercel). El job de migraciones usa `supabase db push --remote` porque la CLI 3.x apunta a la base local por defecto. Verificado: `/api/health` en producción devuelve `db: true`.

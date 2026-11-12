@@ -12,7 +12,7 @@ Archivo compartido entre los tres agentes. Cada uno lo lee al empezar y lo actua
 - [x] Paso 6 — T0.5 Supabase local
 - [x] Paso 7 — T0.6 Pruebas
 - [x] Paso 8 — T0.7 CI
-- [ ] Paso 9 — T0.8 Producción
+- [x] Paso 9 — T0.8 Producción
 - [ ] Paso 10 — Google OAuth
 - [ ] Paso 11 — Anthropic
 - [ ] Paso 12 — Transcripción (proveedor elegido: ___)

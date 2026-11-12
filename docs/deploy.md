@@ -5,6 +5,8 @@ Producción: **Vercel** (app) + **Supabase** `recetario-prod` (región São Paul
 - **Project ref de producción:** `fsqielfvruyhzietrgxn` (URL: `https://fsqielfvruyhzietrgxn.supabase.co`). No es secreto.
 - **Claves:** Supabase ahora entrega *publishable key* (`sb_publishable_…`, pública) y *secret key* (`sb_secret_…`, solo servidor). La app las lee como `NEXT_PUBLIC_SUPABASE_ANON_KEY` y `SUPABASE_SERVICE_ROLE_KEY` respectivamente (los nombres no cambian).
 
+- **URL de producción:** https://recetario-lime-kappa.vercel.app
+
 ## Cómo se despliega
 
 - **App:** cada push a `main` despliega a producción en Vercel; cada PR/rama genera un preview.
