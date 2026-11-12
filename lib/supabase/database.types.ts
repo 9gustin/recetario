@@ -23,7 +23,33 @@ export type Database = {
           }
         },"public": {
           Tables: {
-            "group_invites": {
+            "cooking_sessions": {
+                  Row: {
+                    "current_step": number,"finished_at": string | null,"id": string,"note": string | null,"pending_edits": NonNullable<Json>,"photo_url": string | null,"plan_entry_id": string | null,"rating": number | null,"recipe_id": string,"recipe_version": number,"servings": number,"started_at": string,"user_id": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "current_step"?: number,"finished_at"?: string | null,"id"?: string,"note"?: string | null,"pending_edits"?: NonNullable<Json>,"photo_url"?: string | null,"plan_entry_id"?: string | null,"rating"?: number | null,"recipe_id": string,"recipe_version": number,"servings": number,"started_at"?: string,"user_id"?: string
+                  }
+                  Update: {
+                    "current_step"?: number,"finished_at"?: string | null,"id"?: string,"note"?: string | null,"pending_edits"?: NonNullable<Json>,"photo_url"?: string | null,"plan_entry_id"?: string | null,"rating"?: number | null,"recipe_id"?: string,"recipe_version"?: number,"servings"?: number,"started_at"?: string,"user_id"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "cooking_sessions_recipe_id_fkey"
+      columns: ["recipe_id"]
+isOneToOne: false
+      referencedRelation: "recipes"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "cooking_sessions_user_id_fkey"
+      columns: ["user_id"]
+isOneToOne: false
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"group_invites": {
                   Row: {
                     "created_at": string,"created_by": string | null,"expires_at": string | null,"group_id": string,"id": string,"max_uses": number | null,"revoked_at": string | null,"token": string,"updated_at": string,"uses": number
                   }
@@ -290,6 +316,11 @@ isOneToOne: false
                            },
 "leave_group":
 { Args: { "gid": string }; Returns: undefined
+                           },
+"recipe_last_cooked":
+{ Args: { "p_recipe_id": string }; Returns: {
+              "cooked_by": string,"finished_at": string,"rating": number
+            }[]
                            },
 "recipes_search_tsv":
 { Args: { "p_recipe_id": string }; Returns: unknown

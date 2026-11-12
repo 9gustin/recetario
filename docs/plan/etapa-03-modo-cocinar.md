@@ -5,7 +5,7 @@
 
 ---
 
-### T3.1 — Migración: sesiones de cocina
+### [x] T3.1 — Migración: sesiones de cocina
 - **Depende de:** T2.1
 - **Archivos:** `supabase/migrations/<ts>_cooking_sessions.sql`, `supabase/tests/03_cooking.test.sql`.
 - **Pasos:** tabla `cooking_sessions` (§5.2) con RLS por grupo de la receta; select/update solo de las sesiones propias (`user_id = auth.uid()`), salvo lectura de `finished_at` y `rating` para miembros del grupo (para mostrar "la última vez la hicieron el…"). Vista o RPC `recipe_last_cooked(recipe_id)`.
@@ -80,3 +80,5 @@
 - [ ] Verificado en iOS y Android: wake lock, sonido, vibración (iOS no vibra: está bien).
 
 ## Notas de ejecución
+
+- T3.1: las sesiones solo las lee su dueño (la tabla tiene notas y fotos); el resto del grupo ve solo fecha, puntaje y quién cocinó vía `recipe_last_cooked` (security definer, valida membresía). `user_id` toma `auth.uid()` por defecto. `pending_edits` es `jsonb not null default '[]'`. 8 tests pgTAP en `03_cooking.test.sql`.
