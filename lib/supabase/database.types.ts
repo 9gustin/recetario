@@ -23,7 +23,99 @@ export type Database = {
           }
         },"public": {
           Tables: {
-            "cooking_sessions": {
+            "ai_conversations": {
+                  Row: {
+                    "context": NonNullable<Json>,"created_at": string,"group_id": string,"id": string,"last_message_at": string,"plan_id": string | null,"purpose": string,"title": string | null,"user_id": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "context"?: NonNullable<Json>,"created_at"?: string,"group_id": string,"id"?: string,"last_message_at"?: string,"plan_id"?: string | null,"purpose": string,"title"?: string | null,"user_id": string
+                  }
+                  Update: {
+                    "context"?: NonNullable<Json>,"created_at"?: string,"group_id"?: string,"id"?: string,"last_message_at"?: string,"plan_id"?: string | null,"purpose"?: string,"title"?: string | null,"user_id"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "ai_conversations_group_id_fkey"
+      columns: ["group_id"]
+isOneToOne: false
+      referencedRelation: "groups"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "ai_conversations_user_id_fkey"
+      columns: ["user_id"]
+isOneToOne: false
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"ai_messages": {
+                  Row: {
+                    "content": NonNullable<Json>,"conversation_id": string,"created_at": string,"id": string,"mentions": (string)[],"role": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "content": NonNullable<Json>,"conversation_id": string,"created_at"?: string,"id"?: string,"mentions"?: (string)[],"role": string
+                  }
+                  Update: {
+                    "content"?: NonNullable<Json>,"conversation_id"?: string,"created_at"?: string,"id"?: string,"mentions"?: (string)[],"role"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "ai_messages_conversation_id_fkey"
+      columns: ["conversation_id"]
+isOneToOne: false
+      referencedRelation: "ai_conversations"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"ai_quota": {
+                  Row: {
+                    "count": number,"day": string,"feature": string,"user_id": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "count"?: number,"day": string,"feature": string,"user_id": string
+                  }
+                  Update: {
+                    "count"?: number,"day"?: string,"feature"?: string,"user_id"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "ai_quota_user_id_fkey"
+      columns: ["user_id"]
+isOneToOne: false
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"ai_runs": {
+                  Row: {
+                    "cache_read_tokens": number | null,"created_at": string,"error": string | null,"feature": string,"group_id": string | null,"id": string,"input_tokens": number | null,"latency_ms": number | null,"model": string,"output_tokens": number | null,"status": string,"user_id": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "cache_read_tokens"?: number | null,"created_at"?: string,"error"?: string | null,"feature": string,"group_id"?: string | null,"id"?: string,"input_tokens"?: number | null,"latency_ms"?: number | null,"model": string,"output_tokens"?: number | null,"status": string,"user_id": string
+                  }
+                  Update: {
+                    "cache_read_tokens"?: number | null,"created_at"?: string,"error"?: string | null,"feature"?: string,"group_id"?: string | null,"id"?: string,"input_tokens"?: number | null,"latency_ms"?: number | null,"model"?: string,"output_tokens"?: number | null,"status"?: string,"user_id"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "ai_runs_group_id_fkey"
+      columns: ["group_id"]
+isOneToOne: false
+      referencedRelation: "groups"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "ai_runs_user_id_fkey"
+      columns: ["user_id"]
+isOneToOne: false
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"cooking_sessions": {
                   Row: {
                     "current_step": number,"finished_at": string | null,"id": string,"note": string | null,"pending_edits": NonNullable<Json>,"photo_url": string | null,"plan_entry_id": string | null,"rating": number | null,"recipe_id": string,"recipe_version": number,"servings": number,"started_at": string,"user_id": string
                   }
@@ -351,6 +443,9 @@ isOneToOne: false
                            },
 "accept_invite":
 { Args: { "p_token": string }; Returns: string
+                           },
+"consume_ai_quota":
+{ Args: { "p_feature": string,"p_limit": number,"p_user_id": string }; Returns: boolean
                            },
 "create_group":
 { Args: { "p_emoji": string,"p_name": string }; Returns: string

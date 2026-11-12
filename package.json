@@ -17,9 +17,11 @@
     "db:reset": "set -a; [ -f .env.local ] && . ./.env.local; set +a; supabase db reset",
     "db:test": "supabase test db",
     "db:types": "supabase gen types typescript --local > lib/supabase/database.types.ts",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "ai:smoke": "tsx --conditions=react-server scripts/ai-smoke.ts"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^1.8.0",
     "@hookform/resolvers": "^7.0.5",
     "@sentry/nextjs": "^11.12.0",
     "@serwist/turbopack": "^9.5.13",
@@ -60,6 +62,7 @@
     "prettier-plugin-tailwindcss": "^0.8.1",
     "supabase": "^3.1.0",
     "tailwindcss": "4.3.3",
+    "tsx": "^4.23.15",
     "typescript": "^5",
     "vitest": "^5.1.0"
   },

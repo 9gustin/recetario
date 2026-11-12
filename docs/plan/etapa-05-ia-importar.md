@@ -5,7 +5,7 @@
 
 ---
 
-### T5.1 — Infraestructura de IA
+### [x] T5.1 — Infraestructura de IA
 - **Depende de:** T2.4 · 👤 `ANTHROPIC_API_KEY` en `.env.local` y en Vercel.
 - **Archivos:** `lib/ai/client.ts`, `lib/ai/models.ts`, `lib/ai/run-structured.ts`, `lib/ai/rate-limit.ts`, `supabase/migrations/<ts>_ai.sql`, `lib/ai/run-structured.test.ts`.
 - **Pasos:**
@@ -79,3 +79,5 @@
 
 ## Notas de ejecución
 - Proveedor de transcripción (decisión de la persona, 2026-11-12): **OpenAI `gpt-4o-transcribe`** con `language=es`. Es el único proveedor; se salteó la comparación con Deepgram para simplificar. Esto deja hecho el paso 6 de T5.2 (la prueba de calidad con audios reales queda para validar al implementar la dictada en el celular). `TRANSCRIPTION_PROVIDER=openai`, key en `OPENAI_API_KEY`. La interfaz `Transcriber` sigue siendo intercambiable por si más adelante se quiere otro.
+
+- T5.1: se instaló `@anthropic-ai/sdk` y `tsx` (el plan pide `pnpm tsx` para el script de humo; el script corre con `--conditions=react-server` para poder importar módulos `server-only`). `runStructured` recibe además `userId`/`groupId` (necesarios para `ai_runs`) y acepta un cliente y un registrador inyectables para los tests; suma los tokens de los dos intentos y guarda también `cache_read_tokens`. Las tablas de IA solo tienen policies de lectura propia: escribe el servidor con service role. `consume_ai_quota` cuenta por día de Argentina y no es invocable por clientes. Verificado contra la API real (`pnpm ai:smoke`): salida válida en 1,5 s y fila en `ai_runs`.
