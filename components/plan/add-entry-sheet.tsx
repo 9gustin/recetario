@@ -16,7 +16,7 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet";
 import { dayLabel } from "@/lib/domain/week";
-import { slotLabel } from "@/lib/domain/meal-slots";
+import { slotLabel, type MealSlot } from "@/lib/domain/meal-slots";
 import { searchRecipes, type RecipeSearchResult } from "@/lib/recipes/actions";
 import { cn } from "@/lib/utils";
 
@@ -25,13 +25,30 @@ type Props = {
   onOpenChange: (open: boolean) => void;
   groupId: string;
   date: string;
-  slot: string;
+  slot: MealSlot;
+  slots: MealSlot[];
+  /** Sin momentos: se agrega una comida suelta (listado "Mis comidas"). */
+  looseMeal?: boolean;
   busy: boolean;
-  onPick: (choice: { recipeId?: string; freeText?: string }) => void;
+  onPick: (choice: { recipeId?: string; freeText?: string; slot: MealSlot }) => void;
 };
 
 /** Elegir una receta del grupo (con compatibilidad) o escribir algo ("Comemos afuera") para un momento. */
-export function AddEntrySheet({ open, onOpenChange, groupId, date, slot, busy, onPick }: Props) {
+export function AddEntrySheet({
+  open,
+  onOpenChange,
+  groupId,
+  date,
+  slot: defaultSlot,
+  slots,
+  looseMeal,
+  busy,
+  onPick: onPickRaw,
+}: Props) {
+  const [chosenSlot, setChosenSlot] = useState<MealSlot | null>(null);
+  const slot = chosenSlot ?? defaultSlot;
+  const onPick = (choice: { recipeId?: string; freeText?: string }) =>
+    onPickRaw({ ...choice, slot });
   const [q, setQ] = useState("");
   const [favoriteOnly, setFavoriteOnly] = useState(false);
   const [results, setResults] = useState<RecipeSearchResult["recipes"]>([]);
@@ -89,13 +106,48 @@ export function AddEntrySheet({ open, onOpenChange, groupId, date, slot, busy, o
   }
 
   return (
-    <Sheet open={open} onOpenChange={onOpenChange}>
+    <Sheet
+      open={open}
+      onOpenChange={(o) => {
+        if (!o) setChosenSlot(null);
+        onOpenChange(o);
+      }}
+    >
       <SheetContent side="bottom" className="max-h-[88dvh] rounded-t-3xl">
         <SheetHeader>
           <SheetTitle>
-            {slotLabel(slot)} · {dayLabel(date)}
+            {looseMeal ? "Agregar comida" : `Agregar comida · ${dayLabel(date)}`}
           </SheetTitle>
-          <SheetDescription>Elegí una receta o escribí algo.</SheetDescription>
+          <SheetDescription>
+            {looseMeal
+              ? "Elegí una receta o escribí algo."
+              : "Elegí el momento y una receta, o escribí algo."}
+          </SheetDescription>
+          {!looseMeal ? (
+            <div
+              role="radiogroup"
+              aria-label="Momento del día"
+              className="flex flex-wrap gap-2 pt-1"
+            >
+              {slots.map((s) => (
+                <button
+                  key={s}
+                  type="button"
+                  role="radio"
+                  aria-checked={s === slot}
+                  onClick={() => setChosenSlot(s)}
+                  className={cn(
+                    "min-h-11 rounded-full border px-4 text-[13px] font-semibold",
+                    s === slot
+                      ? "border-foreground bg-foreground text-background"
+                      : "border-border bg-surface",
+                  )}
+                >
+                  {slotLabel(s)}
+                </button>
+              ))}
+            </div>
+          ) : null}
         </SheetHeader>
 
         <div className="flex max-h-[72dvh] flex-col gap-3 overflow-y-auto px-4 pb-6">

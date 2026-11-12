@@ -465,14 +465,14 @@ isOneToOne: false
                   ]
                 },"meal_plan_entries": {
                   Row: {
-                    "cook_date": string | null,"created_at": string,"date": string,"diner_ids": (string)[],"free_text": string | null,"id": string,"is_new_recipe": boolean,"leftovers_of_entry_id": string | null,"plan_id": string,"position": number,"recipe_id": string | null,"servings": number | null,"slot": string,"updated_at": string
+                    "cook_date": string | null,"cooked_at": string | null,"created_at": string,"date": string | null,"diner_ids": (string)[],"free_text": string | null,"id": string,"is_new_recipe": boolean,"leftovers_of_entry_id": string | null,"plan_id": string,"position": number,"quantity": number,"recipe_id": string | null,"servings": number | null,"slot": string | null,"updated_at": string
                   }
                   ComputedFields: never
                   Insert: {
-                    "cook_date"?: string | null,"created_at"?: string,"date": string,"diner_ids"?: (string)[],"free_text"?: string | null,"id"?: string,"is_new_recipe"?: boolean,"leftovers_of_entry_id"?: string | null,"plan_id": string,"position"?: number,"recipe_id"?: string | null,"servings"?: number | null,"slot": string,"updated_at"?: string
+                    "cook_date"?: string | null,"cooked_at"?: string | null,"created_at"?: string,"date"?: string | null,"diner_ids"?: (string)[],"free_text"?: string | null,"id"?: string,"is_new_recipe"?: boolean,"leftovers_of_entry_id"?: string | null,"plan_id": string,"position"?: number,"quantity"?: number,"recipe_id"?: string | null,"servings"?: number | null,"slot"?: string | null,"updated_at"?: string
                   }
                   Update: {
-                    "cook_date"?: string | null,"created_at"?: string,"date"?: string,"diner_ids"?: (string)[],"free_text"?: string | null,"id"?: string,"is_new_recipe"?: boolean,"leftovers_of_entry_id"?: string | null,"plan_id"?: string,"position"?: number,"recipe_id"?: string | null,"servings"?: number | null,"slot"?: string,"updated_at"?: string
+                    "cook_date"?: string | null,"cooked_at"?: string | null,"created_at"?: string,"date"?: string | null,"diner_ids"?: (string)[],"free_text"?: string | null,"id"?: string,"is_new_recipe"?: boolean,"leftovers_of_entry_id"?: string | null,"plan_id"?: string,"position"?: number,"quantity"?: number,"recipe_id"?: string | null,"servings"?: number | null,"slot"?: string | null,"updated_at"?: string
                   }
                   Relationships: [
                     {
@@ -497,14 +497,14 @@ isOneToOne: false
                   ]
                 },"meal_plans": {
                   Row: {
-                    "approved_at": string | null,"approved_by": string | null,"created_at": string,"created_by": string | null,"generation_context": Json | null,"group_id": string,"id": string,"notes": string | null,"prep_tips": NonNullable<Json>,"status": string,"title": string | null,"updated_at": string,"week_start": string
+                    "approved_at": string | null,"approved_by": string | null,"created_at": string,"created_by": string | null,"end_date": string,"generation_context": Json | null,"group_id": string,"id": string,"notes": string | null,"prep_tips": NonNullable<Json>,"status": string,"title": string | null,"updated_at": string,"week_start": string
                   }
                   ComputedFields: never
                   Insert: {
-                    "approved_at"?: string | null,"approved_by"?: string | null,"created_at"?: string,"created_by"?: string | null,"generation_context"?: Json | null,"group_id": string,"id"?: string,"notes"?: string | null,"prep_tips"?: NonNullable<Json>,"status"?: string,"title"?: string | null,"updated_at"?: string,"week_start": string
+                    "approved_at"?: string | null,"approved_by"?: string | null,"created_at"?: string,"created_by"?: string | null,"end_date": string,"generation_context"?: Json | null,"group_id": string,"id"?: string,"notes"?: string | null,"prep_tips"?: NonNullable<Json>,"status"?: string,"title"?: string | null,"updated_at"?: string,"week_start": string
                   }
                   Update: {
-                    "approved_at"?: string | null,"approved_by"?: string | null,"created_at"?: string,"created_by"?: string | null,"generation_context"?: Json | null,"group_id"?: string,"id"?: string,"notes"?: string | null,"prep_tips"?: NonNullable<Json>,"status"?: string,"title"?: string | null,"updated_at"?: string,"week_start"?: string
+                    "approved_at"?: string | null,"approved_by"?: string | null,"created_at"?: string,"created_by"?: string | null,"end_date"?: string,"generation_context"?: Json | null,"group_id"?: string,"id"?: string,"notes"?: string | null,"prep_tips"?: NonNullable<Json>,"status"?: string,"title"?: string | null,"updated_at"?: string,"week_start"?: string
                   }
                   Relationships: [
                     {
@@ -599,16 +599,168 @@ isOneToOne: false
       referencedColumns: ["id"]
     }
                   ]
-                },"profiles": {
+                },"pro_access_log": {
                   Row: {
-                    "avatar_url": string | null,"created_at": string,"display_name": string | null,"id": string,"locale": string,"onboarded_at": string | null,"personal_group_id": string | null,"updated_at": string
+                    "accessed_at": string,"id": string,"link_id": string,"range_from": string | null,"range_to": string | null
                   }
                   ComputedFields: never
                   Insert: {
-                    "avatar_url"?: string | null,"created_at"?: string,"display_name"?: string | null,"id": string,"locale"?: string,"onboarded_at"?: string | null,"personal_group_id"?: string | null,"updated_at"?: string
+                    "accessed_at"?: string,"id"?: string,"link_id": string,"range_from"?: string | null,"range_to"?: string | null
                   }
                   Update: {
-                    "avatar_url"?: string | null,"created_at"?: string,"display_name"?: string | null,"id"?: string,"locale"?: string,"onboarded_at"?: string | null,"personal_group_id"?: string | null,"updated_at"?: string
+                    "accessed_at"?: string,"id"?: string,"link_id"?: string,"range_from"?: string | null,"range_to"?: string | null
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "pro_access_log_link_id_fkey"
+      columns: ["link_id"]
+isOneToOne: false
+      referencedRelation: "pro_links"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"pro_deliveries": {
+                  Row: {
+                    "created_at": string,"id": string,"items": NonNullable<Json>,"kind": string,"link_id": string,"message": string | null,"pro_plan_id": string | null,"recipe_ids": (string)[],"resolved_at": string | null,"status": string,"title": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "created_at"?: string,"id"?: string,"items"?: NonNullable<Json>,"kind": string,"link_id": string,"message"?: string | null,"pro_plan_id"?: string | null,"recipe_ids"?: (string)[],"resolved_at"?: string | null,"status"?: string,"title": string
+                  }
+                  Update: {
+                    "created_at"?: string,"id"?: string,"items"?: NonNullable<Json>,"kind"?: string,"link_id"?: string,"message"?: string | null,"pro_plan_id"?: string | null,"recipe_ids"?: (string)[],"resolved_at"?: string | null,"status"?: string,"title"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "pro_deliveries_link_id_fkey"
+      columns: ["link_id"]
+isOneToOne: false
+      referencedRelation: "pro_links"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "pro_deliveries_pro_plan_id_fkey"
+      columns: ["pro_plan_id"]
+isOneToOne: false
+      referencedRelation: "pro_plans"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"pro_links": {
+                  Row: {
+                    "accepted_at": string | null,"created_at": string,"id": string,"label": string,"patient_id": string | null,"pro_id": string,"pro_name": string,"revoked_at": string | null,"share_meals": boolean,"share_notes": boolean,"status": string,"token": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "accepted_at"?: string | null,"created_at"?: string,"id"?: string,"label": string,"patient_id"?: string | null,"pro_id": string,"pro_name"?: string,"revoked_at"?: string | null,"share_meals"?: boolean,"share_notes"?: boolean,"status"?: string,"token"?: string
+                  }
+                  Update: {
+                    "accepted_at"?: string | null,"created_at"?: string,"id"?: string,"label"?: string,"patient_id"?: string | null,"pro_id"?: string,"pro_name"?: string,"revoked_at"?: string | null,"share_meals"?: boolean,"share_notes"?: boolean,"status"?: string,"token"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "pro_links_patient_id_fkey"
+      columns: ["patient_id"]
+isOneToOne: false
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "pro_links_pro_id_fkey"
+      columns: ["pro_id"]
+isOneToOne: false
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"pro_plan_items": {
+                  Row: {
+                    "free_text": string | null,"id": string,"note": string | null,"plan_id": string,"position": number,"quantity": number,"recipe_id": string | null,"title": string | null
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "free_text"?: string | null,"id"?: string,"note"?: string | null,"plan_id": string,"position"?: number,"quantity"?: number,"recipe_id"?: string | null,"title"?: string | null
+                  }
+                  Update: {
+                    "free_text"?: string | null,"id"?: string,"note"?: string | null,"plan_id"?: string,"position"?: number,"quantity"?: number,"recipe_id"?: string | null,"title"?: string | null
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "pro_plan_items_plan_id_fkey"
+      columns: ["plan_id"]
+isOneToOne: false
+      referencedRelation: "pro_plans"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "pro_plan_items_recipe_id_fkey"
+      columns: ["recipe_id"]
+isOneToOne: false
+      referencedRelation: "recipes"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"pro_plans": {
+                  Row: {
+                    "created_at": string,"goal": string | null,"goal_tags": (string)[],"id": string,"is_template": boolean,"notes": string | null,"pro_id": string,"title": string,"updated_at": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "created_at"?: string,"goal"?: string | null,"goal_tags"?: (string)[],"id"?: string,"is_template"?: boolean,"notes"?: string | null,"pro_id"?: string,"title": string,"updated_at"?: string
+                  }
+                  Update: {
+                    "created_at"?: string,"goal"?: string | null,"goal_tags"?: (string)[],"id"?: string,"is_template"?: boolean,"notes"?: string | null,"pro_id"?: string,"title"?: string,"updated_at"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "pro_plans_pro_id_fkey"
+      columns: ["pro_id"]
+isOneToOne: false
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"professional_invites": {
+                  Row: {
+                    "code": string,"created_at": string,"expires_at": string | null,"max_uses": number,"note": string | null,"uses": number
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "code": string,"created_at"?: string,"expires_at"?: string | null,"max_uses"?: number,"note"?: string | null,"uses"?: number
+                  }
+                  Update: {
+                    "code"?: string,"created_at"?: string,"expires_at"?: string | null,"max_uses"?: number,"note"?: string | null,"uses"?: number
+                  }
+                  Relationships: [
+                    
+                  ]
+                },"professional_profiles": {
+                  Row: {
+                    "bio": string | null,"created_at": string,"display_name": string,"invite_code": string | null,"license": string | null,"user_id": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "bio"?: string | null,"created_at"?: string,"display_name": string,"invite_code"?: string | null,"license"?: string | null,"user_id": string
+                  }
+                  Update: {
+                    "bio"?: string | null,"created_at"?: string,"display_name"?: string,"invite_code"?: string | null,"license"?: string | null,"user_id"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "professional_profiles_user_id_fkey"
+      columns: ["user_id"]
+isOneToOne: true
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"profiles": {
+                  Row: {
+                    "avatar_url": string | null,"created_at": string,"display_name": string | null,"id": string,"is_professional": boolean,"locale": string,"onboarded_at": string | null,"personal_group_id": string | null,"updated_at": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "avatar_url"?: string | null,"created_at"?: string,"display_name"?: string | null,"id": string,"is_professional"?: boolean,"locale"?: string,"onboarded_at"?: string | null,"personal_group_id"?: string | null,"updated_at"?: string
+                  }
+                  Update: {
+                    "avatar_url"?: string | null,"created_at"?: string,"display_name"?: string | null,"id"?: string,"is_professional"?: boolean,"locale"?: string,"onboarded_at"?: string | null,"personal_group_id"?: string | null,"updated_at"?: string
                   }
                   Relationships: [
                     {
@@ -946,6 +1098,9 @@ isOneToOne: false
             "_fork_recipe_core":
 { Args: { "p_source_id": string,"p_target_group_id": string }; Returns: string
                            },
+"_pro_notify":
+{ Args: { "p_delivery": string,"p_link": Omit<Database["public"]['Tables']["pro_links"]['Row'], Database["public"]['Tables']["pro_links"]['ComputedFields']>,"p_title": string }; Returns: undefined
+                           },
 "_slugify":
 { Args: { "p_id": string,"p_text": string }; Returns: string
                            },
@@ -954,6 +1109,12 @@ isOneToOne: false
                            },
 "accept_invite":
 { Args: { "p_token": string }; Returns: string
+                           },
+"accept_pro_delivery":
+{ Args: { "p_add_to_menu": boolean,"p_delivery_id": string,"p_group_id": string }; Returns: number
+                           },
+"accept_pro_link":
+{ Args: { "p_share_meals": boolean,"p_share_notes": boolean,"p_token": string }; Returns: string
                            },
 "activate_diet_plan":
 { Args: { "p_plan_id": string }; Returns: undefined
@@ -976,8 +1137,14 @@ isOneToOne: false
 "diet_plan_owner":
 { Args: { "p_plan_id": string }; Returns: string
                            },
+"dismiss_pro_delivery":
+{ Args: { "p_delivery_id": string }; Returns: undefined
+                           },
 "duplicate_plan":
 { Args: { "p_plan_id": string,"p_week_start": string }; Returns: string
+                           },
+"end_pro_link":
+{ Args: { "p_link_id": string }; Returns: undefined
                            },
 "fork_public_recipe":
 { Args: { "p_target_group_id": string,"p_token": string }; Returns: string
@@ -1003,6 +1170,14 @@ isOneToOne: false
               "group_emoji": string,"group_id": string,"group_name": string,"inviter_name": string,"is_expired": boolean,"is_revoked": boolean,"is_valid": boolean,"member_count": number
             }[]
                            },
+"get_or_create_menu":
+{ Args: { "p_group_id": string }; Returns: string
+                           },
+"get_pro_link_invite":
+{ Args: { "p_token": string }; Returns: {
+              "link_id": string,"mine": boolean,"pro_license": string,"pro_name": string,"status": string
+            }[]
+                           },
 "get_public_collection":
 { Args: { "p_slug": string }; Returns: Json
                            },
@@ -1020,6 +1195,9 @@ isOneToOne: false
                            },
 "is_group_member":
 { Args: { "gid": string }; Returns: boolean
+                           },
+"is_professional":
+{ Args: Record<PropertyKey, never>; Returns: boolean
                            },
 "is_recipe_member":
 { Args: { "p_recipe_id": string }; Returns: boolean
@@ -1064,6 +1242,18 @@ isOneToOne: false
 "prepare_account_deletion":
 { Args: { "p_user_id": string }; Returns: undefined
                            },
+"pro_create_link":
+{ Args: { "p_label": string }; Returns: string
+                           },
+"pro_patient_log":
+{ Args: { "p_from": string,"p_link_id": string,"p_to": string }; Returns: Json
+                           },
+"pro_send_plan":
+{ Args: { "p_link_id": string,"p_message": string,"p_plan_id": string }; Returns: string
+                           },
+"pro_send_recipes":
+{ Args: { "p_link_id": string,"p_message": string,"p_recipe_ids": (string)[],"p_title": string }; Returns: string
+                           },
 "public_recipe_ingredients":
 { Args: { "p_ids": (string)[] }; Returns: {
               "ingredient_id": string,"optional": boolean,"pos": number,"raw_text": string,"recipe_id": string
@@ -1082,6 +1272,9 @@ isOneToOne: false
                            },
 "recipes_search_tsv":
 { Args: { "p_recipe_id": string }; Returns: unknown
+                           },
+"redeem_professional_code":
+{ Args: { "p_bio": string,"p_code": string,"p_license": string,"p_name": string }; Returns: undefined
                            },
 "remove_member":
 { Args: { "gid": string,"p_user_id": string }; Returns: undefined
@@ -1151,6 +1344,9 @@ isOneToOne: false
                            },
 "unpublish_plan":
 { Args: { "p_plan_id": string }; Returns: undefined
+                           },
+"update_pro_link_sharing":
+{ Args: { "p_link_id": string,"p_share_meals": boolean,"p_share_notes": boolean }; Returns: undefined
                            }
           }
           Enums: {

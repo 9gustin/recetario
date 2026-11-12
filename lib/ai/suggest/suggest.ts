@@ -377,7 +377,7 @@ export async function suggestIdeas(
     .lte("date", input.today);
   const last = new Map<string, string>();
   for (const e of past ?? []) {
-    if (!e.recipe_id) continue;
+    if (!e.recipe_id || !e.date) continue;
     const prev = last.get(e.recipe_id);
     if (!prev || e.date > prev) last.set(e.recipe_id, e.date);
   }

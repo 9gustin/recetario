@@ -103,12 +103,13 @@ export async function validateCandidates(
   groupId: string,
   candidates: Candidate[],
   purchaseDate?: string,
+  opts: { ignoreMealRules?: boolean } = {},
 ): Promise<CandidateValidation> {
   const ids = [...new Set(candidates.flatMap((c) => (c.recipe_id ? [c.recipe_id] : [])))];
   const [recipes, diets, mealRules] = await Promise.all([
     loadPlanRecipes(supabase, groupId, ids),
     loadDiets(supabase, groupId),
-    loadMealRules(supabase, groupId),
+    opts.ignoreMealRules ? Promise.resolve([] as MealRule[]) : loadMealRules(supabase, groupId),
   ]);
   const missingRecipeIds = ids.filter((id) => !recipes.has(id));
   const entries: ValidateEntry[] = candidates.map((c) => ({

@@ -84,3 +84,18 @@ describe("etiquetas", () => {
     expect(slotLabel("raro")).toBe("raro");
   });
 });
+
+import { formatRangeLabel, rangeDays, rangeLength } from "./week";
+
+describe("rangos", () => {
+  it("cuenta y lista los días", () => {
+    expect(rangeLength("2026-11-17", "2026-11-19")).toBe(3);
+    expect(rangeDays("2026-11-30", "2026-12-02")).toEqual(["2026-11-30", "2026-12-01", "2026-12-02"]);
+  });
+  it("arma la etiqueta", () => {
+    expect(formatRangeLabel("2026-11-16", "2026-11-22")).toBe("Semana del 16 al 22 de noviembre");
+    expect(formatRangeLabel("2026-11-17", "2026-11-17")).toBe("Martes 17 de noviembre");
+    expect(formatRangeLabel("2026-11-17", "2026-11-19")).toBe("17 al 19 de noviembre");
+    expect(formatRangeLabel("2026-11-29", "2026-12-01")).toBe("29 de noviembre al 1 de diciembre");
+  });
+});

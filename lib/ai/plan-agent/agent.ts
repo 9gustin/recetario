@@ -118,6 +118,7 @@ export async function runPlanAgent<C extends AgentToolCtx = PlanToolCtx>(
         "get_recent_meals",
         "get_participants",
         "get_ingredient_info",
+        "list_meals",
       ]);
       const runOne = async (
         use: Anthropic.Messages.ToolUseBlock,

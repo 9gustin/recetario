@@ -21,7 +21,12 @@ import { cn } from "@/lib/utils";
 
 type Member = { id: string; name: string };
 
+const PANTRY = "__pantry";
+const sectionLabel = (aisle: string) =>
+  aisle === PANTRY ? "Cosas que seguro tenés" : aisleLabel(aisle);
+
 const rank = (a: string) => {
+  if (a === PANTRY) return AISLE_ORDER.length + 1;
   const i = AISLE_ORDER.indexOf(a);
   return i === -1 ? AISLE_ORDER.length : i;
 };
@@ -38,7 +43,7 @@ export function ListView({
 }) {
   const router = useRouter();
   const [items, setItems] = useState(initialItems);
-  const [collapsed, setCollapsed] = useState<Set<string>>(new Set());
+  const [collapsed, setCollapsed] = useState<Set<string>>(new Set([PANTRY]));
   const [showDone, setShowDone] = useState(true);
   const [draft, setDraft] = useState("");
   const [queued, setQueued] = useState(0);
@@ -70,7 +75,11 @@ export function ListView({
   const done = visible.filter((i) => i.state !== "pending").length;
   const sections = useMemo(() => {
     const map = new Map<string, ListItem[]>();
-    for (const i of visible) map.set(i.aisle, [...(map.get(i.aisle) ?? []), i]);
+    // Lo que casi todos tienen en casa (aceite, sal, azúcar…) va aparte, al final.
+    for (const i of visible) {
+      const key = i.pantry_staple && !i.is_manual ? PANTRY : i.aisle;
+      map.set(key, [...(map.get(key) ?? []), i]);
+    }
     // Pendientes primero; comprados al final de la sección; "ya lo tengo" al final de todo.
     const order = { pending: 0, bought: 1, have_it: 2 } as const;
     return [...map.entries()]
@@ -211,7 +220,7 @@ export function ListView({
         const pending = list.filter((i) => i.state === "pending").length;
         if (shown.length === 0 && !showDone) return null;
         return (
-          <section key={aisle} aria-label={aisleLabel(aisle)} className="px-4">
+          <section key={aisle} aria-label={sectionLabel(aisle)} className="px-4">
             <button
               type="button"
               aria-expanded={!isCollapsed}
@@ -226,7 +235,7 @@ export function ListView({
               className="flex min-h-11 w-full items-center justify-between px-1 text-xs font-bold tracking-wide text-muted uppercase"
             >
               <span>
-                {aisleLabel(aisle)} · {pending}
+                {sectionLabel(aisle)} · {pending}
               </span>
               <ChevronDown
                 className={cn("size-4 transition-transform", isCollapsed && "-rotate-90")}
@@ -281,7 +290,7 @@ function Row({
         else if (info.offset.x < -SWIPE) onMark(item, "have_it");
       }}
       className={cn(
-        "flex touch-pan-y items-center gap-3 rounded-2xl bg-surface px-3 py-2",
+        "flex touch-pan-y items-center gap-3 rounded-2xl bg-surface px-3 py-1",
         (bought || have) && "opacity-60",
       )}
     >

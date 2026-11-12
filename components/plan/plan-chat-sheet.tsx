@@ -9,6 +9,13 @@ import { cn } from "@/lib/utils";
 
 type Update = Extract<PlanAgentEvent, { type: "plan_updated" }>;
 
+const MENU_SUGGESTIONS = [
+  "Tarta de pollo y tarta de espinaca",
+  "Pollo con ensalada 3 veces, sugerime ensaladas",
+  "Carne con puré, hecha en la olla",
+  "Ideas rápidas para cenar",
+];
+
 const SUGGESTIONS = [
   "Armame la semana",
   "Solo cenas",
@@ -26,11 +33,14 @@ export function PlanChatSheet({
   open,
   onClose,
   onPlanUpdated,
+  menu = false,
 }: {
   planId: string;
   open: boolean;
   onClose: () => void;
   onPlanUpdated: (update: Update) => void;
+  /** Modo "Mis comidas": un listado sin días ni momentos. */
+  menu?: boolean;
 }) {
   const { messages, busy, send } = usePlanChat({ planId, onPlanUpdated });
   const [text, setText] = useState("");
@@ -62,7 +72,9 @@ export function PlanChatSheet({
       )}
     >
       <header className="flex items-center justify-between gap-2 px-4 pt-3 pb-2">
-        <h2 className="font-display text-xl font-normal">Armar con IA</h2>
+        <h2 className="font-display text-xl font-normal">
+          {menu ? "Contame qué querés comer" : "Armar con IA"}
+        </h2>
         <div className="flex items-center">
           <button
             type="button"
@@ -89,9 +101,13 @@ export function PlanChatSheet({
       >
         {messages.length === 0 ? (
           <div className="flex flex-col gap-2">
-            <p className="text-sm text-muted">Contame qué querés y armo el borrador. Probá con:</p>
+            <p className="text-sm text-muted">
+              {menu
+                ? "Decime las comidas que tenés en mente y las anoto. Probá con:"
+                : "Contame qué querés y armo el borrador. Probá con:"}
+            </p>
             <ul className="flex flex-wrap gap-2">
-              {SUGGESTIONS.map((s) => (
+              {(menu ? MENU_SUGGESTIONS : SUGGESTIONS).map((s) => (
                 <li key={s}>
                   <button
                     type="button"

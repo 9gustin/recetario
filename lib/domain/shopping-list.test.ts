@@ -68,6 +68,15 @@ describe("buildShoppingList", () => {
     expect(items[0]!.sourceEntryIds).toEqual(["e1", "e2"]);
   });
 
+  it("multiplica por la cantidad de veces que se cocina", () => {
+    const items = buildShoppingList({
+      entries: [entry("e1", "2026-11-17", "r1", { quantity: 3 })],
+      recipes: [recipe("r1", 2, [{ ingredientId: "i1", name: "Pollo", quantity: 500, unit: "g" }])],
+      catalog: [],
+    });
+    expect(items[0]?.quantity).toBe(1500);
+  });
+
   it("suma unidades con gramos usando el peso unitario", () => {
     const items = buildShoppingList({
       entries: [entry("e1", "2026-11-16", "r1"), entry("e2", "2026-11-17", "r2")],

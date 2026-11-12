@@ -24,6 +24,7 @@
     "eval:plan": "tsx --conditions=react-server tests/evals/plan/run.ts",
     "eval:suggest": "tsx --conditions=react-server tests/evals/plan/suggest.ts",
     "catalog:generate": "tsx --conditions=react-server scripts/catalog/generate.ts",
+    "pro:invite": "tsx --conditions=react-server scripts/pro/create-invite.ts",
     "catalog:load": "tsx --conditions=react-server scripts/catalog/load.ts",
     "eval:prep": "tsx --conditions=react-server tests/evals/plan/prep.ts",
     "eval:diet": "tsx --conditions=react-server tests/evals/diet-plan/run.ts"

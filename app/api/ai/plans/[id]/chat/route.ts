@@ -2,11 +2,12 @@ import type Anthropic from "@anthropic-ai/sdk";
 import { NextResponse } from "next/server";
 import { runPlanAgent } from "@/lib/ai/plan-agent/agent";
 import { encodePlanSse, type PlanAgentEvent } from "@/lib/ai/plan-agent/events";
-import { buildPlanSystemPrompt } from "@/lib/ai/plan-agent/prompt";
+import { buildMenuSystemPrompt, buildPlanSystemPrompt } from "@/lib/ai/plan-agent/prompt";
+import { menuToolDefinitions, runMenuTool } from "@/lib/ai/plan-agent/tools";
 import { MODELS } from "@/lib/ai/models";
 import { checkQuota } from "@/lib/ai/rate-limit";
 import { sortSlots, slotLabel } from "@/lib/domain/meal-slots";
-import { dayLabel, formatWeekLabel, weekDays } from "@/lib/domain/week";
+import { MENU_DATE, dayLabel, formatRangeLabel, rangeDays } from "@/lib/domain/week";
 import { planChatSchema } from "@/lib/schemas/plan-chat";
 import { createClient } from "@/lib/supabase/server";
 
@@ -31,7 +32,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   // La RLS solo deja ver planes de grupos propios.
   const { data: plan } = await supabase
     .from("meal_plans")
-    .select("id, group_id, week_start, status, groups(meal_slots, name)")
+    .select("id, group_id, week_start, end_date, status, groups(meal_slots, name)")
     .eq("id", planId)
     .maybeSingle();
   if (!plan) return NextResponse.json({ error: "No encontramos el plan." }, { status: 404 });
@@ -89,13 +90,16 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     .insert({ conversation_id: convId, role: "user", content: { text: message } });
 
   const slots = sortSlots(plan.groups?.meal_slots ?? []);
-  const context = [
-    `Plan de la semana: ${formatWeekLabel(plan.week_start)} (empieza el ${plan.week_start}).`,
-    `Días: ${weekDays(plan.week_start)
-      .map((d) => `${d} (${dayLabel(d)})`)
-      .join(", ")}.`,
-    `Momentos habilitados: ${slots.map((s) => `${s} (${slotLabel(s)})`).join(", ")}.`,
-  ].join("\n");
+  const isMenu = plan.week_start === MENU_DATE;
+  const context = isMenu
+    ? "Listado: Mis comidas (sin días ni momentos)."
+    : [
+        `Plan: ${formatRangeLabel(plan.week_start, plan.end_date)} (del ${plan.week_start} al ${plan.end_date}). Cubrí solo estos días y solo los momentos que pida la persona; si no aclara, preguntá o asumí los habituales.`,
+        `Días: ${rangeDays(plan.week_start, plan.end_date)
+          .map((d) => `${d} (${dayLabel(d)})`)
+          .join(", ")}.`,
+        `Momentos habilitados: ${slots.map((s) => `${s} (${slotLabel(s)})`).join(", ")}.`,
+      ].join("\n");
 
   const encoder = new TextEncoder();
   const body = new ReadableStream({
@@ -103,22 +107,27 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
       const emit = (event: PlanAgentEvent) =>
         controller.enqueue(encoder.encode(encodePlanSse(event)));
       try {
-        const result = await runPlanAgent({
-          model: MODELS.smart,
-          system: buildPlanSystemPrompt(),
-          history,
-          userContent: `${context}\n\n---\n${message}`,
-          toolCtx: {
-            supabase,
-            userId: user.id,
-            groupId: plan.group_id,
-            planId,
-            weekStart: plan.week_start,
-            slots,
+        const result = await runPlanAgent(
+          {
+            model: MODELS.smart,
+            system: isMenu ? buildMenuSystemPrompt() : buildPlanSystemPrompt(),
+            tools: isMenu ? menuToolDefinitions() : undefined,
+            history,
+            userContent: `${context}\n\n---\n${message}`,
+            toolCtx: {
+              supabase,
+              userId: user.id,
+              groupId: plan.group_id,
+              planId,
+              weekStart: plan.week_start,
+              endDate: plan.end_date,
+              slots,
+              emit,
+            },
             emit,
           },
-          emit,
-        });
+          isMenu ? { executeTool: runMenuTool } : undefined,
+        );
         if (result.ok) {
           await supabase.from("ai_messages").insert({
             conversation_id: convId,

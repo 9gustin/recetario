@@ -1,4 +1,5 @@
 import { expect, test } from "@playwright/test";
+import { todayString, weekStartOf } from "../../lib/domain/week";
 import { createTestUser, mobileContext, signIn } from "./helpers/auth";
 import { createGroupAs } from "./helpers/recipes";
 
@@ -11,7 +12,7 @@ test("actividad: lo que navegás y hacés queda en Perfil → Actividad", async 
   await signIn(page, email, "password123");
   await page.goto(`/g/${groupId}/compras`);
   await page.waitForLoadState("networkidle");
-  await page.goto(`/g/${groupId}/plan`);
+  await page.goto(`/g/${groupId}/plan/${weekStartOf(todayString())}`);
   await page.waitForLoadState("networkidle");
 
   await expect(async () => {

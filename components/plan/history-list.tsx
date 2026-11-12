@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { PillButton } from "@/components/shared/pill-button";
-import { formatWeekLabel } from "@/lib/domain/week";
+import { formatRangeLabel } from "@/lib/domain/week";
 import { duplicatePlan } from "@/lib/plan/actions";
 import type { PlanHistoryItem } from "@/lib/plan/queries";
 
@@ -62,7 +62,7 @@ export function HistoryList({
             </span>
             <span className="min-w-0 flex-1">
               <span className="block text-[15px] font-semibold">
-                {formatWeekLabel(h.week_start)}
+                {formatRangeLabel(h.week_start, h.end_date)}
               </span>
               <span className="text-xs text-muted">
                 {h.entryCount} comidas · {h.status === "approved" ? "Aprobado" : "Borrador"}

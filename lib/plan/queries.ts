@@ -3,10 +3,11 @@ import { sortSlots, type MealSlot } from "@/lib/domain/meal-slots";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import type { Database } from "@/lib/supabase/database.types";
 import { createClient } from "@/lib/supabase/server";
-import type { PlanEntry, PlanMember, PlanRow } from "./types";
+import { MENU_DATE } from "@/lib/domain/week";
+import type { MenuEntry, PlanEntry, PlanMember, PlanRow } from "./types";
 
 export const ENTRY_COLUMNS =
-  "id, plan_id, date, slot, recipe_id, free_text, servings, diner_ids, cook_date, leftovers_of_entry_id, is_new_recipe, position, recipes(title, image_url, total_minutes, status, servings)";
+  "id, plan_id, date, slot, quantity, cooked_at, recipe_id, free_text, servings, diner_ids, cook_date, leftovers_of_entry_id, is_new_recipe, position, recipes(title, image_url, total_minutes, status, servings)";
 
 type RawEntry = Omit<PlanEntry, "recipe" | "slot" | "servings"> & {
   slot: string;
@@ -53,7 +54,7 @@ export async function getPlanByWeek(
   const supabase = await createClient();
   const { data: plan } = await supabase
     .from("meal_plans")
-    .select("id, group_id, week_start, status, title, notes, approved_at")
+    .select("id, group_id, week_start, end_date, status, title, notes, approved_at")
     .eq("group_id", groupId)
     .eq("week_start", weekStart)
     .neq("status", "archived")
@@ -63,6 +64,7 @@ export async function getPlanByWeek(
     .from("meal_plan_entries")
     .select(ENTRY_COLUMNS)
     .eq("plan_id", plan.id)
+    .not("date", "is", null)
     .order("date")
     .order("position");
   return {
@@ -87,6 +89,7 @@ export async function getPlanMembers(groupId: string): Promise<PlanMember[]> {
 export type PlanHistoryItem = {
   id: string;
   week_start: string;
+  end_date: string;
   status: string;
   entryCount: number;
   thumbs: string[];
@@ -97,9 +100,10 @@ export async function getPlanHistory(groupId: string): Promise<PlanHistoryItem[]
   const supabase = await createClient();
   const { data: plans } = await supabase
     .from("meal_plans")
-    .select("id, week_start, status")
+    .select("id, week_start, end_date, status")
     .eq("group_id", groupId)
     .neq("status", "archived")
+    .neq("week_start", MENU_DATE)
     .order("week_start", { ascending: false })
     .limit(20);
   const ids = (plans ?? []).map((p) => p.id);
@@ -119,6 +123,7 @@ export async function getPlanHistory(groupId: string): Promise<PlanHistoryItem[]
   return (plans ?? []).map((p) => ({
     id: p.id,
     week_start: p.week_start,
+    end_date: p.end_date,
     status: p.status,
     entryCount: byPlan.get(p.id)?.count ?? 0,
     thumbs: byPlan.get(p.id)?.thumbs ?? [],
@@ -148,7 +153,47 @@ export async function getPlanEntries(
     .from("meal_plan_entries")
     .select(ENTRY_COLUMNS)
     .eq("plan_id", planId)
+    .not("date", "is", null)
     .order("date")
     .order("position");
   return (data ?? []).map((r) => toPlanEntry(r as unknown as RawEntry));
+}
+
+/** Inicio del plan vigente que cubre `today`, si hay. */
+export async function getCurrentPlanStart(groupId: string, today: string): Promise<string | null> {
+  const supabase = await createClient();
+  const { data } = await supabase
+    .from("meal_plans")
+    .select("week_start")
+    .eq("group_id", groupId)
+    .neq("status", "archived")
+    .gte("end_date", today)
+    .lte("week_start", today)
+    .order("week_start", { ascending: false })
+    .limit(1)
+    .maybeSingle();
+  return data?.week_start ?? null;
+}
+
+/** El menú del grupo ("Mis comidas") con sus comidas, de la más nueva a la más vieja. */
+export async function getMenu(groupId: string): Promise<{ planId: string; entries: MenuEntry[] }> {
+  const supabase = await createClient();
+  const { data: planId } = await supabase.rpc("get_or_create_menu", { p_group_id: groupId });
+  if (!planId) return { planId: "", entries: [] };
+  const { data } = await supabase
+    .from("meal_plan_entries")
+    .select(ENTRY_COLUMNS)
+    .eq("plan_id", planId)
+    .order("created_at", { ascending: false });
+  return {
+    planId,
+    entries: (data ?? []).map((r) => {
+      const raw = r as unknown as RawEntry & { date: string | null; slot: string | null };
+      return {
+        ...toPlanEntry(raw as RawEntry),
+        date: raw.date,
+        slot: (raw.slot as MealSlot | null) ?? null,
+      } satisfies MenuEntry;
+    }),
+  };
 }

@@ -120,3 +120,7 @@ CATALOG_ENV_FILE=.env.prod pnpm catalog:load
 
 4. Generar más recetas (cuesta ~US$ 0,015 cada una): `pnpm catalog:generate` (sigue donde quedó; agregá pedidos nuevos en `scripts/catalog/briefs.ts`) y después `pnpm catalog:load`.
 5. Lo público se lee solo por RPC (`search_public_recipes`, `get_published_recipe`, `get_public_collection`, `get_public_plan`); las tablas siguen cerradas para usuarios sin sesión.
+
+## Nutricionistas (etapa 14)
+- Aplicá las migraciones `20261113090000_flexible_plans.sql`, `20261113100000_meal_list.sql` y `20261113110000_professionals.sql`.
+- Para invitar a un profesional: `CATALOG_ENV_FILE=.env.prod pnpm pro:invite "Lic. Nombre" 1 30` y pasale el código; lo canjea en `/profesionales`.

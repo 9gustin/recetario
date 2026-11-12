@@ -67,7 +67,7 @@ export async function autoLogFromEntry(
     .select("id, date, slot")
     .eq("id", parsed.data.entryId)
     .maybeSingle();
-  if (!entry) return { ok: true, data: { logged: false } };
+  if (!entry || !entry.date || !entry.slot) return { ok: true, data: { logged: false } };
   const { data: plan } = await supabase
     .from("diet_plans")
     .select("diet_plan_meals(slot, days)")

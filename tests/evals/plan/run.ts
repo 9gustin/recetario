@@ -15,7 +15,7 @@ import { buildPlanSystemPrompt } from "@/lib/ai/plan-agent/prompt";
 import { validateCandidates, type Candidate } from "@/lib/ai/plan-agent/validation";
 import { MODELS } from "@/lib/ai/models";
 import { sortSlots, type MealSlot } from "@/lib/domain/meal-slots";
-import { dayLabel, formatWeekLabel, weekDays } from "@/lib/domain/week";
+import { addDays, dayLabel, formatWeekLabel, weekDays } from "@/lib/domain/week";
 import { getPlanEntries } from "@/lib/plan/queries";
 import { addMemberToGroup, adminClient, createTestUser } from "../../e2e/helpers/auth";
 import { createGroupAs, seedRecipe } from "../../e2e/helpers/recipes";
@@ -129,6 +129,7 @@ async function main() {
           groupId,
           planId: plan.id,
           weekStart,
+          endDate: addDays(weekStart, 6),
           slots,
           emit: () => {},
         },

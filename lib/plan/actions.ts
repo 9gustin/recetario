@@ -4,6 +4,7 @@ import { logEvent } from "@/lib/activity/log";
 import { revalidatePath } from "next/cache";
 import { z } from "zod";
 import { requireUser } from "@/lib/auth";
+import { addDays } from "@/lib/domain/week";
 import { displayName, notifyGroup } from "@/lib/inbox/notify";
 import type { Database } from "@/lib/supabase/database.types";
 import { createClient } from "@/lib/supabase/server";
@@ -17,7 +18,7 @@ const date = z.string().regex(/^\d{4}-\d{2}-\d{2}$/);
 const slot = z.enum(["breakfast", "lunch", "merienda", "dinner", "snack"]);
 
 const PG_MESSAGES: Record<string, string> = {
-  "23505": "Ya hay un plan para esa semana.",
+  "23505": "Ya hay un plan que empieza ese día.",
   "23514": "Ese momento no está habilitado en este grupo.",
 };
 
@@ -28,13 +29,19 @@ const fail = (e: { code?: string } | null, fallback: string): Result<never> => (
 
 /** Crea el plan (borrador) de una semana. */
 export async function createPlan(raw: unknown): Promise<Result<{ id: string }>> {
-  const parsed = z.object({ groupId: uuid, weekStart: date }).safeParse(raw);
+  const parsed = z
+    .object({ groupId: uuid, weekStart: date, days: z.number().int().min(1).max(14).optional() })
+    .safeParse(raw);
   if (!parsed.success) return { ok: false, error: "Datos inválidos." };
   await requireUser();
   const supabase = await createClient();
   const { data, error } = await supabase
     .from("meal_plans")
-    .insert({ group_id: parsed.data.groupId, week_start: parsed.data.weekStart })
+    .insert({
+      group_id: parsed.data.groupId,
+      week_start: parsed.data.weekStart,
+      end_date: addDays(parsed.data.weekStart, (parsed.data.days ?? 7) - 1),
+    })
     .select("id")
     .single();
   if (error || !data) return fail(error, "No se pudo crear el plan.");
