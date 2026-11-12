@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { extractJsonLdRecipe, parseIsoDuration } from "./json-ld";
-import { extractMainText } from "./text";
+import { decodeEntities, extractMainText, pageLanguage } from "./text";
 
 const fixture = (name: string) => readFileSync(`tests/fixtures/recipes/${name}`, "utf8");
 
@@ -81,5 +81,19 @@ describe("extractMainText", () => {
     expect(
       extractMainText(`<body><main>${"palabra ".repeat(10_000)}</main></body>`).length,
     ).toBeLessThanOrEqual(15_000);
+  });
+});
+
+describe("decodeEntities / pageLanguage", () => {
+  it("decodifica entidades con nombre, decimales y hexadecimales", () => {
+    expect(
+      decodeEntities("&frac14; taza &amp; &frac12; cdita, 180&deg;, caf&eacute; &#233; &#xE9;"),
+    ).toBe("¼ taza & ½ cdita, 180°, café é é");
+    expect(decodeEntities("&noexiste;")).toBe("&noexiste;");
+  });
+  it("lee el idioma declarado de la página", () => {
+    expect(pageLanguage('<html lang="en-US"><head>')).toBe("en");
+    expect(pageLanguage("<html lang='es-AR'>")).toBe("es");
+    expect(pageLanguage("<html><head>")).toBeNull();
   });
 });

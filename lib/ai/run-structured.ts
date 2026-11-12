@@ -2,7 +2,7 @@ import "server-only";
 import type Anthropic from "@anthropic-ai/sdk";
 import { z } from "zod";
 import { getAnthropic } from "./client";
-import type { ModelId } from "./models";
+import { SUPPORTS_FORCED_TOOL, type ModelId } from "./models";
 
 type MessageParam = Anthropic.Messages.MessageParam;
 
@@ -74,6 +74,7 @@ export async function runStructured<T>(
   const record = deps.record ?? defaultRecord;
   const now = deps.now ?? Date.now;
   const toolName = args.toolName ?? "responder";
+  const forced = SUPPORTS_FORCED_TOOL[args.model] ?? false;
 
   const { $schema: _ignored, ...inputSchema } = z.toJSONSchema(args.schema) as Record<
     string,
@@ -109,7 +110,15 @@ export async function runStructured<T>(
         model: args.model,
         max_tokens: args.maxTokens ?? 4096,
         // El system prompt se cachea: en llamadas repetidas se paga mucho menos.
-        system: [{ type: "text", text: args.system, cache_control: { type: "ephemeral" } }],
+        system: [
+          {
+            type: "text",
+            text: forced
+              ? args.system
+              : `${args.system}\n\nIMPORTANTE: respondé únicamente llamando a la herramienta "${toolName}".`,
+            cache_control: { type: "ephemeral" },
+          },
+        ],
         messages,
         tools: [
           {
@@ -118,7 +127,7 @@ export async function runStructured<T>(
             input_schema: inputSchema as Anthropic.Messages.Tool.InputSchema,
           },
         ],
-        tool_choice: { type: "tool", name: toolName },
+        tool_choice: forced ? { type: "tool", name: toolName } : { type: "auto" },
       });
       inputTokens += res.usage?.input_tokens ?? 0;
       outputTokens += res.usage?.output_tokens ?? 0;
@@ -127,7 +136,19 @@ export async function runStructured<T>(
       const block = res.content.find((b) => b.type === "tool_use");
       if (!block || block.type !== "tool_use") {
         lastError = "El modelo no devolvió datos estructurados";
-        break;
+        // Con `auto` puede contestar con texto: se le pide una vez más que use la herramienta.
+        messages = [
+          ...messages,
+          {
+            role: "assistant",
+            content: res.content.length ? res.content : [{ type: "text", text: "..." }],
+          },
+          {
+            role: "user",
+            content: `Respondé llamando a la herramienta "${toolName}" con la estructura pedida.`,
+          },
+        ];
+        continue;
       }
 
       const parsed = args.schema.safeParse(block.input);

@@ -111,3 +111,55 @@ describe("runStructured", () => {
     expect(rows[0]).toMatchObject({ status: "error", error: "overloaded" });
   });
 });
+
+describe("runStructured con modelos que no admiten tool_choice forzado", () => {
+  it("usa tool_choice auto y refuerza en el system prompt", async () => {
+    const create = vi.fn(async () => reply({ title: "Pollo", servings: 2 }));
+    const rows: AiRunRow[] = [];
+    const res = await runStructured(
+      {
+        feature: "parse_recipe",
+        model: MODELS.smart,
+        system: "sistema",
+        content: "texto",
+        schema,
+        userId: "u1",
+      },
+      {
+        client: { messages: { create } } as unknown as MessagesClient,
+        record: async (r) => (rows.push(r), "run"),
+      },
+    );
+    expect(res.ok).toBe(true);
+    const params = (
+      create.mock.calls[0] as unknown as [Anthropic.Messages.MessageCreateParamsNonStreaming]
+    )[0];
+    expect(params.tool_choice).toEqual({ type: "auto" });
+    expect(JSON.stringify(params.system)).toContain(
+      "respondé únicamente llamando a la herramienta",
+    );
+  });
+
+  it("si contesta con texto en vez de la herramienta, le pide usarla y reintenta", async () => {
+    const textOnly = {
+      id: "m",
+      content: [{ type: "text", text: "Acá está" }],
+      usage: { input_tokens: 5, output_tokens: 5 },
+    } as unknown as Anthropic.Messages.Message;
+    const queue = [textOnly, reply({ title: "Pollo", servings: 2 })];
+    const create = vi.fn(async () => queue.shift()!);
+    const res = await runStructured(
+      {
+        feature: "parse_recipe",
+        model: MODELS.smart,
+        system: "s",
+        content: "t",
+        schema,
+        userId: "u1",
+      },
+      { client: { messages: { create } } as unknown as MessagesClient, record: async () => "run" },
+    );
+    expect(res.ok).toBe(true);
+    expect(create).toHaveBeenCalledTimes(2);
+  });
+});
