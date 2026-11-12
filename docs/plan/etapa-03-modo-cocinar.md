@@ -25,7 +25,7 @@
 - **Aceptación:** se recorre una receta entera con una mano.
 - **Fuera de alcance:** timers (T3.3), persistencia (T3.5).
 
-### T3.3 — Timers
+### [x] T3.3 — Timers
 - **Depende de:** T3.2
 - **Archivos:** `components/cooking/timers/timer-store.ts` (zustand) + test, `components/cooking/timers/step-timer.tsx`, `components/cooking/timers/floating-timers.tsx`, `lib/sound.ts`.
 - **Pasos:**
@@ -84,3 +84,5 @@
 - T3.1: las sesiones solo las lee su dueño (la tabla tiene notas y fotos); el resto del grupo ve solo fecha, puntaje y quién cocinó vía `recipe_last_cooked` (security definer, valida membresía). `user_id` toma `auth.uid()` por defecto. `pending_edits` es `jsonb not null default '[]'`. 8 tests pgTAP en `03_cooking.test.sql`.
 
 - T3.2: la ruta vive en el grupo `app/(cook)/…/cocinar` (mismo URL, layout propio sin barras y con `DayPartProvider force="noche"` + `data-daypart="noche"` en el contenedor para que el tema salga bien desde el servidor). Se instaló `framer-motion` y `zustand` (nombrados en el plan). Los pasos creados por el formulario no traen `ingredient_ids`, así que `ingredientsForStep` (lib/domain/cooking-display.ts) usa los ids si existen y, si no, los ingredientes nombrados en el texto del paso. Zonas de tap (tercios izquierdo/derecho) solo en pantallas de paso; la mise en place y la final son interactivas y no las tienen. El botón Cocinar del detalle ya está habilitado. Helper de e2e `seedRecipe` en `tests/e2e/helpers/recipes.ts` (crea recetas por la API como el usuario).
+
+- T3.3: los timers se guardan con `endsAt` (timestamp) en `localStorage` (zustand `persist` con `skipHydration`, se rehidrata en `TimerEngine`) y se descartan a las 12 h. Alertas al terminar: pitidos generados con Web Audio (`lib/sound.ts`, se desbloquea con el tap en Iniciar), `navigator.vibrate`, toast persistente y notificación local (`lib/notify.ts`; pide permiso con un diálogo explicativo la primera vez). Si la app estaba en segundo plano, las alertas saltan al volver (JS suspendido no puede avisar antes; el aviso con la app cerrada llega con Web Push en la Etapa 10). Los chips flotantes se muestran para cualquier timer de otro paso (activo o pasivo). En el e2e no se usa `page.clock`: falsear el reloj traba las animaciones de Framer Motion; se simula el tiempo en segundo plano adelantando `endsAt` en localStorage y recargando.

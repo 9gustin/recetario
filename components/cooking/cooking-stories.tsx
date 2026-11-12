@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { AnimatePresence, motion, type PanInfo } from "framer-motion";
 import { Check, PartyPopper, Play, X } from "lucide-react";
@@ -18,6 +18,9 @@ import type { RecipeDetail } from "@/lib/recipes/queries";
 import { MiseEnPlace } from "./mise-en-place";
 import { ProgressSegments } from "./progress-segments";
 import { StepCard } from "./step-card";
+import { FloatingTimers } from "./timers/floating-timers";
+import { StepTimer } from "./timers/step-timer";
+import { TimerEngine } from "./timers/timer-engine";
 import { useCookingReducer } from "./use-cooking-reducer";
 
 const SWIPE_DISTANCE = 70;
@@ -52,6 +55,11 @@ export function CookingStories({ groupId, recipe }: Props) {
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [dispatch]);
+
+  const goToStep = useCallback(
+    (stepIdx: number) => dispatch({ type: "GOTO", index: stepIdx + 1 }),
+    [dispatch],
+  );
 
   function advance() {
     dispatch({ type: "COMPLETE" });
@@ -94,6 +102,13 @@ export function CookingStories({ groupId, recipe }: Props) {
           <X className="size-5" aria-hidden="true" />
         </button>
       </header>
+
+      <TimerEngine onGoToStep={goToStep} />
+      <FloatingTimers
+        recipeId={recipe.id}
+        currentStepIndex={step ? stepIndex : null}
+        onGoToStep={goToStep}
+      />
 
       <div className="relative min-h-0 flex-1">
         {step ? (
@@ -152,6 +167,16 @@ export function CookingStories({ groupId, recipe }: Props) {
                 ingredients={ingredientsForStep(step, recipe.ingredients)}
                 baseServings={recipe.servings}
                 servings={state.servings}
+                timerCard={
+                  step.duration_seconds ? (
+                    <StepTimer
+                      recipeId={recipe.id}
+                      stepIndex={stepIndex}
+                      durationSeconds={step.duration_seconds}
+                      passive={step.timer_kind === "passive"}
+                    />
+                  ) : undefined
+                }
               />
             ) : (
               <div className="flex h-full flex-col items-center justify-center gap-4 text-center">
