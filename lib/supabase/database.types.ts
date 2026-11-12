@@ -1064,6 +1064,11 @@ isOneToOne: false
 "prepare_account_deletion":
 { Args: { "p_user_id": string }; Returns: undefined
                            },
+"public_recipe_ingredients":
+{ Args: { "p_ids": (string)[] }; Returns: {
+              "ingredient_id": string,"optional": boolean,"pos": number,"raw_text": string,"recipe_id": string
+            }[]
+                           },
 "publish_plan":
 { Args: { "p_description"?: string,"p_plan_id": string,"p_title": string }; Returns: string
                            },

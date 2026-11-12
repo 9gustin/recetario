@@ -1,0 +1,680 @@
+[
+  {
+    "title": "Berenjenas gratinadas con tomate y mozzarella",
+    "description": "Rodajas de berenjena doradas al horno, cubiertas con salsa de tomate y mozzarella derretida. Salen sin freír y quedan tiernas.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 25,
+    "difficulty": "facil",
+    "tags": [
+      "verdura",
+      "vegetariano",
+      "horno",
+      "italiana",
+      "cena",
+      "una bandeja"
+    ],
+    "ingredients": [
+      "2 berenjenas medianas",
+      "3 cdas de aceite de oliva",
+      "1 lata de tomates perita pisados",
+      "1 diente de ajo",
+      "200 g de mozzarella en fetas o rallada",
+      "2 cdas de queso rallado",
+      "1 cdita de orégano",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá el horno a 220 °C y cubrí una placa con papel manteca.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cortá las berenjenas en rodajas de 1 cm, pincelalas con aceite y salalas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Hacelas en el horno hasta que se doren, dándolas vuelta a la mitad.",
+        "minutes": 15,
+        "passive": true
+      },
+      {
+        "instruction": "Mientras tanto, mezclá los tomates con el ajo picado, orégano, sal y pimienta.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Poné una cucharada de salsa sobre cada rodaja y cubrí con mozzarella y queso rallado.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Gratiná hasta que el queso burbujee y se dore.",
+        "minutes": 8,
+        "passive": true
+      },
+      {
+        "instruction": "Serví caliente, con un hilo de aceite de oliva.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Horno a 180 °C por 10 minutos para que no se ablande.",
+      "tip": "Para freezar, hacelas sin la mozzarella y agregala al recalentar."
+    }
+  },
+  {
+    "title": "Coliflor gratinada con salsa blanca y nuez moscada",
+    "description": "Ramitos de coliflor hervidos apenas y cubiertos con una salsa blanca cremosa y mucho queso gratinado. Un clásico de horno que sale rápido.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 28,
+    "difficulty": "media",
+    "tags": [
+      "verdura",
+      "vegetariano",
+      "horno",
+      "cena",
+      "guarnición",
+      "invierno"
+    ],
+    "ingredients": [
+      "1 coliflor mediana (unos 800 g)",
+      "2 cdas de manteca",
+      "2 cdas de harina",
+      "2 tazas de leche",
+      "1 pizca de nuez moscada",
+      "100 g de queso rallado",
+      "2 cdas de pan rallado",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá el horno a 220 °C y cortá la coliflor en ramitos chicos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Herví los ramitos en agua con sal hasta que estén apenas tiernos y escurrilos bien.",
+        "minutes": 8,
+        "passive": false
+      },
+      {
+        "instruction": "Derretí la manteca en una cacerola, sumá la harina y revolvé un minuto.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá la leche de a poco, batiendo, y cociná hasta que espese.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Condimentá la salsa con nuez moscada, sal, pimienta y la mitad del queso.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Acomodá la coliflor en una fuente, cubrila con la salsa y espolvoreá el resto del queso y el pan rallado.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Gratiná hasta que quede dorada.",
+        "minutes": 14,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Horno a 180 °C por 12 minutos, tapada con papel aluminio al principio.",
+      "tip": "Escurrí muy bien la coliflor para que la salsa no quede aguada."
+    }
+  },
+  {
+    "title": "Zapallitos rellenos con choclo y queso",
+    "description": "Zapallitos redondos ahuecados y rellenos con su propia pulpa, choclo, cebolla y queso cremoso. Se gratinan al horno y quedan jugosos.",
+    "servings": 4,
+    "prep_minutes": 12,
+    "cook_minutes": 25,
+    "difficulty": "media",
+    "tags": [
+      "verdura",
+      "vegetariano",
+      "horno",
+      "almuerzo",
+      "cena",
+      "argentina"
+    ],
+    "ingredients": [
+      "4 zapallitos redondos",
+      "1 lata de choclo en granos",
+      "1/2 cebolla",
+      "1 cda de aceite",
+      "150 g de queso cremoso en cubos",
+      "3 cdas de pan rallado",
+      "2 cdas de queso rallado",
+      "1 cdita de pimentón",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá el horno a 200 °C.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Herví los zapallitos enteros en agua con sal hasta que se puedan pinchar.",
+        "minutes": 8,
+        "passive": false
+      },
+      {
+        "instruction": "Cortales una tapa, ahuecalos con una cuchara y picá la pulpa.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Rehogá la cebolla picada en el aceite, sumá la pulpa y el choclo escurrido y cociná unos minutos.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Apagá el fuego y mezclá con el queso cremoso, el pimentón, sal y pimienta.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Rellená los zapallitos y cubrilos con pan rallado y queso rallado.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Hornealos hasta que estén dorados por arriba.",
+        "minutes": 15,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 45,
+      "reheat": "Horno a 180 °C por 10 minutos o microondas 2 minutos.",
+      "tip": "Podés usar las tapitas como sombrerito al servir."
+    }
+  },
+  {
+    "title": "Gajos de batata al horno con pimentón y ajo",
+    "description": "Batatas en gajos finos asadas con pimentón dulce, ajo y romero. Quedan doradas por fuera y cremosas por dentro.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 28,
+    "difficulty": "facil",
+    "tags": [
+      "verdura",
+      "vegano",
+      "sin gluten",
+      "sin lácteos",
+      "horno",
+      "guarnición",
+      "una bandeja"
+    ],
+    "ingredients": [
+      "3 batatas medianas",
+      "3 cdas de aceite de oliva",
+      "2 cditas de pimentón dulce",
+      "2 dientes de ajo",
+      "1 cdita de romero seco",
+      "sal y pimienta a gusto",
+      "1/2 limón"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá el horno a 230 °C.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Lavá las batatas y cortalas en gajos finos, sin pelar.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclalos en un bol con aceite, pimentón, ajo picado, romero, sal y pimienta.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Extendelos en una placa, sin amontonar, para que se doren.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Hornealos y dalos vuelta a la mitad de la cocción.",
+        "minutes": 28,
+        "passive": true
+      },
+      {
+        "instruction": "Servilos con unas gotas de limón.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Horno a 200 °C por 8 minutos para recuperar el crocante.",
+      "tip": "Cuanto más finos los gajos, más crocantes quedan."
+    }
+  },
+  {
+    "title": "Tomates gratinados a la provenzal",
+    "description": "Mitades de tomate cubiertas con ajo, perejil y pan rallado, gratinadas hasta que quedan tiernas con una costra crocante.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 20,
+    "difficulty": "facil",
+    "tags": [
+      "verdura",
+      "vegano",
+      "sin lácteos",
+      "horno",
+      "guarnición",
+      "verano",
+      "mediterránea"
+    ],
+    "ingredients": [
+      "4 tomates firmes",
+      "4 cdas de pan rallado",
+      "2 dientes de ajo",
+      "3 cdas de perejil picado",
+      "4 cdas de aceite de oliva",
+      "1 cdita de orégano",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá el horno a 200 °C.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cortá los tomates al medio y salalos apenas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclá el pan rallado con ajo picado, perejil, orégano, pimienta y la mitad del aceite.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Acomodá los tomates con el corte hacia arriba en una fuente aceitada.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cubrilos con la mezcla y rociá el aceite que queda.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Hornealos hasta que la superficie esté dorada y los tomates blandos.",
+        "minutes": 20,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Horno a 180 °C por 8 minutos.",
+      "tip": "Elegí tomates firmes, los muy maduros se deshacen."
+    }
+  },
+  {
+    "title": "Champiñones rellenos con queso crema y perejil",
+    "description": "Champiñones grandes rellenos con una mezcla cremosa de queso, ajo y hierbas, gratinados hasta dorar. Van bien como entrada o guarnición.",
+    "servings": 4,
+    "prep_minutes": 12,
+    "cook_minutes": 18,
+    "difficulty": "facil",
+    "tags": [
+      "verdura",
+      "vegetariano",
+      "horno",
+      "para compartir",
+      "cena"
+    ],
+    "ingredients": [
+      "12 champiñones grandes",
+      "150 g de queso crema",
+      "2 dientes de ajo",
+      "3 cdas de perejil picado",
+      "3 cdas de pan rallado",
+      "50 g de queso rallado",
+      "1 cda de aceite de oliva",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá el horno a 200 °C.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Limpiá los champiñones con un paño y sacales los tallos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Picá los tallos y saltealos con el ajo en el aceite.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Mezclalos con el queso crema, el perejil, sal y pimienta.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Rellená cada sombrerito y acomodalos en una placa.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Espolvoreá con pan rallado y queso rallado.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Hornealos hasta que estén dorados y tiernos.",
+        "minutes": 15,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Horno a 180 °C por 8 minutos.",
+      "tip": "Los champiñones sueltan agua: apoyalos sobre la placa sin apilar."
+    }
+  },
+  {
+    "title": "Zanahorias asadas con miel, comino y limón",
+    "description": "Bastones de zanahoria asados hasta caramelizar, con un glaseado de miel, comino y limón. Dulces, especiados y muy fáciles.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 27,
+    "difficulty": "facil",
+    "tags": [
+      "verdura",
+      "vegetariano",
+      "sin gluten",
+      "horno",
+      "guarnición",
+      "una bandeja"
+    ],
+    "ingredients": [
+      "600 g de zanahorias",
+      "3 cdas de aceite de oliva",
+      "1 cdita de comino molido",
+      "1 cda de miel",
+      "1 cda de jugo de limón",
+      "1 cda de semillas de sésamo",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá el horno a 220 °C.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Pelá las zanahorias y cortalas en bastones del mismo grosor.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclalas con aceite, comino, sal y pimienta y extendelas en una placa.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Hornealas, dándolas vuelta a la mitad.",
+        "minutes": 20,
+        "passive": true
+      },
+      {
+        "instruction": "Mezclá la miel con el jugo de limón y pincelá las zanahorias.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Volvé al horno hasta que se caramelicen.",
+        "minutes": 6,
+        "passive": true
+      },
+      {
+        "instruction": "Serví con el sésamo por encima.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Sartén a fuego medio 4 minutos o horno a 200 °C 8 minutos.",
+      "tip": "Agregá la miel al final para que no se queme."
+    }
+  },
+  {
+    "title": "Puerros gratinados con jamón y queso",
+    "description": "Puerros tiernos envueltos en jamón cocido, cubiertos con crema y queso y gratinados. Un plato sencillo, suave y reconfortante.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 22,
+    "difficulty": "media",
+    "tags": [
+      "verdura",
+      "horno",
+      "cena",
+      "almuerzo",
+      "una bandeja"
+    ],
+    "ingredients": [
+      "4 puerros medianos",
+      "8 fetas de jamón cocido",
+      "150 ml de crema de leche",
+      "150 g de queso cremoso o mozzarella rallada",
+      "2 cdas de queso rallado",
+      "1 pizca de nuez moscada",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá el horno a 220 °C.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cortá las raíces y las hojas verdes duras de los puerros y lavalos bien.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Herví los puerros enteros en agua con sal hasta que estén tiernos y escurrilos bien.",
+        "minutes": 8,
+        "passive": false
+      },
+      {
+        "instruction": "Cortalos al medio a lo largo y envolvé cada mitad con una feta de jamón.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Acomodalos en una fuente y cubrilos con la crema, nuez moscada, sal y pimienta.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Sumá el queso cremoso y el queso rallado por encima.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Gratiná hasta que esté dorado y burbujeante.",
+        "minutes": 12,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Horno a 180 °C por 10 minutos o microondas 2 minutos.",
+      "tip": "Apretá los puerros con un repasador para sacarles el agua."
+    }
+  },
+  {
+    "title": "Morrones rellenos con ricota y aceitunas",
+    "description": "Mitades de morrón rojo rellenas con ricota, huevo, aceitunas y albahaca, horneadas hasta que el relleno cuaja y se dora.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 28,
+    "difficulty": "facil",
+    "tags": [
+      "verdura",
+      "vegetariano",
+      "horno",
+      "almuerzo",
+      "cena",
+      "mediterránea"
+    ],
+    "ingredients": [
+      "4 morrones rojos",
+      "250 g de ricota",
+      "1 huevo",
+      "10 aceitunas verdes en rodajas",
+      "6 hojas de albahaca",
+      "4 cdas de queso rallado",
+      "1 cda de aceite de oliva",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá el horno a 200 °C.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cortá los morrones al medio a lo largo y sacales las semillas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclá la ricota con el huevo, las aceitunas, la albahaca picada, la mitad del queso rallado, sal y pimienta.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Acomodá los morrones en una fuente, pincelalos con aceite y rellenalos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Espolvoreá con el queso rallado restante y tapá con papel aluminio.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Hornealos tapados.",
+        "minutes": 15,
+        "passive": true
+      },
+      {
+        "instruction": "Destapá y horneá hasta que el relleno se dore.",
+        "minutes": 12,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 45,
+      "reheat": "Horno a 180 °C por 12 minutos o microondas 2 minutos.",
+      "tip": "Si los morrones son grandes, cortalos finos en la base para que se paren."
+    }
+  },
+  {
+    "title": "Papas gratinadas cremosas con cebolla",
+    "description": "Papas en rodajas finas cocidas en leche y crema, cubiertas con queso y gratinadas. Precocinarlas en la cacerola las deja listas en poco tiempo.",
+    "servings": 4,
+    "prep_minutes": 12,
+    "cook_minutes": 25,
+    "difficulty": "media",
+    "tags": [
+      "verdura",
+      "vegetariano",
+      "horno",
+      "guarnición",
+      "invierno",
+      "una bandeja"
+    ],
+    "ingredients": [
+      "700 g de papas",
+      "1 cebolla",
+      "1 taza de leche",
+      "1/2 taza de crema de leche",
+      "1 diente de ajo",
+      "1 pizca de nuez moscada",
+      "120 g de queso rallado",
+      "1 cda de manteca",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá el horno a 220 °C y untá una fuente con manteca.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Pelá las papas y cortalas en rodajas muy finas, de 2 o 3 mm.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Poné en una cacerola la leche, la crema, el ajo picado, la cebolla en aros finos, nuez moscada, sal y pimienta.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Sumá las papas y cociná a fuego medio, revolviendo seguido, hasta que estén casi tiernas.",
+        "minutes": 10,
+        "passive": false
+      },
+      {
+        "instruction": "Pasá todo a la fuente y emparejá la superficie.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cubrí con el queso rallado.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Gratiná hasta que quede bien dorada.",
+        "minutes": 15,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Horno a 180 °C por 12 minutos o microondas 2 minutos.",
+      "tip": "Dejala reposar 5 minutos antes de cortar para que se asiente."
+    }
+  }
+]

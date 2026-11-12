@@ -7,6 +7,7 @@ import { searchRecipes } from "@/lib/recipes/actions";
 import type { RecipeListItem } from "@/lib/recipes/queries";
 import { RECIPES_PAGE_SIZE } from "@/lib/schemas/recipe-search";
 import { EMPTY_FILTERS, RecipeFilters, hasActiveFilters, type RecipeFilterState } from "./filters";
+import { CatalogSection } from "./catalog-section";
 import { NewRecipeMenu } from "./new-recipe-menu";
 import { RecipeCard } from "./recipe-card";
 
@@ -156,6 +157,8 @@ export function RecipeList({ groupId, topTags, total, members = [], initial }: P
           {loadingMore ? "Cargando…" : ""}
         </div>
       ) : null}
+
+      {status === "ready" ? <CatalogSection groupId={groupId} q={q} /> : null}
 
       <NewRecipeMenu groupId={groupId} />
     </div>

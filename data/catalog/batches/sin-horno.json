@@ -1,0 +1,621 @@
+[
+  {
+    "title": "Shakshuka de morrón y pimentón en sartén",
+    "description": "Huevos escalfados en una salsa especiada de tomate y morrón. Se hace en una sola sartén y se come con pan para mojar.",
+    "servings": 2,
+    "prep_minutes": 7,
+    "cook_minutes": 17,
+    "difficulty": "facil",
+    "tags": [
+      "huevo",
+      "vegetariano",
+      "sin gluten",
+      "una olla",
+      "sin horno",
+      "almuerzo",
+      "cena",
+      "rápido"
+    ],
+    "ingredients": [
+      "1 cda de aceite de oliva",
+      "1 cebolla",
+      "1 morrón rojo",
+      "2 dientes de ajo",
+      "1 lata de tomates perita triturados",
+      "1 cdita de pimentón dulce",
+      "1/2 cdita de comino",
+      "1 pizca de ají molido",
+      "4 huevos",
+      "perejil picado a gusto",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Picá la cebolla y el morrón en cubitos y laminá el ajo."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén y rehogá la cebolla y el morrón hasta que se ablanden.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el ajo, el pimentón, el comino y el ají molido y mezclá medio minuto.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá los tomates, salpimentá y cociná a fuego medio hasta que la salsa espese.",
+        "minutes": 7,
+        "passive": true
+      },
+      {
+        "instruction": "Hacé cuatro huecos en la salsa y poné un huevo en cada uno."
+      },
+      {
+        "instruction": "Tapá la sartén y cociná hasta que las claras cuajen y las yemas queden a tu gusto.",
+        "minutes": 4,
+        "passive": true
+      },
+      {
+        "instruction": "Espolvoreá con perejil y llevá la sartén a la mesa."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Recalentá la salsa en sartén a fuego bajo; los huevos quedan mejor recién hechos.",
+      "tip": "Si querés guardar, congelá solo la salsa sin huevos y sumá huevos frescos al recalentar."
+    }
+  },
+  {
+    "title": "Revuelto gramajo con papas pay y jamón",
+    "description": "Clásico argentino de bodegón: papas fritas finitas, jamón cocido y huevos revueltos cremosos. Rápido y contundente.",
+    "servings": 2,
+    "prep_minutes": 8,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "huevo",
+      "argentina",
+      "sin horno",
+      "almuerzo",
+      "cena",
+      "rápido"
+    ],
+    "ingredients": [
+      "400 g de papas",
+      "150 ml de aceite de girasol",
+      "150 g de jamón cocido",
+      "4 huevos",
+      "1 cebolla de verdeo",
+      "1 cda de manteca",
+      "sal a gusto",
+      "pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Pelá las papas y cortalas en bastones bien finos; secalas con un repasador."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén profunda y freí las papas por tandas hasta que estén doradas.",
+        "minutes": 10,
+        "passive": false
+      },
+      {
+        "instruction": "Escurrilas sobre papel absorbente y salalas."
+      },
+      {
+        "instruction": "Cortá el jamón en tiritas y picá el verdeo."
+      },
+      {
+        "instruction": "Derretí la manteca en otra sartén y saltá el verdeo y el jamón un minuto.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Batí los huevos con sal y pimienta, volcalos en la sartén y revolvé a fuego bajo hasta que estén cremosos.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá las papas, mezclá apenas y serví enseguida."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Recalentá en sartén a fuego medio un par de minutos.",
+      "tip": "Las papas pierden crocancia al guardarlas; conviene freírlas al momento."
+    }
+  },
+  {
+    "title": "Quesadillas de espinaca y queso cremoso",
+    "description": "Tortillas de trigo rellenas de espinaca salteada y queso fundido, doradas en sartén. Ideales para una cena rápida.",
+    "servings": 2,
+    "prep_minutes": 8,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "mexicana",
+      "vegetariano",
+      "rápido",
+      "sin horno",
+      "cena",
+      "para chicos"
+    ],
+    "ingredients": [
+      "4 tortillas de trigo medianas",
+      "200 g de queso cremoso",
+      "150 g de espinaca fresca",
+      "1 cebolla de verdeo",
+      "1 cdita de pimentón dulce",
+      "1 cda de aceite",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Lavá la espinaca, sacale los tallos duros y picala; picá también el verdeo."
+      },
+      {
+        "instruction": "Saltá el verdeo y la espinaca con media cucharada de aceite hasta que se achique.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Condimentá con pimentón, sal y pimienta y retirá del fuego."
+      },
+      {
+        "instruction": "Cortá el queso en fetas finas o rallalo grueso."
+      },
+      {
+        "instruction": "Poné queso y espinaca sobre la mitad de cada tortilla y doblá al medio."
+      },
+      {
+        "instruction": "Dorá cada quesadilla en una sartén con un poco de aceite, a fuego medio, hasta que el queso se funda.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Cortalas en triángulos y servilas calientes."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": 30,
+      "reheat": "Recalentá en sartén seca a fuego medio-bajo hasta que se tuesten de nuevo.",
+      "tip": "Para freezar, envolvelas de a una y descongelalas en heladera antes de recalentar."
+    }
+  },
+  {
+    "title": "Tortitas de choclo y queso a la sartén",
+    "description": "Tortitas doradas hechas con granos de choclo, huevo y queso rallado. Salen en minutos y a los chicos les encantan.",
+    "servings": 3,
+    "prep_minutes": 8,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "vegetariano",
+      "económico",
+      "para chicos",
+      "sin horno",
+      "rápido",
+      "almuerzo"
+    ],
+    "ingredients": [
+      "1 lata de choclo en granos (300 g)",
+      "2 huevos",
+      "4 cdas de harina",
+      "80 g de queso rallado",
+      "1 cebolla de verdeo",
+      "1 pizca de pimentón dulce",
+      "sal y pimienta a gusto",
+      "aceite para la sartén"
+    ],
+    "steps": [
+      {
+        "instruction": "Escurrí bien el choclo y picá el verdeo bien fino."
+      },
+      {
+        "instruction": "Mezclá en un bol el choclo, el verdeo, los huevos, la harina y el queso rallado."
+      },
+      {
+        "instruction": "Condimentá con sal, pimienta y pimentón; la mezcla tiene que quedar espesa."
+      },
+      {
+        "instruction": "Calentá un chorrito de aceite en una sartén a fuego medio."
+      },
+      {
+        "instruction": "Poné cucharadas de mezcla y aplastalas apenas; cociná hasta dorar de un lado.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Dalas vuelta y dorá el otro lado.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Pasalas a papel absorbente y servilas con limón o salsa de yogur."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Recalentá en sartén con apenas aceite o en tostadora hasta que estén crocantes.",
+      "tip": "Congelalas separadas con papel manteca para que no se peguen."
+    }
+  },
+  {
+    "title": "Panqueques con dulce de leche",
+    "description": "Panqueques finitos de masa simple, rellenos con dulce de leche y enrollados. Un postre o merienda argentina de toda la vida.",
+    "servings": 4,
+    "prep_minutes": 14,
+    "cook_minutes": 10,
+    "difficulty": "media",
+    "tags": [
+      "postre",
+      "merienda",
+      "argentina",
+      "para chicos",
+      "vegetariano",
+      "sin horno"
+    ],
+    "ingredients": [
+      "1 taza de harina 0000",
+      "250 ml de leche",
+      "2 huevos",
+      "1 cda de manteca derretida",
+      "1 pizca de sal",
+      "1 cdita de esencia de vainilla",
+      "200 g de dulce de leche",
+      "manteca o aceite para la sartén"
+    ],
+    "steps": [
+      {
+        "instruction": "Batí los huevos con la leche, la manteca derretida, la vainilla y la sal."
+      },
+      {
+        "instruction": "Incorporá la harina de a poco y batí hasta que no queden grumos.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Dejá descansar la masa para que se hidrate.",
+        "minutes": 8,
+        "passive": true
+      },
+      {
+        "instruction": "Calentá una sartén antiadherente y pincelala con un poco de manteca."
+      },
+      {
+        "instruction": "Volcá un cucharón de masa y girá la sartén para cubrir el fondo."
+      },
+      {
+        "instruction": "Cociná hasta que se dore el borde, dalo vuelta y cociná 20 segundos más.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Repetí con el resto de la masa y apilá los panqueques."
+      },
+      {
+        "instruction": "Untalos con dulce de leche, enrollalos y servilos."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Calentalos unos segundos en sartén o microondas.",
+      "tip": "Freezá los panqueques sin relleno, separados con papel manteca."
+    }
+  },
+  {
+    "title": "Bananas caramelizadas con dulce de leche y nueces",
+    "description": "Bananas doradas en manteca y azúcar con canela, terminadas con dulce de leche y nueces. Postre express para sorprender.",
+    "servings": 3,
+    "prep_minutes": 5,
+    "cook_minutes": 8,
+    "difficulty": "facil",
+    "tags": [
+      "postre",
+      "fruta",
+      "rápido",
+      "vegetariano",
+      "sin horno"
+    ],
+    "ingredients": [
+      "3 bananas maduras pero firmes",
+      "2 cdas de manteca",
+      "2 cdas de azúcar",
+      "1/2 cdita de canela",
+      "3 cdas de dulce de leche",
+      "30 g de nueces",
+      "1 cda de agua"
+    ],
+    "steps": [
+      {
+        "instruction": "Pelá las bananas y cortalas al medio a lo largo."
+      },
+      {
+        "instruction": "Picá las nueces grueso."
+      },
+      {
+        "instruction": "Derretí la manteca con el azúcar en una sartén a fuego medio."
+      },
+      {
+        "instruction": "Poné las bananas con el lado cortado hacia abajo y dorá sin moverlas.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Dalas vuelta con cuidado, espolvoreá la canela y cociná un minuto más.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el dulce de leche con el agua y mové la sartén hasta que se haga una salsa lisa.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Serví con la salsa por encima y las nueces."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Calentá apenas en sartén a fuego bajo.",
+      "tip": "Usá bananas firmes; si están muy blandas se deshacen en la sartén."
+    }
+  },
+  {
+    "title": "Provoleta a la sartén con tomate y orégano",
+    "description": "Rodajas de provolone doradas hasta quedar crocantes por fuera y fundidas por dentro, con tomate fresco y orégano.",
+    "servings": 3,
+    "prep_minutes": 5,
+    "cook_minutes": 8,
+    "difficulty": "facil",
+    "tags": [
+      "argentina",
+      "snack",
+      "para compartir",
+      "vegetariano",
+      "rápido",
+      "sin horno"
+    ],
+    "ingredients": [
+      "300 g de queso provolone en 2 rodajas gruesas",
+      "1 tomate",
+      "1 cda de aceite de oliva",
+      "1 cdita de orégano",
+      "1 pizca de ají molido",
+      "pan para acompañar"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá el tomate en cubitos y condimentalo con aceite y sal."
+      },
+      {
+        "instruction": "Calentá una sartén antiadherente bien caliente, sin aceite."
+      },
+      {
+        "instruction": "Poné las rodajas de provolone y dorá hasta que se forme una costra.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Dalas vuelta con una espátula fina y dorá el otro lado.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Bajá el fuego, espolvoreá orégano y ají molido y dejá que se ablande el centro.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Serví enseguida con el tomate y pan tostado."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Calentá en sartén a fuego medio; pierde la textura, conviene comerla recién hecha.",
+      "tip": "Usá una espátula muy fina para despegarla sin romper la costra."
+    }
+  },
+  {
+    "title": "Curry de papas y arvejas con jengibre",
+    "description": "Curry vegano de papas y arvejas con cebolla, tomate y especias. Se cocina en una olla y es perfecto para mojar con pan.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 17,
+    "difficulty": "facil",
+    "tags": [
+      "india",
+      "vegano",
+      "sin lácteos",
+      "sin gluten",
+      "una olla",
+      "económico",
+      "sin horno",
+      "almuerzo"
+    ],
+    "ingredients": [
+      "500 g de papas",
+      "1 cebolla",
+      "2 dientes de ajo",
+      "1 cda de jengibre rallado",
+      "2 cda de aceite",
+      "2 cdita de curry en polvo",
+      "1/2 cdita de cúrcuma",
+      "1 lata de tomates triturados",
+      "150 g de arvejas congeladas",
+      "200 ml de agua",
+      "cilantro o perejil a gusto",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Pelá las papas y cortalas en cubos de 1,5 cm para que se cocinen rápido."
+      },
+      {
+        "instruction": "Picá la cebolla y el ajo."
+      },
+      {
+        "instruction": "Calentá el aceite en una olla y rehogá la cebolla hasta que esté transparente.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el ajo, el jengibre, el curry y la cúrcuma y mezclá medio minuto.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá los tomates, el agua, las papas y sal; llevá a hervor."
+      },
+      {
+        "instruction": "Tapá y cociná a fuego medio hasta que las papas estén casi tiernas.",
+        "minutes": 9,
+        "passive": true
+      },
+      {
+        "instruction": "Sumá las arvejas y cociná destapado hasta que la salsa espese.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Serví con cilantro picado."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Recalentá en olla con un chorrito de agua a fuego bajo.",
+      "tip": "Mejora al día siguiente porque las especias se asientan."
+    }
+  },
+  {
+    "title": "Berenjenas salteadas con ajo, soja y sésamo",
+    "description": "Cubos de berenjena salteados y glaseados con salsa de soja, miel y ajo. Quedan tiernas y brillantes, ideales con arroz.",
+    "servings": 3,
+    "prep_minutes": 8,
+    "cook_minutes": 14,
+    "difficulty": "facil",
+    "tags": [
+      "asiática",
+      "verdura",
+      "guarnición",
+      "vegetariano",
+      "sin lácteos",
+      "rápido",
+      "sin horno"
+    ],
+    "ingredients": [
+      "2 berenjenas medianas (600 g)",
+      "3 cdas de aceite",
+      "3 dientes de ajo",
+      "2 cdas de salsa de soja",
+      "1 cda de miel",
+      "1 cda de vinagre de arroz o de manzana",
+      "1 cdita de jengibre rallado",
+      "1 cebolla de verdeo",
+      "1 cda de semillas de sésamo",
+      "1 pizca de ají molido"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá las berenjenas en cubos de 2 cm."
+      },
+      {
+        "instruction": "Mezclá en un vasito la soja, la miel, el vinagre y el jengibre."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén grande y salteá la berenjena a fuego medio-alto.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Bajá el fuego, tapá y cociná hasta que esté tierna por dentro.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Agregá el ajo laminado y el ají y salteá un minuto.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Volcá la salsa y mezclá hasta que se glasee.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Serví con verdeo picado y sésamo por encima."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Recalentá en sartén a fuego medio con una cucharada de agua.",
+      "tip": "Si la sartén se seca, sumá un chorrito de agua en vez de más aceite."
+    }
+  },
+  {
+    "title": "Chai casero con leche y especias",
+    "description": "Bebida caliente de té negro, leche, canela, jengibre y clavo de olor, cocinada en una olla. Perfecta para la merienda.",
+    "servings": 3,
+    "prep_minutes": 3,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "bebida",
+      "india",
+      "merienda",
+      "invierno",
+      "rápido",
+      "sin horno",
+      "vegetariano"
+    ],
+    "ingredients": [
+      "500 ml de agua",
+      "500 ml de leche",
+      "3 saquitos de té negro",
+      "1 palito de canela",
+      "4 clavos de olor",
+      "3 cardamomos",
+      "1 cda de jengibre rallado",
+      "2 cdas de azúcar"
+    ],
+    "steps": [
+      {
+        "instruction": "Poné el agua en una olla con la canela, los clavos, el cardamomo y el jengibre."
+      },
+      {
+        "instruction": "Llevá a hervor y cociná a fuego bajo para que suelte los aromas.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Sumá los saquitos de té y dejá infusionar.",
+        "minutes": 3,
+        "passive": true
+      },
+      {
+        "instruction": "Agregá la leche y el azúcar y calentá sin que hierva fuerte.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Retirá los saquitos y colá la bebida directo en las tazas."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Calentalo en olla a fuego bajo sin dejar que hierva.",
+      "tip": "Para más sabor, dejá reposar las especias unos minutos antes de colar."
+    }
+  }
+]

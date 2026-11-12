@@ -7,6 +7,7 @@ import { slotLabel, type MealSlot } from "@/lib/domain/meal-slots";
 import type { PlanIssue } from "@/lib/domain/validate-plan";
 import { addDays, dayLabel, weekDays } from "@/lib/domain/week";
 import { checkRecipe } from "@/lib/domain/compatibility";
+import { searchCatalog } from "@/lib/public/catalog";
 import { saveRecipeWith } from "@/lib/recipes/save";
 import { loadIngredientsForCheck } from "@/lib/recipes/compatibility";
 import { getPlanEntries } from "@/lib/plan/queries";
@@ -478,9 +479,65 @@ const updateEntries = defineTool({
   },
 });
 
+const searchCatalogTool = defineTool({
+  name: "search_catalog",
+  description:
+    "Busca en el CATÁLOGO público de recetas (miles de recetas rápidas) cuando el recetario del grupo no alcanza. Las prohibidas por las restricciones del grupo ya vienen filtradas. Para usar una, llamá después a use_catalog_recipe.",
+  schema: z.object({
+    query: z.string().max(100).optional(),
+    tag: z.string().max(40).optional(),
+    max_minutes: z.number().int().positive().optional(),
+  }),
+  async run(input, ctx) {
+    const diets = await loadDiets(ctx.supabase, ctx.groupId);
+    const hits = await searchCatalog(ctx.supabase, {
+      q: input.query,
+      tag: input.tag,
+      maxMinutes: input.max_minutes,
+      limit: 12,
+      diets,
+    });
+    return {
+      result: {
+        count: hits.length,
+        recipes: hits.map((h) => ({
+          id: h.id,
+          title: h.title,
+          total_minutes: h.total_minutes,
+          tags: h.tags,
+          main_ingredients: h.ingredients.slice(0, 6).map((i) => i.name),
+        })),
+      },
+    };
+  },
+});
+
+const useCatalogRecipe = defineTool({
+  name: "use_catalog_recipe",
+  description:
+    "Guarda una receta del catálogo en el recetario del grupo (copia editable) y devuelve su id nuevo para usar en set_plan / update_entries.",
+  schema: z.object({ recipe_id: uuid }),
+  async run({ recipe_id }, ctx) {
+    const { data, error } = await ctx.supabase.rpc("fork_published_recipe", {
+      p_recipe_id: recipe_id,
+      p_target_group_id: ctx.groupId,
+    });
+    if (error || !data)
+      return { result: { error: "No se pudo guardar esa receta del catálogo." }, isError: true };
+    const { data: r } = await ctx.supabase
+      .from("recipes")
+      .select("title")
+      .eq("id", data)
+      .maybeSingle();
+    return { result: { recipe_id: data, title: r?.title ?? null, saved_to_group: true } };
+  },
+});
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const PLAN_TOOLS: ToolDef<any>[] = [
   searchRecipes,
+  searchCatalogTool,
+  useCatalogRecipe,
   getRecentMeals,
   getParticipants,
   getIngredientInfo,

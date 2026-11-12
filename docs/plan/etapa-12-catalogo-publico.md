@@ -19,7 +19,7 @@
 - **Pasos:** switch "Hacer pública" en cada receta; colecciones (crear, agregar recetas, hacer pública); publicar un plan semanal como plantilla; copiar un plan público a mi grupo; revocar.
 - **Aceptación:** una receta pública aparece en `/explorar`; al despublicarla desaparece.
 
-### [ ] T12.5 — Catálogo en la app y en la IA
+### [x] T12.5 — Catálogo en la app y en la IA
 - **Pasos:** en Recetas y al agregar al plan, primero "Tus recetas" y después "Del catálogo" (con botón "Guardar"); tool `search_catalog` para el agente del plan, "¿Qué tenés?" e Ideas (siempre priorizando las del grupo); partir de una receta del catálogo ("Usar como base" la copia para editar).
 - **Aceptación:** "armame la semana" en un grupo sin recetas propias usa recetas del catálogo.
 

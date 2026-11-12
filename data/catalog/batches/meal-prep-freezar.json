@@ -1,0 +1,536 @@
+[
+  {
+    "title": "Albóndigas de carne en salsa de tomate para freezar",
+    "description": "Albóndigas jugosas cocidas directo en una salsa de tomate casera. Hacés una tanda grande y tenés comidas listas para pasta, puré o arroz.",
+    "servings": 6,
+    "prep_minutes": 15,
+    "cook_minutes": 25,
+    "difficulty": "facil",
+    "tags": [
+      "para freezar",
+      "carne",
+      "una olla",
+      "almuerzo",
+      "cena",
+      "para chicos",
+      "argentina"
+    ],
+    "ingredients": [
+      "600 g de carne picada",
+      "1 huevo",
+      "1/2 taza de pan rallado",
+      "3 dientes de ajo",
+      "2 cdas de perejil picado",
+      "1 cdita de orégano",
+      "1 cebolla",
+      "1 cda de aceite de oliva",
+      "1 lata de tomates perita",
+      "1/2 taza de agua",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Mezclá en un bol la carne, el huevo, el pan rallado, 2 dientes de ajo picados, el perejil, sal y pimienta."
+      },
+      {
+        "instruction": "Formá unas 24 bolitas del tamaño de una nuez con las manos húmedas."
+      },
+      {
+        "instruction": "Calentá el aceite en una olla ancha y rehogá la cebolla picada con el ajo restante.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá los tomates, el agua, el orégano y sal, y rompé los tomates con una cuchara.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá las albóndigas con cuidado, tapá y cociná a fuego bajo sin revolver mucho.",
+        "minutes": 18,
+        "passive": true
+      },
+      {
+        "instruction": "Probá la salsa, rectificá la sal y dejá enfriar antes de guardar en porciones."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 90,
+      "reheat": "Descongelá en la heladera y calentá en olla tapada con un chorrito de agua, 10 minutos a fuego bajo.",
+      "tip": "Freezalas en porciones de 4 albóndigas con salsa, así sacás solo lo que necesitás."
+    }
+  },
+  {
+    "title": "Crema de zapallo y zanahoria con jengibre",
+    "description": "Sopa crema suave y reconfortante, sin lácteos. Rinde mucho y se congela perfecta en porciones individuales.",
+    "servings": 6,
+    "prep_minutes": 10,
+    "cook_minutes": 25,
+    "difficulty": "facil",
+    "tags": [
+      "para freezar",
+      "sopa",
+      "vegano",
+      "sin lácteos",
+      "una olla",
+      "invierno",
+      "económico",
+      "cena"
+    ],
+    "ingredients": [
+      "1 kg de zapallo anco",
+      "3 zanahorias",
+      "1 cebolla",
+      "1 cda de aceite de oliva",
+      "1 cdita de jengibre rallado",
+      "1,2 l de agua",
+      "1 pizca de nuez moscada",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Pelá el zapallo y las zanahorias y cortalos en cubos chicos para que se cocinen rápido."
+      },
+      {
+        "instruction": "Rehogá la cebolla picada en el aceite dentro de una olla grande hasta que se ablande.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el jengibre, el zapallo y las zanahorias, y revolvé un minuto.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Cubrí con el agua, salá, tapá y hervilo a fuego medio hasta que las verduras estén tiernas.",
+        "minutes": 18,
+        "passive": true
+      },
+      {
+        "instruction": "Procesá con mixer hasta que quede lisa y ajustá con nuez moscada, sal y pimienta."
+      },
+      {
+        "instruction": "Dejá entibiar y repartí en recipientes individuales antes de freezar."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 90,
+      "reheat": "Calentá en olla a fuego bajo revolviendo, con un poco de agua si quedó espesa.",
+      "tip": "Dejá un dedo libre arriba del recipiente porque el líquido se expande al congelarse."
+    }
+  },
+  {
+    "title": "Guiso de lentejas con panceta y zanahoria",
+    "description": "Guiso espeso de lentejas secas, sin remojo, con verduras y panceta ahumada. Gana sabor al día siguiente y se congela muy bien.",
+    "servings": 6,
+    "prep_minutes": 10,
+    "cook_minutes": 30,
+    "difficulty": "facil",
+    "tags": [
+      "para freezar",
+      "guiso",
+      "legumbres",
+      "una olla",
+      "invierno",
+      "almuerzo",
+      "económico"
+    ],
+    "ingredients": [
+      "300 g de lentejas secas",
+      "100 g de panceta",
+      "1 cebolla",
+      "1 morrón rojo",
+      "2 zanahorias",
+      "1 papa",
+      "2 dientes de ajo",
+      "1 lata de tomates perita",
+      "1 cda de pimentón",
+      "2 hojas de laurel",
+      "1,2 l de agua",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Enjuagá las lentejas y cortá la panceta, la cebolla, el morrón, las zanahorias y la papa en cubos chicos."
+      },
+      {
+        "instruction": "Dorá la panceta en una olla grande sin aceite hasta que suelte la grasa.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá la cebolla, el morrón, el ajo y las zanahorias, y salteá unos minutos.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el pimentón, los tomates, las lentejas, la papa, el laurel y el agua."
+      },
+      {
+        "instruction": "Hervilo tapado a fuego medio-bajo hasta que las lentejas estén tiernas, y revolvé de vez en cuando.",
+        "minutes": 22,
+        "passive": true
+      },
+      {
+        "instruction": "Salá recién al final, sacá el laurel y dejá enfriar antes de guardar."
+      }
+    ],
+    "storage": {
+      "fridge_days": 4,
+      "freezer_days": 90,
+      "reheat": "Calentá en olla con un chorrito de agua a fuego bajo, revolviendo.",
+      "tip": "Si lo freezás, cocinalo un poco menos para que las papas no se deshagan al recalentar."
+    }
+  },
+  {
+    "title": "Burritos de porotos negros, arroz y queso",
+    "description": "Burritos rellenos y bien envueltos para freezar de a uno. Sacás uno, lo calentás y tenés almuerzo en minutos.",
+    "servings": 8,
+    "prep_minutes": 20,
+    "cook_minutes": 15,
+    "difficulty": "media",
+    "tags": [
+      "para freezar",
+      "mexicana",
+      "legumbres",
+      "almuerzo",
+      "para chicos",
+      "vegetariano",
+      "económico"
+    ],
+    "ingredients": [
+      "8 tortillas de harina grandes",
+      "1 lata de porotos negros",
+      "2 tazas de arroz cocido",
+      "1 cebolla",
+      "1 morrón",
+      "1 cda de aceite",
+      "1 cdita de comino",
+      "1 cdita de pimentón",
+      "200 g de queso cremoso",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Escurrí y enjuagá los porotos, y cortá la cebolla y el morrón en cubos chicos."
+      },
+      {
+        "instruction": "Salteá la cebolla y el morrón en el aceite hasta que estén blandos.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá los porotos, el comino, el pimentón y sal, y aplastá algunos con un tenedor.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Mezclá con el arroz cocido y apagá el fuego. Dejá entibiar un rato.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Poné relleno y queso en cubitos en el centro de cada tortilla, doblá los lados y enrollá bien apretado."
+      },
+      {
+        "instruction": "Cerrá cada burrito con la unión hacia abajo y dejalos enfriar del todo antes de envolverlos."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 90,
+      "reheat": "Desenvolvé y calentá en microondas 2 a 3 minutos, o en sartén con tapa a fuego bajo hasta que esté caliente por dentro.",
+      "tip": "Envolvelos de a uno en film y metelos en una bolsa para que no se peguen."
+    }
+  },
+  {
+    "title": "Muffins salados de jamón, queso y verdeo",
+    "description": "Muffins esponjosos y fáciles, ideales para la vianda o una cena rápida. Se hornean en una tanda y se congelan sueltos.",
+    "servings": 12,
+    "prep_minutes": 15,
+    "cook_minutes": 25,
+    "difficulty": "facil",
+    "tags": [
+      "para freezar",
+      "horno",
+      "merienda",
+      "para chicos",
+      "snack",
+      "para compartir",
+      "económico"
+    ],
+    "ingredients": [
+      "2 tazas de harina 0000",
+      "2 cditas de polvo de hornear",
+      "2 huevos",
+      "1 taza de leche",
+      "100 ml de aceite de girasol",
+      "150 g de jamón cocido",
+      "150 g de queso cremoso",
+      "2 cebollas de verdeo",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Prendé el horno a 190 °C y colocá pirotines en una placa para muffins."
+      },
+      {
+        "instruction": "Cortá el jamón y el queso en cubos chicos y picá el verdeo finito."
+      },
+      {
+        "instruction": "Mezclá la harina, el polvo de hornear, sal y pimienta en un bol."
+      },
+      {
+        "instruction": "Batí los huevos con la leche y el aceite, y volcá sobre lo seco."
+      },
+      {
+        "instruction": "Agregá el jamón, el queso y el verdeo, y mezclá lo justo, sin batir de más."
+      },
+      {
+        "instruction": "Llená los pirotines hasta 3/4 y horneá hasta que estén dorados.",
+        "minutes": 25,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Calentá en microondas 40 segundos, o en horno a 160 °C unos 8 minutos para que queden crocantes.",
+      "tip": "Dejalos enfriar sobre una rejilla antes de guardarlos para que no se humedezcan."
+    }
+  },
+  {
+    "title": "Brownies de cacao y nueces en bandeja",
+    "description": "Brownies húmedos y bien chocolatosos, de una sola fuente. Se cortan en porciones y se congelan listos para el postre.",
+    "servings": 12,
+    "prep_minutes": 15,
+    "cook_minutes": 25,
+    "difficulty": "facil",
+    "tags": [
+      "para freezar",
+      "postre",
+      "merienda",
+      "horno",
+      "para compartir",
+      "una bandeja"
+    ],
+    "ingredients": [
+      "150 g de chocolate semiamargo",
+      "100 g de manteca",
+      "3 huevos",
+      "3/4 taza de azúcar",
+      "1/2 taza de harina 0000",
+      "2 cdas de cacao amargo",
+      "1/2 taza de nueces picadas",
+      "1 pizca de sal"
+    ],
+    "steps": [
+      {
+        "instruction": "Prendé el horno a 180 °C y forrá una fuente de 20 x 20 cm con papel manteca."
+      },
+      {
+        "instruction": "Derretí el chocolate con la manteca en microondas de a 30 segundos, revolviendo.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Batí los huevos con el azúcar hasta que espesen un poco.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Incorporá el chocolate tibio y mezclá con espátula."
+      },
+      {
+        "instruction": "Agregá la harina, el cacao y la sal tamizados, y sumá las nueces."
+      },
+      {
+        "instruction": "Volcá en la fuente y horneá hasta que el centro esté apenas firme.",
+        "minutes": 22,
+        "passive": true
+      },
+      {
+        "instruction": "Dejá enfriar por completo y cortá en 12 cuadrados."
+      }
+    ],
+    "storage": {
+      "fridge_days": 4,
+      "freezer_days": 90,
+      "reheat": "Descongelá a temperatura ambiente o calentá 15 segundos en microondas para que queden tibios.",
+      "tip": "Cortalos con cuchillo apenas tibio y separalos con papel manteca antes de freezar."
+    }
+  },
+  {
+    "title": "Tarta de pollo y puerro con masa comprada",
+    "description": "Tarta cremosa de pollo y puerro con relleno bien sabroso. Una tarta entera rinde para varias cenas y se congela en porciones.",
+    "servings": 8,
+    "prep_minutes": 15,
+    "cook_minutes": 30,
+    "difficulty": "media",
+    "tags": [
+      "para freezar",
+      "tarta",
+      "pollo",
+      "horno",
+      "cena",
+      "almuerzo",
+      "para compartir"
+    ],
+    "ingredients": [
+      "2 tapas de masa de tarta",
+      "400 g de pechuga de pollo",
+      "3 puerros",
+      "1 cda de aceite",
+      "200 ml de crema de leche",
+      "2 huevos",
+      "100 g de queso rallado",
+      "1 pizca de nuez moscada",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Prendé el horno a 200 °C. Cortá el pollo en cubos chicos y los puerros en rodajas finas."
+      },
+      {
+        "instruction": "Salteá el pollo con sal y pimienta hasta que cambie de color y reservalo.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "En la misma sartén, cociná los puerros hasta que estén blandos.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Mezclá pollo, puerros, crema, huevos, la mitad del queso y la nuez moscada."
+      },
+      {
+        "instruction": "Forrá una tartera con una tapa, volcá el relleno, cubrí con la otra tapa y sellá los bordes."
+      },
+      {
+        "instruction": "Pinchá la superficie, espolvoreá el queso restante y horneá hasta dorar.",
+        "minutes": 22,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Calentá las porciones en horno a 180 °C unos 15 minutos para que la masa quede crocante.",
+      "tip": "Cortala en porciones frías y envolvelas de a una en papel film."
+    }
+  },
+  {
+    "title": "Salsa de tomate casera con verduras asadas",
+    "description": "Salsa intensa de tomates, morrón y ajo asados en una bandeja y procesados. Sirve para pasta, pizza o milanesas, y se congela en frascos.",
+    "servings": 8,
+    "prep_minutes": 10,
+    "cook_minutes": 30,
+    "difficulty": "facil",
+    "tags": [
+      "para freezar",
+      "salsa",
+      "vegano",
+      "sin lácteos",
+      "horno",
+      "una bandeja",
+      "pasta",
+      "italiana"
+    ],
+    "ingredients": [
+      "1 kg de tomates maduros",
+      "1 morrón rojo",
+      "1 cebolla",
+      "4 dientes de ajo",
+      "3 cdas de aceite de oliva",
+      "1 cdita de orégano",
+      "1 pizca de azúcar",
+      "6 hojas de albahaca",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Prendé el horno a 220 °C. Cortá los tomates, el morrón y la cebolla en trozos grandes."
+      },
+      {
+        "instruction": "Poné todo en una bandeja con los ajos con piel, el aceite, el orégano, sal y pimienta, y mezclá."
+      },
+      {
+        "instruction": "Asá hasta que las verduras estén blandas y con los bordes tostados, dando vuelta a mitad de cocción.",
+        "minutes": 28,
+        "passive": true
+      },
+      {
+        "instruction": "Pelá los ajos y procesá todo con la albahaca hasta lograr la textura que prefieras."
+      },
+      {
+        "instruction": "Probá, agregá el azúcar si está ácida y dejá enfriar antes de guardar."
+      }
+    ],
+    "storage": {
+      "fridge_days": 4,
+      "freezer_days": 90,
+      "reheat": "Calentá en olla a fuego bajo unos 5 minutos, revolviendo, con un chorrito de agua si hace falta.",
+      "tip": "Freezala en frascos o en cubeteras y pasá los cubos a una bolsa."
+    }
+  },
+  {
+    "title": "Tortitas de espinaca y ricota al horno",
+    "description": "Tortitas tiernas de espinaca, ricota y queso rallado, horneadas en bandeja sin freír. Sirven de almuerzo, guarnición o para los chicos.",
+    "servings": 6,
+    "prep_minutes": 15,
+    "cook_minutes": 20,
+    "difficulty": "facil",
+    "tags": [
+      "para freezar",
+      "vegetariano",
+      "verdura",
+      "horno",
+      "almuerzo",
+      "para chicos",
+      "una bandeja"
+    ],
+    "ingredients": [
+      "1 paquete de espinaca congelada (300 g)",
+      "250 g de ricota",
+      "2 huevos",
+      "1/2 taza de queso rallado",
+      "1/2 taza de pan rallado",
+      "1 diente de ajo",
+      "1 pizca de nuez moscada",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Descongelá la espinaca en el microondas y exprimila bien con las manos o un repasador.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Prendé el horno a 200 °C y cubrí una placa con papel manteca."
+      },
+      {
+        "instruction": "Picá la espinaca y mezclala con la ricota, los huevos, el queso, el ajo picado y la nuez moscada."
+      },
+      {
+        "instruction": "Agregá el pan rallado, salá y mezclá hasta que se pueda moldear."
+      },
+      {
+        "instruction": "Armá 12 tortitas con una cuchara y colocalas en la placa."
+      },
+      {
+        "instruction": "Horneá, dándolas vuelta a mitad de cocción, hasta que estén firmes y doradas.",
+        "minutes": 20,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 90,
+      "reheat": "Calentá en horno a 180 °C unos 10 minutos, o en sartén antiadherente a fuego medio.",
+      "tip": "Exprimí muy bien la espinaca para que las tortitas no queden aguadas."
+    }
+  }
+]

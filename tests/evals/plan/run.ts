@@ -58,7 +58,8 @@ async function main() {
   });
 
   console.log(`Sembrando ${PLAN_RECIPES.length} recetas…`);
-  for (const rec of PLAN_RECIPES) {
+  // EVAL_EMPTY=1: grupo sin recetas propias → el agente tiene que usar el catálogo público.
+  for (const rec of process.env.EVAL_EMPTY === "1" ? [] : PLAN_RECIPES) {
     await seedRecipe(aEmail, password, groupId, rec);
     process.stdout.write(".");
   }
@@ -146,6 +147,13 @@ async function main() {
     const cost = (tokensIn * price.in + tokensOut * price.out) / 1_000_000;
     totalCost += cost;
 
+    // Las recetas guardadas desde el catálogo durante el pedido también cuentan como del recetario.
+    const { data: nowActive } = await supabase
+      .from("recipes")
+      .select("id")
+      .eq("group_id", groupId)
+      .eq("status", "active");
+    for (const r of nowActive ?? []) libraryIds.add(r.id);
     const entries = await getPlanEntries(plan.id, supabase);
     const candidates: Candidate[] = entries.map((e) => ({
       id: e.id,

@@ -1,0 +1,527 @@
+[
+  {
+    "title": "Puré rústico de papas con ajo y aceite de oliva",
+    "description": "Un puré con textura gruesa, sin manteca, perfumado con ajo dorado. Va perfecto con milanesas, pollo o cualquier carne a la plancha.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "guarnición",
+      "económico",
+      "vegetariano",
+      "para freezar",
+      "una olla"
+    ],
+    "ingredients": [
+      "800 g de papas",
+      "2 dientes de ajo",
+      "3 cda de aceite de oliva",
+      "100 ml de leche tibia",
+      "1 pizca de nuez moscada",
+      "sal a gusto",
+      "pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Pelá las papas y cortalas en cubos chicos de 2 cm para que se cocinen rápido."
+      },
+      {
+        "instruction": "Poné las papas en una olla con agua fría y sal, y llevá a hervor.",
+        "minutes": 12,
+        "passive": true
+      },
+      {
+        "instruction": "Mientras tanto, laminá el ajo y doralo a fuego bajo en el aceite de oliva durante 2 minutos.",
+        "minutes": 2
+      },
+      {
+        "instruction": "Escurrí las papas y volvelas a la olla caliente."
+      },
+      {
+        "instruction": "Aplastalas con un tenedor o pisapapas, sin procesar, para que queden rústicas."
+      },
+      {
+        "instruction": "Sumá la leche tibia, el aceite con el ajo, la nuez moscada, sal y pimienta, y mezclá bien."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "En una cacerola a fuego bajo con un chorrito de leche, revolviendo.",
+      "tip": "Si queda seco al recalentar, agregale un poco más de leche o aceite de oliva."
+    }
+  },
+  {
+    "title": "Ensalada de repollo colorado y zanahoria con limón",
+    "description": "Una ensalada crocante y fresca, sin mayonesa, aliñada con limón y mostaza. Ideal para acompañar hamburguesas, choripanes o carnes grasas.",
+    "servings": 4,
+    "prep_minutes": 15,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "guarnición",
+      "ensalada",
+      "rápido",
+      "vegano",
+      "liviano",
+      "sin horno",
+      "económico"
+    ],
+    "ingredients": [
+      "1/4 de repollo colorado chico",
+      "2 zanahorias",
+      "1 limón",
+      "3 cda de aceite de oliva",
+      "1 cdita de mostaza",
+      "1/2 cdita de azúcar",
+      "2 cda de perejil picado",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá el repollo en tiras bien finas con un cuchillo grande."
+      },
+      {
+        "instruction": "Rallá las zanahorias con la parte gruesa del rallador."
+      },
+      {
+        "instruction": "En un bowl mezclá el jugo de limón, la mostaza, el azúcar, el aceite y la sal."
+      },
+      {
+        "instruction": "Agregá el repollo, la zanahoria y el perejil, y mezclá con las manos para que se impregne."
+      },
+      {
+        "instruction": "Dejá reposar para que el repollo se ablande un poco.",
+        "minutes": 10,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Se come fría, no se recalienta.",
+      "tip": "Aliñala justo antes de servir si querés que quede bien crocante."
+    }
+  },
+  {
+    "title": "Zapallitos a la plancha con ajo, limón y menta",
+    "description": "Zapallitos largos dorados en sartén y terminados con un aliño fresco de ajo, limón y menta. Livianos y listos en minutos.",
+    "servings": 4,
+    "prep_minutes": 7,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "guarnición",
+      "rápido",
+      "vegano",
+      "liviano",
+      "sin gluten",
+      "verdura"
+    ],
+    "ingredients": [
+      "3 zapallitos largos",
+      "2 cda de aceite de oliva",
+      "1 diente de ajo",
+      "1 limón",
+      "1 cda de menta fresca picada",
+      "sal a gusto",
+      "pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá los zapallitos en rodajas largas de 1 cm, al bies."
+      },
+      {
+        "instruction": "Calentá una sartén grande con la mitad del aceite a fuego fuerte."
+      },
+      {
+        "instruction": "Cociná las rodajas en tandas, 3 minutos por lado, hasta que se doren.",
+        "minutes": 6
+      },
+      {
+        "instruction": "Picá el ajo y mezclalo con el resto del aceite, el jugo de medio limón y la menta."
+      },
+      {
+        "instruction": "Pasá los zapallitos a una fuente, salpimentá y bañalos con el aliño."
+      },
+      {
+        "instruction": "Rallá un poco de cáscara de limón por encima y serví."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Salteá 1 minuto en sartén caliente o comé a temperatura ambiente.",
+      "tip": "No amontones los zapallitos en la sartén: si no, largan agua y se hacen al vapor."
+    }
+  },
+  {
+    "title": "Papas especiadas en airfryer con pimentón",
+    "description": "Cubos de papa dorados por fuera y tiernos por dentro, con pimentón y ajo en polvo. No hace falta hervirlas antes.",
+    "servings": 4,
+    "prep_minutes": 5,
+    "cook_minutes": 20,
+    "difficulty": "facil",
+    "tags": [
+      "guarnición",
+      "airfryer",
+      "vegano",
+      "sin gluten",
+      "económico"
+    ],
+    "ingredients": [
+      "700 g de papas",
+      "2 cda de aceite",
+      "1 cdita de pimentón dulce",
+      "1/2 cdita de ajo en polvo",
+      "1/2 cdita de orégano",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá la airfryer a 200 °C durante 3 minutos.",
+        "minutes": 3,
+        "passive": true
+      },
+      {
+        "instruction": "Lavá las papas y cortalas con cáscara en cubos de 2 cm."
+      },
+      {
+        "instruction": "Mezclalas en un bowl con el aceite, el pimentón, el ajo en polvo, el orégano y sal."
+      },
+      {
+        "instruction": "Cargá la canasta en una sola capa, sin apilar demasiado."
+      },
+      {
+        "instruction": "Cociná 10 minutos, sacudí la canasta y seguí 8 a 10 minutos más hasta que estén doradas.",
+        "minutes": 18,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Volvelas 4 minutos a 190 °C en la airfryer para recuperar el crocante.",
+      "tip": "Si las cortás bien parejas se doran todas al mismo tiempo."
+    }
+  },
+  {
+    "title": "Polenta cremosa con queso y manteca",
+    "description": "Polenta de cocción rápida, suave y bien cremosa, con queso rallado. Va de maravillas con estofados, salsas y carnes.",
+    "servings": 4,
+    "prep_minutes": 2,
+    "cook_minutes": 8,
+    "difficulty": "facil",
+    "tags": [
+      "guarnición",
+      "rápido",
+      "vegetariano",
+      "sin gluten",
+      "una olla",
+      "económico"
+    ],
+    "ingredients": [
+      "1 taza de polenta de cocción rápida",
+      "4 tazas de agua",
+      "1 cdita de sal",
+      "50 g de queso rallado",
+      "1 cda de manteca",
+      "1 pizca de nuez moscada",
+      "pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Hervé el agua con la sal en una olla mediana."
+      },
+      {
+        "instruction": "Bajá el fuego y volcá la polenta en forma de lluvia, revolviendo con batidor."
+      },
+      {
+        "instruction": "Cociná revolviendo seguido hasta que espese y se despegue de las paredes.",
+        "minutes": 5
+      },
+      {
+        "instruction": "Apagá el fuego y agregá la manteca, el queso, la nuez moscada y pimienta."
+      },
+      {
+        "instruction": "Mezclá hasta que se integre y serví enseguida."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "En cacerola con un chorrito de agua o leche, revolviendo a fuego bajo.",
+      "tip": "Si se enfría se pone firme: podés cortarla en porciones y dorarla en sartén."
+    }
+  },
+  {
+    "title": "Cuscús con zanahoria, pasas y menta",
+    "description": "Cuscús hidratado en minutos, con zanahoria rallada, pasas y hierbas frescas. Un acompañamiento liviano y sin cocción para pollo o pescado.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 5,
+    "difficulty": "facil",
+    "tags": [
+      "guarnición",
+      "rápido",
+      "vegano",
+      "árabe",
+      "sin horno",
+      "liviano"
+    ],
+    "ingredients": [
+      "1 taza de cuscús",
+      "1 taza de agua hirviendo",
+      "1 cda de aceite de oliva",
+      "1 zanahoria",
+      "2 cda de pasas de uva",
+      "1 cda de menta fresca picada",
+      "1 limón",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Poné el cuscús en un bowl con una pizca de sal y el aceite, y mezclá."
+      },
+      {
+        "instruction": "Volcá el agua hirviendo, tapá con un plato y dejá hidratar.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Rallá la zanahoria y picá las pasas y la menta."
+      },
+      {
+        "instruction": "Desgranalo con un tenedor para separar los granos."
+      },
+      {
+        "instruction": "Sumá la zanahoria, las pasas, la menta y el jugo de limón, y mezclá."
+      },
+      {
+        "instruction": "Probá y corregí la sal antes de servir."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Se puede comer frío o calentar 1 minuto en el microondas con una cucharada de agua.",
+      "tip": "Sumale un puñado de almendras tostadas para darle textura."
+    }
+  },
+  {
+    "title": "Ensalada criolla clásica de tomate, cebolla y morrón",
+    "description": "La criolla de los asados: tomate, cebolla y morrón picados, con vinagre, aceite y orégano. Se prepara en un rato y mejora con el reposo.",
+    "servings": 4,
+    "prep_minutes": 12,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "guarnición",
+      "ensalada",
+      "rápido",
+      "vegano",
+      "sin horno",
+      "argentina",
+      "verano"
+    ],
+    "ingredients": [
+      "3 tomates firmes",
+      "1 cebolla",
+      "1 morrón rojo",
+      "2 cda de vinagre de vino",
+      "3 cda de aceite de oliva",
+      "1 cdita de orégano",
+      "2 cda de perejil picado",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá la cebolla en cubitos chicos y pasala por agua fría 2 minutos para suavizarla.",
+        "minutes": 2,
+        "passive": true
+      },
+      {
+        "instruction": "Cortá los tomates y el morrón en cubos parejos, sin las semillas del tomate."
+      },
+      {
+        "instruction": "Escurrí bien la cebolla y mezclala con el tomate y el morrón."
+      },
+      {
+        "instruction": "Agregá el vinagre, el aceite, el orégano, el perejil y sal."
+      },
+      {
+        "instruction": "Dejá reposar para que los sabores se integren.",
+        "minutes": 10,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Se come fría o a temperatura ambiente.",
+      "tip": "Sacale las semillas al tomate para que no quede aguada."
+    }
+  },
+  {
+    "title": "Chauchas salteadas con ajo y almendras",
+    "description": "Chauchas verdes y crocantes, hervidas un instante y salteadas con ajo y almendras tostadas. Un acompañamiento sencillo que lleva poco.",
+    "servings": 4,
+    "prep_minutes": 6,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "guarnición",
+      "rápido",
+      "vegano",
+      "sin gluten",
+      "verdura"
+    ],
+    "ingredients": [
+      "400 g de chauchas",
+      "2 cda de aceite de oliva",
+      "2 dientes de ajo",
+      "40 g de almendras fileteadas",
+      "1/2 limón",
+      "sal a gusto",
+      "pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Sacales las puntas a las chauchas y lavalas."
+      },
+      {
+        "instruction": "Hervilas en agua con sal hasta que estén tiernas pero firmes.",
+        "minutes": 6,
+        "passive": true
+      },
+      {
+        "instruction": "Escurrilas y pasalas por agua fría para cortar la cocción."
+      },
+      {
+        "instruction": "Tostá las almendras en una sartén seca 2 minutos y reservalas.",
+        "minutes": 2
+      },
+      {
+        "instruction": "En la misma sartén calentá el aceite y dorá el ajo laminado 30 segundos."
+      },
+      {
+        "instruction": "Sumá las chauchas y salteá 2 minutos, con sal y pimienta."
+      },
+      {
+        "instruction": "Apagá, agregá las almendras y unas gotas de limón."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Salteá 2 minutos en sartén con unas gotas de aceite.",
+      "tip": "El agua fría después de hervir mantiene el verde intenso."
+    }
+  },
+  {
+    "title": "Zanahorias glaseadas con miel y comino",
+    "description": "Rodajas finas de zanahoria cocidas en sartén hasta quedar brillantes y apenas dulces, con un toque de comino. Combinan bien con carnes asadas y pollo.",
+    "servings": 4,
+    "prep_minutes": 6,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "guarnición",
+      "vegetariano",
+      "sin gluten",
+      "verdura",
+      "económico"
+    ],
+    "ingredients": [
+      "4 zanahorias",
+      "1 cda de manteca",
+      "1 cda de miel",
+      "1/2 cdita de comino",
+      "100 ml de agua",
+      "1 cda de perejil picado",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Pelá las zanahorias y cortalas en rodajas finas de medio centímetro."
+      },
+      {
+        "instruction": "Poné en una sartén las zanahorias, la manteca, el agua, el comino y sal."
+      },
+      {
+        "instruction": "Tapá y cociná a fuego medio hasta que estén casi tiernas.",
+        "minutes": 7,
+        "passive": true
+      },
+      {
+        "instruction": "Destapá, sumá la miel y subí el fuego."
+      },
+      {
+        "instruction": "Cociná revolviendo hasta que el líquido se reduzca y las zanahorias queden brillantes.",
+        "minutes": 3
+      },
+      {
+        "instruction": "Espolvoreá con perejil y serví."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "En sartén a fuego bajo con una cucharada de agua.",
+      "tip": "Cortalas bien finas y parejas para que se cocinen a tiempo."
+    }
+  },
+  {
+    "title": "Choclo salteado con verdeo y pimentón",
+    "description": "Granos de choclo dorados en manteca con cebolla de verdeo y un toque de pimentón. Queda dulce, algo ahumado y listo en 10 minutos.",
+    "servings": 4,
+    "prep_minutes": 5,
+    "cook_minutes": 8,
+    "difficulty": "facil",
+    "tags": [
+      "guarnición",
+      "rápido",
+      "vegetariano",
+      "sin gluten",
+      "económico"
+    ],
+    "ingredients": [
+      "2 latas de choclo en granos",
+      "1 cda de manteca",
+      "1 cda de aceite",
+      "2 cebollas de verdeo",
+      "1/2 cdita de pimentón ahumado",
+      "sal a gusto",
+      "pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Escurrí bien el choclo y secalo con un trapo limpio."
+      },
+      {
+        "instruction": "Picá finito el verdeo, separando lo blanco de lo verde."
+      },
+      {
+        "instruction": "Calentá la manteca con el aceite en una sartén grande a fuego medio-alto."
+      },
+      {
+        "instruction": "Salteá la parte blanca del verdeo 1 minuto.",
+        "minutes": 1
+      },
+      {
+        "instruction": "Agregá el choclo y cociná sin mover mucho hasta que tome color.",
+        "minutes": 5
+      },
+      {
+        "instruction": "Sumá el pimentón, sal, pimienta y el verde del verdeo, y mezclá 30 segundos."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "En sartén 2 minutos a fuego medio.",
+      "tip": "Secar bien el choclo es clave para que se dore en vez de hervir."
+    }
+  }
+]

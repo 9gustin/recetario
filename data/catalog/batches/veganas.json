@@ -1,0 +1,622 @@
+[
+  {
+    "title": "Tacos de coliflor especiada con repollo y palta",
+    "description": "Floretes de coliflor dorados en sartén con pimentón y comino, servidos en tortillas con repollo colorado al limón y palta pisada.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "vegano",
+      "rápido",
+      "mexicana",
+      "cena",
+      "verdura"
+    ],
+    "ingredients": [
+      "1 coliflor chica (unos 600 g)",
+      "2 cda de aceite de girasol",
+      "1 cdita de pimentón ahumado",
+      "1 cdita de comino",
+      "1/2 cdita de ajo en polvo",
+      "sal a gusto",
+      "8 tortillas chicas de maíz",
+      "2 tazas de repollo colorado rallado",
+      "1 palta madura",
+      "1 lima",
+      "1/2 atado de perejil",
+      "ají molido a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá la coliflor en floretes chicos, de unos 2 cm."
+      },
+      {
+        "instruction": "Mezclá los floretes con el aceite, el pimentón, el comino, el ajo en polvo y sal."
+      },
+      {
+        "instruction": "Cociná la coliflor en una sartén grande a fuego medio-fuerte, revolviendo de vez en cuando, hasta que dore y quede tierna.",
+        "minutes": 12,
+        "passive": false
+      },
+      {
+        "instruction": "Mientras tanto, condimentá el repollo con el jugo de media lima, sal y perejil picado."
+      },
+      {
+        "instruction": "Pisá la palta con un tenedor, sumá el resto de la lima y sal."
+      },
+      {
+        "instruction": "Calentá las tortillas unos segundos de cada lado en otra sartén seca."
+      },
+      {
+        "instruction": "Armá los tacos con palta, coliflor y repollo, y terminá con ají molido."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Calentá la coliflor en sartén unos minutos; armá los tacos recién antes de comer.",
+      "tip": "Guardá por separado la coliflor, el repollo y la palta para que no se ablande todo."
+    }
+  },
+  {
+    "title": "Dal de lentejas rojas con leche de coco y espinaca",
+    "description": "Un guiso cremoso y especiado de lentejas rojas que no necesitan remojo, con jengibre, curry y espinaca fresca al final.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 20,
+    "difficulty": "facil",
+    "tags": [
+      "vegano",
+      "una olla",
+      "legumbres",
+      "india",
+      "cena",
+      "sin gluten",
+      "económico"
+    ],
+    "ingredients": [
+      "1 taza de lentejas rojas",
+      "3 tazas de agua",
+      "1 cebolla",
+      "2 dientes de ajo",
+      "1 cda de jengibre fresco rallado",
+      "2 cda de aceite de girasol",
+      "1 cda de curry en polvo",
+      "1 cdita de cúrcuma",
+      "1 tomate",
+      "200 ml de leche de coco",
+      "150 g de espinaca",
+      "1 limón",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Enjuagá las lentejas en un colador hasta que el agua salga casi clara."
+      },
+      {
+        "instruction": "Picá la cebolla, el ajo y el tomate; rallá el jengibre."
+      },
+      {
+        "instruction": "Rehogá la cebolla en el aceite en una olla hasta que esté transparente.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá ajo, jengibre, curry y cúrcuma y revolvé un minuto."
+      },
+      {
+        "instruction": "Agregá el tomate, las lentejas y el agua, y llevá a hervor."
+      },
+      {
+        "instruction": "Bajá el fuego y cociná tapado, revolviendo de a ratos, hasta que las lentejas se deshagan.",
+        "minutes": 15,
+        "passive": true
+      },
+      {
+        "instruction": "Incorporá la leche de coco y la espinaca; cociná 2 minutos más."
+      },
+      {
+        "instruction": "Sazoná con sal y jugo de limón. Servilo solo o con arroz."
+      }
+    ],
+    "storage": {
+      "fridge_days": 4,
+      "freezer_days": 90,
+      "reheat": "Calentá en olla con un chorrito de agua, revolviendo.",
+      "tip": "Espesa en la heladera: al recalentar sumale agua hasta la textura que te guste."
+    }
+  },
+  {
+    "title": "Fideos con salsa de morrones asados y almendras",
+    "description": "Salsa suave y ahumada hecha con morrones, almendras tostadas y ajo, que se procesa mientras se cocinan los fideos.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "vegano",
+      "rápido",
+      "pasta",
+      "mediterránea",
+      "almuerzo",
+      "española"
+    ],
+    "ingredients": [
+      "400 g de espaguetis",
+      "1 lata de morrones al natural, escurridos",
+      "50 g de almendras peladas",
+      "1 diente de ajo",
+      "1 tomate maduro",
+      "3 cda de aceite de oliva",
+      "1 cda de vinagre de vino",
+      "1 cdita de pimentón",
+      "sal a gusto",
+      "perejil picado para servir"
+    ],
+    "steps": [
+      {
+        "instruction": "Poné a hervir abundante agua con sal en una olla grande."
+      },
+      {
+        "instruction": "Tostá las almendras en una sartén seca, moviéndolas hasta que tomen color.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Cociná los fideos según el paquete y reservá una taza del agua de cocción.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Procesá morrones, tomate, ajo, almendras, aceite, vinagre, pimentón y sal hasta lograr una crema algo rústica."
+      },
+      {
+        "instruction": "Escurrí los fideos y volvelos a la olla con la salsa."
+      },
+      {
+        "instruction": "Mezclá a fuego bajo un minuto, sumando agua de cocción si hace falta."
+      },
+      {
+        "instruction": "Serví con perejil picado y unas almendras por encima."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Calentá en sartén con un chorrito de agua.",
+      "tip": "La salsa sola se guarda 4 días en frasco y es buena también para untar tostadas."
+    }
+  },
+  {
+    "title": "Sopa crema de zapallo y jengibre con semillas",
+    "description": "Sopa sedosa de zapallo y zanahoria con un toque de jengibre y comino, terminada con semillas de girasol tostadas.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 20,
+    "difficulty": "facil",
+    "tags": [
+      "vegano",
+      "sopa",
+      "invierno",
+      "una olla",
+      "económico",
+      "sin gluten",
+      "para freezar"
+    ],
+    "ingredients": [
+      "800 g de zapallo anco",
+      "2 zanahorias",
+      "1 cebolla",
+      "1 cda de jengibre fresco rallado",
+      "2 cda de aceite de oliva",
+      "1 cdita de comino",
+      "1 l de caldo de verduras",
+      "sal y pimienta a gusto",
+      "2 cda de semillas de girasol"
+    ],
+    "steps": [
+      {
+        "instruction": "Pelá el zapallo y las zanahorias y cortalos en cubos de 2 cm."
+      },
+      {
+        "instruction": "Picá la cebolla y rehogala en el aceite dentro de una olla."
+      },
+      {
+        "instruction": "Sumá el jengibre y el comino y revolvé 30 segundos."
+      },
+      {
+        "instruction": "Agregá el zapallo, la zanahoria y el caldo caliente."
+      },
+      {
+        "instruction": "Cociná a fuego medio con la olla tapada hasta que las verduras estén bien tiernas.",
+        "minutes": 15,
+        "passive": true
+      },
+      {
+        "instruction": "Mientras tanto, tostá las semillas en una sartén seca un par de minutos."
+      },
+      {
+        "instruction": "Procesá la sopa con mixer hasta que quede lisa y ajustá sal y pimienta."
+      },
+      {
+        "instruction": "Serví con las semillas por encima."
+      }
+    ],
+    "storage": {
+      "fridge_days": 4,
+      "freezer_days": 90,
+      "reheat": "Calentá en olla a fuego medio, agregando un poco de agua o caldo si espesó.",
+      "tip": "Congelala en porciones individuales sin las semillas."
+    }
+  },
+  {
+    "title": "Arroz frito con repollo, arvejas y jengibre",
+    "description": "Una forma rápida de aprovechar arroz que sobró: salteado fuerte con verduras crocantes, ajo, jengibre y salsa de soja.",
+    "servings": 3,
+    "prep_minutes": 10,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "vegano",
+      "rápido",
+      "asiática",
+      "salteado",
+      "arroz",
+      "sobras",
+      "cena"
+    ],
+    "ingredients": [
+      "3 tazas de arroz cocido y frío",
+      "2 tazas de repollo blanco en tiras finas",
+      "1 zanahoria rallada",
+      "1/2 taza de arvejas",
+      "3 cebollas de verdeo",
+      "2 dientes de ajo",
+      "1 cda de jengibre fresco rallado",
+      "2 cda de aceite de girasol",
+      "3 cda de salsa de soja",
+      "1 cdita de aceite de sésamo",
+      "1 cda de semillas de sésamo"
+    ],
+    "steps": [
+      {
+        "instruction": "Picá el ajo y el verdeo, separando el blanco del verde."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén grande o wok a fuego fuerte."
+      },
+      {
+        "instruction": "Salteá el blanco del verdeo, el ajo y el jengibre durante 30 segundos."
+      },
+      {
+        "instruction": "Sumá repollo, zanahoria y arvejas y salteá hasta que estén apenas tiernos.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el arroz y desgranalo con una cuchara; dejá que se dore sin mover demasiado.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Condimentá con la salsa de soja y el aceite de sésamo y mezclá bien."
+      },
+      {
+        "instruction": "Serví con el verde del verdeo y el sésamo por encima."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Calentá en sartén a fuego fuerte hasta que esté bien caliente.",
+      "tip": "Enfriá el arroz rápido y guardalo en la heladera apenas lo cocines."
+    }
+  },
+  {
+    "title": "Revuelto de tofu con cúrcuma y espinaca sobre tostadas",
+    "description": "Tofu desmenuzado y dorado con cebolla, tomate y cúrcuma, que recuerda a un revuelto de huevos. Se sirve sobre pan tostado.",
+    "servings": 2,
+    "prep_minutes": 8,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "vegano",
+      "rápido",
+      "desayuno",
+      "cena",
+      "alto en proteína",
+      "salteado"
+    ],
+    "ingredients": [
+      "300 g de tofu firme",
+      "1 cebolla chica",
+      "1 tomate",
+      "150 g de espinaca",
+      "2 cda de aceite de oliva",
+      "1 cdita de cúrcuma",
+      "1/2 cdita de pimentón",
+      "1 cdita de mostaza",
+      "sal y pimienta a gusto",
+      "4 rebanadas de pan"
+    ],
+    "steps": [
+      {
+        "instruction": "Escurrí el tofu apretándolo con un repasador limpio y desmenuzalo con las manos."
+      },
+      {
+        "instruction": "Picá la cebolla y el tomate en cubitos."
+      },
+      {
+        "instruction": "Rehogá la cebolla en el aceite hasta que esté tierna.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el tofu, la cúrcuma, el pimentón y la mostaza y cociná revolviendo hasta que se dore apenas.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el tomate y la espinaca y cociná hasta que la espinaca se achique."
+      },
+      {
+        "instruction": "Probá y ajustá con sal y pimienta."
+      },
+      {
+        "instruction": "Tostá el pan y servilo con el revuelto encima."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Calentá en sartén a fuego medio con unas gotas de aceite.",
+      "tip": "Guardá el revuelto sin pan y tostá las rebanadas al momento."
+    }
+  },
+  {
+    "title": "Bowl de quinoa con garbanzos, palta y vegetales frescos",
+    "description": "Bowl fresco y saciante con quinoa tibia, garbanzos al comino, palta, tomate y pepino, aliñado con limón y aceite de oliva.",
+    "servings": 3,
+    "prep_minutes": 10,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "vegano",
+      "sin gluten",
+      "ensalada",
+      "almuerzo",
+      "mediterránea",
+      "alto en proteína"
+    ],
+    "ingredients": [
+      "1 taza de quinoa",
+      "2 tazas de agua",
+      "1 lata de garbanzos cocidos",
+      "1 palta",
+      "2 tomates",
+      "1 pepino",
+      "1/2 cebolla morada",
+      "10 aceitunas verdes",
+      "3 cda de aceite de oliva",
+      "1 limón",
+      "1 cdita de comino",
+      "perejil picado",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Enjuagá bien la quinoa en un colador fino para sacarle el amargor."
+      },
+      {
+        "instruction": "Hervila con el agua y una pizca de sal, tapada y a fuego bajo, hasta que absorba el agua.",
+        "minutes": 13,
+        "passive": true
+      },
+      {
+        "instruction": "Mientras tanto, escurrí y enjuagá los garbanzos y mezclalos con comino y una cucharada de aceite."
+      },
+      {
+        "instruction": "Cortá en cubos el tomate, el pepino y la palta, y la cebolla en plumas finas."
+      },
+      {
+        "instruction": "Soltá la quinoa con un tenedor y dejala entibiar unos minutos."
+      },
+      {
+        "instruction": "Aliñá con el resto del aceite, el jugo del limón y sal."
+      },
+      {
+        "instruction": "Armá los bowls con la quinoa, los garbanzos, las verduras, las aceitunas y el perejil."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Se come frío o a temperatura ambiente.",
+      "tip": "Si vas a guardarlo, sumá la palta recién al servir para que no se oscurezca."
+    }
+  },
+  {
+    "title": "Sándwich de berenjena grillada con chimichurri y tomate",
+    "description": "Rodajas de berenjena doradas en sartén, rúcula, tomate y un chimichurri casero, todo dentro de un pan crocante.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "vegano",
+      "sándwich",
+      "almuerzo",
+      "argentina",
+      "verdura",
+      "rápido"
+    ],
+    "ingredients": [
+      "2 berenjenas medianas",
+      "2 cda de aceite de oliva",
+      "sal a gusto",
+      "4 panes tipo ciabatta o pan de campo",
+      "2 tomates",
+      "50 g de rúcula",
+      "1/2 atado de perejil",
+      "1 diente de ajo",
+      "1 cdita de orégano",
+      "1 cda de vinagre",
+      "3 cda de aceite de girasol",
+      "ají molido a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá las berenjenas a lo largo en rodajas de 1 cm y salalas apenas."
+      },
+      {
+        "instruction": "Picá bien el perejil y el ajo y mezclalos con orégano, vinagre, aceite de girasol y ají para el chimichurri."
+      },
+      {
+        "instruction": "Calentá una sartén o plancha con un poco de aceite de oliva a fuego medio-fuerte."
+      },
+      {
+        "instruction": "Doralas las rodajas de berenjena, unos minutos de cada lado, hasta que estén tiernas y marcadas.",
+        "minutes": 10,
+        "passive": false
+      },
+      {
+        "instruction": "Abrí los panes y tostalos un momento en la misma sartén."
+      },
+      {
+        "instruction": "Armá con rúcula, berenjena, rodajas de tomate y chimichurri."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Calentá la berenjena en sartén y armá el sándwich al momento.",
+      "tip": "El chimichurri dura 4 días en frasco tapado y mejora al reposar."
+    }
+  },
+  {
+    "title": "Burritos de porotos negros, choclo y palta",
+    "description": "Relleno especiado de porotos negros, choclo y morrón envuelto en tortillas grandes, con palta pisada y lima.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "vegano",
+      "mexicana",
+      "cena",
+      "para chicos",
+      "rápido",
+      "legumbres"
+    ],
+    "ingredients": [
+      "4 tortillas grandes de harina",
+      "1 lata de porotos negros",
+      "1 taza de granos de choclo",
+      "1 morrón rojo",
+      "1 cebolla",
+      "1 cdita de comino",
+      "1 cdita de pimentón",
+      "2 cda de aceite de girasol",
+      "2 tomates",
+      "1 palta",
+      "1 lima",
+      "perejil picado",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Picá la cebolla y el morrón en cubitos y el tomate en dados."
+      },
+      {
+        "instruction": "Rehogá cebolla y morrón en el aceite hasta que se ablanden.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá comino y pimentón y revolvé unos segundos."
+      },
+      {
+        "instruction": "Agregá los porotos escurridos y el choclo; cociná y pisá algunos porotos para dar cremosidad.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Pisá la palta con jugo de lima y sal."
+      },
+      {
+        "instruction": "Calentá las tortillas en una sartén seca."
+      },
+      {
+        "instruction": "Rellená con porotos, tomate, palta y perejil; doblá los costados y enrollá."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Calentá en sartén tapada a fuego bajo hasta que estén calientes por dentro.",
+      "tip": "Para freezar, envolvé cada burrito en film sin la palta."
+    }
+  },
+  {
+    "title": "Ensalada tibia de papas, chauchas y porotos blancos con vinagreta de mostaza",
+    "description": "Papas y chauchas hervidas juntas, mezcladas todavía tibias con porotos blancos y una vinagreta de mostaza y oliva.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 18,
+    "difficulty": "facil",
+    "tags": [
+      "vegano",
+      "sin gluten",
+      "ensalada",
+      "almuerzo",
+      "legumbres",
+      "económico"
+    ],
+    "ingredients": [
+      "600 g de papas",
+      "200 g de chauchas",
+      "1 lata de porotos blancos",
+      "1/2 cebolla morada",
+      "1 cda de mostaza",
+      "3 cda de aceite de oliva",
+      "2 cda de vinagre de manzana",
+      "1 cdita de orégano",
+      "perejil picado",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Lavá las papas y cortalas en cubos de 1,5 cm, con cáscara si son nuevas."
+      },
+      {
+        "instruction": "Hervilas en agua con sal hasta que estén casi tiernas.",
+        "minutes": 9,
+        "passive": true
+      },
+      {
+        "instruction": "Despuntá las chauchas, cortalas en trozos y sumalas a la olla.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Mientras tanto, mezclá mostaza, aceite, vinagre, orégano, sal y pimienta en un bol grande."
+      },
+      {
+        "instruction": "Cortá la cebolla morada en plumas finas y escurrí y enjuagá los porotos."
+      },
+      {
+        "instruction": "Escurrí papas y chauchas y pasalas al bol con la vinagreta."
+      },
+      {
+        "instruction": "Sumá porotos, cebolla y perejil y mezclá con cuidado."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Se come tibia, fría o a temperatura ambiente.",
+      "tip": "Aliñá las papas todavía tibias: absorben mucho mejor el sabor."
+    }
+  }
+]

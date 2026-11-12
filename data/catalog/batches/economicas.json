@@ -1,0 +1,545 @@
+[
+  {
+    "title": "Espaguetis al ajo y aceite con pan rallado tostado",
+    "description": "Un clásico de alacena: fideos, ajo, aceite y pan rallado crocante que reemplaza al queso. Sale en 20 minutos y cuesta muy poco.",
+    "servings": 4,
+    "prep_minutes": 5,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "económico",
+      "pasta",
+      "rápido",
+      "vegetariano",
+      "cena",
+      "italiana"
+    ],
+    "ingredients": [
+      "400 g de espaguetis",
+      "4 dientes de ajo",
+      "4 cda de aceite de oliva",
+      "4 cda de pan rallado",
+      "1 cdita de ají molido",
+      "2 cda de perejil picado",
+      "sal gruesa para el agua",
+      "queso rallado a gusto (opcional)"
+    ],
+    "steps": [
+      {
+        "instruction": "Poné a hervir abundante agua con sal gruesa en una olla grande.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Tostá el pan rallado en una sartén seca a fuego medio hasta que dore, revolviendo siempre. Reservalo.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Cociná los espaguetis según el paquete y guardá una taza del agua de cocción antes de colarlos.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Mientras tanto, laminá el ajo y calentalo en la sartén con el aceite a fuego bajo, sin que se queme, junto con el ají molido.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá los fideos escurridos a la sartén con medio vaso del agua reservada y mezclá un minuto a fuego medio hasta que la salsa los cubra.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Serví con el pan rallado tostado, el perejil y queso rallado si te gusta."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "En sartén con un chorrito de agua o aceite, a fuego bajo.",
+      "tip": "Guardá el pan rallado aparte para que no se ablande."
+    }
+  },
+  {
+    "title": "Sopa crema de zapallo y cebolla con tostaditas",
+    "description": "Una sopa sedosa hecha con zapallo anco, cebolla y una papa que la espesa sin crema. Ideal para días fríos y rinde un montón.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 22,
+    "difficulty": "facil",
+    "tags": [
+      "económico",
+      "sopa",
+      "vegetariano",
+      "invierno",
+      "una olla",
+      "para freezar",
+      "cena"
+    ],
+    "ingredients": [
+      "800 g de zapallo anco",
+      "2 cebollas",
+      "1 papa mediana",
+      "1 diente de ajo",
+      "1 cda de aceite",
+      "1 l de agua",
+      "1 pizca de nuez moscada",
+      "sal y pimienta a gusto",
+      "4 fetas de pan de molde",
+      "1 cda de aceite de oliva para las tostaditas"
+    ],
+    "steps": [
+      {
+        "instruction": "Pelá el zapallo y la papa y cortalos en cubos chicos. Picá la cebolla y el ajo."
+      },
+      {
+        "instruction": "Rehogá la cebolla y el ajo en la olla con el aceite a fuego medio hasta que se pongan transparentes.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el zapallo, la papa y el agua. Salá, tapá y cociná hasta que todo esté tierno.",
+        "minutes": 15,
+        "passive": true
+      },
+      {
+        "instruction": "Mientras se cocina, cortá el pan en cubos, mezclalo con el aceite de oliva y tostalo en una sartén hasta que dore."
+      },
+      {
+        "instruction": "Procesá la sopa con la minipimer hasta que quede lisa. Sumá nuez moscada y pimienta, y ajustá la sal."
+      },
+      {
+        "instruction": "Serví caliente con las tostaditas por encima."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "En olla a fuego bajo, sumando un poco de agua si espesó.",
+      "tip": "Freezala sin las tostaditas, que se hacen al momento."
+    }
+  },
+  {
+    "title": "Guiso rápido de fideos con papa y zanahoria",
+    "description": "Un guiso de olla con moñitos, papa y salsa de tomate con pimentón. Llena la panza de toda la familia con ingredientes de alacena.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 22,
+    "difficulty": "facil",
+    "tags": [
+      "económico",
+      "guiso",
+      "una olla",
+      "invierno",
+      "almuerzo",
+      "pasta"
+    ],
+    "ingredients": [
+      "200 g de fideos moñitos",
+      "1 cebolla",
+      "1 zanahoria",
+      "2 papas",
+      "1 diente de ajo",
+      "2 cda de aceite",
+      "1 cda de pimentón dulce",
+      "1 lata de tomate triturado",
+      "800 ml de agua caliente",
+      "1 unidad de cubo de caldo",
+      "1 hoja de laurel",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Picá la cebolla y el ajo. Cortá la zanahoria en rodajas finas y la papa en cubos chicos."
+      },
+      {
+        "instruction": "Rehogá la cebolla y el ajo en la olla con el aceite a fuego medio.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá la zanahoria, la papa y el pimentón. Mezclá un minuto.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el tomate, el agua caliente, el cubo de caldo y el laurel. Tapá y cociná a fuego medio.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Incorporá los fideos y cociná sin tapar, revolviendo de vez en cuando, hasta que estén al dente.",
+        "minutes": 8,
+        "passive": false
+      },
+      {
+        "instruction": "Sacá el laurel, probá y corregí la sal. Serví bien caliente."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "En olla con un chorro de agua, a fuego bajo.",
+      "tip": "Los fideos absorben el caldo: sumá agua al recalentar."
+    }
+  },
+  {
+    "title": "Tortas fritas caseras",
+    "description": "Masa de harina, agua y sal, estiradas y fritas en aceite. Perfectas para la merienda de un día de lluvia, con mate o azúcar por encima.",
+    "servings": 6,
+    "prep_minutes": 15,
+    "cook_minutes": 15,
+    "difficulty": "media",
+    "tags": [
+      "económico",
+      "merienda",
+      "desayuno",
+      "argentina",
+      "vegano",
+      "para compartir",
+      "invierno"
+    ],
+    "ingredients": [
+      "500 g de harina 000",
+      "1 cdita de sal",
+      "3 cda de aceite",
+      "250 ml de agua tibia",
+      "500 ml de aceite para freír",
+      "azúcar a gusto para espolvorear"
+    ],
+    "steps": [
+      {
+        "instruction": "Mezclá la harina con la sal en un bol y hacé un hueco en el centro."
+      },
+      {
+        "instruction": "Agregá el aceite y volcá el agua de a poco mientras unís con la mano hasta formar una masa."
+      },
+      {
+        "instruction": "Amasá cinco minutos hasta que quede lisa y tapala con un paño.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Dejá reposar la masa para que se relaje y sea más fácil de estirar.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Dividí en bolitas, estirá cada una en un disco de medio centímetro y hacele un corte o agujero en el centro."
+      },
+      {
+        "instruction": "Calentá el aceite a fuego medio y freí cada torta hasta que dore de los dos lados.",
+        "minutes": 12,
+        "passive": false
+      },
+      {
+        "instruction": "Escurrí sobre papel de cocina y espolvoreá con azúcar."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "En horno a 180 °C unos 5 minutos para que recuperen el crocante.",
+      "tip": "Si el aceite humea, bajá el fuego: quedan crudas por dentro."
+    }
+  },
+  {
+    "title": "Ensalada de papa y huevo con mayonesa y perejil",
+    "description": "Papas y huevos duros se cocinan en la misma olla y se aderezan con una salsa cremosa de mayonesa y mostaza. Ideal para llevar o acompañar un asado.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 20,
+    "difficulty": "facil",
+    "tags": [
+      "económico",
+      "ensalada",
+      "huevo",
+      "guarnición",
+      "verano",
+      "almuerzo",
+      "sin gluten"
+    ],
+    "ingredients": [
+      "800 g de papas",
+      "3 huevos",
+      "1 cebolla de verdeo",
+      "3 cda de mayonesa",
+      "1 cda de mostaza",
+      "1 cda de vinagre",
+      "2 cda de perejil picado",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Pelá las papas, cortalas en cubos de 2 cm y ponelas en una olla con agua fría y sal."
+      },
+      {
+        "instruction": "Llevá a hervor y cociná las papas hasta que estén tiernas pero firmes.",
+        "minutes": 8,
+        "passive": true
+      },
+      {
+        "instruction": "Sumá los huevos enteros a la misma olla y cociná juntos.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Colá todo, pasá los huevos por agua fría y dejá que las papas largue vapor unos minutos.",
+        "minutes": 3,
+        "passive": true
+      },
+      {
+        "instruction": "Mezclá en un bol la mayonesa, la mostaza, el vinagre, el perejil, sal y pimienta."
+      },
+      {
+        "instruction": "Pelá y picá los huevos, cortá el verdeo fino y mezclalos con las papas y el aderezo con cuidado."
+      },
+      {
+        "instruction": "Serví tibia o fría."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Se come fría; sacala de la heladera 10 minutos antes de servir.",
+      "tip": "Guardala tapada y en lo más frío de la heladera por la mayonesa."
+    }
+  },
+  {
+    "title": "Arroz con leche rápido con limón y canela",
+    "description": "Un postre cremoso con solo cinco ingredientes de alacena. El arroz se precocina en agua para que quede tierno en media hora.",
+    "servings": 4,
+    "prep_minutes": 5,
+    "cook_minutes": 25,
+    "difficulty": "facil",
+    "tags": [
+      "económico",
+      "postre",
+      "merienda",
+      "una olla",
+      "vegetariano",
+      "sin gluten"
+    ],
+    "ingredients": [
+      "1/2 taza de arroz blanco",
+      "1 taza de agua",
+      "1 l de leche",
+      "4 cda de azúcar",
+      "1 tira de cáscara de limón",
+      "1 palito de canela",
+      "1 cdita de esencia de vainilla",
+      "canela molida para espolvorear"
+    ],
+    "steps": [
+      {
+        "instruction": "Poné el arroz con el agua en una olla y cociná a fuego medio hasta que absorba casi todo el líquido.",
+        "minutes": 8,
+        "passive": true
+      },
+      {
+        "instruction": "Agregá la leche, el azúcar, la cáscara de limón y el palito de canela."
+      },
+      {
+        "instruction": "Cociná a fuego bajo revolviendo seguido para que no se pegue, hasta que espese y el arroz esté bien tierno.",
+        "minutes": 16,
+        "passive": false
+      },
+      {
+        "instruction": "Sacá la cáscara y el palito, y sumá la vainilla."
+      },
+      {
+        "instruction": "Repartí en tazas o compoteras y espolvoreá con canela molida."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Se come frío o tibio; si está muy espeso, mezclalo con un chorrito de leche.",
+      "tip": "Espesa mucho al enfriarse, así que cortalo en el punto cremoso."
+    }
+  },
+  {
+    "title": "Guiso de lentejas de lata con papa y panceta",
+    "description": "Con lentejas ya cocidas el guiso se hace en media hora y tiene todo el sabor del de abuela. La panceta ahumada le da el toque justo.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 20,
+    "difficulty": "facil",
+    "tags": [
+      "económico",
+      "guiso",
+      "legumbres",
+      "una olla",
+      "invierno",
+      "almuerzo",
+      "para freezar"
+    ],
+    "ingredients": [
+      "2 latas de lentejas cocidas",
+      "100 g de panceta ahumada",
+      "1 cebolla",
+      "1 zanahoria",
+      "1 papa",
+      "2 dientes de ajo",
+      "1 cda de pimentón dulce",
+      "2 cda de puré de tomate",
+      "500 ml de agua",
+      "1 hoja de laurel",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá la panceta en tiritas y picá la cebolla y el ajo. Cortá la zanahoria y la papa en cubos chicos."
+      },
+      {
+        "instruction": "Doná la panceta en la olla a fuego medio hasta que suelte su grasa.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá la cebolla, el ajo y la zanahoria y cociná hasta que ablanden.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el pimentón, el puré de tomate, la papa, el agua y el laurel. Tapá y cociná.",
+        "minutes": 8,
+        "passive": true
+      },
+      {
+        "instruction": "Escurrí y enjuagá las lentejas, sumalas a la olla y cociná destapado hasta que el guiso espese.",
+        "minutes": 6,
+        "passive": false
+      },
+      {
+        "instruction": "Probá, ajustá la sal, poné pimienta y serví."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "En olla a fuego bajo con un poco de agua.",
+      "tip": "Aplastá unas lentejas con el tenedor para espesar más el guiso."
+    }
+  },
+  {
+    "title": "Tarta de atún y cebolla con tapa comprada",
+    "description": "Una tarta salada con relleno cremoso de cebolla rehogada, atún y queso. Con la tapa lista, solo hay que armar y hornear.",
+    "servings": 6,
+    "prep_minutes": 10,
+    "cook_minutes": 25,
+    "difficulty": "facil",
+    "tags": [
+      "económico",
+      "tarta",
+      "pescado",
+      "horno",
+      "almuerzo",
+      "cena"
+    ],
+    "ingredients": [
+      "1 tapa de tarta comprada",
+      "2 latas de atún al natural",
+      "2 cebollas",
+      "3 huevos",
+      "150 g de queso cremoso",
+      "1 cda de aceite",
+      "1 cdita de pimentón dulce",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá el horno a 200 °C y forrá un molde con la tapa de tarta.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Cortá las cebollas en plumas finas y rehogalas en una sartén con el aceite y una pizca de sal hasta que se doren.",
+        "minutes": 8,
+        "passive": false
+      },
+      {
+        "instruction": "Escurrí el atún y mezclalo en un bol con la cebolla, el pimentón y pimienta."
+      },
+      {
+        "instruction": "Sumá los huevos batidos y el queso cortado en cubitos. Mezclá bien."
+      },
+      {
+        "instruction": "Volcá el relleno sobre la masa y emparejalo."
+      },
+      {
+        "instruction": "Horneá hasta que esté dorada y firme al tocarla.",
+        "minutes": 20,
+        "passive": true
+      },
+      {
+        "instruction": "Dejala reposar cinco minutos antes de cortar."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "En horno a 180 °C unos 10 minutos.",
+      "tip": "Escurrí bien el atún para que el relleno no quede aguado."
+    }
+  },
+  {
+    "title": "Choripán con cebolla caramelizada",
+    "description": "El sándwich más popular de la parrilla, hecho en sartén y con una cebolla dulce que lo vuelve especial. Barato y para hacer en cualquier momento.",
+    "servings": 4,
+    "prep_minutes": 5,
+    "cook_minutes": 25,
+    "difficulty": "facil",
+    "tags": [
+      "económico",
+      "sándwich",
+      "argentina",
+      "cerdo",
+      "cena",
+      "para compartir"
+    ],
+    "ingredients": [
+      "4 chorizos",
+      "4 panes de pancho o de miga grande",
+      "3 cebollas",
+      "1 cda de aceite",
+      "1 cda de azúcar",
+      "1 cda de vinagre",
+      "1 cda de mostaza (opcional)",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá las cebollas en plumas finas."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén y cociná la cebolla con una pizca de sal a fuego medio-bajo, revolviendo seguido.",
+        "minutes": 12,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el azúcar y el vinagre y cociná hasta que la cebolla quede dorada y brillante.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Reservá la cebolla y usá la misma sartén para cocinar los chorizos abiertos en mariposa, con la parte cortada hacia abajo primero.",
+        "minutes": 12,
+        "passive": false
+      },
+      {
+        "instruction": "Dalos vuelta y cociná hasta que estén bien hechos por dentro."
+      },
+      {
+        "instruction": "Tostá un poco los panes en la sartén y armá los choripanes con la cebolla y mostaza si querés."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Calentá el chorizo y la cebolla en sartén; el pan, mejor tostalo fresco.",
+      "tip": "Guardá los componentes por separado para que el pan no se humedezca."
+    }
+  }
+]

@@ -1,6 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { toast } from "sonner";
+import { savePublishedRecipe } from "@/lib/public/actions";
+import { searchCatalogCards, type CatalogCard } from "@/lib/public/catalog-actions";
 import { Heart, Search } from "lucide-react";
 import { PillButton } from "@/components/shared/pill-button";
 import { CompatBadges } from "@/components/recipes/compat-badges";
@@ -34,6 +37,8 @@ export function AddEntrySheet({ open, onOpenChange, groupId, date, slot, busy, o
   const [results, setResults] = useState<RecipeSearchResult["recipes"]>([]);
   const [loading, setLoading] = useState(false);
   const [freeText, setFreeText] = useState("");
+  const [catalog, setCatalog] = useState<CatalogCard[]>([]);
+  const [saving, setSaving] = useState(false);
 
   useEffect(() => {
     if (!open) return;
@@ -59,6 +64,29 @@ export function AddEntrySheet({ open, onOpenChange, groupId, date, slot, busy, o
       clearTimeout(t);
     };
   }, [open, q, favoriteOnly, groupId]);
+
+  // Después de tus recetas: ideas del catálogo (aptas para el grupo).
+  useEffect(() => {
+    if (!open) return;
+    let cancelled = false;
+    const t = setTimeout(() => {
+      void searchCatalogCards({ groupId, q: q || undefined }).then((res) => {
+        if (!cancelled) setCatalog(res.ok ? res.data.slice(0, 4) : []);
+      });
+    }, 350);
+    return () => {
+      cancelled = true;
+      clearTimeout(t);
+    };
+  }, [open, q, groupId]);
+
+  async function pickCatalog(recipeId: string) {
+    setSaving(true);
+    const res = await savePublishedRecipe({ recipeId, groupId });
+    setSaving(false);
+    if (!res.ok) return void toast.error(res.error);
+    onPick({ recipeId: res.data.recipeId });
+  }
 
   return (
     <Sheet open={open} onOpenChange={onOpenChange}>
@@ -137,6 +165,35 @@ export function AddEntrySheet({ open, onOpenChange, groupId, date, slot, busy, o
               <li className="py-3 text-center text-sm text-muted">No encontramos recetas.</li>
             ) : null}
           </ul>
+
+          {catalog.length > 0 ? (
+            <section
+              className="flex flex-col gap-2 border-t border-border pt-3"
+              aria-label="Del catálogo"
+            >
+              <p className="text-sm font-medium">Del catálogo</p>
+              <ul className="flex flex-col gap-2">
+                {catalog.map((c) => (
+                  <li key={c.id}>
+                    <button
+                      type="button"
+                      disabled={busy || saving}
+                      onClick={() => void pickCatalog(c.id)}
+                      className="flex min-h-14 w-full items-center gap-3 rounded-2xl bg-surface px-3 py-2 text-left disabled:opacity-60"
+                    >
+                      <span className="min-w-0 flex-1">
+                        <span className="block truncate text-sm font-semibold">{c.title}</span>
+                        <span className="text-xs text-muted">
+                          {c.total_minutes ? `${c.total_minutes} min · ` : ""}se guarda en tu
+                          recetario
+                        </span>
+                      </span>
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ) : null}
 
           <div className="flex flex-col gap-2 border-t border-border pt-3">
             <label htmlFor="free-text" className="text-sm font-medium">

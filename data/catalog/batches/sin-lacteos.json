@@ -1,0 +1,535 @@
+[
+  {
+    "title": "Fideos con tomates cherry, ajo y albahaca",
+    "description": "Spaghetti con una salsa que se hace en lo que hierve la pasta: tomates cherry salteados hasta que se abren, ajo dorado y albahaca fresca.",
+    "servings": 4,
+    "prep_minutes": 5,
+    "cook_minutes": 20,
+    "difficulty": "facil",
+    "tags": [
+      "pasta",
+      "rápido",
+      "vegano",
+      "italiana",
+      "almuerzo",
+      "cena",
+      "sin lácteos"
+    ],
+    "ingredients": [
+      "400 g de spaghetti",
+      "500 g de tomates cherry",
+      "3 dientes de ajo",
+      "4 cda de aceite de oliva",
+      "1/2 atado de albahaca",
+      "1 pizca de ají molido",
+      "sal a gusto",
+      "1 taza de agua de cocción de la pasta"
+    ],
+    "steps": [
+      {
+        "instruction": "Poné a hervir abundante agua con sal en una olla grande.",
+        "minutes": 8,
+        "passive": true
+      },
+      {
+        "instruction": "Cociná los spaghetti según el paquete, unos 10 minutos, y reservá 1 taza del agua antes de colarlos.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Mientras tanto, laminá el ajo y cortá los tomates cherry por la mitad.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén grande y dorá el ajo con el ají molido durante 1 minuto.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá los tomates con una pizca de sal y cociná a fuego medio hasta que se abran y suelten jugo.",
+        "minutes": 8,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá los spaghetti colados y medio pocillo del agua reservada, y mezclá a fuego fuerte 1 minuto.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Apagá el fuego, sumá la albahaca rota con la mano y serví enseguida.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "En sartén con un chorrito de agua, a fuego medio, revolviendo.",
+      "tip": "Sumá la albahaca fresca recién al servir para que no se oscurezca."
+    }
+  },
+  {
+    "title": "Ensalada tibia de quinoa con palta, choclo y limón",
+    "description": "Quinoa suelta mezclada con choclo, tomate, cebolla morada y palta, aliñada con limón y comino. Fresca, abundante y sin horno.",
+    "servings": 3,
+    "prep_minutes": 10,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "ensalada",
+      "vegano",
+      "sin gluten",
+      "liviano",
+      "almuerzo",
+      "latinoamericana",
+      "sin lácteos"
+    ],
+    "ingredients": [
+      "1 taza de quinoa",
+      "2 tazas de agua",
+      "1 lata de choclo en granos",
+      "2 tomates",
+      "1/2 cebolla morada",
+      "1 palta",
+      "1 limón",
+      "3 cda de aceite de oliva",
+      "1 cdita de comino",
+      "1/2 atado de perejil",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Enjuagá la quinoa bajo la canilla en un colador fino durante 1 minuto para sacarle el amargor.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Poné la quinoa con el agua y una pizca de sal en una ollita y llevá a hervor.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Tapá, bajá el fuego al mínimo y cociná hasta que absorba el agua.",
+        "minutes": 13,
+        "passive": true
+      },
+      {
+        "instruction": "Mientras tanto, cortá los tomates en cubos, picá la cebolla morada fina y el perejil, y escurrí el choclo.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Soltá la quinoa con un tenedor y dejala reposar destapada unos minutos.",
+        "minutes": 3,
+        "passive": true
+      },
+      {
+        "instruction": "Mezclá en un bowl la quinoa con tomate, cebolla, choclo y perejil.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Aliñá con jugo de limón, aceite, comino y sal, y sumá la palta en cubos al final.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Se come tibia o fría; si la querés tibia, calentá la quinoa sola antes de mezclar.",
+      "tip": "Agregá la palta recién al servir para que no se oxide."
+    }
+  },
+  {
+    "title": "Chuletas de cerdo con salsa de naranja y soja",
+    "description": "Chuletas finas doradas en sartén y terminadas con una salsa corta de jugo de naranja, miel, soja y jengibre que queda brillante.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "cerdo",
+      "rápido",
+      "cena",
+      "almuerzo",
+      "sin lácteos"
+    ],
+    "ingredients": [
+      "4 chuletas finas de cerdo (unos 600 g)",
+      "1 naranja grande",
+      "1 cda de miel",
+      "2 cda de salsa de soja",
+      "1 diente de ajo",
+      "1 cdita de jengibre rallado",
+      "1 cda de aceite",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Secá las chuletas con papel de cocina y salpimentalas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Exprimí la naranja y mezclá el jugo con la miel, la soja, el ajo rallado y el jengibre.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén grande y dorá las chuletas 3 o 4 minutos de cada lado. Pasalas a un plato.",
+        "minutes": 8,
+        "passive": false
+      },
+      {
+        "instruction": "Volcá la mezcla de naranja en la misma sartén y hacela hervir raspando el fondo.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Devolvé las chuletas a la sartén y bañalas con la salsa 1 minuto más, hasta que espese un poco.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Serví con arroz blanco o ensalada y la salsa por encima.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "En sartén tapada a fuego bajo con un chorrito de agua.",
+      "tip": "Usá chuletas finas: si son gruesas, se secan antes de cocinarse por dentro."
+    }
+  },
+  {
+    "title": "Sopa crema de zanahoria, naranja y jengibre",
+    "description": "Una sopa sedosa sin una gota de crema: la papa le da cuerpo, la naranja frescura y el jengibre un toque picante.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 20,
+    "difficulty": "facil",
+    "tags": [
+      "sopa",
+      "vegano",
+      "una olla",
+      "invierno",
+      "económico",
+      "sin lácteos"
+    ],
+    "ingredients": [
+      "600 g de zanahorias",
+      "1 cebolla",
+      "1 papa mediana",
+      "1 cda de aceite",
+      "1 l de agua",
+      "1 cubito de caldo de verdura",
+      "1 naranja",
+      "1 cdita de jengibre rallado",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Pelá las zanahorias, la papa y la cebolla, y cortalas en rodajas finas para que se cocinen rápido.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá el aceite en una olla y rehogá la cebolla con una pizca de sal.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá zanahoria, papa, jengibre, agua y el cubito. Llevá a hervor.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cociná tapado a fuego medio hasta que las verduras estén bien blandas.",
+        "minutes": 15,
+        "passive": true
+      },
+      {
+        "instruction": "Procesá con minipimer o licuadora hasta lograr una crema lisa.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Agregá el jugo de la naranja, corregí la sal y sumá pimienta. Calentá 1 minuto y serví.",
+        "minutes": 1,
+        "passive": false
+      }
+    ],
+    "storage": {
+      "fridge_days": 4,
+      "freezer_days": 90,
+      "reheat": "En olla a fuego bajo, sumando un poco de agua si espesó.",
+      "tip": "Si la licuás caliente, llená la licuadora solo hasta la mitad y tapá con un trapo."
+    }
+  },
+  {
+    "title": "Mousse de chocolate y palta",
+    "description": "Postre cremoso sin lácteos ni cocción: la palta madura reemplaza la crema y el cacao le da todo el sabor.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "postre",
+      "sin horno",
+      "vegetariano",
+      "sin gluten",
+      "sin lácteos"
+    ],
+    "ingredients": [
+      "2 paltas bien maduras",
+      "4 cda de cacao amargo en polvo",
+      "4 cda de miel",
+      "1 cdita de esencia de vainilla",
+      "3 cda de agua",
+      "1 pizca de sal",
+      "1 cda de nueces picadas para decorar"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá las paltas, sacales el carozo y poné la pulpa en la licuadora o procesadora.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Agregá el cacao, la miel, la vainilla, el agua y la sal.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Procesá hasta que quede completamente lisa, raspando los costados una o dos veces.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Probá y ajustá el dulce con un poco más de miel si hace falta.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Repartí en vasitos y llevá a la heladera hasta que tome cuerpo.",
+        "minutes": 15,
+        "passive": true
+      },
+      {
+        "instruction": "Serví con nueces picadas por encima.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "No se recalienta: servila bien fría.",
+      "tip": "Tapá los vasitos con film en contacto con la mousse para que no se oscurezca."
+    }
+  },
+  {
+    "title": "Sándwich de lomo con cebolla dorada y rúcula",
+    "description": "Bifes finos de lomo apenas sellados en una flauta crocante, con cebolla dorada, tomate, rúcula y mostaza. Un clásico de la casa en 30 minutos.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 20,
+    "difficulty": "facil",
+    "tags": [
+      "sándwich",
+      "carne",
+      "cena",
+      "argentina",
+      "sin lácteos"
+    ],
+    "ingredients": [
+      "400 g de lomo en bifes finos",
+      "2 cebollas",
+      "4 panes tipo flautita",
+      "1 tomate",
+      "2 tazas de rúcula",
+      "1 cda de mostaza",
+      "2 cda de aceite",
+      "1 cdita de azúcar",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá las cebollas en pluma fina.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá 1 cucharada de aceite en una sartén y cociná la cebolla con sal y el azúcar hasta que esté dorada.",
+        "minutes": 12,
+        "passive": false
+      },
+      {
+        "instruction": "Pasá la cebolla a un plato y limpiá la sartén con papel de cocina.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá el resto del aceite a fuego fuerte y sellá los bifes salpimentados 1 minuto y medio por lado.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Abrí los panes y tostalos unos minutos en la misma sartén o en la tostadora.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Untá los panes con mostaza y armá con lomo, cebolla, tomate en rodajas y rúcula.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Calentá la carne y la cebolla en sartén; armá el sándwich con pan fresco.",
+      "tip": "Guardá la carne separada del pan para que no se ablande."
+    }
+  },
+  {
+    "title": "Papas rústicas en airfryer con ajo y pimentón",
+    "description": "Gajos de papa con cáscara, precocidos en el microondas para que queden cremosos por dentro y bien crocantes por fuera en la airfryer.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 20,
+    "difficulty": "facil",
+    "tags": [
+      "airfryer",
+      "guarnición",
+      "vegano",
+      "sin gluten",
+      "económico",
+      "para compartir",
+      "sin lácteos"
+    ],
+    "ingredients": [
+      "800 g de papas",
+      "2 cda de aceite",
+      "1 cdita de pimentón dulce",
+      "1 cdita de orégano",
+      "2 dientes de ajo",
+      "2 cda de agua",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Lavá bien las papas y cortalas en gajos gruesos sin pelar.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Ponelas en un bowl apto microondas con el agua, tapá y cociná a máxima potencia.",
+        "minutes": 6,
+        "passive": true
+      },
+      {
+        "instruction": "Escurrí y secá los gajos con un trapo limpio.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclalos con aceite, pimentón, orégano, sal y el ajo picado fino.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Precalentá la airfryer a 200 °C y poné los gajos en una sola capa.",
+        "minutes": 3,
+        "passive": true
+      },
+      {
+        "instruction": "Cociná sacudiendo la canasta a mitad de tiempo, hasta que estén dorados y crocantes.",
+        "minutes": 14,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Volvelas 4 minutos a la airfryer a 190 °C para recuperar el crocante.",
+      "tip": "Secá bien las papas antes de condimentar: si están mojadas no se doran."
+    }
+  },
+  {
+    "title": "Albóndigas de pollo en salsa de tomate",
+    "description": "Albóndigas tiernas de pollo con ajo y perejil, cocidas directamente en una salsa de tomate casera. Rinden y les encantan a los chicos.",
+    "servings": 4,
+    "prep_minutes": 12,
+    "cook_minutes": 18,
+    "difficulty": "media",
+    "tags": [
+      "pollo",
+      "almuerzo",
+      "cena",
+      "para chicos",
+      "para freezar",
+      "sin lácteos"
+    ],
+    "ingredients": [
+      "500 g de carne picada de pollo",
+      "1 huevo",
+      "3 cda de pan rallado",
+      "1 diente de ajo",
+      "2 cda de perejil picado",
+      "1 cebolla",
+      "1 lata de tomate triturado",
+      "1 cda de aceite",
+      "1 cdita de orégano",
+      "1/2 taza de agua",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Rallá la mitad de la cebolla y picá fina la otra mitad.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclá el pollo con la cebolla rallada, el huevo, el pan rallado, el ajo picado, el perejil, sal y pimienta.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Formá bolitas del tamaño de una nuez con las manos húmedas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén honda y rehogá la cebolla picada 3 minutos.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el tomate triturado, el agua, el orégano y sal, y llevá a hervor suave.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Poné las albóndigas en la salsa, tapá y cociná a fuego medio-bajo.",
+        "minutes": 12,
+        "passive": true
+      },
+      {
+        "instruction": "Dalas vuelta con cuidado a mitad de cocción y serví con arroz o puré.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 90,
+      "reheat": "En olla con un chorrito de agua a fuego bajo, tapadas.",
+      "tip": "Mojate las manos para formar las bolitas: no se pegan."
+    }
+  }
+]

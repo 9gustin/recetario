@@ -49,6 +49,10 @@ export type SuggestCard = {
   label: string;
   missing: string[];
   isNew: boolean;
+  /** Receta del catálogo público: se guarda en el grupo al elegirla. */
+  catalog?: boolean;
+  /** Página pública (solo catálogo). */
+  slug?: string;
   /** Motivo de la idea (modo ideas). */
   reason?: string;
 };

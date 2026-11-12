@@ -1,0 +1,599 @@
+[
+  {
+    "title": "Nuggets de pollo al horno con parmesano",
+    "description": "Bocaditos de pechuga con un rebozado crocante de pan rallado y parmesano, sin fritura. Ideales para mojar en lo que más les guste.",
+    "servings": 4,
+    "prep_minutes": 15,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "pollo",
+      "horno",
+      "para chicos",
+      "para freezar",
+      "cena",
+      "una bandeja"
+    ],
+    "ingredients": [
+      "500 g de pechuga de pollo",
+      "1 huevo",
+      "1 taza de pan rallado",
+      "2 cda de queso parmesano rallado",
+      "1 cdita de pimentón dulce",
+      "1 cdita de ajo en polvo",
+      "2 cda de aceite de oliva",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá el horno bien fuerte, a 220 °C, y aceitá apenas una placa.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cortá la pechuga en trozos del tamaño de un bocado y salalos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Batí el huevo en un plato hondo.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclá en otro plato el pan rallado, el parmesano, el pimentón y el ajo en polvo.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Pasá cada trozo por el huevo y después por el pan rallado, apretando para que se pegue.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Acomodalos en la placa, rocialos con el aceite y horneá 8 minutos.",
+        "minutes": 8,
+        "passive": true
+      },
+      {
+        "instruction": "Dalos vuelta y horneá 7 minutos más, hasta que estén dorados y bien cocidos por dentro.",
+        "minutes": 7,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Horno a 200 °C unos 8 minutos o airfryer, para que vuelvan a quedar crocantes.",
+      "tip": "Podés dejarlos rebozados y crudos en el freezer, separados en una bandeja, y hornearlos sin descongelar."
+    }
+  },
+  {
+    "title": "Mac and cheese casero de fideos codito",
+    "description": "Fideos codito en una salsa cremosa de leche y queso, con un toque de nuez moscada. Un clásico que se hace en veinte minutos.",
+    "servings": 4,
+    "prep_minutes": 5,
+    "cook_minutes": 20,
+    "difficulty": "facil",
+    "tags": [
+      "pasta",
+      "vegetariano",
+      "para chicos",
+      "almuerzo",
+      "cena"
+    ],
+    "ingredients": [
+      "300 g de fideos codito",
+      "2 cda de manteca",
+      "2 cda de harina",
+      "500 ml de leche",
+      "200 g de queso cremoso en cubos",
+      "50 g de queso parmesano rallado",
+      "1 pizca de nuez moscada",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Herví los fideos en abundante agua con sal el tiempo que indique el paquete, unos 9 minutos.",
+        "minutes": 9,
+        "passive": true
+      },
+      {
+        "instruction": "Escurrilos y reservalos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Derretí la manteca en la misma olla a fuego medio.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Agregá la harina y revolvé 1 minuto con cuchara de madera.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá la leche de a poco, revolviendo, y cociná hasta que espese, unos 5 minutos.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Apagá el fuego y agregá el queso cremoso, el parmesano, la nuez moscada y sal.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Volcá los fideos en la salsa, mezclá y serví enseguida.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "En una cacerola con un chorrito de leche, a fuego bajo y revolviendo.",
+      "tip": "La salsa espesa al enfriarse, por eso conviene sumar leche al recalentar."
+    }
+  },
+  {
+    "title": "Pizzetas de pan árabe con jamón y mozzarella",
+    "description": "Pizzas individuales rapidísimas sobre pan árabe, con salsa de tomate, jamón y mucho queso. Los chicos pueden armar la suya.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "horno",
+      "rápido",
+      "para chicos",
+      "cena",
+      "italiana",
+      "una bandeja"
+    ],
+    "ingredients": [
+      "4 panes árabes",
+      "200 ml de salsa de tomate",
+      "200 g de mozzarella en rodajas",
+      "4 fetas de jamón cocido",
+      "1 cdita de orejano seco",
+      "1 cda de aceite de oliva"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá el horno a 220 °C.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Poné los panes en una placa y pintalos con un poco de aceite.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Extendé la salsa de tomate sobre cada pan.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cortá el jamón en tiritas y repartilo por encima.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cubrí con la mozzarella y espolvoreá con orégano.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Horneá 8 a 10 minutos, hasta que el queso burbujee y el borde quede crocante.",
+        "minutes": 10,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Horno a 200 °C unos 5 minutos o sartén tapada a fuego bajo.",
+      "tip": "Dejá que los chicos elijan los toppings: choclo, aceitunas o rodajas de tomate."
+    }
+  },
+  {
+    "title": "Empanadas de jamón y queso al horno",
+    "description": "Empanadas rellenas con jamón cocido y mozzarella que se arman en un rato usando tapas ya hechas. Salen doradas y con el queso bien derretido.",
+    "servings": 4,
+    "prep_minutes": 12,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "empanada",
+      "horno",
+      "para chicos",
+      "para freezar",
+      "argentina",
+      "para compartir"
+    ],
+    "ingredients": [
+      "12 tapas de empanadas para horno",
+      "200 g de jamón cocido picado",
+      "250 g de mozzarella en cubitos",
+      "1 huevo",
+      "1 cda de leche",
+      "1 pizca de orégano"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá el horno a 220 °C y enmantecá una placa.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclá el jamón, la mozzarella y el orégano en un bol.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Poné una cucharada generosa de relleno en el centro de cada tapa.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Humedecé el borde con agua, cerrá y hacé el repulgue con un tenedor.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Batí el huevo con la leche y pintá las empanadas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Horneá 15 minutos, hasta que estén bien doradas.",
+        "minutes": 15,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Horno a 200 °C durante 8 a 10 minutos.",
+      "tip": "Para freezarlas, armalas y congelalas crudas sobre una bandeja; después pasalas a una bolsa."
+    }
+  },
+  {
+    "title": "Fideos tirabuzón con salsa cremosa de zanahoria",
+    "description": "Una salsa suave y dulce de zanahoria y cebolla con crema, que se ve naranja y se come sin protestas. Una forma fácil de sumar verduras.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 18,
+    "difficulty": "facil",
+    "tags": [
+      "pasta",
+      "verdura",
+      "vegetariano",
+      "para chicos",
+      "almuerzo",
+      "cena"
+    ],
+    "ingredients": [
+      "400 g de fideos tirabuzón",
+      "3 zanahorias",
+      "1 cebolla",
+      "1 diente de ajo",
+      "1 cda de aceite de oliva",
+      "100 ml de agua",
+      "150 ml de crema de leche",
+      "40 g de queso rallado",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Poné a hervir los fideos en agua con sal.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Rallá las zanahorias y picá la cebolla y el ajo bien finitos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Rehogá la cebolla y el ajo en el aceite 3 minutos.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá la zanahoria y el agua, tapá y cociná a fuego medio 8 minutos.",
+        "minutes": 8,
+        "passive": true
+      },
+      {
+        "instruction": "Pasá todo a una jarra, agregá la crema y procesá con minipimer hasta que quede lisa.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Escurrí los fideos, mezclalos con la salsa y espolvoreá con queso rallado.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "En sartén con un chorrito de agua o leche, a fuego bajo.",
+      "tip": "La salsa sola se puede freezar en porciones para otro día."
+    }
+  },
+  {
+    "title": "Bastoncitos de merluza crocantes al horno",
+    "description": "Tiras de merluza rebozadas y horneadas, tiernas por dentro y crocantes por fuera. Una buena manera de que coman pescado.",
+    "servings": 4,
+    "prep_minutes": 12,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "pescado",
+      "horno",
+      "para chicos",
+      "rápido",
+      "una bandeja",
+      "cena"
+    ],
+    "ingredients": [
+      "400 g de filetes de merluza",
+      "1 huevo",
+      "1 taza de pan rallado",
+      "2 cda de harina",
+      "1 cdita de pimentón dulce",
+      "2 cda de aceite de oliva",
+      "1 limón",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Precalentá el horno a 220 °C y aceitá una placa.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Secá los filetes con papel de cocina y cortalos en bastoncitos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Salalos y pasalos por la harina.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Pasalos por el huevo batido y luego por el pan rallado mezclado con el pimentón.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Acomodalos en la placa y rocialos con el aceite.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Horneá 6 minutos, dalos vuelta y horneá 6 minutos más.",
+        "minutes": 12,
+        "passive": true
+      },
+      {
+        "instruction": "Serví con gajos de limón.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": 60,
+      "reheat": "Horno o airfryer a 200 °C unos 6 minutos.",
+      "tip": "Revisá bien que no queden espinas antes de servirle a los más chicos."
+    }
+  },
+  {
+    "title": "Brochettes de frutas con dip de yogur y miel",
+    "description": "Palitos de frutas de colores con una salsita cremosa de yogur y vainilla. Sin cocción y divertidos para armar entre todos.",
+    "servings": 4,
+    "prep_minutes": 15,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "fruta",
+      "postre",
+      "merienda",
+      "para chicos",
+      "sin horno",
+      "rápido",
+      "vegetariano"
+    ],
+    "ingredients": [
+      "2 bananas",
+      "250 g de frutillas",
+      "1 taza de uvas sin semillas",
+      "1 naranja",
+      "1 cda de jugo de limón",
+      "200 g de yogur natural",
+      "2 cda de miel",
+      "1 cdita de esencia de vainilla",
+      "8 palitos de brochette"
+    ],
+    "steps": [
+      {
+        "instruction": "Lavá las frutillas y las uvas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Pelá la naranja y separala en gajos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cortá las bananas en rodajas gruesas y rociálas con el jugo de limón para que no se oscurezcan.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Ensartá las frutas en los palitos, alternando colores.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclá el yogur con la miel y la vainilla.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Serví las brochettes con el dip para mojar.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "No necesita recalentarse; servila fría.",
+      "tip": "Para menores de un año, reemplazá la miel por un poco de azúcar o banana pisada. A los más chicos cortales las uvas al medio."
+    }
+  },
+  {
+    "title": "Torta de chocolate en taza al microondas",
+    "description": "Un bizcochuelo húmedo de chocolate que se hace en una taza y está listo en dos minutos. Perfecto para un antojo de merienda.",
+    "servings": 1,
+    "prep_minutes": 5,
+    "cook_minutes": 2,
+    "difficulty": "facil",
+    "tags": [
+      "postre",
+      "merienda",
+      "rápido",
+      "sin horno",
+      "para chicos",
+      "vegetariano"
+    ],
+    "ingredients": [
+      "4 cda de harina 0000",
+      "3 cda de azúcar",
+      "2 cda de cacao amargo",
+      "1 cdita de polvo de hornear",
+      "1 huevo",
+      "4 cda de leche",
+      "2 cda de aceite neutro",
+      "1 cda de chips de chocolate"
+    ],
+    "steps": [
+      {
+        "instruction": "Mezclá en una taza grande la harina, el azúcar, el cacao y el polvo de hornear.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Agregá el huevo y mezclá con tenedor hasta integrar.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Sumá la leche y el aceite y revolvé hasta que no queden grumos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Incorporá los chips de chocolate.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cociná en el microondas a máxima potencia 90 segundos.",
+        "minutes": 2,
+        "passive": true
+      },
+      {
+        "instruction": "Dejá entibiar un minuto antes de comer, porque la taza queda muy caliente.",
+        "minutes": 1,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Microondas 15 segundos.",
+      "tip": "Es mejor comerla recién hecha; acompañala con una cucharada de dulce de leche o helado."
+    }
+  },
+  {
+    "title": "Tacos suaves de carne picada y queso",
+    "description": "Tortillas blandas rellenas con carne picada condimentada suave, queso y verduras frescas. Cada uno arma su taco a gusto.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 15,
+    "difficulty": "facil",
+    "tags": [
+      "carne",
+      "mexicana",
+      "para chicos",
+      "rápido",
+      "cena"
+    ],
+    "ingredients": [
+      "300 g de carne picada",
+      "1 cebolla chica",
+      "1 diente de ajo",
+      "1 cda de aceite de oliva",
+      "1 cdita de comino",
+      "1 cdita de pimentón dulce",
+      "100 ml de salsa de tomate",
+      "8 tortillas de trigo chicas",
+      "150 g de queso cremoso rallado",
+      "4 hojas de lechuga",
+      "1 tomate",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Picá bien fina la cebolla y el ajo.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Rehogá la cebolla y el ajo en el aceite 3 minutos.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá la carne picada y cociná desmenuzándola 5 minutos, hasta que pierda el color rosado.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá el comino, el pimentón, la salsa de tomate y sal, y cociná 4 minutos más.",
+        "minutes": 4,
+        "passive": false
+      },
+      {
+        "instruction": "Calentá las tortillas 20 segundos por lado en una sartén seca.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cortá la lechuga en tiritas y el tomate en cubitos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Rellená cada tortilla con carne, queso, lechuga y tomate.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Calentá solo el relleno en sartén o microondas y armá los tacos al momento.",
+      "tip": "Guardá el relleno separado de las tortillas y las verduras frescas."
+    }
+  }
+]

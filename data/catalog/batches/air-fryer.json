@@ -1,0 +1,645 @@
+[
+  {
+    "title": "Papas rústicas con ajo y romero en airfryer",
+    "description": "Gajos de papa dorados por fuera y tiernos por dentro, perfumados con ajo y romero. Una guarnición que sale casi sola mientras armás el resto de la comida.",
+    "servings": 4,
+    "prep_minutes": 5,
+    "cook_minutes": 20,
+    "difficulty": "facil",
+    "tags": [
+      "airfryer",
+      "guarnición",
+      "verdura",
+      "vegano",
+      "sin gluten",
+      "económico"
+    ],
+    "ingredients": [
+      "600 g de papas con cáscara",
+      "2 cda de aceite de oliva",
+      "2 dientes de ajo",
+      "1 cdita de romero fresco picado (o seco)",
+      "1 cdita de pimentón dulce",
+      "sal a gusto",
+      "pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Lavá bien las papas y cortalas en gajos de 2 cm de grosor, sin pelar.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclalas en un bol con el aceite, el pimentón, el romero, la sal y la pimienta.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Aplastá los dientes de ajo con la hoja del cuchillo y sumalos al bol.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cargá los gajos en la canasta de la airfryer en una sola capa, sin apilar mucho.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cociná a 200 °C durante 10 minutos.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Sacudí la canasta para dar vuelta las papas y cociná 10 minutos más, hasta que estén bien doradas.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Retirá el ajo, probá la sal y serví bien calientes.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Recalentá 4 minutos en la airfryer a 190 °C para que recuperen el crocante.",
+      "tip": "Cortá los gajos parejos para que se cocinen al mismo tiempo."
+    }
+  },
+  {
+    "title": "Alitas de pollo al limón y pimentón",
+    "description": "Alitas jugosas con piel crocante, marinadas en un toque de limón, pimentón y ajo en polvo. Perfectas para compartir con una cerveza o una gaseosa.",
+    "servings": 4,
+    "prep_minutes": 5,
+    "cook_minutes": 20,
+    "difficulty": "facil",
+    "tags": [
+      "airfryer",
+      "pollo",
+      "para compartir",
+      "sin gluten",
+      "sin lácteos",
+      "alto en proteína"
+    ],
+    "ingredients": [
+      "800 g de alitas de pollo (separadas en dos partes)",
+      "1 limón",
+      "1 cda de pimentón ahumado",
+      "1 cdita de ajo en polvo",
+      "1 cda de aceite",
+      "1 cdita de sal",
+      "pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Secá bien las alitas con papel de cocina para que la piel quede crocante.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclalas en un bol con el aceite, el pimentón, el ajo en polvo, la sal, la pimienta y el jugo de medio limón.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Acomodalas en la canasta en una sola capa, sin que se tapen entre sí.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cociná a 200 °C durante 10 minutos.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Date vuelta las alitas con una pinza y cociná otros 10 minutos, hasta que estén doradas y bien cocidas por dentro.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Serví con el otro medio limón cortado en gajos para exprimir encima.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Recalentá 5 minutos en la airfryer a 190 °C.",
+      "tip": "Si tu canasta es chica, cociná en dos tandas para que no se cuezan al vapor."
+    }
+  },
+  {
+    "title": "Salmón con costra de mostaza y miel",
+    "description": "Filetes de salmón con una cobertura de mostaza, miel y pan rallado que se dora en minutos. Queda jugoso y se acompaña con cualquier verdura.",
+    "servings": 2,
+    "prep_minutes": 7,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "airfryer",
+      "pescado",
+      "rápido",
+      "cena",
+      "alto en proteína",
+      "sin lácteos"
+    ],
+    "ingredients": [
+      "2 filetes de salmón rosado (unos 150 g cada uno)",
+      "1 cda de mostaza",
+      "1 cdita de miel",
+      "3 cda de pan rallado",
+      "1 cdita de perejil picado",
+      "1 cda de aceite de oliva",
+      "sal a gusto",
+      "pimienta a gusto",
+      "1 limón"
+    ],
+    "steps": [
+      {
+        "instruction": "Secá los filetes con papel de cocina y salpimentalos.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclá la mostaza con la miel y pincelá la parte de arriba de cada filete.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Combiná el pan rallado con el perejil y el aceite hasta que quede humedecido.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Presioná la mezcla de pan rallado sobre la mostaza para formar la costra.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Colocá los filetes en la canasta con la costra hacia arriba.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cociná a 190 °C durante 9 o 10 minutos, hasta que la costra esté dorada y el salmón se desarme con el tenedor.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Serví enseguida con gajos de limón.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Recalentá 3 minutos en la airfryer a 160 °C, sin pasarte para que no se seque.",
+      "tip": "Si el filete es muy grueso, sumá 2 minutos de cocción."
+    }
+  },
+  {
+    "title": "Tostadas francesas en airfryer",
+    "description": "Pan embebido en huevo, leche, vainilla y canela, dorado sin una gota de manteca en la sartén. Un desayuno o merienda dulce que les encanta a los chicos.",
+    "servings": 2,
+    "prep_minutes": 8,
+    "cook_minutes": 8,
+    "difficulty": "facil",
+    "tags": [
+      "airfryer",
+      "desayuno",
+      "merienda",
+      "para chicos",
+      "vegetariano",
+      "rápido"
+    ],
+    "ingredients": [
+      "4 rebanadas de pan lactal",
+      "2 huevos",
+      "100 ml de leche",
+      "1 cdita de esencia de vainilla",
+      "1 cdita de canela",
+      "1 cda de azúcar",
+      "1 cda de aceite",
+      "miel o dulce de leche para servir"
+    ],
+    "steps": [
+      {
+        "instruction": "Batí los huevos con la leche, la vainilla, la canela y el azúcar en un plato hondo.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Remojá cada rebanada de pan 10 segundos de cada lado, sin dejar que se deshaga.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Pincelá la canasta de la airfryer con un poco de aceite.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Acomodá las tostadas en una sola capa; si no entran, hacelo en dos tandas.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cociná a 180 °C durante 4 minutos.",
+        "minutes": 4,
+        "passive": true
+      },
+      {
+        "instruction": "Dalas vuelta y cociná 3 o 4 minutos más, hasta que estén doradas.",
+        "minutes": 4,
+        "passive": true
+      },
+      {
+        "instruction": "Serví con miel, dulce de leche o fruta cortada.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": 30,
+      "reheat": "Calentalas 2 minutos en la airfryer a 170 °C o en la tostadora.",
+      "tip": "Usá pan del día anterior: absorbe mejor y no se rompe."
+    }
+  },
+  {
+    "title": "Provoleta en airfryer con tomate y orégano",
+    "description": "La clásica provoleta de asado, pero sin parrilla: se derrite y se dora en pocos minutos. Con tomate fresco y ají molido es una entrada para compartir.",
+    "servings": 4,
+    "prep_minutes": 5,
+    "cook_minutes": 8,
+    "difficulty": "facil",
+    "tags": [
+      "airfryer",
+      "argentina",
+      "para compartir",
+      "vegetariano",
+      "sin gluten",
+      "rápido"
+    ],
+    "ingredients": [
+      "1 provoleta de 250 g (de 2 cm de grosor)",
+      "1 tomate maduro",
+      "1 cda de aceite de oliva",
+      "1 cdita de orégano",
+      "1 pizca de ají molido",
+      "pan o tostadas para acompañar"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá un círculo de papel aluminio un poco más grande que la provoleta y doblá los bordes hacia arriba formando una bandejita.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Colocá la provoleta sobre el aluminio y pincelala con la mitad del aceite.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cortá el tomate en cubitos chicos y mezclalo con el resto del aceite y una pizca de sal.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Poné la provoleta en la canasta y cociná a 180 °C durante 7 u 8 minutos, hasta que burbujee y se dore.",
+        "minutes": 8,
+        "passive": true
+      },
+      {
+        "instruction": "Sacala con cuidado, cubrila con el tomate, el orégano y el ají molido.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Serví enseguida con pan o tostadas.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Recalentá 2 minutos en la airfryer a 170 °C, aunque queda mejor recién hecha.",
+      "tip": "Comela enseguida: al enfriarse el queso se pone gomoso."
+    }
+  },
+  {
+    "title": "Brócoli crocante con ajo y parmesano",
+    "description": "Ramitos de brócoli con los bordes tostados, ajo y queso rallado. Una verdura que se come como snack y hasta convence a los que no son fans.",
+    "servings": 3,
+    "prep_minutes": 7,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "airfryer",
+      "verdura",
+      "guarnición",
+      "vegetariano",
+      "sin gluten",
+      "liviano"
+    ],
+    "ingredients": [
+      "400 g de brócoli",
+      "2 cda de aceite de oliva",
+      "2 dientes de ajo picados",
+      "3 cda de queso parmesano rallado",
+      "1 pizca de ají molido",
+      "sal a gusto",
+      "1/2 limón"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá el brócoli en ramitos chicos y parejos; secalos bien si los lavaste.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclalos con el aceite, el ajo, la sal y el ají molido.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cargá la canasta y cociná a 190 °C durante 6 minutos.",
+        "minutes": 6,
+        "passive": true
+      },
+      {
+        "instruction": "Sacudí la canasta, espolvoreá el parmesano y cociná 3 o 4 minutos más.",
+        "minutes": 4,
+        "passive": true
+      },
+      {
+        "instruction": "Exprimí unas gotas de limón por encima y serví.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Recalentá 3 minutos en la airfryer a 180 °C.",
+      "tip": "Los ramitos chicos se tuestan mejor que los grandes."
+    }
+  },
+  {
+    "title": "Bananas con chocolate y nueces en airfryer",
+    "description": "Bananas cocidas en su cáscara y rellenas de chocolate derretido y nueces. Un postre calentito, sin horno y con muy pocos ingredientes.",
+    "servings": 4,
+    "prep_minutes": 5,
+    "cook_minutes": 8,
+    "difficulty": "facil",
+    "tags": [
+      "airfryer",
+      "postre",
+      "fruta",
+      "para chicos",
+      "vegetariano",
+      "rápido"
+    ],
+    "ingredients": [
+      "4 bananas maduras pero firmes, con cáscara",
+      "60 g de chocolate semiamargo en trocitos",
+      "3 cda de nueces picadas",
+      "1 cda de dulce de leche (opcional)",
+      "1 pizca de canela"
+    ],
+    "steps": [
+      {
+        "instruction": "Hacé un corte a lo largo de cada banana, sobre la cáscara, sin atravesar la parte de abajo.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Abrí apenas la banana y rellenala con el chocolate y las nueces.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Acomodalas en la canasta, apoyadas para que no se abran de más; podés usar bolitas de aluminio de soporte.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cociná a 180 °C durante 7 u 8 minutos, hasta que el chocolate se derrita y la cáscara se oscurezca.",
+        "minutes": 8,
+        "passive": true
+      },
+      {
+        "instruction": "Sacalas con cuidado y dejalas reposar 2 minutos.",
+        "minutes": 2,
+        "passive": true
+      },
+      {
+        "instruction": "Serví con dulce de leche y canela por encima, y comelas con cucharita.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Calentá 2 minutos en la airfryer a 160 °C.",
+      "tip": "Elegí bananas apenas manchadas: las muy maduras se deshacen."
+    }
+  },
+  {
+    "title": "Bolitas de arroz y queso crocantes",
+    "description": "Una buena manera de usar arroz que sobró: bolitas con queso cremoso adentro, rebozadas y doradas en la airfryer. Sirven de snack o de comida liviana.",
+    "servings": 4,
+    "prep_minutes": 12,
+    "cook_minutes": 10,
+    "difficulty": "media",
+    "tags": [
+      "airfryer",
+      "sobras",
+      "arroz",
+      "snack",
+      "vegetariano",
+      "para chicos"
+    ],
+    "ingredients": [
+      "2 tazas de arroz blanco cocido y frío",
+      "1 huevo",
+      "80 g de queso cremoso en cubitos",
+      "3 cda de queso rallado",
+      "1 cda de perejil picado",
+      "8 cda de pan rallado",
+      "1 cda de aceite",
+      "sal a gusto",
+      "pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Mezclá en un bol el arroz, el huevo, el queso rallado, el perejil, la sal, la pimienta y 3 cucharadas de pan rallado.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Tomá una porción del tamaño de una nuez, aplastala en la mano y poné un cubito de queso cremoso en el centro.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cerrá formando una bolita bien compacta; repetí con el resto, deberían salir unas 12.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Pasalas por el resto del pan rallado hasta cubrirlas bien.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Rociá o pincelá las bolitas con el aceite y acomodalas en la canasta sin que se toquen.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cociná a 190 °C durante 10 minutos, dándolas vuelta a la mitad, hasta que estén doradas.",
+        "minutes": 10,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Recalentá 5 minutos en la airfryer a 180 °C.",
+      "tip": "Usá arroz bien frío: si está tibio, las bolitas se desarman."
+    }
+  },
+  {
+    "title": "Hamburguesas caseras con queso en airfryer",
+    "description": "Hamburguesas jugosas hechas con carne picada y un toque de pimentón, terminadas con queso derretido. Salen en 10 minutos y no ensucian la sartén.",
+    "servings": 4,
+    "prep_minutes": 10,
+    "cook_minutes": 10,
+    "difficulty": "facil",
+    "tags": [
+      "airfryer",
+      "carne",
+      "almuerzo",
+      "cena",
+      "para chicos",
+      "alto en proteína"
+    ],
+    "ingredients": [
+      "500 g de carne picada",
+      "1 cdita de sal",
+      "1/2 cdita de pimienta",
+      "1 cdita de pimentón dulce",
+      "1 cdita de ajo en polvo",
+      "4 fetas de queso cremoso",
+      "4 panes de hamburguesa",
+      "1 tomate",
+      "4 hojas de lechuga"
+    ],
+    "steps": [
+      {
+        "instruction": "Mezclá la carne con la sal, la pimienta, el pimentón y el ajo en polvo, sin amasar de más.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Dividí en 4 porciones y formá medallones de 2 cm de grosor.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Hacé un hoyito con el dedo en el centro de cada uno para que no se inflen al cocinar.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Acomodalos en la canasta sin que se toquen y cociná a 200 °C durante 8 minutos, dándolos vuelta a la mitad.",
+        "minutes": 8,
+        "passive": true
+      },
+      {
+        "instruction": "Poné una feta de queso sobre cada hamburguesa y cociná 1 o 2 minutos más hasta que se derrita.",
+        "minutes": 2,
+        "passive": true
+      },
+      {
+        "instruction": "Armá los sándwiches con el pan, la lechuga, el tomate en rodajas y la hamburguesa.",
+        "minutes": null,
+        "passive": null
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": 60,
+      "reheat": "Recalentá las hamburguesas 4 minutos en la airfryer a 180 °C.",
+      "tip": "Podés freezar los medallones crudos separados con papel manteca."
+    }
+  },
+  {
+    "title": "Garbanzos crocantes con pimentón y comino",
+    "description": "Garbanzos de lata tostados hasta quedar crocantes y especiados. Un snack vegano, barato y con proteínas para picar o sumar a ensaladas.",
+    "servings": 4,
+    "prep_minutes": 5,
+    "cook_minutes": 14,
+    "difficulty": "facil",
+    "tags": [
+      "airfryer",
+      "snack",
+      "legumbres",
+      "vegano",
+      "sin gluten",
+      "económico"
+    ],
+    "ingredients": [
+      "1 lata de garbanzos cocidos (unos 350 g escurridos)",
+      "1 cda de aceite de oliva",
+      "1 cdita de pimentón ahumado",
+      "1/2 cdita de comino",
+      "1/2 cdita de ajo en polvo",
+      "1/2 cdita de sal"
+    ],
+    "steps": [
+      {
+        "instruction": "Escurrí los garbanzos y enjuagalos bajo la canilla.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Secalos muy bien con un repasador o papel de cocina; cuanto más secos, más crocantes.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Mezclalos con el aceite en un bol hasta que queden apenas brillantes.",
+        "minutes": null,
+        "passive": null
+      },
+      {
+        "instruction": "Cocinalos en la airfryer a 200 °C durante 8 minutos.",
+        "minutes": 8,
+        "passive": true
+      },
+      {
+        "instruction": "Sacudí la canasta, espolvoreá el pimentón, el comino, el ajo y la sal, y cociná 5 o 6 minutos más.",
+        "minutes": 6,
+        "passive": true
+      },
+      {
+        "instruction": "Dejalos enfriar 5 minutos: terminan de endurecerse al enfriarse.",
+        "minutes": 5,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Si pierden el crocante, pasalos 3 minutos por la airfryer a 180 °C.",
+      "tip": "Guardalos en un frasco sin cerrar del todo para que no se humedezcan."
+    }
+  }
+]

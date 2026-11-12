@@ -1,0 +1,544 @@
+[
+  {
+    "title": "Pechuga a la plancha con rúcula, cherry y parmesano",
+    "description": "Pechuga finita y jugosa, apenas marcada en la plancha, sobre una ensalada fresca con limón. Un plato liviano y con mucha proteína.",
+    "servings": 2,
+    "prep_minutes": 10,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "liviano",
+      "rápido",
+      "pollo",
+      "alto en proteína",
+      "almuerzo",
+      "cena"
+    ],
+    "ingredients": [
+      "2 pechugas de pollo (unos 400 g)",
+      "1 cdita de pimentón dulce",
+      "1 diente de ajo",
+      "1 cda de aceite de oliva",
+      "3 tazas de rúcula",
+      "200 g de tomates cherry",
+      "30 g de queso parmesano",
+      "1 limón",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá cada pechuga al medio a lo largo para obtener 4 filetes finos."
+      },
+      {
+        "instruction": "Condimentá con el pimentón, el ajo rallado, sal, pimienta y la mitad del aceite."
+      },
+      {
+        "instruction": "Calentá una plancha o sartén antiadherente bien caliente y cociná los filetes 4 o 5 minutos por lado.",
+        "minutes": 9,
+        "passive": false
+      },
+      {
+        "instruction": "Dejá reposar el pollo tapado mientras armás la ensalada.",
+        "minutes": 3,
+        "passive": true
+      },
+      {
+        "instruction": "Mezclá la rúcula con los cherry cortados, el aceite restante, jugo de limón y sal."
+      },
+      {
+        "instruction": "Cortá el pollo en tiras, serví sobre la ensalada y terminá con lascas de parmesano."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Calentá el pollo en sartén 1 minuto por lado; la ensalada se come fría.",
+      "tip": "Guardá el pollo separado de la ensalada para que no se humedezca."
+    }
+  },
+  {
+    "title": "Fideos de zapallito con cherry y albahaca",
+    "description": "Tiras de zapallito verde apenas salteadas con ajo y tomatitos. Un plato bajo en carbohidratos que se hace en un santiamén.",
+    "servings": 2,
+    "prep_minutes": 10,
+    "cook_minutes": 8,
+    "difficulty": "facil",
+    "tags": [
+      "liviano",
+      "rápido",
+      "vegetariano",
+      "bajo en carbohidratos",
+      "cena",
+      "salteado"
+    ],
+    "ingredients": [
+      "3 zapallitos verdes",
+      "200 g de tomates cherry",
+      "2 dientes de ajo",
+      "1 cda de aceite de oliva",
+      "30 g de queso rallado",
+      "hojas de albahaca a gusto",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Lavá los zapallitos y sacales tiras largas con un pelador hasta llegar a las semillas."
+      },
+      {
+        "instruction": "Cortá los cherry al medio y laminá el ajo."
+      },
+      {
+        "instruction": "Calentá el aceite en una sartén grande y dorá el ajo 30 segundos.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Sumá los cherry y cociná 3 minutos hasta que se ablanden.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá las tiras de zapallito, sal y pimienta, y salteá 2 minutos nada más para que no suelten agua.",
+        "minutes": 2,
+        "passive": false
+      },
+      {
+        "instruction": "Serví con albahaca rota y queso rallado por encima."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Pasalo 1 minuto por sartén caliente.",
+      "tip": "Cocinalos poco: si se pasan, se vuelven aguados."
+    }
+  },
+  {
+    "title": "Gazpacho rápido de tomate y pepino",
+    "description": "Sopa fría de verduras crudas licuadas, ideal para los días de calor. No usa fuego y queda cremosa sin crema.",
+    "servings": 3,
+    "prep_minutes": 12,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "liviano",
+      "rápido",
+      "sopa",
+      "vegetariano",
+      "sin horno",
+      "verano",
+      "española"
+    ],
+    "ingredients": [
+      "600 g de tomates maduros",
+      "1 pepino",
+      "1 morrón rojo",
+      "1 diente de ajo",
+      "1 feta de pan lactal",
+      "2 cda de aceite de oliva",
+      "1 cda de vinagre de vino",
+      "sal a gusto",
+      "hielo a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá los tomates, el pepino pelado y el morrón en trozos grandes."
+      },
+      {
+        "instruction": "Mojá el pan con un poco de agua y exprimilo."
+      },
+      {
+        "instruction": "Licuá todo con el ajo, el aceite, el vinagre y sal hasta que quede bien liso."
+      },
+      {
+        "instruction": "Probá y corregí la sal y el vinagre."
+      },
+      {
+        "instruction": "Enfriá en la heladera o con unos hielos antes de servir.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Serví en vasos o platos hondos con un hilo de aceite."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "No se recalienta: se sirve bien frío.",
+      "tip": "Mezclalo antes de servir porque se separa un poco."
+    }
+  },
+  {
+    "title": "Ensalada de atún con palta, pepino y lima",
+    "description": "Ensalada fresca y llenadora con atún al natural, palta cremosa y mucho limón. No necesita cocción.",
+    "servings": 2,
+    "prep_minutes": 12,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "liviano",
+      "rápido",
+      "ensalada",
+      "pescado",
+      "alto en proteína",
+      "sin horno",
+      "sin gluten",
+      "almuerzo"
+    ],
+    "ingredients": [
+      "2 latas de atún al natural",
+      "1 palta madura",
+      "1 pepino",
+      "1/2 cebolla morada",
+      "2 limas",
+      "1 cda de aceite de oliva",
+      "perejil picado a gusto",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Escurrí bien el atún y desmenuzalo con un tenedor."
+      },
+      {
+        "instruction": "Cortá el pepino en medias lunas y la cebolla en plumas finas."
+      },
+      {
+        "instruction": "Cortá la palta en cubos y rociala con jugo de lima para que no se oscurezca."
+      },
+      {
+        "instruction": "Mezclá todo con el aceite, el perejil, sal y pimienta."
+      },
+      {
+        "instruction": "Serví enseguida, con más lima por encima."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Se come fría, no se recalienta.",
+      "tip": "Agregá la palta al final si vas a guardarla."
+    }
+  },
+  {
+    "title": "Ensalada de naranja, rúcula y queso fresco",
+    "description": "Combinación de cítricos, hojas amargas y queso fresco con semillas crocantes. Liviana, jugosa y lista en minutos.",
+    "servings": 2,
+    "prep_minutes": 12,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "liviano",
+      "rápido",
+      "ensalada",
+      "vegetariano",
+      "fruta",
+      "verano",
+      "sin horno"
+    ],
+    "ingredients": [
+      "2 naranjas",
+      "3 tazas de rúcula",
+      "150 g de queso fresco",
+      "1/2 cebolla morada",
+      "2 cda de semillas de girasol",
+      "1 cda de aceite de oliva",
+      "1 cda de jugo de limón",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Pelá las naranjas a vivo y cortalas en rodajas, juntando el jugo que suelten."
+      },
+      {
+        "instruction": "Cortá la cebolla en plumas finas y dejala 5 minutos en agua fría para suavizarla.",
+        "minutes": 5,
+        "passive": true
+      },
+      {
+        "instruction": "Cortá el queso fresco en cubos."
+      },
+      {
+        "instruction": "Hacé el aderezo con el aceite, el limón, el jugo de naranja, sal y pimienta."
+      },
+      {
+        "instruction": "Armá la ensalada con la rúcula, la naranja, la cebolla escurrida y el queso."
+      },
+      {
+        "instruction": "Aderezá y terminá con las semillas de girasol."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Se come fría.",
+      "tip": "Aderezá justo antes de servir para que la rúcula quede firme."
+    }
+  },
+  {
+    "title": "Bowl de yogur con frutillas, kiwi y avena tostada",
+    "description": "Desayuno o merienda fresquita con yogur natural, frutas y avena tostada para dar crocancia. Se arma en diez minutos.",
+    "servings": 2,
+    "prep_minutes": 8,
+    "cook_minutes": 4,
+    "difficulty": "facil",
+    "tags": [
+      "liviano",
+      "rápido",
+      "desayuno",
+      "merienda",
+      "fruta",
+      "vegetariano",
+      "para chicos"
+    ],
+    "ingredients": [
+      "400 g de yogur natural",
+      "200 g de frutillas",
+      "2 kiwis",
+      "4 cda de avena",
+      "1 cda de miel",
+      "1 cda de semillas de chía"
+    ],
+    "steps": [
+      {
+        "instruction": "Tostá la avena en una sartén seca a fuego medio, revolviendo seguido.",
+        "minutes": 3,
+        "passive": false
+      },
+      {
+        "instruction": "Pasala a un plato para que se enfríe."
+      },
+      {
+        "instruction": "Lavá las frutillas y cortalas en cuartos; pelá los kiwis y cortalos en cubos."
+      },
+      {
+        "instruction": "Repartí el yogur en dos bowls."
+      },
+      {
+        "instruction": "Sumá la fruta, la avena, la chía y un hilo de miel."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Se come frío.",
+      "tip": "Guardá la avena aparte para que no se ablande."
+    }
+  },
+  {
+    "title": "Rolls de pepino con ricota, salmón ahumado y eneldo",
+    "description": "Láminas de pepino enrolladas con ricota cremosa y salmón ahumado. Un bocado fresco, sin horno ni sartén, ideal para compartir.",
+    "servings": 3,
+    "prep_minutes": 20,
+    "cook_minutes": 0,
+    "difficulty": "media",
+    "tags": [
+      "liviano",
+      "snack",
+      "pescado",
+      "sin horno",
+      "para compartir",
+      "sin gluten",
+      "alto en proteína"
+    ],
+    "ingredients": [
+      "2 pepinos grandes",
+      "150 g de ricota",
+      "100 g de salmón ahumado",
+      "1 cda de eneldo picado",
+      "1 limón",
+      "sal y pimienta a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Lavá los pepinos y sacales láminas largas y finas con un pelador."
+      },
+      {
+        "instruction": "Mezclá la ricota con el eneldo, ralladura y jugo de limón, sal y pimienta."
+      },
+      {
+        "instruction": "Secá las láminas con papel de cocina."
+      },
+      {
+        "instruction": "Poné una tira de salmón sobre cada lámina y una cucharadita de ricota en un extremo."
+      },
+      {
+        "instruction": "Enrollá con cuidado y acomodá los rolls con el cierre hacia abajo."
+      },
+      {
+        "instruction": "Llevá 10 minutos a la heladera antes de servir.",
+        "minutes": 10,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Se sirven fríos.",
+      "tip": "Secá bien el pepino para que los rolls no queden aguados."
+    }
+  },
+  {
+    "title": "Caldo oriental de hongos, tofu y verdeo",
+    "description": "Caldo clarito con jengibre, soja y hongos, con cubitos de tofu y verdeo fresco. Reconfortante y con muy pocas calorías.",
+    "servings": 3,
+    "prep_minutes": 8,
+    "cook_minutes": 12,
+    "difficulty": "facil",
+    "tags": [
+      "liviano",
+      "rápido",
+      "sopa",
+      "vegano",
+      "sin lácteos",
+      "asiática",
+      "una olla",
+      "invierno"
+    ],
+    "ingredients": [
+      "1 l de caldo de verduras",
+      "200 g de champiñones",
+      "200 g de tofu firme",
+      "1 zanahoria",
+      "2 cebollas de verdeo",
+      "1 cda de jengibre rallado",
+      "2 cda de salsa de soja",
+      "1 cdita de aceite de sésamo"
+    ],
+    "steps": [
+      {
+        "instruction": "Laminá los champiñones, cortá la zanahoria en rodajas finas y el tofu en cubos."
+      },
+      {
+        "instruction": "Llevá el caldo a hervor en una olla con el jengibre."
+      },
+      {
+        "instruction": "Agregá la zanahoria y los champiñones y cociná a fuego medio.",
+        "minutes": 6,
+        "passive": true
+      },
+      {
+        "instruction": "Sumá el tofu y la soja y cociná 3 minutos más.",
+        "minutes": 3,
+        "passive": true
+      },
+      {
+        "instruction": "Apagá el fuego y agregá el verdeo picado y el aceite de sésamo."
+      },
+      {
+        "instruction": "Serví bien caliente."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Calentá en una olla a fuego bajo sin que hierva fuerte.",
+      "tip": "Sumá el verdeo fresco recién al servir."
+    }
+  },
+  {
+    "title": "Ensalada de pepino estilo asiático con sésamo",
+    "description": "Pepinos aplastados y aliñados con ajo, soja y vinagre. Crocantes, frescos y con un toque picante, perfectos como guarnición.",
+    "servings": 3,
+    "prep_minutes": 15,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "liviano",
+      "rápido",
+      "ensalada",
+      "guarnición",
+      "vegano",
+      "sin lácteos",
+      "asiática",
+      "sin horno"
+    ],
+    "ingredients": [
+      "3 pepinos",
+      "1 diente de ajo",
+      "2 cda de vinagre de arroz",
+      "1 cda de salsa de soja",
+      "1 cdita de aceite de sésamo",
+      "1 cdita de azúcar",
+      "1 cda de semillas de sésamo",
+      "1 pizca de ají molido"
+    ],
+    "steps": [
+      {
+        "instruction": "Lavá los pepinos y aplastalos con el costado de un cuchillo hasta que se abran."
+      },
+      {
+        "instruction": "Cortalos en trozos irregulares y espolvoreá con una pizca de sal."
+      },
+      {
+        "instruction": "Dejalos reposar 10 minutos y escurrí el agua que suelten.",
+        "minutes": 10,
+        "passive": true
+      },
+      {
+        "instruction": "Mezclá el ajo rallado, el vinagre, la soja, el aceite de sésamo, el azúcar y el ají."
+      },
+      {
+        "instruction": "Condimentá los pepinos con el aderezo."
+      },
+      {
+        "instruction": "Terminá con las semillas de sésamo."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": null,
+      "reheat": "Se come fría.",
+      "tip": "Tiene más sabor si reposa 15 minutos en la heladera."
+    }
+  },
+  {
+    "title": "Licuado verde de banana, espinaca y jengibre",
+    "description": "Licuado cremoso y fresco con banana, espinaca y un toque de jengibre. Es una opción liviana para arrancar el día o merendar.",
+    "servings": 2,
+    "prep_minutes": 5,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "liviano",
+      "rápido",
+      "bebida",
+      "desayuno",
+      "merienda",
+      "fruta",
+      "vegetariano",
+      "sin horno"
+    ],
+    "ingredients": [
+      "2 bananas maduras",
+      "2 tazas de espinaca",
+      "400 ml de leche",
+      "1 cdita de jengibre rallado",
+      "1 cda de jugo de limón",
+      "hielo a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Lavá bien la espinaca y escurrila."
+      },
+      {
+        "instruction": "Pelá las bananas y cortalas en rodajas."
+      },
+      {
+        "instruction": "Poné todo en la licuadora con la leche, el jengibre, el limón y el hielo."
+      },
+      {
+        "instruction": "Licuá 1 minuto hasta que no queden hojas."
+      },
+      {
+        "instruction": "Serví enseguida en vasos altos."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Se toma frío.",
+      "tip": "Guardalo en un frasco lleno y tapado para que no se oxide."
+    }
+  }
+]

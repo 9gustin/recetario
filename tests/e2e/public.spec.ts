@@ -160,3 +160,38 @@ test("hacer público: receta, colección y plan aparecen sin sesión; despublica
   await anon.goto("/explorar?q=" + encodeURIComponent("ñoquis calabaza"));
   await expect(anon.getByText("No encontramos recetas")).toBeVisible();
 });
+
+test("catálogo en la app: tus recetas primero y después 'Del catálogo', con guardar", async ({
+  browser,
+}) => {
+  test.setTimeout(150_000);
+  const email = `cat-${Date.now()}@test.com`;
+  await createTestUser(email, password, "Ana");
+  const groupId = await createGroupAs(email, password, "Casa");
+  await seedRecipe(email, password, groupId, {
+    title: "Mi tarta propia",
+    ingredients: ["1 tapa de tarta"],
+    steps: [{ instruction: "Horneá." }],
+  });
+  const admin = adminClient();
+  const { count } = await admin
+    .from("recipes")
+    .select("id", { count: "exact", head: true })
+    .eq("is_catalog", true);
+  test.skip(!count, "Falta cargar el catálogo (pnpm catalog:load)");
+
+  const page = await (await mobileContext(browser)).newPage();
+  await signIn(page, email, password);
+  await page.goto(`/g/${groupId}/recetas`);
+  await page.waitForLoadState("networkidle");
+  await expect(page.getByRole("link", { name: /Mi tarta propia/ }).first()).toBeVisible();
+  const section = page.getByRole("region", { name: "Del catálogo" });
+  await expect(section).toBeVisible({ timeout: 20_000 });
+  await expect(
+    section.getByRole("list", { name: "Recetas del catálogo" }).getByRole("listitem").first(),
+  ).toBeVisible();
+  await expect(async () => {
+    await section.getByRole("button", { name: "Guardar" }).first().tap({ timeout: 3000 });
+    await expect(page).toHaveURL(/\/recetas\/[0-9a-f-]{36}$/, { timeout: 5000 });
+  }).toPass({ timeout: 30_000 });
+});

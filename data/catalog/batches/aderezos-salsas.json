@@ -1,0 +1,473 @@
+[
+  {
+    "title": "Salsa criolla clásica de tomate, cebolla y morrón",
+    "description": "La salsa de todos los asados: fresca, ácida y crocante. Va con carnes, choripanes, empanadas o huevos.",
+    "servings": 6,
+    "prep_minutes": 10,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "salsa",
+      "rápido",
+      "sin horno",
+      "vegano",
+      "sin gluten",
+      "argentina",
+      "verano"
+    ],
+    "ingredients": [
+      "2 tomates firmes",
+      "1 cebolla",
+      "1/2 morrón rojo",
+      "2 cda de perejil fresco picado",
+      "3 cda de aceite de girasol",
+      "2 cda de vinagre de vino",
+      "1 cdita de orégano",
+      "1 pizca de ají molido",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá los tomates, la cebolla y el morrón en cubitos bien chicos y parejos."
+      },
+      {
+        "instruction": "Poné todo en un bowl con el perejil, el orégano y el ají molido."
+      },
+      {
+        "instruction": "Agregá el aceite, el vinagre y sal, y mezclá bien."
+      },
+      {
+        "instruction": "Dejá reposar para que los sabores se integren antes de servir.",
+        "minutes": 5,
+        "passive": true
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Se sirve fría, sacala 10 minutos antes de la heladera.",
+      "tip": "Sumale la sal justo antes de servir para que el tomate no suelte tanta agua."
+    }
+  },
+  {
+    "title": "Guacamole con tomate y lima",
+    "description": "Un guacamole cremoso con trocitos de tomate y cebolla morada, ideal para nachos, tacos o tostadas.",
+    "servings": 4,
+    "prep_minutes": 8,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "salsa",
+      "rápido",
+      "sin horno",
+      "vegano",
+      "sin gluten",
+      "mexicana",
+      "para compartir",
+      "snack"
+    ],
+    "ingredients": [
+      "2 paltas bien maduras",
+      "1/2 tomate sin semillas",
+      "1/4 de cebolla morada",
+      "1 lima",
+      "2 cda de cilantro o perejil picado",
+      "1 pizca de ají molido",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Picá la cebolla morada bien finita y el tomate en cubitos chicos."
+      },
+      {
+        "instruction": "Abrí las paltas, sacales el carozo y pisá la pulpa con un tenedor, dejando algunos trozos."
+      },
+      {
+        "instruction": "Agregá la cebolla, el tomate, el cilantro, el jugo de lima, el ají y sal."
+      },
+      {
+        "instruction": "Mezclá suave y probá para ajustar la acidez y la sal."
+      }
+    ],
+    "storage": {
+      "fridge_days": 1,
+      "freezer_days": null,
+      "reheat": "Se come frío, sin recalentar.",
+      "tip": "Guardalo con film pegado a la superficie y dejá un carozo adentro para que no se oscurezca."
+    }
+  },
+  {
+    "title": "Mayonesa casera con minipimer",
+    "description": "Una mayonesa suave y brillante que sale en minutos con un vaso alto y un minipimer. Mucho más rica que la comprada.",
+    "servings": 8,
+    "prep_minutes": 5,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "salsa",
+      "rápido",
+      "sin horno",
+      "sin gluten",
+      "sin lácteos",
+      "huevo"
+    ],
+    "ingredients": [
+      "1 huevo fresco a temperatura ambiente",
+      "200 ml de aceite de girasol",
+      "1 cda de jugo de limón",
+      "1 cdita de mostaza",
+      "1 pizca de sal"
+    ],
+    "steps": [
+      {
+        "instruction": "Poné en un vaso alto el huevo, la mostaza, el limón, la sal y el aceite."
+      },
+      {
+        "instruction": "Apoyá el minipimer en el fondo del vaso y encendelo sin moverlo hasta que se forme la emulsión blanca."
+      },
+      {
+        "instruction": "Subí el minipimer despacio para incorporar todo el aceite hasta que espese."
+      },
+      {
+        "instruction": "Probá y corregí con sal o unas gotas más de limón."
+      }
+    ],
+    "storage": {
+      "fridge_days": 2,
+      "freezer_days": 0,
+      "reheat": "Se sirve fría, directo de la heladera.",
+      "tip": "Usá huevo bien fresco y limpio, y guardala siempre en la heladera en un frasco tapado."
+    }
+  },
+  {
+    "title": "Salsa golf casera",
+    "description": "La clásica salsa rosada para ensalada de langostinos, papas fritas o sándwiches, con un toque de limón y pimentón.",
+    "servings": 6,
+    "prep_minutes": 3,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "salsa",
+      "rápido",
+      "sin horno",
+      "sin gluten",
+      "para chicos",
+      "argentina"
+    ],
+    "ingredients": [
+      "6 cda de mayonesa",
+      "3 cda de ketchup",
+      "1 cdita de jugo de limón",
+      "1 cdita de mostaza",
+      "1 pizca de pimentón dulce",
+      "1 cda de agua"
+    ],
+    "steps": [
+      {
+        "instruction": "Poné la mayonesa y el ketchup en un bowl chico."
+      },
+      {
+        "instruction": "Agregá el limón, la mostaza y el pimentón."
+      },
+      {
+        "instruction": "Mezclá con cuchara hasta que quede un color parejo."
+      },
+      {
+        "instruction": "Sumá el agua para aflojarla si te quedó muy espesa."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Se sirve fría.",
+      "tip": "Si usás mayonesa casera, consumila dentro de los 2 días."
+    }
+  },
+  {
+    "title": "Vinagreta de mostaza y miel",
+    "description": "Un aderezo agridulce que se bate en un frasco. Queda bárbaro en ensaladas de hojas verdes, zanahoria o pollo frío.",
+    "servings": 4,
+    "prep_minutes": 4,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "salsa",
+      "rápido",
+      "sin horno",
+      "vegetariano",
+      "sin gluten",
+      "sin lácteos",
+      "ensalada",
+      "liviano"
+    ],
+    "ingredients": [
+      "3 cda de aceite de oliva",
+      "1 cda de vinagre de manzana",
+      "1 cdita de mostaza",
+      "1 cdita de miel",
+      "1 cda de agua",
+      "1 pizca de pimienta",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Poné la mostaza, la miel, el vinagre y el agua en un frasco con tapa."
+      },
+      {
+        "instruction": "Agregá el aceite, la sal y la pimienta."
+      },
+      {
+        "instruction": "Tapá el frasco y sacudilo fuerte hasta que se emulsione."
+      },
+      {
+        "instruction": "Probá sobre una hoja y ajustá con más miel o vinagre."
+      }
+    ],
+    "storage": {
+      "fridge_days": 4,
+      "freezer_days": null,
+      "reheat": "Sacala de la heladera 10 minutos antes y sacudila de nuevo.",
+      "tip": "El aceite de oliva se puede solidificar un poco en frío; es normal, se vuelve a mezclar."
+    }
+  },
+  {
+    "title": "Salsa de tahini y limón",
+    "description": "Una salsa sedosa de pasta de sésamo, ajo y limón. Va con verduras asadas, falafel, carnes o ensaladas.",
+    "servings": 4,
+    "prep_minutes": 5,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "salsa",
+      "rápido",
+      "sin horno",
+      "vegano",
+      "sin gluten",
+      "sin lácteos",
+      "árabe"
+    ],
+    "ingredients": [
+      "3 cda de tahini",
+      "1 limón",
+      "1 diente de ajo rallado",
+      "4 cda de agua fría",
+      "1 pizca de comino",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Poné el tahini en un bowl con el ajo rallado, el jugo del limón y sal."
+      },
+      {
+        "instruction": "Mezclá con cuchara; al principio se va a poner espesa y pastosa."
+      },
+      {
+        "instruction": "Agregá el agua fría de a poco, mezclando, hasta que quede cremosa y clarita."
+      },
+      {
+        "instruction": "Espolvoreá el comino y probá para ajustar la sal."
+      }
+    ],
+    "storage": {
+      "fridge_days": 4,
+      "freezer_days": null,
+      "reheat": "Se sirve fría; si espesó, aflojala con unas gotas de agua.",
+      "tip": "Agregá el agua de a cucharadas: si te pasás al principio, no emulsiona bien."
+    }
+  },
+  {
+    "title": "Salsa barbacoa casera rápida",
+    "description": "Una salsa dulce, ahumada y con punta ácida que se hace en una cacerola en 5 minutos. Ideal para costillas, pollo o hamburguesas.",
+    "servings": 6,
+    "prep_minutes": 3,
+    "cook_minutes": 6,
+    "difficulty": "facil",
+    "tags": [
+      "salsa",
+      "rápido",
+      "sin lácteos",
+      "para freezar",
+      "carne",
+      "cerdo",
+      "para chicos"
+    ],
+    "ingredients": [
+      "1/2 taza de ketchup",
+      "2 cda de azúcar mascabo",
+      "1 cda de vinagre de manzana",
+      "1 cda de mostaza",
+      "1 cda de salsa de soja",
+      "1 cdita de pimentón ahumado",
+      "1 diente de ajo rallado",
+      "3 cda de agua"
+    ],
+    "steps": [
+      {
+        "instruction": "Poné todos los ingredientes en una cacerola chica y mezclá bien."
+      },
+      {
+        "instruction": "Llevá a fuego medio hasta que rompa el hervor."
+      },
+      {
+        "instruction": "Bajá el fuego y cociná revolviendo seguido hasta que espese y brille.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Apagá y dejá entibiar antes de usarla o guardarla."
+      }
+    ],
+    "storage": {
+      "fridge_days": 4,
+      "freezer_days": 60,
+      "reheat": "Calentala unos segundos en el microondas o en una cacerola con una cucharada de agua.",
+      "tip": "Congelala en cubeteras para tener porciones chicas listas."
+    }
+  },
+  {
+    "title": "Salsa de maní y soja con jengibre",
+    "description": "Una salsa cremosa y salada-dulce estilo satay, perfecta para pinchos, fideos fríos o verduras crudas.",
+    "servings": 4,
+    "prep_minutes": 6,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "salsa",
+      "rápido",
+      "sin horno",
+      "vegano",
+      "sin lácteos",
+      "asiática"
+    ],
+    "ingredients": [
+      "4 cda de pasta de maní",
+      "2 cda de salsa de soja",
+      "1 lima",
+      "1 cdita de jengibre fresco rallado",
+      "1 diente de ajo rallado",
+      "1 cda de miel o azúcar",
+      "4 cda de agua tibia",
+      "1 pizca de ají molido"
+    ],
+    "steps": [
+      {
+        "instruction": "Poné la pasta de maní en un bowl con la soja, el jengibre y el ajo."
+      },
+      {
+        "instruction": "Agregá el jugo de lima, la miel y el ají molido."
+      },
+      {
+        "instruction": "Incorporá el agua tibia de a poco, batiendo con tenedor hasta que quede lisa."
+      },
+      {
+        "instruction": "Probá y ajustá con más lima o soja."
+      }
+    ],
+    "storage": {
+      "fridge_days": 4,
+      "freezer_days": 30,
+      "reheat": "Sacala de la heladera unos minutos antes y aflojala con agua tibia.",
+      "tip": "Si usás miel, la salsa no es vegana: cambiala por azúcar o sirope."
+    }
+  },
+  {
+    "title": "Dip de remolacha y queso crema",
+    "description": "Un dip rosado, suave y un poco terroso, que se hace en el momento con remolacha cocida. Va con tostadas, bastones de zanahoria o pan árabe.",
+    "servings": 6,
+    "prep_minutes": 8,
+    "cook_minutes": 0,
+    "difficulty": "facil",
+    "tags": [
+      "salsa",
+      "rápido",
+      "sin horno",
+      "vegetariano",
+      "sin gluten",
+      "snack",
+      "para compartir"
+    ],
+    "ingredients": [
+      "250 g de remolacha cocida",
+      "100 g de queso crema",
+      "1 cda de jugo de limón",
+      "1 diente de ajo",
+      "1 cdita de comino",
+      "1 cda de aceite de oliva",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Cortá la remolacha cocida en trozos y escurrila bien."
+      },
+      {
+        "instruction": "Poné en un vaso de licuadora la remolacha, el queso crema, el ajo, el limón y el comino."
+      },
+      {
+        "instruction": "Procesá hasta lograr una crema lisa, raspando los costados una vez."
+      },
+      {
+        "instruction": "Sumá el aceite y sal, probá y serví con un hilo de aceite por encima."
+      }
+    ],
+    "storage": {
+      "fridge_days": 3,
+      "freezer_days": null,
+      "reheat": "Se sirve frío.",
+      "tip": "Usá guantes o cuidá la ropa: la remolacha mancha mucho."
+    }
+  },
+  {
+    "title": "Salsa picante de tomate, ají y ajo",
+    "description": "Una salsa roja con picor parejo que se cocina 6 minutos y se tritura. Va con empanadas, huevos, milanesas o tacos.",
+    "servings": 8,
+    "prep_minutes": 3,
+    "cook_minutes": 7,
+    "difficulty": "facil",
+    "tags": [
+      "salsa",
+      "rápido",
+      "vegano",
+      "sin gluten",
+      "sin lácteos",
+      "para freezar",
+      "latinoamericana"
+    ],
+    "ingredients": [
+      "1 lata de tomate perita triturado (400 g)",
+      "2 dientes de ajo",
+      "1 cdita de ají molido",
+      "1 cda de aceite de oliva",
+      "1 cda de vinagre",
+      "1 cdita de azúcar",
+      "1/2 cdita de comino",
+      "sal a gusto"
+    ],
+    "steps": [
+      {
+        "instruction": "Laminá el ajo y calentalo en una cacerola con el aceite durante un minuto sin que se queme.",
+        "minutes": 1,
+        "passive": false
+      },
+      {
+        "instruction": "Agregá el ají molido y el comino, y revolvé unos segundos."
+      },
+      {
+        "instruction": "Sumá el tomate, el vinagre, el azúcar y sal."
+      },
+      {
+        "instruction": "Cociná a fuego medio hasta que espese un poco.",
+        "minutes": 5,
+        "passive": false
+      },
+      {
+        "instruction": "Triturá con minipimer hasta que quede lisa y probá el picante."
+      }
+    ],
+    "storage": {
+      "fridge_days": 4,
+      "freezer_days": 90,
+      "reheat": "Calentala en una cacerola o en el microondas hasta que humee.",
+      "tip": "Para más picante, sumá ají molido de a pocas pizcas al final."
+    }
+  }
+]
