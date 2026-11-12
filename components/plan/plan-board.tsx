@@ -35,6 +35,7 @@ import {
   addEntry,
   approvePlan,
   createPlan,
+  discardPlan,
   duplicatePlan,
   removeEntry,
   updateEntry,
@@ -187,6 +188,22 @@ export function PlanBoard({
     });
   }
 
+  function discard() {
+    if (
+      !plan ||
+      !window.confirm(
+        "¿Descartar este borrador? Se borra el plan y las recetas nuevas que armó la IA.",
+      )
+    )
+      return;
+    start(async () => {
+      const res = await discardPlan({ planId: plan.id, groupId });
+      if (!res.ok) return void toast.error(res.error);
+      toast.success("Borrador descartado.");
+      router.refresh();
+    });
+  }
+
   function approve() {
     if (!plan) return;
     start(async () => {
@@ -246,6 +263,9 @@ export function PlanBoard({
               <DropdownMenuItem onSelect={openAi}>
                 <Sparkles className="size-4" /> Armar con IA
               </DropdownMenuItem>
+              {plan && !approved ? (
+                <DropdownMenuItem onSelect={discard}>Descartar borrador</DropdownMenuItem>
+              ) : null}
               <DropdownMenuItem asChild>
                 <Link href={`/g/${groupId}/plan/historial`}>
                   <History className="size-4" /> Historial

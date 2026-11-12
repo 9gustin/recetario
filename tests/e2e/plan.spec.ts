@@ -1,5 +1,12 @@
 import { expect, test } from "@playwright/test";
-import { addMemberToGroup, createTestUser, mobileContext, signIn } from "./helpers/auth";
+import {
+  addMemberToGroup,
+  adminClient,
+  createTestUser,
+  mobileContext,
+  signIn,
+} from "./helpers/auth";
+import { todayString, weekStartOf } from "../../lib/domain/week";
 import { createGroupAs, seedRecipe } from "./helpers/recipes";
 
 const password = "password123";
@@ -176,4 +183,56 @@ test("plan con IA: el chat aplica cambios del plan en vivo y marca advertencias"
   await expect(panel.getByText("Armé la cena de hoy.")).toBeVisible();
   await expect(page.getByText("Pizza casera")).toBeVisible();
   await expect(page.getByText("Se repite la pizza.")).toBeVisible();
+});
+
+test("recetas nuevas de la IA: invisibles en el recetario hasta aprobar el plan", async ({
+  browser,
+}) => {
+  test.setTimeout(120_000);
+  const email = `plan-draft-${Date.now()}@test.com`;
+  const userId = await createTestUser(email, password, "Ana");
+  const groupId = await createGroupAs(email, password, "Casa");
+  const admin = adminClient();
+  const today = todayString();
+
+  const { data: plan } = await admin
+    .from("meal_plans")
+    .insert({ group_id: groupId, week_start: weekStartOf(today, 1), created_by: userId })
+    .select("id")
+    .single();
+  const { data: recipe } = await admin
+    .from("recipes")
+    .insert({
+      group_id: groupId,
+      title: "Budín inventado por la IA",
+      status: "draft",
+      draft_for_plan_id: plan!.id,
+      created_by: userId,
+    })
+    .select("id")
+    .single();
+  await admin
+    .from("meal_plan_entries")
+    .insert({
+      plan_id: plan!.id,
+      date: today,
+      slot: "dinner",
+      recipe_id: recipe!.id,
+      is_new_recipe: true,
+    });
+
+  const page = await (await mobileContext(browser)).newPage();
+  await signIn(page, email, password);
+
+  await page.goto(`/g/${groupId}/recetas`);
+  await expect(page.getByText("Budín inventado por la IA")).toHaveCount(0);
+
+  await page.goto(`/g/${groupId}/plan`);
+  await expect(page.getByText("Budín inventado por la IA")).toBeVisible();
+  await expect(page.getByText("Nueva").first()).toBeVisible();
+  await page.getByRole("button", { name: "Aprobar plan" }).tap();
+  await expect(page.getByText("Aprobado", { exact: true })).toBeVisible();
+
+  await page.goto(`/g/${groupId}/recetas`);
+  await expect(page.getByText("Budín inventado por la IA")).toBeVisible();
 });

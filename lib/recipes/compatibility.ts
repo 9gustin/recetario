@@ -90,6 +90,7 @@ export async function forbiddenRecipeIds(
     .from("recipes")
     .select("id")
     .eq("group_id", groupId)
+    .eq("status", "active")
     .is("deleted_at", null);
   const ids = (data ?? []).map((r) => r.id);
   const compat = await compatForRecipes(ids, selected);

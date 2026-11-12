@@ -196,3 +196,29 @@ export async function fetchPlanEntries(planId: string): Promise<PlanEntry[]> {
   await requireUser();
   return getPlanEntries(planId);
 }
+
+/** Descarta el borrador del plan: se borra el plan y las recetas nuevas que la IA propuso para él. */
+export async function discardPlan(raw: unknown): Promise<Result> {
+  const parsed = z.object({ planId: uuid, groupId: uuid }).safeParse(raw);
+  if (!parsed.success) return { ok: false, error: "Datos inválidos." };
+  await requireUser();
+  const supabase = await createClient();
+  const { data: plan } = await supabase
+    .from("meal_plans")
+    .select("status")
+    .eq("id", parsed.data.planId)
+    .maybeSingle();
+  if (!plan) return { ok: false, error: "No encontramos el plan." };
+  if (plan.status === "approved")
+    return { ok: false, error: "Un plan aprobado no se puede descartar." };
+  // Solo las recetas en borrador atadas a este plan (las que ya estaban en el recetario no se tocan).
+  await supabase
+    .from("recipes")
+    .delete()
+    .eq("status", "draft")
+    .eq("draft_for_plan_id", parsed.data.planId);
+  const { error } = await supabase.from("meal_plans").delete().eq("id", parsed.data.planId);
+  if (error) return fail(error, "No se pudo descartar el plan.");
+  revalidatePath(`/g/${parsed.data.groupId}/plan`);
+  return { ok: true, data: null };
+}

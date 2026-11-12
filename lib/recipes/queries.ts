@@ -140,6 +140,7 @@ export async function listRecipes(groupId: string, filters: RecipeFilters = {}) 
       { count: "exact" },
     )
     .eq("group_id", groupId)
+    .eq("status", "active")
     .is("deleted_at", null);
 
   if (filters.q?.trim()) {
@@ -209,6 +210,7 @@ export async function getRecipeFacets(groupId: string, topN = 5) {
     .from("recipes")
     .select("tags")
     .eq("group_id", groupId)
+    .eq("status", "active")
     .is("deleted_at", null);
   const counts = new Map<string, number>();
   for (const row of data ?? []) {

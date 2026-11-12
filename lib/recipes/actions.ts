@@ -174,6 +174,7 @@ export async function searchRecipes(
     .from("recipes")
     .select([columns, ...joins].join(", "))
     .eq("group_id", input.groupId)
+    .eq("status", "active")
     .is("deleted_at", null);
 
   if (input.q) {
@@ -310,6 +311,7 @@ export async function listRecipesForMention(
     .from("recipes")
     .select("id, title, image_url")
     .eq("group_id", parsed.data.groupId)
+    .eq("status", "active")
     .is("deleted_at", null)
     .order("updated_at", { ascending: false })
     .limit(300);

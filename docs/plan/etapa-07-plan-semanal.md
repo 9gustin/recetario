@@ -108,7 +108,7 @@ Parte **7a** (manual, T7.1–T7.6), parte **7b** (IA, T7.7–T7.11) y parte **7c
   5. Recetas nuevas propuestas por la IA con badge "Nueva" → tocar abre el borrador para revisarlo/editarlo.
 - **Aceptación:** pedir "cambiá el miércoles por algo con carne" cambia solo esa celda.
 
-### T7.10 — Recetas nuevas de la IA
+### [x] T7.10 — Recetas nuevas de la IA
 - **Depende de:** T7.8
 - **Pasos:** `meal_plan_entries.is_new_recipe` y `recipes.status = 'draft'` se muestran claros en el plan; las recetas `draft` no aparecen en el recetario hasta aprobar el plan (filtrar `status = 'active'` en `listRecipes`). Al aprobar, `approve_plan` las activa. Al descartar el borrador del plan, se borran.
 - **Aceptación:** una receta inventada por la IA aparece en el recetario solo después de aprobar el plan.
@@ -168,3 +168,5 @@ Parte **7a** (manual, T7.1–T7.6), parte **7b** (IA, T7.7–T7.11) y parte **7c
 - T7.8: Plan agent writes go through validateCandidates; errors return is_error and nothing is saved. propose_recipe saves via saveRecipe then marks status=draft + draft_for_plan_id. Real-model behaviour (20-recipe acceptance) is checked in the plan evals (T7.11); not run against the API yet.
 
 - T7.9: Chat is a non-modal fixed bottom panel with three heights (grid stays visible); voice via VoiceRecorder; PlanBoard syncs state from server props with derived-state pattern (lint forbids setState in effect). E2E mocks the SSE endpoint.
+
+- T7.10: Listados (búsqueda, tags, menciones, Apta para) filtran status=active; discardPlan borra el plan y solo los borradores atados a él.
