@@ -110,25 +110,41 @@ export async function runPlanAgent<C extends AgentToolCtx = PlanToolCtx>(
       }
 
       messages.push({ role: "assistant", content: final.content });
-      const results: Anthropic.Messages.ToolResultBlockParam[] = [];
-      for (const use of toolUses) {
+      // Las herramientas de lectura que el modelo pide juntas corren en paralelo (menos tiempo total);
+      // las de escritura van de a una y en orden.
+      const READ_ONLY = new Set([
+        "search_recipes",
+        "search_catalog",
+        "get_recent_meals",
+        "get_participants",
+        "get_ingredient_info",
+      ]);
+      const runOne = async (
+        use: Anthropic.Messages.ToolUseBlock,
+      ): Promise<Anthropic.Messages.ToolResultBlockParam> => {
         args.emit({ type: "tool_started", name: use.name });
         try {
           const out = await execute(use.name, use.input, args.toolCtx);
-          results.push({
+          return {
             type: "tool_result",
             tool_use_id: use.id,
             content: JSON.stringify(out.result),
             ...(out.isError ? { is_error: true } : {}),
-          });
+          };
         } catch (e) {
-          results.push({
+          return {
             type: "tool_result",
             tool_use_id: use.id,
             is_error: true,
             content: `La herramienta falló: ${e instanceof Error ? e.message : "error"}`,
-          });
+          };
         }
+      };
+      const results: Anthropic.Messages.ToolResultBlockParam[] = new Array(toolUses.length);
+      const readIdx = toolUses.flatMap((u, i) => (READ_ONLY.has(u.name) ? [i] : []));
+      await Promise.all(readIdx.map(async (i) => void (results[i] = await runOne(toolUses[i]!))));
+      for (let i = 0; i < toolUses.length; i++) {
+        if (!READ_ONLY.has(toolUses[i]!.name)) results[i] = await runOne(toolUses[i]!);
       }
       messages.push({ role: "user", content: results });
     }
