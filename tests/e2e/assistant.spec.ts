@@ -232,3 +232,27 @@ test("preguntar mientras cocinás: contexto del paso, timer corriendo y 'Aplicar
   await page.goto(`/g/${groupId}/recetas/${pollo}`);
   await expect(page.getByText("10 min").first()).toBeVisible();
 });
+
+test("chat general: botón en la barra superior, tarjeta de navegación a una sección", async ({
+  browser,
+}) => {
+  test.setTimeout(120_000);
+  const { page, groupId } = await setup(browser);
+  await mockChat(page, [
+    { type: "text_delta", text: "Dale, te llevo." },
+    {
+      type: "proposal",
+      proposal: { kind: "navigate", label: "Mi plan de alimentación", href: "/perfil/plan" },
+    },
+    { type: "done", conversationId: "00000000-0000-4000-8000-0000000000bb" },
+  ]);
+  await page.goto(`/g/${groupId}/compras`);
+  await page.getByRole("link", { name: "Preguntale al asistente" }).tap();
+  await expect(page).toHaveURL(new RegExp(`/g/${groupId}/preguntar`));
+  await page.waitForLoadState("networkidle");
+  await page.getByRole("button", { name: "Llevame a mi plan de alimentación" }).tap();
+  const go = page.getByRole("link", { name: /Ir a Mi plan de alimentación/ });
+  await expect(go).toBeVisible();
+  await go.tap();
+  await expect(page).toHaveURL(/\/perfil\/plan/);
+});

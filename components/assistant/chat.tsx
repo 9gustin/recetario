@@ -33,7 +33,12 @@ type Props = {
   backHref: string;
 };
 
-const SUGGESTIONS = ["¿Cuánto dura en la heladera?", "¿Con qué lo acompaño?", "¿Se puede freezar?"];
+const SUGGESTIONS = [
+  "¿Qué ceno hoy que encaje en mi plan?",
+  "Llevame a mi plan de alimentación",
+  "¿Cuánto dura en la heladera?",
+  "Abrí la lista de compras",
+];
 
 const dayFormat = new Intl.DateTimeFormat("es-AR", {
   day: "numeric",
@@ -110,9 +115,21 @@ export function AssistantChat({
           <div className="flex flex-1 flex-col items-center justify-center gap-4 text-center">
             <p className="font-display text-[26px] leading-tight">¿Qué querés saber?</p>
             <p className="max-w-[260px] text-sm text-muted">
-              Preguntame por reemplazos, conservación, freezer o cómo combinar tus recetas. Escribí
-              @ para citar una.
+              Preguntame por tu alimentación, reemplazos, conservación o ideas para hoy. También te
+              llevo a cualquier sección. Escribí @ para citar una receta.
             </p>
+            <div className="flex flex-wrap justify-center gap-2">
+              {SUGGESTIONS.map((s) => (
+                <button
+                  key={s}
+                  type="button"
+                  onClick={() => void chat.send(s, [])}
+                  className="min-h-11 rounded-full border border-border px-3.5 text-[13px] text-foreground/90"
+                >
+                  {s}
+                </button>
+              ))}
+            </div>
           </div>
         ) : null}
         {chat.messages.map((m) => (

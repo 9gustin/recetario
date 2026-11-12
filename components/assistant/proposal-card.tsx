@@ -20,6 +20,18 @@ type Props = {
 /** Tarjeta de propuesta: el asistente propone, la persona confirma antes de que se guarde. */
 export function ProposalCard(props: Props) {
   const { proposal, groupId } = props;
+  if (proposal.kind === "navigate")
+    return (
+      <div
+        className="flex flex-col gap-2 rounded-2xl border border-accent/60 bg-background p-3"
+        role="group"
+        aria-label="Ir a una sección"
+      >
+        <PillButton asChild size="md">
+          <Link href={proposal.href}>Ir a {proposal.label}</Link>
+        </PillButton>
+      </div>
+    );
   if (proposal.kind === "add_to_plan" || proposal.kind === "add_to_list")
     return <SimpleProposal proposal={proposal} groupId={groupId} />;
   return <RecipeProposal {...props} proposal={proposal} />;
