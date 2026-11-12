@@ -69,8 +69,8 @@ describe("validatePlan", () => {
     });
     expect(errors).toHaveLength(1);
     expect(errors[0]).toMatchObject({ entryId: "e1", code: "FORBIDDEN_INGREDIENT" });
-    expect(errors[0].message).toContain("Ana");
-    expect(errors[0].message).toContain("cebolla");
+    expect(errors[0]?.message).toContain("Ana");
+    expect(errors[0]?.message).toContain("cebolla");
   });
 
   it("solo valida contra los comensales de esa entrada", () => {
@@ -109,7 +109,7 @@ describe("validatePlan", () => {
     expect(validatePlan({ entries: [mk(1), mk(2), mk(3)], diets: [] }).warnings).toEqual([]);
     const { warnings } = validatePlan({ entries: [mk(1), mk(2), mk(3), mk(4)], diets: [] });
     expect(warnings.map((w) => w.code)).toEqual(["PROTEIN_MONOTONY"]);
-    expect(warnings[0].entryId).toBe("e4");
+    expect(warnings[0]?.entryId).toBe("e4");
   });
 
   it("PROTEIN_MONOTONY ignora ingredientes opcionales y sobras", () => {
@@ -135,7 +135,7 @@ describe("validatePlan", () => {
     });
     expect(warnings).toHaveLength(1);
     expect(warnings[0]).toMatchObject({ entryId: "e2", code: "PERISHABLE_LATE" });
-    expect(warnings[0].message).toContain("pescado");
+    expect(warnings[0]?.message).toContain("pescado");
   });
 
   it("PERISHABLE_LATE usa la fecha de cocción si existe y asume la compra al primer día", () => {

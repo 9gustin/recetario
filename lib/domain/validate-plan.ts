@@ -110,7 +110,7 @@ export function validatePlan(input: ValidatePlanInput): {
         e.recipe.ingredients.some((i) => !i.optional && i.families.includes(family)),
     );
     if (withFamily.length > PROTEIN_MAX_PER_WEEK) {
-      const last = withFamily[withFamily.length - 1];
+      const last = withFamily[withFamily.length - 1]!;
       warnings.push({
         entryId: last.id,
         code: "PROTEIN_MONOTONY",
@@ -164,7 +164,7 @@ export function validatePlan(input: ValidatePlanInput): {
       const total = withRecipe.reduce((sum, e) => sum + (e.recipe!.carbsPerServingG ?? 0), 0);
       if (total > limit) {
         warnings.push({
-          entryId: withRecipe[withRecipe.length - 1].id,
+          entryId: withRecipe[withRecipe.length - 1]!.id,
           code: "LIMIT_EXCEEDED",
           message: `El ${dayLabel(date)} suma unos ${Math.round(total)} g de carbohidratos (tope ${limit} g).`,
         });

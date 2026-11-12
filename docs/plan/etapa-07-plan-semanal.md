@@ -79,7 +79,7 @@ Parte **7a** (manual, T7.1–T7.6), parte **7b** (IA, T7.7–T7.11) y parte **7c
   3. Tests para cada código.
 - **Aceptación:** tests en verde; función pura sin DB.
 
-### T7.8 — Agente del plan (chat con tools) 🧠
+### [x] T7.8 — Agente del plan (chat con tools) 🧠
 - **Depende de:** T7.7, T5.1
 - **Archivos:** `app/api/ai/plans/[id]/chat/route.ts`, `lib/ai/plan-agent/{agent,tools,prompt,events}.ts`.
 - **Pasos:**
@@ -164,3 +164,5 @@ Parte **7a** (manual, T7.1–T7.6), parte **7b** (IA, T7.7–T7.11) y parte **7c
 - T7.6: Realtime requires realtime.setAuth(access_token) before subscribing (otherwise RLS filters all changes). Entries are re-read through a server action after a debounced change instead of merging payloads (recipes join is not in the payload).
 
 - T7.7: Familias de proteína (ave, pescado, huevo) dependen del catálogo; si faltan, PROTEIN_MONOTONY no dispara. LIMIT_EXCEEDED solo evalúa un tope diario único de carbohidratos con datos completos.
+
+- T7.8: Plan agent writes go through validateCandidates; errors return is_error and nothing is saved. propose_recipe saves via saveRecipe then marks status=draft + draft_for_plan_id. Real-model behaviour (20-recipe acceptance) is checked in the plan evals (T7.11); not run against the API yet.
