@@ -114,6 +114,8 @@ Marcar `[x]` al terminar cada tarea (lo hace el agente).
 **Etapa 10** — [x] T10.1 · [x] T10.2 · [x] T10.3 · [x] T10.4 · [x] T10.5 · [x] T10.6
 **Etapa 11** — [x] T11.1 · [x] T11.2 · [x] T11.3
 **Etapa 12** — [x] T12.1 · [x] T12.2 · [x] T12.3 · [x] T12.4 · [x] T12.5 · [x] T12.6
+**Etapa 13** — [ ] T13.1 · [ ] T13.2 · [ ] T13.3 · [ ] T13.4 · [ ] T13.5
+**Etapa 14** — [ ] T14.1 · [ ] T14.2 · [ ] T14.3 · [ ] T14.4 · [ ] T14.5 · [ ] T14.6
 
 ---
 
