@@ -1,3 +1,6 @@
+import { StorageInfoCard } from "@/components/recipes/storage-info";
+import type { StorageInfo } from "@/lib/ai/storage/generate";
+import { createClient } from "@/lib/supabase/server";
 import { notFound } from "next/navigation";
 import { requireUser } from "@/lib/auth";
 import { getRecipeQuestions } from "@/lib/ai/assistant/queries";
@@ -60,22 +63,31 @@ export default async function Page({
     }
   }
 
+  const { data: stored } = await createClient().then((c) =>
+    c.from("recipes").select("storage_info").eq("id", recipe.id).maybeSingle(),
+  );
+
   return (
-    <RecipeDetail
-      groupId={groupId}
-      recipe={recipe}
-      cooking={cooking}
-      questions={questions}
-      forWhom={members}
-      adaptMembers={diets
-        .filter((d) => d.restrictions.length > 0)
-        .map((d) => ({ id: d.userId, name: d.displayName?.trim() || "Alguien" }))}
-      ingredientProblems={ingredientProblems}
-      share={{
-        groups: groups.map((g) => ({ id: g.id, name: g.name, emoji: g.emoji })),
-        contacts,
-        initialShareUrl,
-      }}
-    />
+    <>
+      <RecipeDetail
+        groupId={groupId}
+        recipe={recipe}
+        cooking={cooking}
+        questions={questions}
+        forWhom={members}
+        adaptMembers={diets
+          .filter((d) => d.restrictions.length > 0)
+          .map((d) => ({ id: d.userId, name: d.displayName?.trim() || "Alguien" }))}
+        ingredientProblems={ingredientProblems}
+        share={{
+          groups: groups.map((g) => ({ id: g.id, name: g.name, emoji: g.emoji })),
+          contacts,
+          initialShareUrl,
+        }}
+      />
+      <div className="px-5 pb-8">
+        <StorageInfoCard info={stored?.storage_info as Partial<StorageInfo> | null} />
+      </div>
+    </>
   );
 }

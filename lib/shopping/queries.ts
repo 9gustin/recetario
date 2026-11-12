@@ -32,15 +32,21 @@ export async function getListItems(
   const supabase = client ?? (await createClient());
   const { data } = await supabase
     .from("shopping_list_items")
-    .select(ITEM_COLUMNS)
+    .select(`${ITEM_COLUMNS}, ingredients(storage_tips, shelf_life)`)
     .eq("list_id", listId)
     .order("aisle")
     .order("position");
-  return (data ?? []).map((r) => ({
-    ...r,
-    quantity: r.quantity === null ? null : Number(r.quantity),
-    state: r.state as ListItem["state"],
-  }));
+  return (data ?? []).map(({ ingredients, ...r }) => {
+    const fridge = (ingredients?.shelf_life as { fridge?: number[] } | null)?.fridge;
+    return {
+      ...r,
+      quantity: r.quantity === null ? null : Number(r.quantity),
+      state: r.state as ListItem["state"],
+      storage_tip:
+        ingredients?.storage_tips ??
+        (fridge?.length ? `Dura entre ${fridge[0]} y ${fridge[1]} días en la heladera.` : null),
+    };
+  });
 }
 
 /** Resumen de la lista activa más próxima (para la tarjeta de "Hoy"). */

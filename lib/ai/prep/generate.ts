@@ -2,6 +2,7 @@ import type { SupabaseClient } from "@supabase/supabase-js";
 import { MODELS } from "@/lib/ai/models";
 import { MEAL_PREP_SYSTEM } from "@/lib/ai/prompts/meal-prep";
 import { runStructured } from "@/lib/ai/run-structured";
+import { validateCandidates } from "@/lib/ai/plan-agent/validation";
 import { validatePrep, type PrepEntryInfo, type PrepRejection } from "@/lib/domain/validate-prep";
 import { addDays, dayLabel } from "@/lib/domain/week";
 import { prepOutputSchema } from "@/lib/schemas/prep";
@@ -33,7 +34,7 @@ export async function generatePrepTasks(
   const { data: rows } = await supabase
     .from("meal_plan_entries")
     .select(
-      "id, date, slot, cook_date, leftovers_of_entry_id, servings, recipes(title, total_minutes, recipe_ingredients(raw_text, ingredients(name, shelf_life)))",
+      "id, date, slot, recipe_id, cook_date, leftovers_of_entry_id, servings, recipes(title, total_minutes, recipe_ingredients(raw_text, ingredients(name, shelf_life)))",
     )
     .eq("plan_id", args.planId);
   const entries = (rows ?? []).filter((e) => e.recipes && !e.leftovers_of_entry_id);
@@ -63,11 +64,37 @@ export async function generatePrepTasks(
     })
     .join("\n");
 
+  // Si el plan tiene variedad pobre, los tips tienen que traer alternativas concretas.
+  const variety = await validateCandidates(
+    supabase,
+    args.groupId,
+    entries.map((e) => ({
+      id: e.id,
+      date: e.date,
+      slot: e.slot as never,
+      recipe_id: e.recipe_id,
+      free_text: null,
+      servings: null,
+      diner_ids: [],
+      cook_date: e.cook_date,
+      leftovers_of_entry_id: null,
+      is_new_recipe: false,
+    })),
+    purchaseDate,
+  ).catch(() => null);
+  const varietyNotes = (variety?.warnings ?? [])
+    .filter((w) => w.code === "PROTEIN_MONOTONY" || w.code === "REPEATED_RECIPE")
+    .map((w) => `- ${w.message}`);
+
   const run = await runStructured({
     feature: "plan_chat",
     model: MODELS.smart,
     system: MEAL_PREP_SYSTEM,
-    content: `Fecha de compra: ${purchaseDate}.\nPlan:\n${description}`,
+    content: `Fecha de compra: ${purchaseDate}.\nPlan:\n${description}${
+      varietyNotes.length
+        ? `\n\nAVISOS DE VARIEDAD (sumá tips con alternativas concretas, ej. tres ensaladas distintas con lo que ya se compra):\n${varietyNotes.join("\n")}`
+        : ""
+    }`,
     schema: prepOutputSchema,
     userId: args.userId,
     groupId: args.groupId,

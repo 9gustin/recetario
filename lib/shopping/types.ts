@@ -16,6 +16,8 @@ export type ListItem = {
   needed_by: string | null;
   shelf_life_warning: string | null;
   position: number;
+  /** Consejo de conservación del catálogo (opcional). */
+  storage_tip?: string | null;
 };
 
 export type ListRow = {

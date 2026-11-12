@@ -261,6 +261,14 @@ function Row({
             .filter(Boolean)
             .join(" · ")}
         </p>
+        {item.storage_tip ? (
+          <details className="text-xs text-muted">
+            <summary className="min-h-8 cursor-pointer list-none py-1 underline decoration-dotted">
+              Cómo guardarlo
+            </summary>
+            {item.storage_tip}
+          </details>
+        ) : null}
         {item.shelf_life_warning ? (
           <p className="text-warning text-xs">
             <span aria-hidden="true">⚠️</span> {item.shelf_life_warning}

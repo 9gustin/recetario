@@ -1,6 +1,7 @@
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { enrichShoppingList } from "@/lib/ai/shopping/enrich";
 import type { StreamEvent } from "@/lib/ai/stream";
+import { ensureStorageInfo } from "@/lib/ai/storage/generate";
 import { generatePrepTasks } from "@/lib/ai/prep/generate";
 import { generateShoppingLists } from "@/lib/shopping/generate";
 import type { Database } from "@/lib/supabase/database.types";
@@ -44,6 +45,18 @@ export const FINALIZE_STEPS: FinalizeStep[] = [
           userId: ctx.userId,
           groupId: ctx.groupId,
         });
+    },
+  },
+  {
+    name: "storage-info",
+    label: "Anotando cuánto dura cada comida",
+    critical: false,
+    async run(ctx) {
+      await ensureStorageInfo(ctx.supabase, {
+        planId: ctx.planId,
+        userId: ctx.userId,
+        groupId: ctx.groupId,
+      });
     },
   },
   {

@@ -37,7 +37,7 @@
   4. Tips de la semana en una tarjeta plegable.
 - **Aceptación:** las tareas aparecen el día que corresponde y se pueden tildar.
 
-### T9.4 — Variedad y conservación
+### [x] T9.4 — Variedad y conservación
 - **Depende de:** T9.2
 - **Pasos:**
   1. En el detalle de cada ingrediente de la lista: tips de conservación del catálogo ("guardá las hojas secas con papel en un táper").
@@ -57,3 +57,5 @@
 - T9.2: kind no incluye 'freezar': se usa portion con 'freezar' en el título. Tips en meal_plans.prep_tips (migración nueva). Eval pnpm eval:prep: 5 tareas (porcionar/freezar el día de la compra, descongelar el día anterior). No se consideran equipamiento ni tiempo disponible del perfil todavía.
 
 - T9.3: Pestaña 'Preparación' dentro del plan. Descongelar destacado arriba. Recordatorios (remind_at) se usan recién en la Etapa 10.
+
+- T9.4: storage_info se genera una vez con Haiku como paso del pipeline (storage-info) y se muestra en la ficha; consejo por ingrediente sale de ingredients.storage_tips o de shelf_life. Los avisos de monotonía/repetición alimentan los tips de la semana.
