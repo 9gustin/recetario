@@ -30,7 +30,6 @@ export default async function Image({ params }: { params: Promise<{ token: strin
       }}
     >
       {recipe?.image_url ? (
-        // eslint-disable-next-line @next/next/no-img-element
         <img
           src={recipe.image_url}
           alt=""
