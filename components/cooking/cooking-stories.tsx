@@ -1,9 +1,9 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { AnimatePresence, motion, type PanInfo } from "framer-motion";
-import { Check, PartyPopper, Play, X } from "lucide-react";
+import { Check, PartyPopper, Pencil, Play, X } from "lucide-react";
 import { PillButton } from "@/components/shared/pill-button";
 import {
   Dialog,
@@ -14,10 +14,12 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { toast } from "sonner";
+import { applyCookingEdits, type CookingEdit } from "@/lib/domain/apply-cooking-edits";
 import { estimatedMinutes, ingredientsForStep } from "@/lib/domain/cooking-display";
 import { resumeInit, type OpenSession } from "@/lib/domain/cooking-session";
 import { useWakeLock } from "@/lib/hooks/use-wake-lock";
 import type { RecipeDetail } from "@/lib/recipes/queries";
+import { EditStepSheet } from "./edit-step-sheet";
 import { MiseEnPlace } from "./mise-en-place";
 import { ProgressSegments } from "./progress-segments";
 import { StepCard } from "./step-card";
@@ -60,16 +62,24 @@ type Props = {
 /** Modo cocinar tipo historias: un paso por pantalla, con tap y swipe para navegar. */
 export function CookingStories({ groupId, recipe, resume }: Props) {
   const router = useRouter();
-  const steps = recipe.steps;
+  const [edits, setEdits] = useState<CookingEdit[]>(resume?.pending_edits ?? []);
+  // La receta con los ajustes de esta sesión ya aplicados (la original no se toca hasta el final).
+  const effective = useMemo(
+    () => applyCookingEdits({ ingredients: recipe.ingredients, steps: recipe.steps }, edits),
+    [recipe.ingredients, recipe.steps, edits],
+  );
+  const steps = effective.steps;
   const [state, dispatch] = useCookingReducer(
     resume ? resumeInit(resume, steps.length) : { steps: steps.length, servings: recipe.servings },
   );
+  const [editOpen, setEditOpen] = useState(false);
   const [askResume, setAskResume] = useState(resume !== null);
   const sync = useSessionSync({
     recipeId: recipe.id,
     initialSessionId: resume?.id ?? null,
     index: state.index,
     servings: state.servings,
+    edits,
   });
   const [exitOpen, setExitOpen] = useState(false);
   const dragged = useRef(false);
@@ -98,6 +108,16 @@ export function CookingStories({ groupId, recipe, resume }: Props) {
   function advance() {
     dispatch({ type: "COMPLETE" });
     dispatch({ type: "NEXT" });
+  }
+
+  function applyEdits(ops: CookingEdit[]) {
+    const next = [...edits, ...ops];
+    setEdits(next);
+    dispatch({
+      type: "SET_STEPS",
+      steps: applyCookingEdits({ ingredients: recipe.ingredients, steps: recipe.steps }, next).steps
+        .length,
+    });
   }
 
   function start() {
@@ -138,14 +158,26 @@ export function CookingStories({ groupId, recipe, resume }: Props) {
                 : `Paso ${stepIndex + 1} de ${steps.length}`}
           </p>
         </div>
-        <button
-          type="button"
-          aria-label="Salir del modo cocinar"
-          onClick={() => setExitOpen(true)}
-          className="flex size-11 flex-none items-center justify-center rounded-full bg-surface"
-        >
-          <X className="size-5" aria-hidden="true" />
-        </button>
+        <div className="flex flex-none gap-2">
+          {step ? (
+            <button
+              type="button"
+              aria-label="Ajustar este paso"
+              onClick={() => setEditOpen(true)}
+              className="flex size-11 items-center justify-center rounded-full bg-surface"
+            >
+              <Pencil className="size-5" aria-hidden="true" />
+            </button>
+          ) : null}
+          <button
+            type="button"
+            aria-label="Salir del modo cocinar"
+            onClick={() => setExitOpen(true)}
+            className="flex size-11 flex-none items-center justify-center rounded-full bg-surface"
+          >
+            <X className="size-5" aria-hidden="true" />
+          </button>
+        </div>
       </header>
 
       <TimerEngine onGoToStep={goToStep} />
@@ -198,7 +230,7 @@ export function CookingStories({ groupId, recipe, resume }: Props) {
             {isMise ? (
               <MiseEnPlace
                 title={recipe.title}
-                ingredients={recipe.ingredients}
+                ingredients={effective.ingredients}
                 baseServings={recipe.servings}
                 servings={state.servings}
                 onServingsChange={(servings) => dispatch({ type: "SET_SERVINGS", servings })}
@@ -209,7 +241,7 @@ export function CookingStories({ groupId, recipe, resume }: Props) {
                 instruction={step.instruction}
                 tip={step.tip}
                 durationSeconds={step.duration_seconds}
-                ingredients={ingredientsForStep(step, recipe.ingredients)}
+                ingredients={ingredientsForStep(step, effective.ingredients)}
                 baseServings={recipe.servings}
                 servings={state.servings}
                 timerCard={
@@ -254,6 +286,23 @@ export function CookingStories({ groupId, recipe, resume }: Props) {
           </PillButton>
         )}
       </div>
+
+      {step ? (
+        <EditStepSheet
+          open={editOpen}
+          onOpenChange={setEditOpen}
+          stepIndex={stepIndex}
+          step={step}
+          stepCount={steps.length}
+          ingredients={ingredientsForStep(step, effective.ingredients).map((ingredient) => ({
+            ingredient,
+            index: effective.ingredients.findIndex((i) => i.id === ingredient.id),
+          }))}
+          baseServings={recipe.servings}
+          servings={state.servings}
+          onApply={applyEdits}
+        />
+      ) : null}
 
       <Dialog open={askResume}>
         <DialogContent showCloseButton={false} onInteractOutside={(e) => e.preventDefault()}>

@@ -54,4 +54,14 @@ describe("cookingReducer", () => {
     expect(s.completed.size).toBe(0);
     expect(s.total).toBe(5);
   });
+
+  it("SET_STEPS actualiza el total y acota el índice", () => {
+    let s = initCookingState({ steps: 3, servings: 2, index: 4 });
+    s = cookingReducer(s, { type: "SET_STEPS", steps: 2 });
+    expect(s.total).toBe(4);
+    expect(s.index).toBe(3);
+    s = cookingReducer(s, { type: "SET_STEPS", steps: 5 });
+    expect(s.total).toBe(7);
+    expect(s.index).toBe(3);
+  });
 });

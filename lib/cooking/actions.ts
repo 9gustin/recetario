@@ -3,6 +3,7 @@
 import { z } from "zod";
 import { requireUser } from "@/lib/auth";
 import { createClient } from "@/lib/supabase/server";
+import { cookingEditsSchema } from "@/lib/schemas/cooking-edits";
 
 type Result<T> = { ok: true; data: T } | { ok: false; error: string };
 
@@ -45,9 +46,10 @@ const progressSchema = z.object({
   sessionId: z.string().uuid(),
   currentStep: z.number().int().min(0).max(500),
   servings: z.number().positive().max(1000).optional(),
+  pendingEdits: cookingEditsSchema.optional(),
 });
 
-/** Guarda el paso actual (y las porciones) de la sesión. */
+/** Guarda el paso actual, las porciones y los ajustes de la sesión. */
 export async function updateCookingProgress(raw: unknown): Promise<Result<null>> {
   const parsed = progressSchema.safeParse(raw);
   if (!parsed.success) return { ok: false, error: "Datos inválidos." };
@@ -58,6 +60,7 @@ export async function updateCookingProgress(raw: unknown): Promise<Result<null>>
     .update({
       current_step: parsed.data.currentStep,
       ...(parsed.data.servings ? { servings: parsed.data.servings } : {}),
+      ...(parsed.data.pendingEdits ? { pending_edits: parsed.data.pendingEdits } : {}),
     })
     .eq("id", parsed.data.sessionId)
     .is("finished_at", null);

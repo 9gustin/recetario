@@ -50,7 +50,7 @@
   3. Al abrir "Cocinar" con una sesión sin terminar de menos de 12 h: "Seguís en el paso 4. ¿Continuar o empezar de nuevo?".
 - **Aceptación:** cerrar la PWA a mitad y volver retoma el mismo paso.
 
-### T3.6 — Ajustar la receta mientras cocino
+### [x] T3.6 — Ajustar la receta mientras cocino
 - **Depende de:** T3.5
 - **Archivos:** `components/cooking/edit-step-sheet.tsx`, `lib/domain/apply-cooking-edits.ts` + test.
 - **Pasos:**
@@ -90,3 +90,5 @@
 - T3.4: `useWakeLock` pide el lock al montar, lo vuelve a pedir en `visibilitychange` si el navegador lo soltó y lo libera al salir; sin soporte muestra un toast una sola vez por dispositivo (`localStorage`). Test en jsdom con la API simulada (3 casos). La verificación real (5 minutos en Android Chrome e iOS Safari 17.4+) queda para la prueba en el celular del cierre de etapa.
 
 - T3.5: al tocar Empezar se crea la sesión (con `recipe_version`) y cada cambio de pantalla o porciones se guarda con debounce de 1 s (`useSessionSync`, reintenta cada 5 s y al volver la red). `current_step` guarda el índice de pantalla (0 = mise en place). Al abrir Cocinar con una sesión sin terminar de menos de 12 h, un diálogo ofrece "Continuar" o "Empezar de nuevo" (esto último borra la sesión). La decisión de si se puede retomar la toma el servidor (`getResumableSession`), no el cliente. `plan_entry_id` ya se acepta en la acción pero hasta la Etapa 7 nadie lo manda. e2e en `cooking.spec.ts`.
+
+- T3.6: los ajustes son una lista de operaciones (`CookingEdit`) que se aplican en orden con `applyCookingEdits` (15 tests); cada operación usa los índices de la receta ya modificada. Se guardan en `cooking_sessions.pending_edits` junto con el progreso y se retoman al volver. `SET_STEPS` en el reducer actualiza el total de pantallas. La cantidad se escribe para las porciones actuales y se guarda convertida a las de la receta; también se reescribe el número inicial de `raw_text`. Límite conocido: los timers se identifican por `recipeId:índice`, así que agregar o borrar un paso con un timer en marcha en un paso posterior puede desalinear ese chip. e2e de ajustes en `cooking.spec.ts`.

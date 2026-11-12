@@ -8,6 +8,7 @@ const session = (over: Partial<OpenSession> = {}): OpenSession => ({
   servings: 4,
   started_at: "2026-11-12T10:00:00Z",
   finished_at: null,
+  pending_edits: [],
   ...over,
 });
 

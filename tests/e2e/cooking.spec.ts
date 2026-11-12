@@ -115,3 +115,40 @@ test("modo cocinar: cerrar a mitad y volver retoma el mismo paso", async ({ brow
   await page.goto(url);
   await expect(page.getByRole("heading", { name: /Seguís en el paso/ })).toHaveCount(0);
 });
+
+test("modo cocinar: ajustar un paso se ve al instante y no toca la receta", async ({ browser }) => {
+  test.setTimeout(120_000);
+  const { page, groupId, recipeId } = await setup(browser);
+  const url = `/g/${groupId}/recetas/${recipeId}/cocinar`;
+
+  await page.goto(url);
+  await page.getByRole("button", { name: "Empezar" }).tap();
+  await page.getByRole("button", { name: "Listo" }).tap();
+  await expect(page.getByRole("heading", { name: "Horneá el pollo." })).toBeVisible();
+
+  // Cambia la duración (25 → 30 min) y el texto del paso.
+  await page.getByRole("button", { name: "Ajustar este paso" }).tap();
+  await page.getByLabel(/Duración en minutos/).fill("30");
+  await page.getByLabel("Texto del paso").fill("Horneá el pollo a 200 grados.");
+  await page.getByRole("button", { name: "Guardar cambios" }).tap();
+  await expect(page.getByRole("heading", { name: "Horneá el pollo a 200 grados." })).toBeVisible();
+  await expect(page.getByText("30:00")).toBeVisible();
+
+  // Agrega un paso después: ahora son 4.
+  await page.getByRole("button", { name: "Ajustar este paso" }).tap();
+  await page.getByRole("button", { name: "Agregar paso" }).tap();
+  await page.getByLabel(/Paso nuevo/).fill("Dejá reposar 5 minutos.");
+  await page.getByRole("button", { name: "Agregar paso" }).tap();
+  await page.getByRole("button", { name: "Listo" }).tap();
+  await expect(page.getByText("Paso 3 de 4")).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Dejá reposar 5 minutos." })).toBeVisible();
+  await page.waitForTimeout(2500); // se guardan los ajustes en la sesión
+
+  // Cierra y vuelve: los ajustes siguen aplicados.
+  await page.goto(`/g/${groupId}/recetas/${recipeId}`);
+  await expect(page.getByText("Horneá el pollo.", { exact: true })).toBeVisible(); // la receta no cambió
+  await page.goto(url);
+  await page.getByRole("button", { name: "Continuar" }).tap();
+  await expect(page.getByText("Paso 3 de 4")).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Dejá reposar 5 minutos." })).toBeVisible();
+});

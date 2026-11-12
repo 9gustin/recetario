@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef } from "react";
+import type { CookingEdit } from "@/lib/domain/apply-cooking-edits";
 import {
   discardCookingSession,
   startCookingSession,
@@ -17,17 +18,19 @@ type Args = {
   /** Pantalla actual y porciones: cada cambio se guarda con un debounce de 1 s. */
   index: number;
   servings: number;
+  /** Ajustes hechos cocinando: se guardan junto con el progreso. */
+  edits: CookingEdit[];
 };
 
 /**
  * Crea la sesión al empezar y guarda el paso actual en la base. Si no hay red, reintenta cada 5 s
  * y apenas vuelve la conexión.
  */
-export function useSessionSync({ recipeId, initialSessionId, index, servings }: Args) {
+export function useSessionSync({ recipeId, initialSessionId, index, servings, edits }: Args) {
   const sessionId = useRef<string | null>(initialSessionId);
   const started = useRef(initialSessionId !== null);
-  const latest = useRef({ index, servings });
-  const sent = useRef<{ index: number; servings: number } | null>(null);
+  const latest = useRef({ index, servings, edits });
+  const sent = useRef<{ index: number; servings: number; edits: CookingEdit[] } | null>(null);
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const inflight = useRef(false);
   const flushRef = useRef<() => Promise<void>>(async () => {});
@@ -51,6 +54,7 @@ export function useSessionSync({ recipeId, initialSessionId, index, servings }: 
         sessionId: sessionId.current,
         currentStep: snapshot.index,
         servings: snapshot.servings,
+        pendingEdits: snapshot.edits,
       });
       if (!saved.ok) throw new Error(saved.error);
       sent.current = snapshot;
@@ -64,7 +68,9 @@ export function useSessionSync({ recipeId, initialSessionId, index, servings }: 
     if (
       started.current &&
       last &&
-      (last.index !== latest.current.index || last.servings !== latest.current.servings)
+      (last.index !== latest.current.index ||
+        last.servings !== latest.current.servings ||
+        last.edits !== latest.current.edits)
     ) {
       schedule(DEBOUNCE_MS);
     }
@@ -75,9 +81,9 @@ export function useSessionSync({ recipeId, initialSessionId, index, servings }: 
   }, [flush]);
 
   useEffect(() => {
-    latest.current = { index, servings };
+    latest.current = { index, servings, edits };
     if (started.current) schedule(DEBOUNCE_MS);
-  }, [index, servings, schedule]);
+  }, [index, servings, edits, schedule]);
 
   useEffect(() => {
     const onOnline = () => void flushRef.current();

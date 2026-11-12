@@ -1,5 +1,6 @@
 import "server-only";
 import { createClient } from "@/lib/supabase/server";
+import { cookingEditsSchema } from "@/lib/schemas/cooking-edits";
 import { SESSION_MAX_AGE_MS, isResumable, type OpenSession } from "@/lib/domain/cooking-session";
 
 /** Última sesión sin terminar de esta persona para la receta (menos de 12 h). */
@@ -11,7 +12,7 @@ export async function getOpenSession(
   const since = new Date(Date.now() - SESSION_MAX_AGE_MS).toISOString();
   const { data } = await supabase
     .from("cooking_sessions")
-    .select("id, current_step, servings, started_at, finished_at")
+    .select("id, current_step, servings, started_at, finished_at, pending_edits")
     .eq("recipe_id", recipeId)
     .eq("user_id", userId)
     .is("finished_at", null)
@@ -19,7 +20,13 @@ export async function getOpenSession(
     .order("started_at", { ascending: false })
     .limit(1)
     .maybeSingle();
-  return data ? { ...data, servings: Number(data.servings) } : null;
+  if (!data) return null;
+  const edits = cookingEditsSchema.safeParse(data.pending_edits);
+  return {
+    ...data,
+    servings: Number(data.servings),
+    pending_edits: edits.success ? edits.data : [],
+  };
 }
 
 /** Sesión que se puede retomar (reciente, sin terminar y a mitad de camino), o null. */

@@ -1,3 +1,5 @@
+import type { CookingEdit } from "./apply-cooking-edits";
+
 /** Reglas para retomar una sesión de cocina a medias. Lógica pura, sin DB. */
 
 export const SESSION_MAX_AGE_MS = 12 * 60 * 60 * 1000;
@@ -8,6 +10,8 @@ export type OpenSession = {
   servings: number;
   started_at: string;
   finished_at: string | null;
+  /** Ajustes hechos durante la sesión (ver apply-cooking-edits). */
+  pending_edits: CookingEdit[];
 };
 
 /**
