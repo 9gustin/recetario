@@ -176,9 +176,7 @@ const checkCompatibility = {
       ? "prohibido"
       : items.some((i) => i.status === "limit")
         ? "limitado"
-        : items.some((i) => i.status === "unknown")
-          ? "revisar"
-          : "ok";
+        : "ok";
     return { result: { status: worst, items } };
   },
 } satisfies ToolDef<z.ZodObject<{ recipe_id: z.ZodString; changes: z.ZodArray<z.ZodString> }>>;
