@@ -126,6 +126,37 @@ async function validateAndWrite(
   };
 }
 
+/**
+ * Los ids de recetas del catálogo se pueden usar directo en set_plan / update_entries: si no son del grupo,
+ * se guardan en el recetario (copia editable) y se reemplazan por el id nuevo. Ahorra una vuelta por receta.
+ */
+async function adoptCatalogIds(
+  ctx: PlanToolCtx,
+  ids: (string | null | undefined)[],
+): Promise<Map<string, string>> {
+  const wanted = [...new Set(ids.filter((i): i is string => Boolean(i)))];
+  const map = new Map<string, string>();
+  if (wanted.length === 0) return map;
+  const { data: own } = await ctx.supabase
+    .from("recipes")
+    .select("id")
+    .eq("group_id", ctx.groupId)
+    .in("id", wanted);
+  const ownIds = new Set((own ?? []).map((r) => r.id));
+  await Promise.all(
+    wanted
+      .filter((id) => !ownIds.has(id))
+      .map(async (id) => {
+        const { data } = await ctx.supabase.rpc("fork_published_recipe", {
+          p_recipe_id: id,
+          p_target_group_id: ctx.groupId,
+        });
+        if (data) map.set(id, data);
+      }),
+  );
+  return map;
+}
+
 const entryInput = z.object({
   date,
   slot: slotSchema,
@@ -335,6 +366,10 @@ const setPlan = defineTool({
     "Escribe el plan completo de la semana (reemplaza todas las comidas actuales). Valida restricciones: si hay errores no se guarda nada.",
   schema: z.object({ entries: z.array(entryInput).min(1).max(60) }),
   async run({ entries }, ctx) {
+    const adopted = await adoptCatalogIds(
+      ctx,
+      entries.map((e) => e.recipe_id),
+    );
     const ids: string[] = entries.map(() => randomUUID());
     const keyOf = (d: string, s: string) => `${d}|${s}`;
     const byKey = new Map(entries.map((e, i) => [keyOf(e.date, e.slot), ids[i]]));
@@ -342,7 +377,7 @@ const setPlan = defineTool({
       id: ids[i]!,
       date: e.date,
       slot: e.slot,
-      recipe_id: e.recipe_id ?? null,
+      recipe_id: e.recipe_id ? (adopted.get(e.recipe_id) ?? e.recipe_id) : null,
       free_text: e.recipe_id ? null : (e.free_text ?? null),
       servings: e.servings ?? null,
       diner_ids: e.diner_ids,
@@ -393,6 +428,12 @@ const updateEntries = defineTool({
       .max(30),
   }),
   async run({ changes }, ctx) {
+    const adopted = await adoptCatalogIds(
+      ctx,
+      changes.map((c) => c.recipe_id),
+    );
+    for (const ch of changes)
+      if (ch.recipe_id && adopted.has(ch.recipe_id)) ch.recipe_id = adopted.get(ch.recipe_id)!;
     const current = await currentCandidates(ctx);
     let next = [...current];
     const changedIds: string[] = [];

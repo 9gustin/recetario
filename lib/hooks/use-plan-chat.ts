@@ -72,6 +72,7 @@ export function usePlanChat({
         const reader = res.body.getReader();
         const decoder = new TextDecoder();
         let buffer = "";
+        let finished = false;
         for (;;) {
           const { value, done } = await reader.read();
           if (done) break;
@@ -87,17 +88,31 @@ export function usePlanChat({
               patchLast((m) => ({ ...m, working: TOOL_LABELS[event.name] ?? "Pensando…" }));
             else if (event.type === "plan_updated") onPlanUpdated?.(event);
             else if (event.type === "diet_updated") onDietUpdated?.(event.version);
-            else if (event.type === "done") setConversationId(event.conversationId);
-            else if (event.type === "error")
+            else if (event.type === "done") {
+              finished = true;
+              setConversationId(event.conversationId);
+            } else if (event.type === "error") {
+              finished = true;
               patchLast((m) => ({
                 ...m,
                 working: null,
                 failed: true,
                 text: m.text || event.message,
               }));
+            }
           }
         }
-        patchLast((m) => ({ ...m, working: null }));
+        // El servidor cortó antes de terminar (por ejemplo por límite de tiempo): se avisa en vez de quedar colgado.
+        if (!finished) {
+          patchLast((m) => ({
+            ...m,
+            working: null,
+            failed: true,
+            text:
+              m.text ||
+              "Se cortó antes de terminar. Lo que ya se armó quedó guardado en el plan: pedime que lo complete.",
+          }));
+        } else patchLast((m) => ({ ...m, working: null }));
       } catch (e) {
         if ((e as Error).name !== "AbortError") {
           patchLast((m) => ({
