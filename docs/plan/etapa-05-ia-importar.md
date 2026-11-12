@@ -34,7 +34,7 @@
   6. 👤 **Prueba de calidad:** grabar 3 audios reales y comparar proveedores; anotar la elección en "Notas de ejecución".
 - **Aceptación:** dictar 30 segundos en el celular (iOS y Android) devuelve un texto correcto.
 
-### T5.3 — Importar desde URL
+### [x] T5.3 — Importar desde URL
 - **Depende de:** T5.1
 - **Archivos:** `lib/import/fetch-url.ts`, `lib/import/json-ld.ts` + tests con fixtures HTML en `tests/fixtures/recipes/`.
 - **Pasos:**
@@ -83,3 +83,5 @@
 - T5.1: se instaló `@anthropic-ai/sdk` y `tsx` (el plan pide `pnpm tsx` para el script de humo; el script corre con `--conditions=react-server` para poder importar módulos `server-only`). `runStructured` recibe además `userId`/`groupId` (necesarios para `ai_runs`) y acepta un cliente y un registrador inyectables para los tests; suma los tokens de los dos intentos y guarda también `cache_read_tokens`. Las tablas de IA solo tienen policies de lectura propia: escribe el servidor con service role. `consume_ai_quota` cuenta por día de Argentina y no es invocable por clientes. Verificado contra la API real (`pnpm ai:smoke`): salida válida en 1,5 s y fila en `ai_runs`.
 
 - T5.2: solo se implementó el proveedor OpenAI (`gpt-4o-transcribe`, `language=es` + vocabulario de cocina) porque es el elegido; la interfaz `Transcriber` sigue siendo intercambiable. Decisión: el audio se **borra del bucket apenas se transcribe** (la spec hablaba de 30 días): ya no hace falta y es más privado. `/api/transcribe` valida sesión, que el path sea `<user_id>/<archivo>`, cuota (`transcribe`: 40/día) y tamaño (≤ 20 MB). `useRecorder` elige webm/opus o mp4 (iOS), limita a 5 min, mide el volumen para animar el botón y permite cancelar; `VoiceRecorder` deja editar el texto antes de usarlo. Verificado con la API real usando audio generado por TTS: transcribió bien "zapallitos", "morrón" y "cebolla de verdeo" en 1,7 s. **Pendiente:** la prueba con el micrófono real en iOS y Android (no se puede automatizar acá).
+
+- T5.3: `fetchUrl` usa `node:http/https` con un `lookup` propio que valida la IP a la que realmente se conecta (cierra el DNS rebinding que dejaría abierto resolver y después hacer `fetch`), vuelve a validar en cada redirección (máx. 3), y corta por timeout (10 s), por tamaño (3 MB) y por tipo de contenido. `isPrivateAddress` cubre loopback, privadas, link-local (metadata de la nube), CGNAT, multicast e IPv6 (incluye IPv4 mapeado). `extractJsonLdRecipe` entiende `@graph`, `@type` múltiple, `HowToSection`, duraciones ISO 8601 y un bloque de pasos numerados en una sola cadena. Se agregaron `image_url` y `source_url` a `recipeDraftSchema`. 3 fixtures HTML en `tests/fixtures/recipes/` y 39 tests.
