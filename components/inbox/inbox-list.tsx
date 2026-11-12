@@ -1,12 +1,13 @@
 "use client";
 
 import { useState, useTransition } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Inbox } from "lucide-react";
 import { toast } from "sonner";
 import { PillButton } from "@/components/shared/pill-button";
 import { EmptyState } from "@/components/shell/empty-state";
-import { acceptInboxRecipe, dismissInboxItem } from "@/lib/inbox/actions";
+import { acceptInboxRecipe, dismissInboxItem, markAllRead } from "@/lib/inbox/actions";
 
 export type InboxEntry = {
   id: string;
@@ -105,14 +106,29 @@ function RecipeSharedCard({ entry, groups, busy, onAccept, onDismiss }: CardProp
   );
 }
 
-/** Tipos de ítem sin diseño propio todavía (invitaciones, planes aprobados: Etapa 10). */
+/** Avisos del grupo: plan aprobado, alguien se sumó, compra terminada. */
 function GenericCard({ entry, busy, onDismiss }: CardProps) {
+  const url = str(entry.payload.url);
   return (
     <li className="flex flex-col gap-3 rounded-[20px] border border-border bg-surface p-4">
       <p className="text-[15px]">{str(entry.payload.message) ?? "Tenés una novedad."}</p>
-      <PillButton variant="outline" size="md" disabled={busy} onClick={() => onDismiss(entry)}>
-        Descartar
-      </PillButton>
+      <p className="text-xs text-muted">{dateFormat.format(new Date(entry.created_at))}</p>
+      <div className="flex gap-2">
+        {url ? (
+          <PillButton asChild size="md" className="flex-1">
+            <Link href={url}>Ver</Link>
+          </PillButton>
+        ) : null}
+        <PillButton
+          variant="outline"
+          size="md"
+          className="flex-1"
+          disabled={busy}
+          onClick={() => onDismiss(entry)}
+        >
+          Descartar
+        </PillButton>
+      </div>
     </li>
   );
 }
@@ -161,20 +177,35 @@ export function InboxList({ entries, groups }: { entries: InboxEntry[]; groups: 
   }
 
   return (
-    <ul className="flex flex-col gap-3">
-      {entries.map((entry) => {
-        const Card = CARDS[entry.kind] ?? GenericCard;
-        return (
-          <Card
-            key={entry.id}
-            entry={entry}
-            groups={groups}
-            busy={pending}
-            onAccept={accept}
-            onDismiss={dismiss}
-          />
-        );
-      })}
-    </ul>
+    <div className="flex flex-col gap-3">
+      <PillButton
+        variant="outline"
+        size="md"
+        disabled={pending}
+        onClick={() =>
+          start(async () => {
+            await markAllRead();
+            router.refresh();
+          })
+        }
+      >
+        Marcar todo como leído
+      </PillButton>
+      <ul className="flex flex-col gap-3">
+        {entries.map((entry) => {
+          const Card = CARDS[entry.kind] ?? GenericCard;
+          return (
+            <Card
+              key={entry.id}
+              entry={entry}
+              groups={groups}
+              busy={pending}
+              onAccept={accept}
+              onDismiss={dismiss}
+            />
+          );
+        })}
+      </ul>
+    </div>
   );
 }

@@ -7,6 +7,9 @@ import { requireUser } from "@/lib/auth";
 import { createClient } from "@/lib/supabase/server";
 import { enrichShoppingList } from "@/lib/ai/shopping/enrich";
 import { checkQuota } from "@/lib/ai/rate-limit";
+import { displayName, notifyGroup } from "@/lib/inbox/notify";
+import type { SupabaseClient } from "@supabase/supabase-js";
+import type { Database } from "@/lib/supabase/database.types";
 import { matchLocal } from "@/lib/domain/ingredient-match";
 import { generateShoppingLists } from "./generate";
 import { getListItems } from "./queries";
@@ -50,7 +53,7 @@ export async function setItemState(
     .object({ id: itemId, state: z.enum(["pending", "bought", "have_it"]) })
     .safeParse(raw);
   if (!parsed.success) return { ok: false, error: "Datos inválidos." };
-  await requireUser();
+  const user = await requireUser();
   const supabase = await createClient();
   const { error } = await supabase.rpc("set_item_state", {
     p_item_id: parsed.data.id,
@@ -63,6 +66,13 @@ export async function setItemState(
     .eq("id", parsed.data.id)
     .single();
   if (!data) return { ok: false, error: "No se pudo marcar el ítem." };
+  if (parsed.data.state !== "pending") await maybeNotifyListDone(supabase, data.list_id, user.id);
+  else
+    await supabase
+      .from("shopping_lists")
+      .update({ status: "active" })
+      .eq("id", data.list_id)
+      .eq("status", "done");
   return {
     ok: true,
     data: {
@@ -133,4 +143,36 @@ export async function fetchListItems(listId: string): Promise<ListItem[]> {
   if (!itemId.safeParse(listId).success) return [];
   await requireUser();
   return getListItems(listId);
+}
+
+/** Cuando ya no queda nada pendiente, avisa al grupo (una sola vez por lista). */
+async function maybeNotifyListDone(
+  supabase: SupabaseClient<Database>,
+  listId: string,
+  userId: string,
+) {
+  const { data: pending } = await supabase
+    .from("shopping_list_items")
+    .select("id")
+    .eq("list_id", listId)
+    .eq("state", "pending")
+    .eq("no_longer_needed", false)
+    .limit(1);
+  if (pending && pending.length > 0) return;
+  const { data: list } = await supabase
+    .from("shopping_lists")
+    .select("id, group_id, name, status")
+    .eq("id", listId)
+    .maybeSingle();
+  if (!list || list.status !== "active") return;
+  await supabase.from("shopping_lists").update({ status: "done" }).eq("id", listId);
+  void displayName(userId).then((name) =>
+    notifyGroup({
+      groupId: list.group_id,
+      fromUserId: userId,
+      kind: "list_done",
+      message: `${name} terminó la compra (${list.name})`,
+      url: `/g/${list.group_id}/compras`,
+    }),
+  );
 }

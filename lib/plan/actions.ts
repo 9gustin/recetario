@@ -3,6 +3,7 @@
 import { revalidatePath } from "next/cache";
 import { z } from "zod";
 import { requireUser } from "@/lib/auth";
+import { displayName, notifyGroup } from "@/lib/inbox/notify";
 import type { Database } from "@/lib/supabase/database.types";
 import { createClient } from "@/lib/supabase/server";
 import { ENTRY_COLUMNS, getPlanEntries, toPlanEntry } from "./queries";
@@ -166,10 +167,19 @@ export async function removeEntry(raw: unknown): Promise<Result> {
 export async function approvePlan(raw: unknown): Promise<Result> {
   const parsed = z.object({ planId: uuid, groupId: uuid }).safeParse(raw);
   if (!parsed.success) return { ok: false, error: "Datos inválidos." };
-  await requireUser();
+  const user = await requireUser();
   const supabase = await createClient();
   const { error } = await supabase.rpc("approve_plan", { p_plan_id: parsed.data.planId });
   if (error) return { ok: false, error: "No se pudo aprobar el plan." };
+  void displayName(user.id).then((name) =>
+    notifyGroup({
+      groupId: parsed.data.groupId,
+      fromUserId: user.id,
+      kind: "plan_approved",
+      message: `${name} aprobó el plan de la semana`,
+      url: `/g/${parsed.data.groupId}/plan`,
+    }),
+  );
   revalidatePath(`/g/${parsed.data.groupId}/plan`);
   revalidatePath(`/g/${parsed.data.groupId}/recetas`);
   return { ok: true, data: null };

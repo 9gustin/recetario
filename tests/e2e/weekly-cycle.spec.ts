@@ -115,3 +115,58 @@ test("ciclo semanal: plan con sobra → aprobar → lista → tachado compartido
   );
   await expect(pageA.getByText("500 g").first()).toBeVisible();
 });
+
+test("bandeja: aprobar el plan avisa a los demás miembros y se puede marcar todo como leído", async ({
+  browser,
+}) => {
+  test.setTimeout(150_000);
+  const run = Date.now();
+  const aEmail = `inbox-a-${run}@test.com`;
+  const bEmail = `inbox-b-${run}@test.com`;
+  const aId = await createTestUser(aEmail, password, "Ana");
+  const bId = await createTestUser(bEmail, password, "Beto");
+  const groupId = await createGroupAs(aEmail, password, "Casa");
+  await addMemberToGroup(groupId, bId);
+  const recipe = await seedRecipe(aEmail, password, groupId, {
+    title: "Arroz con huevo",
+    ingredients: ["1 taza de arroz", "2 huevos"],
+    steps: [{ instruction: "Cociná." }],
+  });
+  const admin = adminClient();
+  const week = weekStartOf(todayString(), 1);
+  const { data: plan } = await admin
+    .from("meal_plans")
+    .insert({ group_id: groupId, week_start: week, created_by: aId })
+    .select("id")
+    .single();
+  await admin
+    .from("meal_plan_entries")
+    .insert({ plan_id: plan!.id, date: week, slot: "dinner", recipe_id: recipe });
+
+  const pageA = await (await mobileContext(browser)).newPage();
+  await signIn(pageA, aEmail, password);
+  await pageA.goto(`/g/${groupId}/plan`);
+  await pageA.getByRole("button", { name: "Aprobar plan" }).tap();
+  await expect(pageA.getByText("Aprobado", { exact: true })).toBeVisible();
+
+  const pageB = await (await mobileContext(browser)).newPage();
+  await signIn(pageB, bEmail, password);
+  await pageB.goto("/perfil/bandeja");
+  await expect(pageB.getByText("Ana aprobó el plan de la semana")).toBeVisible({ timeout: 20_000 });
+  await pageB.waitForLoadState("networkidle");
+  await pageB.getByRole("button", { name: "Marcar todo como leído" }).tap();
+  const { data: unread } = await admin
+    .from("inbox_items")
+    .select("id")
+    .eq("user_id", bId)
+    .is("read_at", null);
+  await expect
+    .poll(
+      async () =>
+        (await admin.from("inbox_items").select("id").eq("user_id", bId).is("read_at", null)).data
+          ?.length ?? 1,
+      { timeout: 15_000 },
+    )
+    .toBe(0);
+  expect(unread).toBeTruthy();
+});

@@ -16,7 +16,7 @@
   5. Timers de cocina con la app en segundo plano: programar el push al iniciar un timer pasivo de más de 5 min.
 - **Aceptación:** con la app instalada y cerrada, llega el recordatorio en Android e iOS.
 
-### T10.2 — Bandeja completa
+### [x] T10.2 — Bandeja completa
 - **Depende de:** T10.1, T4.4
 - **Pasos:** nuevos tipos en `inbox_items`: `plan_approved` ("Sofi aprobó el plan de la semana"), `member_joined`, `list_done`. Push opcional para cada tipo. Marcar todo como leído.
 
@@ -49,3 +49,5 @@
 ## Notas de ejecución
 
 - T10.1: 👤 Falta cargar en Vercel NEXT_PUBLIC_VAPID_PUBLIC_KEY, VAPID_PRIVATE_KEY, VAPID_SUBJECT y CRON_SECRET, y dar de alta el pg_cron (SQL en docs/deploy.md); la entrega real en Android/iOS con la app cerrada solo se puede probar con un dispositivo. web-push agregado (justificado: es la librería estándar para VAPID).
+
+- T10.2: Los avisos se crean con el cliente admin (lib/inbox/notify.ts). Una lista pasa a 'done' cuando no queda nada pendiente y vuelve a 'active' si se destilda algo.

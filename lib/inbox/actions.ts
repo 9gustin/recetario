@@ -44,3 +44,17 @@ export async function dismissInboxItem(raw: unknown): Promise<Result<null>> {
   revalidatePath("/perfil/bandeja");
   return { ok: true, data: null };
 }
+
+/** Marca todo lo de la bandeja como leído. */
+export async function markAllRead(): Promise<Result<null>> {
+  const user = await requireUser();
+  const supabase = await createClient();
+  const { error } = await supabase
+    .from("inbox_items")
+    .update({ read_at: new Date().toISOString() })
+    .eq("user_id", user.id)
+    .is("read_at", null);
+  if (error) return { ok: false, error: "No se pudo marcar." };
+  revalidatePath("/perfil/bandeja");
+  return { ok: true, data: null };
+}
