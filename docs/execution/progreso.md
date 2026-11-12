@@ -28,7 +28,7 @@ Archivo compartido entre los tres agentes. Cada uno lo lee al empezar y lo actua
 |---|---|
 | 1 · Auth y grupos | lista para revisión |
 | 2 · Recetario | lista para revisión |
-| 3 · Modo cocinar | pendiente |
+| 3 · Modo cocinar | lista para revisión |
 | 4 · Compartir | pendiente |
 | 5 · IA: importar | pendiente |
 | 5b · Preguntale | pendiente |
