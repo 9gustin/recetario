@@ -58,7 +58,7 @@
   7. En "Hoy": tarjeta de la lista activa con el progreso.
 - **Aceptación:** dos celulares tachando a la vez, sin conflictos ni ítems "rebotando".
 
-### T8.6 — E2E del ciclo completo
+### [x] T8.6 — E2E del ciclo completo
 - **Archivos:** `tests/e2e/weekly-cycle.spec.ts`.
 - **Escenario:** grupo con 2 miembros → 3 recetas → plan manual de 3 días con una sobra → aprobar → la lista suma bien (verificar 2 ítems concretos) → B tacha un ítem y A lo ve tachado → editar el plan → regenerar conserva el tachado.
 
@@ -79,3 +79,5 @@
 - T8.4: Se corre con after() de Next tras generar; usa la cuota 'ideas'. No se probó contra la API real todavía.
 
 - T8.5: Sin swipe: tachar con el checkbox grande y 'Ya lo tengo' con botón (más accesible); deshacer por toast. Tarjeta de la lista activa en Hoy. E2E en T8.6.
+
+- T8.6: Los ítems comprados se ven tachados al final de cada sección por defecto (menú 'Ocultar comprados'). Quedan para el usuario: prueba real de compra y revisión 🧠 de seguridad/costos.

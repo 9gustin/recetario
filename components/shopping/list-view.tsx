@@ -37,7 +37,7 @@ export function ListView({
   const router = useRouter();
   const [items, setItems] = useState(initialItems);
   const [collapsed, setCollapsed] = useState<Set<string>>(new Set());
-  const [showDone, setShowDone] = useState(false);
+  const [showDone, setShowDone] = useState(true);
   const [draft, setDraft] = useState("");
   const [, start] = useTransition();
   useRealtimeList(list.id, setItems);
