@@ -36,7 +36,7 @@
   3. Banner en el plan: "Cambiaste el plan. ¿Actualizar la lista?" → regenerar.
 - **Aceptación:** regenerar no pierde ningún tachado.
 
-### T8.4 — Enriquecer con IA
+### [x] T8.4 — Enriquecer con IA
 - **Depende de:** T8.3, T5.1
 - **Archivos:** `lib/ai/shopping/enrich.ts`, `lib/ai/prompts/shopping.ts`.
 - **Pasos:**
@@ -75,3 +75,5 @@
 - T8.2: Cobertura 97% sentencias / 96% ramas (quedan dos ramas defensivas sin test).
 
 - T8.3: Segunda compra (mitad de semana) solo si un perecedero la necesita; las listas que dejan de hacer falta se archivan. Se genera al aprobar desde el cliente (generateListForPlan) y desde el banner 'Actualizar la lista'. Se verifica de punta a punta en T8.6.
+
+- T8.4: Se corre con after() de Next tras generar; usa la cuota 'ideas'. No se probó contra la API real todavía.
