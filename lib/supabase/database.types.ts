@@ -319,6 +319,96 @@ isOneToOne: false
                   Relationships: [
                     
                   ]
+                },"meal_plan_entries": {
+                  Row: {
+                    "cook_date": string | null,"created_at": string,"date": string,"diner_ids": (string)[],"free_text": string | null,"id": string,"is_new_recipe": boolean,"leftovers_of_entry_id": string | null,"plan_id": string,"position": number,"recipe_id": string | null,"servings": number | null,"slot": string,"updated_at": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "cook_date"?: string | null,"created_at"?: string,"date": string,"diner_ids"?: (string)[],"free_text"?: string | null,"id"?: string,"is_new_recipe"?: boolean,"leftovers_of_entry_id"?: string | null,"plan_id": string,"position"?: number,"recipe_id"?: string | null,"servings"?: number | null,"slot": string,"updated_at"?: string
+                  }
+                  Update: {
+                    "cook_date"?: string | null,"created_at"?: string,"date"?: string,"diner_ids"?: (string)[],"free_text"?: string | null,"id"?: string,"is_new_recipe"?: boolean,"leftovers_of_entry_id"?: string | null,"plan_id"?: string,"position"?: number,"recipe_id"?: string | null,"servings"?: number | null,"slot"?: string,"updated_at"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "meal_plan_entries_leftovers_of_entry_id_fkey"
+      columns: ["leftovers_of_entry_id"]
+isOneToOne: false
+      referencedRelation: "meal_plan_entries"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "meal_plan_entries_plan_id_fkey"
+      columns: ["plan_id"]
+isOneToOne: false
+      referencedRelation: "meal_plans"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "meal_plan_entries_recipe_id_fkey"
+      columns: ["recipe_id"]
+isOneToOne: false
+      referencedRelation: "recipes"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"meal_plans": {
+                  Row: {
+                    "approved_at": string | null,"approved_by": string | null,"created_at": string,"created_by": string | null,"generation_context": Json | null,"group_id": string,"id": string,"notes": string | null,"status": string,"title": string | null,"updated_at": string,"week_start": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "approved_at"?: string | null,"approved_by"?: string | null,"created_at"?: string,"created_by"?: string | null,"generation_context"?: Json | null,"group_id": string,"id"?: string,"notes"?: string | null,"status"?: string,"title"?: string | null,"updated_at"?: string,"week_start": string
+                  }
+                  Update: {
+                    "approved_at"?: string | null,"approved_by"?: string | null,"created_at"?: string,"created_by"?: string | null,"generation_context"?: Json | null,"group_id"?: string,"id"?: string,"notes"?: string | null,"status"?: string,"title"?: string | null,"updated_at"?: string,"week_start"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "meal_plans_approved_by_fkey"
+      columns: ["approved_by"]
+isOneToOne: false
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "meal_plans_created_by_fkey"
+      columns: ["created_by"]
+isOneToOne: false
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "meal_plans_group_id_fkey"
+      columns: ["group_id"]
+isOneToOne: false
+      referencedRelation: "groups"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"prep_tasks": {
+                  Row: {
+                    "created_at": string,"details": string | null,"done_at": string | null,"done_by": string | null,"duration_minutes": number | null,"id": string,"kind": string,"plan_id": string,"related_entry_ids": (string)[],"remind_at": string | null,"suggested_date": string | null,"title": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "created_at"?: string,"details"?: string | null,"done_at"?: string | null,"done_by"?: string | null,"duration_minutes"?: number | null,"id"?: string,"kind": string,"plan_id": string,"related_entry_ids"?: (string)[],"remind_at"?: string | null,"suggested_date"?: string | null,"title": string
+                  }
+                  Update: {
+                    "created_at"?: string,"details"?: string | null,"done_at"?: string | null,"done_by"?: string | null,"duration_minutes"?: number | null,"id"?: string,"kind"?: string,"plan_id"?: string,"related_entry_ids"?: (string)[],"remind_at"?: string | null,"suggested_date"?: string | null,"title"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "prep_tasks_done_by_fkey"
+      columns: ["done_by"]
+isOneToOne: false
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "prep_tasks_plan_id_fkey"
+      columns: ["plan_id"]
+isOneToOne: false
+      referencedRelation: "meal_plans"
+      referencedColumns: ["id"]
+    }
+                  ]
                 },"profiles": {
                   Row: {
                     "avatar_url": string | null,"created_at": string,"display_name": string | null,"id": string,"locale": string,"personal_group_id": string | null,"updated_at": string
@@ -465,14 +555,14 @@ isOneToOne: false
                   ]
                 },"recipes": {
                   Row: {
-                    "cook_minutes": number | null,"created_at": string,"created_by": string | null,"current_version": number,"deleted_at": string | null,"description": string | null,"difficulty": string | null,"forked_from_group_name": string | null,"forked_from_recipe_id": string | null,"forked_from_title": string | null,"forked_from_version": number | null,"group_id": string,"id": string,"image_url": string | null,"prep_minutes": number | null,"search_tsv": unknown,"servings": number,"source_type": string,"source_url": string | null,"status": string,"storage_info": Json | null,"tags": (string)[],"title": string,"total_minutes": number | null,"updated_at": string
+                    "cook_minutes": number | null,"created_at": string,"created_by": string | null,"current_version": number,"deleted_at": string | null,"description": string | null,"difficulty": string | null,"draft_for_plan_id": string | null,"forked_from_group_name": string | null,"forked_from_recipe_id": string | null,"forked_from_title": string | null,"forked_from_version": number | null,"group_id": string,"id": string,"image_url": string | null,"prep_minutes": number | null,"search_tsv": unknown,"servings": number,"source_type": string,"source_url": string | null,"status": string,"storage_info": Json | null,"tags": (string)[],"title": string,"total_minutes": number | null,"updated_at": string
                   }
                   ComputedFields: never
                   Insert: {
-                    "cook_minutes"?: number | null,"created_at"?: string,"created_by"?: string | null,"current_version"?: number,"deleted_at"?: string | null,"description"?: string | null,"difficulty"?: string | null,"forked_from_group_name"?: string | null,"forked_from_recipe_id"?: string | null,"forked_from_title"?: string | null,"forked_from_version"?: number | null,"group_id": string,"id"?: string,"image_url"?: string | null,"prep_minutes"?: number | null,"search_tsv"?: unknown,"servings"?: number,"source_type"?: string,"source_url"?: string | null,"status"?: string,"storage_info"?: Json | null,"tags"?: (string)[],"title": string,"total_minutes"?: number | null,"updated_at"?: string
+                    "cook_minutes"?: number | null,"created_at"?: string,"created_by"?: string | null,"current_version"?: number,"deleted_at"?: string | null,"description"?: string | null,"difficulty"?: string | null,"draft_for_plan_id"?: string | null,"forked_from_group_name"?: string | null,"forked_from_recipe_id"?: string | null,"forked_from_title"?: string | null,"forked_from_version"?: number | null,"group_id": string,"id"?: string,"image_url"?: string | null,"prep_minutes"?: number | null,"search_tsv"?: unknown,"servings"?: number,"source_type"?: string,"source_url"?: string | null,"status"?: string,"storage_info"?: Json | null,"tags"?: (string)[],"title": string,"total_minutes"?: number | null,"updated_at"?: string
                   }
                   Update: {
-                    "cook_minutes"?: number | null,"created_at"?: string,"created_by"?: string | null,"current_version"?: number,"deleted_at"?: string | null,"description"?: string | null,"difficulty"?: string | null,"forked_from_group_name"?: string | null,"forked_from_recipe_id"?: string | null,"forked_from_title"?: string | null,"forked_from_version"?: number | null,"group_id"?: string,"id"?: string,"image_url"?: string | null,"prep_minutes"?: number | null,"search_tsv"?: unknown,"servings"?: number,"source_type"?: string,"source_url"?: string | null,"status"?: string,"storage_info"?: Json | null,"tags"?: (string)[],"title"?: string,"total_minutes"?: number | null,"updated_at"?: string
+                    "cook_minutes"?: number | null,"created_at"?: string,"created_by"?: string | null,"current_version"?: number,"deleted_at"?: string | null,"description"?: string | null,"difficulty"?: string | null,"draft_for_plan_id"?: string | null,"forked_from_group_name"?: string | null,"forked_from_recipe_id"?: string | null,"forked_from_title"?: string | null,"forked_from_version"?: number | null,"group_id"?: string,"id"?: string,"image_url"?: string | null,"prep_minutes"?: number | null,"search_tsv"?: unknown,"servings"?: number,"source_type"?: string,"source_url"?: string | null,"status"?: string,"storage_info"?: Json | null,"tags"?: (string)[],"title"?: string,"total_minutes"?: number | null,"updated_at"?: string
                   }
                   Relationships: [
                     {
@@ -480,6 +570,12 @@ isOneToOne: false
       columns: ["created_by"]
 isOneToOne: false
       referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "recipes_draft_for_plan_id_fkey"
+      columns: ["draft_for_plan_id"]
+isOneToOne: false
+      referencedRelation: "meal_plans"
       referencedColumns: ["id"]
     },{
       foreignKeyName: "recipes_forked_from_recipe_id_fkey"
@@ -510,6 +606,9 @@ isOneToOne: false
 "accept_invite":
 { Args: { "p_token": string }; Returns: string
                            },
+"approve_plan":
+{ Args: { "p_plan_id": string }; Returns: undefined
+                           },
 "consume_ai_quota":
 { Args: { "p_feature": string,"p_limit": number,"p_user_id": string }; Returns: boolean
                            },
@@ -518,6 +617,9 @@ isOneToOne: false
                            },
 "create_share_link":
 { Args: { "p_recipe_id": string }; Returns: string
+                           },
+"duplicate_plan":
+{ Args: { "p_plan_id": string,"p_week_start": string }; Returns: string
                            },
 "fork_public_recipe":
 { Args: { "p_target_group_id": string,"p_token": string }; Returns: string
@@ -552,6 +654,9 @@ isOneToOne: false
                            },
 "leave_group":
 { Args: { "gid": string }; Returns: undefined
+                           },
+"plan_group_id":
+{ Args: { "p_plan_id": string }; Returns: string
                            },
 "recipe_last_cooked":
 { Args: { "p_recipe_id": string }; Returns: {

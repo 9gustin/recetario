@@ -9,7 +9,7 @@ Parte **7a** (manual, T7.1–T7.6), parte **7b** (IA, T7.7–T7.11) y parte **7c
 
 ## 7a — Plan manual
 
-### T7.1 — Migración: planes
+### [x] T7.1 — Migración: planes
 - **Depende de:** T2.1
 - **Archivos:** `supabase/migrations/<ts>_meal_plans.sql`, `supabase/tests/07_plans.test.sql`.
 - **Pasos:**
@@ -152,3 +152,5 @@ Parte **7a** (manual, T7.1–T7.6), parte **7b** (IA, T7.7–T7.11) y parte **7c
 - [ ] Revisar costo promedio por plan en `ai_runs`.
 
 ## Notas de ejecución
+
+- T7.1: tablas `meal_plans` (índice único parcial por grupo y semana, sin contar archivados), `meal_plan_entries` (`slot` validado contra `groups.meal_slots` con trigger; exige receta o texto libre; `replica identity full` para que el realtime traiga la fila borrada) y `prep_tasks`; RLS por grupo a través del plan (`plan_group_id`); `meal_plans` y `meal_plan_entries` agregadas a `supabase_realtime`. Se agregó `recipes.draft_for_plan_id` (no estaba en el plan): ata cada receta que propone la IA al plan que la pidió, para que `approve_plan` active las usadas y borre **solo** las que ese plan propuso y quedaron fuera (sin tocar otros borradores). `duplicate_plan` corre fechas y `cook_date` y reenlaza las sobras a la entrada nueva equivalente. 13 tests pgTAP.
