@@ -710,6 +710,7 @@ export const PLAN_TOOLS: ToolDef<any>[] = [
   updateEntries,
 ];
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const MENU_TOOLS: ToolDef<any>[] = [
   searchRecipes,
   searchCatalogTool,

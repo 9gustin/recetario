@@ -1,7 +1,7 @@
 import { requireUser } from "@/lib/auth";
 import { createClient } from "@/lib/supabase/server";
 import Link from "next/link";
-import { Bell, ClipboardList, History, ShieldCheck, Inbox, Salad } from "lucide-react";
+import { Bell, ClipboardList, History, ShieldCheck, Inbox, Salad, Stethoscope } from "lucide-react";
 import { getUnresolvedInboxCount } from "@/lib/inbox/queries";
 import { EditNameForm } from "@/components/profile/edit-name-form";
 import { PillButton } from "@/components/shared/pill-button";
@@ -18,6 +18,11 @@ export default async function Page() {
     .single();
 
   const inboxCount = await getUnresolvedInboxCount();
+  const { data: proRow } = await supabase
+    .from("professional_profiles")
+    .select("user_id")
+    .eq("user_id", user.id)
+    .maybeSingle();
   const name = profile?.display_name ?? user.email ?? "";
   const initial = name.trim().charAt(0).toUpperCase() || "?";
 
@@ -50,6 +55,24 @@ export default async function Page() {
         <ClipboardList className="size-5" aria-hidden="true" />
         <span className="flex-1 text-[15px] font-semibold">Mi plan</span>
       </Link>
+
+      <Link
+        href="/perfil/profesional"
+        className="flex min-h-14 items-center gap-3 rounded-2xl border border-border bg-surface px-4"
+      >
+        <Stethoscope className="size-5" aria-hidden="true" />
+        <span className="flex-1 text-[15px] font-semibold">Mis profesionales</span>
+      </Link>
+
+      {proRow ? (
+        <Link
+          href="/pro"
+          className="flex min-h-14 items-center gap-3 rounded-2xl border border-border bg-surface px-4"
+        >
+          <ClipboardList className="size-5" aria-hidden="true" />
+          <span className="flex-1 text-[15px] font-semibold">Panel profesional</span>
+        </Link>
+      ) : null}
 
       <Link
         href="/perfil/notificaciones"
