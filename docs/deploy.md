@@ -46,6 +46,8 @@ Los nombres están en `.env.example`. Local: `.env.local` (nunca se commitea). P
 | `SUPABASE_SERVICE_ROLE_KEY` | Clave de servidor, ignora RLS. Solo servidor | `.env.local` · Vercel |
 | `SENTRY_DSN`, `NEXT_PUBLIC_SENTRY_DSN` | Errores (opcional: sin ellas queda desactivado) | Vercel |
 | `ANTHROPIC_API_KEY` | Claude (IA). Solo servidor | `.env.local` · Vercel |
+| `TRANSCRIPTION_PROVIDER` | Proveedor de voz → texto (`openai`) | `.env.local` · Vercel |
+| `OPENAI_API_KEY` | Transcripción con `gpt-4o-transcribe`. Solo servidor | `.env.local` · Vercel |
 | `NEXT_PUBLIC_POSTHOG_KEY`, `NEXT_PUBLIC_POSTHOG_HOST` | Analytics (opcional) | Vercel |
 
 Las variables de los demás servicios (Anthropic, transcripción, Inngest, Web Push) se agregan en las secciones siguientes a medida que se configuran.

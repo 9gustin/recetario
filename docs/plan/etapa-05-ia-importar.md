@@ -78,3 +78,4 @@
 - [ ] Revisar `ai_runs` para ver costo y latencia promedio.
 
 ## Notas de ejecución
+- Proveedor de transcripción (decisión de la persona, 2026-11-12): **OpenAI `gpt-4o-transcribe`** con `language=es`. Es el único proveedor; se salteó la comparación con Deepgram para simplificar. Esto deja hecho el paso 6 de T5.2 (la prueba de calidad con audios reales queda para validar al implementar la dictada en el celular). `TRANSCRIPTION_PROVIDER=openai`, key en `OPENAI_API_KEY`. La interfaz `Transcriber` sigue siendo intercambiable por si más adelante se quiere otro.

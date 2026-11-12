@@ -15,7 +15,7 @@ Archivo compartido entre los tres agentes. Cada uno lo lee al empezar y lo actua
 - [x] Paso 9 — T0.8 Producción
 - [x] Paso 10 — Login email + contraseña (sin Google)
 - [x] Paso 11 — Anthropic
-- [ ] Paso 12 — Transcripción (proveedor elegido: ___)
+- [ ] Paso 12 — Transcripción (proveedor elegido: OpenAI gpt-4o-transcribe)
 - [ ] Paso 13 — Inngest
 - [ ] Paso 14 — Web Push (VAPID)
 - [ ] Paso 15 — Todo listo, rama `dev` creada
