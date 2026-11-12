@@ -90,7 +90,7 @@
   3. Ver una versión con su diff contra la anterior. Botón "Volver a esta versión" → `save_recipe` con `origin = 'restore'`.
 - **Aceptación:** restaurar crea una versión nueva (no borra historia).
 
-### T2.9 — E2E del recetario
+### [x] T2.9 — E2E del recetario
 - **Archivos:** `tests/e2e/recipes.spec.ts`.
 - **Escenario:** crear receta pegando 5 líneas de ingredientes → guardar → buscarla → escalar a 4 porciones → editar un paso → ver 2 versiones → restaurar la 1. Un usuario de otro grupo no la ve (404).
 
@@ -117,3 +117,5 @@
 - T2.7: búsqueda con debounce (250 ms) sobre `search_tsv`; chips Favoritas, Menos de 30 min, las 5 etiquetas más usadas del grupo y "Tiene ingrediente…" (autocompleta con `search_ingredients`, filtra por `recipe_ingredients.ingredient_id`). Paginación de a 24 con IntersectionObserver (la acción pide una fila de más para saber si hay otra página). Validación Zod en `lib/schemas/recipe-search.ts`. Medido: 'pollo' sobre 50 recetas, 16 resultados en 0,1 ms. El título 'Recetas' lo da la barra superior, por eso la pantalla no repite el h1; el FAB se ancla al contenedor max-w-md. Las advertencias de lint de `recipe-form.tsx` son de T2.5 y quedan para la revisión.
 
 - T2.8: historial en `<details>` (sin JS) con el diff contra la versión anterior (`lib/domain/recipe-diff.ts`, 6 tests). Los ingredientes se emparejan por `ingredient_id` (o texto normalizado si no hay) y los pasos por posición, así que insertar un paso en el medio se ve como varios cambios. Restaurar llama a `saveRecipe` con `origin = 'restore'` y nota "Restaurada la versión N". El nombre del autor sale de `profiles` (RLS permite leer a quienes comparten grupo).
+
+- T2.9: e2e en `tests/e2e/recipes.spec.ts`. Se agregó `app/not-found.tsx` en español: el 404 por defecto de Next sale en inglés y el aislamiento entre grupos termina en un 404.
