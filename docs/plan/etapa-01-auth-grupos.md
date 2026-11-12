@@ -37,7 +37,7 @@
   2. Casos: A no ve grupos de B · A no puede insertar en `group_members` directo · `accept_invite` con token vencido/revocado falla · con token válido une a B · B ve el perfil de A después de unirse · un member no puede crear invitaciones · `leave_group` transfiere ownership · no se puede salir del grupo personal.
 - **Aceptación:** `pnpm db:test` en verde con todos los casos.
 
-### T1.3 — Login (email + contraseña)
+### [x] T1.3 — Login (email + contraseña)
 - **Depende de:** T1.1. Auth por email + contraseña (decisión de simplicidad: sin Google ni magic link). En prod, "Confirm email" está desactivado en Supabase para no depender de SMTP.
 - **Archivos:** `app/(auth)/login/page.tsx`, `app/auth/callback/route.ts`, `app/auth/signout/route.ts`, `lib/auth.ts`, `middleware.ts`.
 - **Pasos:**
@@ -101,3 +101,5 @@
 - T1.1: se agregó la función helper `shares_group_with(uid)` (security definer, stable) para la policy de `profiles` ("ver el perfil de quien comparte algún grupo") sin recursión de RLS. `group_members` no lleva `updated_at` (join table con `joined_at`, según §5.2). `create_group`/`accept_invite`/`leave_group`/`remove_member` quedan revocadas a `anon` (solo `get_invite_preview` es accesible a anon); el alta de usuario crea perfil + grupo personal "Mis recetas" + membresía owner vía trigger `on_auth_user_created`.
 
 - T1.2: `supabase/tests/00_helpers.sql` (sin `BEGIN/ROLLBACK`) crea el helper `tests.create_user(id, email, name)` con `security definer`, que inserta en `auth.users` y dispara el alta de perfil + grupo personal; emite un test trivial para que pg_prove vea un plan válido (pg_prove descubre **todos** los `**/*.sql` de `supabase/tests`). La sesión se simula con `set local role authenticated;` + `select set_config('request.jwt.claims', …)`. Se usan UUIDs fijos para evitar interpolación de psql. El caso de transferencia de ownership usa un tercer usuario C (admin), para no ensuciar el caso "B se une por invitación". `\set QUIET 1` evita que los command tags de psql ensucien el TAP.
+
+- T1.3: **`zod` no estaba instalado** (lo declaran CLAUDE.md y SPEC §4.1, pero no se agregó en la Etapa 0); se instaló `zod@4.6.7` para validar el Server Action de perfil. El "middleware" de la tarea es en realidad `proxy.ts` (Next 16 renombró `middleware`→`proxy`; ver nota T0.5): la lógica vive en `lib/supabase/middleware.ts` (`updateSession`), que ahora protege `/g/*`, `/perfil` y `/grupos` y devuelve los logueados en `/login` a la home. El login se dividió en `app/(auth)/login/page.tsx` (server, lee `searchParams`) + `components/auth/login-form.tsx` (client) para evitar el `Suspense` de `useSearchParams()`. No hay recuperación de contraseña (fuera de alcance). Alta y login con email+contraseña; al registrarse se pasa `display_name` a `raw_user_meta_data`.
